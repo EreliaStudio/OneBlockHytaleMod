@@ -12,6 +12,7 @@
   ],
   "Website": "",
   "ServerVersion": "2026.02.19-1a311a592",
+  "Main": "com.ereliastudio.oneblock.OneBlockPlugin",
   "Dependencies": {},
   "OptionalDependencies": {},
   "LoadBefore": {},

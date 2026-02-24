@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Block.name.B1"
+  },
+  "ItemLevel": 4,
+  "Icon": "Icons/ItemsGenerated/OneBlock_B1.png",
+  "Categories": [
+    "Blocks.OneBlock"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "OneBlock",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "OneBlock",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Soils",
+        "ItemId": "Soil_Dirt"
+      }
+    },
+    "Textures": [
+      {
+        "Down": "BlockTextures/OneBlock_TierB1.png",
+        "Sides": "BlockTextures/OneBlock_TierB1.png",
+        "Up": "BlockTextures/OneBlock_TierB1.png",
+        "Weight": 1
+      }
+    ],
+    "TransitionToGroups": [],
+    "ParticleColor": "#ffffff"
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Block"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

@@ -42,7 +42,7 @@
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlockInterface",
+      "Id": "OneBlockUpgrader",
       "Type": "Crafting",
       "Categories": [
         {
