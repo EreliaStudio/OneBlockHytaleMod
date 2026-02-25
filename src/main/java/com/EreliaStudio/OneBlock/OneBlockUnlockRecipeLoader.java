@@ -85,16 +85,19 @@ public final class OneBlockUnlockRecipeLoader
                     continue;
                 }
 
-                JsonArray dropTags = tags.getAsJsonArray("OneBlockUnlockDropId");
-                if (dropTags == null || dropTags.isEmpty())
-                {
-                    continue;
-                }
-
-                String dropItemId = dropTags.get(0).getAsString();
+                String dropItemId = readStringFromTags(tags, "OneBlockUnlockDropId");
                 if (dropItemId == null || dropItemId.isEmpty())
                 {
-                    continue;
+                    String entityId = readStringFromTags(tags, "OneBlockUnlockEntityId");
+                    if (entityId == null || entityId.isEmpty())
+                    {
+                        continue;
+                    }
+                    dropItemId = OneBlockDropId.entityDropId(entityId);
+                    if (dropItemId == null || dropItemId.isEmpty())
+                    {
+                        continue;
+                    }
                 }
 
                 String chapterId = readStringFromTags(tags, "OneBlockUnlockChapter");
@@ -103,7 +106,13 @@ public final class OneBlockUnlockRecipeLoader
                     chapterId = OneBlockChapterResolver.DEFAULT_CHAPTER;
                 }
 
-                result.put(recipeConsumableId, new OneBlockUnlockService.UnlockDefinition(chapterId, dropItemId));
+                int weight = readIntFromTags(tags, "OneBlockUnlockWeight", 1);
+                if (weight < 1)
+                {
+                    weight = 1;
+                }
+
+                result.put(recipeConsumableId, new OneBlockUnlockService.UnlockDefinition(chapterId, dropItemId, weight));
             }
         }
 
@@ -183,5 +192,53 @@ public final class OneBlockUnlockRecipeLoader
         }
 
         return null;
+    }
+
+    private static int readIntFromTags(JsonObject tags, String key, int defaultValue)
+    {
+        if (tags == null || key == null || key.isEmpty() || !tags.has(key))
+        {
+            return defaultValue;
+        }
+
+        JsonElement e = tags.get(key);
+        if (e == null)
+        {
+            return defaultValue;
+        }
+
+        if (e.isJsonPrimitive())
+        {
+            try
+            {
+                return e.getAsInt();
+            }
+            catch (Exception ignored)
+            {
+                return defaultValue;
+            }
+        }
+
+        if (e.isJsonArray())
+        {
+            JsonArray array = e.getAsJsonArray();
+            if (!array.isEmpty())
+            {
+                JsonElement first = array.get(0);
+                if (first != null && first.isJsonPrimitive())
+                {
+                    try
+                    {
+                        return first.getAsInt();
+                    }
+                    catch (Exception ignored)
+                    {
+                        return defaultValue;
+                    }
+                }
+            }
+        }
+
+        return defaultValue;
     }
 }

@@ -67,8 +67,8 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
 
         String chapterId = OneBlockChapterResolver.chapterFromBlockType(event.getBlockType());
         List<String> enabledDrops = stateProvider.getEnabledDrops(playerId, chapterId);
-        String rewardItemId = dropRegistry.pickReward(enabledDrops);
-        if (rewardItemId == null || rewardItemId.isEmpty())
+        String rewardId = dropRegistry.pickReward(chapterId, enabledDrops);
+        if (rewardId == null || rewardId.isEmpty())
         {
             return;
         }
@@ -89,7 +89,7 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
         Vector3i pos = event.getTargetBlock();
 
         SpawnBlockByID(world, blockType, pos);
-        SpawnItemByID(store, world, rewardItemId, pos, new Vector3i(0, 1, 0));
+        SpawnReward(store, world, rewardId, pos, new Vector3i(0, 1, 0));
     }
 
     private static boolean IsPlayerReferenceValid(Player player, BreakBlockEvent event)
@@ -113,13 +113,19 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
         return isOneBlock(blockType);
     }
 
-    private static void SpawnItemByID(Store<EntityStore> store,
-                                      World world,
-                                      String itemId,
-                                      Vector3i baseBlockPos,
-                                      Vector3i offset)
+    private static void SpawnReward(Store<EntityStore> store,
+                                    World world,
+                                    String rewardId,
+                                    Vector3i baseBlockPos,
+                                    Vector3i offset)
     {
-        if (store == null || world == null || itemId == null || itemId.isEmpty() || baseBlockPos == null || offset == null)
+        if (store == null || world == null || rewardId == null || rewardId.isEmpty() || baseBlockPos == null || offset == null)
+        {
+            return;
+        }
+
+        OneBlockDropId dropId = OneBlockDropId.parse(rewardId);
+        if (dropId.getId() == null || dropId.getId().isEmpty())
         {
             return;
         }
@@ -130,9 +136,15 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
 
         Vector3d dropPos = new Vector3d(x + 0.5, y + 0.1, z + 0.5);
 
+        if (dropId.isEntity())
+        {
+            OneBlockEntitySpawner.spawnNpc(store, world, new Vector3i(x, y, z), dropId.getId());
+            return;
+        }
+
         world.execute(() ->
         {
-            ItemStack stack = new ItemStack(itemId, 1);
+            ItemStack stack = new ItemStack(dropId.getId(), 1);
 
             var drop = ItemComponent.generateItemDrop(
                     store,

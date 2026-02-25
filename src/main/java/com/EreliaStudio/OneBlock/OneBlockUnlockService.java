@@ -71,11 +71,13 @@ public final class OneBlockUnlockService
     {
         public final String chapterId;
         public final String dropItemId;
+        public final int weight;
 
-        public UnlockDefinition(String chapterId, String dropItemId)
+        public UnlockDefinition(String chapterId, String dropItemId, int weight)
         {
             this.chapterId = chapterId;
             this.dropItemId = dropItemId;
+            this.weight = weight;
         }
     }
 }

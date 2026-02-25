@@ -34,7 +34,11 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         //
         // Also accepts: oneblock.unlock.Soil_Sand.name (will map to Soil_Sand)
         this.actionArg = this.withRequiredArg("action", "unlock|lock|enable|disable|status|consume", ArgTypes.STRING);
-        this.idArg = this.withRequiredArg("id", "Drop item id (ex: Soil_Sand), unlock key (ex: oneblock.unlock.Soil_Sand.name), or consumable item id (ex: OneBlock_Unlock_Soil_Sand)", ArgTypes.STRING);
+        this.idArg = this.withRequiredArg(
+                "id",
+                "Drop id (ex: Soil_Sand or entity:Sheep), unlock key (ex: oneblock.unlock.Soil_Sand.name), or consumable item id (ex: OneBlock_Unlock_Soil_Sand)",
+                ArgTypes.STRING
+        );
     }
 
     @Override
