@@ -1,0 +1,47 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Soil_Sand.name",
+    "Description": "server.items.OneBlock_Unlock_Soil_Sand.description"
+  },
+  "Id": "OneBlock_Unlock_Soil_Sand",
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 5,
+        "ResourceTypeId": "Ingredient_Fibre"
+      },
+      {
+        "Quantity": 1,
+        "ResourceTypeId": "Rock"
+      }
+    ],
+    "Output": {
+      "Quantity": 1
+    },
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Block"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "PlayerAnimationsId": "Consumable",
+  "Consumable": {
+    "CanAlwaysConsume": true
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockDropId": [
+      "Soil_Sand"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 99,
+  "ItemSoundSetId": "ISS_Items_Ingredients"
+}

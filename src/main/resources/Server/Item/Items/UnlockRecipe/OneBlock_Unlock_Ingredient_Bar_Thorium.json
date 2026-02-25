@@ -1,0 +1,43 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Ingredient_Bar_Thorium.name",
+    "Description": "server.items.OneBlock_Unlock_Ingredient_Bar_Thorium.description"
+  },
+  "Id": "OneBlock_Unlock_Ingredient_Bar_Thorium",
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 20,
+        "ResourceTypeId": "Ingredient_Fibre"
+      }
+    ],
+    "Output": {
+      "Quantity": 1
+    },
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Ingredient"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "PlayerAnimationsId": "Consumable",
+  "Consumable": {
+    "CanAlwaysConsume": true
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Bar_Thorium"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 99,
+  "ItemSoundSetId": "ISS_Items_Ingredients"
+}
