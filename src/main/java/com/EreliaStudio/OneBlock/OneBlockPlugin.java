@@ -2,6 +2,7 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.logger.HytaleLogger;
 
 import javax.annotation.Nonnull;
@@ -34,8 +35,10 @@ public class OneBlockPlugin extends JavaPlugin
 
         dropRegistry = new OneBlockDropRegistry();
 
-        // Step 0: temporary in-memory provider (later replaced by persistent component provider)
-        dropsStateProvider = new InMemoryOneBlockDropsStateProvider();
+        // File-backed provider so unlocks persist across restarts
+        dropsStateProvider = new FileBackedOneBlockDropsStateProvider(
+                getDataDirectory().resolve("oneblock-drops.json")
+        );
 
         getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, dropsStateProvider));
 
@@ -73,6 +76,10 @@ public class OneBlockPlugin extends JavaPlugin
     protected void shutdown()
     {
         LOGGER.at(Level.INFO).log("Shutting down...");
+        if (dropsStateProvider instanceof FileBackedOneBlockDropsStateProvider fileProvider)
+        {
+            fileProvider.saveIfDirty();
+        }
         instance = null;
     }
 
