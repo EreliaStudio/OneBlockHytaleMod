@@ -4,16 +4,48 @@
     "Description": "server.items.OneBlock_Unlock_Soil_Dirt.description"
   },
   "Id": "OneBlock_Unlock_Soil_Dirt",
+  "Categories": [
+    "Items.Recipes"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
+  "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
+  "IconProperties": {
+    "Scale": 0.76,
+    "Rotation": [
+      135,
+      135,
+      0
+    ],
+    "Translation": [
+      -1,
+      5
+    ]
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_pool_insert"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_pool_insert"
+        }
+      ]
+    }
+  },
   "Recipe": {
     "Input": [
       {
-        "Quantity": 3,
-        "ResourceTypeId": "Ingredient_Fibre"
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 1
       }
     ],
-    "Output": {
-      "Quantity": 1
-    },
+    "OutputQuantity": 1,
     "BenchRequirement": [
       {
         "Type": "Crafting",
@@ -24,11 +56,8 @@
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
-  "PlayerAnimationsId": "Consumable",
-  "Consumable": {
-    "CanAlwaysConsume": true
-  },
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
+  "Consumable": true,
   "Tags": {
     "Type": [
       "OneBlock_Unlock_Consumable"
@@ -38,6 +67,5 @@
     ]
   },
   "ItemLevel": 1,
-  "MaxStack": 99,
-  "ItemSoundSetId": "ISS_Items_Ingredients"
+  "MaxStack": 1
 }

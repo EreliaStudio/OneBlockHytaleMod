@@ -45,3 +45,5 @@ bin/
 hytale-server
 
 libs/HytaleServer.jar
+
+.cache

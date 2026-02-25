@@ -53,6 +53,13 @@ public class OneBlockPlugin extends JavaPlugin
         getCommandRegistry().registerCommand(new OneBlockCommand());
         LOGGER.at(Level.INFO).log("Adding the OneBlock commands");
 
+        getCodecRegistry(Interaction.CODEC).register(
+                OneBlockUnlockInteraction.INTERACTION_ID,
+                OneBlockUnlockInteraction.class,
+                OneBlockUnlockInteraction.CODEC
+        );
+        LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockUnlockInteraction.INTERACTION_ID);
+
         LOGGER.at(Level.INFO).log("Setup complete!");
     }
 
