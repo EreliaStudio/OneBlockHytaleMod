@@ -15,7 +15,7 @@ import java.util.logging.Level;
 public final class OneBlockEntitySpawner
 {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-    private static final Vector3d DEFAULT_SPAWN_OFFSET = new Vector3d(0, 0.5, 0);
+    private static final Vector3d DEFAULT_SPAWN_OFFSET = new Vector3d(0, 1.0, 0);
 
     private static volatile boolean initialized = false;
     private static Field fieldEntityId;

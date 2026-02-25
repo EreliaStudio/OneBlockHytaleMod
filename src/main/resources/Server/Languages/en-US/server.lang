@@ -43,6 +43,8 @@ items.OneBlock_Unlock_Soil_Dirt.description = Consume to permanently unlock Soil
 
 items.OneBlock_Unlock_Ingredient_Bar_Thorium.name = Thorium Bar Unlock Token
 items.OneBlock_Unlock_Ingredient_Bar_Thorium.description = Consume to permanently unlock Ingredient_Bar_Thorium in your OneBlock drop pool.
+items.OneBlock_Unlock_Entity_Pig.name = Pig Spawn Unlock Token
+items.OneBlock_Unlock_Entity_Pig.description = Consume to permanently unlock Pig as a possible OneBlock drop.
 
 # Act keys
 items.OneBlock_Act_A1.name = Act Key A1

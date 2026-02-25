@@ -51,10 +51,11 @@
           "Name": "server.benchCategories.OneBlockUpgrader_Act_A1",
           "Recipes": [
             "OneBlock_Act_A1",
-            "OneBlock_Unlock_Soil_Sand",
-            "OneBlock_Unlock_Soil_Dirt",
-            "OneBlock_Unlock_Ingredient_Bar_Thorium"
-          ]
+        "OneBlock_Unlock_Soil_Sand",
+        "OneBlock_Unlock_Soil_Dirt",
+        "OneBlock_Unlock_Ingredient_Bar_Thorium",
+        "OneBlock_Unlock_Entity_Pig"
+      ]
         },
         {
           "Id": "OneBlock_Upgrader_Act_A2",
