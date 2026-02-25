@@ -1,0 +1,27 @@
+# Bench
+items.Bench_OneBlockUpgrader.name = OneBlock Upgrader
+items.Bench_OneBlockUpgrader.description = Bench allowing you to upgrade your OneBlock by unlocking new loot from it
+oneblock.category.Blocks.name = Block unlock upgrade
+oneblock.category.Ingredients.name = Ingredient unlock upgrade
+
+# Category descriptions (new)
+oneblock.category.Blocks.description = Unlock new block drops for your OneBlock.
+oneblock.category.Ingredients.description = Unlock new ingredient drops for your OneBlock.
+
+# Unlock entries (new)
+oneblock.unlock.Soil_Sand.name = Sand
+oneblock.unlock.Soil_Sand.description = Unlocks Soil_Sand as a possible OneBlock drop.
+
+oneblock.unlock.Soil_Dirt.name = Dirt
+oneblock.unlock.Soil_Dirt.description = Unlocks Soil_Dirt as a possible OneBlock drop.
+
+oneblock.unlock.Ingredient_Bar_Thorium.name = Thorium Bar
+oneblock.unlock.Ingredient_Bar_Thorium.description = Unlocks Ingredient_Bar_Thorium as a possible OneBlock drop.
+
+# Existing OneBlock tiers (kept)
+items.OneBlock_Block_A1.name = OneBlock Tier A1
+items.OneBlock_Block_A2.name = OneBlock Tier A2
+items.OneBlock_Block_A3.name = OneBlock Tier A3
+items.OneBlock_Block_B1.name = OneBlock Tier B1
+items.OneBlock_Block_B2.name = OneBlock Tier B2
+items.OneBlock_Block_B3.name = OneBlock Tier B3

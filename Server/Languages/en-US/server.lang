@@ -1,4 +1,0 @@
-items.Bench_OneBlockUpgrader.name = OneBlock Upgrader
-items.Bench_OneBlockUpgrader.description = Bench allowing you to upgrade your OneBlock by unlocking new loot from it
-benchCategories.OneBlockUpgrader_BlockCategories = Block unlock upgrade
-benchCategories.OneBlockUpgrader_IngredientCategories = Ingredient unlock upgrade

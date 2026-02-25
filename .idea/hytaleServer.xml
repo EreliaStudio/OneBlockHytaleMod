@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="HytaleServerSettings">
+    <option name="javaPath" value="C:\Users\User\.hytale-intellij\java\temurin-25\jdk-25.0.2+10\bin\java.exe" />
+    <option name="serverPath" value="hytale-server" />
+  </component>
+</project>

@@ -1,0 +1,19 @@
+{
+  "Group": "com.EreliaStudio",
+  "Name": "OneBlock",
+  "Version": "1.0.0",
+  "Description": "An implementation of the gamemode OneBlock for Hytale",
+  "Authors": [
+    {
+      "Name": "Hyarius",
+      "Email": "hyarius@erelia-studio.com",
+      "Url": "https://github.com/EreliaStudio"
+    }
+  ],
+  "ServerVersion": "2026.02.19-1a311a592",
+  "Main": "com.EreliaStudio.OneBlock.OneBlockPlugin",
+  "IncludesAssetPack": true,
+  "DisabledByDefault": false,
+  "Dependencies": {},
+  "OptionalDependencies": {}
+}
