@@ -31,7 +31,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
         OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
         if (s == null || s.enabledDrops.isEmpty())
         {
-            return Collections.singletonList(OneBlockDropRegistry.DEFAULT_ITEM_ID);
+            return new ArrayList<>(OneBlockChapterDefaults.getDefaultDropIds(chapterId));
         }
 
         return new ArrayList<>(s.enabledDrops);
@@ -82,7 +82,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
             return false;
         }
 
-        if (OneBlockDropRegistry.DEFAULT_ITEM_ID.equals(dropItemId))
+        if (OneBlockChapterDefaults.isDefaultDrop(chapterId, dropItemId))
         {
             return false;
         }
@@ -95,7 +95,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
 
         boolean removed = s.unlockedDrops.remove(dropItemId);
         s.enabledDrops.remove(dropItemId);
-        ensureDefaults(s);
+        ensureDefaults(chapterId, s);
 
         if (removed)
         {
@@ -132,7 +132,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
         else
         {
             changed = s.enabledDrops.remove(dropItemId);
-            ensureDefaults(s);
+            ensureDefaults(chapterId, s);
         }
 
         if (changed)
@@ -155,7 +155,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
         s.enabledDrops.addAll(s.unlockedDrops);
         if (s.enabledDrops.isEmpty())
         {
-            s.enabledDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
+            s.enabledDrops.addAll(OneBlockChapterDefaults.getDefaultDropIds(chapterId));
         }
 
         markDirty();
@@ -240,7 +240,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
                                 chapterState.enabledDrops.addAll(rawChapter.enabled);
                             }
                         }
-                        ensureDefaults(chapterState);
+                        ensureDefaults(chapterId, chapterState);
                         playerState.chapters.put(chapterId, chapterState);
                     }
                 }
@@ -257,7 +257,7 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
                     {
                         chapterState.enabledDrops.addAll(raw.enabled);
                     }
-                    ensureDefaults(chapterState);
+                    ensureDefaults(chapterId, chapterState);
                     playerState.chapters.put(chapterId, chapterState);
                 }
 
@@ -284,31 +284,15 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
         return playerState.chapters.computeIfAbsent(chapterKey, key ->
         {
             OneBlockPlayerChapterDropsState s = new OneBlockPlayerChapterDropsState();
-            s.unlockedDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
-            s.enabledDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
+            OneBlockChapterDefaults.ensureDefaults(chapterKey, s);
             markDirty();
             return s;
         });
     }
 
-    private static void ensureDefaults(OneBlockPlayerChapterDropsState s)
+    private static void ensureDefaults(String chapterId, OneBlockPlayerChapterDropsState s)
     {
-        if (s == null)
-        {
-            return;
-        }
-
-        s.unlockedDrops.removeIf(item -> item == null || item.isEmpty());
-        s.enabledDrops.removeIf(item -> item == null || item.isEmpty());
-
-        if (s.unlockedDrops.isEmpty())
-        {
-            s.unlockedDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
-        }
-        if (s.enabledDrops.isEmpty())
-        {
-            s.enabledDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
-        }
+        OneBlockChapterDefaults.ensureDefaults(chapterId, s);
     }
 
     private void markDirty()

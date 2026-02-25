@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Ingredient_Bar_Thorium.name",
-    "Description": "server.items.OneBlock_Unlock_Ingredient_Bar_Thorium.description"
+    "Name": "server.items.OneBlock_Unlock_Entity_Boar_Piglet.name",
+    "Description": "server.items.OneBlock_Unlock_Entity_Boar_Piglet.description"
   },
-  "Id": "OneBlock_Unlock_Ingredient_Bar_Thorium",
+  "Id": "OneBlock_Unlock_Entity_Boar_Piglet",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 1
+        "ItemId": "Plant_Crop_Lettuce_Item",
+        "Quantity": 20
       }
     ],
     "OutputQuantity": 1,
@@ -50,23 +50,26 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_A1"
+          "OneBlock_Upgrader_Act_A3"
         ],
         "Id": "OneBlockUpgrader"
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/IngredientUpgrade.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Consumable": true,
   "Tags": {
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Ingredient_Bar_Thorium"
+    "OneBlockUnlockEntityId": [
+      "Boar_Piglet"
     ],
     "OneBlockUnlockChapter": [
-      "A1"
+      "A3"
+    ],
+    "OneBlockUnlockWeight": [
+      "1"
     ]
   },
   "ItemLevel": 1,

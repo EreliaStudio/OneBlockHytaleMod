@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Entity_Pig.name",
-    "Description": "server.items.OneBlock_Unlock_Entity_Pig.description"
+    "Name": "server.items.OneBlock_Unlock_Ore_Copper.name",
+    "Description": "server.items.OneBlock_Unlock_Ore_Copper.description"
   },
-  "Id": "OneBlock_Unlock_Entity_Pig",
+  "Id": "OneBlock_Unlock_Ore_Copper",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 1
+        "ItemId": "Rock_Stone_Cobble",
+        "Quantity": 20
       }
     ],
     "OutputQuantity": 1,
@@ -50,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_A1"
+          "OneBlock_Upgrader_Act_B2"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -62,14 +62,14 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockEntityId": [
-      "Pig"
+    "OneBlockUnlockDropId": [
+      "Ore_Copper"
     ],
     "OneBlockUnlockChapter": [
-      "A1"
+      "B2"
     ],
     "OneBlockUnlockWeight": [
-      "20"
+      "3"
     ]
   },
   "ItemLevel": 1,

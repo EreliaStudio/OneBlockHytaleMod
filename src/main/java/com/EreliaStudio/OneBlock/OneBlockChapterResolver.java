@@ -42,6 +42,10 @@ public final class OneBlockChapterResolver
         }
 
         String chapter = itemId.substring(ACT_PREFIX.length());
+        if (chapter.endsWith("_Key"))
+        {
+            chapter = chapter.substring(0, chapter.length() - "_Key".length());
+        }
         return chapter.isEmpty() ? null : chapter;
     }
 

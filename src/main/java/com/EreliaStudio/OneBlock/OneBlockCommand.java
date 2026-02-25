@@ -36,7 +36,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         this.actionArg = this.withRequiredArg("action", "unlock|lock|enable|disable|status|consume", ArgTypes.STRING);
         this.idArg = this.withRequiredArg(
                 "id",
-                "Drop id (ex: Soil_Sand or entity:Sheep), unlock key (ex: oneblock.unlock.Soil_Sand.name), or consumable item id (ex: OneBlock_Unlock_Soil_Sand)",
+                "Drop id (ex: Soil_Grass or entity:Sheep) or consumable item id (ex: OneBlock_Unlock_Soil_Grass)",
                 ArgTypes.STRING
         );
     }
@@ -139,7 +139,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                      UUID targetId,
                                      String dropItemId)
     {
-        if (OneBlockDropRegistry.DEFAULT_ITEM_ID.equals(dropItemId))
+        if (OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
         {
             ctx.sendMessage(Message.raw("Already available by default: " + dropItemId));
             return;
@@ -157,7 +157,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                    UUID targetId,
                                    String dropItemId)
     {
-        if (OneBlockDropRegistry.DEFAULT_ITEM_ID.equals(dropItemId))
+        if (OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
         {
             ctx.sendMessage(Message.raw("Cannot lock the default drop: " + dropItemId));
             return;
@@ -175,7 +175,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                      UUID targetId,
                                      String dropItemId)
     {
-        if (!provider.isUnlocked(targetId, dropItemId) && !OneBlockDropRegistry.DEFAULT_ITEM_ID.equals(dropItemId))
+        if (!provider.isUnlocked(targetId, dropItemId)
+                && !OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
         {
             ctx.sendMessage(Message.raw("Not unlocked: " + dropItemId));
             return;
@@ -193,7 +194,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                       UUID targetId,
                                       String dropItemId)
     {
-        if (OneBlockDropRegistry.DEFAULT_ITEM_ID.equals(dropItemId))
+        if (OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
         {
             ctx.sendMessage(Message.raw("Cannot disable the default drop: " + dropItemId));
             return;
@@ -211,7 +212,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                      UUID targetId,
                                      String dropItemId)
     {
-        boolean unlocked = provider.isUnlocked(targetId, dropItemId) || OneBlockDropRegistry.DEFAULT_ITEM_ID.equals(dropItemId);
+        boolean unlocked = provider.isUnlocked(targetId, dropItemId)
+                || OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId);
         List<String> enabled = provider.getEnabledDrops(targetId);
         boolean isEnabled = enabled.contains(dropItemId);
 

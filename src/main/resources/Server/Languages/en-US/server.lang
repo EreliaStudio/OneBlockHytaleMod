@@ -9,60 +9,72 @@ oneblock.category.Blocks.description = Unlock new block drops for your OneBlock.
 oneblock.category.Ingredients.description = Unlock new ingredient drops for your OneBlock.
 
 # Act categories
-benchCategories.OneBlockUpgrader_Act_A1 = Act A1
-benchCategories.OneBlockUpgrader_Act_A2 = Act A2
-benchCategories.OneBlockUpgrader_Act_A3 = Act A3
-benchCategories.OneBlockUpgrader_Act_B1 = Act B1
-benchCategories.OneBlockUpgrader_Act_B2 = Act B2
-benchCategories.OneBlockUpgrader_Act_B3 = Act B3
-
-# Unlock entries (new)
-oneblock.unlock.Soil_Sand.name = Sand
-oneblock.unlock.Soil_Sand.description = Unlocks Soil_Sand as a possible OneBlock drop.
-
-oneblock.unlock.Soil_Dirt.name = Dirt
-oneblock.unlock.Soil_Dirt.description = Unlocks Soil_Dirt as a possible OneBlock drop.
-
-oneblock.unlock.Ingredient_Bar_Thorium.name = Thorium Bar
-oneblock.unlock.Ingredient_Bar_Thorium.description = Unlocks Ingredient_Bar_Thorium as a possible OneBlock drop.
+benchCategories.OneBlockUpgrader_Act_A1 = Act I - The adventure begin
+benchCategories.OneBlockUpgrader_Act_A2 = Act II - Walking thought the meadow
+benchCategories.OneBlockUpgrader_Act_A3 = Act III - Day at the farm
+benchCategories.OneBlockUpgrader_Act_B1 = Act IV - Preparing the dive
+benchCategories.OneBlockUpgrader_Act_B2 = Act V - Cave Entrance
+benchCategories.OneBlockUpgrader_Act_B3 = Act VI - Cave Deep layer
 
 # Existing OneBlock tiers (kept)
-items.OneBlock_Block_A1.name = OneBlock Tier A1
-items.OneBlock_Block_A2.name = OneBlock Tier A2
-items.OneBlock_Block_A3.name = OneBlock Tier A3
-items.OneBlock_Block_B1.name = OneBlock Tier B1
-items.OneBlock_Block_B2.name = OneBlock Tier B2
-items.OneBlock_Block_B3.name = OneBlock Tier B3
+items.OneBlock_Block_A1.name = OneBlock Tier I
+items.OneBlock_Block_A2.name = OneBlock Tier II
+items.OneBlock_Block_A3.name = OneBlock Tier III
+items.OneBlock_Block_B1.name = OneBlock Tier IV
+items.OneBlock_Block_B2.name = OneBlock Tier V
+items.OneBlock_Block_B3.name = OneBlock Tier VI
 
 # Unlock consumables
-items.OneBlock_Unlock_Soil_Sand.name = Sand Unlock Token
-items.OneBlock_Unlock_Soil_Sand.description = Consume to permanently unlock Soil_Sand in your OneBlock drop pool.
+items.OneBlock_Unlock_Soil_Grass.name = Grass Unlock Token
+items.OneBlock_Unlock_Soil_Grass.description = Consume to permanently unlock Soil_Grass in your OneBlock drop pool.
 
-items.OneBlock_Unlock_Soil_Dirt.name = Dirt Unlock Token
-items.OneBlock_Unlock_Soil_Dirt.description = Consume to permanently unlock Soil_Dirt in your OneBlock drop pool.
+items.OneBlock_Unlock_Rock_Stone_Cobble.name = Cobblestone Unlock Token
+items.OneBlock_Unlock_Rock_Stone_Cobble.description = Consume to permanently unlock Rock_Stone_Cobble in your OneBlock drop pool.
 
-items.OneBlock_Unlock_Ingredient_Bar_Thorium.name = Thorium Bar Unlock Token
-items.OneBlock_Unlock_Ingredient_Bar_Thorium.description = Consume to permanently unlock Ingredient_Bar_Thorium in your OneBlock drop pool.
-items.OneBlock_Unlock_Entity_Pig.name = Pig Spawn Unlock Token
-items.OneBlock_Unlock_Entity_Pig.description = Consume to permanently unlock Pig as a possible OneBlock drop.
+items.OneBlock_Unlock_Wood_Ash_Trunk.name = Ash Trunk Unlock Token
+items.OneBlock_Unlock_Wood_Ash_Trunk.description = Consume to permanently unlock Wood_Ash_Trunk in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Ingredient_Stick.name = Stick Unlock Token
+items.OneBlock_Unlock_Ingredient_Stick.description = Consume to permanently unlock Ingredient_Stick in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Ingredient_Life_Essence.name = Life Essence Unlock Token
+items.OneBlock_Unlock_Ingredient_Life_Essence.description = Consume to permanently unlock Ingredient_Life_Essence in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Entity_Piglet.name = Piglet Spawn Unlock Token
+items.OneBlock_Unlock_Entity_Piglet.description = Consume to permanently unlock Piglet as a possible OneBlock drop.
+
+items.OneBlock_Unlock_Entity_Boar_Piglet.name = Boar Piglet Spawn Unlock Token
+items.OneBlock_Unlock_Entity_Boar_Piglet.description = Consume to permanently unlock Boar_Piglet as a possible OneBlock drop.
+
+items.OneBlock_Unlock_Entity_Calf.name = Calf Spawn Unlock Token
+items.OneBlock_Unlock_Entity_Calf.description = Consume to permanently unlock Calf as a possible OneBlock drop.
+
+items.OneBlock_Unlock_Entity_Chick.name = Chick Spawn Unlock Token
+items.OneBlock_Unlock_Entity_Chick.description = Consume to permanently unlock Chick as a possible OneBlock drop.
+
+items.OneBlock_Unlock_Ore_Copper.name = Copper Ore Unlock Token
+items.OneBlock_Unlock_Ore_Copper.description = Consume to permanently unlock Ore_Copper in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Ingredient_Charcoal.name = Charcoal Unlock Token
+items.OneBlock_Unlock_Ingredient_Charcoal.description = Consume to permanently unlock Ingredient_Charcoal in your OneBlock drop pool.
 
 # Act keys
-items.OneBlock_Act_A1.name = Act Key A1
-items.OneBlock_Act_A1.description = Use this on a OneBlock to edit its chapter to A1.
+items.OneBlock_Act_A1_Key.name = Act I Key - The adventure begin
+items.OneBlock_Act_A1_Key.description = Use this on a OneBlock to edit its chapter to I.
 
-items.OneBlock_Act_A2.name = Act Key A2
-items.OneBlock_Act_A2.description = Use this on a OneBlock to edit its chapter to A2.
+items.OneBlock_Act_A2_Key.name = Act II Key - Walking thought the meadow
+items.OneBlock_Act_A2_Key.description = Use this on a OneBlock to edit its chapter to II.
 
-items.OneBlock_Act_A3.name = Act Key A3
-items.OneBlock_Act_A3.description = Use this on a OneBlock to edit its chapter to A3.
+items.OneBlock_Act_A3_Key.name = Act III Key - Day at the farm
+items.OneBlock_Act_A3_Key.description = Use this on a OneBlock to edit its chapter to III.
 
-items.OneBlock_Act_B1.name = Act Key B1
-items.OneBlock_Act_B1.description = Use this on a OneBlock to edit its chapter to B1.
+items.OneBlock_Act_B1_Key.name = Act IV Key - Preparing the dive
+items.OneBlock_Act_B1_Key.description = Use this on a OneBlock to edit its chapter to IV.
 
-items.OneBlock_Act_B2.name = Act Key B2
-items.OneBlock_Act_B2.description = Use this on a OneBlock to edit its chapter to B2.
+items.OneBlock_Act_B2_Key.name = Act V Key - Cave Entrance
+items.OneBlock_Act_B2_Key.description = Use this on a OneBlock to edit its chapter to V.
 
-items.OneBlock_Act_B3.name = Act Key B3
-items.OneBlock_Act_B3.description = Use this on a OneBlock to edit its chapter to B3.
+items.OneBlock_Act_B3_Key.name = Act VI Key - Cave Deep layer
+items.OneBlock_Act_B3_Key.description = Use this on a OneBlock to edit its chapter to VI.
 
 # Interaction hint

@@ -8,8 +8,7 @@ import java.util.Random;
 
 public final class OneBlockDropRegistry
 {
-    public static final String DEFAULT_ITEM_ID = "Soil_Grass";
-    private static final int DEFAULT_DROP_WEIGHT = 50;
+    public static final String DEFAULT_ITEM_ID = "Ingredient_Fibre";
 
     private final Random rng = new Random();
     private final Map<String, Map<String, Integer>> weightByChapter = new HashMap<>();
@@ -98,6 +97,28 @@ public final class OneBlockDropRegistry
         }
     }
 
+    public void registerDefaultWeights(Map<String, Map<String, Integer>> defaultsByChapter)
+    {
+        if (defaultsByChapter == null || defaultsByChapter.isEmpty())
+        {
+            return;
+        }
+
+        for (Map.Entry<String, Map<String, Integer>> entry : defaultsByChapter.entrySet())
+        {
+            String chapterId = entry.getKey();
+            Map<String, Integer> weights = entry.getValue();
+            if (weights == null || weights.isEmpty())
+            {
+                continue;
+            }
+
+            weightByChapter
+                    .computeIfAbsent(chapterId, key -> new HashMap<>())
+                    .putAll(weights);
+        }
+    }
+
     private int getWeight(String chapterId, String dropId)
     {
         if (dropId == null || dropId.isEmpty())
@@ -117,16 +138,6 @@ public final class OneBlockDropRegistry
         }
 
         Integer weight = weights.get(dropId);
-        if (weight != null)
-        {
-            return weight;
-        }
-
-        if (DEFAULT_ITEM_ID.equals(dropId))
-        {
-            return DEFAULT_DROP_WEIGHT;
-        }
-
-        return 1;
+        return weight == null ? 1 : weight;
     }
 }

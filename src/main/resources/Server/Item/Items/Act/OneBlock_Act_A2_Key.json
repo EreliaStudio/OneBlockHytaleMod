@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Act_B3.name",
-    "Description": "server.items.OneBlock_Act_B3.description"
+    "Name": "server.items.OneBlock_Act_A2_Key.name",
+    "Description": "server.items.OneBlock_Act_A2_Key.description"
   },
-  "Id": "OneBlock_Act_B3",
+  "Id": "OneBlock_Act_A2_Key",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/ChapterKey.png",
   "Categories": [
@@ -34,7 +34,15 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
+        "ItemId": "Tool_Pickaxe_Crude",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Tool_Hammer_Crude",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Tool_Hatchet_Crude",
         "Quantity": 1
       }
     ],
@@ -43,7 +51,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_B3"
+          "OneBlock_Upgrader_Act_A1"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -55,7 +63,7 @@
       "OneBlock_Act"
     ],
     "OneBlockActTargetBlockId": [
-      "OneBlock_Block_B3"
+      "OneBlock_Block_A2"
     ]
   },
   "MaxStack": 1

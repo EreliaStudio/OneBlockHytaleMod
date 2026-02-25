@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Soil_Dirt.name",
-    "Description": "server.items.OneBlock_Unlock_Soil_Dirt.description"
+    "Name": "server.items.OneBlock_Unlock_Ingredient_Stick.name",
+    "Description": "server.items.OneBlock_Unlock_Ingredient_Stick.description"
   },
-  "Id": "OneBlock_Unlock_Soil_Dirt",
+  "Id": "OneBlock_Unlock_Ingredient_Stick",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 1
+        "ItemId": "Wood_Ash_Trunk",
+        "Quantity": 4
       }
     ],
     "OutputQuantity": 1,
@@ -63,13 +63,13 @@
       "OneBlock_Unlock_Consumable"
     ],
     "OneBlockUnlockDropId": [
-      "Soil_Dirt"
+      "Ingredient_Stick"
     ],
     "OneBlockUnlockChapter": [
       "A1"
     ],
     "OneBlockUnlockWeight": [
-      "25"
+      "10"
     ]
   },
   "ItemLevel": 1,

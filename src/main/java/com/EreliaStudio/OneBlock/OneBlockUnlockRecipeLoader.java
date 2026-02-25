@@ -6,7 +6,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public final class OneBlockUnlockRecipeLoader
@@ -42,6 +44,8 @@ public final class OneBlockUnlockRecipeLoader
             }
 
             JsonObject categoryJson = categoryElement.getAsJsonObject();
+            String categoryId = readString(categoryJson, "Id");
+            String categoryChapterId = chapterFromCategoryId(categoryId);
             JsonArray recipes = categoryJson.getAsJsonArray("Recipes");
             if (recipes == null)
             {
@@ -61,15 +65,14 @@ public final class OneBlockUnlockRecipeLoader
                     continue;
                 }
 
-                String recipePath = recipeFolderResourcePath + "/" + recipeItemId + ".json";
                 JsonObject recipeJson;
                 try
                 {
-                    recipeJson = loadJsonObject(owner, recipePath);
+                    recipeJson = loadRecipeJson(owner, recipeFolderResourcePath, categoryChapterId, recipeItemId);
                 }
                 catch (RuntimeException ignored)
                 {
-                    // Not an unlock recipe stored in the unlock folder.
+                    // Not an unlock recipe stored in the unlock folders.
                     continue;
                 }
 
@@ -103,7 +106,9 @@ public final class OneBlockUnlockRecipeLoader
                 String chapterId = readStringFromTags(tags, "OneBlockUnlockChapter");
                 if (chapterId == null || chapterId.isEmpty())
                 {
-                    chapterId = OneBlockChapterResolver.DEFAULT_CHAPTER;
+                    chapterId = (categoryChapterId == null || categoryChapterId.isEmpty())
+                            ? OneBlockChapterResolver.DEFAULT_CHAPTER
+                            : categoryChapterId;
                 }
 
                 int weight = readIntFromTags(tags, "OneBlockUnlockWeight", 1);
@@ -158,6 +163,55 @@ public final class OneBlockUnlockRecipeLoader
         }
 
         return e.getAsString();
+    }
+
+    private static JsonObject loadRecipeJson(Class<?> owner,
+                                             String baseFolder,
+                                             String chapterId,
+                                             String recipeItemId)
+    {
+        List<String> candidates = new ArrayList<>();
+        if (chapterId != null && !chapterId.isEmpty())
+        {
+            candidates.add(baseFolder + "/Act_" + chapterId + "/" + recipeItemId + ".json");
+        }
+        candidates.add(baseFolder + "/" + recipeItemId + ".json");
+
+        RuntimeException last = null;
+        for (String path : candidates)
+        {
+            try
+            {
+                return loadJsonObject(owner, path);
+            }
+            catch (RuntimeException ex)
+            {
+                last = ex;
+            }
+        }
+
+        if (last != null)
+        {
+            throw last;
+        }
+
+        throw new RuntimeException("Missing unlock recipe: " + recipeItemId);
+    }
+
+    private static String chapterFromCategoryId(String categoryId)
+    {
+        if (categoryId == null || categoryId.isEmpty())
+        {
+            return null;
+        }
+
+        int idx = categoryId.lastIndexOf("Act_");
+        if (idx < 0)
+        {
+            return null;
+        }
+
+        return categoryId.substring(idx + "Act_".length());
     }
 
     private static String readStringFromTags(JsonObject tags, String key)

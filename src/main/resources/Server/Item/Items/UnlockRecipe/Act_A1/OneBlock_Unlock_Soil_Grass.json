@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Soil_Sand.name",
-    "Description": "server.items.OneBlock_Unlock_Soil_Sand.description"
+    "Name": "server.items.OneBlock_Unlock_Soil_Grass.name",
+    "Description": "server.items.OneBlock_Unlock_Soil_Grass.description"
   },
-  "Id": "OneBlock_Unlock_Soil_Sand",
+  "Id": "OneBlock_Unlock_Soil_Grass",
   "Categories": [
     "Items.Recipes"
   ],
@@ -42,7 +42,7 @@
     "Input": [
       {
         "ItemId": "Ingredient_Fibre",
-        "Quantity": 1
+        "Quantity": 5
       }
     ],
     "OutputQuantity": 1,
@@ -63,7 +63,7 @@
       "OneBlock_Unlock_Consumable"
     ],
     "OneBlockUnlockDropId": [
-      "Soil_Sand"
+      "Soil_Grass"
     ],
     "OneBlockUnlockChapter": [
       "A1"

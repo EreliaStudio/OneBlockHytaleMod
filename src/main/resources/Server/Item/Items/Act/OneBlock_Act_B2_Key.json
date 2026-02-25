@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Act_B1.name",
-    "Description": "server.items.OneBlock_Act_B1.description"
+    "Name": "server.items.OneBlock_Act_B2_Key.name",
+    "Description": "server.items.OneBlock_Act_B2_Key.description"
   },
-  "Id": "OneBlock_Act_B1",
+  "Id": "OneBlock_Act_B2_Key",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/ChapterKey.png",
   "Categories": [
@@ -34,8 +34,16 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
+        "ItemId": "Food_Wildmeat_Cooked",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Weapon_Sword_Crude",
         "Quantity": 1
+      },
+      {
+        "ItemId": "Furniture_Crude_Torch",
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,
@@ -55,7 +63,7 @@
       "OneBlock_Act"
     ],
     "OneBlockActTargetBlockId": [
-      "OneBlock_Block_B1"
+      "OneBlock_Block_B2"
     ]
   },
   "MaxStack": 1

@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Act_A1.name",
-    "Description": "server.items.OneBlock_Act_A1.description"
+    "Name": "server.items.OneBlock_Act_A1_Key.name",
+    "Description": "server.items.OneBlock_Act_A1_Key.description"
   },
-  "Id": "OneBlock_Act_A1",
+  "Id": "OneBlock_Act_A1_Key",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/ChapterKey.png",
   "Categories": [

@@ -50,6 +50,7 @@ public class OneBlockPlugin extends JavaPlugin
                 "/Server/Item/Items/UnlockRecipe"
         );
 
+        dropRegistry.registerDefaultWeights(OneBlockChapterDefaults.getDefaultWeights());
         dropRegistry.registerWeights(consumableToDropMap.values());
         unlockService = new OneBlockUnlockService(dropsStateProvider, consumableToDropMap);
         LOGGER.at(Level.INFO).log("Loaded unlock recipes: " + consumableToDropMap.size());

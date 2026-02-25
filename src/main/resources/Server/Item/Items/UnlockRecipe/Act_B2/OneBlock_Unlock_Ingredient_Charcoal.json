@@ -1,0 +1,77 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Ingredient_Charcoal.name",
+    "Description": "server.items.OneBlock_Unlock_Ingredient_Charcoal.description"
+  },
+  "Id": "OneBlock_Unlock_Ingredient_Charcoal",
+  "Categories": [
+    "Items.Recipes"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
+  "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
+  "IconProperties": {
+    "Scale": 0.76,
+    "Rotation": [
+      135,
+      135,
+      0
+    ],
+    "Translation": [
+      -1,
+      5
+    ]
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_pool_insert"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_pool_insert"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Ash_Trunk",
+        "Quantity": 20
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Act_B2"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Charcoal"
+    ],
+    "OneBlockUnlockChapter": [
+      "B2"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 1
+}

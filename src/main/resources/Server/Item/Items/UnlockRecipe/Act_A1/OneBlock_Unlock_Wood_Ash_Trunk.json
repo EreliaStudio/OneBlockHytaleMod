@@ -1,0 +1,81 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Wood_Ash_Trunk.name",
+    "Description": "server.items.OneBlock_Unlock_Wood_Ash_Trunk.description"
+  },
+  "Id": "OneBlock_Unlock_Wood_Ash_Trunk",
+  "Categories": [
+    "Items.Recipes"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
+  "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
+  "IconProperties": {
+    "Scale": 0.76,
+    "Rotation": [
+      135,
+      135,
+      0
+    ],
+    "Translation": [
+      -1,
+      5
+    ]
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_pool_insert"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_pool_insert"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Soil_Grass",
+        "Quantity": 2
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Act_A1"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockDropId": [
+      "Wood_Ash_Trunk"
+    ],
+    "OneBlockUnlockChapter": [
+      "A1"
+    ],
+    "OneBlockUnlockWeight": [
+      "10"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 1
+}
