@@ -46,19 +46,21 @@ items.OneBlock_Unlock_Ingredient_Bar_Thorium.description = Consume to permanentl
 
 # Act keys
 items.OneBlock_Act_A1.name = Act Key A1
-items.OneBlock_Act_A1.description = Sets the targeted OneBlock block to chapter A1.
+items.OneBlock_Act_A1.description = Use this on a OneBlock to edit its chapter to A1.
 
 items.OneBlock_Act_A2.name = Act Key A2
-items.OneBlock_Act_A2.description = Sets the targeted OneBlock block to chapter A2.
+items.OneBlock_Act_A2.description = Use this on a OneBlock to edit its chapter to A2.
 
 items.OneBlock_Act_A3.name = Act Key A3
-items.OneBlock_Act_A3.description = Sets the targeted OneBlock block to chapter A3.
+items.OneBlock_Act_A3.description = Use this on a OneBlock to edit its chapter to A3.
 
 items.OneBlock_Act_B1.name = Act Key B1
-items.OneBlock_Act_B1.description = Sets the targeted OneBlock block to chapter B1.
+items.OneBlock_Act_B1.description = Use this on a OneBlock to edit its chapter to B1.
 
 items.OneBlock_Act_B2.name = Act Key B2
-items.OneBlock_Act_B2.description = Sets the targeted OneBlock block to chapter B2.
+items.OneBlock_Act_B2.description = Use this on a OneBlock to edit its chapter to B2.
 
 items.OneBlock_Act_B3.name = Act Key B3
-items.OneBlock_Act_B3.description = Sets the targeted OneBlock block to chapter B3.
+items.OneBlock_Act_B3.description = Use this on a OneBlock to edit its chapter to B3.
+
+# Interaction hint

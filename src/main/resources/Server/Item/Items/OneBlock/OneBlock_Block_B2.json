@@ -18,7 +18,8 @@
     "Gathering": {
       "Breaking": {
         "GatherType": "Soils",
-        "ItemId": "Soil_Dirt"
+        "ItemId": "Soil_Dirt",
+        "Quantity": 0
       }
     },
     "Textures": [
@@ -51,3 +52,4 @@
   },
   "ItemSoundSetId": "ISS_Blocks_Stone"
 }
+

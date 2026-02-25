@@ -23,14 +23,7 @@
     ]
   },
   "Interactions": {
-    "Primary": {
-      "Interactions": [
-        {
-          "Type": "oneblock_act_change"
-        }
-      ]
-    },
-    "Secondary": {
+    "Use": {
       "Interactions": [
         {
           "Type": "oneblock_act_change"

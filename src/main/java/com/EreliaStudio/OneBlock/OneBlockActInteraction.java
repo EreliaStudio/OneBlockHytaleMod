@@ -79,8 +79,14 @@ public final class OneBlockActInteraction extends SimpleInstantInteraction
         BlockPosition target = interactionContext.getTargetBlock();
         if (target == null)
         {
-            notifyPlayer(commandBuffer, interactionContext, "Aim at a OneBlock block.");
-            fail(interactionContext, "Target block is null");
+            skip(interactionContext);
+            return;
+        }
+
+        BlockType existing = world.getBlockType(target.x, target.y, target.z);
+        if (!isOneBlock(existing))
+        {
+            skip(interactionContext);
             return;
         }
 
@@ -89,14 +95,6 @@ public final class OneBlockActInteraction extends SimpleInstantInteraction
         if (targetBlockId == null || targetBlockId.isEmpty())
         {
             fail(interactionContext, "Invalid Act item id: " + heldItem.getItemId());
-            return;
-        }
-
-        BlockType existing = world.getBlockType(target.x, target.y, target.z);
-        if (!isOneBlock(existing))
-        {
-            notifyPlayer(commandBuffer, interactionContext, "That is not a OneBlock block.");
-            fail(interactionContext, "Target block is not OneBlock");
             return;
         }
 
@@ -243,6 +241,14 @@ public final class OneBlockActInteraction extends SimpleInstantInteraction
         if (interactionContext.getState() != null)
         {
             interactionContext.getState().state = InteractionState.Finished;
+        }
+    }
+
+    private static void skip(InteractionContext interactionContext)
+    {
+        if (interactionContext.getState() != null)
+        {
+            interactionContext.getState().state = InteractionState.Skip;
         }
     }
 
