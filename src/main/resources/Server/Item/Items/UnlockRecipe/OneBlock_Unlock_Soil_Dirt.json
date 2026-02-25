@@ -1,0 +1,43 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Soil_Dirt.name",
+    "Description": "server.items.OneBlock_Unlock_Soil_Dirt.description"
+  },
+  "Id": "OneBlock_Unlock_Soil_Dirt",
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 3,
+        "ResourceTypeId": "Ingredient_Fibre"
+      }
+    ],
+    "Output": {
+      "Quantity": 1
+    },
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Block"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "PlayerAnimationsId": "Consumable",
+  "Consumable": {
+    "CanAlwaysConsume": true
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockDropId": [
+      "Soil_Dirt"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 99,
+  "ItemSoundSetId": "ISS_Items_Ingredients"
+}

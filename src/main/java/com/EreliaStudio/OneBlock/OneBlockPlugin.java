@@ -14,7 +14,7 @@ public class OneBlockPlugin extends JavaPlugin
 
     private OneBlockDropRegistry dropRegistry;
     private OneBlockDropsStateProvider dropsStateProvider;
-    private UnlockCatalog unlockCatalog;
+    private OneBlockUnlockService unlockService;
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -41,8 +41,14 @@ public class OneBlockPlugin extends JavaPlugin
 
         LOGGER.at(Level.INFO).log("Default drop is " + OneBlockDropRegistry.DEFAULT_ITEM_ID);
 
-        unlockCatalog = UnlockCatalogLoader.loadFromResources(OneBlockPlugin.class, "/oneblock_unlocks.json");
-        LOGGER.at(Level.INFO).log("Loaded unlock catalog. Categories: " + unlockCatalog.categories.size());
+        var consumableToDropMap = OneBlockUnlockRecipeLoader.loadConsumableToDropMap(
+                OneBlockPlugin.class,
+                "/Server/Item/Items/OneBlockUpgrader/Bench_OneBlockUpgrader.json",
+                "/Server/Item/Items/UnlockRecipe"
+        );
+
+        unlockService = new OneBlockUnlockService(dropsStateProvider, consumableToDropMap);
+        LOGGER.at(Level.INFO).log("Loaded unlock recipes: " + consumableToDropMap.size());
 
         getCommandRegistry().registerCommand(new OneBlockCommand());
         LOGGER.at(Level.INFO).log("Adding the OneBlock commands");
@@ -66,5 +72,10 @@ public class OneBlockPlugin extends JavaPlugin
     public OneBlockDropsStateProvider getDropsStateProvider()
     {
         return dropsStateProvider;
+    }
+
+    public OneBlockUnlockService getUnlockService()
+    {
+        return unlockService;
     }
 }

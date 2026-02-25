@@ -33,8 +33,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         // /oneblock status Soil_Sand --player Bob
         //
         // Also accepts: oneblock.unlock.Soil_Sand.name (will map to Soil_Sand)
-        this.actionArg = this.withRequiredArg("action", "unlock|lock|enable|disable|status", ArgTypes.STRING);
-        this.idArg = this.withRequiredArg("id", "Drop item id (ex: Soil_Sand) or unlock key (ex: oneblock.unlock.Soil_Sand.name)", ArgTypes.STRING);
+        this.actionArg = this.withRequiredArg("action", "unlock|lock|enable|disable|status|consume", ArgTypes.STRING);
+        this.idArg = this.withRequiredArg("id", "Drop item id (ex: Soil_Sand), unlock key (ex: oneblock.unlock.Soil_Sand.name), or consumable item id (ex: OneBlock_Unlock_Soil_Sand)", ArgTypes.STRING);
     }
 
     @Override
@@ -45,44 +45,87 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                            @Nonnull World world,
                            @Nonnull Store<EntityStore> store)
     {
-        OneBlockDropsStateProvider provider = OneBlockPlugin.getInstance().getDropsStateProvider();
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        OneBlockDropsStateProvider provider = plugin.getDropsStateProvider();
 
         String action = safeLower(actionArg.get(ctx));
         String rawId = idArg.get(ctx);
-
-        String dropItemId = normalizeToDropItemId(rawId);
-        if (dropItemId == null || dropItemId.isEmpty())
-        {
-            ctx.sendMessage(Message.raw("Invalid id: " + rawId));
-            return;
-        }
 
         UUID targetId = targetPlayerRef.getUuid();
 
         switch (action)
         {
             case "unlock":
+            {
+                String dropItemId = normalizeToDropItemId(rawId);
+                if (dropItemId == null || dropItemId.isEmpty())
+                {
+                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
+                    return;
+                }
+
                 handleUnlock(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
+            }
 
             case "lock":
+            {
+                String dropItemId = normalizeToDropItemId(rawId);
+                if (dropItemId == null || dropItemId.isEmpty())
+                {
+                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
+                    return;
+                }
+
                 handleLock(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
+            }
 
             case "enable":
+            {
+                String dropItemId = normalizeToDropItemId(rawId);
+                if (dropItemId == null || dropItemId.isEmpty())
+                {
+                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
+                    return;
+                }
+
                 handleEnable(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
+            }
 
             case "disable":
+            {
+                String dropItemId = normalizeToDropItemId(rawId);
+                if (dropItemId == null || dropItemId.isEmpty())
+                {
+                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
+                    return;
+                }
+
                 handleDisable(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
+            }
 
             case "status":
+            {
+                String dropItemId = normalizeToDropItemId(rawId);
+                if (dropItemId == null || dropItemId.isEmpty())
+                {
+                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
+                    return;
+                }
+
                 handleStatus(ctx, provider, targetPlayerRef, targetId, dropItemId);
+                return;
+            }
+
+            case "consume":
+                handleConsume(ctx, plugin.getUnlockService(), targetPlayerRef, targetId, rawId);
                 return;
 
             default:
-                ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected unlock|lock|enable|disable|status)"));
+                ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected unlock|lock|enable|disable|status|consume)"));
         }
     }
 
@@ -171,6 +214,44 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         ctx.sendMessage(Message.raw("Status for " + targetPlayerRef.getUsername() + " / " + dropItemId
                 + " | unlocked=" + unlocked
                 + " enabled=" + isEnabled));
+    }
+
+    private static void handleConsume(CommandContext ctx,
+                                      OneBlockUnlockService unlockService,
+                                      PlayerRef targetPlayerRef,
+                                      UUID targetId,
+                                      String consumableItemId)
+    {
+        if (unlockService == null)
+        {
+            ctx.sendMessage(Message.raw("Unlock service is not available."));
+            return;
+        }
+
+        OneBlockUnlockService.UnlockConsumeResult result = unlockService.consume(targetId, consumableItemId);
+        switch (result)
+        {
+            case UNLOCKED:
+            {
+                String unlockedDrop = unlockService.getDropItemIdForConsumable(consumableItemId);
+                ctx.sendMessage(Message.raw("Consumed " + consumableItemId + " for " + targetPlayerRef.getUsername()
+                        + ". Unlocked drop: " + unlockedDrop));
+                return;
+            }
+
+            case ALREADY_UNLOCKED:
+                ctx.sendMessage(Message.raw("Cannot consume " + consumableItemId + ": this unlock is already known by "
+                        + targetPlayerRef.getUsername()));
+                return;
+
+            case INVALID_ITEM:
+                ctx.sendMessage(Message.raw("Not a OneBlock unlock consumable: " + consumableItemId));
+                return;
+
+            case UNLOCK_FAILED:
+            default:
+                ctx.sendMessage(Message.raw("Failed to consume unlock item: " + consumableItemId));
+        }
     }
 
     private static String safeLower(String s)

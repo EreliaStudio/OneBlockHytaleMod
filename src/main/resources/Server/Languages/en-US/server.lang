@@ -25,3 +25,13 @@ items.OneBlock_Block_A3.name = OneBlock Tier A3
 items.OneBlock_Block_B1.name = OneBlock Tier B1
 items.OneBlock_Block_B2.name = OneBlock Tier B2
 items.OneBlock_Block_B3.name = OneBlock Tier B3
+
+# Unlock consumables
+items.OneBlock_Unlock_Soil_Sand.name = Sand Unlock Token
+items.OneBlock_Unlock_Soil_Sand.description = Consume to permanently unlock Soil_Sand in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Soil_Dirt.name = Dirt Unlock Token
+items.OneBlock_Unlock_Soil_Dirt.description = Consume to permanently unlock Soil_Dirt in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Ingredient_Bar_Thorium.name = Thorium Bar Unlock Token
+items.OneBlock_Unlock_Ingredient_Bar_Thorium.description = Consume to permanently unlock Ingredient_Bar_Thorium in your OneBlock drop pool.
