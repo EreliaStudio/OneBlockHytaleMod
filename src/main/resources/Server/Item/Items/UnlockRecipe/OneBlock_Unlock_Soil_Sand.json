@@ -50,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Block"
+          "OneBlock_Upgrader_Act_A1"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -64,6 +64,9 @@
     ],
     "OneBlockUnlockDropId": [
       "Soil_Sand"
+    ],
+    "OneBlockUnlockChapter": [
+      "A1"
     ]
   },
   "ItemLevel": 1,

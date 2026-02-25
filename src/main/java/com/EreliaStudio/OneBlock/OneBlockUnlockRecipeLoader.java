@@ -17,12 +17,12 @@ public final class OneBlockUnlockRecipeLoader
     {
     }
 
-    public static Map<String, String> loadConsumableToDropMap(Class<?> owner,
-                                                               String benchResourcePath,
-                                                               String recipeFolderResourcePath)
+    public static Map<String, OneBlockUnlockService.UnlockDefinition> loadConsumableToDropMap(Class<?> owner,
+                                                                                               String benchResourcePath,
+                                                                                               String recipeFolderResourcePath)
     {
         JsonObject benchJson = loadJsonObject(owner, benchResourcePath);
-        Map<String, String> result = new HashMap<>();
+        Map<String, OneBlockUnlockService.UnlockDefinition> result = new HashMap<>();
 
         JsonArray categories = benchJson
                 .getAsJsonObject("BlockType")
@@ -62,7 +62,16 @@ public final class OneBlockUnlockRecipeLoader
                 }
 
                 String recipePath = recipeFolderResourcePath + "/" + recipeItemId + ".json";
-                JsonObject recipeJson = loadJsonObject(owner, recipePath);
+                JsonObject recipeJson;
+                try
+                {
+                    recipeJson = loadJsonObject(owner, recipePath);
+                }
+                catch (RuntimeException ignored)
+                {
+                    // Not an unlock recipe stored in the unlock folder.
+                    continue;
+                }
 
                 String recipeConsumableId = readString(recipeJson, "Id");
                 if (recipeConsumableId == null || recipeConsumableId.isEmpty())
@@ -88,7 +97,13 @@ public final class OneBlockUnlockRecipeLoader
                     continue;
                 }
 
-                result.put(recipeConsumableId, dropItemId);
+                String chapterId = readStringFromTags(tags, "OneBlockUnlockChapter");
+                if (chapterId == null || chapterId.isEmpty())
+                {
+                    chapterId = OneBlockChapterResolver.DEFAULT_CHAPTER;
+                }
+
+                result.put(recipeConsumableId, new OneBlockUnlockService.UnlockDefinition(chapterId, dropItemId));
             }
         }
 
@@ -134,5 +149,39 @@ public final class OneBlockUnlockRecipeLoader
         }
 
         return e.getAsString();
+    }
+
+    private static String readStringFromTags(JsonObject tags, String key)
+    {
+        if (tags == null || key == null || key.isEmpty() || !tags.has(key))
+        {
+            return null;
+        }
+
+        JsonElement e = tags.get(key);
+        if (e == null)
+        {
+            return null;
+        }
+
+        if (e.isJsonPrimitive())
+        {
+            return e.getAsString();
+        }
+
+        if (e.isJsonArray())
+        {
+            JsonArray array = e.getAsJsonArray();
+            if (!array.isEmpty())
+            {
+                JsonElement first = array.get(0);
+                if (first != null && first.isJsonPrimitive())
+                {
+                    return first.getAsString();
+                }
+            }
+        }
+
+        return null;
     }
 }

@@ -63,6 +63,13 @@ public class OneBlockPlugin extends JavaPlugin
         );
         LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockUnlockInteraction.INTERACTION_ID);
 
+        getCodecRegistry(Interaction.CODEC).register(
+                OneBlockActInteraction.INTERACTION_ID,
+                OneBlockActInteraction.class,
+                OneBlockActInteraction.CODEC
+        );
+        LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockActInteraction.INTERACTION_ID);
+
         LOGGER.at(Level.INFO).log("Setup complete!");
     }
 

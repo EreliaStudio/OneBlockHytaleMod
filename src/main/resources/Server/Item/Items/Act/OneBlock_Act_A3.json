@@ -1,0 +1,69 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Act_A3.name",
+    "Description": "server.items.OneBlock_Act_A3.description"
+  },
+  "Id": "OneBlock_Act_A3",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/ChapterKey.png",
+  "Categories": [
+    "Items.OneBlockAct"
+  ],
+  "PlayerAnimationsId": "Item",
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
+        "Weight": 1
+      }
+    ]
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_act_change"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_act_change"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Act_A3"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Act"
+    ],
+    "OneBlockActTargetBlockId": [
+      "OneBlock_Block_A3"
+    ]
+  },
+  "MaxStack": 1
+}

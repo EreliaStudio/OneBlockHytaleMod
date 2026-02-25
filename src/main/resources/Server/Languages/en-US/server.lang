@@ -8,6 +8,14 @@ oneblock.category.Ingredients.name = Ingredient unlock upgrade
 oneblock.category.Blocks.description = Unlock new block drops for your OneBlock.
 oneblock.category.Ingredients.description = Unlock new ingredient drops for your OneBlock.
 
+# Act categories
+benchCategories.OneBlockUpgrader_Act_A1 = Act A1
+benchCategories.OneBlockUpgrader_Act_A2 = Act A2
+benchCategories.OneBlockUpgrader_Act_A3 = Act A3
+benchCategories.OneBlockUpgrader_Act_B1 = Act B1
+benchCategories.OneBlockUpgrader_Act_B2 = Act B2
+benchCategories.OneBlockUpgrader_Act_B3 = Act B3
+
 # Unlock entries (new)
 oneblock.unlock.Soil_Sand.name = Sand
 oneblock.unlock.Soil_Sand.description = Unlocks Soil_Sand as a possible OneBlock drop.
@@ -35,3 +43,22 @@ items.OneBlock_Unlock_Soil_Dirt.description = Consume to permanently unlock Soil
 
 items.OneBlock_Unlock_Ingredient_Bar_Thorium.name = Thorium Bar Unlock Token
 items.OneBlock_Unlock_Ingredient_Bar_Thorium.description = Consume to permanently unlock Ingredient_Bar_Thorium in your OneBlock drop pool.
+
+# Act keys
+items.OneBlock_Act_A1.name = Act Key A1
+items.OneBlock_Act_A1.description = Sets the targeted OneBlock block to chapter A1.
+
+items.OneBlock_Act_A2.name = Act Key A2
+items.OneBlock_Act_A2.description = Sets the targeted OneBlock block to chapter A2.
+
+items.OneBlock_Act_A3.name = Act Key A3
+items.OneBlock_Act_A3.description = Sets the targeted OneBlock block to chapter A3.
+
+items.OneBlock_Act_B1.name = Act Key B1
+items.OneBlock_Act_B1.description = Sets the targeted OneBlock block to chapter B1.
+
+items.OneBlock_Act_B2.name = Act Key B2
+items.OneBlock_Act_B2.description = Sets the targeted OneBlock block to chapter B2.
+
+items.OneBlock_Act_B3.name = Act Key B3
+items.OneBlock_Act_B3.description = Sets the targeted OneBlock block to chapter B3.

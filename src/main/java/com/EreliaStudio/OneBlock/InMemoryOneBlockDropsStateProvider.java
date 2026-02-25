@@ -10,16 +10,19 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
 {
     private final Map<UUID, OneBlockPlayerDropsState> stateByPlayer = new HashMap<>();
 
-    private OneBlockPlayerDropsState state(UUID playerId)
+    private OneBlockPlayerChapterDropsState state(UUID playerId, String chapterId)
     {
         if (playerId == null)
         {
             return null;
         }
 
-        return stateByPlayer.computeIfAbsent(playerId, id ->
+        String chapterKey = normalizeChapter(chapterId);
+
+        OneBlockPlayerDropsState playerState = stateByPlayer.computeIfAbsent(playerId, id -> new OneBlockPlayerDropsState());
+        return playerState.chapters.computeIfAbsent(chapterKey, key ->
         {
-            OneBlockPlayerDropsState s = new OneBlockPlayerDropsState();
+            OneBlockPlayerChapterDropsState s = new OneBlockPlayerChapterDropsState();
             s.unlockedDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
             s.enabledDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
             return s;
@@ -27,9 +30,9 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
     }
 
     @Override
-    public List<String> getEnabledDrops(UUID playerId)
+    public List<String> getEnabledDrops(UUID playerId, String chapterId)
     {
-        OneBlockPlayerDropsState s = state(playerId);
+        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
         if (s == null || s.enabledDrops.isEmpty())
         {
             List<String> fallback = new ArrayList<>();
@@ -41,26 +44,26 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
     }
 
     @Override
-    public boolean isUnlocked(UUID playerId, String dropItemId)
+    public boolean isUnlocked(UUID playerId, String chapterId, String dropItemId)
     {
         if (dropItemId == null || dropItemId.isEmpty())
         {
             return false;
         }
 
-        OneBlockPlayerDropsState s = state(playerId);
+        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
         return s != null && s.unlockedDrops.contains(dropItemId);
     }
 
     @Override
-    public boolean unlock(UUID playerId, String dropItemId)
+    public boolean unlock(UUID playerId, String chapterId, String dropItemId)
     {
         if (dropItemId == null || dropItemId.isEmpty())
         {
             return false;
         }
 
-        OneBlockPlayerDropsState s = state(playerId);
+        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
         if (s == null)
         {
             return false;
@@ -80,7 +83,7 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
     }
 
     @Override
-    public boolean lock(UUID playerId, String dropItemId)
+    public boolean lock(UUID playerId, String chapterId, String dropItemId)
     {
         if (dropItemId == null || dropItemId.isEmpty())
         {
@@ -93,7 +96,7 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
             return false;
         }
 
-        OneBlockPlayerDropsState s = state(playerId);
+        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
         if (s == null)
         {
             return false;
@@ -116,14 +119,14 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
     }
 
     @Override
-    public boolean setEnabled(UUID playerId, String dropItemId, boolean enabled)
+    public boolean setEnabled(UUID playerId, String chapterId, String dropItemId, boolean enabled)
     {
         if (dropItemId == null || dropItemId.isEmpty())
         {
             return false;
         }
 
-        OneBlockPlayerDropsState s = state(playerId);
+        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
         if (s == null)
         {
             return false;
@@ -151,5 +154,31 @@ public final class InMemoryOneBlockDropsStateProvider implements OneBlockDropsSt
         }
 
         return true;
+    }
+
+    public void resetEnabledToUnlocked(UUID playerId, String chapterId)
+    {
+        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
+        if (s == null)
+        {
+            return;
+        }
+
+        s.enabledDrops.clear();
+        s.enabledDrops.addAll(s.unlockedDrops);
+        if (s.enabledDrops.isEmpty())
+        {
+            s.enabledDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
+        }
+    }
+
+    private static String normalizeChapter(String chapterId)
+    {
+        if (chapterId == null || chapterId.isEmpty())
+        {
+            return OneBlockChapterResolver.DEFAULT_CHAPTER;
+        }
+
+        return chapterId;
     }
 }

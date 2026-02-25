@@ -65,7 +65,8 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
 
         UUID playerId = playerRef.getUuid();
 
-        List<String> enabledDrops = stateProvider.getEnabledDrops(playerId);
+        String chapterId = OneBlockChapterResolver.chapterFromBlockType(event.getBlockType());
+        List<String> enabledDrops = stateProvider.getEnabledDrops(playerId, chapterId);
         String rewardItemId = dropRegistry.pickReward(enabledDrops);
         if (rewardItemId == null || rewardItemId.isEmpty())
         {
@@ -157,40 +158,13 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
             return;
         }
 
-        final String blockTypeId = ResolveBlockTypeId(blockType);
+        final String blockTypeId = blockType.getId();
         if (blockTypeId == null || blockTypeId.isEmpty())
         {
             return;
         }
 
         world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), blockTypeId));
-    }
-
-    private static String ResolveBlockTypeId(BlockType blockType)
-    {
-        if (blockType == null)
-        {
-            return null;
-        }
-
-        String[] candidates = { "getId", "getIdentifier", "getAssetId", "getTypeId", "getName" };
-
-        for (String methodName : candidates)
-        {
-            try
-            {
-                Object value = blockType.getClass().getMethod(methodName).invoke(blockType);
-                if (value instanceof String s && !s.isEmpty())
-                {
-                    return s;
-                }
-            }
-            catch (Exception ignored)
-            {
-            }
-        }
-
-        return String.valueOf(blockType);
     }
 
     private static boolean isOneBlock(BlockType blockType)

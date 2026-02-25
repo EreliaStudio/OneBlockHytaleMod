@@ -50,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Ingredient"
+          "OneBlock_Upgrader_Act_A1"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -64,6 +64,9 @@
     ],
     "OneBlockUnlockDropId": [
       "Ingredient_Bar_Thorium"
+    ],
+    "OneBlockUnlockChapter": [
+      "A1"
     ]
   },
   "ItemLevel": 1,

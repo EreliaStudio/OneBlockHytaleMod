@@ -46,20 +46,54 @@
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Upgrader_Block",
-          "Icon": "Icons/CraftingCategories/BlockUpgrade_Category.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_BlockCategories",
+          "Id": "OneBlock_Upgrader_Act_A1",
+          "Icon": "Icons/CraftingCategories/ChapterKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Act_A1",
           "Recipes": [
+            "OneBlock_Act_A1",
             "OneBlock_Unlock_Soil_Sand",
-            "OneBlock_Unlock_Soil_Dirt"
+            "OneBlock_Unlock_Soil_Dirt",
+            "OneBlock_Unlock_Ingredient_Bar_Thorium"
           ]
         },
         {
-          "Id": "OneBlock_Upgrader_Ingredient",
-          "Icon": "Icons/CraftingCategories/IngredientUpgrade_Category.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_IngredientCategories",
+          "Id": "OneBlock_Upgrader_Act_A2",
+          "Icon": "Icons/CraftingCategories/ChapterKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Act_A2",
           "Recipes": [
-            "OneBlock_Unlock_Ingredient_Bar_Thorium"
+            "OneBlock_Act_A2"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Act_A3",
+          "Icon": "Icons/CraftingCategories/ChapterKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Act_A3",
+          "Recipes": [
+            "OneBlock_Act_A3"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Act_B1",
+          "Icon": "Icons/CraftingCategories/ChapterKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Act_B1",
+          "Recipes": [
+            "OneBlock_Act_B1"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Act_B2",
+          "Icon": "Icons/CraftingCategories/ChapterKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Act_B2",
+          "Recipes": [
+            "OneBlock_Act_B2"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Act_B3",
+          "Icon": "Icons/CraftingCategories/ChapterKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Act_B3",
+          "Recipes": [
+            "OneBlock_Act_B3"
           ]
         }
       ],

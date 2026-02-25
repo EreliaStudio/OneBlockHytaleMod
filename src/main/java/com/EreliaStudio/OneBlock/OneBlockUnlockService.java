@@ -7,9 +7,9 @@ import java.util.UUID;
 public final class OneBlockUnlockService
 {
     private final OneBlockDropsStateProvider stateProvider;
-    private final Map<String, String> dropByConsumableItemId = new HashMap<>();
+    private final Map<String, UnlockDefinition> definitionByConsumableItemId = new HashMap<>();
 
-    public OneBlockUnlockService(OneBlockDropsStateProvider stateProvider, Map<String, String> consumableToDropMap)
+    public OneBlockUnlockService(OneBlockDropsStateProvider stateProvider, Map<String, UnlockDefinition> consumableToDropMap)
     {
         this.stateProvider = stateProvider;
 
@@ -18,7 +18,7 @@ public final class OneBlockUnlockService
             return;
         }
 
-        dropByConsumableItemId.putAll(consumableToDropMap);
+        definitionByConsumableItemId.putAll(consumableToDropMap);
     }
 
     public UnlockConsumeResult consume(UUID playerId, String consumableItemId)
@@ -28,24 +28,35 @@ public final class OneBlockUnlockService
             return UnlockConsumeResult.INVALID_ITEM;
         }
 
-        String dropItemId = dropByConsumableItemId.get(consumableItemId);
-        if (dropItemId == null || dropItemId.isEmpty())
+        UnlockDefinition definition = definitionByConsumableItemId.get(consumableItemId);
+        if (definition == null || definition.dropItemId == null || definition.dropItemId.isEmpty())
         {
             return UnlockConsumeResult.INVALID_ITEM;
         }
 
-        if (stateProvider.isUnlocked(playerId, dropItemId))
+        String chapterId = (definition.chapterId == null || definition.chapterId.isEmpty())
+                ? OneBlockChapterResolver.DEFAULT_CHAPTER
+                : definition.chapterId;
+
+        if (stateProvider.isUnlocked(playerId, chapterId, definition.dropItemId))
         {
             return UnlockConsumeResult.ALREADY_UNLOCKED;
         }
 
-        boolean unlocked = stateProvider.unlock(playerId, dropItemId);
+        boolean unlocked = stateProvider.unlock(playerId, chapterId, definition.dropItemId);
         return unlocked ? UnlockConsumeResult.UNLOCKED : UnlockConsumeResult.UNLOCK_FAILED;
     }
 
     public String getDropItemIdForConsumable(String consumableItemId)
     {
-        return dropByConsumableItemId.get(consumableItemId);
+        UnlockDefinition definition = definitionByConsumableItemId.get(consumableItemId);
+        return definition == null ? null : definition.dropItemId;
+    }
+
+    public String getChapterForConsumable(String consumableItemId)
+    {
+        UnlockDefinition definition = definitionByConsumableItemId.get(consumableItemId);
+        return definition == null ? null : definition.chapterId;
     }
 
     public enum UnlockConsumeResult
@@ -54,5 +65,17 @@ public final class OneBlockUnlockService
         ALREADY_UNLOCKED,
         UNLOCKED,
         UNLOCK_FAILED
+    }
+
+    public static final class UnlockDefinition
+    {
+        public final String chapterId;
+        public final String dropItemId;
+
+        public UnlockDefinition(String chapterId, String dropItemId)
+        {
+            this.chapterId = chapterId;
+            this.dropItemId = dropItemId;
+        }
     }
 }
