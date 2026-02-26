@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_B3.name"
+    "Name": "server.items.OneBlock_Block_Meadow.name"
   },
-  "Id": "OneBlock_Block_B3",
-  "ItemLevel": 6,
-  "Icon": "Icons/ItemsGenerated/OneBlock_B3.png",
+  "Id": "OneBlock_Block_Meadow",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/OneBlock_Meadow.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_TierB3.png",
-        "Sides": "BlockTextures/OneBlock_TierB3.png",
-        "Up": "BlockTextures/OneBlock_TierB3.png",
+        "Down": "BlockTextures/OneBlock_Meadow.png",
+        "Sides": "BlockTextures/OneBlock_Meadow.png",
+        "Up": "BlockTextures/OneBlock_Meadow.png",
         "Weight": 1
       }
     ],

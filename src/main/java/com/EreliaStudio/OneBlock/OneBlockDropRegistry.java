@@ -11,24 +11,24 @@ public final class OneBlockDropRegistry
     public static final String DEFAULT_ITEM_ID = "Ingredient_Fibre";
 
     private final Random rng = new Random();
-    private final Map<String, Map<String, Integer>> weightByChapter = new HashMap<>();
+    private final Map<String, Map<String, Integer>> weightByExpedition = new HashMap<>();
 
-    public String pickReward(List<String> enabledDrops)
+    public String pickReward(List<String> availableDrops)
     {
-        return pickReward(OneBlockChapterResolver.DEFAULT_CHAPTER, enabledDrops);
+        return pickReward(OneBlockExpeditionResolver.DEFAULT_EXPEDITION, availableDrops);
     }
 
-    public String pickReward(String chapterId, List<String> enabledDrops)
+    public String pickReward(String expeditionId, List<String> availableDrops)
     {
-        if (enabledDrops == null || enabledDrops.isEmpty())
+        if (availableDrops == null || availableDrops.isEmpty())
         {
             return DEFAULT_ITEM_ID;
         }
 
         int totalWeight = 0;
-        for (String dropId : enabledDrops)
+        for (String dropId : availableDrops)
         {
-            int weight = getWeight(chapterId, dropId);
+            int weight = getWeight(expeditionId, dropId);
             if (weight > 0)
             {
                 totalWeight += weight;
@@ -42,9 +42,9 @@ public final class OneBlockDropRegistry
 
         int roll = rng.nextInt(totalWeight);
         int cursor = 0;
-        for (String dropId : enabledDrops)
+        for (String dropId : availableDrops)
         {
-            int weight = getWeight(chapterId, dropId);
+            int weight = getWeight(expeditionId, dropId);
             if (weight <= 0)
             {
                 continue;
@@ -79,11 +79,7 @@ public final class OneBlockDropRegistry
                 continue;
             }
 
-            String chapterId = definition.chapterId;
-            if (chapterId == null || chapterId.isEmpty())
-            {
-                chapterId = OneBlockChapterResolver.DEFAULT_CHAPTER;
-            }
+            String expeditionId = OneBlockExpeditionResolver.normalizeExpedition(definition.expeditionId);
 
             int weight = definition.weight;
             if (weight < 1)
@@ -91,47 +87,44 @@ public final class OneBlockDropRegistry
                 weight = 1;
             }
 
-            weightByChapter
-                    .computeIfAbsent(chapterId, key -> new HashMap<>())
+            weightByExpedition
+                    .computeIfAbsent(expeditionId, key -> new HashMap<>())
                     .put(dropId, weight);
         }
     }
 
-    public void registerDefaultWeights(Map<String, Map<String, Integer>> defaultsByChapter)
+    public void registerDefaultWeights(Map<String, Map<String, Integer>> defaultsByExpedition)
     {
-        if (defaultsByChapter == null || defaultsByChapter.isEmpty())
+        if (defaultsByExpedition == null || defaultsByExpedition.isEmpty())
         {
             return;
         }
 
-        for (Map.Entry<String, Map<String, Integer>> entry : defaultsByChapter.entrySet())
+        for (Map.Entry<String, Map<String, Integer>> entry : defaultsByExpedition.entrySet())
         {
-            String chapterId = entry.getKey();
+            String expeditionId = OneBlockExpeditionResolver.normalizeExpedition(entry.getKey());
             Map<String, Integer> weights = entry.getValue();
             if (weights == null || weights.isEmpty())
             {
                 continue;
             }
 
-            weightByChapter
-                    .computeIfAbsent(chapterId, key -> new HashMap<>())
+            weightByExpedition
+                    .computeIfAbsent(expeditionId, key -> new HashMap<>())
                     .putAll(weights);
         }
     }
 
-    private int getWeight(String chapterId, String dropId)
+    private int getWeight(String expeditionId, String dropId)
     {
         if (dropId == null || dropId.isEmpty())
         {
             return 0;
         }
 
-        if (chapterId == null || chapterId.isEmpty())
-        {
-            chapterId = OneBlockChapterResolver.DEFAULT_CHAPTER;
-        }
+        String expeditionKey = OneBlockExpeditionResolver.normalizeExpedition(expeditionId);
 
-        Map<String, Integer> weights = weightByChapter.get(chapterId);
+        Map<String, Integer> weights = weightByExpedition.get(expeditionKey);
         if (weights == null)
         {
             return 1;

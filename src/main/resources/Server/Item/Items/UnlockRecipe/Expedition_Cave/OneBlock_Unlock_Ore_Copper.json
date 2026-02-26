@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Wood_Ash_Trunk.name",
-    "Description": "server.items.OneBlock_Unlock_Wood_Ash_Trunk.description"
+    "Name": "server.items.OneBlock_Unlock_Ore_Copper.name",
+    "Description": "server.items.OneBlock_Unlock_Ore_Copper.description"
   },
-  "Id": "OneBlock_Unlock_Wood_Ash_Trunk",
+  "Id": "OneBlock_Unlock_Ore_Copper",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,12 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 4
-      },
-      {
-        "ItemId": "Soil_Grass",
-        "Quantity": 2
+        "ItemId": "Rock_Stone_Cobble",
+        "Quantity": 20
       }
     ],
     "OutputQuantity": 1,
@@ -54,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_A1"
+          "OneBlock_Upgrader_Expedition_Cave"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -67,13 +63,13 @@
       "OneBlock_Unlock_Consumable"
     ],
     "OneBlockUnlockDropId": [
-      "Wood_Ash_Trunk"
+      "Ore_Copper"
     ],
-    "OneBlockUnlockChapter": [
-      "A1"
+    "OneBlockUnlockExpedition": [
+      "Cave"
     ],
     "OneBlockUnlockWeight": [
-      "10"
+      "3"
     ]
   },
   "ItemLevel": 1,

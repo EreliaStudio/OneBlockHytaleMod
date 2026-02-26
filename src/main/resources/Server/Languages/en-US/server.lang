@@ -8,21 +8,15 @@ oneblock.category.Ingredients.name = Ingredient unlock upgrade
 oneblock.category.Blocks.description = Unlock new block drops for your OneBlock.
 oneblock.category.Ingredients.description = Unlock new ingredient drops for your OneBlock.
 
-# Act categories
-benchCategories.OneBlockUpgrader_Act_A1 = Act I - The adventure begin
-benchCategories.OneBlockUpgrader_Act_A2 = Act II - Walking thought the meadow
-benchCategories.OneBlockUpgrader_Act_A3 = Act III - Day at the farm
-benchCategories.OneBlockUpgrader_Act_B1 = Act IV - Preparing the dive
-benchCategories.OneBlockUpgrader_Act_B2 = Act V - Cave Entrance
-benchCategories.OneBlockUpgrader_Act_B3 = Act VI - Cave Deep layer
+# Expedition categories
+benchCategories.OneBlockUpgrader_Expedition_Meadow = Expedition - Meadow
+benchCategories.OneBlockUpgrader_Expedition_Forest = Expedition - Forest
+benchCategories.OneBlockUpgrader_Expedition_Cave = Expedition - Cave
 
-# Existing OneBlock tiers (kept)
-items.OneBlock_Block_A1.name = OneBlock Tier I
-items.OneBlock_Block_A2.name = OneBlock Tier II
-items.OneBlock_Block_A3.name = OneBlock Tier III
-items.OneBlock_Block_B1.name = OneBlock Tier IV
-items.OneBlock_Block_B2.name = OneBlock Tier V
-items.OneBlock_Block_B3.name = OneBlock Tier VI
+# OneBlock expeditions
+items.OneBlock_Block_Meadow.name = OneBlock Meadow
+items.OneBlock_Block_Forest.name = OneBlock Forest
+items.OneBlock_Block_Cave.name = OneBlock Cave
 
 # Unlock consumables
 items.OneBlock_Unlock_Soil_Grass.name = Grass Unlock Token
@@ -56,23 +50,14 @@ items.OneBlock_Unlock_Ore_Copper.description = Consume to permanently unlock Ore
 items.OneBlock_Unlock_Ingredient_Charcoal.name = Charcoal Unlock Token
 items.OneBlock_Unlock_Ingredient_Charcoal.description = Consume to permanently unlock Ingredient_Charcoal in your OneBlock drop pool.
 
-# Act keys
-items.OneBlock_Act_A1_Key.name = Act I Key - The adventure begin
-items.OneBlock_Act_A1_Key.description = Use this on a OneBlock to edit its chapter to I.
+# Expedition keys
+items.OneBlock_Expedition_Meadow_Key.name = Expedition Key - Meadow
+items.OneBlock_Expedition_Meadow_Key.description = Use this on a OneBlock to set its expedition to Meadow.
 
-items.OneBlock_Act_A2_Key.name = Act II Key - Walking thought the meadow
-items.OneBlock_Act_A2_Key.description = Use this on a OneBlock to edit its chapter to II.
+items.OneBlock_Expedition_Forest_Key.name = Expedition Key - Forest
+items.OneBlock_Expedition_Forest_Key.description = Use this on a OneBlock to set its expedition to Forest.
 
-items.OneBlock_Act_A3_Key.name = Act III Key - Day at the farm
-items.OneBlock_Act_A3_Key.description = Use this on a OneBlock to edit its chapter to III.
-
-items.OneBlock_Act_B1_Key.name = Act IV Key - Preparing the dive
-items.OneBlock_Act_B1_Key.description = Use this on a OneBlock to edit its chapter to IV.
-
-items.OneBlock_Act_B2_Key.name = Act V Key - Cave Entrance
-items.OneBlock_Act_B2_Key.description = Use this on a OneBlock to edit its chapter to V.
-
-items.OneBlock_Act_B3_Key.name = Act VI Key - Cave Deep layer
-items.OneBlock_Act_B3_Key.description = Use this on a OneBlock to edit its chapter to VI.
+items.OneBlock_Expedition_Cave_Key.name = Expedition Key - Cave
+items.OneBlock_Expedition_Cave_Key.description = Use this on a OneBlock to set its expedition to Cave.
 
 # Interaction hint

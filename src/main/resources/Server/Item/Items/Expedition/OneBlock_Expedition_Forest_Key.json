@@ -1,13 +1,13 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Act_A1_Key.name",
-    "Description": "server.items.OneBlock_Act_A1_Key.description"
+    "Name": "server.items.OneBlock_Expedition_Forest_Key.name",
+    "Description": "server.items.OneBlock_Expedition_Forest_Key.description"
   },
-  "Id": "OneBlock_Act_A1_Key",
+  "Id": "OneBlock_Expedition_Forest_Key",
   "ItemLevel": 1,
-  "Icon": "Icons/ItemsGenerated/ChapterKey.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
-    "Items.OneBlockAct"
+    "Items.OneBlockExpedition"
   ],
   "PlayerAnimationsId": "Item",
   "BlockType": {
@@ -26,7 +26,7 @@
     "Use": {
       "Interactions": [
         {
-          "Type": "oneblock_act_change"
+          "Type": "oneblock_expedition_change"
         }
       ]
     }
@@ -34,7 +34,15 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
+        "ItemId": "Tool_Pickaxe_Crude",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Tool_Hammer_Crude",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Tool_Hatchet_Crude",
         "Quantity": 1
       }
     ],
@@ -43,7 +51,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_A1"
+          "OneBlock_Upgrader_Expedition_Meadow"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -52,10 +60,10 @@
   "Consumable": true,
   "Tags": {
     "Type": [
-      "OneBlock_Act"
+      "OneBlock_Expedition"
     ],
-    "OneBlockActTargetBlockId": [
-      "OneBlock_Block_A1"
+    "OneBlockExpeditionTargetBlockId": [
+      "OneBlock_Block_Forest"
     ]
   },
   "MaxStack": 1

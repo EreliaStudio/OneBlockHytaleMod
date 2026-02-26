@@ -12,7 +12,6 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
-import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
 
@@ -23,17 +22,15 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
 
     public OneBlockCommand()
     {
-        super("oneblock", "Manage OneBlock unlocks/drops for a player.");
+        super("oneblock", "Manage OneBlock expedition unlocks/drops for a player.");
 
         // Usage:
         // /oneblock unlock Soil_Sand --player Bob
         // /oneblock lock Soil_Sand --player Bob
-        // /oneblock enable Soil_Sand --player Bob
-        // /oneblock disable Soil_Sand --player Bob
         // /oneblock status Soil_Sand --player Bob
         //
         // Also accepts: oneblock.unlock.Soil_Sand.name (will map to Soil_Sand)
-        this.actionArg = this.withRequiredArg("action", "unlock|lock|enable|disable|status|consume", ArgTypes.STRING);
+        this.actionArg = this.withRequiredArg("action", "unlock|lock|status|consume", ArgTypes.STRING);
         this.idArg = this.withRequiredArg(
                 "id",
                 "Drop id (ex: Soil_Grass or entity:Sheep) or consumable item id (ex: OneBlock_Unlock_Soil_Grass)",
@@ -57,79 +54,41 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
 
         UUID targetId = targetPlayerRef.getUuid();
 
+        if ("consume".equals(action))
+        {
+            handleConsume(ctx, plugin.getUnlockService(), targetPlayerRef, targetId, rawId);
+            return;
+        }
+
+        String dropItemId = normalizeToDropItemId(rawId);
+        if (dropItemId == null || dropItemId.isEmpty())
+        {
+            ctx.sendMessage(Message.raw("Invalid id: " + rawId));
+            return;
+        }
+
         switch (action)
         {
             case "unlock":
             {
-                String dropItemId = normalizeToDropItemId(rawId);
-                if (dropItemId == null || dropItemId.isEmpty())
-                {
-                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
-                    return;
-                }
-
                 handleUnlock(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
             }
 
             case "lock":
             {
-                String dropItemId = normalizeToDropItemId(rawId);
-                if (dropItemId == null || dropItemId.isEmpty())
-                {
-                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
-                    return;
-                }
-
                 handleLock(ctx, provider, targetPlayerRef, targetId, dropItemId);
-                return;
-            }
-
-            case "enable":
-            {
-                String dropItemId = normalizeToDropItemId(rawId);
-                if (dropItemId == null || dropItemId.isEmpty())
-                {
-                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
-                    return;
-                }
-
-                handleEnable(ctx, provider, targetPlayerRef, targetId, dropItemId);
-                return;
-            }
-
-            case "disable":
-            {
-                String dropItemId = normalizeToDropItemId(rawId);
-                if (dropItemId == null || dropItemId.isEmpty())
-                {
-                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
-                    return;
-                }
-
-                handleDisable(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
             }
 
             case "status":
             {
-                String dropItemId = normalizeToDropItemId(rawId);
-                if (dropItemId == null || dropItemId.isEmpty())
-                {
-                    ctx.sendMessage(Message.raw("Invalid id: " + rawId));
-                    return;
-                }
-
                 handleStatus(ctx, provider, targetPlayerRef, targetId, dropItemId);
                 return;
             }
 
-            case "consume":
-                handleConsume(ctx, plugin.getUnlockService(), targetPlayerRef, targetId, rawId);
-                return;
-
             default:
-                ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected unlock|lock|enable|disable|status|consume)"));
+                ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected unlock|lock|status|consume)"));
         }
     }
 
@@ -139,7 +98,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                      UUID targetId,
                                      String dropItemId)
     {
-        if (OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
+        if (OneBlockExpeditionDefaults.isDefaultDrop(OneBlockExpeditionResolver.DEFAULT_EXPEDITION, dropItemId))
         {
             ctx.sendMessage(Message.raw("Already available by default: " + dropItemId));
             return;
@@ -157,7 +116,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                    UUID targetId,
                                    String dropItemId)
     {
-        if (OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
+        if (OneBlockExpeditionDefaults.isDefaultDrop(OneBlockExpeditionResolver.DEFAULT_EXPEDITION, dropItemId))
         {
             ctx.sendMessage(Message.raw("Cannot lock the default drop: " + dropItemId));
             return;
@@ -169,43 +128,6 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                 : "Was not unlocked (or failed): " + dropItemId));
     }
 
-    private static void handleEnable(CommandContext ctx,
-                                     OneBlockDropsStateProvider provider,
-                                     PlayerRef targetPlayerRef,
-                                     UUID targetId,
-                                     String dropItemId)
-    {
-        if (!provider.isUnlocked(targetId, dropItemId)
-                && !OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
-        {
-            ctx.sendMessage(Message.raw("Not unlocked: " + dropItemId));
-            return;
-        }
-
-        boolean ok = provider.setEnabled(targetId, dropItemId, true);
-        ctx.sendMessage(Message.raw(ok
-                ? "Enabled " + dropItemId + " for " + targetPlayerRef.getUsername()
-                : "Failed to enable: " + dropItemId));
-    }
-
-    private static void handleDisable(CommandContext ctx,
-                                      OneBlockDropsStateProvider provider,
-                                      PlayerRef targetPlayerRef,
-                                      UUID targetId,
-                                      String dropItemId)
-    {
-        if (OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId))
-        {
-            ctx.sendMessage(Message.raw("Cannot disable the default drop: " + dropItemId));
-            return;
-        }
-
-        boolean ok = provider.setEnabled(targetId, dropItemId, false);
-        ctx.sendMessage(Message.raw(ok
-                ? "Disabled " + dropItemId + " for " + targetPlayerRef.getUsername()
-                : "Failed to disable: " + dropItemId));
-    }
-
     private static void handleStatus(CommandContext ctx,
                                      OneBlockDropsStateProvider provider,
                                      PlayerRef targetPlayerRef,
@@ -213,13 +135,10 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                                      String dropItemId)
     {
         boolean unlocked = provider.isUnlocked(targetId, dropItemId)
-                || OneBlockChapterDefaults.isDefaultDrop(OneBlockChapterResolver.DEFAULT_CHAPTER, dropItemId);
-        List<String> enabled = provider.getEnabledDrops(targetId);
-        boolean isEnabled = enabled.contains(dropItemId);
+                || OneBlockExpeditionDefaults.isDefaultDrop(OneBlockExpeditionResolver.DEFAULT_EXPEDITION, dropItemId);
 
         ctx.sendMessage(Message.raw("Status for " + targetPlayerRef.getUsername() + " / " + dropItemId
-                + " | unlocked=" + unlocked
-                + " enabled=" + isEnabled));
+                + " | unlocked=" + unlocked));
     }
 
     private static void handleConsume(CommandContext ctx,

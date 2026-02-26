@@ -5,5 +5,5 @@ import java.util.Map;
 
 public final class OneBlockPlayerDropsState
 {
-    public final Map<String, OneBlockPlayerChapterDropsState> chapters = new HashMap<>();
+    public final Map<String, OneBlockPlayerExpeditionDropsState> expeditions = new HashMap<>();
 }

@@ -9,7 +9,6 @@ import com.hypixel.hytale.math.vector.Vector3f;
 import com.hypixel.hytale.math.vector.Vector3i;
 
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
-import com.hypixel.hytale.server.core.asset.type.item.config.Item;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.event.events.ecs.BreakBlockEvent;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
@@ -27,7 +26,7 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
     private final OneBlockDropRegistry dropRegistry;
     private final OneBlockDropsStateProvider stateProvider;
 
-    private static final String ONEBLOCK_CATEGORY = "Blocks.OneBlock";
+    private static final Vector3i REWARD_OFFSET = new Vector3i(0, 1, 0);
 
     public OneBlockBreakSystem(OneBlockDropRegistry dropRegistry, OneBlockDropsStateProvider stateProvider)
     {
@@ -52,7 +51,7 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
         Ref<EntityStore> ref = chunk.getReferenceTo(entityIndex);
         Player player = store.getComponent(ref, Player.getComponentType());
 
-        if (!IsPlayerReferenceValid(player, event))
+        if (!isValidOneBlockBreak(player, event))
         {
             return;
         }
@@ -65,9 +64,9 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
 
         UUID playerId = playerRef.getUuid();
 
-        String chapterId = OneBlockChapterResolver.chapterFromBlockType(event.getBlockType());
-        List<String> enabledDrops = stateProvider.getEnabledDrops(playerId, chapterId);
-        String rewardId = dropRegistry.pickReward(chapterId, enabledDrops);
+        String expeditionId = OneBlockExpeditionResolver.expeditionFromBlockType(event.getBlockType());
+        List<String> unlockedDrops = stateProvider.getUnlockedDrops(playerId, expeditionId);
+        String rewardId = dropRegistry.pickReward(expeditionId, unlockedDrops);
         if (rewardId == null || rewardId.isEmpty())
         {
             return;
@@ -88,11 +87,11 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
         BlockType blockType = event.getBlockType();
         Vector3i pos = event.getTargetBlock();
 
-        SpawnBlockByID(world, blockType, pos);
-        SpawnReward(store, world, rewardId, pos, new Vector3i(0, 1, 0));
+        replaceBlock(world, blockType, pos);
+        spawnReward(store, world, rewardId, pos, REWARD_OFFSET);
     }
 
-    private static boolean IsPlayerReferenceValid(Player player, BreakBlockEvent event)
+    private static boolean isValidOneBlockBreak(Player player, BreakBlockEvent event)
     {
         if (player == null || event == null)
         {
@@ -109,11 +108,10 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
             }
         }
 
-        BlockType blockType = event.getBlockType();
-        return isOneBlock(blockType);
+        return OneBlockBlockUtil.isOneBlock(event.getBlockType());
     }
 
-    private static void SpawnReward(Store<EntityStore> store,
+    private static void spawnReward(Store<EntityStore> store,
                                     World world,
                                     String rewardId,
                                     Vector3i baseBlockPos,
@@ -163,7 +161,7 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
         });
     }
 
-    private static void SpawnBlockByID(World world, BlockType blockType, Vector3i pos)
+    private static void replaceBlock(World world, BlockType blockType, Vector3i pos)
     {
         if (world == null || blockType == null || pos == null)
         {
@@ -177,35 +175,5 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
         }
 
         world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), blockTypeId));
-    }
-
-    private static boolean isOneBlock(BlockType blockType)
-    {
-        if (blockType == null)
-        {
-            return false;
-        }
-
-        Item item = blockType.getItem();
-        if (item == null)
-        {
-            return false;
-        }
-
-        String[] categories = item.getCategories();
-        if (categories == null)
-        {
-            return false;
-        }
-
-        for (String category : categories)
-        {
-            if (ONEBLOCK_CATEGORY.equals(category))
-            {
-                return true;
-            }
-        }
-
-        return false;
     }
 }

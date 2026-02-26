@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public final class OneBlockChapterDefaults
+public final class OneBlockExpeditionDefaults
 {
     public static final class DropDefinition
     {
@@ -28,12 +28,7 @@ public final class OneBlockChapterDefaults
     {
         Map<String, List<DropDefinition>> defaults = new HashMap<>();
 
-        defaults.put("A1", List.of(
-                drop("Ingredient_Fibre", 10),
-                drop("Rubble_Stone", 10)
-        ));
-
-        defaults.put("A2", List.of(
+        defaults.put("Meadow", List.of(
                 drop("Wood_Ash_Trunk", 10),
                 drop("Rock_Stone_Cobble", 10),
                 drop("Ingredient_Fibre", 3),
@@ -42,7 +37,7 @@ public final class OneBlockChapterDefaults
                 drop("Ingredient_Stick", 3)
         ));
 
-        defaults.put("A3", List.of(
+        defaults.put("Forest", List.of(
                 drop("Wood_Ash_Trunk", 15),
                 drop("Rock_Stone_Cobble", 15),
                 drop("Ingredient_Fibre", 3),
@@ -51,19 +46,11 @@ public final class OneBlockChapterDefaults
                 drop("Ingredient_Stick", 3)
         ));
 
-        defaults.put("B1", List.of(
-                drop("Wood_Ash_Trunk", 15),
-                drop("Rock_Stone_Cobble", 15)
-        ));
-
-        defaults.put("B2", List.of(
-                drop("Wood_Ash_Trunk", 15),
-                drop("Rock_Stone_Cobble", 15)
-        ));
-
-        defaults.put("B3", List.of(
-                drop(OneBlockDropId.entityDropId("Zombie"), 10),
-                drop(OneBlockDropId.entityDropId("Skeleton"), 10),
+        defaults.put("Cave", List.of(
+                drop("Rock_Stone_Cobble", 15),
+                drop("Rubble_Stone", 10),
+                drop(OneBlockDropId.entityDropId("Zombie"), 6),
+                drop(OneBlockDropId.entityDropId("Skeleton"), 6),
                 drop(OneBlockDropId.entityDropId("Crawler_Void"), 2)
         ));
 
@@ -72,13 +59,13 @@ public final class OneBlockChapterDefaults
         DEFAULT_WEIGHTS = buildDefaultWeights(DEFAULTS);
     }
 
-    private OneBlockChapterDefaults()
+    private OneBlockExpeditionDefaults()
     {
     }
 
-    public static List<DropDefinition> getDefaults(String chapterId)
+    public static List<DropDefinition> getDefaults(String expeditionId)
     {
-        String key = normalizeChapter(chapterId);
+        String key = OneBlockExpeditionResolver.normalizeExpedition(expeditionId);
         List<DropDefinition> defaults = DEFAULTS.get(key);
         if (defaults == null)
         {
@@ -87,9 +74,9 @@ public final class OneBlockChapterDefaults
         return defaults;
     }
 
-    public static List<String> getDefaultDropIds(String chapterId)
+    public static List<String> getDefaultDropIds(String expeditionId)
     {
-        String key = normalizeChapter(chapterId);
+        String key = OneBlockExpeditionResolver.normalizeExpedition(expeditionId);
         List<String> ids = DEFAULT_IDS.get(key);
         if (ids == null || ids.isEmpty())
         {
@@ -103,18 +90,18 @@ public final class OneBlockChapterDefaults
         return DEFAULT_WEIGHTS;
     }
 
-    public static boolean isDefaultDrop(String chapterId, String dropId)
+    public static boolean isDefaultDrop(String expeditionId, String dropId)
     {
         if (dropId == null || dropId.isEmpty())
         {
             return false;
         }
 
-        List<String> ids = DEFAULT_IDS.get(normalizeChapter(chapterId));
+        List<String> ids = DEFAULT_IDS.get(OneBlockExpeditionResolver.normalizeExpedition(expeditionId));
         return ids != null && ids.contains(dropId);
     }
 
-    public static void ensureDefaults(String chapterId, OneBlockPlayerChapterDropsState state)
+    public static void ensureDefaults(String expeditionId, OneBlockPlayerExpeditionDropsState state)
     {
         if (state == null)
         {
@@ -122,25 +109,16 @@ public final class OneBlockChapterDefaults
         }
 
         state.unlockedDrops.removeIf(item -> item == null || item.isEmpty());
-        state.enabledDrops.removeIf(item -> item == null || item.isEmpty());
 
-        List<String> defaults = getDefaultDropIds(chapterId);
+        List<String> defaults = getDefaultDropIds(expeditionId);
         if (!defaults.isEmpty())
         {
             state.unlockedDrops.addAll(defaults);
-            if (state.enabledDrops.isEmpty())
-            {
-                state.enabledDrops.addAll(defaults);
-            }
         }
 
         if (state.unlockedDrops.isEmpty())
         {
             state.unlockedDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
-        }
-        if (state.enabledDrops.isEmpty())
-        {
-            state.enabledDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);
         }
     }
 
@@ -151,15 +129,6 @@ public final class OneBlockChapterDefaults
             weight = 1;
         }
         return new DropDefinition(dropId, weight);
-    }
-
-    private static String normalizeChapter(String chapterId)
-    {
-        if (chapterId == null || chapterId.isEmpty())
-        {
-            return OneBlockChapterResolver.DEFAULT_CHAPTER;
-        }
-        return chapterId;
     }
 
     private static Map<String, List<String>> buildDefaultIds(Map<String, List<DropDefinition>> defaults)

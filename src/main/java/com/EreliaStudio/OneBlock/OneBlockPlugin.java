@@ -53,7 +53,7 @@ public class OneBlockPlugin extends JavaPlugin
                 "/Server/Item/Items/UnlockRecipe"
         );
 
-        dropRegistry.registerDefaultWeights(OneBlockChapterDefaults.getDefaultWeights());
+        dropRegistry.registerDefaultWeights(OneBlockExpeditionDefaults.getDefaultWeights());
         dropRegistry.registerWeights(consumableToDropMap.values());
         unlockService = new OneBlockUnlockService(dropsStateProvider, consumableToDropMap);
         LOGGER.at(Level.INFO).log("Loaded unlock recipes: " + consumableToDropMap.size());
@@ -69,11 +69,11 @@ public class OneBlockPlugin extends JavaPlugin
         LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockUnlockInteraction.INTERACTION_ID);
 
         getCodecRegistry(Interaction.CODEC).register(
-                OneBlockActInteraction.INTERACTION_ID,
-                OneBlockActInteraction.class,
-                OneBlockActInteraction.CODEC
+                OneBlockExpeditionInteraction.INTERACTION_ID,
+                OneBlockExpeditionInteraction.class,
+                OneBlockExpeditionInteraction.CODEC
         );
-        LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockActInteraction.INTERACTION_ID);
+        LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockExpeditionInteraction.INTERACTION_ID);
 
         getEventRegistry().registerGlobal(AddWorldEvent.class, event ->
         {

@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Ingredient_Life_Essence.name",
-    "Description": "server.items.OneBlock_Unlock_Ingredient_Life_Essence.description"
+    "Name": "server.items.OneBlock_Unlock_Soil_Grass.name",
+    "Description": "server.items.OneBlock_Unlock_Soil_Grass.description"
   },
-  "Id": "OneBlock_Unlock_Ingredient_Life_Essence",
+  "Id": "OneBlock_Unlock_Soil_Grass",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,12 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Plant_Crop_Wheat_Item",
-        "Quantity": 10
-      },
-      {
-        "ItemId": "Plant_Crop_Lettuce_Item",
-        "Quantity": 10
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 5
       }
     ],
     "OutputQuantity": 1,
@@ -54,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_A2"
+          "OneBlock_Upgrader_Expedition_Meadow"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -67,13 +63,13 @@
       "OneBlock_Unlock_Consumable"
     ],
     "OneBlockUnlockDropId": [
-      "Ingredient_Life_Essence"
+      "Soil_Grass"
     ],
-    "OneBlockUnlockChapter": [
-      "A2"
+    "OneBlockUnlockExpedition": [
+      "Meadow"
     ],
     "OneBlockUnlockWeight": [
-      "3"
+      "10"
     ]
   },
   "ItemLevel": 1,

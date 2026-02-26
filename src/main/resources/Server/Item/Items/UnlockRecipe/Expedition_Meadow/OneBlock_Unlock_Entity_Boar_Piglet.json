@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Ore_Copper.name",
-    "Description": "server.items.OneBlock_Unlock_Ore_Copper.description"
+    "Name": "server.items.OneBlock_Unlock_Entity_Boar_Piglet.name",
+    "Description": "server.items.OneBlock_Unlock_Entity_Boar_Piglet.description"
   },
-  "Id": "OneBlock_Unlock_Ore_Copper",
+  "Id": "OneBlock_Unlock_Entity_Boar_Piglet",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,7 +41,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rock_Stone_Cobble",
+        "ItemId": "Plant_Crop_Lettuce_Item",
         "Quantity": 20
       }
     ],
@@ -50,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_B2"
+          "OneBlock_Upgrader_Expedition_Meadow"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -62,14 +62,14 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Ore_Copper"
+    "OneBlockUnlockEntityId": [
+      "Boar_Piglet"
     ],
-    "OneBlockUnlockChapter": [
-      "B2"
+    "OneBlockUnlockExpedition": [
+      "Meadow"
     ],
     "OneBlockUnlockWeight": [
-      "3"
+      "1"
     ]
   },
   "ItemLevel": 1,

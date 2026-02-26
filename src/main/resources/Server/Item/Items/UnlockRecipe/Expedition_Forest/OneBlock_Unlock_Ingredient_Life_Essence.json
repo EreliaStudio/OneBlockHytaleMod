@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Ingredient_Charcoal.name",
-    "Description": "server.items.OneBlock_Unlock_Ingredient_Charcoal.description"
+    "Name": "server.items.OneBlock_Unlock_Ingredient_Life_Essence.name",
+    "Description": "server.items.OneBlock_Unlock_Ingredient_Life_Essence.description"
   },
-  "Id": "OneBlock_Unlock_Ingredient_Charcoal",
+  "Id": "OneBlock_Unlock_Ingredient_Life_Essence",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,8 +41,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Wood_Ash_Trunk",
-        "Quantity": 20
+        "ItemId": "Plant_Crop_Wheat_Item",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Plant_Crop_Lettuce_Item",
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,
@@ -50,7 +54,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_B2"
+          "OneBlock_Upgrader_Expedition_Forest"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -63,10 +67,10 @@
       "OneBlock_Unlock_Consumable"
     ],
     "OneBlockUnlockDropId": [
-      "Ingredient_Charcoal"
+      "Ingredient_Life_Essence"
     ],
-    "OneBlockUnlockChapter": [
-      "B2"
+    "OneBlockUnlockExpedition": [
+      "Forest"
     ],
     "OneBlockUnlockWeight": [
       "3"

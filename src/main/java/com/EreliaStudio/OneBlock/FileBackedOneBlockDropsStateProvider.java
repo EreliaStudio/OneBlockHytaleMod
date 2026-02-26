@@ -9,14 +9,17 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
-public final class FileBackedOneBlockDropsStateProvider implements OneBlockDropsStateProvider
+public final class FileBackedOneBlockDropsStateProvider extends AbstractOneBlockDropsStateProvider
 {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     private final Path filePath;
-    private final Map<UUID, OneBlockPlayerDropsState> stateByPlayer = new HashMap<>();
     private boolean dirty = false;
 
     public FileBackedOneBlockDropsStateProvider(Path filePath)
@@ -26,139 +29,27 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
     }
 
     @Override
-    public synchronized List<String> getEnabledDrops(UUID playerId, String chapterId)
+    public synchronized List<String> getUnlockedDrops(UUID playerId, String expeditionId)
     {
-        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
-        if (s == null || s.enabledDrops.isEmpty())
-        {
-            return new ArrayList<>(OneBlockChapterDefaults.getDefaultDropIds(chapterId));
-        }
-
-        return new ArrayList<>(s.enabledDrops);
+        return getUnlockedDropsInternal(playerId, expeditionId);
     }
 
     @Override
-    public synchronized boolean isUnlocked(UUID playerId, String chapterId, String dropItemId)
+    public synchronized boolean isUnlocked(UUID playerId, String expeditionId, String dropItemId)
     {
-        if (dropItemId == null || dropItemId.isEmpty())
-        {
-            return false;
-        }
-
-        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
-        return s != null && s.unlockedDrops.contains(dropItemId);
+        return isUnlockedInternal(playerId, expeditionId, dropItemId);
     }
 
     @Override
-    public synchronized boolean unlock(UUID playerId, String chapterId, String dropItemId)
+    public synchronized boolean unlock(UUID playerId, String expeditionId, String dropItemId)
     {
-        if (dropItemId == null || dropItemId.isEmpty())
-        {
-            return false;
-        }
-
-        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
-        if (s == null)
-        {
-            return false;
-        }
-
-        if (s.unlockedDrops.contains(dropItemId))
-        {
-            return false;
-        }
-
-        s.unlockedDrops.add(dropItemId);
-        s.enabledDrops.add(dropItemId);
-        markDirty();
-        return true;
+        return unlockInternal(playerId, expeditionId, dropItemId);
     }
 
     @Override
-    public synchronized boolean lock(UUID playerId, String chapterId, String dropItemId)
+    public synchronized boolean lock(UUID playerId, String expeditionId, String dropItemId)
     {
-        if (dropItemId == null || dropItemId.isEmpty())
-        {
-            return false;
-        }
-
-        if (OneBlockChapterDefaults.isDefaultDrop(chapterId, dropItemId))
-        {
-            return false;
-        }
-
-        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
-        if (s == null)
-        {
-            return false;
-        }
-
-        boolean removed = s.unlockedDrops.remove(dropItemId);
-        s.enabledDrops.remove(dropItemId);
-        ensureDefaults(chapterId, s);
-
-        if (removed)
-        {
-            markDirty();
-        }
-
-        return removed;
-    }
-
-    @Override
-    public synchronized boolean setEnabled(UUID playerId, String chapterId, String dropItemId, boolean enabled)
-    {
-        if (dropItemId == null || dropItemId.isEmpty())
-        {
-            return false;
-        }
-
-        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
-        if (s == null)
-        {
-            return false;
-        }
-
-        if (!s.unlockedDrops.contains(dropItemId))
-        {
-            return false;
-        }
-
-        boolean changed;
-        if (enabled)
-        {
-            changed = s.enabledDrops.add(dropItemId);
-        }
-        else
-        {
-            changed = s.enabledDrops.remove(dropItemId);
-            ensureDefaults(chapterId, s);
-        }
-
-        if (changed)
-        {
-            markDirty();
-        }
-
-        return true;
-    }
-
-    public synchronized void resetEnabledToUnlocked(UUID playerId, String chapterId)
-    {
-        OneBlockPlayerChapterDropsState s = state(playerId, chapterId);
-        if (s == null)
-        {
-            return;
-        }
-
-        s.enabledDrops.clear();
-        s.enabledDrops.addAll(s.unlockedDrops);
-        if (s.enabledDrops.isEmpty())
-        {
-            s.enabledDrops.addAll(OneBlockChapterDefaults.getDefaultDropIds(chapterId));
-        }
-
-        markDirty();
+        return lockInternal(playerId, expeditionId, dropItemId);
     }
 
     public synchronized void saveIfDirty()
@@ -172,12 +63,11 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
         for (Map.Entry<UUID, OneBlockPlayerDropsState> entry : stateByPlayer.entrySet())
         {
             PlayerData out = new PlayerData();
-            for (Map.Entry<String, OneBlockPlayerChapterDropsState> chapterEntry : entry.getValue().chapters.entrySet())
+            for (Map.Entry<String, OneBlockPlayerExpeditionDropsState> expeditionEntry : entry.getValue().expeditions.entrySet())
             {
-                ChapterData chapter = new ChapterData();
-                chapter.unlocked = new ArrayList<>(chapterEntry.getValue().unlockedDrops);
-                chapter.enabled = new ArrayList<>(chapterEntry.getValue().enabledDrops);
-                out.chapters.put(chapterEntry.getKey(), chapter);
+                ExpeditionData expedition = new ExpeditionData();
+                expedition.unlocked = new ArrayList<>(expeditionEntry.getValue().unlockedDrops);
+                out.expeditions.put(expeditionEntry.getKey(), expedition);
             }
             data.players.put(entry.getKey().toString(), out);
         }
@@ -222,46 +112,46 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
                 PlayerData raw = entry.getValue();
                 OneBlockPlayerDropsState playerState = new OneBlockPlayerDropsState();
 
-                if (raw != null && raw.chapters != null && !raw.chapters.isEmpty())
+                Map<String, ExpeditionData> expeditions = null;
+                if (raw != null && raw.expeditions != null && !raw.expeditions.isEmpty())
                 {
-                    for (Map.Entry<String, ChapterData> chapterEntry : raw.chapters.entrySet())
+                    expeditions = raw.expeditions;
+                }
+
+                if (expeditions != null)
+                {
+                    for (Map.Entry<String, ExpeditionData> expeditionEntry : expeditions.entrySet())
                     {
-                        String chapterId = normalizeChapter(chapterEntry.getKey());
-                        ChapterData rawChapter = chapterEntry.getValue();
-                        OneBlockPlayerChapterDropsState chapterState = new OneBlockPlayerChapterDropsState();
-                        if (rawChapter != null)
+                        String expeditionId = OneBlockExpeditionResolver.normalizeExpedition(expeditionEntry.getKey());
+                        ExpeditionData rawExpedition = expeditionEntry.getValue();
+                        OneBlockPlayerExpeditionDropsState expeditionState = new OneBlockPlayerExpeditionDropsState();
+                        if (rawExpedition != null)
                         {
-                            if (rawChapter.unlocked != null)
+                            if (rawExpedition.unlocked != null)
                             {
-                                chapterState.unlockedDrops.addAll(rawChapter.unlocked);
+                                expeditionState.unlockedDrops.addAll(rawExpedition.unlocked);
                             }
-                            if (rawChapter.enabled != null)
-                            {
-                                chapterState.enabledDrops.addAll(rawChapter.enabled);
-                            }
+                            addLegacyEnabled(rawExpedition.enabled, expeditionState);
                         }
-                        ensureDefaults(chapterId, chapterState);
-                        playerState.chapters.put(chapterId, chapterState);
+                        OneBlockExpeditionDefaults.ensureDefaults(expeditionId, expeditionState);
+                        playerState.expeditions.put(expeditionId, expeditionState);
                     }
                 }
                 else if (raw != null && (raw.unlocked != null || raw.enabled != null))
                 {
-                    // Legacy format: map old data into the default chapter.
-                    String chapterId = OneBlockChapterResolver.DEFAULT_CHAPTER;
-                    OneBlockPlayerChapterDropsState chapterState = new OneBlockPlayerChapterDropsState();
+                    // Legacy format: map old data into the default expedition.
+                    String expeditionId = OneBlockExpeditionResolver.DEFAULT_EXPEDITION;
+                    OneBlockPlayerExpeditionDropsState expeditionState = new OneBlockPlayerExpeditionDropsState();
                     if (raw.unlocked != null)
                     {
-                        chapterState.unlockedDrops.addAll(raw.unlocked);
+                        expeditionState.unlockedDrops.addAll(raw.unlocked);
                     }
-                    if (raw.enabled != null)
-                    {
-                        chapterState.enabledDrops.addAll(raw.enabled);
-                    }
-                    ensureDefaults(chapterId, chapterState);
-                    playerState.chapters.put(chapterId, chapterState);
+                    addLegacyEnabled(raw.enabled, expeditionState);
+                    OneBlockExpeditionDefaults.ensureDefaults(expeditionId, expeditionState);
+                    playerState.expeditions.put(expeditionId, expeditionState);
                 }
 
-                if (!playerState.chapters.isEmpty())
+                if (!playerState.expeditions.isEmpty())
                 {
                     stateByPlayer.put(playerId, playerState);
                 }
@@ -272,30 +162,8 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
         }
     }
 
-    private OneBlockPlayerChapterDropsState state(UUID playerId, String chapterId)
-    {
-        if (playerId == null)
-        {
-            return null;
-        }
-
-        String chapterKey = normalizeChapter(chapterId);
-        OneBlockPlayerDropsState playerState = stateByPlayer.computeIfAbsent(playerId, id -> new OneBlockPlayerDropsState());
-        return playerState.chapters.computeIfAbsent(chapterKey, key ->
-        {
-            OneBlockPlayerChapterDropsState s = new OneBlockPlayerChapterDropsState();
-            OneBlockChapterDefaults.ensureDefaults(chapterKey, s);
-            markDirty();
-            return s;
-        });
-    }
-
-    private static void ensureDefaults(String chapterId, OneBlockPlayerChapterDropsState s)
-    {
-        OneBlockChapterDefaults.ensureDefaults(chapterId, s);
-    }
-
-    private void markDirty()
+    @Override
+    protected synchronized void onStateChanged()
     {
         dirty = true;
         saveIfDirty();
@@ -325,26 +193,25 @@ public final class FileBackedOneBlockDropsStateProvider implements OneBlockDrops
 
     private static final class PlayerData
     {
-        private Map<String, ChapterData> chapters = new HashMap<>();
+        private Map<String, ExpeditionData> expeditions = new HashMap<>();
 
         // Legacy fields
         private List<String> unlocked;
         private List<String> enabled;
     }
 
-    private static final class ChapterData
+    private static final class ExpeditionData
     {
         private List<String> unlocked;
         private List<String> enabled;
     }
 
-    private static String normalizeChapter(String chapterId)
+    private static void addLegacyEnabled(List<String> enabled, OneBlockPlayerExpeditionDropsState expeditionState)
     {
-        if (chapterId == null || chapterId.isEmpty())
+        if (enabled != null && expeditionState != null)
         {
-            return OneBlockChapterResolver.DEFAULT_CHAPTER;
+            expeditionState.unlockedDrops.addAll(enabled);
         }
-
-        return chapterId;
     }
+
 }

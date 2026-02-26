@@ -46,33 +46,15 @@
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Upgrader_Act_A1",
-          "Icon": "Icons/CraftingCategories/ChapterKey.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_Act_A1",
+          "Id": "OneBlock_Upgrader_Expedition_Meadow",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Meadow",
           "Recipes": [
-            "OneBlock_Act_A1_Key",
-            "OneBlock_Act_A2_Key",
+            "OneBlock_Expedition_Meadow_Key",
+            "OneBlock_Expedition_Forest_Key",
             "OneBlock_Unlock_Soil_Grass",
             "OneBlock_Unlock_Wood_Ash_Trunk",
-            "OneBlock_Unlock_Ingredient_Stick"
-          ]
-        },
-        {
-          "Id": "OneBlock_Upgrader_Act_A2",
-          "Icon": "Icons/CraftingCategories/ChapterKey.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_Act_A2",
-          "Recipes": [
-            "OneBlock_Act_A3_Key",
-            "Ingredient_Life_Essence",
-            "OneBlock_Unlock_Ingredient_Life_Essence"
-          ]
-        },
-        {
-          "Id": "OneBlock_Upgrader_Act_A3",
-          "Icon": "Icons/CraftingCategories/ChapterKey.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_Act_A3",
-          "Recipes": [
-            "OneBlock_Act_B1_Key",
+            "OneBlock_Unlock_Ingredient_Stick",
             "OneBlock_Unlock_Entity_Piglet",
             "OneBlock_Unlock_Entity_Boar_Piglet",
             "OneBlock_Unlock_Entity_Calf",
@@ -80,28 +62,22 @@
           ]
         },
         {
-          "Id": "OneBlock_Upgrader_Act_B1",
-          "Icon": "Icons/CraftingCategories/ChapterKey.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_Act_B1",
+          "Id": "OneBlock_Upgrader_Expedition_Forest",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Forest",
           "Recipes": [
-            "OneBlock_Act_B2_Key"
+            "OneBlock_Expedition_Cave_Key",
+            "Ingredient_Life_Essence",
+            "OneBlock_Unlock_Ingredient_Life_Essence"
           ]
         },
         {
-          "Id": "OneBlock_Upgrader_Act_B2",
-          "Icon": "Icons/CraftingCategories/ChapterKey.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_Act_B2",
+          "Id": "OneBlock_Upgrader_Expedition_Cave",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Cave",
           "Recipes": [
-            "OneBlock_Act_B3_Key",
             "OneBlock_Unlock_Ore_Copper",
             "OneBlock_Unlock_Ingredient_Charcoal"
-          ]
-        },
-        {
-          "Id": "OneBlock_Upgrader_Act_B3",
-          "Icon": "Icons/CraftingCategories/ChapterKey.png",
-          "Name": "server.benchCategories.OneBlockUpgrader_Act_B3",
-          "Recipes": [
           ]
         }
       ],

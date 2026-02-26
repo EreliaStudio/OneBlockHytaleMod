@@ -50,7 +50,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Act_A3"
+          "OneBlock_Upgrader_Expedition_Meadow"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -65,8 +65,8 @@
     "OneBlockUnlockEntityId": [
       "Pig_Piglet"
     ],
-    "OneBlockUnlockChapter": [
-      "A3"
+    "OneBlockUnlockExpedition": [
+      "Meadow"
     ],
     "OneBlockUnlockWeight": [
       "1"

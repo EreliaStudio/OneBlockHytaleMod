@@ -45,7 +45,7 @@ public final class OneBlockUnlockRecipeLoader
 
             JsonObject categoryJson = categoryElement.getAsJsonObject();
             String categoryId = readString(categoryJson, "Id");
-            String categoryChapterId = chapterFromCategoryId(categoryId);
+            String categoryExpeditionId = expeditionFromCategoryId(categoryId);
             JsonArray recipes = categoryJson.getAsJsonArray("Recipes");
             if (recipes == null)
             {
@@ -68,7 +68,7 @@ public final class OneBlockUnlockRecipeLoader
                 JsonObject recipeJson;
                 try
                 {
-                    recipeJson = loadRecipeJson(owner, recipeFolderResourcePath, categoryChapterId, recipeItemId);
+                    recipeJson = loadRecipeJson(owner, recipeFolderResourcePath, categoryExpeditionId, recipeItemId);
                 }
                 catch (RuntimeException ignored)
                 {
@@ -103,12 +103,12 @@ public final class OneBlockUnlockRecipeLoader
                     }
                 }
 
-                String chapterId = readStringFromTags(tags, "OneBlockUnlockChapter");
-                if (chapterId == null || chapterId.isEmpty())
+                String expeditionId = readStringFromTags(tags, "OneBlockUnlockExpedition");
+                if (expeditionId == null || expeditionId.isEmpty())
                 {
-                    chapterId = (categoryChapterId == null || categoryChapterId.isEmpty())
-                            ? OneBlockChapterResolver.DEFAULT_CHAPTER
-                            : categoryChapterId;
+                    expeditionId = (categoryExpeditionId == null || categoryExpeditionId.isEmpty())
+                            ? OneBlockExpeditionResolver.DEFAULT_EXPEDITION
+                            : categoryExpeditionId;
                 }
 
                 int weight = readIntFromTags(tags, "OneBlockUnlockWeight", 1);
@@ -117,7 +117,7 @@ public final class OneBlockUnlockRecipeLoader
                     weight = 1;
                 }
 
-                result.put(recipeConsumableId, new OneBlockUnlockService.UnlockDefinition(chapterId, dropItemId, weight));
+                result.put(recipeConsumableId, new OneBlockUnlockService.UnlockDefinition(expeditionId, dropItemId, weight));
             }
         }
 
@@ -167,13 +167,13 @@ public final class OneBlockUnlockRecipeLoader
 
     private static JsonObject loadRecipeJson(Class<?> owner,
                                              String baseFolder,
-                                             String chapterId,
+                                             String expeditionId,
                                              String recipeItemId)
     {
         List<String> candidates = new ArrayList<>();
-        if (chapterId != null && !chapterId.isEmpty())
+        if (expeditionId != null && !expeditionId.isEmpty())
         {
-            candidates.add(baseFolder + "/Act_" + chapterId + "/" + recipeItemId + ".json");
+            candidates.add(baseFolder + "/Expedition_" + expeditionId + "/" + recipeItemId + ".json");
         }
         candidates.add(baseFolder + "/" + recipeItemId + ".json");
 
@@ -198,20 +198,20 @@ public final class OneBlockUnlockRecipeLoader
         throw new RuntimeException("Missing unlock recipe: " + recipeItemId);
     }
 
-    private static String chapterFromCategoryId(String categoryId)
+    private static String expeditionFromCategoryId(String categoryId)
     {
         if (categoryId == null || categoryId.isEmpty())
         {
             return null;
         }
 
-        int idx = categoryId.lastIndexOf("Act_");
-        if (idx < 0)
+        int idx = categoryId.lastIndexOf("Expedition_");
+        if (idx >= 0)
         {
-            return null;
+            return categoryId.substring(idx + "Expedition_".length());
         }
 
-        return categoryId.substring(idx + "Act_".length());
+        return null;
     }
 
     private static String readStringFromTags(JsonObject tags, String key)

@@ -10,6 +10,11 @@ Ore_Prisma
 Ore_Silver
 Ore_Thorium
 Rock_Gem_Emerald
+Rock_Gem_Ruby
+Rock_Gem_Sapphire
+Rock_Gem_Topaz
+Rock_Gem_Diamond
+Rock_Gem_Zephyr
 
 # STONE
 Rock_Basalt
@@ -18,6 +23,10 @@ Rock_Slate
 Rock_Stone
 Rock_Sandstone
 Rock_Volcanic
+Rock_Ice
+Rock_Ice_Permafrost
+Rock_Sandstone
+Rock_Stone
 
 # WOOD (TRUNKS)
 Wood_Oak_Trunk
@@ -235,23 +244,29 @@ Ingredient_Bar_Prisma
 Ingredient_Bar_Silver
 Ingredient_Bar_Thorium
 
-# DECORATION
-Deco_Bone_Full
-Deco_Bone_Pile
-Deco_Bone_Ribs
-Deco_Bone_Ribs_Feran
-Deco_Bone_Ribs_Long
-Deco_Bone_Skulls
-Deco_Bone_Skulls_Feran
-Deco_Bone_Skulls_Feran_Large
-Deco_Bone_Skulls_Feran_Wall
-Deco_Bone_Skulls_Wall
-Deco_Bone_Spike
-Deco_Bone_Spike_Large
-Deco_Bone_Spine
-Deco_Coral_Shell_Purple
-Deco_Hive
-Deco_SpiderWeb_Flat
+# CRYSTAL SHARDS
+
+Ingredient_Crystal_Blue 
+Ingredient_Crystal_Cyan
+Ingredient_Crystal_Green 
+Ingredient_Crystal_Purple 
+Ingredient_Crystal_Red
+Ingredient_Crystal_White
+Ingredient_Crystal_Yellow
+
+# FARMING SEED RECIPES
+
+Recipe_Plant_Seeds_Health1   — Blood Rose Seed
+Recipe_Plant_Seeds_Health2   — Bloodcap Mushroom Seed
+Recipe_Plant_Seeds_Health3   — Blood Leaf Seed
+
+Recipe_Plant_Seeds_Mana1     — Azure Fern Seed
+Recipe_Plant_Seeds_Mana2     — Azurecap Mushroom Seed
+Recipe_Plant_Seeds_Mana3     — Azure Kelp Seed
+
+Recipe_Plant_Seeds_Stamina1  — Storm Thistle Seed
+Recipe_Plant_Seeds_Stamina2  — Stormcap Mushroom Seed
+Recipe_Plant_Seeds_Stamina3  — Storm Sapling Seed
 
 # Animals (Passive / Neutral Wildlife)
 Antelope
@@ -289,14 +304,84 @@ Crawler
 Earth_Elemental
 Emberwulf
 Fen_Stalker
-Goblin (and variants)
-Golem / Earthen_Golem
+Goblin_Duke
+Goblin_Duke_Phase2
+Goblin_Duke_Phase3_Fast
+Goblin_Duke_Phase3_Slow
+Goblin_Scavenger
+Goblin_Scavenger_Battleaxe
+Goblin_Scavenger_Sword
+Goblin_Scrapper
+Goblin_Scrapper_Patrol
+Goblin_Lobber
+Goblin_Lobber_Patrol
+Goblin_Miner
+Goblin_Miner_Patrol
+Goblin_Thief
+Goblin_Thief_Patrol
+Goblin_Ogre
 Ice_Dragon
-Outlander (and variants)
+Outlander_Initiate
+Outlander_Hunter
+Outlander_Berserker
+Outlander_Marauder
+Outlander_Priest
+Outlander_Brute
 Pale_Danger
 Sand_Empress
-Skeleton (various types)
+Skeleton_Scout
+Skeleton_Soldier
+Skeleton_Archer
+Skeleton_Knight
+Skeleton_Ranger
+Skeleton_Fighter
+Skeleton_Mage
+Skeleton_Archmage
+Burnt_Skeleton_Archer
+Burnt_Skeleton_Gunner
+Burnt_Skeleton_Knight
+Burnt_Skeleton_Lancer
+Burnt_Skeleton_Praetorian
+Burnt_Skeleton_Soldier
+Burnt_Skeleton_Wizard
+Burnt_Skeleton_Alchemist
+Frost_Skeleton_Scout
+Frost_Skeleton_Ranger
+Frost_Skeleton_Fighter
+Frost_Skeleton_Knight
+Frost_Skeleton_Mage
+Frost_Skeleton_Archmage
+Frost_Skeleton_Soldier
+Incandescent_Skeleton_Fighter
+Incandescent_Skeleton_Footman
+Incandescent_Skeleton_Head
+Incandescent_Skeleton_Mage
+Fen_Stalker
 Spider
 Trork_Hunter
 Void_Crawler
 Zombie
+Frost_Zombie
+Sandswept_Zombie
+Zombie_Burnt
+Aberrant_Zombie
+Large_Aberrant_Zombie
+Earth_Elemental
+Earthen_Golem
+Ember_Golem
+Firesteel_Golem
+Frost_Golem
+Thunder_Golem
+Emberwulf
+Void_Crawler
+Void_Spawn
+Void_Eye
+Void_Larva
+Void_Spectre
+Cave_Spider
+Spider
+Scarak_Broodmother
+Scarak_Defender
+Scarak_Fighter
+Scarak_Louse
+Scarak_Seeker

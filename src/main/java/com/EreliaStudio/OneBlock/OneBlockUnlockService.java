@@ -34,16 +34,14 @@ public final class OneBlockUnlockService
             return UnlockConsumeResult.INVALID_ITEM;
         }
 
-        String chapterId = (definition.chapterId == null || definition.chapterId.isEmpty())
-                ? OneBlockChapterResolver.DEFAULT_CHAPTER
-                : definition.chapterId;
+        String expeditionId = OneBlockExpeditionResolver.normalizeExpedition(definition.expeditionId);
 
-        if (stateProvider.isUnlocked(playerId, chapterId, definition.dropItemId))
+        if (stateProvider.isUnlocked(playerId, expeditionId, definition.dropItemId))
         {
             return UnlockConsumeResult.ALREADY_UNLOCKED;
         }
 
-        boolean unlocked = stateProvider.unlock(playerId, chapterId, definition.dropItemId);
+        boolean unlocked = stateProvider.unlock(playerId, expeditionId, definition.dropItemId);
         return unlocked ? UnlockConsumeResult.UNLOCKED : UnlockConsumeResult.UNLOCK_FAILED;
     }
 
@@ -53,10 +51,10 @@ public final class OneBlockUnlockService
         return definition == null ? null : definition.dropItemId;
     }
 
-    public String getChapterForConsumable(String consumableItemId)
+    public String getExpeditionForConsumable(String consumableItemId)
     {
         UnlockDefinition definition = definitionByConsumableItemId.get(consumableItemId);
-        return definition == null ? null : definition.chapterId;
+        return definition == null ? null : definition.expeditionId;
     }
 
     public enum UnlockConsumeResult
@@ -69,13 +67,13 @@ public final class OneBlockUnlockService
 
     public static final class UnlockDefinition
     {
-        public final String chapterId;
+        public final String expeditionId;
         public final String dropItemId;
         public final int weight;
 
-        public UnlockDefinition(String chapterId, String dropItemId, int weight)
+        public UnlockDefinition(String expeditionId, String dropItemId, int weight)
         {
-            this.chapterId = chapterId;
+            this.expeditionId = expeditionId;
             this.dropItemId = dropItemId;
             this.weight = weight;
         }

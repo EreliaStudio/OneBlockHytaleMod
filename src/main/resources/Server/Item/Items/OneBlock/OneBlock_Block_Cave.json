@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_A3.name"
+    "Name": "server.items.OneBlock_Block_Cave.name"
   },
-  "Id": "OneBlock_Block_A3",
-  "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/OneBlock_A3.png",
+  "Id": "OneBlock_Block_Cave",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/OneBlock_Cave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_TierA3.png",
-        "Sides": "BlockTextures/OneBlock_TierA3.png",
-        "Up": "BlockTextures/OneBlock_TierA3.png",
+        "Down": "BlockTextures/OneBlock_Cave.png",
+        "Sides": "BlockTextures/OneBlock_Cave.png",
+        "Up": "BlockTextures/OneBlock_Cave.png",
         "Weight": 1
       }
     ],
