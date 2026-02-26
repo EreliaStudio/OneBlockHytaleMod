@@ -1,118 +1,232 @@
 package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.builtin.crafting.state.ProcessingBenchState;
-import com.hypixel.hytale.component.AddReason;
+import com.hypixel.hytale.component.Archetype;
+import com.hypixel.hytale.component.ArchetypeChunk;
+import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentType;
-import com.hypixel.hytale.component.Holder;
-import com.hypixel.hytale.component.RemoveReason;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.component.query.Query;
-import com.hypixel.hytale.component.system.HolderSystem;
+import com.hypixel.hytale.component.system.tick.ArchetypeTickingSystem;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.bench.Bench;
 import com.hypixel.hytale.server.core.asset.type.item.config.CraftingRecipe;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.inventory.MaterialQuantity;
 import com.hypixel.hytale.server.core.inventory.container.ItemContainer;
-import com.hypixel.hytale.server.core.inventory.container.ItemContainer.ItemContainerChangeEvent;
-import com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction;
-import com.hypixel.hytale.server.core.inventory.transaction.ListTransaction;
-import com.hypixel.hytale.server.core.inventory.transaction.MoveTransaction;
-import com.hypixel.hytale.server.core.inventory.transaction.SlotTransaction;
-import com.hypixel.hytale.server.core.inventory.transaction.Transaction;
-import com.hypixel.hytale.server.core.universe.world.meta.BlockStateModule;
-import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.IdentityHashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
-public final class OneBlockSalvageChanceSystem extends HolderSystem
+public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<ChunkStore>
 {
     private static final String TARGET_BENCH_ID = "OneBlockSalvager";
     private static final String TARGET_OUTPUT_ITEM_ID = "Ingredient_Crystal_White";
     private static final double TARGET_SUCCESS_RATE = 0.10;
     private static final String[] CRYSTAL_OUTPUT_IDS = new String[] {
             "Ingredient_Crystal_Blue",
-            "Ingredient_Crystal_Cyan",
-            "Ingredient_Crystal_Green",
-            "Ingredient_Crystal_Purple",
             "Ingredient_Crystal_Red",
-            "Ingredient_Crystal_White",
             "Ingredient_Crystal_Yellow"
     };
 
-    private static final ThreadLocal<Boolean> SUPPRESS_EVENTS = ThreadLocal.withInitial(() -> Boolean.FALSE);
     private static final Field OUTPUT_CONTAINER_FIELD = findOutputContainerField();
 
-    private final Set<ItemContainer> registeredContainers = Collections.newSetFromMap(new IdentityHashMap<>());
-    private ComponentType processingBenchComponentType;
+    private final Map<Archetype<ChunkStore>, ComponentType<ChunkStore, ProcessingBenchState>> componentTypeCache =
+            new IdentityHashMap<>();
 
     @Override
-    public Query<EntityStore> getQuery()
+    public Query<ChunkStore> getQuery()
     {
         return Query.any();
     }
 
     @Override
-    public void onEntityAdd(Holder holder, AddReason reason, Store store)
+    public void tick(float delta, ArchetypeChunk<ChunkStore> chunk, Store<ChunkStore> store, CommandBuffer<ChunkStore> buffer)
     {
-        ProcessingBenchState state = getProcessingBenchState(holder);
-        if (state == null)
+        if (chunk == null)
         {
             return;
         }
 
-        if (!isTargetBench(state))
-        {
-            return;
-        }
-
-        ItemContainer outputContainer = getOutputContainer(state);
-        if (outputContainer == null || !registeredContainers.add(outputContainer))
-        {
-            return;
-        }
-
-        outputContainer.registerChangeEvent(event -> onOutputChanged(state, event));
-    }
-
-    @Override
-    public void onEntityRemoved(Holder holder, RemoveReason reason, Store store)
-    {
-        // No explicit unregister API. Container registrations are cleaned up by the engine when the
-        // container is destroyed; the identity set prevents duplicate registrations while active.
-    }
-
-    private ProcessingBenchState getProcessingBenchState(Holder holder)
-    {
-        ComponentType componentType = resolveProcessingBenchComponentType();
+        ComponentType<ChunkStore, ProcessingBenchState> componentType = getProcessingBenchComponentType(chunk.getArchetype());
         if (componentType == null)
         {
-            return null;
+            return;
         }
 
-        return (ProcessingBenchState) holder.getComponent(componentType);
+        int size = chunk.size();
+        for (int i = 0; i < size; i++)
+        {
+            ProcessingBenchState state = chunk.getComponent(i, componentType);
+            if (state == null)
+            {
+                continue;
+            }
+
+            if (!isTargetBench(state))
+            {
+                continue;
+            }
+
+            CraftingRecipe recipe = state.getRecipe();
+            if (recipe != null && !usesRubbleInput(recipe))
+            {
+                continue;
+            }
+
+            ItemContainer outputContainer = getOutputContainer(state);
+            if (outputContainer == null)
+            {
+                continue;
+            }
+
+            processOutputContainer(outputContainer);
+        }
     }
 
-    private ComponentType resolveProcessingBenchComponentType()
+    private static void processOutputContainer(ItemContainer outputContainer)
     {
-        if (processingBenchComponentType != null)
+        short capacity = outputContainer.getCapacity();
+        for (short slot = 0; slot < capacity; slot++)
         {
-            return processingBenchComponentType;
+            ItemStack stack = outputContainer.getItemStack(slot);
+            if (stack == null)
+            {
+                continue;
+            }
+
+            if (!TARGET_OUTPUT_ITEM_ID.equals(stack.getItemId()))
+            {
+                continue;
+            }
+
+            boolean success = ThreadLocalRandom.current().nextDouble() < TARGET_SUCCESS_RATE;
+            int quantity = Math.max(1, stack.getQuantity());
+            if (!success)
+            {
+                outputContainer.removeItemStackFromSlot(slot, false);
+                continue;
+            }
+
+            outputContainer.removeItemStackFromSlot(slot, false);
+
+            String crystalId = pickRandomCrystalId();
+            int remaining = mergeIntoExistingStacks(outputContainer, crystalId, quantity);
+            remaining = placeIntoSlotIfEmpty(outputContainer, slot, crystalId, remaining);
+            if (remaining > 0)
+            {
+                placeIntoEmptySlots(outputContainer, crystalId, remaining);
+            }
+        }
+    }
+
+    private static int mergeIntoExistingStacks(ItemContainer outputContainer, String crystalId, int quantity)
+    {
+        if (quantity <= 0)
+        {
+            return 0;
         }
 
-        BlockStateModule module = BlockStateModule.get();
-        if (module == null)
+        short capacity = outputContainer.getCapacity();
+        for (short slot = 0; slot < capacity; slot++)
         {
-            return null;
+            ItemStack existing = outputContainer.getItemStack(slot);
+            if (existing == null || existing.isEmpty())
+            {
+                continue;
+            }
+
+            if (!crystalId.equals(existing.getItemId()))
+            {
+                continue;
+            }
+
+            int maxStack = getMaxStack(existing);
+            int room = maxStack - existing.getQuantity();
+            if (room <= 0)
+            {
+                continue;
+            }
+
+            int add = Math.min(room, quantity);
+            outputContainer.setItemStackForSlot(
+                    slot,
+                    new ItemStack(crystalId, existing.getQuantity() + add, existing.getMetadata()),
+                    false);
+            quantity -= add;
+            if (quantity <= 0)
+            {
+                return 0;
+            }
         }
 
-        processingBenchComponentType = module.getComponentType(ProcessingBenchState.class);
-        return processingBenchComponentType;
+        return quantity;
+    }
+
+    private static int placeIntoSlotIfEmpty(ItemContainer outputContainer, short slot, String crystalId, int quantity)
+    {
+        if (quantity <= 0)
+        {
+            return 0;
+        }
+
+        ItemStack current = outputContainer.getItemStack(slot);
+        if (current != null && !current.isEmpty())
+        {
+            return quantity;
+        }
+
+        int maxStack = getMaxStack(crystalId);
+        int add = Math.min(maxStack, quantity);
+        outputContainer.setItemStackForSlot(slot, new ItemStack(crystalId, add), false);
+        return quantity - add;
+    }
+
+    private static void placeIntoEmptySlots(ItemContainer outputContainer, String crystalId, int quantity)
+    {
+        if (quantity <= 0)
+        {
+            return;
+        }
+
+        int maxStack = getMaxStack(crystalId);
+        short capacity = outputContainer.getCapacity();
+        for (short slot = 0; slot < capacity && quantity > 0; slot++)
+        {
+            ItemStack existing = outputContainer.getItemStack(slot);
+            if (existing != null && !existing.isEmpty())
+            {
+                continue;
+            }
+
+            int add = Math.min(maxStack, quantity);
+            outputContainer.setItemStackForSlot(slot, new ItemStack(crystalId, add), false);
+            quantity -= add;
+        }
+    }
+
+    private static int getMaxStack(ItemStack stack)
+    {
+        if (stack == null)
+        {
+            return 1;
+        }
+
+        com.hypixel.hytale.server.core.asset.type.item.config.Item item = stack.getItem();
+        if (item == null)
+        {
+            return 1;
+        }
+
+        int maxStack = item.getMaxStack();
+        return maxStack > 0 ? maxStack : 1;
+    }
+
+    private static int getMaxStack(String itemId)
+    {
+        return getMaxStack(new ItemStack(itemId, 1));
     }
 
     private static boolean isTargetBench(ProcessingBenchState state)
@@ -160,110 +274,48 @@ public final class OneBlockSalvageChanceSystem extends HolderSystem
         return null;
     }
 
-    private void onOutputChanged(ProcessingBenchState state, ItemContainerChangeEvent event)
+    private ComponentType<ChunkStore, ProcessingBenchState> getProcessingBenchComponentType(Archetype<ChunkStore> archetype)
     {
-        if (state == null || event == null)
+        if (archetype == null)
         {
-            return;
+            return null;
         }
 
-        if (Boolean.TRUE.equals(SUPPRESS_EVENTS.get()))
+        if (componentTypeCache.containsKey(archetype))
         {
-            return;
+            return componentTypeCache.get(archetype);
         }
 
-        CraftingRecipe recipe = state.getRecipe();
-        if (recipe == null)
-        {
-            return;
-        }
-
-        MaterialQuantity primaryOutput = recipe.getPrimaryOutput();
-        if (primaryOutput == null || !TARGET_OUTPUT_ITEM_ID.equals(primaryOutput.getItemId()))
-        {
-            return;
-        }
-
-        if (!usesRubbleInput(recipe))
-        {
-            return;
-        }
-
-        Transaction transaction = event.transaction();
-        if (transaction == null)
-        {
-            return;
-        }
-
-        List<SlotTransaction> slotTransactions = new ArrayList<>();
-        collectSlotTransactions(transaction, slotTransactions);
-        List<SlotTransaction> targetSlots = findTargetOutputSlots(slotTransactions);
-        if (targetSlots.isEmpty())
-        {
-            return;
-        }
-
-        boolean success = ThreadLocalRandom.current().nextDouble() < TARGET_SUCCESS_RATE;
-
-        SUPPRESS_EVENTS.set(Boolean.TRUE);
-        try
-        {
-            ItemContainer container = event.container();
-            for (SlotTransaction slotTransaction : targetSlots)
-            {
-                if (slotTransaction == null)
-                {
-                    continue;
-                }
-
-                if (!success)
-                {
-                    container.setItemStackForSlot(slotTransaction.getSlot(), slotTransaction.getSlotBefore());
-                    continue;
-                }
-
-                ItemStack after = slotTransaction.getSlotAfter();
-                int quantity = after == null ? 1 : Math.max(1, after.getQuantity());
-                String crystalId = pickRandomCrystalId();
-                container.setItemStackForSlot(slotTransaction.getSlot(), new ItemStack(crystalId, quantity));
-            }
-        }
-        finally
-        {
-            SUPPRESS_EVENTS.set(Boolean.FALSE);
-        }
+        ComponentType<ChunkStore, ProcessingBenchState> resolved = resolveProcessingBenchComponentType(archetype);
+        componentTypeCache.put(archetype, resolved);
+        return resolved;
     }
 
-    private static List<SlotTransaction> findTargetOutputSlots(List<SlotTransaction> slotTransactions)
+    @SuppressWarnings("unchecked")
+    private static ComponentType<ChunkStore, ProcessingBenchState> resolveProcessingBenchComponentType(Archetype<ChunkStore> archetype)
     {
-        List<SlotTransaction> matches = new ArrayList<>();
-        for (SlotTransaction slotTransaction : slotTransactions)
+        if (archetype == null)
         {
-            if (slotTransaction == null)
+            return null;
+        }
+
+        int length = archetype.length();
+        for (int i = 0; i < length; i++)
+        {
+            ComponentType<ChunkStore, ?> type = archetype.get(i);
+            if (type == null)
             {
                 continue;
             }
 
-            ItemStack after = slotTransaction.getSlotAfter();
-            if (after == null || !TARGET_OUTPUT_ITEM_ID.equals(after.getItemId()))
+            Class<?> typeClass = type.getTypeClass();
+            if (typeClass == ProcessingBenchState.class)
             {
-                continue;
-            }
-
-            ItemStack before = slotTransaction.getSlotBefore();
-            if (before == null || !TARGET_OUTPUT_ITEM_ID.equals(before.getItemId()))
-            {
-                matches.add(slotTransaction);
-                continue;
-            }
-
-            if (after.getQuantity() > before.getQuantity())
-            {
-                matches.add(slotTransaction);
+                return (ComponentType<ChunkStore, ProcessingBenchState>) type;
             }
         }
 
-        return matches;
+        return null;
     }
 
     private static boolean usesRubbleInput(CraftingRecipe recipe)
@@ -306,43 +358,5 @@ public final class OneBlockSalvageChanceSystem extends HolderSystem
     {
         int idx = ThreadLocalRandom.current().nextInt(CRYSTAL_OUTPUT_IDS.length);
         return CRYSTAL_OUTPUT_IDS[idx];
-    }
-
-    private static void collectSlotTransactions(Transaction transaction, List<SlotTransaction> out)
-    {
-        if (transaction == null)
-        {
-            return;
-        }
-
-        if (transaction instanceof SlotTransaction slotTransaction)
-        {
-            out.add(slotTransaction);
-            return;
-        }
-
-        if (transaction instanceof ItemStackTransaction itemStackTransaction)
-        {
-            out.addAll(itemStackTransaction.getSlotTransactions());
-            return;
-        }
-
-        if (transaction instanceof ListTransaction listTransaction)
-        {
-            for (Object entry : listTransaction.getList())
-            {
-                if (entry instanceof Transaction child)
-                {
-                    collectSlotTransactions(child, out);
-                }
-            }
-            return;
-        }
-
-        if (transaction instanceof MoveTransaction moveTransaction)
-        {
-            collectSlotTransactions(moveTransaction.getAddTransaction(), out);
-            collectSlotTransactions(moveTransaction.getRemoveTransaction(), out);
-        }
     }
 }

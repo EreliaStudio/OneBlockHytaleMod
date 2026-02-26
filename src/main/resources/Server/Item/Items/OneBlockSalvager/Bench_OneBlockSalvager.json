@@ -76,9 +76,6 @@
       "Definitions": {
         "Processing": {
           "Looping": true,
-          "Light": {
-            "Color": "#B72"
-          },
           "CustomModelTexture": [
             {
               "Texture": "Blocks/OneBlockSalvage_Texture.png",
@@ -89,9 +86,6 @@
           "CustomModelAnimation": "Blocks/Benches/Salvage_Processing.blockyanim"
         },
         "ProcessCompleted": {
-          "Light": {
-            "Color": "#B72"
-          },
           "CustomModelTexture": [
             {
               "Texture": "Blocks/OneBlockSalvage_Texture.png",
