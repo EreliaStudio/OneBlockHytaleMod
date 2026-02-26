@@ -1,6 +1,8 @@
 # Bench
 items.Bench_OneBlockUpgrader.name = OneBlock Upgrader
 items.Bench_OneBlockUpgrader.description = Bench allowing you to upgrade your OneBlock by unlocking new loot from it
+items.Bench_OneBlockSalvager.name = OneBlock Salvager
+items.Bench_OneBlockSalvager.description = Salvage bench used to break down materials into new resources
 oneblock.category.Blocks.name = Block unlock upgrade
 oneblock.category.Ingredients.name = Ingredient unlock upgrade
 
@@ -49,6 +51,9 @@ items.OneBlock_Unlock_Ore_Copper.description = Consume to permanently unlock Ore
 
 items.OneBlock_Unlock_Ingredient_Charcoal.name = Charcoal Unlock Token
 items.OneBlock_Unlock_Ingredient_Charcoal.description = Consume to permanently unlock Ingredient_Charcoal in your OneBlock drop pool.
+
+items.OneBlock_Unlock_Recipe_Salvager.name = Salvager Recipe
+items.OneBlock_Unlock_Recipe_Salvager.description = Consume to learn how to craft the OneBlock Salvager.
 
 # Expedition keys
 items.OneBlock_Expedition_Meadow_Key.name = Expedition Key - Meadow

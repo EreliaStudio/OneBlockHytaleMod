@@ -1,0 +1,25 @@
+{
+  "Input": [
+    {
+      "ResourceTypeId": "Rubble",
+      "Quantity": 1
+    }
+  ],
+  "PrimaryOutput": {
+    "ItemId": "Ingredient_Crystal_White",
+    "Quantity": 1
+  },
+  "Output": [
+    {
+      "ItemId": "Ingredient_Crystal_White",
+      "Quantity": 1
+    }
+  ],
+  "BenchRequirement": [
+    {
+      "Type": "Processing",
+      "Id": "OneBlockSalvager"
+    }
+  ],
+  "TimeSeconds": 4
+}

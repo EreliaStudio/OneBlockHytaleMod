@@ -44,6 +44,7 @@ public class OneBlockPlugin extends JavaPlugin
         );
 
         getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, dropsStateProvider));
+        getChunkStoreRegistry().registerSystem(new OneBlockSalvageChanceSystem());
 
         LOGGER.at(Level.INFO).log("Default drop is " + OneBlockDropRegistry.DEFAULT_ITEM_ID);
 

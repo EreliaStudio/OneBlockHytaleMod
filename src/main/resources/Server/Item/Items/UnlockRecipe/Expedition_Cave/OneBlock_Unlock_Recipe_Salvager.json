@@ -1,0 +1,78 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Recipe_Salvager.name",
+    "Description": "server.items.OneBlock_Unlock_Recipe_Salvager.description"
+  },
+  "Id": "OneBlock_Unlock_Recipe_Salvager",
+  "Categories": [
+    "Items.Recipes"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
+  "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
+  "IconProperties": {
+    "Scale": 0.76,
+    "Rotation": [
+      135,
+      135,
+      0
+    ],
+    "Translation": [
+      -1,
+      5
+    ]
+  },
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "ItemId": "Bench_OneBlockSalvager",
+          "Type": "LearnRecipe",
+          "Next": {
+            "Type": "ModifyInventory",
+            "AdjustHeldItemQuantity": -1
+          }
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "ItemId": "Bench_OneBlockSalvager",
+          "Type": "LearnRecipe",
+          "Next": {
+            "Type": "ModifyInventory",
+            "AdjustHeldItemQuantity": -1
+          }
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rubble_Stone",
+        "Quantity": 20
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Upgrader_Expedition_Cave"
+        ],
+        "Id": "OneBlockUpgrader"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/Recipe_Page.png",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "Recipe"
+    ]
+  },
+  "ItemLevel": 1,
+  "MaxStack": 1
+}

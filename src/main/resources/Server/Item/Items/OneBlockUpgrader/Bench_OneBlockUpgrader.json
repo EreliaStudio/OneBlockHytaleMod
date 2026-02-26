@@ -77,7 +77,8 @@
           "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Cave",
           "Recipes": [
             "OneBlock_Unlock_Ore_Copper",
-            "OneBlock_Unlock_Ingredient_Charcoal"
+            "OneBlock_Unlock_Ingredient_Charcoal",
+            "OneBlock_Unlock_Recipe_Salvager"
           ]
         }
       ],
