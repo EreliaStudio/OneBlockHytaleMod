@@ -17,7 +17,9 @@
     }
   },
   "WorldGen": {
-    "Type": "Void"
+    "Type": "Void",
+    "Environment": "Env_Default_Void",
+    "Tint": "#5a992b"
   },
   "WorldMap": {
     "Type": "WorldGen"

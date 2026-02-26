@@ -25,6 +25,8 @@ final class OneBlockWorldBootstrap
 {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
     private static final String VOID_WORLD_GEN = "Void";
+    private static final String VOID_ENVIRONMENT = "Env_Default_Void";
+    private static final String VOID_TINT = "#5a992b";
     private static final String WORLD_NAME = "default";
     private static final String MARKER_FILE = "void-world-ready.marker";
 
@@ -140,6 +142,12 @@ final class OneBlockWorldBootstrap
             root.add("SpawnProvider", spawnProvider);
             root.addProperty("IsSpawnMarkersEnabled", false);
 
+            JsonObject worldGen = getOrCreateObject(root, "WorldGen");
+            worldGen.addProperty("Type", VOID_WORLD_GEN);
+            worldGen.addProperty("Environment", VOID_ENVIRONMENT);
+            worldGen.addProperty("Tint", VOID_TINT);
+            root.add("WorldGen", worldGen);
+
             Files.writeString(configPath, GSON.toJson(root), StandardCharsets.UTF_8);
             LOGGER.at(Level.INFO).log("Created world config at " + configPath);
             return true;
@@ -172,15 +180,41 @@ final class OneBlockWorldBootstrap
             JsonObject root = JsonParser.parseString(content).getAsJsonObject();
             JsonObject worldGen = getOrCreateObject(root, "WorldGen");
             String currentType = worldGen.has("Type") ? worldGen.get("Type").getAsString() : null;
-            if (VOID_WORLD_GEN.equals(currentType))
+            boolean changed = false;
+
+            if (!VOID_WORLD_GEN.equals(currentType))
+            {
+                worldGen.addProperty("Type", VOID_WORLD_GEN);
+                changed = true;
+            }
+
+            String currentEnvironment = worldGen.has("Environment") ? worldGen.get("Environment").getAsString() : null;
+            if (!VOID_ENVIRONMENT.equals(currentEnvironment))
+            {
+                worldGen.addProperty("Environment", VOID_ENVIRONMENT);
+                changed = true;
+            }
+
+            String currentTint = worldGen.has("Tint") ? worldGen.get("Tint").getAsString() : null;
+            if (!VOID_TINT.equalsIgnoreCase(currentTint))
+            {
+                worldGen.addProperty("Tint", VOID_TINT);
+                changed = true;
+            }
+
+            Boolean spawnMarkers = root.has("IsSpawnMarkersEnabled") ? root.get("IsSpawnMarkersEnabled").getAsBoolean() : null;
+            if (spawnMarkers == null || spawnMarkers)
+            {
+                root.addProperty("IsSpawnMarkersEnabled", false);
+                changed = true;
+            }
+
+            if (!changed)
             {
                 return false;
             }
 
-            worldGen.addProperty("Type", VOID_WORLD_GEN);
             root.add("WorldGen", worldGen);
-            root.addProperty("IsSpawnMarkersEnabled", false);
-
             Files.writeString(configPath, GSON.toJson(root), StandardCharsets.UTF_8);
             return true;
         }
