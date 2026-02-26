@@ -28,8 +28,6 @@ items.OneBlock_Block_B3.name = OneBlock Tier VI
 items.OneBlock_Unlock_Soil_Grass.name = Grass Unlock Token
 items.OneBlock_Unlock_Soil_Grass.description = Consume to permanently unlock Soil_Grass in your OneBlock drop pool.
 
-items.OneBlock_Unlock_Rock_Stone_Cobble.name = Cobblestone Unlock Token
-items.OneBlock_Unlock_Rock_Stone_Cobble.description = Consume to permanently unlock Rock_Stone_Cobble in your OneBlock drop pool.
 
 items.OneBlock_Unlock_Wood_Ash_Trunk.name = Ash Trunk Unlock Token
 items.OneBlock_Unlock_Wood_Ash_Trunk.description = Consume to permanently unlock Wood_Ash_Trunk in your OneBlock drop pool.

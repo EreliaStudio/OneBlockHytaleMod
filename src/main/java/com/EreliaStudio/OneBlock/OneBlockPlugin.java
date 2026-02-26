@@ -3,6 +3,7 @@ package com.EreliaStudio.OneBlock;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
+import com.hypixel.hytale.server.core.universe.world.events.AddWorldEvent;
 import com.hypixel.hytale.logger.HytaleLogger;
 
 import javax.annotation.Nonnull;
@@ -32,6 +33,8 @@ public class OneBlockPlugin extends JavaPlugin
     protected void setup()
     {
         LOGGER.at(Level.INFO).log("Setting up...");
+
+        OneBlockWorldBootstrap.ensureVoidDefaultWorldConfig(getDataDirectory());
 
         dropRegistry = new OneBlockDropRegistry();
 
@@ -71,6 +74,17 @@ public class OneBlockPlugin extends JavaPlugin
                 OneBlockActInteraction.CODEC
         );
         LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockActInteraction.INTERACTION_ID);
+
+        getEventRegistry().registerGlobal(AddWorldEvent.class, event ->
+        {
+            var world = event.getWorld();
+            if (!OneBlockWorldInitializer.isDefaultWorld(world))
+            {
+                return;
+            }
+            OneBlockWorldInitializer.initializeWorld(world);
+        });
+        LOGGER.at(Level.INFO).log("Registered OneBlock world initializer");
 
         LOGGER.at(Level.INFO).log("Setup complete!");
     }
