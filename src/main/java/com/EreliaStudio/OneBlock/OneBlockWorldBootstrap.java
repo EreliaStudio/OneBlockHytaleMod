@@ -132,9 +132,9 @@ final class OneBlockWorldBootstrap
             JsonObject spawnProvider = getOrCreateObject(root, "SpawnProvider");
             spawnProvider.addProperty("Id", "Global");
             JsonObject spawnPoint = getOrCreateObject(spawnProvider, "SpawnPoint");
-            spawnPoint.addProperty("X", 0.0);
+            spawnPoint.addProperty("X", 0.5);
             spawnPoint.addProperty("Y", 102.0);
-            spawnPoint.addProperty("Z", 0.0);
+            spawnPoint.addProperty("Z", 0.5);
             spawnPoint.addProperty("Pitch", 0.0);
             spawnPoint.addProperty("Yaw", 0.0);
             spawnPoint.addProperty("Roll", 0.0);

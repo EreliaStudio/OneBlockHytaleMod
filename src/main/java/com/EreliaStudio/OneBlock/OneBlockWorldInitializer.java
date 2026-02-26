@@ -16,7 +16,7 @@ final class OneBlockWorldInitializer
 {
     static final String START_BLOCK_ID = OneBlockExpeditionResolver.blockIdForExpedition(OneBlockExpeditionResolver.DEFAULT_EXPEDITION);
     static final Vector3i ORIGIN_BLOCK = new Vector3i(0, 100, 0);
-    static final Vector3d SPAWN_POS = new Vector3d(0.0, 102.0, 0.0);
+    static final Vector3d SPAWN_POS = new Vector3d(0.5, 102.0, 0.5);
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
     private static final AtomicBoolean ORIGIN_PLACED = new AtomicBoolean(false);
