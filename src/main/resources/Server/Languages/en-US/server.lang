@@ -21,15 +21,15 @@ items.OneBlock_Block_Forest.name = OneBlock Forest
 items.OneBlock_Block_Cave.name = OneBlock Cave
 
 # Unlock consumables
-items.OneBlock_Unlock_Soil_Grass.name = Grass Unlock Token
-items.OneBlock_Unlock_Soil_Grass.description = Consume to permanently unlock Soil_Grass in your OneBlock drop pool.
+items.OneBlock_Unlock_Soil_Grass.name = Unlock Soil Grass
+items.OneBlock_Unlock_Soil_Grass.description = Consume to unlock Grass block to spawn in your OneBlock pool.
 
 
-items.OneBlock_Unlock_Wood_Ash_Trunk.name = Ash Trunk Unlock Token
-items.OneBlock_Unlock_Wood_Ash_Trunk.description = Consume to permanently unlock Wood_Ash_Trunk in your OneBlock drop pool.
+items.OneBlock_Unlock_Wood_Ash_Trunk.name = Unlock Ash Truck
+items.OneBlock_Unlock_Wood_Ash_Trunk.description = Consume to unlock Ash Truck to spawn in your OneBlock pool.
 
-items.OneBlock_Unlock_Ingredient_Stick.name = Stick Unlock Token
-items.OneBlock_Unlock_Ingredient_Stick.description = Consume to permanently unlock Ingredient_Stick in your OneBlock drop pool.
+items.OneBlock_Unlock_Ingredient_Stick.name = Unlock Stick
+items.OneBlock_Unlock_Ingredient_Stick.description = Consume to unlock Stick to spawn in your OneBlock pool.
 
 items.OneBlock_Unlock_Ingredient_Life_Essence.name = Life Essence Unlock Token
 items.OneBlock_Unlock_Ingredient_Life_Essence.description = Consume to permanently unlock Ingredient_Life_Essence in your OneBlock drop pool.
@@ -46,11 +46,11 @@ items.OneBlock_Unlock_Entity_Calf.description = Consume to permanently unlock Ca
 items.OneBlock_Unlock_Entity_Chick.name = Chick Spawn Unlock Token
 items.OneBlock_Unlock_Entity_Chick.description = Consume to permanently unlock Chick as a possible OneBlock drop.
 
-items.OneBlock_Unlock_Ore_Copper.name = Copper Ore Unlock Token
-items.OneBlock_Unlock_Ore_Copper.description = Consume to permanently unlock Ore_Copper in your OneBlock drop pool.
+items.OneBlock_Unlock_Ore_Copper.name = Unlock Copper Ore
+items.OneBlock_Unlock_Ore_Copper.description = Consume to unlock Copper ore in your OneBlock pool.
 
-items.OneBlock_Unlock_Ingredient_Charcoal.name = Charcoal Unlock Token
-items.OneBlock_Unlock_Ingredient_Charcoal.description = Consume to permanently unlock Ingredient_Charcoal in your OneBlock drop pool.
+items.OneBlock_Unlock_Ingredient_Charcoal.name = Unlock Charcoal
+items.OneBlock_Unlock_Ingredient_Charcoal.description = Consume to unlock Charcoal in your OneBlock pool.
 
 items.OneBlock_Unlock_Recipe_Salvager.name = Salvager Recipe
 items.OneBlock_Unlock_Recipe_Salvager.description = Consume to learn how to craft the OneBlock Salvager.
@@ -66,3 +66,44 @@ items.OneBlock_Expedition_Cave_Key.name = Expedition Key - Cave
 items.OneBlock_Expedition_Cave_Key.description = Use this on a OneBlock to set its expedition to Cave.
 
 # Interaction hint
+items.OneBlock_Unlock_Exchange_Ingredient_Life_Essence.name = Unlock Exchange - Ingredient_Life_Essence
+items.OneBlock_Unlock_Exchange_Ingredient_Life_Essence.description = Consume to unlock the Ingredient_Life_Essence exchange.
+items.OneBlock_Exchange_Ingredient_Life_Essence.name = OneBlock_Exchange_Ingredient_Life_Essence
+items.OneBlock_Exchange_Ingredient_Life_Essence.description = OneBlock_Exchange_Ingredient_Life_Essence
+items.OneBlock_Unlock_Exchange_Soil_Grass.name = Unlock Exchange - Soil_Grass
+items.OneBlock_Unlock_Exchange_Soil_Grass.description = Consume to unlock the Soil_Grass exchange.
+items.OneBlock_Exchange_Soil_Grass.name = OneBlock_Exchange_Soil_Grass
+items.OneBlock_Exchange_Soil_Grass.description = OneBlock_Exchange_Soil_Grass
+items.OneBlock_Expedition_FarmLand_Key.name = Expedition Key - FarmLand
+items.OneBlock_Expedition_FarmLand_Key.description = Use this on a OneBlock to set its expedition to Cave.
+items.OneBlock_Unlock_Entity_Pig.name = Unlock Pig
+items.OneBlock_Unlock_Entity_Pig.description = Consume to allow Pig to spawn in your OneBlock pool.
+items.OneBlock_Unlock_Entity_Cow.name = Unlock Cow
+items.OneBlock_Unlock_Entity_Cow.description = Consume to allow Cow to spawn in your OneBlock pool.
+benchCategories.OneBlockUpgrader_Expedition_FarmLand = Expedition - FarmLand
+items.OneBlock_Unlock_Plant_Fruit_Apple.name = Unlock Soil Grass
+items.OneBlock_Unlock_Plant_Fruit_Apple.description = Consume to unlock Apple in your OneBlock pool.
+items.OneBlock_Recipe_Rock_Stone_Mossy.name = Unlock Mossy stone
+items.OneBlock_Recipe_Rock_Stone_Mossy.description = Consume to unlock Mossy stone in your OneBlock pool.
+items.OneBlock_Unlock_Ore_Iron.name = Unlock Iron Ore
+items.OneBlock_Unlock_Ore_Iron.description = Consume to unlock Iron ore in your OneBlock pool.
+items.OneBlock_Recipe_Cracked_Basalt.name = Unlock Cracked basalt
+items.OneBlock_Recipe_Cracked_Basalt.description = Consume to unlock Cracked basalt in your OneBlock pool.
+items.OneBlock_Recipe_Rock_Basalt_Cobble.name = Unlock Basalt cobble
+items.OneBlock_Recipe_Rock_Basalt_Cobble.description = Consume to unlock Basalt cobble in your OneBlock pool.
+items.OneBlock_Expedition_Deep Cave_Key.name = Expedition Key - Deep Cave
+items.OneBlock_Expedition_Deep Cave_Key.description = Use this on a OneBlock to set its expedition to Deep Cave.
+items.OneBlock_Unlock_Ore_Thorium.name = Unlock Thorium Ore
+items.OneBlock_Unlock_Ore_Thorium.description = Consume to unlock Thorium ore in your OneBlock pool.
+items.OneBlock_Unlock_Ore_Cobalt.name = Unlock Cobalt Ore
+items.OneBlock_Unlock_Ore_Cobalt.description = Consume to unlock Cobalt ore in your OneBlock pool.
+benchCategories.OneBlockUpgrader_Expedition_Deep Cave = Expedition - Deep Cave
+items.OneBlock_Recipe_Rock_Slate_Cobble.name = Unlock Slate cobble
+items.OneBlock_Recipe_Rock_Slate_Cobble.description = Consume to unlock Slate cobble in your OneBlock pool.
+items.OneBlock_Expedition_The Abyss_Key.name = Expedition Key - The Abyss
+items.OneBlock_Expedition_The Abyss_Key.description = Use this on a OneBlock to set its expedition to The Abyss.
+items.OneBlock_Unlock_Ore_Adamantite.name = Unlock Adamantite Ore
+items.OneBlock_Unlock_Ore_Adamantite.description = Consume to unlock Adamantite ore in your OneBlock pool.
+items.OneBlock_Unlock_Ore_Mithril.name = Unlock Mithril Ore
+items.OneBlock_Unlock_Ore_Mithril.description = Consume to unlock Mithril ore in your OneBlock pool.
+benchCategories.OneBlockUpgrader_Expedition_The Abyss = Expedition - The Abyss

@@ -41,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Wood_Ash_Trunk",
-        "Quantity": 20
+        "ItemId": "Wood_Beech_Trunk",
+        "Quantity": 32
       }
     ],
     "OutputQuantity": 1,
@@ -62,16 +62,17 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Ingredient_Charcoal"
-    ],
     "OneBlockUnlockExpedition": [
       "Cave"
     ],
     "OneBlockUnlockWeight": [
-      "3"
+      "10"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Charcoal"
     ]
   },
   "ItemLevel": 1,
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Uncommon"
 }

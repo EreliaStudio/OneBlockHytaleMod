@@ -3,6 +3,7 @@ package com.EreliaStudio.OneBlock;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
@@ -12,7 +13,11 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 import java.util.UUID;
 
 public final class OneBlockCommand extends AbstractTargetPlayerCommand
@@ -28,12 +33,14 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         // /oneblock unlock Soil_Sand --player Bob
         // /oneblock lock Soil_Sand --player Bob
         // /oneblock status Soil_Sand --player Bob
+        // /oneblock list --player Bob
         //
         // Also accepts: oneblock.unlock.Soil_Sand.name (will map to Soil_Sand)
-        this.actionArg = this.withRequiredArg("action", "unlock|lock|status|consume", ArgTypes.STRING);
+        this.actionArg = this.withRequiredArg("action", "unlock|lock|status|consume|list", ArgTypes.STRING);
         this.idArg = this.withRequiredArg(
                 "id",
-                "Drop id (ex: Soil_Grass or entity:Sheep) or consumable item id (ex: OneBlock_Unlock_Soil_Grass)",
+                "Drop id (ex: Soil_Grass or entity:Sheep) or consumable item id (ex: OneBlock_Unlock_Soil_Grass). "
+                        + "Ignored for list.",
                 ArgTypes.STRING
         );
     }
@@ -48,6 +55,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
     {
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
         OneBlockDropsStateProvider provider = plugin.getDropsStateProvider();
+        OneBlockDropRegistry dropRegistry = plugin.getDropRegistry();
 
         String action = safeLower(actionArg.get(ctx));
         String rawId = idArg.get(ctx);
@@ -57,6 +65,11 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         if ("consume".equals(action))
         {
             handleConsume(ctx, plugin.getUnlockService(), targetPlayerRef, targetId, rawId);
+            return;
+        }
+        if ("list".equals(action))
+        {
+            handleList(ctx, provider, dropRegistry, targetPlayerRef, world);
             return;
         }
 
@@ -177,6 +190,107 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
             default:
                 ctx.sendMessage(Message.raw("Failed to consume unlock item: " + consumableItemId));
         }
+    }
+
+    private static void handleList(CommandContext ctx,
+                                   OneBlockDropsStateProvider provider,
+                                   OneBlockDropRegistry dropRegistry,
+                                   PlayerRef targetPlayerRef,
+                                   World world)
+    {
+        if (provider == null || dropRegistry == null || targetPlayerRef == null)
+        {
+            ctx.sendMessage(Message.raw("List failed: missing services."));
+            return;
+        }
+
+        String expeditionId = resolveActiveExpedition(world);
+
+        Set<String> unlockedSet = new HashSet<>(provider.getUnlockedDrops(targetPlayerRef.getUuid(), expeditionId));
+        List<String> knownDrops = dropRegistry.getKnownDrops(expeditionId);
+        if (knownDrops.isEmpty())
+        {
+            knownDrops = new ArrayList<>(unlockedSet);
+            knownDrops.sort(String::compareToIgnoreCase);
+        }
+
+        List<String> unlockedDrops = new ArrayList<>();
+        List<String> lockedDrops = new ArrayList<>();
+        List<String> unlockedExchanges = new ArrayList<>();
+        List<String> lockedExchanges = new ArrayList<>();
+
+        for (String dropId : knownDrops)
+        {
+            if (dropId == null || dropId.isEmpty())
+            {
+                continue;
+            }
+
+            boolean isExchange = OneBlockExchangeService.isExchangeUnlockId(dropId);
+            boolean unlocked = unlockedSet.contains(dropId)
+                    || OneBlockExpeditionDefaults.isDefaultDrop(expeditionId, dropId);
+
+            if (isExchange)
+            {
+                if (unlocked)
+                {
+                    unlockedExchanges.add(dropId);
+                }
+                else
+                {
+                    lockedExchanges.add(dropId);
+                }
+                continue;
+            }
+
+            if (unlocked)
+            {
+                unlockedDrops.add(dropId);
+            }
+            else
+            {
+                lockedDrops.add(dropId);
+            }
+        }
+
+        ctx.sendMessage(Message.raw("OneBlock expedition for " + targetPlayerRef.getUsername() + ": " + expeditionId));
+        ctx.sendMessage(Message.raw("Unlocked drops (" + unlockedDrops.size() + "): " + joinOrDash(unlockedDrops)));
+        ctx.sendMessage(Message.raw("Locked drops (" + lockedDrops.size() + "): " + joinOrDash(lockedDrops)));
+        if (!unlockedExchanges.isEmpty() || !lockedExchanges.isEmpty())
+        {
+            ctx.sendMessage(Message.raw("Unlocked exchanges (" + unlockedExchanges.size() + "): " + joinOrDash(unlockedExchanges)));
+            ctx.sendMessage(Message.raw("Locked exchanges (" + lockedExchanges.size() + "): " + joinOrDash(lockedExchanges)));
+        }
+    }
+
+    private static String resolveActiveExpedition(World world)
+    {
+        if (world == null)
+        {
+            return OneBlockExpeditionResolver.DEFAULT_EXPEDITION;
+        }
+
+        BlockType blockType = world.getBlockType(
+                OneBlockWorldInitializer.ORIGIN_BLOCK.getX(),
+                OneBlockWorldInitializer.ORIGIN_BLOCK.getY(),
+                OneBlockWorldInitializer.ORIGIN_BLOCK.getZ()
+        );
+
+        if (!OneBlockBlockUtil.isOneBlock(blockType))
+        {
+            return OneBlockExpeditionResolver.DEFAULT_EXPEDITION;
+        }
+
+        return OneBlockExpeditionResolver.expeditionFromBlockType(blockType);
+    }
+
+    private static String joinOrDash(List<String> values)
+    {
+        if (values == null || values.isEmpty())
+        {
+            return "-";
+        }
+        return String.join(", ", values);
     }
 
     private static String safeLower(String s)

@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Recipe_Salvager.name",
-    "Description": "server.items.OneBlock_Unlock_Recipe_Salvager.description"
+    "Name": "server.items.OneBlock_Exchange_Soil_Grass.name",
+    "Description": "server.items.OneBlock_Exchange_Soil_Grass.description"
   },
-  "Id": "OneBlock_Unlock_Recipe_Salvager",
+  "Id": "OneBlock_Exchange_Soil_Grass",
   "Categories": [
     "Items.Recipes"
   ],
@@ -26,24 +26,14 @@
     "Primary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_exchange"
         }
       ]
     },
     "Secondary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_exchange"
         }
       ]
     }
@@ -51,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rubble_Stone",
-        "Quantity": 20
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,
@@ -60,17 +50,29 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Cave"
+          "OneBlock_Upgrader_Expedition_Meadow"
         ],
         "Id": "OneBlockUpgrader"
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/Recipe_Page.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Consumable": true,
   "Tags": {
     "Type": [
-      "Recipe"
+      "OneBlock_Exchange_Consumable"
+    ],
+    "OneBlockExchangeOutputId": [
+      "Soil_Grass"
+    ],
+    "OneBlockExchangeOutputQuantity": [
+      "1"
+    ],
+    "OneBlockExchangeExpedition": [
+      "Meadow"
+    ],
+    "OneBlockExchangeUnlockId": [
+      "Exchange:Soil_Grass"
     ]
   },
   "ItemLevel": 1,

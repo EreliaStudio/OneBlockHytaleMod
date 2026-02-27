@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Expedition_Meadow_Key.name",
-    "Description": "server.items.OneBlock_Expedition_Meadow_Key.description"
+    "Name": "server.items.OneBlock_Expedition_FarmLand_Key.name",
+    "Description": "server.items.OneBlock_Expedition_FarmLand_Key.description"
   },
-  "Id": "OneBlock_Expedition_Meadow_Key",
+  "Id": "OneBlock_Expedition_FarmLand_Key",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
@@ -34,8 +34,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 1
+        "ItemId": "Plant_Crop_Carrot_Item",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Plant_Crop_Wheat_Item",
+        "Quantity": 32
       }
     ],
     "OutputQuantity": 1,
@@ -43,7 +47,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Meadow"
+          "OneBlock_Upgrader_Expedition_FarmLand"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -55,7 +59,7 @@
       "OneBlock_Expedition"
     ],
     "OneBlockExpeditionTargetBlockId": [
-      "OneBlock_Block_Meadow"
+      "OneBlock_Block_FarmLand"
     ]
   },
   "MaxStack": 1,

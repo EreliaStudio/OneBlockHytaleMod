@@ -41,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rock_Stone_Cobble",
-        "Quantity": 20
+        "ItemId": "Rubble_Stone",
+        "Quantity": 32
       }
     ],
     "OutputQuantity": 1,
@@ -62,16 +62,17 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Ore_Copper"
-    ],
     "OneBlockUnlockExpedition": [
       "Cave"
     ],
     "OneBlockUnlockWeight": [
-      "3"
+      "10"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Copper"
     ]
   },
   "ItemLevel": 1,
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Uncommon"
 }

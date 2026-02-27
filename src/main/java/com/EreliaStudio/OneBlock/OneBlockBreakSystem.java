@@ -66,6 +66,7 @@ public class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlo
 
         String expeditionId = OneBlockExpeditionResolver.expeditionFromBlockType(event.getBlockType());
         List<String> unlockedDrops = stateProvider.getUnlockedDrops(playerId, expeditionId);
+        unlockedDrops.removeIf(OneBlockExchangeService::isExchangeUnlockId);
         String rewardId = dropRegistry.pickReward(expeditionId, unlockedDrops);
         if (rewardId == null || rewardId.isEmpty())
         {

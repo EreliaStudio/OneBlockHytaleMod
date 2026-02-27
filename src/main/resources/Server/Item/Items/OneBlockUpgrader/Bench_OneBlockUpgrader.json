@@ -51,14 +51,23 @@
           "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Meadow",
           "Recipes": [
             "OneBlock_Expedition_Meadow_Key",
-            "OneBlock_Expedition_Forest_Key",
             "OneBlock_Unlock_Soil_Grass",
-            "OneBlock_Unlock_Wood_Ash_Trunk",
             "OneBlock_Unlock_Ingredient_Stick",
-            "OneBlock_Unlock_Entity_Piglet",
-            "OneBlock_Unlock_Entity_Boar_Piglet",
-            "OneBlock_Unlock_Entity_Calf",
-            "OneBlock_Unlock_Entity_Chick"
+            "OneBlock_Unlock_Wood_Ash_Trunk",
+            "OneBlock_Unlock_Exchange_Ingredient_Life_Essence",
+            "OneBlock_Exchange_Ingredient_Life_Essence",
+            "OneBlock_Unlock_Exchange_Soil_Grass",
+            "OneBlock_Exchange_Soil_Grass"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Expedition_FarmLand",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Expedition_FarmLand",
+          "Recipes": [
+            "OneBlock_Expedition_FarmLand_Key",
+            "OneBlock_Unlock_Entity_Pig",
+            "OneBlock_Unlock_Entity_Cow"
           ]
         },
         {
@@ -66,9 +75,8 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Forest",
           "Recipes": [
-            "OneBlock_Expedition_Cave_Key",
-            "Ingredient_Life_Essence",
-            "OneBlock_Unlock_Ingredient_Life_Essence"
+            "OneBlock_Expedition_Forest_Key",
+            "OneBlock_Unlock_Plant_Fruit_Apple"
           ]
         },
         {
@@ -76,9 +84,30 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Cave",
           "Recipes": [
-            "OneBlock_Unlock_Ore_Copper",
+            "OneBlock_Expedition_Cave_Key",
             "OneBlock_Unlock_Ingredient_Charcoal",
-            "OneBlock_Unlock_Recipe_Salvager"
+            "OneBlock_Unlock_Ore_Copper",
+            "OneBlock_Unlock_Ore_Iron"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Expedition_Deep Cave",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Deep Cave",
+          "Recipes": [
+            "OneBlock_Expedition_Deep Cave_Key",
+            "OneBlock_Unlock_Ore_Thorium",
+            "OneBlock_Unlock_Ore_Cobalt"
+          ]
+        },
+        {
+          "Id": "OneBlock_Upgrader_Expedition_The Abyss",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockUpgrader_Expedition_The Abyss",
+          "Recipes": [
+            "OneBlock_Expedition_The Abyss_Key",
+            "OneBlock_Unlock_Ore_Adamantite",
+            "OneBlock_Unlock_Ore_Mithril"
           ]
         }
       ],

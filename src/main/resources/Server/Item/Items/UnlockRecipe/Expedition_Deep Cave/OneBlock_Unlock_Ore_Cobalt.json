@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Recipe_Salvager.name",
-    "Description": "server.items.OneBlock_Unlock_Recipe_Salvager.description"
+    "Name": "server.items.OneBlock_Unlock_Ore_Cobalt.name",
+    "Description": "server.items.OneBlock_Unlock_Ore_Cobalt.description"
   },
-  "Id": "OneBlock_Unlock_Recipe_Salvager",
+  "Id": "OneBlock_Unlock_Ore_Cobalt",
   "Categories": [
     "Items.Recipes"
   ],
@@ -26,24 +26,14 @@
     "Primary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_unlock_pool_insert"
         }
       ]
     },
     "Secondary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_unlock_pool_insert"
         }
       ]
     }
@@ -51,8 +41,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rubble_Stone",
-        "Quantity": 20
+        "ItemId": "Ingredient_Bar_Thorium",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Tool_Pickaxe_Thorium",
+        "Quantity": 1
       }
     ],
     "OutputQuantity": 1,
@@ -60,17 +54,26 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Cave"
+          "OneBlock_Upgrader_Expedition_Deep Cave"
         ],
         "Id": "OneBlockUpgrader"
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/Recipe_Page.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Consumable": true,
   "Tags": {
     "Type": [
-      "Recipe"
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep Cave"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Cobalt"
     ]
   },
   "ItemLevel": 1,

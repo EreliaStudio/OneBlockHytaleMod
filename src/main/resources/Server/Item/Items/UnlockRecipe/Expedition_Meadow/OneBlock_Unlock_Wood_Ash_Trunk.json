@@ -41,12 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 4
-      },
-      {
-        "ItemId": "Soil_Grass",
-        "Quantity": 2
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 16
       }
     ],
     "OutputQuantity": 1,
@@ -66,16 +62,17 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Wood_Ash_Trunk"
-    ],
     "OneBlockUnlockExpedition": [
       "Meadow"
     ],
     "OneBlockUnlockWeight": [
       "10"
+    ],
+    "OneBlockUnlockDropId": [
+      "Wood_Ash_Trunk"
     ]
   },
   "ItemLevel": 1,
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Uncommon"
 }

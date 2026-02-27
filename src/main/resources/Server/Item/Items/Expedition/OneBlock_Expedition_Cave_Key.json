@@ -34,16 +34,16 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Food_Wildmeat_Cooked",
-        "Quantity": 10
-      },
-      {
-        "ItemId": "Weapon_Sword_Crude",
-        "Quantity": 1
+        "ItemId": "Rock_Stone",
+        "Quantity": 32
       },
       {
         "ItemId": "Furniture_Crude_Torch",
         "Quantity": 10
+      },
+      {
+        "ItemId": "Tool_Pickaxe_Crude",
+        "Quantity": 1
       }
     ],
     "OutputQuantity": 1,
@@ -51,7 +51,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Forest"
+          "OneBlock_Upgrader_Expedition_Cave"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -66,5 +66,6 @@
       "OneBlock_Block_Cave"
     ]
   },
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Epic"
 }

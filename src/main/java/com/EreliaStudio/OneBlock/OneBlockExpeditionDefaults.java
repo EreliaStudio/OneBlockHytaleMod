@@ -29,29 +29,52 @@ public final class OneBlockExpeditionDefaults
         Map<String, List<DropDefinition>> defaults = new HashMap<>();
 
         defaults.put("Meadow", List.of(
-                drop("Wood_Ash_Trunk", 10),
-                drop("Rock_Stone_Cobble", 10),
-                drop("Ingredient_Fibre", 3),
-                drop("Rubble_Stone", 3),
-                drop("Soil_Grass", 5),
-                drop("Ingredient_Stick", 3)
+                drop("Ingredient_Fibre", 20),
+                drop("Rock_Stone", 10),
+                drop("Rubble_Stone", 20)
+        ));
+
+        defaults.put("FarmLand", List.of(
+                drop("Ingredient_Fibre", 30)
         ));
 
         defaults.put("Forest", List.of(
-                drop("Wood_Ash_Trunk", 15),
-                drop("Rock_Stone_Cobble", 15),
-                drop("Ingredient_Fibre", 3),
-                drop("Rubble_Stone", 3),
-                drop("Soil_Grass", 7),
-                drop("Ingredient_Stick", 3)
+                drop("Wood_Ash_Trunk", 20),
+                drop(OneBlockDropId.entityDropId("Boar"), 2),
+                drop(OneBlockDropId.entityDropId("Boar_Piglet"), 2)
         ));
 
         defaults.put("Cave", List.of(
-                drop("Rock_Stone_Cobble", 15),
-                drop("Rubble_Stone", 10),
+                drop("Rock_Stone", 30),
+                drop("Rubble_Stone", 15),
+                drop("OneBlock_Recipe_Rock_Stone_Mossy", 1),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Thief"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2)
+        ));
+
+        defaults.put("Deep Cave", List.of(
+                drop("Rock_Basalt", 30),
+                drop("Rubble_Basalt", 15),
+                drop("Ore_Iron", 10),
+                drop("OneBlock_Recipe_Cracked_Basalt", 1),
+                drop("OneBlock_Recipe_Rock_Basalt_Cobble", 1),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Spider"), 3),
+                drop(OneBlockDropId.entityDropId("Goblin_Thief"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Void_Crawler"), 4)
+        ));
+
+        defaults.put("The Abyss", List.of(
+                drop("Rock_Slate", 30),
+                drop("Rubble_Slate", 15),
+                drop("Ore_Cobalt", 10),
+                drop("OneBlock_Recipe_Rock_Slate_Cobble", 1),
+                drop(OneBlockDropId.entityDropId("Spider"), 6),
                 drop(OneBlockDropId.entityDropId("Zombie"), 6),
-                drop(OneBlockDropId.entityDropId("Skeleton"), 6),
-                drop(OneBlockDropId.entityDropId("Crawler_Void"), 2)
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2),
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2)
         ));
 
         DEFAULTS = Collections.unmodifiableMap(defaults);

@@ -1,0 +1,373 @@
+{
+  "Meadow": {
+    "KeyCraft": {
+      "Name": "Expedition Key - Meadow",
+      "Description": "Use this on a OneBlock to set its expedition to Meadow.",
+      "Craft": [
+        { "ID": "Ingredient_Fibre", "Quantity": 1 }
+      ]
+    },
+	"BaseDropPool":[
+		{
+			"ID":"Ingredient_Fibre",
+			"Weight":20
+		},
+		{
+			"ID":"Rock_Stone",
+			"Weight":10
+		},
+		{
+			"ID":"Rubble_Stone",
+			"Weight":20
+		}
+	],
+    "Unlockable": [
+      {
+        "ID": "Soil_Grass",
+        "Name": "Unlock Soil Grass",
+        "Description": "Consume to unlock Grass block to spawn in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Ingredient_Fibre", "Quantity": 32 }
+        ]
+      },
+      {
+        "ID": "Ingredient_Stick",
+        "Name": "Unlock Stick",
+        "Description": "Consume to unlock Stick to spawn in your OneBlock pool.",
+        "Weight": 20,
+        "Craft": [
+          { "ID": "Ingredient_Fibre", "Quantity": 32 }
+        ]
+      },
+      {
+        "ID": "Wood_Ash_Trunk",
+        "Name": "Unlock Ash Truck",
+        "Description": "Consume to unlock Ash Truck to spawn in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Ingredient_Stick", "Quantity": 16 }
+        ]
+      },
+	  {
+		"ID":"Exchange:Ingredient_Life_Essence",
+		"UnlockCost":[
+			{ "ID": "Ingredient_Fibre", "Quantity": 32 }
+		],
+		"Craft":[
+			{ "ID": "Ingredient_Fibre", "Quantity": 10 }
+		],
+		"Output":{
+			"ID": "Ingredient_Life_Essence",
+			"Quantity":1
+		}
+	  },
+	  {
+		"ID":"Exchange:Soil_Grass",
+		"UnlockCost":[
+			{ "ID": "Ingredient_Fibre", "Quantity": 32 }
+		],
+		"Craft":[
+			{ "ID": "Ingredient_Fibre", "Quantity": 10 }
+		],
+		"Output":{
+			"ID": "Soil_Grass",
+			"Quantity":1
+		}
+	  }
+    ]
+  },
+  "FarmLand": {
+    "KeyCraft": {
+      "Name": "Expedition Key - FarmLand",
+      "Description": "Use this on a OneBlock to set its expedition to Cave.",
+      "Craft": [
+        { "ID": "Plant_Crop_Carrot_Item", "Quantity": 32 },
+        { "ID": "Plant_Crop_Wheat_Item", "Quantity": 32 }
+      ]
+    },
+	"BaseDropPool":[
+		{
+			"ID":"Ingredient_Fibre",
+			"Weight":30
+		}
+	],
+    "Unlockable": [
+      {
+        "ID": "entity:Pig",
+        "Name": "Unlock Pig",
+        "Description": "Consume to allow Pig to spawn in your OneBlock pool.",
+        "Weight": 2,
+        "Craft": [
+          { "ID": "Plant_Crop_Carrot_Item", "Quantity": 32 }
+        ]
+      },
+      {
+        "ID": "entity:Cow",
+        "Name": "Unlock Cow",
+        "Description": "Consume to allow Cow to spawn in your OneBlock pool.",
+        "Weight": 2,
+        "Craft": [
+          { "ID": "Plant_Crop_Wheat_Item", "Quantity": 32 }
+        ]
+      }
+    ]
+  },
+  "Forest": {
+    "KeyCraft": {
+      "Name": "Expedition Key - Forest",
+      "Description": "Use this on a OneBlock to set its expedition to Forest.",
+      "Craft": [
+        { "ID": "Wood_Ash_Trunk", "Quantity": 32 }
+      ]
+    },
+	"BaseDropPool":[
+		{
+			"ID":"Wood_Ash_Trunk",
+			"Weight":20
+		},
+		{
+			"ID":"entity:Boar",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Boar_Piglet",
+			"Weight":2
+		}
+	],
+    "Unlockable": [
+      {
+        "ID": "Plant_Fruit_Apple",
+        "Name": "Unlock Soil Grass",
+        "Description": "Consume to unlock Apple in your OneBlock pool.",
+        "Weight": 1,
+        "Craft": [
+          { "ID": "Wood_Ash_Trunk", "Quantity": 16 },
+          { "ID": "Ingredient_Fibre", "Quantity": 16 },
+          { "ID": "Ingredient_Stick", "Quantity": 16 }
+        ]
+      }
+    ]
+  },
+  "Cave": {
+    "KeyCraft": {
+      "Name": "Expedition Key - Cave",
+      "Description": "Use this on a OneBlock to set its expedition to Cave.",
+      "Craft": [
+        { "ID": "Rock_Stone", "Quantity": 32 },
+        { "ID": "Furniture_Crude_Torch", "Quantity": 10 },
+        { "ID": "Tool_Pickaxe_Crude", "Quantity": 1 }
+      ]
+    },
+	"BaseDropPool":[
+		{
+			"ID":"Rock_Stone",
+			"Weight":30
+		},
+		{
+			"ID":"Rubble_Stone",
+			"Weight":15
+		},
+		{
+			"ID": "recipe:Rock_Stone_Mossy",
+			"Name": "Unlock Mossy stone",
+			"Description": "Consume to unlock Mossy stone in your OneBlock pool.",
+			"Weight": 1
+		},
+		{
+			"ID":"entity:Goblin_Miner",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Goblin_Thief",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Goblin_Scrapper",
+			"Weight":2
+		}
+	],
+    "Unlockable": [
+      {
+        "ID": "Ingredient_Charcoal",
+        "Name": "Unlock Charcoal",
+        "Description": "Consume to unlock Charcoal in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Wood_Beech_Trunk", "Quantity": 32 }
+        ]
+      },
+      {
+        "ID": "Ore_Copper",
+        "Name": "Unlock Copper Ore",
+        "Description": "Consume to unlock Copper ore in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Rubble_Stone", "Quantity": 32 }
+        ]
+      },
+      {
+        "ID": "Ore_Iron",
+        "Name": "Unlock Iron Ore",
+        "Description": "Consume to unlock Iron ore in your OneBlock pool.",
+        "Weight": 5,
+        "Craft": [
+          { "ID": "Ingredient_Bar_Copper", "Quantity": 32 },
+			{ "ID": "Tool_Pickaxe_Copper", "Quantity": 1 }
+        ]
+      }
+    ]
+  },
+  "Deep Cave": {
+    "KeyCraft": {
+      "Name": "Expedition Key - Deep Cave",
+      "Description": "Use this on a OneBlock to set its expedition to Deep Cave.",
+      "Craft": [
+        { "ID": "Armor_Iron_Head", "Quantity": 1 },
+        { "ID": "Armor_Iron_Chest", "Quantity": 1 },
+        { "ID": "Armor_Iron_Hands", "Quantity": 1 },
+        { "ID": "Armor_Iron_Legs", "Quantity": 1 },
+        { "ID": "Tool_Pickaxe_Iron", "Quantity": 1 }
+      ]
+    },
+	"BaseDropPool":[
+		{
+			"ID":"Rock_Basalt",
+			"Weight":30
+		},
+		{
+			"ID":"Rubble_Basalt",
+			"Weight":15
+		},
+		{
+			"ID":"Ore_Iron",
+			"Weight":10
+		},
+		{
+			"ID": "recipe:Cracked_Basalt",
+			"Name": "Unlock Cracked basalt",
+			"Description": "Consume to unlock Cracked basalt in your OneBlock pool.",
+			"Weight": 1
+		},
+		{
+			"ID": "recipe:Rock_Basalt_Cobble",
+			"Name": "Unlock Basalt cobble",
+			"Description": "Consume to unlock Basalt cobble in your OneBlock pool.",
+			"Weight": 1
+		},
+		{
+			"ID":"entity:Goblin_Miner",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Spider",
+			"Weight":3
+		},
+		{
+			"ID":"entity:Goblin_Thief",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Goblin_Scrapper",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Void_Crawler",
+			"Weight":4
+		}
+	],
+    "Unlockable": [
+      {
+        "ID": "Ore_Thorium",
+        "Name": "Unlock Thorium Ore",
+        "Description": "Consume to unlock Thorium ore in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Ingredient_Bar_Iron", "Quantity": 32 },
+			{ "ID": "Tool_Pickaxe_Iron", "Quantity": 1 }
+        ]
+      },
+      {
+        "ID": "Ore_Cobalt",
+        "Name": "Unlock Cobalt Ore",
+        "Description": "Consume to unlock Cobalt ore in your OneBlock pool.",
+        "Weight": 5,
+        "Craft": [
+          { "ID": "Ingredient_Bar_Thorium", "Quantity": 32 },
+			{ "ID": "Tool_Pickaxe_Thorium", "Quantity": 1 }
+        ]
+      }
+    ]
+  },
+  "The Abyss": {
+    "KeyCraft": {
+      "Name": "Expedition Key - The Abyss",
+      "Description": "Use this on a OneBlock to set its expedition to The Abyss.",
+      "Craft": [
+        { "ID": "Armor_Cobalt_Head", "Quantity": 1 },
+        { "ID": "Armor_Cobalt_Chest", "Quantity": 1 },
+        { "ID": "Armor_Cobalt_Hands", "Quantity": 1 },
+        { "ID": "Armor_Cobalt_Legs", "Quantity": 1 },
+        { "ID": "Tool_Pickaxe_Cobalt", "Quantity": 1 }
+      ]
+    },
+	"BaseDropPool":[
+		{
+			"ID":"Rock_Slate",
+			"Weight":30
+		},
+		{
+			"ID":"Rubble_Slate",
+			"Weight":15
+		},
+		{
+			"ID":"Ore_Cobalt",
+			"Weight":10
+		},
+		{
+			"ID": "recipe:Rock_Slate_Cobble",
+			"Name": "Unlock Slate cobble",
+			"Description": "Consume to unlock Slate cobble in your OneBlock pool.",
+			"Weight": 1
+		},
+		{
+			"ID":"entity:Spider",
+			"Weight":6
+		},
+		{
+			"ID":"entity:Zombie",
+			"Weight":6
+		},
+		{
+			"ID":"entity:Earth_Elemental",
+			"Weight":2
+		},
+		{
+			"ID":"entity:Earth_Elemental",
+			"Weight":2
+		}
+	],
+    "Unlockable": [
+      {
+        "ID": "Ore_Adamantite",
+        "Name": "Unlock Adamantite Ore",
+        "Description": "Consume to unlock Adamantite ore in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Ingredient_Bar_Cobalt", "Quantity": 32 },
+			{ "ID": "Tool_Pickaxe_Cobalt", "Quantity": 1 }
+        ]
+      },
+      {
+        "ID": "Ore_Mithril",
+        "Name": "Unlock Mithril Ore",
+        "Description": "Consume to unlock Mithril ore in your OneBlock pool.",
+        "Weight": 5,
+        "Craft": [
+          { "ID": "Ingredient_Bar_Adamantite", "Quantity": 32 },
+			{ "ID": "Tool_Pickaxe_Adamantite", "Quantity": 1 }
+        ]
+      }
+    ]
+  }
+}

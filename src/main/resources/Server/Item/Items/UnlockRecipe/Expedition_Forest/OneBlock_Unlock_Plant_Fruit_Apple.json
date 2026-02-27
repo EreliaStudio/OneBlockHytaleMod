@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Recipe_Salvager.name",
-    "Description": "server.items.OneBlock_Unlock_Recipe_Salvager.description"
+    "Name": "server.items.OneBlock_Unlock_Plant_Fruit_Apple.name",
+    "Description": "server.items.OneBlock_Unlock_Plant_Fruit_Apple.description"
   },
-  "Id": "OneBlock_Unlock_Recipe_Salvager",
+  "Id": "OneBlock_Unlock_Plant_Fruit_Apple",
   "Categories": [
     "Items.Recipes"
   ],
@@ -26,24 +26,14 @@
     "Primary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_unlock_pool_insert"
         }
       ]
     },
     "Secondary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_unlock_pool_insert"
         }
       ]
     }
@@ -51,8 +41,16 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rubble_Stone",
-        "Quantity": 20
+        "ItemId": "Wood_Ash_Trunk",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 16
       }
     ],
     "OutputQuantity": 1,
@@ -60,17 +58,26 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Cave"
+          "OneBlock_Upgrader_Expedition_Forest"
         ],
         "Id": "OneBlockUpgrader"
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/Recipe_Page.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Consumable": true,
   "Tags": {
     "Type": [
-      "Recipe"
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Forest"
+    ],
+    "OneBlockUnlockWeight": [
+      "1"
+    ],
+    "OneBlockUnlockDropId": [
+      "Plant_Fruit_Apple"
     ]
   },
   "ItemLevel": 1,

@@ -34,16 +34,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Tool_Pickaxe_Crude",
-        "Quantity": 1
-      },
-      {
-        "ItemId": "Tool_Hammer_Crude",
-        "Quantity": 1
-      },
-      {
-        "ItemId": "Tool_Hatchet_Crude",
-        "Quantity": 1
+        "ItemId": "Wood_Ash_Trunk",
+        "Quantity": 32
       }
     ],
     "OutputQuantity": 1,
@@ -51,7 +43,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Meadow"
+          "OneBlock_Upgrader_Expedition_Forest"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -66,5 +58,6 @@
       "OneBlock_Block_Forest"
     ]
   },
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Epic"
 }

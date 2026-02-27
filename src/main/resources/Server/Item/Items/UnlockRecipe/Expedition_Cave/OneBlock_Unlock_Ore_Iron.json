@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Recipe_Salvager.name",
-    "Description": "server.items.OneBlock_Unlock_Recipe_Salvager.description"
+    "Name": "server.items.OneBlock_Unlock_Ore_Iron.name",
+    "Description": "server.items.OneBlock_Unlock_Ore_Iron.description"
   },
-  "Id": "OneBlock_Unlock_Recipe_Salvager",
+  "Id": "OneBlock_Unlock_Ore_Iron",
   "Categories": [
     "Items.Recipes"
   ],
@@ -26,24 +26,14 @@
     "Primary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_unlock_pool_insert"
         }
       ]
     },
     "Secondary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
-          "Type": "LearnRecipe",
-          "Next": {
-            "Type": "ModifyInventory",
-            "AdjustHeldItemQuantity": -1
-          }
+          "Type": "oneblock_unlock_pool_insert"
         }
       ]
     }
@@ -51,8 +41,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rubble_Stone",
-        "Quantity": 20
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Tool_Pickaxe_Copper",
+        "Quantity": 1
       }
     ],
     "OutputQuantity": 1,
@@ -66,11 +60,20 @@
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/Recipe_Page.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Consumable": true,
   "Tags": {
     "Type": [
-      "Recipe"
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cave"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Iron"
     ]
   },
   "ItemLevel": 1,

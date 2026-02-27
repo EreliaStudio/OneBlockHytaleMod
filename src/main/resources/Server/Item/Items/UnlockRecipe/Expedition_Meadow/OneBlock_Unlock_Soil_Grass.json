@@ -42,7 +42,7 @@
     "Input": [
       {
         "ItemId": "Ingredient_Fibre",
-        "Quantity": 5
+        "Quantity": 32
       }
     ],
     "OutputQuantity": 1,
@@ -62,16 +62,17 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Soil_Grass"
-    ],
     "OneBlockUnlockExpedition": [
       "Meadow"
     ],
     "OneBlockUnlockWeight": [
       "10"
+    ],
+    "OneBlockUnlockDropId": [
+      "Soil_Grass"
     ]
   },
   "ItemLevel": 1,
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Uncommon"
 }

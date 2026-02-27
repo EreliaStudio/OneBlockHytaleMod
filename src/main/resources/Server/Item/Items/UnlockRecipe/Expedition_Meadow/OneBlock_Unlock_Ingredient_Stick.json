@@ -41,8 +41,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Wood_Ash_Trunk",
-        "Quantity": 4
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 32
       }
     ],
     "OutputQuantity": 1,
@@ -62,16 +62,17 @@
     "Type": [
       "OneBlock_Unlock_Consumable"
     ],
-    "OneBlockUnlockDropId": [
-      "Ingredient_Stick"
-    ],
     "OneBlockUnlockExpedition": [
       "Meadow"
     ],
     "OneBlockUnlockWeight": [
-      "10"
+      "20"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Stick"
     ]
   },
   "ItemLevel": 1,
-  "MaxStack": 1
+  "MaxStack": 1,
+  "Quality": "Uncommon"
 }

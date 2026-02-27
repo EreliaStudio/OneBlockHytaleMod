@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Recipe_Salvager.name",
-    "Description": "server.items.OneBlock_Unlock_Recipe_Salvager.description"
+    "Name": "server.items.OneBlock_Recipe_Rock_Basalt_Cobble.name",
+    "Description": "server.items.OneBlock_Recipe_Rock_Basalt_Cobble.description"
   },
-  "Id": "OneBlock_Unlock_Recipe_Salvager",
+  "Id": "OneBlock_Recipe_Rock_Basalt_Cobble",
   "Categories": [
     "Items.Recipes"
   ],
@@ -26,7 +26,7 @@
     "Primary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
+          "ItemId": "Rock_Basalt_Cobble",
           "Type": "LearnRecipe",
           "Next": {
             "Type": "ModifyInventory",
@@ -38,7 +38,7 @@
     "Secondary": {
       "Interactions": [
         {
-          "ItemId": "Bench_OneBlockSalvager",
+          "ItemId": "Rock_Basalt_Cobble",
           "Type": "LearnRecipe",
           "Next": {
             "Type": "ModifyInventory",
@@ -47,24 +47,6 @@
         }
       ]
     }
-  },
-  "Recipe": {
-    "Input": [
-      {
-        "ItemId": "Rubble_Stone",
-        "Quantity": 20
-      }
-    ],
-    "OutputQuantity": 1,
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Categories": [
-          "OneBlock_Upgrader_Expedition_Cave"
-        ],
-        "Id": "OneBlockUpgrader"
-      }
-    ]
   },
   "Icon": "Icons/ItemsGenerated/Recipe_Page.png",
   "Consumable": true,

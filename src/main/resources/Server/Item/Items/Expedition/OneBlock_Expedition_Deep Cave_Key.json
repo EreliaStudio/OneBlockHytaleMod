@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Expedition_Meadow_Key.name",
-    "Description": "server.items.OneBlock_Expedition_Meadow_Key.description"
+    "Name": "server.items.OneBlock_Expedition_Deep Cave_Key.name",
+    "Description": "server.items.OneBlock_Expedition_Deep Cave_Key.description"
   },
-  "Id": "OneBlock_Expedition_Meadow_Key",
+  "Id": "OneBlock_Expedition_Deep Cave_Key",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
@@ -34,7 +34,23 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
+        "ItemId": "Armor_Iron_Head",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Armor_Iron_Chest",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Armor_Iron_Hands",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Armor_Iron_Legs",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Tool_Pickaxe_Iron",
         "Quantity": 1
       }
     ],
@@ -43,7 +59,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Meadow"
+          "OneBlock_Upgrader_Expedition_Deep Cave"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -55,7 +71,7 @@
       "OneBlock_Expedition"
     ],
     "OneBlockExpeditionTargetBlockId": [
-      "OneBlock_Block_Meadow"
+      "OneBlock_Block_Deep Cave"
     ]
   },
   "MaxStack": 1,

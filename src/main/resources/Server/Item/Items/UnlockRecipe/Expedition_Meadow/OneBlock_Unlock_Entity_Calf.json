@@ -72,6 +72,7 @@
       "1"
     ]
   },
-  "ItemLevel": 1,
-  "MaxStack": 1
+  "ItemLevel": 2,
+  "MaxStack": 1,
+  "Quality": "Uncommon"
 }

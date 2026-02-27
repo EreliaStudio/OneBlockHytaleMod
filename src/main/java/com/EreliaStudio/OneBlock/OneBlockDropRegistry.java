@@ -115,6 +115,20 @@ public final class OneBlockDropRegistry
         }
     }
 
+    public List<String> getKnownDrops(String expeditionId)
+    {
+        String expeditionKey = OneBlockExpeditionResolver.normalizeExpedition(expeditionId);
+        Map<String, Integer> weights = weightByExpedition.get(expeditionKey);
+        if (weights == null || weights.isEmpty())
+        {
+            return List.of();
+        }
+
+        List<String> out = new java.util.ArrayList<>(weights.keySet());
+        out.sort(String::compareToIgnoreCase);
+        return out;
+    }
+
     private int getWeight(String expeditionId, String dropId)
     {
         if (dropId == null || dropId.isEmpty())
