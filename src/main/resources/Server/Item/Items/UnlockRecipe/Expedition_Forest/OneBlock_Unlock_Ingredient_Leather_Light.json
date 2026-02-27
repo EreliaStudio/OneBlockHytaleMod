@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Exchange_Ingredient_Life_Essence.name",
-    "Description": "server.items.OneBlock_Unlock_Exchange_Ingredient_Life_Essence.description"
+    "Name": "server.items.OneBlock_Unlock_Ingredient_Leather_Light.name",
+    "Description": "server.items.OneBlock_Unlock_Ingredient_Leather_Light.description"
   },
-  "Id": "OneBlock_Unlock_Exchange_Ingredient_Life_Essence",
+  "Id": "OneBlock_Unlock_Ingredient_Leather_Light",
   "Categories": [
     "Items.Recipes"
   ],
@@ -41,8 +41,16 @@
   "Recipe": {
     "Input": [
       {
+        "ItemId": "Wood_Ash_Trunk",
+        "Quantity": 16
+      },
+      {
         "ItemId": "Ingredient_Fibre",
-        "Quantity": 32
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 16
       }
     ],
     "OutputQuantity": 1,
@@ -50,7 +58,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Upgrader_Expedition_Meadow"
+          "OneBlock_Upgrader_Expedition_Forest"
         ],
         "Id": "OneBlockUpgrader"
       }
@@ -63,13 +71,13 @@
       "OneBlock_Unlock_Consumable"
     ],
     "OneBlockUnlockExpedition": [
-      "Meadow"
+      "Forest"
     ],
     "OneBlockUnlockWeight": [
       "1"
     ],
     "OneBlockUnlockDropId": [
-      "Exchange:Ingredient_Life_Essence"
+      "Ingredient_Leather_Light"
     ]
   },
   "ItemLevel": 1,

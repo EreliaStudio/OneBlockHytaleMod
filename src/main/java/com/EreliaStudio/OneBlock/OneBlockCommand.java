@@ -216,8 +216,6 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
 
         List<String> unlockedDrops = new ArrayList<>();
         List<String> lockedDrops = new ArrayList<>();
-        List<String> unlockedExchanges = new ArrayList<>();
-        List<String> lockedExchanges = new ArrayList<>();
 
         for (String dropId : knownDrops)
         {
@@ -226,22 +224,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                 continue;
             }
 
-            boolean isExchange = OneBlockExchangeService.isExchangeUnlockId(dropId);
             boolean unlocked = unlockedSet.contains(dropId)
                     || OneBlockExpeditionDefaults.isDefaultDrop(expeditionId, dropId);
-
-            if (isExchange)
-            {
-                if (unlocked)
-                {
-                    unlockedExchanges.add(dropId);
-                }
-                else
-                {
-                    lockedExchanges.add(dropId);
-                }
-                continue;
-            }
 
             if (unlocked)
             {
@@ -256,11 +240,6 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         ctx.sendMessage(Message.raw("OneBlock expedition for " + targetPlayerRef.getUsername() + ": " + expeditionId));
         ctx.sendMessage(Message.raw("Unlocked drops (" + unlockedDrops.size() + "): " + joinOrDash(unlockedDrops)));
         ctx.sendMessage(Message.raw("Locked drops (" + lockedDrops.size() + "): " + joinOrDash(lockedDrops)));
-        if (!unlockedExchanges.isEmpty() || !lockedExchanges.isEmpty())
-        {
-            ctx.sendMessage(Message.raw("Unlocked exchanges (" + unlockedExchanges.size() + "): " + joinOrDash(unlockedExchanges)));
-            ctx.sendMessage(Message.raw("Locked exchanges (" + lockedExchanges.size() + "): " + joinOrDash(lockedExchanges)));
-        }
     }
 
     private static String resolveActiveExpedition(World world)

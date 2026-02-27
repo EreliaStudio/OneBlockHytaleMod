@@ -54,10 +54,7 @@
             "OneBlock_Unlock_Soil_Grass",
             "OneBlock_Unlock_Ingredient_Stick",
             "OneBlock_Unlock_Wood_Ash_Trunk",
-            "OneBlock_Unlock_Exchange_Ingredient_Life_Essence",
-            "OneBlock_Exchange_Ingredient_Life_Essence",
-            "OneBlock_Unlock_Exchange_Soil_Grass",
-            "OneBlock_Exchange_Soil_Grass"
+            "OneBlock_Unlock_Ingredient_Life_Essence"
           ]
         },
         {
@@ -76,7 +73,8 @@
           "Name": "server.benchCategories.OneBlockUpgrader_Expedition_Forest",
           "Recipes": [
             "OneBlock_Expedition_Forest_Key",
-            "OneBlock_Unlock_Plant_Fruit_Apple"
+            "OneBlock_Unlock_Plant_Fruit_Apple",
+            "OneBlock_Unlock_Ingredient_Leather_Light"
           ]
         },
         {

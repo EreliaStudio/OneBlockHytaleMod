@@ -17,7 +17,6 @@ public class OneBlockPlugin extends JavaPlugin
     private OneBlockDropRegistry dropRegistry;
     private OneBlockDropsStateProvider dropsStateProvider;
     private OneBlockUnlockService unlockService;
-    private OneBlockExchangeService exchangeService;
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -61,13 +60,6 @@ public class OneBlockPlugin extends JavaPlugin
         unlockService = new OneBlockUnlockService(dropsStateProvider, consumableToDropMap);
         LOGGER.at(Level.INFO).log("Loaded unlock recipes: " + consumableToDropMap.size());
 
-        var exchangeMap = OneBlockExchangeRecipeLoader.loadExchangeMap(
-                OneBlockPlugin.class,
-                "/Server/Item/Items/OneBlockUpgrader/Bench_OneBlockUpgrader.json",
-                "/Server/Item/Items/ExchangeRecipe"
-        );
-        exchangeService = new OneBlockExchangeService(dropsStateProvider, exchangeMap);
-        LOGGER.at(Level.INFO).log("Loaded exchange recipes: " + exchangeMap.size());
 
         getCommandRegistry().registerCommand(new OneBlockCommand());
         LOGGER.at(Level.INFO).log("Adding the OneBlock commands");
@@ -86,12 +78,6 @@ public class OneBlockPlugin extends JavaPlugin
         );
         LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockExpeditionInteraction.INTERACTION_ID);
 
-        getCodecRegistry(Interaction.CODEC).register(
-                OneBlockExchangeInteraction.INTERACTION_ID,
-                OneBlockExchangeInteraction.class,
-                OneBlockExchangeInteraction.CODEC
-        );
-        LOGGER.at(Level.INFO).log("Registered interaction: " + OneBlockExchangeInteraction.INTERACTION_ID);
 
         getEventRegistry().registerGlobal(AddWorldEvent.class, event ->
         {
@@ -139,8 +125,4 @@ public class OneBlockPlugin extends JavaPlugin
         return dropRegistry;
     }
 
-    public OneBlockExchangeService getExchangeService()
-    {
-        return exchangeService;
-    }
 }

@@ -35,7 +35,8 @@ public final class OneBlockExpeditionDefaults
         ));
 
         defaults.put("FarmLand", List.of(
-                drop("Ingredient_Fibre", 30)
+                drop("Ingredient_Fibre", 30),
+                drop("Ingredient_Life_Essence", 5)
         ));
 
         defaults.put("Forest", List.of(

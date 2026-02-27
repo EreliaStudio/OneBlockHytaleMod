@@ -21,6 +21,7 @@ Rock_Basalt
 Rock_Shale
 Rock_Slate
 Rock_Stone
+Rock_Stone_Mossy
 Rock_Sandstone
 Rock_Volcanic
 Rock_Ice
@@ -91,6 +92,17 @@ Plant_Sunflower_Stage_0
 Plant_Petals_White
 Plant_Cactus_Flower
 
+# FRUITS
+Plant_Fruit_Apple
+Plant_Fruit_Azure
+Plant_Fruit_Berries_Red
+Plant_Fruit_Coconut
+Plant_Fruit_Mango
+Plant_Fruit_Pinkberry
+Plant_Fruit_Poison
+Plant_Fruit_Spiral
+Plant_Fruit_Windwillow
+
 # CACTUS
 Plant_Cactus_1
 Plant_Cactus_2
@@ -129,17 +141,20 @@ Plant_Crop_Mushroom_Shelve_Brown
 
 # CROPS
 Plant_Crop_Wheat_Item
+Plant_Crop_Cabbage_Item
+Plant_Crop_Carrot_Item
+Plant_Crop_Corn_Item
+Plant_Crop_Cauliflower_Item
+Plant_Crop_Turnip_Item
+Plant_Crop_Aubergine_Item
+Plant_Crop_Lettuce_Item
+Plant_Crop_Pumpkin_Item
+Plant_Crop_Tomato_Item
+Plant_Crop_Chilli_Item
 Plant_Crop_Cotton_Item
-Plant_Crop_Health1
-Plant_Crop_Health2
-Plant_Crop_Health3
-Plant_Crop_Mana1
-Plant_Crop_Mana2
-Plant_Crop_Mana3
-Plant_Crop_Stamina1
-Plant_Crop_Stamina2
-Plant_Crop_Stamina3
-Plant_Crop_Wild_Grass_Block
+Plant_Crop_Rice_Item
+Plant_Crop_Onion_Item
+Plant_Crop_Potato_Item
 
 # SEEDS
 Plant_Seeds_Aubergine_Eternal
@@ -212,6 +227,7 @@ Ingredient_Tree_Sap
 Ingredient_Powder_Boom
 Ingredient_Stud_Iron
 Ingredient_Strap_Leather
+Ingredient_Charcoal
 
 # INGREDIENT (TEXTILE)
 Ingredient_Bolt_Cindercloth
@@ -385,3 +401,100 @@ Scarak_Defender
 Scarak_Fighter
 Scarak_Louse
 Scarak_Seeker
+
+# DESERT BIOME (Howling Sands – Zone 2)
+# BLOCKS
+Block_Sand
+Block_Sand_White
+Block_Sand_Red
+Block_Sandstone_Smooth
+Block_Sandstone_Rough
+Block_Sandstone_Red
+Block_Clay
+Block_Clay_Red
+Block_Desert_Hardened_Earth
+Block_Desert_Dried_Mud
+
+# PLANTS
+Plant_Desert_Red_Featherleaf
+Plant_Desert_Yellow_Arid_Flower
+Plant_Desert_Blue_Aloe
+Plant_Desert_Dry_Shrub
+Plant_Desert_Saltbush
+
+# CREATURE DROPS
+Ingredient_Shell_Scorpion
+Ingredient_Claw_Scorpion
+Ingredient_Fang_SaberTooth
+Ingredient_Feather_Vulture
+Ingredient_Hide_Camel
+Ingredient_Hide_Scarak
+
+# SPECIAL RESOURCES
+Ore_Thorium_Desert
+Rock_Desert_Cracked
+Rock_Desert_Fossil
+
+
+# ICE BIOME (Whisperfrost Frontiers – Zone 3)
+
+# BLOCKS
+Block_Snow
+Block_Snow_Packed
+Block_Ice_Clear
+Block_Ice_Blue
+Block_Ice_Frosted
+Block_Permafrost
+Block_Frozen_Soil
+Block_Frozen_Water
+
+# PLANTS
+Plant_Snow_Shrub
+Plant_Frost_Fern
+Plant_Ice_Flower_Blue
+Plant_Ice_Flower_White
+Plant_Frozen_Grass
+
+# CREATURE DROPS
+Ingredient_Fur_PolarBear
+Ingredient_Fur_Yeti
+Ingredient_Horn_Ram
+Ingredient_Tusk_Moose
+Ingredient_Scale_IceDragon
+
+# SPECIAL RESOURCES
+Ore_Cobalt_Ice
+Rock_Glacial_Crystal
+Rock_Frozen_Stone
+
+# DINOSAUR AREA (Devastated Lands – Underground Jungle)
+
+# BLOCKS
+Block_Volcanic_Ash
+Block_Jungle_Fern_Giant
+Block_Glowing_Jungle_Plant
+Block_Lava_Rock_Cracked
+Block_Primal_Stone
+Block_Fossil_Stone
+Block_Amber
+
+# PLANTS
+Plant_Primal_Fern
+Plant_Glowcap_Jungle
+Plant_Toxic_Jungle_Vine
+Plant_Giant_Jungle_Leaf
+
+# CREATURE DROPS
+Ingredient_Tooth_CaveRex
+Ingredient_Claw_CaveRaptor
+Ingredient_Scale_Dimetrodon
+Ingredient_Hide_Trillodon
+Ingredient_Feather_Pterodactyl
+Ingredient_Primal_Meat
+
+# SPECIAL RESOURCES
+Ore_Primal_Iron
+Rock_Amber_Encased
+Rock_Dinosaur_Fossil
+Ingredient_Dinosaur_Bone
+Ingredient_Primal_Core

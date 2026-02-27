@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import argparse
 import json
-import re
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
@@ -10,7 +9,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 
 BENCH_PATH = REPO_ROOT / "src/main/resources/Server/Item/Items/OneBlockUpgrader/Bench_OneBlockUpgrader.json"
 UNLOCK_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/UnlockRecipe"
-EXCHANGE_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/ExchangeRecipe"
 RECIPE_DROP_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/RecipeDrop"
 EXPEDITION_ITEM_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/Expedition"
 LANG_PATH = REPO_ROOT / "src/main/resources/Server/Languages/en-US/server.lang"
@@ -20,7 +18,6 @@ DEFAULTS_PATH = REPO_ROOT / "src/main/java/com/EreliaStudio/OneBlock/OneBlockExp
 ICON_RECIPE = "Icons/ItemsGenerated/BlockUpgrade.png"
 ICON_KEY = "Icons/ItemsGenerated/ExpeditionKey.png"
 ICON_RECIPE_PAGE = "Icons/ItemsGenerated/Recipe_Page.png"
-EXCHANGE_PREFIX = "Exchange:"
 RECIPE_PREFIX = "recipe:"
 
 
@@ -48,17 +45,6 @@ def is_entity_id(raw_id: str) -> Tuple[bool, str]:
     return False, trimmed
 
 
-def is_exchange_id(raw_id: str) -> Tuple[bool, str]:
-    if raw_id is None:
-        return False, ""
-    trimmed = raw_id.strip()
-    if not trimmed:
-        return False, ""
-    if trimmed.lower().startswith(EXCHANGE_PREFIX.lower()):
-        return True, trimmed[len(EXCHANGE_PREFIX):].strip()
-    return False, trimmed
-
-
 def is_recipe_drop_id(raw_id: str) -> Tuple[bool, str]:
     if raw_id is None:
         return False, ""
@@ -81,26 +67,6 @@ def unlock_item_id(drop_id: str) -> str:
         safe_entity = entity_id.replace(":", "_")
         return f"OneBlock_Unlock_Entity_{safe_entity}"
     return f"OneBlock_Unlock_{trimmed}"
-
-
-def exchange_item_id(exchange_id: str) -> str:
-    if exchange_id is None:
-        return ""
-    trimmed = exchange_id.strip()
-    if trimmed.startswith("OneBlock_Exchange_"):
-        return trimmed
-    safe = trimmed.replace(":", "_")
-    return f"OneBlock_Exchange_{safe}"
-
-
-def exchange_unlock_item_id(exchange_id: str) -> str:
-    if exchange_id is None:
-        return ""
-    trimmed = exchange_id.strip()
-    if trimmed.startswith("OneBlock_Unlock_Exchange_"):
-        return trimmed
-    safe = trimmed.replace(":", "_")
-    return f"OneBlock_Unlock_Exchange_{safe}"
 
 
 def recipe_item_id(recipe_target_id: str) -> str:
@@ -223,149 +189,6 @@ def build_unlock_recipe(expedition: str,
     }
 
     return unlock_id, payload, lang_entries
-
-
-def build_exchange_unlock_recipe(expedition: str,
-                                 category_id: str,
-                                 exchange_id: str,
-                                 unlock: Dict[str, Any]) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
-    unlock_id = exchange_unlock_item_id(exchange_id)
-    name = non_empty(unlock.get("UnlockName"), f"Unlock Exchange - {exchange_id}")
-    description = non_empty(
-        unlock.get("UnlockDescription"),
-        f"Consume to unlock the {exchange_id} exchange."
-    )
-    quality = unlock.get("UnlockQuality") or "Uncommon"
-    weight = normalize_weight(unlock.get("Weight", 1))
-
-    tags: Dict[str, List[str]] = {
-        "Type": ["OneBlock_Unlock_Consumable"],
-        "OneBlockUnlockExpedition": [expedition],
-        "OneBlockUnlockWeight": [str(weight)],
-        "OneBlockUnlockDropId": [f"{EXCHANGE_PREFIX}{exchange_id}"]
-    }
-
-    payload = {
-        "TranslationProperties": {
-            "Name": f"server.items.{unlock_id}.name",
-            "Description": f"server.items.{unlock_id}.description"
-        },
-        "Id": unlock_id,
-        "Categories": [
-            "Items.Recipes"
-        ],
-        "PlayerAnimationsId": "Item",
-        "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
-        "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
-        "IconProperties": {
-            "Scale": 0.76,
-            "Rotation": [135, 135, 0],
-            "Translation": [-1, 5]
-        },
-        "Interactions": {
-            "Primary": {"Interactions": [{"Type": "oneblock_unlock_pool_insert"}]},
-            "Secondary": {"Interactions": [{"Type": "oneblock_unlock_pool_insert"}]}
-        },
-        "Recipe": {
-            "Input": build_recipe_inputs(unlock.get("UnlockCost", [])),
-            "OutputQuantity": 1,
-            "BenchRequirement": [
-                {
-                    "Type": "Crafting",
-                    "Categories": [category_id],
-                    "Id": "OneBlockUpgrader"
-                }
-            ]
-        },
-        "Icon": ICON_RECIPE,
-        "Consumable": True,
-        "Tags": tags,
-        "ItemLevel": 1,
-        "MaxStack": 1,
-        "Quality": quality
-    }
-
-    lang_entries = {
-        f"items.{unlock_id}.name": name,
-        f"items.{unlock_id}.description": description
-    }
-
-    return unlock_id, payload, lang_entries
-
-
-def build_exchange_item(expedition: str,
-                        category_id: str,
-                        exchange_id: str,
-                        unlock: Dict[str, Any]) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
-    exchange_item = exchange_item_id(exchange_id)
-    name = non_empty(unlock.get("Name"), exchange_item)
-    description = non_empty(unlock.get("Description"), f"Exchange for {output_id}.")
-    quality = unlock.get("Quality") or "Uncommon"
-
-    output = unlock.get("Output") or {}
-    output_id = output.get("ID") or exchange_id
-    try:
-        output_qty = int(output.get("Quantity", 1))
-    except Exception:
-        output_qty = 1
-    if output_qty < 1:
-        output_qty = 1
-
-    tags: Dict[str, List[str]] = {
-        "Type": ["OneBlock_Exchange_Consumable"],
-        "OneBlockExchangeOutputId": [output_id],
-        "OneBlockExchangeOutputQuantity": [str(output_qty)],
-        "OneBlockExchangeExpedition": [expedition]
-    }
-    if "UnlockCost" in unlock:
-        tags["OneBlockExchangeUnlockId"] = [f"{EXCHANGE_PREFIX}{exchange_id}"]
-
-    payload = {
-        "TranslationProperties": {
-            "Name": f"server.items.{exchange_item}.name",
-            "Description": f"server.items.{exchange_item}.description"
-        },
-        "Id": exchange_item,
-        "Categories": [
-            "Items.Recipes"
-        ],
-        "PlayerAnimationsId": "Item",
-        "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
-        "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
-        "IconProperties": {
-            "Scale": 0.76,
-            "Rotation": [135, 135, 0],
-            "Translation": [-1, 5]
-        },
-        "Interactions": {
-            "Primary": {"Interactions": [{"Type": "oneblock_exchange"}]},
-            "Secondary": {"Interactions": [{"Type": "oneblock_exchange"}]}
-        },
-        "Recipe": {
-            "Input": build_recipe_inputs(unlock.get("Craft", [])),
-            "OutputQuantity": 1,
-            "BenchRequirement": [
-                {
-                    "Type": "Crafting",
-                    "Categories": [category_id],
-                    "Id": "OneBlockUpgrader"
-                }
-            ]
-        },
-        "Icon": ICON_RECIPE,
-        "Consumable": True,
-        "Tags": tags,
-        "ItemLevel": 1,
-        "MaxStack": 1,
-        "Quality": quality
-    }
-
-    lang_entries = {
-        f"items.{exchange_item}.name": name,
-        f"items.{exchange_item}.description": description
-    }
-
-    return exchange_item, payload, lang_entries
 
 
 def build_recipe_drop_item(expedition: str,
@@ -765,23 +588,11 @@ def main() -> int:
                 if not isinstance(unlock, dict):
                     continue
                 raw_id = unlock.get("ID", "")
-                is_exchange, exchange_id = is_exchange_id(raw_id)
-                if is_exchange:
-                    if "UnlockCost" in unlock:
-                        unlock_id, payload, unlock_lang = build_exchange_unlock_recipe(
-                            expedition, category_id, exchange_id, unlock
-                        )
-                        write_json(UNLOCK_BASE / f"Expedition_{expedition}" / f"{unlock_id}.json", payload)
-                        lang_updates.update(unlock_lang)
-                        recipes.append(unlock_id)
-
-                    exchange_item, exchange_payload, exchange_lang = build_exchange_item(
-                        expedition, category_id, exchange_id, unlock
+                if isinstance(raw_id, str) and raw_id.strip().lower().startswith("exchange:"):
+                    raise SystemExit(
+                        "Exchange entries are no longer supported by the generator. "
+                        "Remove the Exchange: prefix or migrate this entry to a normal unlock or recipe drop."
                     )
-                    write_json(EXCHANGE_BASE / f"Expedition_{expedition}" / f"{exchange_item}.json", exchange_payload)
-                    lang_updates.update(exchange_lang)
-                    recipes.append(exchange_item)
-                    continue
 
                 unlock_id, payload, unlock_lang = build_unlock_recipe(expedition, category_id, unlock)
                 write_json(UNLOCK_BASE / f"Expedition_{expedition}" / f"{unlock_id}.json", payload)

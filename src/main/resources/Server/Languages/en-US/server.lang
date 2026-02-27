@@ -31,8 +31,8 @@ items.OneBlock_Unlock_Wood_Ash_Trunk.description = Consume to unlock Ash Truck t
 items.OneBlock_Unlock_Ingredient_Stick.name = Unlock Stick
 items.OneBlock_Unlock_Ingredient_Stick.description = Consume to unlock Stick to spawn in your OneBlock pool.
 
-items.OneBlock_Unlock_Ingredient_Life_Essence.name = Life Essence Unlock Token
-items.OneBlock_Unlock_Ingredient_Life_Essence.description = Consume to permanently unlock Ingredient_Life_Essence in your OneBlock drop pool.
+items.OneBlock_Unlock_Ingredient_Life_Essence.name = Unlock Life Essence
+items.OneBlock_Unlock_Ingredient_Life_Essence.description = Consume to unlock Life essence to spawn in your OneBlock pool.
 
 items.OneBlock_Unlock_Entity_Piglet.name = Piglet Spawn Unlock Token
 items.OneBlock_Unlock_Entity_Piglet.description = Consume to permanently unlock Piglet as a possible OneBlock drop.
@@ -66,14 +66,6 @@ items.OneBlock_Expedition_Cave_Key.name = Expedition Key - Cave
 items.OneBlock_Expedition_Cave_Key.description = Use this on a OneBlock to set its expedition to Cave.
 
 # Interaction hint
-items.OneBlock_Unlock_Exchange_Ingredient_Life_Essence.name = Unlock Exchange - Ingredient_Life_Essence
-items.OneBlock_Unlock_Exchange_Ingredient_Life_Essence.description = Consume to unlock the Ingredient_Life_Essence exchange.
-items.OneBlock_Exchange_Ingredient_Life_Essence.name = OneBlock_Exchange_Ingredient_Life_Essence
-items.OneBlock_Exchange_Ingredient_Life_Essence.description = OneBlock_Exchange_Ingredient_Life_Essence
-items.OneBlock_Unlock_Exchange_Soil_Grass.name = Unlock Exchange - Soil_Grass
-items.OneBlock_Unlock_Exchange_Soil_Grass.description = Consume to unlock the Soil_Grass exchange.
-items.OneBlock_Exchange_Soil_Grass.name = OneBlock_Exchange_Soil_Grass
-items.OneBlock_Exchange_Soil_Grass.description = OneBlock_Exchange_Soil_Grass
 items.OneBlock_Expedition_FarmLand_Key.name = Expedition Key - FarmLand
 items.OneBlock_Expedition_FarmLand_Key.description = Use this on a OneBlock to set its expedition to Cave.
 items.OneBlock_Unlock_Entity_Pig.name = Unlock Pig
@@ -107,3 +99,5 @@ items.OneBlock_Unlock_Ore_Adamantite.description = Consume to unlock Adamantite 
 items.OneBlock_Unlock_Ore_Mithril.name = Unlock Mithril Ore
 items.OneBlock_Unlock_Ore_Mithril.description = Consume to unlock Mithril ore in your OneBlock pool.
 benchCategories.OneBlockUpgrader_Expedition_The Abyss = Expedition - The Abyss
+items.OneBlock_Unlock_Ingredient_Leather_Light.name = Unlock Light leather
+items.OneBlock_Unlock_Ingredient_Leather_Light.description = Consume to unlock Light leather in your OneBlock pool.

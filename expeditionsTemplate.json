@@ -49,32 +49,15 @@
           { "ID": "Ingredient_Stick", "Quantity": 16 }
         ]
       },
-	  {
-		"ID":"Exchange:Ingredient_Life_Essence",
-		"UnlockCost":[
-			{ "ID": "Ingredient_Fibre", "Quantity": 32 }
-		],
-		"Craft":[
-			{ "ID": "Ingredient_Fibre", "Quantity": 10 }
-		],
-		"Output":{
-			"ID": "Ingredient_Life_Essence",
-			"Quantity":1
-		}
-	  },
-	  {
-		"ID":"Exchange:Soil_Grass",
-		"UnlockCost":[
-			{ "ID": "Ingredient_Fibre", "Quantity": 32 }
-		],
-		"Craft":[
-			{ "ID": "Ingredient_Fibre", "Quantity": 10 }
-		],
-		"Output":{
-			"ID": "Soil_Grass",
-			"Quantity":1
-		}
-	  }
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Name": "Unlock Life Essence",
+        "Description": "Consume to unlock Life essence to spawn in your OneBlock pool.",
+        "Weight": 10,
+        "Craft": [
+          { "ID": "Soil_Grass", "Quantity": 10 }
+        ]
+      }
     ]
   },
   "FarmLand": {
@@ -90,6 +73,10 @@
 		{
 			"ID":"Ingredient_Fibre",
 			"Weight":30
+		},
+		{
+			"ID":"Ingredient_Life_Essence",
+			"Weight":5
 		}
 	],
     "Unlockable": [
@@ -140,6 +127,17 @@
         "ID": "Plant_Fruit_Apple",
         "Name": "Unlock Soil Grass",
         "Description": "Consume to unlock Apple in your OneBlock pool.",
+        "Weight": 1,
+        "Craft": [
+          { "ID": "Wood_Ash_Trunk", "Quantity": 16 },
+          { "ID": "Ingredient_Fibre", "Quantity": 16 },
+          { "ID": "Ingredient_Stick", "Quantity": 16 }
+        ]
+      },
+      {
+        "ID": "Ingredient_Leather_Light",
+        "Name": "Unlock Light leather",
+        "Description": "Consume to unlock Light leather in your OneBlock pool.",
         "Weight": 1,
         "Craft": [
           { "ID": "Wood_Ash_Trunk", "Quantity": 16 },
