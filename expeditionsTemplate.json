@@ -14,7 +14,7 @@
 		},
 		{
 			"ID":"Rock_Stone",
-			"Weight":10
+			"Weight":30
 		},
 		{
 			"ID":"Rubble_Stone",
@@ -26,7 +26,7 @@
         "ID": "Soil_Grass",
         "Name": "Unlock Soil Grass",
         "Description": "Consume to unlock Grass block to spawn in your OneBlock pool.",
-        "Weight": 10,
+        "Weight": 20,
         "Craft": [
           { "ID": "Ingredient_Fibre", "Quantity": 32 }
         ]
@@ -37,7 +37,7 @@
         "Description": "Consume to unlock Stick to spawn in your OneBlock pool.",
         "Weight": 20,
         "Craft": [
-          { "ID": "Ingredient_Fibre", "Quantity": 32 }
+          { "ID": "Ingredient_Fibre", "Quantity": 10 }
         ]
       },
       {
@@ -46,7 +46,7 @@
         "Description": "Consume to unlock Ash Truck to spawn in your OneBlock pool.",
         "Weight": 10,
         "Craft": [
-          { "ID": "Ingredient_Stick", "Quantity": 16 }
+          { "ID": "Ingredient_Stick", "Quantity": 10 }
         ]
       },
       {

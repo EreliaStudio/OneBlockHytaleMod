@@ -30,7 +30,7 @@ public final class OneBlockExpeditionDefaults
 
         defaults.put("Meadow", List.of(
                 drop("Ingredient_Fibre", 20),
-                drop("Rock_Stone", 10),
+                drop("Rock_Stone", 30),
                 drop("Rubble_Stone", 20)
         ));
 

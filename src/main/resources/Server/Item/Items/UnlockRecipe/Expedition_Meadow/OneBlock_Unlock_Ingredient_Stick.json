@@ -42,7 +42,7 @@
     "Input": [
       {
         "ItemId": "Ingredient_Fibre",
-        "Quantity": 32
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,

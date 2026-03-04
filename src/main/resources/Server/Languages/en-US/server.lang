@@ -101,3 +101,6 @@ items.OneBlock_Unlock_Ore_Mithril.description = Consume to unlock Mithril ore in
 benchCategories.OneBlockUpgrader_Expedition_The Abyss = Expedition - The Abyss
 items.OneBlock_Unlock_Ingredient_Leather_Light.name = Unlock Light leather
 items.OneBlock_Unlock_Ingredient_Leather_Light.description = Consume to unlock Light leather in your OneBlock pool.
+items.OneBlock_Block_FarmLand.name = OneBlock FarmLand
+items.OneBlock_Block_Deep Cave.name = OneBlock Deep Cave
+items.OneBlock_Block_The Abyss.name = OneBlock The Abyss

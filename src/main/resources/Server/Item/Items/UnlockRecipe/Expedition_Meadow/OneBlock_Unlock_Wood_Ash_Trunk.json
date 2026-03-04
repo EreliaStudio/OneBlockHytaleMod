@@ -42,7 +42,7 @@
     "Input": [
       {
         "ItemId": "Ingredient_Stick",
-        "Quantity": 16
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,

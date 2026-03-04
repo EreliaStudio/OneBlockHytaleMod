@@ -10,6 +10,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 BENCH_PATH = REPO_ROOT / "src/main/resources/Server/Item/Items/OneBlockUpgrader/Bench_OneBlockUpgrader.json"
 UNLOCK_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/UnlockRecipe"
 RECIPE_DROP_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/RecipeDrop"
+ONEBLOCK_BLOCK_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/OneBlock"
 EXPEDITION_ITEM_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/Expedition"
 LANG_PATH = REPO_ROOT / "src/main/resources/Server/Languages/en-US/server.lang"
 DEFAULTS_PATH = REPO_ROOT / "src/main/java/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java"
@@ -256,6 +257,74 @@ def build_recipe_drop_item(expedition: str,
     }
 
     return recipe_id, payload, lang_entries
+
+
+def build_oneblock_block_item(expedition: str) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
+    block_id = f"OneBlock_Block_{expedition}"
+    icon = f"Icons/ItemsGenerated/OneBlock_{expedition}.png"
+    texture = f"BlockTextures/OneBlock_Block_{expedition}.png"
+    name = f"OneBlock {expedition}"
+
+    payload = {
+        "TranslationProperties": {
+            "Name": f"server.items.{block_id}.name"
+        },
+        "Id": block_id,
+        "ItemLevel": 5,
+        "Icon": icon,
+        "Categories": [
+            "Blocks.OneBlock"
+        ],
+        "PlayerAnimationsId": "Block",
+        "Set": "OneBlock",
+        "BlockType": {
+            "Material": "Solid",
+            "DrawType": "Cube",
+            "Group": "OneBlock",
+            "Flags": {},
+            "Gathering": {
+                "Breaking": {
+                    "GatherType": "Soils",
+                    "ItemId": "Soil_Dirt",
+                    "Quantity": 0
+                }
+            },
+            "Textures": [
+                {
+                    "Down": texture,
+                    "Sides": texture,
+                    "Up": texture,
+                    "Weight": 1
+                }
+            ],
+            "TransitionToGroups": [],
+            "ParticleColor": "#ffffff"
+        },
+        "Tags": {
+            "Type": [
+                "OneBlock_Block"
+            ]
+        },
+        "IconProperties": {
+            "Scale": 0.3,
+            "Rotation": [
+                339.295,
+                229.107,
+                337.792
+            ],
+            "Translation": [
+                0,
+                -6
+            ]
+        },
+        "ItemSoundSetId": "ISS_Blocks_Stone"
+    }
+
+    lang_entries = {
+        f"items.{block_id}.name": name
+    }
+
+    return block_id, payload, lang_entries
 
 
 def build_key_item(expedition: str,
@@ -559,6 +628,10 @@ def main() -> int:
         category_name_key = f"server.benchCategories.OneBlockUpgrader_Expedition_{expedition}"
 
         recipes: List[str] = []
+
+        block_id, block_payload, block_lang = build_oneblock_block_item(expedition)
+        write_json(ONEBLOCK_BLOCK_BASE / f"{block_id}.json", block_payload)
+        lang_updates.update(block_lang)
 
         pool = data.get("BaseDropPool", [])
         if isinstance(pool, list):
