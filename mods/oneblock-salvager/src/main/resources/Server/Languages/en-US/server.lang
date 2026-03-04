@@ -1,0 +1,7 @@
+# Bench
+items.Bench_OneBlockSalvager.name = OneBlock Salvager
+items.Bench_OneBlockSalvager.description = Salvage bench used to break down materials into new resources
+
+# Unlock consumable (optional)
+items.OneBlock_Unlock_Recipe_Salvager.name = Salvager Recipe
+items.OneBlock_Unlock_Recipe_Salvager.description = Consume to learn how to craft the OneBlock Salvager.
