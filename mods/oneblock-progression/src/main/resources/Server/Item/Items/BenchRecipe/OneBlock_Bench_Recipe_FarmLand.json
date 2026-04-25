@@ -1,0 +1,20 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_FarmLand.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_FarmLand.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_FarmLand",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [ "RecipeDrop" ],
+    "RecipeDropTarget": [ "Bench_OneBlock_FarmLand" ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

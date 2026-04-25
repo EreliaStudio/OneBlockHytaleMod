@@ -1,0 +1,15 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Red.name",
+    "Description": "server.items.OneBlock_Crystal_Red.description"
+  },
+  "Id": "OneBlock_Crystal_Red",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/Crystal_Red.png",
+  "Categories": [
+    "Items.OneBlockCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "MaxStack": 64,
+  "Quality": "Uncommon"
+}

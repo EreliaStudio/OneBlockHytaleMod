@@ -1,0 +1,15 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Blue.name",
+    "Description": "server.items.OneBlock_Crystal_Blue.description"
+  },
+  "Id": "OneBlock_Crystal_Blue",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/Crystal_Blue.png",
+  "Categories": [
+    "Items.OneBlockCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "MaxStack": 64,
+  "Quality": "Common"
+}

@@ -1,0 +1,20 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Cave.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Cave.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Cave",
+  "ItemLevel": 4,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [ "RecipeDrop" ],
+    "RecipeDropTarget": [ "Bench_OneBlock_Cave" ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

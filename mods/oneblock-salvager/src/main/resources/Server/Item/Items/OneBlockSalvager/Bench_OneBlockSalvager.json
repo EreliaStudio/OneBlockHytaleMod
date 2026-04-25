@@ -49,6 +49,45 @@
     "VariantRotation": "NESW",
     "Bench": {
       "Type": "Processing",
+      "TierLevels": [
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ResourceTypeId": "Rubble",
+                "Quantity": 64
+              }
+            ],
+            "TimeSeconds": 5
+          },
+          "CraftingTimeReductionModifier": 0,
+          "ExtraInputSlot": 0,
+          "ExtraOutputSlot": 0
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ResourceTypeId": "Rubble",
+                "Quantity": 128
+              }
+            ],
+            "TimeSeconds": 8
+          },
+          "CraftingTimeReductionModifier": 0,
+          "ExtraInputSlot": 0,
+          "ExtraOutputSlot": 0
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [],
+            "TimeSeconds": 0
+          },
+          "CraftingTimeReductionModifier": 0,
+          "ExtraInputSlot": 0,
+          "ExtraOutputSlot": 0
+        }
+      ],
       "Input": [
         {
           "FilterValidIngredients": true

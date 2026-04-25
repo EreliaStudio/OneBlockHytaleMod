@@ -1,0 +1,97 @@
+# ─── Base Crystals ─────────────────────────────────────────────────────────────
+server.items.OneBlock_Crystal_Blue.name=Blue Crystal
+server.items.OneBlock_Crystal_Blue.description=A raw crystal salvaged from rubble. Used to craft expedition crystals.
+
+server.items.OneBlock_Crystal_Red.name=Red Crystal
+server.items.OneBlock_Crystal_Red.description=A mid-grade crystal salvaged from deeper rubble.
+
+server.items.OneBlock_Crystal_Yellow.name=Yellow Crystal
+server.items.OneBlock_Crystal_Yellow.description=A high-grade crystal salvaged from the deepest rubble.
+
+# ─── Expedition Crystals — FarmLand ────────────────────────────────────────────
+server.items.OneBlock_Crystal_FarmLand_Small.name=FarmLand Crystal (Small)
+server.items.OneBlock_Crystal_FarmLand_Small.description=Use on the OneBlock to begin a 100-tick FarmLand expedition.
+
+server.items.OneBlock_Crystal_FarmLand_Large.name=FarmLand Crystal (Large)
+server.items.OneBlock_Crystal_FarmLand_Large.description=Use on the OneBlock to begin a 300-tick FarmLand expedition.
+
+# ─── Expedition Crystals — Forest ──────────────────────────────────────────────
+server.items.OneBlock_Crystal_Forest_Small.name=Forest Crystal (Small)
+server.items.OneBlock_Crystal_Forest_Small.description=Use on the OneBlock to begin a 100-tick Forest expedition.
+
+server.items.OneBlock_Crystal_Forest_Large.name=Forest Crystal (Large)
+server.items.OneBlock_Crystal_Forest_Large.description=Use on the OneBlock to begin a 300-tick Forest expedition.
+
+# ─── Expedition Crystals — Cave ────────────────────────────────────────────────
+server.items.OneBlock_Crystal_Cave_Small.name=Cave Crystal (Small)
+server.items.OneBlock_Crystal_Cave_Small.description=Use on the OneBlock to begin a 100-tick Cave expedition.
+
+server.items.OneBlock_Crystal_Cave_Large.name=Cave Crystal (Large)
+server.items.OneBlock_Crystal_Cave_Large.description=Use on the OneBlock to begin a 300-tick Cave expedition.
+
+# ─── Expedition Crystals — Deep Cave ───────────────────────────────────────────
+server.items.OneBlock_Crystal_Deep Cave_Small.name=Deep Cave Crystal (Small)
+server.items.OneBlock_Crystal_Deep Cave_Small.description=Use on the OneBlock to begin a 100-tick Deep Cave expedition.
+
+server.items.OneBlock_Crystal_Deep Cave_Large.name=Deep Cave Crystal (Large)
+server.items.OneBlock_Crystal_Deep Cave_Large.description=Use on the OneBlock to begin a 300-tick Deep Cave expedition.
+
+# ─── Expedition Crystals — The Abyss ───────────────────────────────────────────
+server.items.OneBlock_Crystal_The Abyss_Small.name=Abyss Crystal (Small)
+server.items.OneBlock_Crystal_The Abyss_Small.description=Use on the OneBlock to begin a 100-tick Abyss expedition.
+
+server.items.OneBlock_Crystal_The Abyss_Large.name=Abyss Crystal (Large)
+server.items.OneBlock_Crystal_The Abyss_Large.description=Use on the OneBlock to begin a 300-tick Abyss expedition.
+
+# ─── Benches ───────────────────────────────────────────────────────────────────
+server.items.Bench_OneBlockEnchanter.name=Crystal Enchanter
+server.items.Bench_OneBlockEnchanter.description=Fuses salvaged crystals into expedition crystals.
+
+server.items.Bench_OneBlockWorkbench.name=OneBlock Workbench
+server.items.Bench_OneBlockWorkbench.description=Unlocks expedition bench recipes after expeditions are completed.
+
+server.items.Bench_OneBlock_FarmLand.name=FarmLand Bench
+server.items.Bench_OneBlock_FarmLand.description=An expedition bench for the FarmLand. Upgrade it to unlock more powerful recipes.
+
+server.items.Bench_OneBlock_Forest.name=Forest Bench
+server.items.Bench_OneBlock_Forest.description=An expedition bench for the Forest. Upgrade it to unlock more powerful recipes.
+
+server.items.Bench_OneBlock_Cave.name=Cave Bench
+server.items.Bench_OneBlock_Cave.description=An expedition bench for the Cave. Upgrade it to unlock more powerful recipes.
+
+server.items.Bench_OneBlock_Deep Cave.name=Deep Cave Bench
+server.items.Bench_OneBlock_Deep Cave.description=An expedition bench for the Deep Cave. Upgrade it to unlock more powerful recipes.
+
+server.items.Bench_OneBlock_The Abyss.name=Abyss Bench
+server.items.Bench_OneBlock_The Abyss.description=An expedition bench for the Abyss. Upgrade it to unlock more powerful recipes.
+
+# ─── Bench Categories ──────────────────────────────────────────────────────────
+server.benchCategories.OneBlockEnchanter_FarmLand=FarmLand Crystals
+server.benchCategories.OneBlockEnchanter_Forest=Forest Crystals
+server.benchCategories.OneBlockEnchanter_Cave=Cave Crystals
+server.benchCategories.OneBlockEnchanter_Deep Cave=Deep Cave Crystals
+server.benchCategories.OneBlockEnchanter_The Abyss=Abyss Crystals
+
+server.benchCategories.OneBlockWorkbench_ExpeditionBenches=Expedition Benches
+
+server.benchCategories.OneBlock_Bench_FarmLand_Tier1=FarmLand Recipes
+server.benchCategories.OneBlock_Bench_Forest_Tier1=Forest Recipes
+server.benchCategories.OneBlock_Bench_Cave_Tier1=Cave Recipes
+server.benchCategories.OneBlock_Bench_Deep Cave_Tier1=Deep Cave Recipes
+server.benchCategories.OneBlock_Bench_The Abyss_Tier1=Abyss Recipes
+
+# ─── Bench Recipe Items (dropped on expedition completion) ─────────────────────
+server.items.OneBlock_Bench_Recipe_FarmLand.name=Recipe: FarmLand Bench
+server.items.OneBlock_Bench_Recipe_FarmLand.description=Consume to unlock the FarmLand Bench crafting recipe at the OneBlock Workbench.
+
+server.items.OneBlock_Bench_Recipe_Forest.name=Recipe: Forest Bench
+server.items.OneBlock_Bench_Recipe_Forest.description=Consume to unlock the Forest Bench crafting recipe at the OneBlock Workbench.
+
+server.items.OneBlock_Bench_Recipe_Cave.name=Recipe: Cave Bench
+server.items.OneBlock_Bench_Recipe_Cave.description=Consume to unlock the Cave Bench crafting recipe at the OneBlock Workbench.
+
+server.items.OneBlock_Bench_Recipe_Deep Cave.name=Recipe: Deep Cave Bench
+server.items.OneBlock_Bench_Recipe_Deep Cave.description=Consume to unlock the Deep Cave Bench crafting recipe at the OneBlock Workbench.
+
+server.items.OneBlock_Bench_Recipe_The Abyss.name=Recipe: Abyss Bench
+server.items.OneBlock_Bench_Recipe_The Abyss.description=Consume to unlock the Abyss Bench crafting recipe at the OneBlock Workbench.

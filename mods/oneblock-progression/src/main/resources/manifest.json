@@ -2,10 +2,10 @@
   "Group": "com.EreliaStudio",
   "Name": "${name}",
   "Version": "${version}",
-  "Description": "Void world setup and fall protection for OneBlock.",
+  "Description": "Expedition progression, unlock system and crafting for OneBlock.",
   "ServerVersion": "2026.02.19-1a311a592",
-  "Main": "com.EreliaStudio.OneBlock.OneBlockWorldPlugin",
-  "IncludesAssetPack": false,
+  "Main": "com.EreliaStudio.OneBlock.OneBlockProgressionPlugin",
+  "IncludesAssetPack": true,
   "DisabledByDefault": false,
   "Dependencies": {},
   "OptionalDependencies": {}

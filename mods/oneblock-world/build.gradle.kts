@@ -1,3 +1,3 @@
 base {
-    archivesName.set("OneBlockWorld")
+    archivesName.set("OneBlock-World")
 }

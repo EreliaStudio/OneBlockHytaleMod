@@ -1,7 +1,7 @@
 {
   "Group": "com.EreliaStudio",
-  "Name": "OneBlockSalvager",
-  "Version": "1.0.0",
+  "Name": "${name}",
+  "Version": "${version}",
   "Description": "Salvager bench logic and assets for OneBlock",
   "Authors": [
     {

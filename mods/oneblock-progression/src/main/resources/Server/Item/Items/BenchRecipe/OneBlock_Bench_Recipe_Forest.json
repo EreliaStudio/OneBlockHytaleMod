@@ -1,0 +1,20 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Forest.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Forest.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Forest",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [ "RecipeDrop" ],
+    "RecipeDropTarget": [ "Bench_OneBlock_Forest" ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

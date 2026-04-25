@@ -1,0 +1,15 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Yellow.name",
+    "Description": "server.items.OneBlock_Crystal_Yellow.description"
+  },
+  "Id": "OneBlock_Crystal_Yellow",
+  "ItemLevel": 6,
+  "Icon": "Icons/ItemsGenerated/Crystal_Yellow.png",
+  "Categories": [
+    "Items.OneBlockCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "MaxStack": 64,
+  "Quality": "Rare"
+}

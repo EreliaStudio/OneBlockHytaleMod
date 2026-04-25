@@ -1,0 +1,72 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlockWorkbench.name",
+    "Description": "server.items.Bench_OneBlockWorkbench.description"
+  },
+  "Recipe": {
+    "Input": [
+      { "ItemId": "Ingredient_Fibre",  "Quantity": 8 },
+      { "ItemId": "Rock_Stone", "Quantity": 6 }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [ "Tools" ],
+        "Id": "Fieldcraft"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [ "Furniture.Benches" ],
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModelTexture": [ { "Texture": "Blocks/OneBlockUpgrader_Texture.png", "Weight": 1 } ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlockWorkbench",
+      "Type": "Crafting",
+      "Categories": [
+        {
+          "Id": "OneBlock_Workbench_ExpeditionBenches",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockWorkbench_ExpeditionBenches",
+          "Recipes": [
+            "Bench_OneBlock_FarmLand",
+            "Bench_OneBlock_Forest",
+            "Bench_OneBlock_Cave",
+            "Bench_OneBlock_Deep Cave",
+            "Bench_OneBlock_The Abyss"
+          ]
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim", "Looping": true },
+        "CraftCompletedInstant": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim" }
+      }
+    },
+    "Gathering": { "Breaking": { "GatherType": "Benches" } },
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
+    "Support": { "Down": [ { "FaceType": "Full" } ] },
+    "BlockSoundSetId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [ 22.5, 45.0, 22.5 ],
+    "Translation": [ 12.9, -11.7 ]
+  },
+  "Tags": { "Type": [ "Bench" ] },
+  "MaxStack": 1,
+  "ItemLevel": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

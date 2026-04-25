@@ -1,0 +1,59 @@
+{
+  "Tiers": [
+    {
+      "TierLevel": 1,
+      "Entries": [
+        {
+          "ItemId": "OneBlock_Crystal_Blue",
+          "Weight": 100
+        }
+      ]
+    },
+    {
+      "TierLevel": 2,
+      "Entries": [
+        {
+          "ItemId": "OneBlock_Crystal_Blue",
+          "Weight": 65
+        },
+        {
+          "ItemId": "OneBlock_Crystal_Red",
+          "Weight": 25
+        },
+        {
+          "ItemId": "Ore_Copper",
+          "Weight": 7
+        },
+        {
+          "ItemId": "Ore_Iron",
+          "Weight": 3
+        }
+      ]
+    },
+    {
+      "TierLevel": 3,
+      "Entries": [
+        {
+          "ItemId": "OneBlock_Crystal_Blue",
+          "Weight": 45
+        },
+        {
+          "ItemId": "OneBlock_Crystal_Red",
+          "Weight": 30
+        },
+        {
+          "ItemId": "OneBlock_Crystal_Yellow",
+          "Weight": 15
+        },
+        {
+          "ItemId": "Ore_Iron",
+          "Weight": 5
+        },
+        {
+          "ItemId": "Ore_Thorium",
+          "Weight": 5
+        }
+      ]
+    }
+  ]
+}

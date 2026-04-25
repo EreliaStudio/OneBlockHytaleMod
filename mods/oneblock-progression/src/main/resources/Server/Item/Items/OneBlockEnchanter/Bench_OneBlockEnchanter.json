@@ -1,0 +1,105 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlockEnchanter.name",
+    "Description": "server.items.Bench_OneBlockEnchanter.description"
+  },
+  "Recipe": {
+    "Input": [
+      { "ItemId": "Ingredient_Fibre",  "Quantity": 4 },
+      { "ItemId": "Rubble_Stone", "Quantity": 3 }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [ "Tools" ],
+        "Id": "Fieldcraft"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [ "Furniture.Benches" ],
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModelTexture": [ { "Texture": "Blocks/OneBlockUpgrader_Texture.png", "Weight": 1 } ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlockEnchanter",
+      "Type": "Crafting",
+      "Categories": [
+        {
+          "Id": "OneBlock_Enchanter_FarmLand",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_FarmLand",
+          "Recipes": [
+            "OneBlock_Crystal_FarmLand_Small",
+            "OneBlock_Crystal_FarmLand_Large"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Forest",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Forest",
+          "Recipes": [
+            "OneBlock_Crystal_Forest_Small",
+            "OneBlock_Crystal_Forest_Large"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Cave",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Cave",
+          "Recipes": [
+            "OneBlock_Crystal_Cave_Small",
+            "OneBlock_Crystal_Cave_Large"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Deep Cave",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Deep Cave",
+          "Recipes": [
+            "OneBlock_Crystal_Deep Cave_Small",
+            "OneBlock_Crystal_Deep Cave_Large"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_The Abyss",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_The Abyss",
+          "Recipes": [
+            "OneBlock_Crystal_The Abyss_Small",
+            "OneBlock_Crystal_The Abyss_Large"
+          ]
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim", "Looping": true },
+        "CraftCompletedInstant": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim" }
+      }
+    },
+    "Gathering": { "Breaking": { "GatherType": "Benches" } },
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
+    "Support": { "Down": [ { "FaceType": "Full" } ] },
+    "BlockSoundSetId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [ 22.5, 45.0, 22.5 ],
+    "Translation": [ 12.9, -11.7 ]
+  },
+  "Tags": { "Type": [ "Bench" ] },
+  "MaxStack": 1,
+  "ItemLevel": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

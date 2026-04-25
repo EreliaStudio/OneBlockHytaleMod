@@ -1,3 +1,3 @@
 base {
-    archivesName.set("OneBlockSalvager")
+    archivesName.set("OneBlock-Salvager")
 }
