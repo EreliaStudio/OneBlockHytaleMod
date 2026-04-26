@@ -3,8 +3,8 @@
     "Name": "server.items.OneBlock_Block_Meadow.name"
   },
   "Id": "OneBlock_Block_Meadow",
-  "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/OneBlock_Meadow.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

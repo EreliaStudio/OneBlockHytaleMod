@@ -130,6 +130,11 @@
         }
       }
     },
+    "BlockEntity": {
+      "Components": {
+        "BenchBlock": {}
+      }
+    },
     "Gathering": {
       "Breaking": {
         "GatherType": "Benches"

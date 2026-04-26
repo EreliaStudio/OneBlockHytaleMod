@@ -122,6 +122,13 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Ice_Essence", 3)
         ));
 
+        defaults.put("Meadow", List.of(
+                drop("Ingredient_Fibre", 10),
+                drop("Rubble_Stone", 10),
+                drop("Ingredient_Stick", 10),
+                drop("Soil_Dirt", 10)
+        ));
+
         defaults.put("Plains", List.of(
                 drop("Soil_Grass", 25),
                 drop("Plant_Grass_Lush", 20),

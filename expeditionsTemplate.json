@@ -2679,6 +2679,143 @@
       }
     ]
   },
+  "Meadow": {
+    "ItemLevel": 1,
+    "Crystal": {
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 8
+          }
+        ]
+      }
+    },
+    "Bench": {
+      "CraftInput": [
+        {
+          "ItemId": "Soil_Dirt",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Fibre",
+          "Quantity": 16
+        }
+      ],
+      "Upgrades": [
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 16
+            }
+          ],
+          "TimeSeconds": 5
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 10
+        }
+      ],
+      "Unlocks": [
+        {
+          "DropId": "Plant_Grass_Lush",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Soil_Grass",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Soil_Dirt",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Life_Essence",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Rabbit",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Seeds_Wheat_Eternal",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 24
+            },
+            {
+              "ItemId": "Ingredient_Life_Essence",
+              "Quantity": 4
+            }
+          ]
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Ingredient_Fibre",
+        "Weight": 10
+      },
+      {
+        "ID": "Rubble_Stone",
+        "Weight": 10
+      },
+      {
+        "ID": "Ingredient_Stick",
+        "Weight": 10
+      },
+      {
+        "ID": "Soil_Dirt",
+        "Weight": 10
+      }
+    ]
+  },
   "Plains": {
     "ItemLevel": 2,
     "Crystal": {

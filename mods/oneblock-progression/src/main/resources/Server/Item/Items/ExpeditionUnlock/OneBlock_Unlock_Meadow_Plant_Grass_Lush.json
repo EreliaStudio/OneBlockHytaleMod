@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.name",
+    "Description": "server.items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.description"
+  },
+  "Id": "OneBlock_Unlock_Meadow_Plant_Grass_Lush",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Meadow_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Meadow"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Meadow"
+    ],
+    "OneBlockUnlockDropId": [
+      "Plant_Grass_Lush"
+    ],
+    "OneBlockUnlockWeight": [
+      "15"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

@@ -172,6 +172,15 @@
           ]
         },
         {
+          "Id": "OneBlock_Enchanter_Meadow",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Enchanter_Meadow",
+          "Recipes": [
+            "OneBlock_Crystal_Meadow_Small",
+            "OneBlock_Crystal_Meadow_Large"
+          ]
+        },
+        {
           "Id": "OneBlock_Enchanter_Plains",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlock_Enchanter_Plains",

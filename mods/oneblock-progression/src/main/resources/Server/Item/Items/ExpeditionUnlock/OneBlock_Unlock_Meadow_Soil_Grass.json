@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Meadow_Soil_Grass.name",
+    "Description": "server.items.OneBlock_Unlock_Meadow_Soil_Grass.description"
+  },
+  "Id": "OneBlock_Unlock_Meadow_Soil_Grass",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Soil_Dirt",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Meadow_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Meadow"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Meadow"
+    ],
+    "OneBlockUnlockDropId": [
+      "Soil_Grass"
+    ],
+    "OneBlockUnlockWeight": [
+      "10"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

@@ -74,6 +74,9 @@ BENCH_DIR     = ITEMS / "ExpeditionBench"
 RECIPE_DIR    = ITEMS / "BenchRecipe"
 UNLOCK_DIR    = ITEMS / "ExpeditionUnlock"
 
+CORE         = Path("mods/oneblock-core/src/main/resources")
+BLOCK_DIR    = CORE / "Server/Item/Items/OneBlock"
+
 
 # ── ID sanitization ──────────────────────────────────────────────────────────
 
@@ -348,6 +351,7 @@ def build_expedition_bench(expedition_id: str, item_level: int,
                     }
                 }
             },
+            "BlockEntity": {"Components": {"BenchBlock": {}}},
             "Gathering": {"Breaking": {"GatherType": "Benches"}},
             "BlockParticleSetId": "Wood",
             "Support": {"Down": [{"FaceType": "Full"}]},
@@ -358,6 +362,54 @@ def build_expedition_bench(expedition_id: str, item_level: int,
         "MaxStack": 1,
         "ItemSoundSetId": "ISS_Blocks_Wood"
     }
+
+def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
+    eid     = _safe_eid(expedition_id)
+    item_id = f"OneBlock_Block_{eid}"
+    return {
+        "TranslationProperties": {
+            "Name": f"server.items.{item_id}.name"
+        },
+        "Id":         item_id,
+        "ItemLevel":  item_level,
+        "Icon":       f"Icons/ItemsGenerated/OneBlock_{eid}.png",
+        "Categories": ["Blocks.OneBlock"],
+        "PlayerAnimationsId": "Block",
+        "Set":        "OneBlock",
+        "BlockType": {
+            "Material": "Solid",
+            "DrawType":  "Cube",
+            "Group":     "OneBlock",
+            "Flags":     {},
+            "Gathering": {
+                "Breaking": {
+                    "GatherType": "Soils",
+                    "ItemId":     "Soil_Dirt",
+                    "Quantity":   0
+                }
+            },
+            "Textures": [
+                {
+                    "Down":  f"BlockTextures/{item_id}.png",
+                    "Sides": f"BlockTextures/{item_id}.png",
+                    "Up":    f"BlockTextures/{item_id}.png",
+                    "Weight": 1
+                }
+            ],
+            "TransitionToGroups": [],
+            "ParticleColor": "#ffffff"
+        },
+        "Tags": {
+            "Type": ["OneBlock_Block"]
+        },
+        "IconProperties": {
+            "Scale": 0.3,
+            "Rotation": [339.295, 229.107, 337.792],
+            "Translation": [0, -6]
+        },
+        "ItemSoundSetId": "ISS_Blocks_Stone"
+    }
+
 
 # ── Lang builder ──────────────────────────────────────────────────────────────
 
@@ -426,7 +478,7 @@ def _save_json(path: Path, data: dict, dry_run: bool):
     if dry_run:
         print(f"  [dry-run] Would overwrite {path}")
         return
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    path.write_bytes((json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
     print(f"  [patch]  {path}")
 
 
@@ -500,7 +552,7 @@ def write_json(path: Path, data: dict, dry_run: bool):
         print(f"  [dry-run] Would write {path.name}")
         return
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    path.write_bytes((json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
     print(f"  [write]  {path.name}")
 
 
@@ -530,7 +582,7 @@ def cleanup(repo_root: Path, dry_run: bool):
     print("\n=== Cleanup ===")
 
     # Delete all generated JSON files from output directories
-    for gen_dir in [CRYSTAL_DIR, BENCH_DIR, RECIPE_DIR, UNLOCK_DIR]:
+    for gen_dir in [CRYSTAL_DIR, BENCH_DIR, RECIPE_DIR, UNLOCK_DIR, BLOCK_DIR]:
         dir_path = repo_root / gen_dir
         if not dir_path.exists():
             continue
@@ -641,6 +693,13 @@ def main():
         drop_pool   = cfg["BaseDropPool"]
 
         eid = _safe_eid(expedition_id)
+
+        # OneBlock block (placed in-world during expeditions)
+        write_json(
+            repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",
+            build_oneblock_block(expedition_id, item_level),
+            args.dry_run
+        )
 
         # Crystal Small
         write_json(

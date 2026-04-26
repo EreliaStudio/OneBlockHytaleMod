@@ -3,8 +3,8 @@
     "Name": "server.items.OneBlock_Block_The_Abyss.name"
   },
   "Id": "OneBlock_Block_The_Abyss",
-  "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "ItemLevel": 9,
+  "Icon": "Icons/ItemsGenerated/OneBlock_The_Abyss.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
