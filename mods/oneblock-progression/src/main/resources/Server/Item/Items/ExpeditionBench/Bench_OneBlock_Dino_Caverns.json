@@ -18,7 +18,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Workbench_ExpeditionBenches"
+          "OneBlock_Workbench_Underground"
         ],
         "Id": "OneBlockWorkbench"
       }
@@ -43,13 +43,13 @@
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlock_Bench_Dino_Caverns",
+      "Id": "Bench_OneBlock_Dino_Caverns",
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Bench_Dino_Caverns_Tier1",
+          "Id": "Bench_OneBlock_Dino_Caverns_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Dino_Caverns_Tier1",
+          "Name": "server.benchCategories.Bench_OneBlock_Dino_Caverns_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased",
             "OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone",
@@ -57,9 +57,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Dino_Caverns_Tier2",
+          "Id": "Bench_OneBlock_Dino_Caverns_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Dino_Caverns_Tier2",
+          "Name": "server.benchCategories.Bench_OneBlock_Dino_Caverns_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Dino_Caverns_entity_Cave_Raptor",
             "OneBlock_Unlock_Dino_Caverns_entity_Crawler",
@@ -67,9 +67,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Dino_Caverns_Tier3",
+          "Id": "Bench_OneBlock_Dino_Caverns_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Dino_Caverns_Tier3",
+          "Name": "server.benchCategories.Bench_OneBlock_Dino_Caverns_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Dino_Caverns_Ingredient_Tooth_CaveRex",
             "OneBlock_Unlock_Dino_Caverns_Ingredient_Scale_Dimetrodon",

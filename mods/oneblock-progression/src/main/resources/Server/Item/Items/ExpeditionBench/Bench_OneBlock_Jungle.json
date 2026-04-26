@@ -18,7 +18,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Workbench_ExpeditionBenches"
+          "OneBlock_Workbench_Forest"
         ],
         "Id": "OneBlockWorkbench"
       }
@@ -43,13 +43,13 @@
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlock_Bench_Jungle",
+      "Id": "Bench_OneBlock_Jungle",
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Bench_Jungle_Tier1",
+          "Id": "Bench_OneBlock_Jungle_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Jungle_Tier1",
+          "Name": "server.benchCategories.Bench_OneBlock_Jungle_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Jungle_Wood_Banyan_Trunk",
             "OneBlock_Unlock_Jungle_Plant_Fruit_Mango",
@@ -58,9 +58,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Jungle_Tier2",
+          "Id": "Bench_OneBlock_Jungle_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Jungle_Tier2",
+          "Name": "server.benchCategories.Bench_OneBlock_Jungle_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Jungle_entity_Crocodile",
             "OneBlock_Unlock_Jungle_entity_Trork_Hunter",
@@ -68,9 +68,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Jungle_Tier3",
+          "Id": "Bench_OneBlock_Jungle_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Jungle_Tier3",
+          "Name": "server.benchCategories.Bench_OneBlock_Jungle_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy",
             "OneBlock_Unlock_Jungle_Ingredient_Water_Essence",

@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Frozen_Cave_Tier2"
+          "Bench_OneBlock_Frozen_Cave_Tier2"
         ],
-        "Id": "OneBlock_Bench_Frozen_Cave"
+        "Id": "Bench_OneBlock_Frozen_Cave"
       }
     ]
   },

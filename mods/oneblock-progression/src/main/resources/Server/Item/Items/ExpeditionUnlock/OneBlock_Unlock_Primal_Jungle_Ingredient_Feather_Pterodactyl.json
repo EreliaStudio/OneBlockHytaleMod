@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Primal_Jungle_Tier3"
+          "Bench_OneBlock_Primal_Jungle_Tier3"
         ],
-        "Id": "OneBlock_Bench_Primal_Jungle"
+        "Id": "Bench_OneBlock_Primal_Jungle"
       }
     ]
   },

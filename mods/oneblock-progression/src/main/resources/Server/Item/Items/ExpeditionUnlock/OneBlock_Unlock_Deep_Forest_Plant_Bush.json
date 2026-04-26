@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Deep_Forest_Tier1"
+          "Bench_OneBlock_Deep_Forest_Tier1"
         ],
-        "Id": "OneBlock_Bench_Deep_Forest"
+        "Id": "Bench_OneBlock_Deep_Forest"
       }
     ]
   },

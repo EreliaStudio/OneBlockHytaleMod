@@ -18,7 +18,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Workbench_ExpeditionBenches"
+          "OneBlock_Workbench_Surface"
         ],
         "Id": "OneBlockWorkbench"
       }
@@ -43,13 +43,13 @@
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlock_Bench_Egyptian_Temple",
+      "Id": "Bench_OneBlock_Egyptian_Temple",
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Bench_Egyptian_Temple_Tier1",
+          "Id": "Bench_OneBlock_Egyptian_Temple_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Egyptian_Temple_Tier1",
+          "Name": "server.benchCategories.Bench_OneBlock_Egyptian_Temple_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Egyptian_Temple_Block_Sand_White",
             "OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red",
@@ -57,9 +57,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Egyptian_Temple_Tier2",
+          "Id": "Bench_OneBlock_Egyptian_Temple_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Egyptian_Temple_Tier2",
+          "Name": "server.benchCategories.Bench_OneBlock_Egyptian_Temple_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie",
             "OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Soldier",
@@ -67,9 +67,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Egyptian_Temple_Tier3",
+          "Id": "Bench_OneBlock_Egyptian_Temple_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Egyptian_Temple_Tier3",
+          "Name": "server.benchCategories.Bench_OneBlock_Egyptian_Temple_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil",
             "OneBlock_Unlock_Egyptian_Temple_Ingredient_Claw_Scorpion",

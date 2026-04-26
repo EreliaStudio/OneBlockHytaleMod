@@ -46,6 +46,16 @@ ENCHANTER_CATEGORY_ORDER = [
     "Dark",
 ]
 
+WORKBENCH_CATEGORY_ORDER = [
+    "Surface",
+    "Forest",
+    "Underground",
+    "Cold",
+    "Inferno",
+    "Dark",
+]
+
+
 def _safe_eid(expedition_id: str) -> str:
     return expedition_id.replace(" ", "_")
 
@@ -61,6 +71,7 @@ def _quality(item_level: int) -> str:
         return "Rare"
     return "Epic"
 
+
 def _category_sort_key(category: dict) -> tuple[int, str]:
     category_id = category.get("Id", "")
 
@@ -72,6 +83,20 @@ def _category_sort_key(category: dict) -> tuple[int, str]:
             return (ENCHANTER_CATEGORY_ORDER.index(group), category_id)
 
     return (len(ENCHANTER_CATEGORY_ORDER), category_id)
+
+
+def _workbench_category_sort_key(category: dict) -> tuple[int, str]:
+    category_id = category.get("Id", "")
+
+    prefix = "OneBlock_Workbench_"
+    if category_id.startswith(prefix):
+        group = category_id[len(prefix):]
+
+        if group in WORKBENCH_CATEGORY_ORDER:
+            return (WORKBENCH_CATEGORY_ORDER.index(group), category_id)
+
+    return (len(WORKBENCH_CATEGORY_ORDER), category_id)
+
 
 def build_crystal(expedition_id: str, category: str, size: str, item_level: int, inputs: list) -> dict:
     eid = _safe_eid(expedition_id)
@@ -163,7 +188,7 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
     quality = unlock.get("Rank", "Common")
     cost = unlock["Cost"]
 
-    bench_id = f"OneBlock_Bench_{eid}"
+    bench_id = f"Bench_OneBlock_{eid}"
     item_id = f"OneBlock_Unlock_{eid}_{_safe_drop_id(drop_id)}"
     cat_id = f"{bench_id}_Tier{tier}"
 
@@ -205,9 +230,11 @@ def build_expedition_bench(
     item_level: int,
     craft_input: list,
     unlocks_by_tier: dict,
+    group: str,
 ) -> dict:
     eid = _safe_eid(expedition_id)
-    bench_id = f"OneBlock_Bench_{eid}"
+    gid = _safe_eid(group)
+    bench_id = f"Bench_OneBlock_{eid}"
     item_bench_id = f"Bench_OneBlock_{eid}"
 
     return {
@@ -220,7 +247,7 @@ def build_expedition_bench(
             "BenchRequirement": [
                 {
                     "Type": "Crafting",
-                    "Categories": ["OneBlock_Workbench_ExpeditionBenches"],
+                    "Categories": [f"OneBlock_Workbench_{gid}"],
                     "Id": "OneBlockWorkbench",
                 }
             ],
@@ -368,7 +395,7 @@ def build_lang_block(expedition_id: str) -> str:
         f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_{eid}.name=Recipe: {display} Bench",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {display} Bench crafting recipe at the OneBlock Workbench.",
-        f"{PREFIX_BENCH_LANG}.OneBlock_Bench_{eid}_Tier1={display} Recipes",
+        f"{PREFIX_BENCH_LANG}.Bench_OneBlock_{eid}_Tier1={display} Recipes",
     ]
 
     return "\n".join(lines)
@@ -466,19 +493,37 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
 
-def patch_workbench(path: Path, expedition_id: str, dry_run: bool):
+def patch_workbench(path: Path, expedition_id: str, group: str, dry_run: bool):
     eid = _safe_eid(expedition_id)
+    gid = _safe_eid(group)
 
     data = _load_json(path)
-    recipes = data["BlockType"]["Bench"]["Categories"][0]["Recipes"]
+    categories = data["BlockType"]["Bench"]["Categories"]
+
+    cat_id = f"OneBlock_Workbench_{gid}"
+    lang_key = f"OneBlockWorkbench_{gid}"
     bench_item_id = f"Bench_OneBlock_{eid}"
 
-    if bench_item_id in recipes:
-        print(f"  [skip]   Workbench already lists {bench_item_id}")
-        return
+    cat = next((candidate for candidate in categories if candidate["Id"] == cat_id), None)
 
-    recipes.append(bench_item_id)
+    if cat is None:
+        cat = {
+            "Id": cat_id,
+            "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+            "Name": f"{PREFIX_BENCH_JSON}.{lang_key}",
+            "Recipes": [],
+        }
+        categories.append(cat)
+    else:
+        cat["Name"] = f"{PREFIX_BENCH_JSON}.{lang_key}"
+
+    if bench_item_id not in cat["Recipes"]:
+        cat["Recipes"].append(bench_item_id)
+
+    categories.sort(key=_workbench_category_sort_key)
+
     _save_json(path, data, dry_run)
+    print(f"  [patch]  Workbench ← {eid} → group {gid}")
 
 
 def append_lang_recipe(
@@ -531,6 +576,38 @@ def patch_lang(path: Path, expedition_id: str, dry_run: bool):
     print(f"  [patch]  lang ← {expedition_id}")
 
 
+def patch_group_lang(path: Path, group: str, dry_run: bool):
+    gid = _safe_eid(group)
+
+    entries = {
+        f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_{gid}": f"{group} Crystals",
+        f"{PREFIX_BENCH_LANG}.OneBlockWorkbench_{gid}": f"{group} Expedition Benches",
+    }
+
+    existing = path.read_text(encoding="utf-8")
+    missing_lines = []
+
+    for key, value in entries.items():
+        if key not in existing:
+            missing_lines.append(f"{key}={value}")
+
+    if not missing_lines:
+        return
+
+    if dry_run:
+        for line in missing_lines:
+            print(f"  [dry-run] Would append lang entry for {line.split('=', 1)[0]}")
+        return
+
+    path.write_text(
+        existing.rstrip() + "\n" + "\n".join(missing_lines) + "\n",
+        encoding="utf-8",
+    )
+
+    for line in missing_lines:
+        print(f"  [patch]  lang ← {line.split('=', 1)[0]}")
+
+
 def write_json(path: Path, data: dict, dry_run: bool):
     if dry_run:
         print(f"  [dry-run] Would write {path.name}")
@@ -566,7 +643,8 @@ def _is_generated_lang_line(line: str) -> bool:
         or key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_")
         or key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Unlock_")
         or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_")
-        or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlock_Bench_")
+        or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockWorkbench_")
+        or key.startswith(f"{PREFIX_BENCH_LANG}.Bench_OneBlock_")
         or (
             key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Crystal_")
             and ("_Small." in key or "_Large." in key)
@@ -575,7 +653,8 @@ def _is_generated_lang_line(line: str) -> bool:
         or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Bench_Recipe_")
         or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Unlock_")
         or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockEnchanter_")
-        or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlock_Bench_")
+        or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockWorkbench_")
+        or key.startswith(f"{PREFIX_BENCH_JSON}.Bench_OneBlock_")
     )
 
 
@@ -628,23 +707,23 @@ def cleanup(repo_root: Path, dry_run: bool):
 
     if workbench_path.exists():
         data = _load_json(workbench_path)
-        recipes = data["BlockType"]["Bench"]["Categories"][0]["Recipes"]
+        categories = data["BlockType"]["Bench"]["Categories"]
 
-        before = len(recipes)
+        before = len(categories)
 
-        data["BlockType"]["Bench"]["Categories"][0]["Recipes"] = [
-            recipe_id
-            for recipe_id in recipes
-            if not recipe_id.startswith("Bench_OneBlock_")
+        data["BlockType"]["Bench"]["Categories"] = [
+            category
+            for category in categories
+            if not category.get("Id", "").startswith("OneBlock_Workbench_")
         ]
 
-        removed = before - len(data["BlockType"]["Bench"]["Categories"][0]["Recipes"])
+        removed = before - len(data["BlockType"]["Bench"]["Categories"])
 
         if removed:
             _save_json(workbench_path, data, dry_run)
 
             if not dry_run:
-                print(f"  [clean]  Removed {removed} recipe ID(s) from Workbench")
+                print(f"  [clean]  Removed {removed} category/categories from Workbench")
 
     lang_path = repo_root / LANG_FILE
 
@@ -749,25 +828,25 @@ def main():
 
         write_json(
             repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Small.json",
-			build_crystal(
-				expedition_id,
-				group,
-				"Small",
-				item_level,
-				crystal_cfg["Small"]["Input"],
-			),
+            build_crystal(
+                expedition_id,
+                group,
+                "Small",
+                item_level,
+                crystal_cfg["Small"]["Input"],
+            ),
             args.dry_run,
         )
 
         write_json(
             repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Large.json",
-			build_crystal(
-				expedition_id,
-				group,
-				"Large",
-				item_level,
-				crystal_cfg["Large"]["Input"],
-			),
+            build_crystal(
+                expedition_id,
+                group,
+                "Large",
+                item_level,
+                crystal_cfg["Large"]["Input"],
+            ),
             args.dry_run,
         )
 
@@ -804,6 +883,7 @@ def main():
                 item_level,
                 bench_cfg["CraftInput"],
                 unlocks_by_tier,
+                group,
             ),
             args.dry_run,
         )
@@ -828,6 +908,7 @@ def main():
             patch_workbench(
                 workbench_path,
                 expedition_id,
+                group,
                 args.dry_run,
             )
         else:
@@ -835,20 +916,7 @@ def main():
 
         if lang_path.exists():
             patch_lang(lang_path, expedition_id, args.dry_run)
-
-            gid = _safe_eid(group)
-            lang_key = f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_{gid}"
-            existing = lang_path.read_text(encoding="utf-8")
-
-            if lang_key not in existing:
-                if args.dry_run:
-                    print(f"  [dry-run] Would append lang entry for {lang_key}")
-                else:
-                    lang_path.write_text(
-                        existing.rstrip() + f"\n{lang_key}={group} Crystals\n",
-                        encoding="utf-8",
-                    )
-                    print(f"  [patch]  lang ← {lang_key}")
+            patch_group_lang(lang_path, group, args.dry_run)
         else:
             print(f"  [warn]   Lang file not found: {lang_path}")
 

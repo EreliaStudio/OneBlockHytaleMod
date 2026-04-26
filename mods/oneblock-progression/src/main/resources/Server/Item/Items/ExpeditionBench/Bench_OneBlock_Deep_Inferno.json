@@ -18,7 +18,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Workbench_ExpeditionBenches"
+          "OneBlock_Workbench_Inferno"
         ],
         "Id": "OneBlockWorkbench"
       }
@@ -43,22 +43,22 @@
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlock_Bench_Deep_Inferno",
+      "Id": "Bench_OneBlock_Deep_Inferno",
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Bench_Deep_Inferno_Tier1",
+          "Id": "Bench_OneBlock_Deep_Inferno_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Deep_Inferno_Tier1",
+          "Name": "server.benchCategories.Bench_OneBlock_Deep_Inferno_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Deep_Inferno_Ore_Onyxium",
             "OneBlock_Unlock_Deep_Inferno_Ingredient_Bolt_Cindercloth"
           ]
         },
         {
-          "Id": "OneBlock_Bench_Deep_Inferno_Tier2",
+          "Id": "Bench_OneBlock_Deep_Inferno_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Deep_Inferno_Tier2",
+          "Name": "server.benchCategories.Bench_OneBlock_Deep_Inferno_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Wizard",
             "OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Lancer",
@@ -66,9 +66,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Deep_Inferno_Tier3",
+          "Id": "Bench_OneBlock_Deep_Inferno_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Deep_Inferno_Tier3",
+          "Name": "server.benchCategories.Bench_OneBlock_Deep_Inferno_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Fighter",
             "OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Mage",

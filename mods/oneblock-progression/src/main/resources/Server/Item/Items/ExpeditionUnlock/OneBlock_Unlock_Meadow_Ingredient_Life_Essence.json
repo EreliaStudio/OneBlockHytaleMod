@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Meadow_Tier2"
+          "Bench_OneBlock_Meadow_Tier2"
         ],
-        "Id": "OneBlock_Bench_Meadow"
+        "Id": "Bench_OneBlock_Meadow"
       }
     ]
   },

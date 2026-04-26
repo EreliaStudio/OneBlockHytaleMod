@@ -26,9 +26,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Gem_Cave_Tier1"
+          "Bench_OneBlock_Gem_Cave_Tier1"
         ],
-        "Id": "OneBlock_Bench_Gem_Cave"
+        "Id": "Bench_OneBlock_Gem_Cave"
       }
     ]
   },

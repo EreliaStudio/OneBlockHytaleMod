@@ -26,9 +26,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Meadow_Tier3"
+          "Bench_OneBlock_Meadow_Tier3"
         ],
-        "Id": "OneBlock_Bench_Meadow"
+        "Id": "Bench_OneBlock_Meadow"
       }
     ]
   },

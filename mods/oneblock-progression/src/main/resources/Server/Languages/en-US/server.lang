@@ -27,9 +27,55 @@ items.Bench_OneBlockWorkbench.description=Unlocks expedition bench recipes after
 
 # ─── Bench Categories ──────────────────────────────────────────────────────────
 
-benchCategories.OneBlockWorkbench_ExpeditionBenches=Expedition Benches
-
 # ─── Bench Recipe Items (dropped on expedition completion) ─────────────────────
+
+benchCategories.OneBlock_Bench_Cave_Tier1=Cave Recipes
+
+benchCategories.OneBlock_Bench_Deep_Cave_Tier1=Deep_Cave Recipes
+
+benchCategories.OneBlock_Bench_The_Abyss_Tier1=The_Abyss Recipes
+
+benchCategories.OneBlock_Bench_Gem_Cave_Tier1=Gem_Cave Recipes
+
+benchCategories.OneBlock_Bench_Desert_Tier1=Desert Recipes
+
+benchCategories.OneBlock_Bench_Egyptian_Temple_Tier1=Egyptian_Temple Recipes
+
+benchCategories.OneBlock_Bench_Forest_Tier1=Forest Recipes
+
+benchCategories.OneBlock_Bench_Deep_Forest_Tier1=Deep_Forest Recipes
+
+benchCategories.OneBlock_Bench_Jungle_Tier1=Jungle Recipes
+
+benchCategories.OneBlock_Bench_Azure_Forest_Tier1=Azure_Forest Recipes
+
+benchCategories.OneBlock_Bench_Fiery_Forest_Tier1=Fiery_Forest Recipes
+
+benchCategories.OneBlock_Bench_Snow_Tier1=Snow Recipes
+
+benchCategories.OneBlock_Bench_Frozen_Forest_Tier1=Frozen_Forest Recipes
+
+benchCategories.OneBlock_Bench_Frozen_Cave_Tier1=Frozen_Cave Recipes
+
+benchCategories.OneBlock_Bench_Meadow_Tier1=Meadow Recipes
+
+benchCategories.OneBlock_Bench_Plains_Tier1=Plains Recipes
+
+benchCategories.OneBlock_Bench_Inferno_Tier1=Inferno Recipes
+
+benchCategories.OneBlock_Bench_Deep_Inferno_Tier1=Deep_Inferno Recipes
+
+benchCategories.OneBlock_Bench_Graveyard_Tier1=Graveyard Recipes
+
+benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier1=Ancient_Graveyard Recipes
+
+benchCategories.OneBlock_Bench_Cursed_Crypt_Tier1=Cursed_Crypt Recipes
+
+benchCategories.OneBlock_Bench_Primal_Jungle_Tier1=Primal_Jungle Recipes
+
+benchCategories.OneBlock_Bench_Dino_Caverns_Tier1=Dino_Caverns Recipes
+
+benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier1=Volcanic_Badlands Recipes
 items.OneBlock_Unlock_Cave_Rock_Stone_Mossy.name=Unlock: Rock Stone Mossy
 items.OneBlock_Unlock_Cave_Rock_Stone_Mossy.description=Consume to add Rock Stone Mossy to the Cave loot pool (weight 8).
 items.OneBlock_Unlock_Cave_Plant_Roots_Cave.name=Unlock: Plant Roots Cave
@@ -56,8 +102,9 @@ items.Bench_OneBlock_Cave.name=Cave Bench
 items.Bench_OneBlock_Cave.description=An expedition bench for Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Cave.name=Recipe: Cave Bench
 items.OneBlock_Bench_Recipe_Cave.description=Consume to unlock the Cave Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Cave_Tier1=Cave Recipes
+benchCategories.Bench_OneBlock_Cave_Tier1=Cave Recipes
 benchCategories.OneBlockEnchanter_Underground=Underground Crystals
+benchCategories.OneBlockWorkbench_Underground=Underground Expedition Benches
 items.OneBlock_Unlock_Deep_Cave_Rock_Shale.name=Unlock: Rock Shale
 items.OneBlock_Unlock_Deep_Cave_Rock_Shale.description=Consume to add Rock Shale to the Deep_Cave loot pool (weight 15).
 items.OneBlock_Unlock_Deep_Cave_Ore_Iron.name=Unlock: Ore Iron
@@ -86,7 +133,7 @@ items.Bench_OneBlock_Deep_Cave.name=Deep_Cave Bench
 items.Bench_OneBlock_Deep_Cave.description=An expedition bench for Deep_Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Deep_Cave.name=Recipe: Deep_Cave Bench
 items.OneBlock_Bench_Recipe_Deep_Cave.description=Consume to unlock the Deep_Cave Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Deep_Cave_Tier1=Deep_Cave Recipes
+benchCategories.Bench_OneBlock_Deep_Cave_Tier1=Deep_Cave Recipes
 items.OneBlock_Unlock_The_Abyss_Ore_Cobalt.name=Unlock: Ore Cobalt
 items.OneBlock_Unlock_The_Abyss_Ore_Cobalt.description=Consume to add Ore Cobalt to the The_Abyss loot pool (weight 8).
 items.OneBlock_Unlock_The_Abyss_Ore_Adamantite.name=Unlock: Ore Adamantite
@@ -113,7 +160,7 @@ items.Bench_OneBlock_The_Abyss.name=The_Abyss Bench
 items.Bench_OneBlock_The_Abyss.description=An expedition bench for The_Abyss. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_The_Abyss.name=Recipe: The_Abyss Bench
 items.OneBlock_Bench_Recipe_The_Abyss.description=Consume to unlock the The_Abyss Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_The_Abyss_Tier1=The_Abyss Recipes
+benchCategories.Bench_OneBlock_The_Abyss_Tier1=The_Abyss Recipes
 items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Emerald.name=Unlock: Rock Gem Emerald
 items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Emerald.description=Consume to add Rock Gem Emerald to the Gem_Cave loot pool (weight 3).
 items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz.name=Unlock: Rock Gem Topaz
@@ -142,7 +189,7 @@ items.Bench_OneBlock_Gem_Cave.name=Gem_Cave Bench
 items.Bench_OneBlock_Gem_Cave.description=An expedition bench for Gem_Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Gem_Cave.name=Recipe: Gem_Cave Bench
 items.OneBlock_Bench_Recipe_Gem_Cave.description=Consume to unlock the Gem_Cave Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Gem_Cave_Tier1=Gem_Cave Recipes
+benchCategories.Bench_OneBlock_Gem_Cave_Tier1=Gem_Cave Recipes
 items.OneBlock_Unlock_Desert_Block_Sand_White.name=Unlock: Block Sand White
 items.OneBlock_Unlock_Desert_Block_Sand_White.description=Consume to add Block Sand White to the Desert loot pool (weight 12).
 items.OneBlock_Unlock_Desert_Block_Clay.name=Unlock: Block Clay
@@ -173,8 +220,9 @@ items.Bench_OneBlock_Desert.name=Desert Bench
 items.Bench_OneBlock_Desert.description=An expedition bench for Desert. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Desert.name=Recipe: Desert Bench
 items.OneBlock_Bench_Recipe_Desert.description=Consume to unlock the Desert Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Desert_Tier1=Desert Recipes
+benchCategories.Bench_OneBlock_Desert_Tier1=Desert Recipes
 benchCategories.OneBlockEnchanter_Surface=Surface Crystals
+benchCategories.OneBlockWorkbench_Surface=Surface Expedition Benches
 items.OneBlock_Unlock_Egyptian_Temple_Block_Sand_White.name=Unlock: Block Sand White
 items.OneBlock_Unlock_Egyptian_Temple_Block_Sand_White.description=Consume to add Block Sand White to the Egyptian_Temple loot pool (weight 15).
 items.OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red.name=Unlock: Block Clay Red
@@ -203,7 +251,7 @@ items.Bench_OneBlock_Egyptian_Temple.name=Egyptian_Temple Bench
 items.Bench_OneBlock_Egyptian_Temple.description=An expedition bench for Egyptian_Temple. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Egyptian_Temple.name=Recipe: Egyptian_Temple Bench
 items.OneBlock_Bench_Recipe_Egyptian_Temple.description=Consume to unlock the Egyptian_Temple Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Egyptian_Temple_Tier1=Egyptian_Temple Recipes
+benchCategories.Bench_OneBlock_Egyptian_Temple_Tier1=Egyptian_Temple Recipes
 items.OneBlock_Unlock_Forest_Plant_Fruit_Apple.name=Unlock: Plant Fruit Apple
 items.OneBlock_Unlock_Forest_Plant_Fruit_Apple.description=Consume to add Plant Fruit Apple to the Forest loot pool (weight 8).
 items.OneBlock_Unlock_Forest_Wood_Beech_Trunk.name=Unlock: Wood Beech Trunk
@@ -230,8 +278,9 @@ items.Bench_OneBlock_Forest.name=Forest Bench
 items.Bench_OneBlock_Forest.description=An expedition bench for Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Forest.name=Recipe: Forest Bench
 items.OneBlock_Bench_Recipe_Forest.description=Consume to unlock the Forest Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Forest_Tier1=Forest Recipes
+benchCategories.Bench_OneBlock_Forest_Tier1=Forest Recipes
 benchCategories.OneBlockEnchanter_Forest=Forest Crystals
+benchCategories.OneBlockWorkbench_Forest=Forest Expedition Benches
 items.OneBlock_Unlock_Deep_Forest_Wood_Maple_Trunk.name=Unlock: Wood Maple Trunk
 items.OneBlock_Unlock_Deep_Forest_Wood_Maple_Trunk.description=Consume to add Wood Maple Trunk to the Deep_Forest loot pool (weight 15).
 items.OneBlock_Unlock_Deep_Forest_Plant_Bush.name=Unlock: Plant Bush
@@ -260,7 +309,7 @@ items.Bench_OneBlock_Deep_Forest.name=Deep_Forest Bench
 items.Bench_OneBlock_Deep_Forest.description=An expedition bench for Deep_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Deep_Forest.name=Recipe: Deep_Forest Bench
 items.OneBlock_Bench_Recipe_Deep_Forest.description=Consume to unlock the Deep_Forest Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Deep_Forest_Tier1=Deep_Forest Recipes
+benchCategories.Bench_OneBlock_Deep_Forest_Tier1=Deep_Forest Recipes
 items.OneBlock_Unlock_Jungle_Wood_Banyan_Trunk.name=Unlock: Wood Banyan Trunk
 items.OneBlock_Unlock_Jungle_Wood_Banyan_Trunk.description=Consume to add Wood Banyan Trunk to the Jungle loot pool (weight 10).
 items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.name=Unlock: Plant Fruit Mango
@@ -291,7 +340,7 @@ items.Bench_OneBlock_Jungle.name=Jungle Bench
 items.Bench_OneBlock_Jungle.description=An expedition bench for Jungle. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Jungle.name=Recipe: Jungle Bench
 items.OneBlock_Bench_Recipe_Jungle.description=Consume to unlock the Jungle Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Jungle_Tier1=Jungle Recipes
+benchCategories.Bench_OneBlock_Jungle_Tier1=Jungle Recipes
 items.OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue.name=Unlock: Plant Crop Mushroom Glowing Blue
 items.OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue.description=Consume to add Plant Crop Mushroom Glowing Blue to the Azure_Forest loot pool (weight 8).
 items.OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure.name=Unlock: Plant Fruit Azure
@@ -320,7 +369,7 @@ items.Bench_OneBlock_Azure_Forest.name=Azure_Forest Bench
 items.Bench_OneBlock_Azure_Forest.description=An expedition bench for Azure_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Azure_Forest.name=Recipe: Azure_Forest Bench
 items.OneBlock_Bench_Recipe_Azure_Forest.description=Consume to unlock the Azure_Forest Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Azure_Forest_Tier1=Azure_Forest Recipes
+benchCategories.Bench_OneBlock_Azure_Forest_Tier1=Azure_Forest Recipes
 items.OneBlock_Unlock_Fiery_Forest_Wood_Fire_Trunk.name=Unlock: Wood Fire Trunk
 items.OneBlock_Unlock_Fiery_Forest_Wood_Fire_Trunk.description=Consume to add Wood Fire Trunk to the Fiery_Forest loot pool (weight 15).
 items.OneBlock_Unlock_Fiery_Forest_Plant_Crop_Mushroom_Glowing_Red.name=Unlock: Plant Crop Mushroom Glowing Red
@@ -349,7 +398,7 @@ items.Bench_OneBlock_Fiery_Forest.name=Fiery_Forest Bench
 items.Bench_OneBlock_Fiery_Forest.description=An expedition bench for Fiery_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Fiery_Forest.name=Recipe: Fiery_Forest Bench
 items.OneBlock_Bench_Recipe_Fiery_Forest.description=Consume to unlock the Fiery_Forest Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Fiery_Forest_Tier1=Fiery_Forest Recipes
+benchCategories.Bench_OneBlock_Fiery_Forest_Tier1=Fiery_Forest Recipes
 items.OneBlock_Unlock_Snow_Plant_Frost_Fern.name=Unlock: Plant Frost Fern
 items.OneBlock_Unlock_Snow_Plant_Frost_Fern.description=Consume to add Plant Frost Fern to the Snow loot pool (weight 10).
 items.OneBlock_Unlock_Snow_Plant_Ice_Flower_Blue.name=Unlock: Plant Ice Flower Blue
@@ -378,8 +427,9 @@ items.Bench_OneBlock_Snow.name=Snow Bench
 items.Bench_OneBlock_Snow.description=An expedition bench for Snow. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Snow.name=Recipe: Snow Bench
 items.OneBlock_Bench_Recipe_Snow.description=Consume to unlock the Snow Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Snow_Tier1=Snow Recipes
+benchCategories.Bench_OneBlock_Snow_Tier1=Snow Recipes
 benchCategories.OneBlockEnchanter_Cold=Cold Crystals
+benchCategories.OneBlockWorkbench_Cold=Cold Expedition Benches
 items.OneBlock_Unlock_Frozen_Forest_Block_Ice_Frosted.name=Unlock: Block Ice Frosted
 items.OneBlock_Unlock_Frozen_Forest_Block_Ice_Frosted.description=Consume to add Block Ice Frosted to the Frozen_Forest loot pool (weight 15).
 items.OneBlock_Unlock_Frozen_Forest_Plant_Snow_Shrub.name=Unlock: Plant Snow Shrub
@@ -408,7 +458,7 @@ items.Bench_OneBlock_Frozen_Forest.name=Frozen_Forest Bench
 items.Bench_OneBlock_Frozen_Forest.description=An expedition bench for Frozen_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Frozen_Forest.name=Recipe: Frozen_Forest Bench
 items.OneBlock_Bench_Recipe_Frozen_Forest.description=Consume to unlock the Frozen_Forest Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Frozen_Forest_Tier1=Frozen_Forest Recipes
+benchCategories.Bench_OneBlock_Frozen_Forest_Tier1=Frozen_Forest Recipes
 items.OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear.name=Unlock: Block Ice Clear
 items.OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear.description=Consume to add Block Ice Clear to the Frozen_Cave loot pool (weight 20).
 items.OneBlock_Unlock_Frozen_Cave_Rock_Frozen_Stone.name=Unlock: Rock Frozen Stone
@@ -437,7 +487,7 @@ items.Bench_OneBlock_Frozen_Cave.name=Frozen_Cave Bench
 items.Bench_OneBlock_Frozen_Cave.description=An expedition bench for Frozen_Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Frozen_Cave.name=Recipe: Frozen_Cave Bench
 items.OneBlock_Bench_Recipe_Frozen_Cave.description=Consume to unlock the Frozen_Cave Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Frozen_Cave_Tier1=Frozen_Cave Recipes
+benchCategories.Bench_OneBlock_Frozen_Cave_Tier1=Frozen_Cave Recipes
 items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.name=Unlock: Plant Grass Lush
 items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.description=Consume to add Plant Grass Lush to the Meadow loot pool (weight 15).
 items.OneBlock_Unlock_Meadow_Soil_Grass.name=Unlock: Soil Grass
@@ -458,7 +508,7 @@ items.Bench_OneBlock_Meadow.name=Meadow Bench
 items.Bench_OneBlock_Meadow.description=An expedition bench for Meadow. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Meadow.name=Recipe: Meadow Bench
 items.OneBlock_Bench_Recipe_Meadow.description=Consume to unlock the Meadow Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Meadow_Tier1=Meadow Recipes
+benchCategories.Bench_OneBlock_Meadow_Tier1=Meadow Recipes
 items.OneBlock_Unlock_Plains_Plant_Crop_Wheat_Item.name=Unlock: Plant Crop Wheat Item
 items.OneBlock_Unlock_Plains_Plant_Crop_Wheat_Item.description=Consume to add Plant Crop Wheat Item to the Plains loot pool (weight 10).
 items.OneBlock_Unlock_Plains_Plant_Crop_Carrot_Item.name=Unlock: Plant Crop Carrot Item
@@ -489,7 +539,7 @@ items.Bench_OneBlock_Plains.name=Plains Bench
 items.Bench_OneBlock_Plains.description=An expedition bench for Plains. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Plains.name=Recipe: Plains Bench
 items.OneBlock_Bench_Recipe_Plains.description=Consume to unlock the Plains Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Plains_Tier1=Plains Recipes
+benchCategories.Bench_OneBlock_Plains_Tier1=Plains Recipes
 items.OneBlock_Unlock_Inferno_Ingredient_Sinue_Cindersinue.name=Unlock: Ingredient Sinue Cindersinue
 items.OneBlock_Unlock_Inferno_Ingredient_Sinue_Cindersinue.description=Consume to add Ingredient Sinue Cindersinue to the Inferno loot pool (weight 5).
 items.OneBlock_Unlock_Inferno_Ingredient_Bolt_Cindercloth.name=Unlock: Ingredient Bolt Cindercloth
@@ -518,8 +568,9 @@ items.Bench_OneBlock_Inferno.name=Inferno Bench
 items.Bench_OneBlock_Inferno.description=An expedition bench for Inferno. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Inferno.name=Recipe: Inferno Bench
 items.OneBlock_Bench_Recipe_Inferno.description=Consume to unlock the Inferno Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Inferno_Tier1=Inferno Recipes
+benchCategories.Bench_OneBlock_Inferno_Tier1=Inferno Recipes
 benchCategories.OneBlockEnchanter_Inferno=Inferno Crystals
+benchCategories.OneBlockWorkbench_Inferno=Inferno Expedition Benches
 items.OneBlock_Unlock_Deep_Inferno_Ore_Onyxium.name=Unlock: Ore Onyxium
 items.OneBlock_Unlock_Deep_Inferno_Ore_Onyxium.description=Consume to add Ore Onyxium to the Deep_Inferno loot pool (weight 5).
 items.OneBlock_Unlock_Deep_Inferno_Ingredient_Bolt_Cindercloth.name=Unlock: Ingredient Bolt Cindercloth
@@ -548,7 +599,7 @@ items.Bench_OneBlock_Deep_Inferno.name=Deep_Inferno Bench
 items.Bench_OneBlock_Deep_Inferno.description=An expedition bench for Deep_Inferno. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Deep_Inferno.name=Recipe: Deep_Inferno Bench
 items.OneBlock_Bench_Recipe_Deep_Inferno.description=Consume to unlock the Deep_Inferno Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Deep_Inferno_Tier1=Deep_Inferno Recipes
+benchCategories.Bench_OneBlock_Deep_Inferno_Tier1=Deep_Inferno Recipes
 items.OneBlock_Unlock_Graveyard_Ingredient_Bone_Fragment.name=Unlock: Ingredient Bone Fragment
 items.OneBlock_Unlock_Graveyard_Ingredient_Bone_Fragment.description=Consume to add Ingredient Bone Fragment to the Graveyard loot pool (weight 15).
 items.OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted.name=Unlock: Plant Bramble Moss Twisted
@@ -575,8 +626,9 @@ items.Bench_OneBlock_Graveyard.name=Graveyard Bench
 items.Bench_OneBlock_Graveyard.description=An expedition bench for Graveyard. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Graveyard.name=Recipe: Graveyard Bench
 items.OneBlock_Bench_Recipe_Graveyard.description=Consume to unlock the Graveyard Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Graveyard_Tier1=Graveyard Recipes
+benchCategories.Bench_OneBlock_Graveyard_Tier1=Graveyard Recipes
 benchCategories.OneBlockEnchanter_Dark=Dark Crystals
+benchCategories.OneBlockWorkbench_Dark=Dark Expedition Benches
 items.OneBlock_Unlock_Ancient_Graveyard_Rock_Shale.name=Unlock: Rock Shale
 items.OneBlock_Unlock_Ancient_Graveyard_Rock_Shale.description=Consume to add Rock Shale to the Ancient_Graveyard loot pool (weight 15).
 items.OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment.name=Unlock: Ingredient Bone Fragment
@@ -605,7 +657,7 @@ items.Bench_OneBlock_Ancient_Graveyard.name=Ancient_Graveyard Bench
 items.Bench_OneBlock_Ancient_Graveyard.description=An expedition bench for Ancient_Graveyard. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Ancient_Graveyard.name=Recipe: Ancient_Graveyard Bench
 items.OneBlock_Bench_Recipe_Ancient_Graveyard.description=Consume to unlock the Ancient_Graveyard Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier1=Ancient_Graveyard Recipes
+benchCategories.Bench_OneBlock_Ancient_Graveyard_Tier1=Ancient_Graveyard Recipes
 items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Bone_Fragment.name=Unlock: Ingredient Bone Fragment
 items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Bone_Fragment.description=Consume to add Ingredient Bone Fragment to the Cursed_Crypt loot pool (weight 15).
 items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.name=Unlock: Ingredient Chitin Sturdy
@@ -634,7 +686,7 @@ items.Bench_OneBlock_Cursed_Crypt.name=Cursed_Crypt Bench
 items.Bench_OneBlock_Cursed_Crypt.description=An expedition bench for Cursed_Crypt. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Cursed_Crypt.name=Recipe: Cursed_Crypt Bench
 items.OneBlock_Bench_Recipe_Cursed_Crypt.description=Consume to unlock the Cursed_Crypt Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Cursed_Crypt_Tier1=Cursed_Crypt Recipes
+benchCategories.Bench_OneBlock_Cursed_Crypt_Tier1=Cursed_Crypt Recipes
 items.OneBlock_Unlock_Primal_Jungle_Block_Amber.name=Unlock: Block Amber
 items.OneBlock_Unlock_Primal_Jungle_Block_Amber.description=Consume to add Block Amber to the Primal_Jungle loot pool (weight 8).
 items.OneBlock_Unlock_Primal_Jungle_Ingredient_Primal_Meat.name=Unlock: Ingredient Primal Meat
@@ -661,7 +713,7 @@ items.Bench_OneBlock_Primal_Jungle.name=Primal_Jungle Bench
 items.Bench_OneBlock_Primal_Jungle.description=An expedition bench for Primal_Jungle. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Primal_Jungle.name=Recipe: Primal_Jungle Bench
 items.OneBlock_Bench_Recipe_Primal_Jungle.description=Consume to unlock the Primal_Jungle Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Primal_Jungle_Tier1=Primal_Jungle Recipes
+benchCategories.Bench_OneBlock_Primal_Jungle_Tier1=Primal_Jungle Recipes
 items.OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased.name=Unlock: Rock Amber Encased
 items.OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased.description=Consume to add Rock Amber Encased to the Dino_Caverns loot pool (weight 8).
 items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.name=Unlock: Ingredient Dinosaur Bone
@@ -690,7 +742,7 @@ items.Bench_OneBlock_Dino_Caverns.name=Dino_Caverns Bench
 items.Bench_OneBlock_Dino_Caverns.description=An expedition bench for Dino_Caverns. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Dino_Caverns.name=Recipe: Dino_Caverns Bench
 items.OneBlock_Bench_Recipe_Dino_Caverns.description=Consume to unlock the Dino_Caverns Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Dino_Caverns_Tier1=Dino_Caverns Recipes
+benchCategories.Bench_OneBlock_Dino_Caverns_Tier1=Dino_Caverns Recipes
 items.OneBlock_Unlock_Volcanic_Badlands_Ore_Primal_Iron.name=Unlock: Ore Primal Iron
 items.OneBlock_Unlock_Volcanic_Badlands_Ore_Primal_Iron.description=Consume to add Ore Primal Iron to the Volcanic_Badlands loot pool (weight 8).
 items.OneBlock_Unlock_Volcanic_Badlands_Ingredient_Primal_Core.name=Unlock: Ingredient Primal Core
@@ -717,4 +769,4 @@ items.Bench_OneBlock_Volcanic_Badlands.name=Volcanic_Badlands Bench
 items.Bench_OneBlock_Volcanic_Badlands.description=An expedition bench for Volcanic_Badlands. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Volcanic_Badlands.name=Recipe: Volcanic_Badlands Bench
 items.OneBlock_Bench_Recipe_Volcanic_Badlands.description=Consume to unlock the Volcanic_Badlands Bench crafting recipe at the OneBlock Workbench.
-benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier1=Volcanic_Badlands Recipes
+benchCategories.Bench_OneBlock_Volcanic_Badlands_Tier1=Volcanic_Badlands Recipes

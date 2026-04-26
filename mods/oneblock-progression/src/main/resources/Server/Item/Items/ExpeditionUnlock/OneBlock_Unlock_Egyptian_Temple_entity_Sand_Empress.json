@@ -26,9 +26,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Egyptian_Temple_Tier3"
+          "Bench_OneBlock_Egyptian_Temple_Tier3"
         ],
-        "Id": "OneBlock_Bench_Egyptian_Temple"
+        "Id": "Bench_OneBlock_Egyptian_Temple"
       }
     ]
   },

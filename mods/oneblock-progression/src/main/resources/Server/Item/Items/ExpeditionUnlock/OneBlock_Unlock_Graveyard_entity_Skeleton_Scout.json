@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Graveyard_Tier2"
+          "Bench_OneBlock_Graveyard_Tier2"
         ],
-        "Id": "OneBlock_Bench_Graveyard"
+        "Id": "Bench_OneBlock_Graveyard"
       }
     ]
   },

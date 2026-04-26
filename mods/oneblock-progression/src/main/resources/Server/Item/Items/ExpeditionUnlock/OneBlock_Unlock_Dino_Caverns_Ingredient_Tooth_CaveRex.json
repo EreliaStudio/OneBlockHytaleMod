@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Dino_Caverns_Tier3"
+          "Bench_OneBlock_Dino_Caverns_Tier3"
         ],
-        "Id": "OneBlock_Bench_Dino_Caverns"
+        "Id": "Bench_OneBlock_Dino_Caverns"
       }
     ]
   },

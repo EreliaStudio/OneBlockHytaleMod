@@ -46,34 +46,69 @@
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Workbench_ExpeditionBenches",
+          "Id": "OneBlock_Workbench_Surface",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlockWorkbench_ExpeditionBenches",
+          "Name": "server.benchCategories.OneBlockWorkbench_Surface",
           "Recipes": [
-            "Bench_OneBlock_Cave",
-            "Bench_OneBlock_Deep_Cave",
-            "Bench_OneBlock_The_Abyss",
-            "Bench_OneBlock_Gem_Cave",
             "Bench_OneBlock_Desert",
             "Bench_OneBlock_Egyptian_Temple",
+            "Bench_OneBlock_Meadow",
+            "Bench_OneBlock_Plains"
+          ]
+        },
+        {
+          "Id": "OneBlock_Workbench_Forest",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockWorkbench_Forest",
+          "Recipes": [
             "Bench_OneBlock_Forest",
             "Bench_OneBlock_Deep_Forest",
             "Bench_OneBlock_Jungle",
             "Bench_OneBlock_Azure_Forest",
             "Bench_OneBlock_Fiery_Forest",
-            "Bench_OneBlock_Snow",
-            "Bench_OneBlock_Frozen_Forest",
+            "Bench_OneBlock_Primal_Jungle"
+          ]
+        },
+        {
+          "Id": "OneBlock_Workbench_Underground",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockWorkbench_Underground",
+          "Recipes": [
+            "Bench_OneBlock_Cave",
+            "Bench_OneBlock_Deep_Cave",
+            "Bench_OneBlock_The_Abyss",
+            "Bench_OneBlock_Gem_Cave",
             "Bench_OneBlock_Frozen_Cave",
-            "Bench_OneBlock_Meadow",
-            "Bench_OneBlock_Plains",
+            "Bench_OneBlock_Dino_Caverns"
+          ]
+        },
+        {
+          "Id": "OneBlock_Workbench_Cold",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockWorkbench_Cold",
+          "Recipes": [
+            "Bench_OneBlock_Snow",
+            "Bench_OneBlock_Frozen_Forest"
+          ]
+        },
+        {
+          "Id": "OneBlock_Workbench_Inferno",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockWorkbench_Inferno",
+          "Recipes": [
             "Bench_OneBlock_Inferno",
             "Bench_OneBlock_Deep_Inferno",
+            "Bench_OneBlock_Volcanic_Badlands"
+          ]
+        },
+        {
+          "Id": "OneBlock_Workbench_Dark",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockWorkbench_Dark",
+          "Recipes": [
             "Bench_OneBlock_Graveyard",
             "Bench_OneBlock_Ancient_Graveyard",
-            "Bench_OneBlock_Cursed_Crypt",
-            "Bench_OneBlock_Primal_Jungle",
-            "Bench_OneBlock_Dino_Caverns",
-            "Bench_OneBlock_Volcanic_Badlands"
+            "Bench_OneBlock_Cursed_Crypt"
           ]
         }
       ],

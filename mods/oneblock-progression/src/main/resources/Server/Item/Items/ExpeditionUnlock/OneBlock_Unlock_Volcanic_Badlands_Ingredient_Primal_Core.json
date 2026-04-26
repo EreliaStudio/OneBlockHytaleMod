@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Volcanic_Badlands_Tier1"
+          "Bench_OneBlock_Volcanic_Badlands_Tier1"
         ],
-        "Id": "OneBlock_Bench_Volcanic_Badlands"
+        "Id": "Bench_OneBlock_Volcanic_Badlands"
       }
     ]
   },

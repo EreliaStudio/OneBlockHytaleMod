@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Snow_Tier1"
+          "Bench_OneBlock_Snow_Tier1"
         ],
-        "Id": "OneBlock_Bench_Snow"
+        "Id": "Bench_OneBlock_Snow"
       }
     ]
   },

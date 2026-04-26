@@ -18,7 +18,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Workbench_ExpeditionBenches"
+          "OneBlock_Workbench_Forest"
         ],
         "Id": "OneBlockWorkbench"
       }
@@ -43,13 +43,13 @@
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlock_Bench_Forest",
+      "Id": "Bench_OneBlock_Forest",
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Bench_Forest_Tier1",
+          "Id": "Bench_OneBlock_Forest_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Forest_Tier1",
+          "Name": "server.benchCategories.Bench_OneBlock_Forest_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Forest_Plant_Fruit_Apple",
             "OneBlock_Unlock_Forest_Wood_Beech_Trunk",
@@ -57,9 +57,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Forest_Tier2",
+          "Id": "Bench_OneBlock_Forest_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Forest_Tier2",
+          "Name": "server.benchCategories.Bench_OneBlock_Forest_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Forest_entity_Boar",
             "OneBlock_Unlock_Forest_entity_Deer",
@@ -67,9 +67,9 @@
           ]
         },
         {
-          "Id": "OneBlock_Bench_Forest_Tier3",
+          "Id": "Bench_OneBlock_Forest_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Forest_Tier3",
+          "Name": "server.benchCategories.Bench_OneBlock_Forest_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Forest_Ingredient_Leather_Light",
             "OneBlock_Unlock_Forest_Ingredient_Tree_Bark"

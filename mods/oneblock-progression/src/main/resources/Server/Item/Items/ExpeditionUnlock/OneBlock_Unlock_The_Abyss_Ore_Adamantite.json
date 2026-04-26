@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_The_Abyss_Tier1"
+          "Bench_OneBlock_The_Abyss_Tier1"
         ],
-        "Id": "OneBlock_Bench_The_Abyss"
+        "Id": "Bench_OneBlock_The_Abyss"
       }
     ]
   },

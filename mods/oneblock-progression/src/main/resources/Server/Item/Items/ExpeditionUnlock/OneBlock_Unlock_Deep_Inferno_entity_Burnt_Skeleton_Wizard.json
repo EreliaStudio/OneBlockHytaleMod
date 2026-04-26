@@ -22,9 +22,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Bench_Deep_Inferno_Tier2"
+          "Bench_OneBlock_Deep_Inferno_Tier2"
         ],
-        "Id": "OneBlock_Bench_Deep_Inferno"
+        "Id": "Bench_OneBlock_Deep_Inferno"
       }
     ]
   },
