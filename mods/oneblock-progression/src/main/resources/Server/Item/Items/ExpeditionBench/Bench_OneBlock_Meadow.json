@@ -7,11 +7,15 @@
     "Input": [
       {
         "ItemId": "Soil_Dirt",
-        "Quantity": 16
+        "Quantity": 4
       },
       {
         "ItemId": "Ingredient_Fibre",
-        "Quantity": 16
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Rubble_Stone",
+        "Quantity": 8
       }
     ],
     "BenchRequirement": [
@@ -23,7 +27,7 @@
         "Id": "OneBlockWorkbench"
       }
     ],
-    "KnowledgeRequired": true
+    "KnowledgeRequired": false
   },
   "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
   "Categories": [

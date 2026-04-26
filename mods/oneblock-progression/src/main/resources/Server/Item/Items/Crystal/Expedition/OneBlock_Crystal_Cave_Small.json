@@ -34,7 +34,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Crystal_Red",
+        "ItemId": "Rubble_Stone",
         "Quantity": 8
       }
     ],

@@ -11,7 +11,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "Ingredient_Crystal_Red",
+            "ItemId": "Rubble_Stone",
             "Quantity": 8
           }
         ]
@@ -19,12 +19,12 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "Ingredient_Crystal_Red",
-            "Quantity": 16
+            "ItemId": "Rubble_Stone",
+            "Quantity": 8
           },
           {
-            "ItemId": "Ingredient_Crystal_Yellow",
-            "Quantity": 4
+            "ItemId": "Ingredient_Crystal_Blue",
+            "Quantity": 8
           }
         ]
       }
@@ -1180,7 +1180,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "Ingredient_Crystal_Blue",
+            "ItemId": "Ingredient_Fibre",
             "Quantity": 8
           }
         ]
@@ -1188,8 +1188,12 @@
       "Large": {
         "Input": [
           {
+            "ItemId": "Ingredient_Fibre",
+            "Quantity": 8
+          },
+          {
             "ItemId": "Ingredient_Crystal_Blue",
-            "Quantity": 16
+            "Quantity": 8
           }
         ]
       }
@@ -2715,15 +2719,20 @@
       }
     },
     "Bench": {
+	  "KnowledgeRequired": false,
       "CraftInput": [
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 16
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 16
-        }
+		{
+			"ItemId": "Soil_Dirt",
+			"Quantity": 4
+		},
+		{
+			"ItemId": "Ingredient_Fibre",
+			"Quantity": 8
+		},
+		{
+			"ItemId": "Rubble_Stone",
+			"Quantity": 8
+		}
       ],
       "Upgrades": [
         {

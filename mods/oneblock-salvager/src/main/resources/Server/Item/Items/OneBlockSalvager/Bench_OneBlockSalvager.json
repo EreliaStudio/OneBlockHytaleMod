@@ -10,7 +10,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Bar_Iron",
+        "ItemId": "Ingredient_Bar_Copper",
         "Quantity": 6
       },
       {
@@ -29,11 +29,11 @@
           "Workbench_Crafting"
         ],
         "Id": "Workbench",
-        "RequiredTierLevel": 2
+        "RequiredTierLevel": 1
       }
     ],
     "TimeSeconds": 3,
-    "KnowledgeRequired": true
+    "KnowledgeRequired": false
   },
   "BlockType": {
     "Material": "Solid",

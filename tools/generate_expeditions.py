@@ -231,6 +231,7 @@ def build_expedition_bench(
     craft_input: list,
     unlocks_by_tier: dict,
     group: str,
+    knowledge_required: bool,
 ) -> dict:
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(group)
@@ -251,7 +252,7 @@ def build_expedition_bench(
                     "Id": "OneBlockWorkbench",
                 }
             ],
-            "KnowledgeRequired": True,
+            "KnowledgeRequired": knowledge_required,
         },
         "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
         "Categories": ["Furniture.Benches"],
@@ -884,6 +885,7 @@ def main():
                 bench_cfg["CraftInput"],
                 unlocks_by_tier,
                 group,
+                bench_cfg.get("KnowledgeRequired", True),
             ),
             args.dry_run,
         )
