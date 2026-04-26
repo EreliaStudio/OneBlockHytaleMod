@@ -34,11 +34,11 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "OneBlock_Crystal_Blue",
+        "ItemId": "Ingredient_Crystal_Blue",
         "Quantity": 8
       },
       {
-        "ItemId": "OneBlock_Crystal_Red",
+        "ItemId": "Ingredient_Crystal_Red",
         "Quantity": 4
       }
     ],
@@ -47,7 +47,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Desert"
+          "OneBlock_Enchanter_Surface"
         ],
         "Id": "OneBlockEnchanter"
       }

@@ -34,7 +34,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "OneBlock_Crystal_Yellow",
+        "ItemId": "Ingredient_Crystal_Yellow",
         "Quantity": 12
       }
     ],
@@ -43,7 +43,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_The_Abyss"
+          "OneBlock_Enchanter_Underground"
         ],
         "Id": "OneBlockEnchanter"
       }

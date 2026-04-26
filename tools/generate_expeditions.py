@@ -37,6 +37,14 @@ UNLOCK_DIR = ITEMS / "ExpeditionUnlock"
 CORE = Path("mods/oneblock-core/src/main/resources")
 BLOCK_DIR = CORE / "Server/Item/Items/OneBlock"
 
+ENCHANTER_CATEGORY_ORDER = [
+    "Surface",
+    "Forest",
+    "Underground",
+    "Cold",
+    "Inferno",
+    "Dark",
+]
 
 def _safe_eid(expedition_id: str) -> str:
     return expedition_id.replace(" ", "_")
@@ -53,9 +61,21 @@ def _quality(item_level: int) -> str:
         return "Rare"
     return "Epic"
 
+def _category_sort_key(category: dict) -> tuple[int, str]:
+    category_id = category.get("Id", "")
 
-def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) -> dict:
+    prefix = "OneBlock_Enchanter_"
+    if category_id.startswith(prefix):
+        group = category_id[len(prefix):]
+
+        if group in ENCHANTER_CATEGORY_ORDER:
+            return (ENCHANTER_CATEGORY_ORDER.index(group), category_id)
+
+    return (len(ENCHANTER_CATEGORY_ORDER), category_id)
+
+def build_crystal(expedition_id: str, category: str, size: str, item_level: int, inputs: list) -> dict:
     eid = _safe_eid(expedition_id)
+    cid = _safe_eid(category)
     item_id = f"OneBlock_Crystal_{eid}_{size}"
 
     return {
@@ -95,7 +115,7 @@ def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) 
             "BenchRequirement": [
                 {
                     "Type": "Crafting",
-                    "Categories": [f"OneBlock_Enchanter_{eid}"],
+                    "Categories": [f"OneBlock_Enchanter_{cid}"],
                     "Id": "OneBlockEnchanter",
                 }
             ],
@@ -440,6 +460,8 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
         if recipe_id not in cat["Recipes"]:
             cat["Recipes"].append(recipe_id)
 
+    categories.sort(key=_category_sort_key)
+
     _save_json(path, data, dry_run)
     print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
@@ -727,23 +749,25 @@ def main():
 
         write_json(
             repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Small.json",
-            build_crystal(
-                expedition_id,
-                "Small",
-                item_level,
-                crystal_cfg["Small"]["Input"],
-            ),
+			build_crystal(
+				expedition_id,
+				group,
+				"Small",
+				item_level,
+				crystal_cfg["Small"]["Input"],
+			),
             args.dry_run,
         )
 
         write_json(
             repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Large.json",
-            build_crystal(
-                expedition_id,
-                "Large",
-                item_level,
-                crystal_cfg["Large"]["Input"],
-            ),
+			build_crystal(
+				expedition_id,
+				group,
+				"Large",
+				item_level,
+				crystal_cfg["Large"]["Input"],
+			),
             args.dry_run,
         )
 

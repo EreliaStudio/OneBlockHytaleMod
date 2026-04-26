@@ -34,7 +34,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "OneBlock_Crystal_Yellow",
+        "ItemId": "Ingredient_Crystal_Yellow",
         "Quantity": 8
       }
     ],
@@ -43,7 +43,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Fiery_Forest"
+          "OneBlock_Enchanter_Forest"
         ],
         "Id": "OneBlockEnchanter"
       }

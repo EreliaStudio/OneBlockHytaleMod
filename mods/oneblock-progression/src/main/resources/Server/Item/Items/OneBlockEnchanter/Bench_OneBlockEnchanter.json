@@ -46,25 +46,6 @@
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Enchanter_Underground",
-          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Underground",
-          "Recipes": [
-            "OneBlock_Crystal_Cave_Small",
-            "OneBlock_Crystal_Cave_Large",
-            "OneBlock_Crystal_Deep_Cave_Small",
-            "OneBlock_Crystal_Deep_Cave_Large",
-            "OneBlock_Crystal_The_Abyss_Small",
-            "OneBlock_Crystal_The_Abyss_Large",
-            "OneBlock_Crystal_Gem_Cave_Small",
-            "OneBlock_Crystal_Gem_Cave_Large",
-            "OneBlock_Crystal_Frozen_Cave_Small",
-            "OneBlock_Crystal_Frozen_Cave_Large",
-            "OneBlock_Crystal_Dino_Caverns_Small",
-            "OneBlock_Crystal_Dino_Caverns_Large"
-          ]
-        },
-        {
           "Id": "OneBlock_Enchanter_Surface",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Surface",
@@ -96,6 +77,25 @@
             "OneBlock_Crystal_Fiery_Forest_Large",
             "OneBlock_Crystal_Primal_Jungle_Small",
             "OneBlock_Crystal_Primal_Jungle_Large"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Underground",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Underground",
+          "Recipes": [
+            "OneBlock_Crystal_Cave_Small",
+            "OneBlock_Crystal_Cave_Large",
+            "OneBlock_Crystal_Deep_Cave_Small",
+            "OneBlock_Crystal_Deep_Cave_Large",
+            "OneBlock_Crystal_The_Abyss_Small",
+            "OneBlock_Crystal_The_Abyss_Large",
+            "OneBlock_Crystal_Gem_Cave_Small",
+            "OneBlock_Crystal_Gem_Cave_Large",
+            "OneBlock_Crystal_Frozen_Cave_Small",
+            "OneBlock_Crystal_Frozen_Cave_Large",
+            "OneBlock_Crystal_Dino_Caverns_Small",
+            "OneBlock_Crystal_Dino_Caverns_Large"
           ]
         },
         {

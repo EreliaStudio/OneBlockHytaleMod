@@ -11,7 +11,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           }
         ]
@@ -19,11 +19,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -44,7 +44,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             }
           ],
@@ -53,11 +53,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 16
             }
           ],
@@ -193,11 +193,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 12
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 6
           }
         ]
@@ -205,11 +205,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 24
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 12
           }
         ]
@@ -230,7 +230,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 24
             }
           ],
@@ -239,7 +239,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -387,7 +387,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 12
           }
         ]
@@ -395,7 +395,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 24
           }
         ]
@@ -416,7 +416,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -425,7 +425,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 64
             }
           ],
@@ -558,11 +558,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -570,11 +570,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -595,7 +595,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 32
             }
           ],
@@ -604,7 +604,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -772,11 +772,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 4
           }
         ]
@@ -784,11 +784,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           }
         ]
@@ -809,11 +809,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 16
             },
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 16
             }
           ],
@@ -822,11 +822,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 8
             }
           ],
@@ -986,11 +986,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -998,11 +998,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -1023,7 +1023,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 24
             }
           ],
@@ -1032,7 +1032,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -1180,7 +1180,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 8
           }
         ]
@@ -1188,7 +1188,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 16
           }
         ]
@@ -1209,7 +1209,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 32
             }
           ],
@@ -1218,7 +1218,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 16
             }
           ],
@@ -1354,7 +1354,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           }
         ]
@@ -1362,11 +1362,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -1387,7 +1387,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             }
           ],
@@ -1396,11 +1396,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 8
             }
           ],
@@ -1544,11 +1544,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -1556,11 +1556,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -1581,7 +1581,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 24
             }
           ],
@@ -1590,7 +1590,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -1746,11 +1746,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 12
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 6
           }
         ]
@@ -1758,11 +1758,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 24
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 12
           }
         ]
@@ -1783,7 +1783,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 32
             }
           ],
@@ -1792,7 +1792,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -1936,7 +1936,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -1944,7 +1944,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 16
           }
         ]
@@ -1965,7 +1965,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 40
             }
           ],
@@ -1974,7 +1974,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 64
             }
           ],
@@ -2118,11 +2118,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 4
           }
         ]
@@ -2130,11 +2130,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           }
         ]
@@ -2155,11 +2155,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 16
             },
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 16
             }
           ],
@@ -2168,11 +2168,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 8
             }
           ],
@@ -2312,11 +2312,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -2324,11 +2324,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -2349,7 +2349,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 24
             }
           ],
@@ -2358,7 +2358,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 40
             }
           ],
@@ -2506,11 +2506,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 12
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 6
           }
         ]
@@ -2518,11 +2518,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 24
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 12
           }
         ]
@@ -2543,7 +2543,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 32
             }
           ],
@@ -2552,7 +2552,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -2700,7 +2700,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 4
           }
         ]
@@ -2708,7 +2708,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 8
           }
         ]
@@ -2729,7 +2729,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 16
             }
           ],
@@ -2738,7 +2738,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 24
             }
           ],
@@ -2777,7 +2777,7 @@
           "Rank": "Uncommon",
           "Cost": [
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 8
             }
           ]
@@ -2838,7 +2838,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 6
           }
         ]
@@ -2846,7 +2846,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Blue",
+            "ItemId": "Ingredient_Crystal_Blue",
             "Quantity": 12
           }
         ]
@@ -2867,7 +2867,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 24
             }
           ],
@@ -2876,11 +2876,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Blue",
+              "ItemId": "Ingredient_Crystal_Blue",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 8
             }
           ],
@@ -3048,7 +3048,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -3056,7 +3056,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 16
           }
         ]
@@ -3077,7 +3077,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 40
             }
           ],
@@ -3086,7 +3086,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 64
             }
           ],
@@ -3230,7 +3230,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 12
           }
         ]
@@ -3238,7 +3238,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 24
           }
         ]
@@ -3259,7 +3259,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -3268,7 +3268,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 64
             }
           ],
@@ -3412,7 +3412,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           }
         ]
@@ -3420,11 +3420,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -3445,7 +3445,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             }
           ],
@@ -3454,11 +3454,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 8
             }
           ],
@@ -3590,11 +3590,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -3602,11 +3602,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -3627,7 +3627,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 24
             }
           ],
@@ -3636,7 +3636,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 40
             }
           ],
@@ -3780,7 +3780,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -3788,7 +3788,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 16
           }
         ]
@@ -3809,7 +3809,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 40
             }
           ],
@@ -3818,7 +3818,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 64
             }
           ],
@@ -3962,7 +3962,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 8
           }
         ]
@@ -3970,11 +3970,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 16
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 4
           }
         ]
@@ -3995,7 +3995,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             }
           ],
@@ -4004,11 +4004,11 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Red",
+              "ItemId": "Ingredient_Crystal_Red",
               "Quantity": 32
             },
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 8
             }
           ],
@@ -4140,11 +4140,11 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 12
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 6
           }
         ]
@@ -4152,11 +4152,11 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Red",
+            "ItemId": "Ingredient_Crystal_Red",
             "Quantity": 24
           },
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 12
           }
         ]
@@ -4177,7 +4177,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 32
             }
           ],
@@ -4186,7 +4186,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 48
             }
           ],
@@ -4334,7 +4334,7 @@
       "Small": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 8
           }
         ]
@@ -4342,7 +4342,7 @@
       "Large": {
         "Input": [
           {
-            "ItemId": "OneBlock_Crystal_Yellow",
+            "ItemId": "Ingredient_Crystal_Yellow",
             "Quantity": 16
           }
         ]
@@ -4363,7 +4363,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 40
             }
           ],
@@ -4372,7 +4372,7 @@
         {
           "Input": [
             {
-              "ItemId": "OneBlock_Crystal_Yellow",
+              "ItemId": "Ingredient_Crystal_Yellow",
               "Quantity": 64
             }
           ],

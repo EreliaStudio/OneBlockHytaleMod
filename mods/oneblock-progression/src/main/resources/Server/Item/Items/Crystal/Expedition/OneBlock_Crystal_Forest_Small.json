@@ -34,7 +34,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "OneBlock_Crystal_Blue",
+        "ItemId": "Ingredient_Crystal_Blue",
         "Quantity": 8
       }
     ],

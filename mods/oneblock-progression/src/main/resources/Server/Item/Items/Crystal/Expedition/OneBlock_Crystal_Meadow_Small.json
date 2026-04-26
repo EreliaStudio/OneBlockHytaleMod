@@ -34,7 +34,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "OneBlock_Crystal_Blue",
+        "ItemId": "Ingredient_Crystal_Blue",
         "Quantity": 4
       }
     ],
@@ -43,7 +43,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Meadow"
+          "OneBlock_Enchanter_Surface"
         ],
         "Id": "OneBlockEnchanter"
       }
