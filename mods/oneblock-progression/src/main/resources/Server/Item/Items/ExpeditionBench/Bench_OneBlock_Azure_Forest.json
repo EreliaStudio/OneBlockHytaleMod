@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Azure_Forest.name",
-    "Description": "items.Bench_OneBlock_Azure_Forest.description"
+    "Name": "server.items.Bench_OneBlock_Azure_Forest.name",
+    "Description": "server.items.Bench_OneBlock_Azure_Forest.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Azure_Forest_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Azure_Forest_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Azure_Forest_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue",
             "OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure",
@@ -59,7 +59,7 @@
         {
           "Id": "OneBlock_Bench_Azure_Forest_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Azure_Forest_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Azure_Forest_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Flatcap_Blue",
             "OneBlock_Unlock_Azure_Forest_entity_Outlander_Initiate",
@@ -69,7 +69,7 @@
         {
           "Id": "OneBlock_Bench_Azure_Forest_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Azure_Forest_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Azure_Forest_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Blue",
             "OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Cyan",

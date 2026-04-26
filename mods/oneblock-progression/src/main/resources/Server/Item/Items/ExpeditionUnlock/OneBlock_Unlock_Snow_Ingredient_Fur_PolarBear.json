@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear.name",
-    "Description": "items.OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear.description"
+    "Name": "server.items.OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear.name",
+    "Description": "server.items.OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear.description"
   },
   "Id": "OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear",
   "ItemLevel": 3,

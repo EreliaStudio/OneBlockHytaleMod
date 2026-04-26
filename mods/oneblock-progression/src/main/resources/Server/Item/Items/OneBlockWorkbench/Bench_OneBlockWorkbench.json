@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlockWorkbench.name",
-    "Description": "items.Bench_OneBlockWorkbench.description"
+    "Name": "server.items.Bench_OneBlockWorkbench.name",
+    "Description": "server.items.Bench_OneBlockWorkbench.description"
   },
   "Recipe": {
     "Input": [
@@ -48,7 +48,7 @@
         {
           "Id": "OneBlock_Workbench_ExpeditionBenches",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockWorkbench_ExpeditionBenches",
+          "Name": "server.benchCategories.OneBlockWorkbench_ExpeditionBenches",
           "Recipes": [
             "Bench_OneBlock_Cave",
             "Bench_OneBlock_Deep_Cave",

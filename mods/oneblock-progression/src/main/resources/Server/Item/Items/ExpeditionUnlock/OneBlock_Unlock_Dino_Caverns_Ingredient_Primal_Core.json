@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core.name",
-    "Description": "items.OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core.description"
+    "Name": "server.items.OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core.name",
+    "Description": "server.items.OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core.description"
   },
   "Id": "OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core",
   "ItemLevel": 3,

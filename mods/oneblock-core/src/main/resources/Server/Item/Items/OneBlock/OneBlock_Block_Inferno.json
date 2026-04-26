@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Block_Inferno.name"
+    "Name": "server.items.OneBlock_Block_Inferno.name"
   },
   "Id": "OneBlock_Block_Inferno",
   "ItemLevel": 8,

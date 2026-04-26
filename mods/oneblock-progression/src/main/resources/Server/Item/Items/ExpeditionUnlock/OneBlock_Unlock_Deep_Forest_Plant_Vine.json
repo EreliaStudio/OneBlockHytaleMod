@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Deep_Forest_Plant_Vine.name",
-    "Description": "items.OneBlock_Unlock_Deep_Forest_Plant_Vine.description"
+    "Name": "server.items.OneBlock_Unlock_Deep_Forest_Plant_Vine.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Forest_Plant_Vine.description"
   },
   "Id": "OneBlock_Unlock_Deep_Forest_Plant_Vine",
   "ItemLevel": 1,

@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Block_Desert.name"
+    "Name": "server.items.OneBlock_Block_Desert.name"
   },
   "Id": "OneBlock_Block_Desert",
   "ItemLevel": 4,

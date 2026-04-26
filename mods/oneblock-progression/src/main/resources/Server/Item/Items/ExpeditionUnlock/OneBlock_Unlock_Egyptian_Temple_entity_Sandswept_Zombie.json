@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie.name",
-    "Description": "items.OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie.description"
+    "Name": "server.items.OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie.name",
+    "Description": "server.items.OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie.description"
   },
   "Id": "OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie",
   "ItemLevel": 2,

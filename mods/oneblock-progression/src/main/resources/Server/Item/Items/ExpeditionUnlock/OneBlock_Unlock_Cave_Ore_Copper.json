@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Cave_Ore_Copper.name",
-    "Description": "items.OneBlock_Unlock_Cave_Ore_Copper.description"
+    "Name": "server.items.OneBlock_Unlock_Cave_Ore_Copper.name",
+    "Description": "server.items.OneBlock_Unlock_Cave_Ore_Copper.description"
   },
   "Id": "OneBlock_Unlock_Cave_Ore_Copper",
   "ItemLevel": 1,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Ancient_Graveyard.name",
-    "Description": "items.Bench_OneBlock_Ancient_Graveyard.description"
+    "Name": "server.items.Bench_OneBlock_Ancient_Graveyard.name",
+    "Description": "server.items.Bench_OneBlock_Ancient_Graveyard.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Ancient_Graveyard_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Ancient_Graveyard_Rock_Shale",
             "OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment"
@@ -58,7 +58,7 @@
         {
           "Id": "OneBlock_Bench_Ancient_Graveyard_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Ancient_Graveyard_entity_Zombie",
             "OneBlock_Unlock_Ancient_Graveyard_entity_Aberrant_Zombie",
@@ -69,7 +69,7 @@
         {
           "Id": "OneBlock_Bench_Ancient_Graveyard_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Ancient_Graveyard_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Ancient_Graveyard_entity_Large_Aberrant_Zombie",
             "OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archmage",

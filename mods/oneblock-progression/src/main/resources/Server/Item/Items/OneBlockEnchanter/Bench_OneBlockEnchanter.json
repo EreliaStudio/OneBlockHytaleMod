@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlockEnchanter.name",
-    "Description": "items.Bench_OneBlockEnchanter.description"
+    "Name": "server.items.Bench_OneBlockEnchanter.name",
+    "Description": "server.items.Bench_OneBlockEnchanter.description"
   },
   "Recipe": {
     "Input": [
@@ -48,7 +48,7 @@
         {
           "Id": "OneBlock_Enchanter_Underground",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockEnchanter_Underground",
+          "Name": "server.benchCategories.OneBlockEnchanter_Underground",
           "Recipes": [
             "OneBlock_Crystal_Cave_Small",
             "OneBlock_Crystal_Cave_Large",
@@ -67,7 +67,7 @@
         {
           "Id": "OneBlock_Enchanter_Surface",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockEnchanter_Surface",
+          "Name": "server.benchCategories.OneBlockEnchanter_Surface",
           "Recipes": [
             "OneBlock_Crystal_Desert_Small",
             "OneBlock_Crystal_Desert_Large",
@@ -82,7 +82,7 @@
         {
           "Id": "OneBlock_Enchanter_Forest",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockEnchanter_Forest",
+          "Name": "server.benchCategories.OneBlockEnchanter_Forest",
           "Recipes": [
             "OneBlock_Crystal_Forest_Small",
             "OneBlock_Crystal_Forest_Large",
@@ -101,7 +101,7 @@
         {
           "Id": "OneBlock_Enchanter_Cold",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockEnchanter_Cold",
+          "Name": "server.benchCategories.OneBlockEnchanter_Cold",
           "Recipes": [
             "OneBlock_Crystal_Snow_Small",
             "OneBlock_Crystal_Snow_Large",
@@ -112,7 +112,7 @@
         {
           "Id": "OneBlock_Enchanter_Inferno",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockEnchanter_Inferno",
+          "Name": "server.benchCategories.OneBlockEnchanter_Inferno",
           "Recipes": [
             "OneBlock_Crystal_Inferno_Small",
             "OneBlock_Crystal_Inferno_Large",
@@ -125,7 +125,7 @@
         {
           "Id": "OneBlock_Enchanter_Dark",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlockEnchanter_Dark",
+          "Name": "server.benchCategories.OneBlockEnchanter_Dark",
           "Recipes": [
             "OneBlock_Crystal_Graveyard_Small",
             "OneBlock_Crystal_Graveyard_Large",

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Deep_Cave_entity_Earth_Elemental.name",
-    "Description": "items.OneBlock_Unlock_Deep_Cave_entity_Earth_Elemental.description"
+    "Name": "server.items.OneBlock_Unlock_Deep_Cave_entity_Earth_Elemental.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Cave_entity_Earth_Elemental.description"
   },
   "Id": "OneBlock_Unlock_Deep_Cave_entity_Earth_Elemental",
   "ItemLevel": 3,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie.name",
-    "Description": "items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie.description"
+    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie",
   "ItemLevel": 2,

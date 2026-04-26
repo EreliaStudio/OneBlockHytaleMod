@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_The_Abyss_entity_Void_Eye.name",
-    "Description": "items.OneBlock_Unlock_The_Abyss_entity_Void_Eye.description"
+    "Name": "server.items.OneBlock_Unlock_The_Abyss_entity_Void_Eye.name",
+    "Description": "server.items.OneBlock_Unlock_The_Abyss_entity_Void_Eye.description"
   },
   "Id": "OneBlock_Unlock_The_Abyss_entity_Void_Eye",
   "ItemLevel": 3,

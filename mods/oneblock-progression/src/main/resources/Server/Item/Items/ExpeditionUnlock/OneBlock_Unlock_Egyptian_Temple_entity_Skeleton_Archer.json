@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Archer.name",
-    "Description": "items.OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Archer.description"
+    "Name": "server.items.OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Archer.name",
+    "Description": "server.items.OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Archer.description"
   },
   "Id": "OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Archer",
   "ItemLevel": 2,

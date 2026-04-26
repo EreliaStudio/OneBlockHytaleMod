@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted.name",
-    "Description": "items.OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted.description"
+    "Name": "server.items.OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted.name",
+    "Description": "server.items.OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted.description"
   },
   "Id": "OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted",
   "ItemLevel": 1,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Fiery_Forest_Ingredient_Bolt_Cindercloth.name",
-    "Description": "items.OneBlock_Unlock_Fiery_Forest_Ingredient_Bolt_Cindercloth.description"
+    "Name": "server.items.OneBlock_Unlock_Fiery_Forest_Ingredient_Bolt_Cindercloth.name",
+    "Description": "server.items.OneBlock_Unlock_Fiery_Forest_Ingredient_Bolt_Cindercloth.description"
   },
   "Id": "OneBlock_Unlock_Fiery_Forest_Ingredient_Bolt_Cindercloth",
   "ItemLevel": 3,

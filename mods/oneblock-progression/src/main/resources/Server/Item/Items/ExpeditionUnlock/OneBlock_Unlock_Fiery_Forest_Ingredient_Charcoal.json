@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Fiery_Forest_Ingredient_Charcoal.name",
-    "Description": "items.OneBlock_Unlock_Fiery_Forest_Ingredient_Charcoal.description"
+    "Name": "server.items.OneBlock_Unlock_Fiery_Forest_Ingredient_Charcoal.name",
+    "Description": "server.items.OneBlock_Unlock_Fiery_Forest_Ingredient_Charcoal.description"
   },
   "Id": "OneBlock_Unlock_Fiery_Forest_Ingredient_Charcoal",
   "ItemLevel": 1,

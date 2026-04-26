@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Cave_entity_Goblin_Scrapper.name",
-    "Description": "items.OneBlock_Unlock_Cave_entity_Goblin_Scrapper.description"
+    "Name": "server.items.OneBlock_Unlock_Cave_entity_Goblin_Scrapper.name",
+    "Description": "server.items.OneBlock_Unlock_Cave_entity_Goblin_Scrapper.description"
   },
   "Id": "OneBlock_Unlock_Cave_entity_Goblin_Scrapper",
   "ItemLevel": 2,

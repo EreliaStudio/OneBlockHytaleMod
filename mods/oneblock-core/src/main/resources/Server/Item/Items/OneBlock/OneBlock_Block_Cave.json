@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Block_Cave.name"
+    "Name": "server.items.OneBlock_Block_Cave.name"
   },
   "Id": "OneBlock_Block_Cave",
   "ItemLevel": 5,

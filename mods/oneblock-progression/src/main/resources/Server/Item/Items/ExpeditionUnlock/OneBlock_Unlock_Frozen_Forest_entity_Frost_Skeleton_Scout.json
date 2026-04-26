@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Skeleton_Scout.name",
-    "Description": "items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Skeleton_Scout.description"
+    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Skeleton_Scout.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_entity_Frost_Skeleton_Scout.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_entity_Frost_Skeleton_Scout",
   "ItemLevel": 2,

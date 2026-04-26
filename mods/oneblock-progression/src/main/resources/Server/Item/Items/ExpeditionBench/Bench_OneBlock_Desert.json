@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Desert.name",
-    "Description": "items.Bench_OneBlock_Desert.description"
+    "Name": "server.items.Bench_OneBlock_Desert.name",
+    "Description": "server.items.Bench_OneBlock_Desert.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Desert_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Desert_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Desert_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Desert_Block_Sand_White",
             "OneBlock_Unlock_Desert_Block_Clay",
@@ -60,7 +60,7 @@
         {
           "Id": "OneBlock_Bench_Desert_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Desert_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Desert_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Desert_entity_Camel",
             "OneBlock_Unlock_Desert_entity_Cactee",
@@ -70,7 +70,7 @@
         {
           "Id": "OneBlock_Bench_Desert_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Desert_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Desert_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Desert_Ore_Gold",
             "OneBlock_Unlock_Desert_Ingredient_Shell_Scorpion",

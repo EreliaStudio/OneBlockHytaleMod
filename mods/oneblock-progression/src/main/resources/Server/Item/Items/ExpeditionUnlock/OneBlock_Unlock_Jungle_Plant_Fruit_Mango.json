@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.name",
-    "Description": "items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.description"
+    "Name": "server.items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.name",
+    "Description": "server.items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.description"
   },
   "Id": "OneBlock_Unlock_Jungle_Plant_Fruit_Mango",
   "ItemLevel": 1,

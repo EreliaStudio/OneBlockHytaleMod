@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Cave_entity_Goblin_Thief.name",
-    "Description": "items.OneBlock_Unlock_Cave_entity_Goblin_Thief.description"
+    "Name": "server.items.OneBlock_Unlock_Cave_entity_Goblin_Thief.name",
+    "Description": "server.items.OneBlock_Unlock_Cave_entity_Goblin_Thief.description"
   },
   "Id": "OneBlock_Unlock_Cave_entity_Goblin_Thief",
   "ItemLevel": 2,

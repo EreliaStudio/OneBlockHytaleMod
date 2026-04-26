@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Meadow_Soil_Grass.name",
-    "Description": "items.OneBlock_Unlock_Meadow_Soil_Grass.description"
+    "Name": "server.items.OneBlock_Unlock_Meadow_Soil_Grass.name",
+    "Description": "server.items.OneBlock_Unlock_Meadow_Soil_Grass.description"
   },
   "Id": "OneBlock_Unlock_Meadow_Soil_Grass",
   "ItemLevel": 1,

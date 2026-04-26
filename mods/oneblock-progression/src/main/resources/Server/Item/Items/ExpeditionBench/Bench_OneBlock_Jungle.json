@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Jungle.name",
-    "Description": "items.Bench_OneBlock_Jungle.description"
+    "Name": "server.items.Bench_OneBlock_Jungle.name",
+    "Description": "server.items.Bench_OneBlock_Jungle.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Jungle_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Jungle_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Jungle_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Jungle_Wood_Banyan_Trunk",
             "OneBlock_Unlock_Jungle_Plant_Fruit_Mango",
@@ -60,7 +60,7 @@
         {
           "Id": "OneBlock_Bench_Jungle_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Jungle_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Jungle_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Jungle_entity_Crocodile",
             "OneBlock_Unlock_Jungle_entity_Trork_Hunter",
@@ -70,7 +70,7 @@
         {
           "Id": "OneBlock_Bench_Jungle_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Jungle_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Jungle_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy",
             "OneBlock_Unlock_Jungle_Ingredient_Water_Essence",

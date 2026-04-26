@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Gem_Cave.name",
-    "Description": "items.Bench_OneBlock_Gem_Cave.description"
+    "Name": "server.items.Bench_OneBlock_Gem_Cave.name",
+    "Description": "server.items.Bench_OneBlock_Gem_Cave.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Gem_Cave_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Gem_Cave_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Gem_Cave_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Gem_Cave_Rock_Gem_Emerald",
             "OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz",
@@ -59,7 +59,7 @@
         {
           "Id": "OneBlock_Bench_Gem_Cave_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Gem_Cave_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Gem_Cave_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Gem_Cave_Rock_Gem_Ruby",
             "OneBlock_Unlock_Gem_Cave_Rock_Gem_Diamond",
@@ -69,7 +69,7 @@
         {
           "Id": "OneBlock_Bench_Gem_Cave_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Gem_Cave_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Gem_Cave_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Gem_Cave_Rock_Gem_Zephyr",
             "OneBlock_Unlock_Gem_Cave_Ore_Prisma",

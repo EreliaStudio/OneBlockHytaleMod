@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Bench_Recipe_Desert.name",
-    "Description": "items.OneBlock_Bench_Recipe_Desert.description"
+    "Name": "server.items.OneBlock_Bench_Recipe_Desert.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Desert.description"
   },
   "Id": "OneBlock_Bench_Recipe_Desert",
   "ItemLevel": 4,

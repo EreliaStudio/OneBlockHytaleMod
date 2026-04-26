@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Jungle_entity_Trork_Hunter.name",
-    "Description": "items.OneBlock_Unlock_Jungle_entity_Trork_Hunter.description"
+    "Name": "server.items.OneBlock_Unlock_Jungle_entity_Trork_Hunter.name",
+    "Description": "server.items.OneBlock_Unlock_Jungle_entity_Trork_Hunter.description"
   },
   "Id": "OneBlock_Unlock_Jungle_entity_Trork_Hunter",
   "ItemLevel": 2,

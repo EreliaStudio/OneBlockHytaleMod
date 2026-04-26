@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Bench_Recipe_Deep_Inferno.name",
-    "Description": "items.OneBlock_Bench_Recipe_Deep_Inferno.description"
+    "Name": "server.items.OneBlock_Bench_Recipe_Deep_Inferno.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Deep_Inferno.description"
   },
   "Id": "OneBlock_Bench_Recipe_Deep_Inferno",
   "ItemLevel": 9,

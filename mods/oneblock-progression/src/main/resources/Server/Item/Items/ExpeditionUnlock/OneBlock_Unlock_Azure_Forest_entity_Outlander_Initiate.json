@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Initiate.name",
-    "Description": "items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Initiate.description"
+    "Name": "server.items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Initiate.name",
+    "Description": "server.items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Initiate.description"
   },
   "Id": "OneBlock_Unlock_Azure_Forest_entity_Outlander_Initiate",
   "ItemLevel": 2,

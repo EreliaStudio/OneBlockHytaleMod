@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Egyptian_Temple.name",
-    "Description": "items.Bench_OneBlock_Egyptian_Temple.description"
+    "Name": "server.items.Bench_OneBlock_Egyptian_Temple.name",
+    "Description": "server.items.Bench_OneBlock_Egyptian_Temple.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Egyptian_Temple_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Egyptian_Temple_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Egyptian_Temple_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Egyptian_Temple_Block_Sand_White",
             "OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red",
@@ -59,7 +59,7 @@
         {
           "Id": "OneBlock_Bench_Egyptian_Temple_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Egyptian_Temple_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Egyptian_Temple_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Egyptian_Temple_entity_Sandswept_Zombie",
             "OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Soldier",
@@ -69,7 +69,7 @@
         {
           "Id": "OneBlock_Bench_Egyptian_Temple_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Egyptian_Temple_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Egyptian_Temple_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil",
             "OneBlock_Unlock_Egyptian_Temple_Ingredient_Claw_Scorpion",

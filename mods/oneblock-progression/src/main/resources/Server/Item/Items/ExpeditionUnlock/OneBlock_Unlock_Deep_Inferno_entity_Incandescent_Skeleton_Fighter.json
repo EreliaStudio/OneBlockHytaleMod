@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Fighter.name",
-    "Description": "items.OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Fighter.description"
+    "Name": "server.items.OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Fighter.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Fighter.description"
   },
   "Id": "OneBlock_Unlock_Deep_Inferno_entity_Incandescent_Skeleton_Fighter",
   "ItemLevel": 3,

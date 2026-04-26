@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased.name",
-    "Description": "items.OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased.description"
+    "Name": "server.items.OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased.name",
+    "Description": "server.items.OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased.description"
   },
   "Id": "OneBlock_Unlock_Dino_Caverns_Rock_Amber_Encased",
   "ItemLevel": 1,

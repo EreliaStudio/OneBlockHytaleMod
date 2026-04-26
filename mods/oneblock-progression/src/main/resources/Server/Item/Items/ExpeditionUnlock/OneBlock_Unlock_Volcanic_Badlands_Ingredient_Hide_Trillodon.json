@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Volcanic_Badlands_Ingredient_Hide_Trillodon.name",
-    "Description": "items.OneBlock_Unlock_Volcanic_Badlands_Ingredient_Hide_Trillodon.description"
+    "Name": "server.items.OneBlock_Unlock_Volcanic_Badlands_Ingredient_Hide_Trillodon.name",
+    "Description": "server.items.OneBlock_Unlock_Volcanic_Badlands_Ingredient_Hide_Trillodon.description"
   },
   "Id": "OneBlock_Unlock_Volcanic_Badlands_Ingredient_Hide_Trillodon",
   "ItemLevel": 3,

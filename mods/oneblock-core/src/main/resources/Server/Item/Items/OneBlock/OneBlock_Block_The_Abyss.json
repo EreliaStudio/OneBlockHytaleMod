@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Block_The_Abyss.name"
+    "Name": "server.items.OneBlock_Block_The_Abyss.name"
   },
   "Id": "OneBlock_Block_The_Abyss",
   "ItemLevel": 9,

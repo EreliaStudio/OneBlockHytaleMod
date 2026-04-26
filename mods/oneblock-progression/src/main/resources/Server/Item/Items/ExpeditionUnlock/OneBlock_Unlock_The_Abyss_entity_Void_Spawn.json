@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_The_Abyss_entity_Void_Spawn.name",
-    "Description": "items.OneBlock_Unlock_The_Abyss_entity_Void_Spawn.description"
+    "Name": "server.items.OneBlock_Unlock_The_Abyss_entity_Void_Spawn.name",
+    "Description": "server.items.OneBlock_Unlock_The_Abyss_entity_Void_Spawn.description"
   },
   "Id": "OneBlock_Unlock_The_Abyss_entity_Void_Spawn",
   "ItemLevel": 2,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple.name",
-    "Description": "items.OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple.description"
+    "Name": "server.items.OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple.name",
+    "Description": "server.items.OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple.description"
   },
   "Id": "OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple",
   "ItemLevel": 3,

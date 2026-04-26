@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Graveyard_entity_Skeleton_Soldier.name",
-    "Description": "items.OneBlock_Unlock_Graveyard_entity_Skeleton_Soldier.description"
+    "Name": "server.items.OneBlock_Unlock_Graveyard_entity_Skeleton_Soldier.name",
+    "Description": "server.items.OneBlock_Unlock_Graveyard_entity_Skeleton_Soldier.description"
   },
   "Id": "OneBlock_Unlock_Graveyard_entity_Skeleton_Soldier",
   "ItemLevel": 2,

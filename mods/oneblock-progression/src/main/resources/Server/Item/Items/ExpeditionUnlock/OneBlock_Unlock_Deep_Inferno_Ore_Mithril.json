@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Deep_Inferno_Ore_Mithril.name",
-    "Description": "items.OneBlock_Unlock_Deep_Inferno_Ore_Mithril.description"
+    "Name": "server.items.OneBlock_Unlock_Deep_Inferno_Ore_Mithril.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Inferno_Ore_Mithril.description"
   },
   "Id": "OneBlock_Unlock_Deep_Inferno_Ore_Mithril",
   "ItemLevel": 3,

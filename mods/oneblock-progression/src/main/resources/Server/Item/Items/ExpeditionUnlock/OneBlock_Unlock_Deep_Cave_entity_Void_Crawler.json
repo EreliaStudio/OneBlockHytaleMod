@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Deep_Cave_entity_Void_Crawler.name",
-    "Description": "items.OneBlock_Unlock_Deep_Cave_entity_Void_Crawler.description"
+    "Name": "server.items.OneBlock_Unlock_Deep_Cave_entity_Void_Crawler.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Cave_entity_Void_Crawler.description"
   },
   "Id": "OneBlock_Unlock_Deep_Cave_entity_Void_Crawler",
   "ItemLevel": 3,

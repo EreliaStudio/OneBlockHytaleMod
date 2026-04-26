@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Jungle_Plant_Leaves_Jungle_Floor.name",
-    "Description": "items.OneBlock_Unlock_Jungle_Plant_Leaves_Jungle_Floor.description"
+    "Name": "server.items.OneBlock_Unlock_Jungle_Plant_Leaves_Jungle_Floor.name",
+    "Description": "server.items.OneBlock_Unlock_Jungle_Plant_Leaves_Jungle_Floor.description"
   },
   "Id": "OneBlock_Unlock_Jungle_Plant_Leaves_Jungle_Floor",
   "ItemLevel": 1,

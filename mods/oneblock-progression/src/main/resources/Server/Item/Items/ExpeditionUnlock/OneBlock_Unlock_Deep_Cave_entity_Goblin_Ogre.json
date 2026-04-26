@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Deep_Cave_entity_Goblin_Ogre.name",
-    "Description": "items.OneBlock_Unlock_Deep_Cave_entity_Goblin_Ogre.description"
+    "Name": "server.items.OneBlock_Unlock_Deep_Cave_entity_Goblin_Ogre.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Cave_entity_Goblin_Ogre.description"
   },
   "Id": "OneBlock_Unlock_Deep_Cave_entity_Goblin_Ogre",
   "ItemLevel": 2,

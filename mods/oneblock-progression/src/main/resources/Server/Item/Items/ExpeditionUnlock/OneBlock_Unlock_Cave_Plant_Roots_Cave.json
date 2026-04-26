@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Cave_Plant_Roots_Cave.name",
-    "Description": "items.OneBlock_Unlock_Cave_Plant_Roots_Cave.description"
+    "Name": "server.items.OneBlock_Unlock_Cave_Plant_Roots_Cave.name",
+    "Description": "server.items.OneBlock_Unlock_Cave_Plant_Roots_Cave.description"
   },
   "Id": "OneBlock_Unlock_Cave_Plant_Roots_Cave",
   "ItemLevel": 1,

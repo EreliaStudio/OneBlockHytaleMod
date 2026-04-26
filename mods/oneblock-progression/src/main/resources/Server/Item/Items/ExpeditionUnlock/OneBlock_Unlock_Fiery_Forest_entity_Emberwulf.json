@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Fiery_Forest_entity_Emberwulf.name",
-    "Description": "items.OneBlock_Unlock_Fiery_Forest_entity_Emberwulf.description"
+    "Name": "server.items.OneBlock_Unlock_Fiery_Forest_entity_Emberwulf.name",
+    "Description": "server.items.OneBlock_Unlock_Fiery_Forest_entity_Emberwulf.description"
   },
   "Id": "OneBlock_Unlock_Fiery_Forest_entity_Emberwulf",
   "ItemLevel": 2,

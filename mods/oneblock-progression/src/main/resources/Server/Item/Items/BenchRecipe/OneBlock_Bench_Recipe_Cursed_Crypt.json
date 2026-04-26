@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Bench_Recipe_Cursed_Crypt.name",
-    "Description": "items.OneBlock_Bench_Recipe_Cursed_Crypt.description"
+    "Name": "server.items.OneBlock_Bench_Recipe_Cursed_Crypt.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Cursed_Crypt.description"
   },
   "Id": "OneBlock_Bench_Recipe_Cursed_Crypt",
   "ItemLevel": 8,

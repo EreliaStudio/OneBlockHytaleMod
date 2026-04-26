@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.Bench_OneBlock_Snow.name",
-    "Description": "items.Bench_OneBlock_Snow.description"
+    "Name": "server.items.Bench_OneBlock_Snow.name",
+    "Description": "server.items.Bench_OneBlock_Snow.description"
   },
   "Recipe": {
     "Input": [
@@ -49,7 +49,7 @@
         {
           "Id": "OneBlock_Bench_Snow_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Snow_Tier1",
+          "Name": "server.benchCategories.OneBlock_Bench_Snow_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Snow_Plant_Frost_Fern",
             "OneBlock_Unlock_Snow_Plant_Ice_Flower_Blue",
@@ -59,7 +59,7 @@
         {
           "Id": "OneBlock_Bench_Snow_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Snow_Tier2",
+          "Name": "server.benchCategories.OneBlock_Bench_Snow_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Snow_entity_Sheep",
             "OneBlock_Unlock_Snow_entity_Bison",
@@ -69,7 +69,7 @@
         {
           "Id": "OneBlock_Bench_Snow_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "benchCategories.OneBlock_Bench_Snow_Tier3",
+          "Name": "server.benchCategories.OneBlock_Bench_Snow_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear",
             "OneBlock_Unlock_Snow_Ore_Cobalt_Ice",

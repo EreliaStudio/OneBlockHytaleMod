@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archmage.name",
-    "Description": "items.OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archmage.description"
+    "Name": "server.items.OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archmage.name",
+    "Description": "server.items.OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archmage.description"
   },
   "Id": "OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archmage",
   "ItemLevel": 3,

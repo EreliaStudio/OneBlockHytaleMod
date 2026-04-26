@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Fiery_Forest_Plant_Crop_Mushroom_Glowing_Red.name",
-    "Description": "items.OneBlock_Unlock_Fiery_Forest_Plant_Crop_Mushroom_Glowing_Red.description"
+    "Name": "server.items.OneBlock_Unlock_Fiery_Forest_Plant_Crop_Mushroom_Glowing_Red.name",
+    "Description": "server.items.OneBlock_Unlock_Fiery_Forest_Plant_Crop_Mushroom_Glowing_Red.description"
   },
   "Id": "OneBlock_Unlock_Fiery_Forest_Plant_Crop_Mushroom_Glowing_Red",
   "ItemLevel": 1,

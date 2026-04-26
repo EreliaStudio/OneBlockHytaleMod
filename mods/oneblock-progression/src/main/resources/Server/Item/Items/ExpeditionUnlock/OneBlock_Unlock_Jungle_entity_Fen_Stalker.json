@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Jungle_entity_Fen_Stalker.name",
-    "Description": "items.OneBlock_Unlock_Jungle_entity_Fen_Stalker.description"
+    "Name": "server.items.OneBlock_Unlock_Jungle_entity_Fen_Stalker.name",
+    "Description": "server.items.OneBlock_Unlock_Jungle_entity_Fen_Stalker.description"
   },
   "Id": "OneBlock_Unlock_Jungle_entity_Fen_Stalker",
   "ItemLevel": 3,

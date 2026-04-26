@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil.name",
-    "Description": "items.OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil.description"
+    "Name": "server.items.OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil.name",
+    "Description": "server.items.OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil.description"
   },
   "Id": "OneBlock_Unlock_Egyptian_Temple_Rock_Desert_Fossil",
   "ItemLevel": 3,

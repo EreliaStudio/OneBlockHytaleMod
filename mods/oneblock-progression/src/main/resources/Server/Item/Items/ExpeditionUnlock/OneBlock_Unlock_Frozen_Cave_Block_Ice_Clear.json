@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear.name",
-    "Description": "items.OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear.description"
+    "Name": "server.items.OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Cave_Block_Ice_Clear",
   "ItemLevel": 1,

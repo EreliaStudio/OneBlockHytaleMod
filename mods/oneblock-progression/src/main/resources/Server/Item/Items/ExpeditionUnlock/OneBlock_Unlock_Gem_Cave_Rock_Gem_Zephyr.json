@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Zephyr.name",
-    "Description": "items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Zephyr.description"
+    "Name": "server.items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Zephyr.name",
+    "Description": "server.items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Zephyr.description"
   },
   "Id": "OneBlock_Unlock_Gem_Cave_Rock_Gem_Zephyr",
   "ItemLevel": 3,

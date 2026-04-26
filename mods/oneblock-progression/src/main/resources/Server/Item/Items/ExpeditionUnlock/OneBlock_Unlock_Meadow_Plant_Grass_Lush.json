@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.name",
-    "Description": "items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.description"
+    "Name": "server.items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.name",
+    "Description": "server.items.OneBlock_Unlock_Meadow_Plant_Grass_Lush.description"
   },
   "Id": "OneBlock_Unlock_Meadow_Plant_Grass_Lush",
   "ItemLevel": 1,

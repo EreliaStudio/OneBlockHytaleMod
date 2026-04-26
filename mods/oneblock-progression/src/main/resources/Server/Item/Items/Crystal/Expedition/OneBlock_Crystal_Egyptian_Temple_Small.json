@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Crystal_Egyptian_Temple_Small.name",
-    "Description": "items.OneBlock_Crystal_Egyptian_Temple_Small.description"
+    "Name": "server.items.OneBlock_Crystal_Egyptian_Temple_Small.name",
+    "Description": "server.items.OneBlock_Crystal_Egyptian_Temple_Small.description"
   },
   "Id": "OneBlock_Crystal_Egyptian_Temple_Small",
   "ItemLevel": 6,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "items.OneBlock_Bench_Recipe_Frozen_Forest.name",
-    "Description": "items.OneBlock_Bench_Recipe_Frozen_Forest.description"
+    "Name": "server.items.OneBlock_Bench_Recipe_Frozen_Forest.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Frozen_Forest.description"
   },
   "Id": "OneBlock_Bench_Recipe_Frozen_Forest",
   "ItemLevel": 6,
