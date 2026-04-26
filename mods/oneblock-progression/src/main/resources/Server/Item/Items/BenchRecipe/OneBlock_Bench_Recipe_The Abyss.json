@@ -12,8 +12,12 @@
   "PlayerAnimationsId": "Item",
   "Consumable": true,
   "Tags": {
-    "Type": [ "RecipeDrop" ],
-    "RecipeDropTarget": [ "Bench_OneBlock_The Abyss" ]
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_The Abyss"
+    ]
   },
   "MaxStack": 1,
   "Quality": "Epic"

@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Gem Cave_Rock_Gem_Zephyr.name",
+    "Description": "server.items.OneBlock_Unlock_Gem Cave_Rock_Gem_Zephyr.description"
+  },
+  "Id": "OneBlock_Unlock_Gem Cave_Rock_Gem_Zephyr",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Gem_Diamond",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ore_Thorium",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Gem Cave_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Gem Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Gem Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "Rock_Gem_Zephyr"
+    ],
+    "OneBlockUnlockWeight": [
+      "1"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Epic"
+}

@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Inferno_Ingredient_Sinue_Cindersinue.name",
+    "Description": "server.items.OneBlock_Unlock_Inferno_Ingredient_Sinue_Cindersinue.description"
+  },
+  "Id": "OneBlock_Unlock_Inferno_Ingredient_Sinue_Cindersinue",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Volcanic",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Inferno_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Inferno"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Inferno"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Sinue_Cindersinue"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

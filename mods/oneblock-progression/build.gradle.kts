@@ -5,3 +5,7 @@ base {
 dependencies {
     compileOnly(project(":oneblock-core"))
 }
+
+tasks.named("compileJava") {
+    dependsOn(":oneblock-core:shadowJar")
+}

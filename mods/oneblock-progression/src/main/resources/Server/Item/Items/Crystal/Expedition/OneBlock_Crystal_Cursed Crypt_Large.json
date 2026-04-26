@@ -1,0 +1,66 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Cursed Crypt_Large.name",
+    "Description": "server.items.OneBlock_Crystal_Cursed Crypt_Large.description"
+  },
+  "Id": "OneBlock_Crystal_Cursed Crypt_Large",
+  "ItemLevel": 8,
+  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
+        "Weight": 1
+      }
+    ]
+  },
+  "Interactions": {
+    "Use": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "OneBlock_Crystal_Yellow",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Cursed Crypt"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Cursed Crypt"
+    ],
+    "OneBlockCrystalSize": [
+      "Large"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

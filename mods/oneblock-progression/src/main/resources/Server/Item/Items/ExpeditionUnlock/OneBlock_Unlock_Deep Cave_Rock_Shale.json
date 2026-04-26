@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Deep Cave_Rock_Shale.name",
+    "Description": "server.items.OneBlock_Unlock_Deep Cave_Rock_Shale.description"
+  },
+  "Id": "OneBlock_Unlock_Deep Cave_Rock_Shale",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Basalt",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Deep Cave_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Deep Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "Rock_Shale"
+    ],
+    "OneBlockUnlockWeight": [
+      "15"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

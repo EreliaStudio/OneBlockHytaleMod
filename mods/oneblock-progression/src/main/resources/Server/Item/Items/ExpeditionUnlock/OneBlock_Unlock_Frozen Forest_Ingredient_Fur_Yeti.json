@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Frozen Forest_Ingredient_Fur_Yeti.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen Forest_Ingredient_Fur_Yeti.description"
+  },
+  "Id": "OneBlock_Unlock_Frozen Forest_Ingredient_Fur_Yeti",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Permafrost",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Ore_Cobalt_Ice",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Frozen Forest_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Frozen Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Frozen Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Fur_Yeti"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

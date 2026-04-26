@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Azure Forest_entity_Outlander_Initiate.name",
+    "Description": "server.items.OneBlock_Unlock_Azure Forest_entity_Outlander_Initiate.description"
+  },
+  "Id": "OneBlock_Unlock_Azure Forest_entity_Outlander_Initiate",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Azure_Trunk",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Azure Forest_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Azure Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Azure Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Outlander_Initiate"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

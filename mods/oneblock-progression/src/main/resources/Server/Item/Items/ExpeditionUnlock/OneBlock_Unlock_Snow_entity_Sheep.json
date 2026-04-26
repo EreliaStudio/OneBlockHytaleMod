@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Snow_entity_Sheep.name",
+    "Description": "server.items.OneBlock_Unlock_Snow_entity_Sheep.description"
+  },
+  "Id": "OneBlock_Unlock_Snow_entity_Sheep",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Snow_Packed",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Snow_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Snow"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Snow"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Sheep"
+    ],
+    "OneBlockUnlockWeight": [
+      "4"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

@@ -6,16 +6,26 @@
   "Id": "Bench_OneBlock_Forest",
   "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
-  "Categories": [ "Furniture.Benches" ],
+  "Categories": [
+    "Furniture.Benches"
+  ],
   "Recipe": {
     "Input": [
-      { "ItemId": "Wood_Ash_Trunk", "Quantity": 16 },
-      { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 8 }
+      {
+        "ItemId": "Wood_Oak_Trunk",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 16
+      }
     ],
     "BenchRequirement": [
       {
         "Type": "Crafting",
-        "Categories": [ "OneBlock_Workbench_ExpeditionBenches" ],
+        "Categories": [
+          "OneBlock_Workbench_ExpeditionBenches"
+        ],
         "Id": "OneBlockWorkbench"
       }
     ],
@@ -26,7 +36,12 @@
     "DrawType": "Model",
     "Opacity": "Transparent",
     "CustomModel": "Blocks/Benches/Workbench.blockymodel",
-    "CustomModelTexture": [ { "Texture": "Blocks/OneBlockUpgrader_Texture.png", "Weight": 1 } ],
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
@@ -35,15 +50,22 @@
       "TierLevels": [
         {
           "UpgradeRequirement": {
-            "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 32 } ],
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Blue",
+                "Quantity": 32
+              }
+            ],
             "TimeSeconds": 5
           }
         },
         {
           "UpgradeRequirement": {
             "Input": [
-              { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 },
-              { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 }
+              {
+                "ItemId": "OneBlock_Crystal_Red",
+                "Quantity": 16
+              }
             ],
             "TimeSeconds": 10
           }
@@ -60,7 +82,30 @@
           "Id": "OneBlock_Bench_Forest_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlock_Bench_Forest_Tier1",
-          "Recipes": []
+          "Recipes": [
+            "OneBlock_Unlock_Forest_Plant_Fruit_Apple",
+            "OneBlock_Unlock_Forest_Wood_Beech_Trunk",
+            "OneBlock_Unlock_Forest_Plant_Sapling_Oak"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Forest_Tier2",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Forest_Tier2",
+          "Recipes": [
+            "OneBlock_Unlock_Forest_entity_Boar",
+            "OneBlock_Unlock_Forest_entity_Deer",
+            "OneBlock_Unlock_Forest_entity_Rabbit"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Forest_Tier3",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Forest_Tier3",
+          "Recipes": [
+            "OneBlock_Unlock_Forest_Ingredient_Leather_Light",
+            "OneBlock_Unlock_Forest_Ingredient_Tree_Bark"
+          ]
         }
       ],
       "LocalOpenSoundEventId": "SFX_Workbench_Open",
@@ -69,17 +114,36 @@
     "State": {
       "Id": "crafting",
       "Definitions": {
-        "CraftCompleted": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim", "Looping": true },
-        "CraftCompletedInstant": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim" }
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
       }
     },
-    "Gathering": { "Breaking": { "GatherType": "Benches" } },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
     "BlockParticleSetId": "Wood",
-    "Support": { "Down": [ { "FaceType": "Full" } ] },
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
     "BlockSoundSetId": "Wood"
   },
   "PlayerAnimationsId": "Block",
-  "Tags": { "Type": [ "Bench" ] },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
   "MaxStack": 1,
   "ItemSoundSetId": "ISS_Blocks_Wood"
 }

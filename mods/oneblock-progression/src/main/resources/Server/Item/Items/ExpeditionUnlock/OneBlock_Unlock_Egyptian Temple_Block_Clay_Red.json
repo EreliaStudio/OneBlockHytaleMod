@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Egyptian Temple_Block_Clay_Red.name",
+    "Description": "server.items.OneBlock_Unlock_Egyptian Temple_Block_Clay_Red.description"
+  },
+  "Id": "OneBlock_Unlock_Egyptian Temple_Block_Clay_Red",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Sandstone_Red",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Egyptian Temple_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Egyptian Temple"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Egyptian Temple"
+    ],
+    "OneBlockUnlockDropId": [
+      "Block_Clay_Red"
+    ],
+    "OneBlockUnlockWeight": [
+      "10"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

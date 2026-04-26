@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Jungle_entity_Crocodile.name",
+    "Description": "server.items.OneBlock_Unlock_Jungle_entity_Crocodile.description"
+  },
+  "Id": "OneBlock_Unlock_Jungle_entity_Crocodile",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Jungle_Trunk",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Jungle_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Jungle"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Jungle"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Crocodile"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

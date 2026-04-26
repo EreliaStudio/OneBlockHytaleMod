@@ -1,700 +1,672 @@
 #!/usr/bin/env python3
+"""
+generate_expeditions.py  —  OneBlock Expedition Asset Generator
+
+Usage:
+    python tools/generate_expeditions.py <input.json> [--repo-root <path>] [--dry-run]
+
+For each expedition in the input JSON the script creates / overwrites:
+  • Crystal/Expedition/OneBlock_Crystal_<Id>_Small.json
+  • Crystal/Expedition/OneBlock_Crystal_<Id>_Large.json
+  • ExpeditionBench/Bench_OneBlock_<Id>.json          (categories auto-built from Unlocks tiers)
+  • BenchRecipe/OneBlock_Bench_Recipe_<Id>.json
+  • ExpeditionUnlock/OneBlock_Unlock_<Id>_<Drop>.json  (one per Unlocks entry)
+
+Patches shared files:
+  • Bench_OneBlockEnchanter.json  (adds category + two recipe IDs)
+  • Bench_OneBlockWorkbench.json  (appends bench ID to recipe list)
+  • server.lang                   (appends translation keys)
+
+Prints a Java snippet for OneBlockExpeditionDefaults.java to stdout.
+
+Input JSON schema  (see expeditionsTemplate.json for a full example):
+
+{
+  "<ExpeditionId>": {
+    "ItemLevel": <int>,
+    "Crystal": {
+      "Small": { "Input": [ { "ItemId": "...", "Quantity": <int> } ] },
+      "Large": { "Input": [ ... ] }
+    },
+    "Bench": {
+      "CraftInput": [ { "ItemId": "...", "Quantity": <int> } ],
+      "Upgrades": [
+        { "Input": [ ... ], "TimeSeconds": <int> },
+        { "Input": [ ... ], "TimeSeconds": <int> }
+      ],
+      "Unlocks": [
+        {
+          "DropId":  "<item-id or entity:X>",
+          "Weight":  <int>,
+          "Tier":    <1|2|3>,
+          "Rank":    "Common|Uncommon|Rare|Epic",
+          "Cost":    [ { "ItemId": "...", "Quantity": <int> } ]
+        }
+      ]
+    },
+    "BaseDropPool": [
+      { "ID": "<item-or-entity-id>", "Weight": <int> }
+    ]
+  }
+}
+
+Expedition IDs may contain spaces (e.g. "Deep Cave", "The Abyss").
+Keys starting with "_" are treated as comments and skipped.
+"""
+
 import argparse
 import json
+import sys
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+
+# Ensure stdout handles Unicode on Windows
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+# ── Repo-relative paths ───────────────────────────────────────────────────────
+PROGRESSION  = Path("mods/oneblock-progression/src/main/resources")
+ITEMS        = PROGRESSION / "Server/Item/Items"
+LANG_FILE    = PROGRESSION / "Server/Languages/en-US/server.lang"
+ENCHANTER    = ITEMS / "OneBlockEnchanter/Bench_OneBlockEnchanter.json"
+WORKBENCH    = ITEMS / "OneBlockWorkbench/Bench_OneBlockWorkbench.json"
+CRYSTAL_DIR   = ITEMS / "Crystal/Expedition"
+BENCH_DIR     = ITEMS / "ExpeditionBench"
+RECIPE_DIR    = ITEMS / "BenchRecipe"
+UNLOCK_DIR    = ITEMS / "ExpeditionUnlock"
 
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
-
-BENCH_PATH = REPO_ROOT / "src/main/resources/Server/Item/Items/OneBlockUpgrader/Bench_OneBlockUpgrader.json"
-UNLOCK_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/UnlockRecipe"
-RECIPE_DROP_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/RecipeDrop"
-ONEBLOCK_BLOCK_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/OneBlock"
-EXPEDITION_ITEM_BASE = REPO_ROOT / "src/main/resources/Server/Item/Items/Expedition"
-LANG_PATH = REPO_ROOT / "src/main/resources/Server/Languages/en-US/server.lang"
-DEFAULTS_PATH = REPO_ROOT / "src/main/java/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java"
+# ── Quality helper ────────────────────────────────────────────────────────────
+def _quality(item_level: int) -> str:
+    if item_level <= 4: return "Uncommon"
+    if item_level <= 7: return "Rare"
+    return "Epic"
 
 
-ICON_RECIPE = "Icons/ItemsGenerated/BlockUpgrade.png"
-ICON_KEY = "Icons/ItemsGenerated/ExpeditionKey.png"
-ICON_RECIPE_PAGE = "Icons/ItemsGenerated/Recipe_Page.png"
-RECIPE_PREFIX = "recipe:"
+# ── JSON builders ─────────────────────────────────────────────────────────────
 
-
-def load_json(path: Path) -> Any:
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def write_json(path: Path, payload: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    text = json.dumps(payload, indent=2, ensure_ascii=True)
-    path.write_text(text + "\n", encoding="utf-8")
-
-
-def is_entity_id(raw_id: str) -> Tuple[bool, str]:
-    if raw_id is None:
-        return False, ""
-    trimmed = raw_id.strip()
-    if not trimmed:
-        return False, ""
-    lower = trimmed.lower()
-    for prefix in ("entity:", "npc:", "mob:"):
-        if lower.startswith(prefix):
-            return True, trimmed[len(prefix):].strip()
-    return False, trimmed
-
-
-def is_recipe_drop_id(raw_id: str) -> Tuple[bool, str]:
-    if raw_id is None:
-        return False, ""
-    trimmed = raw_id.strip()
-    if not trimmed:
-        return False, ""
-    if trimmed.lower().startswith(RECIPE_PREFIX):
-        return True, trimmed[len(RECIPE_PREFIX):].strip()
-    return False, trimmed
-
-
-def unlock_item_id(drop_id: str) -> str:
-    if drop_id is None:
-        return ""
-    trimmed = drop_id.strip()
-    if trimmed.startswith("OneBlock_Unlock_"):
-        return trimmed
-    is_entity, entity_id = is_entity_id(trimmed)
-    if is_entity:
-        safe_entity = entity_id.replace(":", "_")
-        return f"OneBlock_Unlock_Entity_{safe_entity}"
-    return f"OneBlock_Unlock_{trimmed}"
-
-
-def recipe_item_id(recipe_target_id: str) -> str:
-    if recipe_target_id is None:
-        return ""
-    trimmed = recipe_target_id.strip()
-    if trimmed.startswith("OneBlock_Recipe_"):
-        return trimmed
-    safe = trimmed.replace(":", "_")
-    return f"OneBlock_Recipe_{safe}"
-
-
-def normalize_weight(value: Any) -> int:
-    try:
-        w = int(value)
-    except Exception:
-        return 1
-    return max(1, w)
-
-
-def non_empty(value: Any, fallback: str) -> str:
-    if value is None:
-        return fallback
-    text = str(value).strip()
-    return text if text else fallback
-
-
-def build_recipe_inputs(craft_list: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    inputs: List[Dict[str, Any]] = []
-    for entry in craft_list or []:
-        if not isinstance(entry, dict):
-            continue
-        qty = entry.get("Quantity", 1)
-        try:
-            qty = int(qty)
-        except Exception:
-            qty = 1
-        if qty < 1:
-            qty = 1
-        if "ResourceTypeId" in entry:
-            rid = entry.get("ResourceTypeId")
-            if rid:
-                inputs.append({"ResourceTypeId": rid, "Quantity": qty})
-            continue
-        item_id = entry.get("ID") or entry.get("ItemId")
-        if item_id:
-            inputs.append({"ItemId": item_id, "Quantity": qty})
-    return inputs
-
-
-def build_unlock_recipe(expedition: str,
-                        category_id: str,
-                        unlock: Dict[str, Any]) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
-    drop_id = unlock.get("ID", "")
-    unlock_id = unlock_item_id(drop_id)
-    name = non_empty(unlock.get("Name"), unlock_id)
-    description = non_empty(
-        unlock.get("Description"),
-        f"Consume to unlock {drop_id} in your OneBlock pool."
-    )
-    quality = unlock.get("Quality") or "Uncommon"
-    weight = normalize_weight(unlock.get("Weight", 1))
-
-    is_entity, entity_id = is_entity_id(drop_id)
-
-    tags: Dict[str, List[str]] = {
-        "Type": ["OneBlock_Unlock_Consumable"],
-        "OneBlockUnlockExpedition": [expedition],
-        "OneBlockUnlockWeight": [str(weight)]
-    }
-    if is_entity:
-        tags["OneBlockUnlockEntityId"] = [entity_id]
-    else:
-        tags["OneBlockUnlockDropId"] = [drop_id]
-
-    payload = {
+def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) -> dict:
+    item_id = f"OneBlock_Crystal_{expedition_id}_{size}"
+    return {
         "TranslationProperties": {
-            "Name": f"server.items.{unlock_id}.name",
-            "Description": f"server.items.{unlock_id}.description"
+            "Name":        f"server.items.{item_id}.name",
+            "Description": f"server.items.{item_id}.description"
         },
-        "Id": unlock_id,
-        "Categories": [
-            "Items.Recipes"
-        ],
-        "PlayerAnimationsId": "Item",
-        "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
-        "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
-        "IconProperties": {
-            "Scale": 0.76,
-            "Rotation": [135, 135, 0],
-            "Translation": [-1, 5]
-        },
-        "Interactions": {
-            "Primary": {"Interactions": [{"Type": "oneblock_unlock_pool_insert"}]},
-            "Secondary": {"Interactions": [{"Type": "oneblock_unlock_pool_insert"}]}
-        },
-        "Recipe": {
-            "Input": build_recipe_inputs(unlock.get("Craft", [])),
-            "OutputQuantity": 1,
-            "BenchRequirement": [
-                {
-                    "Type": "Crafting",
-                    "Categories": [category_id],
-                    "Id": "OneBlockUpgrader"
-                }
-            ]
-        },
-        "Icon": ICON_RECIPE,
-        "Consumable": True,
-        "Tags": tags,
-        "ItemLevel": 1,
-        "MaxStack": 1
-    }
-
-    payload["Quality"] = quality
-
-    lang_entries = {
-        f"items.{unlock_id}.name": name,
-        f"items.{unlock_id}.description": description
-    }
-
-    return unlock_id, payload, lang_entries
-
-
-def build_recipe_drop_item(expedition: str,
-                           recipe_target_id: str,
-                           entry: Dict[str, Any]) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
-    recipe_id = recipe_item_id(recipe_target_id)
-    name = non_empty(entry.get("Name"), recipe_id)
-    description = non_empty(entry.get("Description"), f"Consume to learn the {recipe_target_id} recipe.")
-    quality = entry.get("Quality") or "Uncommon"
-
-    def learn_recipe_interaction(target_id: str) -> Dict[str, Any]:
-        return {
-            "ItemId": target_id,
-            "Type": "LearnRecipe",
-            "Next": {
-                "Type": "ModifyInventory",
-                "AdjustHeldItemQuantity": -1
-            }
-        }
-
-    payload = {
-        "TranslationProperties": {
-            "Name": f"server.items.{recipe_id}.name",
-            "Description": f"server.items.{recipe_id}.description"
-        },
-        "Id": recipe_id,
-        "Categories": [
-            "Items.Recipes"
-        ],
-        "PlayerAnimationsId": "Item",
-        "Model": "Items/Consumables/Recipes/Recipe.blockymodel",
-        "Texture": "Items/Consumables/Recipes/Recipe_Texture.png",
-        "IconProperties": {
-            "Scale": 0.76,
-            "Rotation": [135, 135, 0],
-            "Translation": [-1, 5]
-        },
-        "Interactions": {
-            "Primary": {
-                "Interactions": [
-                    learn_recipe_interaction(recipe_target_id)
-                ]
-            },
-            "Secondary": {
-                "Interactions": [
-                    learn_recipe_interaction(recipe_target_id)
-                ]
-            }
-        },
-        "Icon": ICON_RECIPE_PAGE,
-        "Consumable": True,
-        "Tags": {
-            "Type": [
-                "Recipe"
-            ]
-        },
-        "ItemLevel": 1,
-        "MaxStack": 1,
-        "Quality": quality
-    }
-
-    lang_entries = {
-        f"items.{recipe_id}.name": name,
-        f"items.{recipe_id}.description": description
-    }
-
-    return recipe_id, payload, lang_entries
-
-
-def build_oneblock_block_item(expedition: str) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
-    block_id = f"OneBlock_Block_{expedition}"
-    icon = f"Icons/ItemsGenerated/OneBlock_{expedition}.png"
-    texture = f"BlockTextures/OneBlock_Block_{expedition}.png"
-    name = f"OneBlock {expedition}"
-
-    payload = {
-        "TranslationProperties": {
-            "Name": f"server.items.{block_id}.name"
-        },
-        "Id": block_id,
-        "ItemLevel": 5,
-        "Icon": icon,
-        "Categories": [
-            "Blocks.OneBlock"
-        ],
-        "PlayerAnimationsId": "Block",
-        "Set": "OneBlock",
-        "BlockType": {
-            "Material": "Solid",
-            "DrawType": "Cube",
-            "Group": "OneBlock",
-            "Flags": {},
-            "Gathering": {
-                "Breaking": {
-                    "GatherType": "Soils",
-                    "ItemId": "Soil_Dirt",
-                    "Quantity": 0
-                }
-            },
-            "Textures": [
-                {
-                    "Down": texture,
-                    "Sides": texture,
-                    "Up": texture,
-                    "Weight": 1
-                }
-            ],
-            "TransitionToGroups": [],
-            "ParticleColor": "#ffffff"
-        },
-        "Tags": {
-            "Type": [
-                "OneBlock_Block"
-            ]
-        },
-        "IconProperties": {
-            "Scale": 0.3,
-            "Rotation": [
-                339.295,
-                229.107,
-                337.792
-            ],
-            "Translation": [
-                0,
-                -6
-            ]
-        },
-        "ItemSoundSetId": "ISS_Blocks_Stone"
-    }
-
-    lang_entries = {
-        f"items.{block_id}.name": name
-    }
-
-    return block_id, payload, lang_entries
-
-
-def build_key_item(expedition: str,
-                   category_id: str,
-                   key_def: Dict[str, Any]) -> Tuple[str, Dict[str, Any], Dict[str, str]]:
-    key_id = key_def.get("ID", f"OneBlock_Expedition_{expedition}_Key")
-    name = non_empty(key_def.get("Name"), key_id)
-    description = non_empty(
-        key_def.get("Description"),
-        f"Use this on a OneBlock to set its expedition to {expedition}."
-    )
-    quality = key_def.get("Quality") or "Epic"
-
-    payload = {
-        "TranslationProperties": {
-            "Name": f"server.items.{key_id}.name",
-            "Description": f"server.items.{key_id}.description"
-        },
-        "Id": key_id,
-        "ItemLevel": 1,
-        "Icon": ICON_KEY,
-        "Categories": [
-            "Items.OneBlockExpedition"
-        ],
+        "Id":       item_id,
+        "ItemLevel": item_level,
+        "Icon":     "Icons/ItemsGenerated/Crystal_Expedition.png",
+        "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "BlockType": {
             "DrawType": "Model",
             "Material": "Solid",
-            "Opacity": "Transparent",
+            "Opacity":  "Transparent",
             "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
             "CustomModelTexture": [
-                {
-                    "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
-                    "Weight": 1
-                }
+                {"Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png", "Weight": 1}
             ]
         },
         "Interactions": {
-            "Use": {
-                "Interactions": [
-                    {"Type": "oneblock_expedition_change"}
-                ]
-            }
+            "Use": {"Interactions": [{"Type": "oneblock_crystal_use"}]}
         },
         "Recipe": {
-            "Input": build_recipe_inputs(key_def.get("Craft", [])),
+            "Input": inputs,
             "OutputQuantity": 1,
             "BenchRequirement": [
                 {
                     "Type": "Crafting",
-                    "Categories": [category_id],
-                    "Id": "OneBlockUpgrader"
+                    "Categories": [f"OneBlock_Enchanter_{expedition_id}"],
+                    "Id": "OneBlockEnchanter"
                 }
             ]
         },
         "Consumable": True,
         "Tags": {
-            "Type": ["OneBlock_Expedition"],
-            "OneBlockExpeditionTargetBlockId": [f"OneBlock_Block_{expedition}"]
+            "Type": ["OneBlock_ExpeditionCrystal"],
+            "OneBlockCrystalExpedition": [expedition_id],
+            "OneBlockCrystalSize": [size]
         },
-        "MaxStack": 1
+        "MaxStack": 4,
+        "Quality": _quality(item_level)
     }
 
-    payload["Quality"] = quality
 
-    lang_entries = {
-        f"items.{key_id}.name": name,
-        f"items.{key_id}.description": description
+def build_bench_recipe_item(expedition_id: str, item_level: int) -> dict:
+    item_id = f"OneBlock_Bench_Recipe_{expedition_id}"
+    return {
+        "TranslationProperties": {
+            "Name":        f"server.items.{item_id}.name",
+            "Description": f"server.items.{item_id}.description"
+        },
+        "Id":       item_id,
+        "ItemLevel": item_level,
+        "Icon":     "Icons/ItemsGenerated/RecipeDrop.png",
+        "Categories": ["Items.RecipeDrop"],
+        "PlayerAnimationsId": "Item",
+        "Consumable": True,
+        "Tags": {
+            "Type": ["RecipeDrop"],
+            "RecipeDropTarget": [f"Bench_OneBlock_{expedition_id}"]
+        },
+        "MaxStack": 1,
+        "Quality": _quality(item_level)
     }
 
-    return key_id, payload, lang_entries
+
+def _safe_drop_id(drop_id: str) -> str:
+    """Turn a drop ID (including entity:X) into a filesystem/item-ID-safe string."""
+    return drop_id.replace(":", "_").replace(" ", "_")
 
 
-def update_lang(path: Path, entries: Dict[str, str]) -> None:
-    if not entries:
-        return
-    if path.exists():
-        lines = path.read_text(encoding="utf-8").splitlines()
-    else:
-        lines = []
+def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
+    """Build the consumable unlock item that adds a drop to the expedition loot table."""
+    drop_id   = unlock["DropId"]
+    weight    = unlock["Weight"]
+    tier      = unlock["Tier"]
+    quality   = unlock.get("Rank", "Common")
+    cost      = unlock["Cost"]
+    bench_id  = f"OneBlock_Bench_{expedition_id}"
+    item_id   = f"OneBlock_Unlock_{expedition_id}_{_safe_drop_id(drop_id)}"
+    cat_id    = f"{bench_id}_Tier{tier}"
 
-    key_to_index: Dict[str, int] = {}
-    for idx, line in enumerate(lines):
-        if "=" not in line or line.strip().startswith("#"):
-            continue
-        key = line.split("=", 1)[0].strip()
-        if key:
-            key_to_index[key] = idx
+    # Human-readable drop name for display (strip entity: prefix)
+    drop_name = drop_id.split(":")[-1].replace("_", " ")
 
-    for key, value in entries.items():
-        line = f"{key} = {value}"
-        if key in key_to_index:
-            lines[key_to_index[key]] = line
-        else:
-            lines.append(line)
+    return {
+        "TranslationProperties": {
+            "Name":        f"server.items.{item_id}.name",
+            "Description": f"server.items.{item_id}.description"
+        },
+        "Id":       item_id,
+        "ItemLevel": tier,
+        "Icon":     "Icons/ItemsGenerated/RecipeDrop.png",
+        "Categories": ["Items.RecipeDrop"],
+        "PlayerAnimationsId": "Item",
+        "Recipe": {
+            "Input":          cost,
+            "OutputQuantity": 1,
+            "BenchRequirement": [
+                {
+                    "Type":       "Crafting",
+                    "Categories": [cat_id],
+                    "Id":         bench_id
+                }
+            ]
+        },
+        "Consumable": True,
+        "Tags": {
+            "Type":                       ["OneBlock_Unlock_Consumable"],
+            "OneBlockUnlockExpedition":   [expedition_id],
+            "OneBlockUnlockDropId":       [drop_id],
+            "OneBlockUnlockWeight":       [str(weight)]
+        },
+        "MaxStack": 1,
+        "Quality":  quality
+    }
 
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+def build_expedition_bench(expedition_id: str, item_level: int,
+                           craft_input: list, upgrades: list,
+                           unlocks_by_tier: dict) -> dict:
+    bench_id      = f"OneBlock_Bench_{expedition_id}"
+    item_bench_id = f"Bench_OneBlock_{expedition_id}"
+
+    tier_levels = []
+    for upg in upgrades:
+        tier_levels.append({
+            "UpgradeRequirement": {
+                "Input":       upg["Input"],
+                "TimeSeconds": upg["TimeSeconds"]
+            }
+        })
+    tier_levels.append({"UpgradeRequirement": {"Input": [], "TimeSeconds": 0}})
+
+    return {
+        "TranslationProperties": {
+            "Name":        f"server.items.{item_bench_id}.name",
+            "Description": f"server.items.{item_bench_id}.description"
+        },
+        "Id":       item_bench_id,
+        "ItemLevel": item_level,
+        "Icon":     "Icons/ItemsGenerated/OneBlockUpgrader.png",
+        "Categories": ["Furniture.Benches"],
+        "Recipe": {
+            "Input": craft_input,
+            "BenchRequirement": [
+                {
+                    "Type": "Crafting",
+                    "Categories": ["OneBlock_Workbench_ExpeditionBenches"],
+                    "Id": "OneBlockWorkbench"
+                }
+            ],
+            "KnowledgeRequired": True
+        },
+        "BlockType": {
+            "Material": "Solid",
+            "DrawType":  "Model",
+            "Opacity":   "Transparent",
+            "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+            "CustomModelTexture": [
+                {"Texture": "Blocks/OneBlockUpgrader_Texture.png", "Weight": 1}
+            ],
+            "HitboxType":      "Bench_Workbench",
+            "VariantRotation": "NESW",
+            "Bench": {
+                "Id":         bench_id,
+                "Type":       "Crafting",
+                "TierLevels": tier_levels,
+                "Categories": [
+                    {
+                        "Id":      f"{bench_id}_Tier{t}",
+                        "Icon":    "Icons/CraftingCategories/ExpeditionKey.png",
+                        "Name":    f"server.benchCategories.{bench_id}_Tier{t}",
+                        "Recipes": ids
+                    }
+                    for t, ids in sorted(unlocks_by_tier.items())
+                ],
+                "LocalOpenSoundEventId":  "SFX_Workbench_Open",
+                "LocalCloseSoundEventId": "SFX_Workbench_Close"
+            },
+            "State": {
+                "Id": "crafting",
+                "Definitions": {
+                    "CraftCompleted": {
+                        "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+                        "Looping": True
+                    },
+                    "CraftCompletedInstant": {
+                        "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+                    }
+                }
+            },
+            "Gathering": {"Breaking": {"GatherType": "Benches"}},
+            "BlockParticleSetId": "Wood",
+            "Support": {"Down": [{"FaceType": "Full"}]},
+            "BlockSoundSetId": "Wood"
+        },
+        "PlayerAnimationsId": "Block",
+        "Tags": {"Type": ["Bench"]},
+        "MaxStack": 1,
+        "ItemSoundSetId": "ISS_Blocks_Wood"
+    }
 
 
-def generate_defaults_java(expeditions: Dict[str, Any]) -> None:
-    def render_drop(drop_id: str, weight: int) -> str:
-        is_recipe, recipe_target = is_recipe_drop_id(drop_id)
-        if is_recipe:
-            return f"drop(\"{recipe_item_id(recipe_target)}\", {weight})"
-        is_entity, entity_id = is_entity_id(drop_id)
-        if is_entity:
-            return f"drop(OneBlockDropId.entityDropId(\"{entity_id}\"), {weight})"
-        return f"drop(\"{drop_id}\", {weight})"
+# ── Lang builder ──────────────────────────────────────────────────────────────
 
-    lines: List[str] = []
-    lines.append("package com.EreliaStudio.OneBlock;")
-    lines.append("")
-    lines.append("import java.util.ArrayList;")
-    lines.append("import java.util.Collections;")
-    lines.append("import java.util.HashMap;")
-    lines.append("import java.util.List;")
-    lines.append("import java.util.Map;")
-    lines.append("")
-    lines.append("public final class OneBlockExpeditionDefaults")
-    lines.append("{")
-    lines.append("    public static final class DropDefinition")
-    lines.append("    {")
-    lines.append("        public final String dropId;")
-    lines.append("        public final int weight;")
-    lines.append("")
-    lines.append("        public DropDefinition(String dropId, int weight)")
-    lines.append("        {")
-    lines.append("            this.dropId = dropId;")
-    lines.append("            this.weight = weight;")
-    lines.append("        }")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    private static final Map<String, List<DropDefinition>> DEFAULTS;")
-    lines.append("    private static final Map<String, List<String>> DEFAULT_IDS;")
-    lines.append("    private static final Map<String, Map<String, Integer>> DEFAULT_WEIGHTS;")
-    lines.append("")
-    lines.append("    static")
-    lines.append("    {")
-    lines.append("        Map<String, List<DropDefinition>> defaults = new HashMap<>();")
-    lines.append("")
+def build_lang_block(expedition_id: str) -> str:
+    eid   = expedition_id
+    sep   = "─" * max(0, 55 - len(eid))
+    lines = [
+        f"\n# GENERATED ─── {eid} {sep}",
+        f"server.items.OneBlock_Crystal_{eid}_Small.name={eid} Crystal (Small)",
+        f"server.items.OneBlock_Crystal_{eid}_Small.description=Use on the OneBlock to begin a 100-tick {eid} expedition.",
+        f"server.items.OneBlock_Crystal_{eid}_Large.name={eid} Crystal (Large)",
+        f"server.items.OneBlock_Crystal_{eid}_Large.description=Use on the OneBlock to begin a 300-tick {eid} expedition.",
+        f"server.items.Bench_OneBlock_{eid}.name={eid} Bench",
+        f"server.items.Bench_OneBlock_{eid}.description=An expedition bench for {eid}. Upgrade it to unlock more powerful recipes.",
+        f"server.items.OneBlock_Bench_Recipe_{eid}.name=Recipe: {eid} Bench",
+        f"server.items.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {eid} Bench crafting recipe at the OneBlock Workbench.",
+        f"server.benchCategories.OneBlockEnchanter_{eid}={eid} Crystals",
+        f"server.benchCategories.OneBlock_Bench_{eid}_Tier1={eid} Recipes",
+    ]
+    return "\n".join(lines)
 
-    for expedition, data in expeditions.items():
-        pool = data.get("BaseDropPool", [])
-        drops: List[str] = []
-        for entry in pool or []:
-            if not isinstance(entry, dict):
-                continue
-            drop_id = entry.get("ID")
-            if not drop_id:
-                continue
-            weight = normalize_weight(entry.get("Weight", 1))
-            drops.append(render_drop(drop_id, weight))
-        if not drops:
-            continue
-        lines.append(f"        defaults.put(\"{expedition}\", List.of(")
-        for i, drop_line in enumerate(drops):
-            suffix = "," if i < len(drops) - 1 else ""
-            lines.append(f"                {drop_line}{suffix}")
-        lines.append("        ));")
+
+# ── Java snippet builder ──────────────────────────────────────────────────────
+
+JAVA_ENTITY_PREFIX = "entity:"
+
+def _java_drop_expr(drop_id: str, weight: int) -> str:
+    """Return the Java drop(...) call for a single drop entry."""
+    if drop_id.startswith(JAVA_ENTITY_PREFIX):
+        entity = drop_id[len(JAVA_ENTITY_PREFIX):]
+        return f'drop(OneBlockDropId.entityDropId("{entity}"), {weight})'
+    return f'drop("{drop_id}", {weight})'
+
+
+def build_java_defaults_block(all_expeditions: list[tuple[str, list]]) -> str:
+    """Build the entire static { } block for OneBlockExpeditionDefaults."""
+    lines = [
+        "    static",
+        "    {",
+        "        Map<String, List<DropDefinition>> defaults = new HashMap<>();",
+    ]
+    for expedition_id, drop_pool in all_expeditions:
         lines.append("")
-
-    lines.append("        DEFAULTS = Collections.unmodifiableMap(defaults);")
-    lines.append("        DEFAULT_IDS = buildDefaultIds(DEFAULTS);")
-    lines.append("        DEFAULT_WEIGHTS = buildDefaultWeights(DEFAULTS);")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    private OneBlockExpeditionDefaults()")
-    lines.append("    {")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    public static List<DropDefinition> getDefaults(String expeditionId)")
-    lines.append("    {")
-    lines.append("        String key = OneBlockExpeditionResolver.normalizeExpedition(expeditionId);")
-    lines.append("        List<DropDefinition> defaults = DEFAULTS.get(key);")
-    lines.append("        if (defaults == null)")
-    lines.append("        {")
-    lines.append("            return List.of();")
-    lines.append("        }")
-    lines.append("        return defaults;")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    public static List<String> getDefaultDropIds(String expeditionId)")
-    lines.append("    {")
-    lines.append("        String key = OneBlockExpeditionResolver.normalizeExpedition(expeditionId);")
-    lines.append("        List<String> ids = DEFAULT_IDS.get(key);")
-    lines.append("        if (ids == null || ids.isEmpty())")
-    lines.append("        {")
-    lines.append("            return List.of(OneBlockDropRegistry.DEFAULT_ITEM_ID);")
-    lines.append("        }")
-    lines.append("        return ids;")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    public static Map<String, Map<String, Integer>> getDefaultWeights()")
-    lines.append("    {")
-    lines.append("        return DEFAULT_WEIGHTS;")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    public static boolean isDefaultDrop(String expeditionId, String dropId)")
-    lines.append("    {")
-    lines.append("        if (dropId == null || dropId.isEmpty())")
-    lines.append("        {")
-    lines.append("            return false;")
-    lines.append("        }")
-    lines.append("")
-    lines.append("        List<String> ids = DEFAULT_IDS.get(OneBlockExpeditionResolver.normalizeExpedition(expeditionId));")
-    lines.append("        return ids != null && ids.contains(dropId);")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    public static void ensureDefaults(String expeditionId, OneBlockPlayerExpeditionDropsState state)")
-    lines.append("    {")
-    lines.append("        if (state == null)")
-    lines.append("        {")
-    lines.append("            return;")
-    lines.append("        }")
-    lines.append("")
-    lines.append("        state.unlockedDrops.removeIf(item -> item == null || item.isEmpty());")
-    lines.append("")
-    lines.append("        List<String> defaults = getDefaultDropIds(expeditionId);")
-    lines.append("        if (!defaults.isEmpty())")
-    lines.append("        {")
-    lines.append("            state.unlockedDrops.addAll(defaults);")
-    lines.append("        }")
-    lines.append("")
-    lines.append("        if (state.unlockedDrops.isEmpty())")
-    lines.append("        {")
-    lines.append("            state.unlockedDrops.add(OneBlockDropRegistry.DEFAULT_ITEM_ID);")
-    lines.append("        }")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    private static DropDefinition drop(String dropId, int weight)")
-    lines.append("    {")
-    lines.append("        if (weight < 1)")
-    lines.append("        {")
-    lines.append("            weight = 1;")
-    lines.append("        }")
-    lines.append("        return new DropDefinition(dropId, weight);")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    private static Map<String, List<String>> buildDefaultIds(Map<String, List<DropDefinition>> defaults)")
-    lines.append("    {")
-    lines.append("        Map<String, List<String>> out = new HashMap<>();")
-    lines.append("        for (Map.Entry<String, List<DropDefinition>> entry : defaults.entrySet())")
-    lines.append("        {")
-    lines.append("            List<String> ids = new ArrayList<>();")
-    lines.append("            for (DropDefinition def : entry.getValue())")
-    lines.append("            {")
-    lines.append("                if (def != null && def.dropId != null && !def.dropId.isEmpty())")
-    lines.append("                {")
-    lines.append("                    ids.add(def.dropId);")
-    lines.append("                }")
-    lines.append("            }")
-    lines.append("            out.put(entry.getKey(), Collections.unmodifiableList(ids));")
-    lines.append("        }")
-    lines.append("        return Collections.unmodifiableMap(out);")
-    lines.append("    }")
-    lines.append("")
-    lines.append("    private static Map<String, Map<String, Integer>> buildDefaultWeights(Map<String, List<DropDefinition>> defaults)")
-    lines.append("    {")
-    lines.append("        Map<String, Map<String, Integer>> out = new HashMap<>();")
-    lines.append("        for (Map.Entry<String, List<DropDefinition>> entry : defaults.entrySet())")
-    lines.append("        {")
-    lines.append("            Map<String, Integer> weights = new HashMap<>();")
-    lines.append("            for (DropDefinition def : entry.getValue())")
-    lines.append("            {")
-    lines.append("                if (def == null || def.dropId == null || def.dropId.isEmpty())")
-    lines.append("                {")
-    lines.append("                    continue;")
-    lines.append("                }")
-    lines.append("                int weight = def.weight < 1 ? 1 : def.weight;")
-    lines.append("                weights.put(def.dropId, weight);")
-    lines.append("            }")
-    lines.append("            out.put(entry.getKey(), Collections.unmodifiableMap(weights));")
-    lines.append("        }")
-    lines.append("        return Collections.unmodifiableMap(out);")
-    lines.append("    }")
-    lines.append("}")
-
-    DEFAULTS_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        entries = [f"                {_java_drop_expr(e['ID'], e['Weight'])}" for e in drop_pool]
+        inner = ",\n".join(entries)
+        lines.append(f'        defaults.put("{expedition_id}", List.of(')
+        lines.append(inner)
+        lines.append("        ));")
+    lines += [
+        "",
+        "        DEFAULTS = Collections.unmodifiableMap(defaults);",
+        "        DEFAULT_IDS = buildDefaultIds(DEFAULTS);",
+        "        DEFAULT_WEIGHTS = buildDefaultWeights(DEFAULTS);",
+        "    }",
+    ]
+    return "\n".join(lines)
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate OneBlock expedition assets and bench categories.")
-    parser.add_argument("config", type=Path, help="Path to the expedition JSON config.")
+# ── Patch helpers ─────────────────────────────────────────────────────────────
+
+def _load_json(path: Path) -> dict:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+def _save_json(path: Path, data: dict, dry_run: bool):
+    if dry_run:
+        print(f"  [dry-run] Would overwrite {path}")
+        return
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"  [patch]  {path}")
+
+
+def patch_enchanter(path: Path, expedition_id: str, dry_run: bool):
+    data = _load_json(path)
+    categories = data["BlockType"]["Bench"]["Categories"]
+    cat_id = f"OneBlock_Enchanter_{expedition_id}"
+    if any(c["Id"] == cat_id for c in categories):
+        print(f"  [skip]   Enchanter already has category {cat_id}")
+        return
+    categories.append({
+        "Id":   cat_id,
+        "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+        "Name": f"server.benchCategories.{cat_id}",
+        "Recipes": [
+            f"OneBlock_Crystal_{expedition_id}_Small",
+            f"OneBlock_Crystal_{expedition_id}_Large"
+        ]
+    })
+    _save_json(path, data, dry_run)
+
+
+def patch_workbench(path: Path, expedition_id: str, dry_run: bool):
+    data    = _load_json(path)
+    recipes = data["BlockType"]["Bench"]["Categories"][0]["Recipes"]
+    bench_item_id = f"Bench_OneBlock_{expedition_id}"
+    if bench_item_id in recipes:
+        print(f"  [skip]   Workbench already lists {bench_item_id}")
+        return
+    recipes.append(bench_item_id)
+    _save_json(path, data, dry_run)
+
+
+def append_lang_recipe(path: Path, item_id: str, name: str, description: str, dry_run: bool):
+    existing = path.read_text(encoding="utf-8")
+    marker = f"server.items.{item_id}.name"
+    if marker in existing:
+        print(f"  [skip]   Lang already has entry for {item_id}")
+        return
+    lines = [
+        f"server.items.{item_id}.name={name}",
+        f"server.items.{item_id}.description={description}"
+    ]
+    block = "\n" + "\n".join(lines)
+    if dry_run:
+        print(f"  [dry-run] Would append lang entry for {item_id}")
+        return
+    path.write_text(existing.rstrip() + block + "\n", encoding="utf-8")
+    print(f"  [patch]  lang ← {item_id}")
+
+
+def patch_lang(path: Path, expedition_id: str, dry_run: bool):
+    existing = path.read_text(encoding="utf-8")
+    marker = f"server.items.OneBlock_Crystal_{expedition_id}_Small.name"
+    if marker in existing:
+        print(f"  [skip]   Lang already has entries for {expedition_id}")
+        return
+    block = build_lang_block(expedition_id)
+    if dry_run:
+        print(f"  [dry-run] Would append lang entries for {expedition_id}")
+        return
+    path.write_text(existing.rstrip() + "\n" + block + "\n", encoding="utf-8")
+    print(f"  [patch]  lang ← {expedition_id}")
+
+
+def write_json(path: Path, data: dict, dry_run: bool):
+    if dry_run:
+        print(f"  [dry-run] Would write {path.name}")
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"  [write]  {path.name}")
+
+
+# ── Cleanup ───────────────────────────────────────────────────────────────────
+
+def _is_generated_lang_line(line: str) -> bool:
+    """Return True for any line that was written by a previous generator run."""
+    stripped = line.strip()
+    if stripped.startswith("# GENERATED"):
+        return True
+    if not stripped or stripped.startswith("#"):
+        return False
+    if "=" not in stripped:
+        return False
+    key = stripped.split("=", 1)[0].strip()
+    return (
+        (key.startswith("server.items.OneBlock_Crystal_") and ("_Small." in key or "_Large." in key)) or
+        key.startswith("server.items.Bench_OneBlock_") or
+        key.startswith("server.items.OneBlock_Bench_Recipe_") or
+        key.startswith("server.items.OneBlock_Unlock_") or
+        key.startswith("server.benchCategories.OneBlockEnchanter_") or
+        key.startswith("server.benchCategories.OneBlock_Bench_")
+    )
+
+
+def cleanup(repo_root: Path, dry_run: bool):
+    print("\n=== Cleanup ===")
+
+    # Delete all generated JSON files from output directories
+    for gen_dir in [CRYSTAL_DIR, BENCH_DIR, RECIPE_DIR, UNLOCK_DIR]:
+        dir_path = repo_root / gen_dir
+        if not dir_path.exists():
+            continue
+        files = list(dir_path.glob("*.json"))
+        if not files:
+            continue
+        for f in files:
+            if dry_run:
+                print(f"  [dry-run] Would delete {gen_dir.name}/{f.name}")
+            else:
+                f.unlink()
+        if not dry_run:
+            print(f"  [clean]  Deleted {len(files)} file(s) from {gen_dir.name}/")
+
+    # Strip generated categories from the Enchanter
+    enchanter_path = repo_root / ENCHANTER
+    if enchanter_path.exists():
+        data = _load_json(enchanter_path)
+        cats = data["BlockType"]["Bench"]["Categories"]
+        before = len(cats)
+        data["BlockType"]["Bench"]["Categories"] = [
+            c for c in cats if not c.get("Id", "").startswith("OneBlock_Enchanter_")
+        ]
+        removed = before - len(data["BlockType"]["Bench"]["Categories"])
+        if removed:
+            _save_json(enchanter_path, data, dry_run)
+            if not dry_run:
+                print(f"  [clean]  Removed {removed} category/categories from Enchanter")
+
+    # Strip generated recipe IDs from the Workbench
+    workbench_path = repo_root / WORKBENCH
+    if workbench_path.exists():
+        data = _load_json(workbench_path)
+        recipes = data["BlockType"]["Bench"]["Categories"][0]["Recipes"]
+        before = len(recipes)
+        data["BlockType"]["Bench"]["Categories"][0]["Recipes"] = [
+            r for r in recipes if not r.startswith("Bench_OneBlock_")
+        ]
+        removed = before - len(data["BlockType"]["Bench"]["Categories"][0]["Recipes"])
+        if removed:
+            _save_json(workbench_path, data, dry_run)
+            if not dry_run:
+                print(f"  [clean]  Removed {removed} recipe ID(s) from Workbench")
+
+    # Strip generated lines from the lang file
+    lang_path = repo_root / LANG_FILE
+    if lang_path.exists():
+        lines = lang_path.read_text(encoding="utf-8").splitlines()
+        cleaned = [l for l in lines if not _is_generated_lang_line(l)]
+        # Collapse runs of more than one blank line
+        result, prev_blank = [], False
+        for l in cleaned:
+            is_blank = not l.strip()
+            if is_blank and prev_blank:
+                continue
+            result.append(l)
+            prev_blank = is_blank
+        removed = len(lines) - len(result)
+        if removed:
+            if dry_run:
+                print(f"  [dry-run] Would remove ~{removed} generated line(s) from lang")
+            else:
+                lang_path.write_text("\n".join(result).rstrip() + "\n", encoding="utf-8")
+                print(f"  [clean]  Removed {removed} generated line(s) from lang")
+
+    print("  Cleanup done.\n")
+
+
+# ── Entry point ───────────────────────────────────────────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Generate OneBlock expedition assets from a JSON definition file."
+    )
+    parser.add_argument("input",       help="Input JSON (e.g. expeditionsTemplate.json)")
+    parser.add_argument("--repo-root", default=".", help="Repo root directory (default: .)")
+    parser.add_argument("--dry-run",   action="store_true",
+                        help="Show what would be done without writing files")
     args = parser.parse_args()
 
-    config = load_json(args.config)
-    if not isinstance(config, dict):
-        raise SystemExit("Config root must be a JSON object keyed by expedition name.")
+    repo_root  = Path(args.repo_root).resolve()
+    input_path = Path(args.input)
+    if not input_path.is_absolute():
+        input_path = repo_root / input_path
 
-    bench = load_json(BENCH_PATH)
-    bench_categories: List[Dict[str, Any]] = []
+    raw = json.loads(input_path.read_text(encoding="utf-8"))
+    expeditions = {k: v for k, v in raw.items() if not k.startswith("_")}
 
-    lang_updates: Dict[str, str] = {}
+    enchanter_path = repo_root / ENCHANTER
+    workbench_path = repo_root / WORKBENCH
+    lang_path      = repo_root / LANG_FILE
 
-    for expedition, data in config.items():
-        if not isinstance(data, dict):
-            continue
+    cleanup(repo_root, args.dry_run)
 
-        category_id = f"OneBlock_Upgrader_Expedition_{expedition}"
-        category_name_key = f"server.benchCategories.OneBlockUpgrader_Expedition_{expedition}"
+    java_defaults_path = repo_root / Path(
+        "mods/oneblock-progression/src/main/java"
+        "/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java"
+    )
 
-        recipes: List[str] = []
+    all_expedition_drops: list[tuple[str, list]] = []
 
-        block_id, block_payload, block_lang = build_oneblock_block_item(expedition)
-        write_json(ONEBLOCK_BLOCK_BASE / f"{block_id}.json", block_payload)
-        lang_updates.update(block_lang)
+    for expedition_id, cfg in expeditions.items():
+        print(f"\n=== {expedition_id} ===")
 
-        pool = data.get("BaseDropPool", [])
-        if isinstance(pool, list):
-            for entry in pool:
-                if not isinstance(entry, dict):
-                    continue
-                raw_id = entry.get("ID", "")
-                is_recipe, recipe_target = is_recipe_drop_id(raw_id)
-                if not is_recipe:
-                    continue
-                recipe_id, recipe_payload, recipe_lang = build_recipe_drop_item(
-                    expedition, recipe_target, entry
+        item_level  = cfg["ItemLevel"]
+        crystal_cfg = cfg["Crystal"]
+        bench_cfg   = cfg["Bench"]
+        drop_pool   = cfg["BaseDropPool"]
+
+        # Crystal Small
+        write_json(
+            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{expedition_id}_Small.json",
+            build_crystal(expedition_id, "Small", item_level, crystal_cfg["Small"]["Input"]),
+            args.dry_run
+        )
+
+        # Crystal Large
+        write_json(
+            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{expedition_id}_Large.json",
+            build_crystal(expedition_id, "Large", item_level, crystal_cfg["Large"]["Input"]),
+            args.dry_run
+        )
+
+        # Bench unlock items — group by tier for bench categories
+        unlocks_by_tier: dict = {}
+        for unlock in bench_cfg.get("Unlocks", []):
+            drop_id  = unlock["DropId"]
+            tier     = unlock["Tier"]
+            item_id  = f"OneBlock_Unlock_{expedition_id}_{_safe_drop_id(drop_id)}"
+            drop_name = drop_id.split(":")[-1].replace("_", " ")
+
+            write_json(
+                repo_root / UNLOCK_DIR / f"{item_id}.json",
+                build_unlock_item(expedition_id, unlock),
+                args.dry_run
+            )
+            if lang_path.exists():
+                append_lang_recipe(
+                    lang_path,
+                    item_id,
+                    f"Unlock: {drop_name}",
+                    f"Consume to add {drop_name} to the {expedition_id} loot pool (weight {unlock['Weight']}).",
+                    args.dry_run
                 )
-                write_json(RECIPE_DROP_BASE / f"Expedition_{expedition}" / f"{recipe_id}.json", recipe_payload)
-                lang_updates.update(recipe_lang)
 
-        key_def = data.get("KeyCraft")
-        if isinstance(key_def, dict):
-            key_id, key_payload, key_lang = build_key_item(expedition, category_id, key_def)
-            write_json(EXPEDITION_ITEM_BASE / f"{key_id}.json", key_payload)
-            lang_updates.update(key_lang)
-            recipes.append(key_id)
+            unlocks_by_tier.setdefault(tier, []).append(item_id)
 
-        unlocks = data.get("Unlockable", [])
-        if isinstance(unlocks, list):
-            for unlock in unlocks:
-                if not isinstance(unlock, dict):
-                    continue
-                raw_id = unlock.get("ID", "")
-                if isinstance(raw_id, str) and raw_id.strip().lower().startswith("exchange:"):
-                    raise SystemExit(
-                        "Exchange entries are no longer supported by the generator. "
-                        "Remove the Exchange: prefix or migrate this entry to a normal unlock or recipe drop."
-                    )
+        # Expedition bench
+        write_json(
+            repo_root / BENCH_DIR / f"Bench_OneBlock_{expedition_id}.json",
+            build_expedition_bench(expedition_id, item_level,
+                                   bench_cfg["CraftInput"], bench_cfg["Upgrades"],
+                                   unlocks_by_tier),
+            args.dry_run
+        )
 
-                unlock_id, payload, unlock_lang = build_unlock_recipe(expedition, category_id, unlock)
-                write_json(UNLOCK_BASE / f"Expedition_{expedition}" / f"{unlock_id}.json", payload)
-                lang_updates.update(unlock_lang)
-                recipes.append(unlock_id)
+        # Bench recipe drop item
+        write_json(
+            repo_root / RECIPE_DIR / f"OneBlock_Bench_Recipe_{expedition_id}.json",
+            build_bench_recipe_item(expedition_id, item_level),
+            args.dry_run
+        )
 
-        bench_categories.append({
-            "Id": category_id,
-            "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-            "Name": category_name_key,
-            "Recipes": recipes
-        })
+        # Patch shared files
+        if enchanter_path.exists():
+            patch_enchanter(enchanter_path, expedition_id, args.dry_run)
+        else:
+            print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
-        lang_updates[f"benchCategories.OneBlockUpgrader_Expedition_{expedition}"] = f"Expedition - {expedition}"
+        if workbench_path.exists():
+            patch_workbench(workbench_path, expedition_id, args.dry_run)
+        else:
+            print(f"  [warn]   Workbench JSON not found: {workbench_path}")
 
-    # update bench categories
-    bench_block = bench.get("BlockType", {}).get("Bench", {})
-    if "BlockType" not in bench:
-        bench["BlockType"] = {}
-    if "Bench" not in bench["BlockType"]:
-        bench["BlockType"]["Bench"] = {}
-    bench["BlockType"]["Bench"]["Categories"] = bench_categories
-    write_json(BENCH_PATH, bench)
+        if lang_path.exists():
+            patch_lang(lang_path, expedition_id, args.dry_run)
+        else:
+            print(f"  [warn]   Lang file not found: {lang_path}")
 
-    update_lang(LANG_PATH, lang_updates)
-    generate_defaults_java(config)
+        all_expedition_drops.append((expedition_id, drop_pool))
 
-    return 0
+    # ── Rewrite OneBlockExpeditionDefaults.java static block ─────────────────
+    static_block = build_java_defaults_block(all_expedition_drops)
+
+    if java_defaults_path.exists():
+        source = java_defaults_path.read_text(encoding="utf-8")
+        # Replace everything between the first "    static" and its closing "    }"
+        import re
+        new_source = re.sub(
+            r"    static\s*\{.*?    \}",
+            static_block,
+            source,
+            count=1,
+            flags=re.DOTALL,
+        )
+        if new_source == source:
+            print("\n[warn]  Could not locate static block in OneBlockExpeditionDefaults.java — printing to stdout instead.")
+            print(static_block)
+        elif args.dry_run:
+            print("\n[dry-run] Would overwrite static block in OneBlockExpeditionDefaults.java")
+        else:
+            java_defaults_path.write_text(new_source, encoding="utf-8")
+            print(f"\n[write]  OneBlockExpeditionDefaults.java static block updated ({len(all_expedition_drops)} expeditions)")
+    else:
+        print(f"\n[warn]  {java_defaults_path} not found — printing static block to stdout:")
+        print(static_block)
+
+    print(f"\nDone. {len(expeditions)} expedition(s) processed.")
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

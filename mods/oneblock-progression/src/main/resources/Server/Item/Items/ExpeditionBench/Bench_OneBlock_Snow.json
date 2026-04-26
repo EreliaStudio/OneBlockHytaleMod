@@ -1,0 +1,158 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlock_Snow.name",
+    "Description": "server.items.Bench_OneBlock_Snow.description"
+  },
+  "Id": "Bench_OneBlock_Snow",
+  "ItemLevel": 4,
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Snow_Packed",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Block_Snow",
+        "Quantity": 16
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Workbench_ExpeditionBenches"
+        ],
+        "Id": "OneBlockWorkbench"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlock_Bench_Snow",
+      "Type": "Crafting",
+      "TierLevels": [
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Red",
+                "Quantity": 16
+              },
+              {
+                "ItemId": "OneBlock_Crystal_Blue",
+                "Quantity": 16
+              }
+            ],
+            "TimeSeconds": 8
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Red",
+                "Quantity": 32
+              },
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 8
+              }
+            ],
+            "TimeSeconds": 15
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [],
+            "TimeSeconds": 0
+          }
+        }
+      ],
+      "Categories": [
+        {
+          "Id": "OneBlock_Bench_Snow_Tier1",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Snow_Tier1",
+          "Recipes": [
+            "OneBlock_Unlock_Snow_Plant_Frost_Fern",
+            "OneBlock_Unlock_Snow_Plant_Ice_Flower_Blue",
+            "OneBlock_Unlock_Snow_Plant_Frozen_Grass"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Snow_Tier2",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Snow_Tier2",
+          "Recipes": [
+            "OneBlock_Unlock_Snow_entity_Sheep",
+            "OneBlock_Unlock_Snow_entity_Bison",
+            "OneBlock_Unlock_Snow_entity_Fox"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Snow_Tier3",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Snow_Tier3",
+          "Recipes": [
+            "OneBlock_Unlock_Snow_Ingredient_Fur_PolarBear",
+            "OneBlock_Unlock_Snow_Ore_Cobalt_Ice",
+            "OneBlock_Unlock_Snow_Ingredient_Ice_Essence"
+          ]
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

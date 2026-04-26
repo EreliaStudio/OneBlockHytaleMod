@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Cave_Ore_Copper.name",
+    "Description": "server.items.OneBlock_Unlock_Cave_Ore_Copper.description"
+  },
+  "Id": "OneBlock_Unlock_Cave_Ore_Copper",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Stone",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Cave_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Copper"
+    ],
+    "OneBlockUnlockWeight": [
+      "10"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Frozen Cave_entity_Frost_Golem.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen Cave_entity_Frost_Golem.description"
+  },
+  "Id": "OneBlock_Unlock_Frozen Cave_entity_Frost_Golem",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Glacial_Crystal",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Frozen Cave_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Frozen Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Frozen Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Frost_Golem"
+    ],
+    "OneBlockUnlockWeight": [
+      "2"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

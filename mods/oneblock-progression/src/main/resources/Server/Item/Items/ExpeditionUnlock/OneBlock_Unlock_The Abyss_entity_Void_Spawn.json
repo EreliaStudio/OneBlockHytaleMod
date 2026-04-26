@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_The Abyss_entity_Void_Spawn.name",
+    "Description": "server.items.OneBlock_Unlock_The Abyss_entity_Void_Spawn.description"
+  },
+  "Id": "OneBlock_Unlock_The Abyss_entity_Void_Spawn",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Adamantite",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_The Abyss_Tier2"
+        ],
+        "Id": "OneBlock_Bench_The Abyss"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "The Abyss"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Void_Spawn"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

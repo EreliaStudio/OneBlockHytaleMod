@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Egyptian Temple_Ingredient_Claw_Scorpion.name",
+    "Description": "server.items.OneBlock_Unlock_Egyptian Temple_Ingredient_Claw_Scorpion.description"
+  },
+  "Id": "OneBlock_Unlock_Egyptian Temple_Ingredient_Claw_Scorpion",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Desert_Cracked",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Egyptian Temple_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Egyptian Temple"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Egyptian Temple"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Claw_Scorpion"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Deep Forest_Plant_Bush.name",
+    "Description": "server.items.OneBlock_Unlock_Deep Forest_Plant_Bush.description"
+  },
+  "Id": "OneBlock_Unlock_Deep Forest_Plant_Bush",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Deep Forest_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Deep Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "Plant_Bush"
+    ],
+    "OneBlockUnlockWeight": [
+      "10"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

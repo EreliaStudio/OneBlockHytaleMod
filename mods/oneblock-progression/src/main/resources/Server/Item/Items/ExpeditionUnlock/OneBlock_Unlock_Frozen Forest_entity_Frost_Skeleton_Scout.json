@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Frozen Forest_entity_Frost_Skeleton_Scout.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen Forest_entity_Frost_Skeleton_Scout.description"
+  },
+  "Id": "OneBlock_Unlock_Frozen Forest_entity_Frost_Skeleton_Scout",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Frozen_Soil",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Frozen Forest_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Frozen Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Frozen Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Frost_Skeleton_Scout"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

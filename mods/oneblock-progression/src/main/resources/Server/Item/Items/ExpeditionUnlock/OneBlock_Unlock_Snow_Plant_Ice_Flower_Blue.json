@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Snow_Plant_Ice_Flower_Blue.name",
+    "Description": "server.items.OneBlock_Unlock_Snow_Plant_Ice_Flower_Blue.description"
+  },
+  "Id": "OneBlock_Unlock_Snow_Plant_Ice_Flower_Blue",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Snow",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Snow_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Snow"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Snow"
+    ],
+    "OneBlockUnlockDropId": [
+      "Plant_Ice_Flower_Blue"
+    ],
+    "OneBlockUnlockWeight": [
+      "8"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

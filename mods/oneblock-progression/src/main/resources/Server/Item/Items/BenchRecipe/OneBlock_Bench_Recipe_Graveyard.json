@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Graveyard.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Graveyard.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Graveyard",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Graveyard"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Inferno.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Inferno.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Inferno",
+  "ItemLevel": 8,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Inferno"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Epic"
+}

@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.name",
+    "Description": "server.items.OneBlock_Unlock_Jungle_Plant_Fruit_Mango.description"
+  },
+  "Id": "OneBlock_Unlock_Jungle_Plant_Fruit_Mango",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Bamboo_Trunk",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Jungle_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Jungle"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Jungle"
+    ],
+    "OneBlockUnlockDropId": [
+      "Plant_Fruit_Mango"
+    ],
+    "OneBlockUnlockWeight": [
+      "8"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

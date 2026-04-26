@@ -4,18 +4,28 @@
     "Description": "server.items.Bench_OneBlock_Deep Cave.description"
   },
   "Id": "Bench_OneBlock_Deep Cave",
-  "ItemLevel": 6,
+  "ItemLevel": 7,
   "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
-  "Categories": [ "Furniture.Benches" ],
+  "Categories": [
+    "Furniture.Benches"
+  ],
   "Recipe": {
     "Input": [
-      { "ItemId": "Rock_Basalt", "Quantity": 24 },
-      { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 6 }
+      {
+        "ItemId": "Rock_Basalt",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 8
+      }
     ],
     "BenchRequirement": [
       {
         "Type": "Crafting",
-        "Categories": [ "OneBlock_Workbench_ExpeditionBenches" ],
+        "Categories": [
+          "OneBlock_Workbench_ExpeditionBenches"
+        ],
         "Id": "OneBlockWorkbench"
       }
     ],
@@ -26,7 +36,12 @@
     "DrawType": "Model",
     "Opacity": "Transparent",
     "CustomModel": "Blocks/Benches/Workbench.blockymodel",
-    "CustomModelTexture": [ { "Texture": "Blocks/OneBlockUpgrader_Texture.png", "Weight": 1 } ],
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
@@ -36,18 +51,23 @@
         {
           "UpgradeRequirement": {
             "Input": [
-              { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 }
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 24
+              }
             ],
-            "TimeSeconds": 8
+            "TimeSeconds": 15
           }
         },
         {
           "UpgradeRequirement": {
             "Input": [
-              { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 32 },
-              { "ItemId": "Ore_Cobalt", "Quantity": 8 }
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 48
+              }
             ],
-            "TimeSeconds": 12
+            "TimeSeconds": 25
           }
         },
         {
@@ -62,7 +82,31 @@
           "Id": "OneBlock_Bench_Deep Cave_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlock_Bench_Deep Cave_Tier1",
-          "Recipes": []
+          "Recipes": [
+            "OneBlock_Unlock_Deep Cave_Rock_Shale",
+            "OneBlock_Unlock_Deep Cave_Ore_Iron"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Deep Cave_Tier2",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Deep Cave_Tier2",
+          "Recipes": [
+            "OneBlock_Unlock_Deep Cave_Ore_Gold",
+            "OneBlock_Unlock_Deep Cave_Ore_Silver",
+            "OneBlock_Unlock_Deep Cave_entity_Cave_Spider",
+            "OneBlock_Unlock_Deep Cave_entity_Goblin_Ogre"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Deep Cave_Tier3",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Deep Cave_Tier3",
+          "Recipes": [
+            "OneBlock_Unlock_Deep Cave_Ore_Thorium",
+            "OneBlock_Unlock_Deep Cave_entity_Void_Crawler",
+            "OneBlock_Unlock_Deep Cave_entity_Earth_Elemental"
+          ]
         }
       ],
       "LocalOpenSoundEventId": "SFX_Workbench_Open",
@@ -71,17 +115,36 @@
     "State": {
       "Id": "crafting",
       "Definitions": {
-        "CraftCompleted": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim", "Looping": true },
-        "CraftCompletedInstant": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim" }
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
       }
     },
-    "Gathering": { "Breaking": { "GatherType": "Benches" } },
-    "BlockParticleSetId": "Stone",
-    "Support": { "Down": [ { "FaceType": "Full" } ] },
-    "BlockSoundSetId": "Stone"
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood"
   },
   "PlayerAnimationsId": "Block",
-  "Tags": { "Type": [ "Bench" ] },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
   "MaxStack": 1,
-  "ItemSoundSetId": "ISS_Blocks_Stone"
+  "ItemSoundSetId": "ISS_Blocks_Wood"
 }

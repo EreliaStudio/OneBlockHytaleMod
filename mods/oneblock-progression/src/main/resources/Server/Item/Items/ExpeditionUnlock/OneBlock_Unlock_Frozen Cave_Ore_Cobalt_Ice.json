@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Frozen Cave_Ore_Cobalt_Ice.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen Cave_Ore_Cobalt_Ice.description"
+  },
+  "Id": "OneBlock_Unlock_Frozen Cave_Ore_Cobalt_Ice",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Glacial_Crystal",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Frozen Cave_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Frozen Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Frozen Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Cobalt_Ice"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

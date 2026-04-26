@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Dino Caverns_Rock_Amber_Encased.name",
+    "Description": "server.items.OneBlock_Unlock_Dino Caverns_Rock_Amber_Encased.description"
+  },
+  "Id": "OneBlock_Unlock_Dino Caverns_Rock_Amber_Encased",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Primal_Stone",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Dino Caverns_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Dino Caverns"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Dino Caverns"
+    ],
+    "OneBlockUnlockDropId": [
+      "Rock_Amber_Encased"
+    ],
+    "OneBlockUnlockWeight": [
+      "8"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

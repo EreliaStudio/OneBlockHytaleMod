@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Dino Caverns_Ingredient_Tooth_CaveRex.name",
+    "Description": "server.items.OneBlock_Unlock_Dino Caverns_Ingredient_Tooth_CaveRex.description"
+  },
+  "Id": "OneBlock_Unlock_Dino Caverns_Ingredient_Tooth_CaveRex",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Primal_Core",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Dino Caverns_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Dino Caverns"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Dino Caverns"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Tooth_CaveRex"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

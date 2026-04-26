@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Archer.name",
+    "Description": "server.items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Archer.description"
+  },
+  "Id": "OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Archer",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Volcanic_Ash",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Inferno_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Inferno"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Inferno"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Burnt_Skeleton_Archer"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

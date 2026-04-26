@@ -242,16 +242,12 @@ Format:
 ```json
 {
   "expeditionId": "Forest",
-  "ticksRemaining": 47,
-  "timeBased": false,
-  "endTimeMs": 0
+  "ticksRemaining": 47
 }
 ```
 
-- `expeditionId`: the currently active expedition, or `null` if in default Meadow mode.
-- `ticksRemaining`: breaks left before the expedition ends (tick-based mode).
-- `timeBased`: if `true`, `endTimeMs` is used instead of `ticksRemaining`.
-- `endTimeMs`: Unix timestamp (ms) at which the expedition ends (time-based mode only).
+- `expeditionId`: the currently active expedition, or `null` if in default mode.
+- `ticksRemaining`: breaks left before the expedition ends.
 
 Written immediately after every OneBlock break. Safe to hand-edit.
 

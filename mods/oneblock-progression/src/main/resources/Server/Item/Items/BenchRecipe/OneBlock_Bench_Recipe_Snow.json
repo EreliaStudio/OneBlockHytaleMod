@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Snow.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Snow.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Snow",
+  "ItemLevel": 4,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Snow"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

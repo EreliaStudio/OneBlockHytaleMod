@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Graveyard_Ingredient_Void_Essence.name",
+    "Description": "server.items.OneBlock_Unlock_Graveyard_Ingredient_Void_Essence.description"
+  },
+  "Id": "OneBlock_Unlock_Graveyard_Ingredient_Void_Essence",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Stone_Mossy",
+        "Quantity": 64
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Graveyard_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Graveyard"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Graveyard"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Void_Essence"
+    ],
+    "OneBlockUnlockWeight": [
+      "2"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

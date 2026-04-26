@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Knight.name",
+    "Description": "server.items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Knight.description"
+  },
+  "Id": "OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Knight",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bolt_Cindercloth",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Inferno_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Inferno"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Inferno"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Burnt_Skeleton_Knight"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

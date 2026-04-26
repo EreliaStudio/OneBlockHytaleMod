@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Graveyard_entity_Pale_Danger.name",
+    "Description": "server.items.OneBlock_Unlock_Graveyard_entity_Pale_Danger.description"
+  },
+  "Id": "OneBlock_Unlock_Graveyard_entity_Pale_Danger",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bone_Fragment",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Ore_Iron",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Graveyard_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Graveyard"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Graveyard"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Pale_Danger"
+    ],
+    "OneBlockUnlockWeight": [
+      "2"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

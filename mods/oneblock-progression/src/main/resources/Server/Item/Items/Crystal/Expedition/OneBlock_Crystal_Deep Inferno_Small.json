@@ -1,0 +1,66 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Deep Inferno_Small.name",
+    "Description": "server.items.OneBlock_Crystal_Deep Inferno_Small.description"
+  },
+  "Id": "OneBlock_Crystal_Deep Inferno_Small",
+  "ItemLevel": 9,
+  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
+        "Weight": 1
+      }
+    ]
+  },
+  "Interactions": {
+    "Use": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "OneBlock_Crystal_Yellow",
+        "Quantity": 12
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Deep Inferno"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Deep Inferno"
+    ],
+    "OneBlockCrystalSize": [
+      "Small"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

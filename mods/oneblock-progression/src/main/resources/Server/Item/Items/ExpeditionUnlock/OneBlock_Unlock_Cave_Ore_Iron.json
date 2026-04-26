@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Cave_Ore_Iron.name",
+    "Description": "server.items.OneBlock_Unlock_Cave_Ore_Iron.description"
+  },
+  "Id": "OneBlock_Unlock_Cave_Ore_Iron",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Copper",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Ingredient_Bar_Copper",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Cave_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Iron"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

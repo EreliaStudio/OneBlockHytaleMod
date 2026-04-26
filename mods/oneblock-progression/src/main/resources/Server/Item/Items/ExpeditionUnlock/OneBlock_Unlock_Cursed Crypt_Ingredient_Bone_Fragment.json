@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Cursed Crypt_Ingredient_Bone_Fragment.name",
+    "Description": "server.items.OneBlock_Unlock_Cursed Crypt_Ingredient_Bone_Fragment.description"
+  },
+  "Id": "OneBlock_Unlock_Cursed Crypt_Ingredient_Bone_Fragment",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Basalt",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Cursed Crypt_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Cursed Crypt"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cursed Crypt"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Bone_Fragment"
+    ],
+    "OneBlockUnlockWeight": [
+      "15"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

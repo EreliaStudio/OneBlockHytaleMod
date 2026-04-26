@@ -5,25 +5,40 @@
   },
   "Recipe": {
     "Input": [
-      { "ItemId": "Ingredient_Fibre",  "Quantity": 8 },
-      { "ItemId": "Rock_Stone", "Quantity": 6 }
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Rock_Stone",
+        "Quantity": 6
+      }
     ],
     "BenchRequirement": [
       {
         "Type": "Crafting",
-        "Categories": [ "Tools" ],
+        "Categories": [
+          "Tools"
+        ],
         "Id": "Fieldcraft"
       }
     ]
   },
   "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
-  "Categories": [ "Furniture.Benches" ],
+  "Categories": [
+    "Furniture.Benches"
+  ],
   "BlockType": {
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
     "CustomModel": "Blocks/Benches/Workbench.blockymodel",
-    "CustomModelTexture": [ { "Texture": "Blocks/OneBlockUpgrader_Texture.png", "Weight": 1 } ],
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
     "HitboxType": "Bench_Workbench",
     "VariantRotation": "NESW",
     "Bench": {
@@ -35,11 +50,29 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockWorkbench_ExpeditionBenches",
           "Recipes": [
-            "Bench_OneBlock_FarmLand",
-            "Bench_OneBlock_Forest",
             "Bench_OneBlock_Cave",
             "Bench_OneBlock_Deep Cave",
-            "Bench_OneBlock_The Abyss"
+            "Bench_OneBlock_The Abyss",
+            "Bench_OneBlock_Gem Cave",
+            "Bench_OneBlock_Desert",
+            "Bench_OneBlock_Egyptian Temple",
+            "Bench_OneBlock_Forest",
+            "Bench_OneBlock_Deep Forest",
+            "Bench_OneBlock_Jungle",
+            "Bench_OneBlock_Azure Forest",
+            "Bench_OneBlock_Fiery Forest",
+            "Bench_OneBlock_Snow",
+            "Bench_OneBlock_Frozen Forest",
+            "Bench_OneBlock_Frozen Cave",
+            "Bench_OneBlock_Plains",
+            "Bench_OneBlock_Inferno",
+            "Bench_OneBlock_Deep Inferno",
+            "Bench_OneBlock_Graveyard",
+            "Bench_OneBlock_Ancient Graveyard",
+            "Bench_OneBlock_Cursed Crypt",
+            "Bench_OneBlock_Primal Jungle",
+            "Bench_OneBlock_Dino Caverns",
+            "Bench_OneBlock_Volcanic Badlands"
           ]
         }
       ],
@@ -49,23 +82,49 @@
     "State": {
       "Id": "crafting",
       "Definitions": {
-        "CraftCompleted": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim", "Looping": true },
-        "CraftCompletedInstant": { "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim" }
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
       }
     },
-    "Gathering": { "Breaking": { "GatherType": "Benches" } },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
     "BlockParticleSetId": "Wood",
     "ParticleColor": "#6e4a2f",
-    "Support": { "Down": [ { "FaceType": "Full" } ] },
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
     "BlockSoundSetId": "Wood"
   },
   "PlayerAnimationsId": "Block",
   "IconProperties": {
     "Scale": 0.42,
-    "Rotation": [ 22.5, 45.0, 22.5 ],
-    "Translation": [ 12.9, -11.7 ]
+    "Rotation": [
+      22.5,
+      45.0,
+      22.5
+    ],
+    "Translation": [
+      12.9,
+      -11.7
+    ]
   },
-  "Tags": { "Type": [ "Bench" ] },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
   "MaxStack": 1,
   "ItemLevel": 1,
   "ItemSoundSetId": "ISS_Blocks_Wood"

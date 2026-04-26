@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Plains_Plant_Seeds_Stamina1.name",
+    "Description": "server.items.OneBlock_Unlock_Plains_Plant_Seeds_Stamina1.description"
+  },
+  "Id": "OneBlock_Unlock_Plains_Plant_Seeds_Stamina1",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Ingredient_Life_Essence",
+        "Quantity": 4
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Plains_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Plains"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Plains"
+    ],
+    "OneBlockUnlockDropId": [
+      "Plant_Seeds_Stamina1"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

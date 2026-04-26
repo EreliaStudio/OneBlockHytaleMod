@@ -41,17 +41,6 @@ public final class OneBlockExpeditionStateProvider
     {
         state.expeditionId = expeditionId;
         state.ticksRemaining = ticks;
-        state.timeBased = false;
-        state.endTimeMs = 0;
-        save();
-    }
-
-    public synchronized void startTimedExpedition(String expeditionId, long durationMs)
-    {
-        state.expeditionId = expeditionId;
-        state.ticksRemaining = 0;
-        state.timeBased = true;
-        state.endTimeMs = System.currentTimeMillis() + durationMs;
         save();
     }
 
@@ -63,21 +52,13 @@ public final class OneBlockExpeditionStateProvider
     {
         if (!hasActiveExpedition()) return null;
 
-        if (state.timeBased)
-        {
-            if (System.currentTimeMillis() < state.endTimeMs) return null;
-        }
-        else
-        {
-            state.ticksRemaining--;
-            save();
-            if (state.ticksRemaining > 0) return null;
-        }
+        state.ticksRemaining--;
+        save();
+        if (state.ticksRemaining > 0) return null;
 
         String completedExpedition = state.expeditionId;
         state.expeditionId = null;
         state.ticksRemaining = 0;
-        state.endTimeMs = 0;
         save();
 
         return completedExpedition;
@@ -87,7 +68,6 @@ public final class OneBlockExpeditionStateProvider
     {
         state.expeditionId = null;
         state.ticksRemaining = 0;
-        state.endTimeMs = 0;
         save();
     }
 
@@ -119,7 +99,5 @@ public final class OneBlockExpeditionStateProvider
     {
         private String expeditionId;
         private int ticksRemaining;
-        private boolean timeBased;
-        private long endTimeMs;
     }
 }
