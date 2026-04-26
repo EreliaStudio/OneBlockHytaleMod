@@ -10,7 +10,7 @@
       "Url": "https://github.com/EreliaStudio"
     }
   ],
-  "ServerVersion": "2026.02.19-1a311a592",
+  "ServerVersion": "2026.03.26-89796e57b",
   "Main": "com.EreliaStudio.OneBlock.OneBlockSalvagerPlugin",
   "IncludesAssetPack": true,
   "DisabledByDefault": false,

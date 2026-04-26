@@ -19,6 +19,7 @@ allprojects {
 
 subprojects {
     apply(plugin = "java")
+    apply(plugin = "java-library")
     apply(plugin = "com.gradleup.shadow")
 
     group = rootProject.group
@@ -26,8 +27,10 @@ subprojects {
 
     dependencies {
         add("compileOnly", files(rootProject.file("libs/HytaleServer.jar")))
+
         add("implementation", "com.google.guava:guava:32.1.3-jre")
         add("implementation", "com.google.code.gson:gson:2.10.1")
+
         add("testImplementation", "org.junit.jupiter:junit-jupiter:5.10.1")
         add("testRuntimeOnly", "org.junit.platform:junit-platform-launcher")
     }
@@ -61,6 +64,7 @@ subprojects {
         dependsOn(tasks.named("shadowJar"))
 
         val jarFile = tasks.named<ShadowJar>("shadowJar").flatMap { it.archiveFile }
+
         from(jarFile)
         into(rootProject.file("hytale-server/mods"))
 
@@ -71,7 +75,7 @@ subprojects {
 
     tasks.register("buildAndDeploy") {
         group = "distribution"
-        description = "Builds the project (incl. shaded jar) and deploys it to the server plugins folder"
+        description = "Builds this mod and deploys it to hytale-server/mods"
         dependsOn(tasks.named("build"))
         dependsOn(deploy)
         deploy.get().mustRunAfter(tasks.named("build"))
@@ -89,7 +93,7 @@ subprojects {
 
 tasks.register("buildAll") {
     group = "distribution"
-    description = "Builds all mods (shadow jars)."
+    description = "Builds all mods."
     dependsOn(subprojects.map { it.tasks.named("build") })
 }
 

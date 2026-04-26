@@ -1,11 +1,12 @@
 param(
-    [string]$ServerRoot = "$env:APPDATA\Hytale\install\release\package\game\latest\Server",
+    [string]$RepoRoot = $PSScriptRoot,
     [string]$Java = "$env:APPDATA\Hytale\install\release\package\jre\latest\bin\java.exe",
-    [string]$Jar = "HytaleServer.jar",
     [string[]]$Args = @()
 )
 
-$serverJar = Join-Path $ServerRoot $Jar
+# Use the installed server JAR (matches the downloaded Assets.zip version)
+$serverJar  = "$env:APPDATA\Hytale\install\release\package\game\latest\Server\HytaleServer.jar"
+$workdir    = Join-Path $RepoRoot "hytale-server"
 
 if (!(Test-Path $Java)) {
     Write-Error "Java not found: $Java"
@@ -16,17 +17,19 @@ if (!(Test-Path $serverJar)) {
     exit 1
 }
 
-# Stop running server (java -jar HytaleServer.jar)
+# Stop any running server instance
 $javaProcs = Get-CimInstance Win32_Process -Filter "Name='java.exe'" |
-    Where-Object { $_.CommandLine -like "*$serverJar*" -or $_.CommandLine -like "*HytaleServer.jar*" }
+    Where-Object { $_.CommandLine -like "*HytaleServer.jar*" }
 
 foreach ($p in $javaProcs) {
     Stop-Process -Id $p.ProcessId -Force
+    Write-Host "Stopped server process $($p.ProcessId)"
 }
 
-Start-Sleep -Seconds 1
+if ($javaProcs) { Start-Sleep -Seconds 1 }
 
-# Start server in the current terminal (foreground) so output is visible
-Set-Location $ServerRoot
+# Start server from hytale-server/ so config.json and mods/ are picked up correctly
+Set-Location $workdir
 $argList = @("-jar", $serverJar) + $Args
+Write-Host "Starting: $Java $argList  (workdir: $workdir)"
 & $Java @argList

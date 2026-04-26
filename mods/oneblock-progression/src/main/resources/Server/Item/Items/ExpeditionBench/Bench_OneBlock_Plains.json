@@ -50,33 +50,22 @@
       "TierLevels": [
         {
           "UpgradeRequirement": {
-            "Input": [
-              {
-                "ItemId": "OneBlock_Crystal_Blue",
-                "Quantity": 24
-              }
-            ],
+            "Material": "OneBlock_Crystal_Blue",
+            "Quantity": 24,
             "TimeSeconds": 5
           }
         },
         {
           "UpgradeRequirement": {
-            "Input": [
-              {
-                "ItemId": "OneBlock_Crystal_Blue",
-                "Quantity": 32
-              },
-              {
-                "ItemId": "OneBlock_Crystal_Red",
-                "Quantity": 8
-              }
-            ],
+            "Material": "OneBlock_Crystal_Blue",
+            "Quantity": 32,
             "TimeSeconds": 10
           }
         },
         {
           "UpgradeRequirement": {
-            "Input": [],
+            "Material": "OneBlock_Crystal_Blue",
+            "Quantity": 0,
             "TimeSeconds": 0
           }
         }

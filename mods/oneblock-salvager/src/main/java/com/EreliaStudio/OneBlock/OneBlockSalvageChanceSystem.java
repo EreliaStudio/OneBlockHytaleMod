@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.hypixel.hytale.builtin.crafting.state.ProcessingBenchState;
+import com.hypixel.hytale.builtin.crafting.component.ProcessingBenchBlock;
 import com.hypixel.hytale.component.Archetype;
 import com.hypixel.hytale.component.ArchetypeChunk;
 import com.hypixel.hytale.component.CommandBuffer;
@@ -47,7 +47,7 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
 
     private static final Field OUTPUT_CONTAINER_FIELD = findOutputContainerField();
 
-    private final Map<Archetype<ChunkStore>, ComponentType<ChunkStore, ProcessingBenchState>> componentTypeCache =
+    private final Map<Archetype<ChunkStore>, ComponentType<ChunkStore, ProcessingBenchBlock>> componentTypeCache =
             new IdentityHashMap<>();
 
     @Override
@@ -64,7 +64,7 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
             return;
         }
 
-        ComponentType<ChunkStore, ProcessingBenchState> componentType = getProcessingBenchComponentType(chunk.getArchetype());
+        ComponentType<ChunkStore, ProcessingBenchBlock> componentType = getProcessingBenchComponentType(chunk.getArchetype());
         if (componentType == null)
         {
             return;
@@ -73,7 +73,7 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
         int size = chunk.size();
         for (int i = 0; i < size; i++)
         {
-            ProcessingBenchState state = chunk.getComponent(i, componentType);
+            ProcessingBenchBlock state = chunk.getComponent(i, componentType);
             if (state == null)
             {
                 continue;
@@ -84,7 +84,7 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
                 continue;
             }
 
-            SalvageTier tier = SALVAGE_CONFIG.resolveTier(state.getTierLevel());
+            SalvageTier tier = SALVAGE_CONFIG.resolveTier(1);
 
             CraftingRecipe recipe = state.getRecipe();
             if (recipe != null && !usesRubbleInput(recipe))
@@ -245,13 +245,13 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
         return getMaxStack(new ItemStack(itemId, 1));
     }
 
-    private static boolean isTargetBench(ProcessingBenchState state)
+    private static boolean isTargetBench(ProcessingBenchBlock state)
     {
         Bench bench = state.getBench();
         return bench != null && TARGET_BENCH_ID.equals(bench.getId());
     }
 
-    private static ItemContainer getOutputContainer(ProcessingBenchState state)
+    private static ItemContainer getOutputContainer(ProcessingBenchBlock state)
     {
         if (OUTPUT_CONTAINER_FIELD == null || state == null)
         {
@@ -270,7 +270,7 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
 
     private static Field findOutputContainerField()
     {
-        for (Field field : ProcessingBenchState.class.getDeclaredFields())
+        for (Field field : ProcessingBenchBlock.class.getDeclaredFields())
         {
             if (!ItemContainer.class.isAssignableFrom(field.getType()))
             {
@@ -290,7 +290,7 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
         return null;
     }
 
-    private ComponentType<ChunkStore, ProcessingBenchState> getProcessingBenchComponentType(Archetype<ChunkStore> archetype)
+    private ComponentType<ChunkStore, ProcessingBenchBlock> getProcessingBenchComponentType(Archetype<ChunkStore> archetype)
     {
         if (archetype == null)
         {
@@ -302,13 +302,13 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
             return componentTypeCache.get(archetype);
         }
 
-        ComponentType<ChunkStore, ProcessingBenchState> resolved = resolveProcessingBenchComponentType(archetype);
+        ComponentType<ChunkStore, ProcessingBenchBlock> resolved = resolveProcessingBenchComponentType(archetype);
         componentTypeCache.put(archetype, resolved);
         return resolved;
     }
 
     @SuppressWarnings("unchecked")
-    private static ComponentType<ChunkStore, ProcessingBenchState> resolveProcessingBenchComponentType(Archetype<ChunkStore> archetype)
+    private static ComponentType<ChunkStore, ProcessingBenchBlock> resolveProcessingBenchComponentType(Archetype<ChunkStore> archetype)
     {
         if (archetype == null)
         {
@@ -325,9 +325,9 @@ public final class OneBlockSalvageChanceSystem extends ArchetypeTickingSystem<Ch
             }
 
             Class<?> typeClass = type.getTypeClass();
-            if (typeClass == ProcessingBenchState.class)
+            if (typeClass == ProcessingBenchBlock.class)
             {
-                return (ComponentType<ChunkStore, ProcessingBenchState>) type;
+                return (ComponentType<ChunkStore, ProcessingBenchBlock>) type;
             }
         }
 

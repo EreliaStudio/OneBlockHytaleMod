@@ -217,6 +217,52 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
     }
 
 
+def _first_item_stack(stacks: list | None, fallback: dict | None = None) -> dict:
+    """Return a normalized {ItemId, Quantity} stack from a list."""
+    if stacks:
+        first = stacks[0]
+        if isinstance(first, dict) and first.get("ItemId"):
+            return {
+                "ItemId": first["ItemId"],
+                "Quantity": int(first.get("Quantity", 1))
+            }
+
+    if fallback and fallback.get("ItemId"):
+        return {
+            "ItemId": fallback["ItemId"],
+            "Quantity": int(fallback.get("Quantity", 1))
+        }
+
+    raise ValueError("Unable to build a bench upgrade requirement: no ItemId was provided.")
+
+
+def _build_upgrade_requirement(upgrade: dict, fallback_stack: dict | None = None) -> dict:
+    """Build the schema expected by Bench.TierLevels.*.UpgradeRequirement.
+
+    Accepted input forms:
+      - {"Material": "ItemId", "Quantity": 16, "TimeSeconds": 10}
+      - {"Material": {"ItemId": "ItemId", "Quantity": 16}, "TimeSeconds": 10}
+      - legacy {"Input": [{"ItemId": "ItemId", "Quantity": 16}], "TimeSeconds": 10}
+    """
+    material = upgrade.get("Material")
+
+    if isinstance(material, dict):
+        stack = _first_item_stack([material], fallback_stack)
+    elif isinstance(material, str) and material:
+        stack = {
+            "ItemId": material,
+            "Quantity": int(upgrade.get("Quantity", 1))
+        }
+    else:
+        stack = _first_item_stack(upgrade.get("Input"), fallback_stack)
+
+    return {
+        "Material": stack["ItemId"],
+        "Quantity": stack["Quantity"],
+        "TimeSeconds": int(upgrade.get("TimeSeconds", 0))
+    }
+
+
 def build_expedition_bench(expedition_id: str, item_level: int,
                            craft_input: list, upgrades: list,
                            unlocks_by_tier: dict) -> dict:
@@ -224,15 +270,25 @@ def build_expedition_bench(expedition_id: str, item_level: int,
     bench_id      = f"OneBlock_Bench_{eid}"
     item_bench_id = f"Bench_OneBlock_{eid}"
 
+    default_stack = _first_item_stack(craft_input)
+    previous_stack = default_stack
     tier_levels = []
-    for upg in upgrades:
-        tier_levels.append({
-            "UpgradeRequirement": {
-                "Input":       upg["Input"],
-                "TimeSeconds": upg["TimeSeconds"]
-            }
-        })
-    tier_levels.append({"UpgradeRequirement": {"Input": [], "TimeSeconds": 0}})
+
+    # One TierLevel per bench tier. The input usually contains two upgrades,
+    # so this creates three tier levels. The final tier has no next upgrade,
+    # but still receives a non-null Material because the validator requires it.
+    for index in range(3):
+        upgrade = upgrades[index] if index < len(upgrades) else {
+            "Material": previous_stack["ItemId"],
+            "Quantity": 0,
+            "TimeSeconds": 0
+        }
+        requirement = _build_upgrade_requirement(upgrade, previous_stack)
+        previous_stack = {
+            "ItemId": requirement["Material"],
+            "Quantity": requirement["Quantity"]
+        }
+        tier_levels.append({"UpgradeRequirement": requirement})
 
     return {
         "TranslationProperties": {
@@ -302,7 +358,6 @@ def build_expedition_bench(expedition_id: str, item_level: int,
         "MaxStack": 1,
         "ItemSoundSetId": "ISS_Blocks_Wood"
     }
-
 
 # ── Lang builder ──────────────────────────────────────────────────────────────
 
