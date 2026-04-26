@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Meadow_Plant_Seeds_Wheat_Eternal.name",
-    "Description": "server.items.OneBlock_Unlock_Meadow_Plant_Seeds_Wheat_Eternal.description"
+    "Name": "items.OneBlock_Unlock_Meadow_Plant_Seeds_Wheat_Eternal.name",
+    "Description": "items.OneBlock_Unlock_Meadow_Plant_Seeds_Wheat_Eternal.description"
   },
   "Id": "OneBlock_Unlock_Meadow_Plant_Seeds_Wheat_Eternal",
   "ItemLevel": 3,

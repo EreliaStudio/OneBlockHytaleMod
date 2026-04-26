@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium.name",
-    "Description": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium.description"
+    "Name": "items.OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium.name",
+    "Description": "items.OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium.description"
   },
   "Id": "OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium",
   "ItemLevel": 3,

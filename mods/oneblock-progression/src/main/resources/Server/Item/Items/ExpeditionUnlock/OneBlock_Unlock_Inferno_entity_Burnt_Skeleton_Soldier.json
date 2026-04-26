@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Soldier.name",
-    "Description": "server.items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Soldier.description"
+    "Name": "items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Soldier.name",
+    "Description": "items.OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Soldier.description"
   },
   "Id": "OneBlock_Unlock_Inferno_entity_Burnt_Skeleton_Soldier",
   "ItemLevel": 2,

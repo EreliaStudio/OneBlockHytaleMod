@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_entity_Wolf.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_entity_Wolf.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Forest_entity_Wolf.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Forest_entity_Wolf.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_entity_Wolf",
   "ItemLevel": 2,

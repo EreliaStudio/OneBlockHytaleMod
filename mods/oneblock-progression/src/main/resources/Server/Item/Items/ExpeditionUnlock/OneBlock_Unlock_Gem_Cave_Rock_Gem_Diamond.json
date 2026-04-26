@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Diamond.name",
-    "Description": "server.items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Diamond.description"
+    "Name": "items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Diamond.name",
+    "Description": "items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Diamond.description"
   },
   "Id": "OneBlock_Unlock_Gem_Cave_Rock_Gem_Diamond",
   "ItemLevel": 2,

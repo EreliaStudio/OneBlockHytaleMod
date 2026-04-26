@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Jungle_Plant_Fruit_Coconut.name",
-    "Description": "server.items.OneBlock_Unlock_Jungle_Plant_Fruit_Coconut.description"
+    "Name": "items.OneBlock_Unlock_Jungle_Plant_Fruit_Coconut.name",
+    "Description": "items.OneBlock_Unlock_Jungle_Plant_Fruit_Coconut.description"
   },
   "Id": "OneBlock_Unlock_Jungle_Plant_Fruit_Coconut",
   "ItemLevel": 1,

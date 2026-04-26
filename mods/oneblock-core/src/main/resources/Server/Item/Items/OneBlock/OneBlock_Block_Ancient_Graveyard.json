@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_Ancient_Graveyard.name"
+    "Name": "items.OneBlock_Block_Ancient_Graveyard.name"
   },
   "Id": "OneBlock_Block_Ancient_Graveyard",
   "ItemLevel": 6,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.name",
-    "Description": "server.items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.description"
+    "Name": "items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.name",
+    "Description": "items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.description"
   },
   "Id": "OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone",
   "ItemLevel": 1,

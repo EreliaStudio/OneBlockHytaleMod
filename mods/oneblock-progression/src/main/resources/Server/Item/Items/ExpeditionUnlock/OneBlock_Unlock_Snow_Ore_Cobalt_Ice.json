@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Snow_Ore_Cobalt_Ice.name",
-    "Description": "server.items.OneBlock_Unlock_Snow_Ore_Cobalt_Ice.description"
+    "Name": "items.OneBlock_Unlock_Snow_Ore_Cobalt_Ice.name",
+    "Description": "items.OneBlock_Unlock_Snow_Ore_Cobalt_Ice.description"
   },
   "Id": "OneBlock_Unlock_Snow_Ore_Cobalt_Ice",
   "ItemLevel": 3,

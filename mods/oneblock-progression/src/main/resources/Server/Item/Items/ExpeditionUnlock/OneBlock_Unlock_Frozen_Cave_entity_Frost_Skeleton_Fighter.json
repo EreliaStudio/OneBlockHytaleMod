@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Fighter.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Fighter.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Fighter.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Fighter.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Fighter",
   "ItemLevel": 2,

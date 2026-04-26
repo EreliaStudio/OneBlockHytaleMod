@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Primal_Jungle_Ingredient_Primal_Meat.name",
-    "Description": "server.items.OneBlock_Unlock_Primal_Jungle_Ingredient_Primal_Meat.description"
+    "Name": "items.OneBlock_Unlock_Primal_Jungle_Ingredient_Primal_Meat.name",
+    "Description": "items.OneBlock_Unlock_Primal_Jungle_Ingredient_Primal_Meat.description"
   },
   "Id": "OneBlock_Unlock_Primal_Jungle_Ingredient_Primal_Meat",
   "ItemLevel": 1,

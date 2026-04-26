@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Feathers_Light.name",
-    "Description": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Feathers_Light.description"
+    "Name": "items.OneBlock_Unlock_Deep_Forest_Ingredient_Feathers_Light.name",
+    "Description": "items.OneBlock_Unlock_Deep_Forest_Ingredient_Feathers_Light.description"
   },
   "Id": "OneBlock_Unlock_Deep_Forest_Ingredient_Feathers_Light",
   "ItemLevel": 3,

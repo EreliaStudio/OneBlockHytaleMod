@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Desert_Block_Sand_White.name",
-    "Description": "server.items.OneBlock_Unlock_Desert_Block_Sand_White.description"
+    "Name": "items.OneBlock_Unlock_Desert_Block_Sand_White.name",
+    "Description": "items.OneBlock_Unlock_Desert_Block_Sand_White.description"
   },
   "Id": "OneBlock_Unlock_Desert_Block_Sand_White",
   "ItemLevel": 1,

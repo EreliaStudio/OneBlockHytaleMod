@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Deep_Forest_entity_Boar.name",
-    "Description": "server.items.OneBlock_Unlock_Deep_Forest_entity_Boar.description"
+    "Name": "items.OneBlock_Unlock_Deep_Forest_entity_Boar.name",
+    "Description": "items.OneBlock_Unlock_Deep_Forest_entity_Boar.description"
   },
   "Id": "OneBlock_Unlock_Deep_Forest_entity_Boar",
   "ItemLevel": 2,

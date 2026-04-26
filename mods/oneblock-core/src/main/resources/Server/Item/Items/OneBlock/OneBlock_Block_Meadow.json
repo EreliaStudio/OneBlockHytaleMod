@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_Meadow.name"
+    "Name": "items.OneBlock_Block_Meadow.name"
   },
   "Id": "OneBlock_Block_Meadow",
   "ItemLevel": 1,

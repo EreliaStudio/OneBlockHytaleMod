@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue.name",
-    "Description": "server.items.OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue.description"
+    "Name": "items.OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue.name",
+    "Description": "items.OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue.description"
   },
   "Id": "OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Glowing_Blue",
   "ItemLevel": 1,

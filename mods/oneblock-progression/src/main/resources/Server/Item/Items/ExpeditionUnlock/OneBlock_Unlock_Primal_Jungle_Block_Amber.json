@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Primal_Jungle_Block_Amber.name",
-    "Description": "server.items.OneBlock_Unlock_Primal_Jungle_Block_Amber.description"
+    "Name": "items.OneBlock_Unlock_Primal_Jungle_Block_Amber.name",
+    "Description": "items.OneBlock_Unlock_Primal_Jungle_Block_Amber.description"
   },
   "Id": "OneBlock_Unlock_Primal_Jungle_Block_Amber",
   "ItemLevel": 1,

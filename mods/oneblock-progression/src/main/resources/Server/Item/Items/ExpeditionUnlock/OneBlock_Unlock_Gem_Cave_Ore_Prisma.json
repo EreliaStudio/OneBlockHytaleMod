@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Gem_Cave_Ore_Prisma.name",
-    "Description": "server.items.OneBlock_Unlock_Gem_Cave_Ore_Prisma.description"
+    "Name": "items.OneBlock_Unlock_Gem_Cave_Ore_Prisma.name",
+    "Description": "items.OneBlock_Unlock_Gem_Cave_Ore_Prisma.description"
   },
   "Id": "OneBlock_Unlock_Gem_Cave_Ore_Prisma",
   "ItemLevel": 3,

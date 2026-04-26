@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red.name",
-    "Description": "server.items.OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red.description"
+    "Name": "items.OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red.name",
+    "Description": "items.OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red.description"
   },
   "Id": "OneBlock_Unlock_Egyptian_Temple_Block_Clay_Red",
   "ItemLevel": 1,

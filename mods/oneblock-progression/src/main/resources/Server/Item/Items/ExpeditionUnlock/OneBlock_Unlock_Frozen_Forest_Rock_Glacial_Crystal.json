@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal",
   "ItemLevel": 3,

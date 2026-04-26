@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence",
   "ItemLevel": 3,

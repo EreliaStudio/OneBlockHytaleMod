@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Bench_Recipe_Snow.name",
-    "Description": "server.items.OneBlock_Bench_Recipe_Snow.description"
+    "Name": "items.OneBlock_Bench_Recipe_Snow.name",
+    "Description": "items.OneBlock_Bench_Recipe_Snow.description"
   },
   "Id": "OneBlock_Bench_Recipe_Snow",
   "ItemLevel": 4,

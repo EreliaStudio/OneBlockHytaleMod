@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Bench_Recipe_Cave.name",
-    "Description": "server.items.OneBlock_Bench_Recipe_Cave.description"
+    "Name": "items.OneBlock_Bench_Recipe_Cave.name",
+    "Description": "items.OneBlock_Bench_Recipe_Cave.description"
   },
   "Id": "OneBlock_Bench_Recipe_Cave",
   "ItemLevel": 5,

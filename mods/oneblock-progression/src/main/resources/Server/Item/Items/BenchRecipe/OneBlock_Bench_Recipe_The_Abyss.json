@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Bench_Recipe_The_Abyss.name",
-    "Description": "server.items.OneBlock_Bench_Recipe_The_Abyss.description"
+    "Name": "items.OneBlock_Bench_Recipe_The_Abyss.name",
+    "Description": "items.OneBlock_Bench_Recipe_The_Abyss.description"
   },
   "Id": "OneBlock_Bench_Recipe_The_Abyss",
   "ItemLevel": 9,

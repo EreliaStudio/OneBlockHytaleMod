@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Bench_Recipe_Ancient_Graveyard.name",
-    "Description": "server.items.OneBlock_Bench_Recipe_Ancient_Graveyard.description"
+    "Name": "items.OneBlock_Bench_Recipe_Ancient_Graveyard.name",
+    "Description": "items.OneBlock_Bench_Recipe_Ancient_Graveyard.description"
   },
   "Id": "OneBlock_Bench_Recipe_Ancient_Graveyard",
   "ItemLevel": 6,

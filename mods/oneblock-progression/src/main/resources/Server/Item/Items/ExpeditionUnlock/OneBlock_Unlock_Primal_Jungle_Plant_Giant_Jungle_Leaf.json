@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Primal_Jungle_Plant_Giant_Jungle_Leaf.name",
-    "Description": "server.items.OneBlock_Unlock_Primal_Jungle_Plant_Giant_Jungle_Leaf.description"
+    "Name": "items.OneBlock_Unlock_Primal_Jungle_Plant_Giant_Jungle_Leaf.name",
+    "Description": "items.OneBlock_Unlock_Primal_Jungle_Plant_Giant_Jungle_Leaf.description"
   },
   "Id": "OneBlock_Unlock_Primal_Jungle_Plant_Giant_Jungle_Leaf",
   "ItemLevel": 1,

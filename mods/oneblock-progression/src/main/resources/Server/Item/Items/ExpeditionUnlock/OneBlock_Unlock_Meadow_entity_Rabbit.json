@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Meadow_entity_Rabbit.name",
-    "Description": "server.items.OneBlock_Unlock_Meadow_entity_Rabbit.description"
+    "Name": "items.OneBlock_Unlock_Meadow_entity_Rabbit.name",
+    "Description": "items.OneBlock_Unlock_Meadow_entity_Rabbit.description"
   },
   "Id": "OneBlock_Unlock_Meadow_entity_Rabbit",
   "ItemLevel": 2,

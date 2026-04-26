@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy.name",
-    "Description": "server.items.OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy.description"
+    "Name": "items.OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy.name",
+    "Description": "items.OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy.description"
   },
   "Id": "OneBlock_Unlock_Jungle_Ingredient_Leather_Heavy",
   "ItemLevel": 3,

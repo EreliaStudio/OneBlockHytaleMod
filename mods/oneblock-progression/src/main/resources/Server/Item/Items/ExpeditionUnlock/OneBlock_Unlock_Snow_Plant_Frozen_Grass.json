@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Snow_Plant_Frozen_Grass.name",
-    "Description": "server.items.OneBlock_Unlock_Snow_Plant_Frozen_Grass.description"
+    "Name": "items.OneBlock_Unlock_Snow_Plant_Frozen_Grass.name",
+    "Description": "items.OneBlock_Unlock_Snow_Plant_Frozen_Grass.description"
   },
   "Id": "OneBlock_Unlock_Snow_Plant_Frozen_Grass",
   "ItemLevel": 1,

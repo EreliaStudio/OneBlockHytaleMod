@@ -24,16 +24,13 @@ Input JSON schema  (see expeditionsTemplate.json for a full example):
 {
   "<ExpeditionId>": {
     "ItemLevel": <int>,
+    "Category": "<enchanter-category-group e.g. Underground, Forest, Surface>",
     "Crystal": {
       "Small": { "Input": [ { "ItemId": "...", "Quantity": <int> } ] },
       "Large": { "Input": [ ... ] }
     },
     "Bench": {
       "CraftInput": [ { "ItemId": "...", "Quantity": <int> } ],
-      "Upgrades": [
-        { "Input": [ ... ], "TimeSeconds": <int> },
-        { "Input": [ ... ], "TimeSeconds": <int> }
-      ],
       "Unlocks": [
         {
           "DropId":  "<item-id or entity:X>",
@@ -103,8 +100,8 @@ def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) 
     item_id = f"OneBlock_Crystal_{eid}_{size}"
     return {
         "TranslationProperties": {
-            "Name":        f"server.items.{item_id}.name",
-            "Description": f"server.items.{item_id}.description"
+            "Name":        f"items.{item_id}.name",
+            "Description": f"items.{item_id}.description"
         },
         "Id":       item_id,
         "ItemLevel": item_level,
@@ -150,8 +147,8 @@ def build_bench_recipe_item(expedition_id: str, item_level: int) -> dict:
     item_id = f"OneBlock_Bench_Recipe_{eid}"
     return {
         "TranslationProperties": {
-            "Name":        f"server.items.{item_id}.name",
-            "Description": f"server.items.{item_id}.description"
+            "Name":        f"items.{item_id}.name",
+            "Description": f"items.{item_id}.description"
         },
         "Id":       item_id,
         "ItemLevel": item_level,
@@ -189,8 +186,8 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
 
     return {
         "TranslationProperties": {
-            "Name":        f"server.items.{item_id}.name",
-            "Description": f"server.items.{item_id}.description"
+            "Name":        f"items.{item_id}.name",
+            "Description": f"items.{item_id}.description"
         },
         "Id":       item_id,
         "ItemLevel": tier,
@@ -220,88 +217,19 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
     }
 
 
-def _first_item_stack(stacks: list | None, fallback: dict | None = None) -> dict:
-    """Return a normalized {ItemId, Quantity} stack from a list."""
-    if stacks:
-        first = stacks[0]
-        if isinstance(first, dict) and first.get("ItemId"):
-            return {
-                "ItemId": first["ItemId"],
-                "Quantity": int(first.get("Quantity", 1))
-            }
-
-    if fallback and fallback.get("ItemId"):
-        return {
-            "ItemId": fallback["ItemId"],
-            "Quantity": int(fallback.get("Quantity", 1))
-        }
-
-    raise ValueError("Unable to build a bench upgrade requirement: no ItemId was provided.")
-
-
-def _build_upgrade_requirement(upgrade: dict, fallback_stack: dict | None = None) -> dict:
-    """Build the schema expected by Bench.TierLevels.*.UpgradeRequirement.
-
-    Accepted input forms:
-      - {"Material": "ItemId", "Quantity": 16, "TimeSeconds": 10}
-      - {"Material": {"ItemId": "ItemId", "Quantity": 16}, "TimeSeconds": 10}
-      - legacy {"Input": [{"ItemId": "ItemId", "Quantity": 16}], "TimeSeconds": 10}
-    """
-    material = upgrade.get("Material")
-
-    if isinstance(material, dict):
-        stack = _first_item_stack([material], fallback_stack)
-    elif isinstance(material, str) and material:
-        stack = {
-            "ItemId": material,
-            "Quantity": int(upgrade.get("Quantity", 1))
-        }
-    else:
-        stack = _first_item_stack(upgrade.get("Input"), fallback_stack)
-
-    return {
-        "Material": [{"ItemId": stack["ItemId"], "Quantity": stack["Quantity"]}],
-        "TimeSeconds": int(upgrade.get("TimeSeconds", 0))
-    }
 
 
 def build_expedition_bench(expedition_id: str, item_level: int,
-                           craft_input: list, upgrades: list,
-                           unlocks_by_tier: dict) -> dict:
+                           craft_input: list, unlocks_by_tier: dict) -> dict:
     eid           = _safe_eid(expedition_id)
     bench_id      = f"OneBlock_Bench_{eid}"
     item_bench_id = f"Bench_OneBlock_{eid}"
 
-    default_stack = _first_item_stack(craft_input)
-    previous_stack = default_stack
-    tier_levels = []
-
-    # One TierLevel per bench tier. The input usually contains two upgrades,
-    # so this creates three tier levels. The final tier has no next upgrade,
-    # but still receives a non-null Material because the validator requires it.
-    for index in range(3):
-        upgrade = upgrades[index] if index < len(upgrades) else {
-            "Material": previous_stack["ItemId"],
-            "Quantity": previous_stack["Quantity"],
-            "TimeSeconds": 0
-        }
-        requirement = _build_upgrade_requirement(upgrade, previous_stack)
-        first_mat = requirement["Material"][0]
-        previous_stack = {
-            "ItemId": first_mat["ItemId"],
-            "Quantity": first_mat["Quantity"]
-        }
-        tier_levels.append({"UpgradeRequirement": requirement})
-
     return {
         "TranslationProperties": {
-            "Name":        f"server.items.{item_bench_id}.name",
-            "Description": f"server.items.{item_bench_id}.description"
+            "Name":        f"items.{item_bench_id}.name",
+            "Description": f"items.{item_bench_id}.description"
         },
-        "Id":       item_bench_id,
-        "ItemLevel": item_level,
-        "Icon":     "Icons/ItemsGenerated/OneBlockUpgrader.png",
-        "Categories": ["Furniture.Benches"],
         "Recipe": {
             "Input": craft_input,
             "BenchRequirement": [
@@ -313,6 +241,8 @@ def build_expedition_bench(expedition_id: str, item_level: int,
             ],
             "KnowledgeRequired": True
         },
+        "Icon":     "Icons/ItemsGenerated/OneBlockUpgrader.png",
+        "Categories": ["Furniture.Benches"],
         "BlockType": {
             "Material": "Solid",
             "DrawType":  "Model",
@@ -324,14 +254,13 @@ def build_expedition_bench(expedition_id: str, item_level: int,
             "HitboxType":      "Bench_Workbench",
             "VariantRotation": "NESW",
             "Bench": {
-                "Id":         bench_id,
-                "Type":       "Crafting",
-                "TierLevels": tier_levels,
+                "Id":   bench_id,
+                "Type": "Crafting",
                 "Categories": [
                     {
                         "Id":      f"{bench_id}_Tier{t}",
                         "Icon":    "Icons/CraftingCategories/ExpeditionKey.png",
-                        "Name":    f"server.benchCategories.{bench_id}_Tier{t}",
+                        "Name":    f"benchCategories.{bench_id}_Tier{t}",
                         "Recipes": ids
                     }
                     for t, ids in sorted(unlocks_by_tier.items())
@@ -354,12 +283,19 @@ def build_expedition_bench(expedition_id: str, item_level: int,
             "BlockEntity": {"Components": {"BenchBlock": {}}},
             "Gathering": {"Breaking": {"GatherType": "Benches"}},
             "BlockParticleSetId": "Wood",
+            "ParticleColor": "#6e4a2f",
             "Support": {"Down": [{"FaceType": "Full"}]},
             "BlockSoundSetId": "Wood"
         },
         "PlayerAnimationsId": "Block",
+        "IconProperties": {
+            "Scale": 0.42,
+            "Rotation": [22.5, 45.0, 22.5],
+            "Translation": [12.9, -11.7]
+        },
         "Tags": {"Type": ["Bench"]},
         "MaxStack": 1,
+        "ItemLevel": item_level,
         "ItemSoundSetId": "ISS_Blocks_Wood"
     }
 
@@ -368,7 +304,7 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
     item_id = f"OneBlock_Block_{eid}"
     return {
         "TranslationProperties": {
-            "Name": f"server.items.{item_id}.name"
+            "Name": f"items.{item_id}.name"
         },
         "Id":         item_id,
         "ItemLevel":  item_level,
@@ -419,16 +355,15 @@ def build_lang_block(expedition_id: str) -> str:
     sep      = "─" * max(0, 55 - len(display))
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
-        f"server.items.OneBlock_Crystal_{eid}_Small.name={display} Crystal (Small)",
-        f"server.items.OneBlock_Crystal_{eid}_Small.description=Use on the OneBlock to begin a 100-tick {display} expedition.",
-        f"server.items.OneBlock_Crystal_{eid}_Large.name={display} Crystal (Large)",
-        f"server.items.OneBlock_Crystal_{eid}_Large.description=Use on the OneBlock to begin a 300-tick {display} expedition.",
-        f"server.items.Bench_OneBlock_{eid}.name={display} Bench",
-        f"server.items.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
-        f"server.items.OneBlock_Bench_Recipe_{eid}.name=Recipe: {display} Bench",
-        f"server.items.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {display} Bench crafting recipe at the OneBlock Workbench.",
-        f"server.benchCategories.OneBlockEnchanter_{eid}={display} Crystals",
-        f"server.benchCategories.OneBlock_Bench_{eid}_Tier1={display} Recipes",
+        f"items.OneBlock_Crystal_{eid}_Small.name={display} Crystal (Small)",
+        f"items.OneBlock_Crystal_{eid}_Small.description=Use on the OneBlock to begin a 100-tick {display} expedition.",
+        f"items.OneBlock_Crystal_{eid}_Large.name={display} Crystal (Large)",
+        f"items.OneBlock_Crystal_{eid}_Large.description=Use on the OneBlock to begin a 300-tick {display} expedition.",
+        f"items.Bench_OneBlock_{eid}.name={display} Bench",
+        f"items.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
+        f"items.OneBlock_Bench_Recipe_{eid}.name=Recipe: {display} Bench",
+        f"items.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {display} Bench crafting recipe at the OneBlock Workbench.",
+        f"benchCategories.OneBlock_Bench_{eid}_Tier1={display} Recipes",
     ]
     return "\n".join(lines)
 
@@ -482,24 +417,30 @@ def _save_json(path: Path, data: dict, dry_run: bool):
     print(f"  [patch]  {path}")
 
 
-def patch_enchanter(path: Path, expedition_id: str, dry_run: bool):
-    eid  = _safe_eid(expedition_id)
-    data = _load_json(path)
+def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
+    eid    = _safe_eid(expedition_id)
+    gid    = _safe_eid(group)
+    cat_id = f"OneBlock_Enchanter_{gid}"
+    lang_key = f"OneBlockEnchanter_{gid}"
+    data   = _load_json(path)
     categories = data["BlockType"]["Bench"]["Categories"]
-    cat_id = f"OneBlock_Enchanter_{eid}"
-    if any(c["Id"] == cat_id for c in categories):
-        print(f"  [skip]   Enchanter already has category {cat_id}")
-        return
-    categories.append({
-        "Id":   cat_id,
-        "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-        "Name": f"server.benchCategories.{cat_id}",
-        "Recipes": [
-            f"OneBlock_Crystal_{eid}_Small",
-            f"OneBlock_Crystal_{eid}_Large"
-        ]
-    })
+
+    cat = next((c for c in categories if c["Id"] == cat_id), None)
+    if cat is None:
+        cat = {
+            "Id":      cat_id,
+            "Icon":    "Icons/CraftingCategories/ExpeditionKey.png",
+            "Name":    f"benchCategories.{lang_key}",
+            "Recipes": []
+        }
+        categories.append(cat)
+
+    for recipe_id in [f"OneBlock_Crystal_{eid}_Small", f"OneBlock_Crystal_{eid}_Large"]:
+        if recipe_id not in cat["Recipes"]:
+            cat["Recipes"].append(recipe_id)
+
     _save_json(path, data, dry_run)
+    print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
 
 def patch_workbench(path: Path, expedition_id: str, dry_run: bool):
@@ -516,13 +457,13 @@ def patch_workbench(path: Path, expedition_id: str, dry_run: bool):
 
 def append_lang_recipe(path: Path, item_id: str, name: str, description: str, dry_run: bool):
     existing = path.read_text(encoding="utf-8")
-    marker = f"server.items.{item_id}.name"
+    marker = f"items.{item_id}.name"
     if marker in existing:
         print(f"  [skip]   Lang already has entry for {item_id}")
         return
     lines = [
-        f"server.items.{item_id}.name={name}",
-        f"server.items.{item_id}.description={description}"
+        f"items.{item_id}.name={name}",
+        f"items.{item_id}.description={description}"
     ]
     block = "\n" + "\n".join(lines)
     if dry_run:
@@ -535,7 +476,7 @@ def append_lang_recipe(path: Path, item_id: str, name: str, description: str, dr
 def patch_lang(path: Path, expedition_id: str, dry_run: bool):
     eid      = _safe_eid(expedition_id)
     existing = path.read_text(encoding="utf-8")
-    marker   = f"server.items.OneBlock_Crystal_{eid}_Small.name"
+    marker   = f"items.OneBlock_Crystal_{eid}_Small.name"
     if marker in existing:
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
@@ -569,12 +510,12 @@ def _is_generated_lang_line(line: str) -> bool:
         return False
     key = stripped.split("=", 1)[0].strip()
     return (
-        (key.startswith("server.items.OneBlock_Crystal_") and ("_Small." in key or "_Large." in key)) or
-        key.startswith("server.items.Bench_OneBlock_") or
-        key.startswith("server.items.OneBlock_Bench_Recipe_") or
-        key.startswith("server.items.OneBlock_Unlock_") or
-        key.startswith("server.benchCategories.OneBlockEnchanter_") or
-        key.startswith("server.benchCategories.OneBlock_Bench_")
+        (key.startswith("items.OneBlock_Crystal_") and ("_Small." in key or "_Large." in key)) or
+        key.startswith("items.Bench_OneBlock_") or
+        key.startswith("items.OneBlock_Bench_Recipe_") or
+        key.startswith("items.OneBlock_Unlock_") or
+        key.startswith("benchCategories.OneBlockEnchanter_") or
+        key.startswith("benchCategories.OneBlock_Bench_")
     )
 
 
@@ -691,6 +632,7 @@ def main():
         crystal_cfg = cfg["Crystal"]
         bench_cfg   = cfg["Bench"]
         drop_pool   = cfg["BaseDropPool"]
+        group       = cfg.get("Category", cfg.get("Group", expedition_id))
 
         eid = _safe_eid(expedition_id)
 
@@ -743,8 +685,7 @@ def main():
         write_json(
             repo_root / BENCH_DIR / f"Bench_OneBlock_{eid}.json",
             build_expedition_bench(expedition_id, item_level,
-                                   bench_cfg["CraftInput"], bench_cfg["Upgrades"],
-                                   unlocks_by_tier),
+                                   bench_cfg["CraftInput"], unlocks_by_tier),
             args.dry_run
         )
 
@@ -757,7 +698,7 @@ def main():
 
         # Patch shared files
         if enchanter_path.exists():
-            patch_enchanter(enchanter_path, expedition_id, args.dry_run)
+            patch_enchanter(enchanter_path, expedition_id, group, args.dry_run)
         else:
             print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
@@ -768,6 +709,16 @@ def main():
 
         if lang_path.exists():
             patch_lang(lang_path, expedition_id, args.dry_run)
+            gid     = _safe_eid(group)
+            lang_key = f"benchCategories.OneBlockEnchanter_{gid}"
+            existing = lang_path.read_text(encoding="utf-8")
+            if lang_key not in existing:
+                if not args.dry_run:
+                    lang_path.write_text(
+                        existing.rstrip() + f"\n{lang_key}={group} Crystals\n",
+                        encoding="utf-8"
+                    )
+                    print(f"  [patch]  lang ← {lang_key}")
         else:
             print(f"  [warn]   Lang file not found: {lang_path}")
 

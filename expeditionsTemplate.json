@@ -6,6 +6,7 @@
   "_gem_cave_note": "Gem Cave uses low gem weights to convey rarity — each drop is a lucky find within the normal 100/300 ticks.",
   "Cave": {
     "ItemLevel": 5,
+    "Category": "Underground",
     "Crystal": {
       "Small": {
         "Input": [
@@ -187,6 +188,7 @@
   },
   "Deep_Cave": {
     "ItemLevel": 7,
+    "Category": "Underground",
     "Crystal": {
       "Small": {
         "Input": [
@@ -380,6 +382,7 @@
   },
   "The_Abyss": {
     "ItemLevel": 9,
+    "Category": "Underground",
     "Crystal": {
       "Small": {
         "Input": [
@@ -550,6 +553,7 @@
   "Gem_Cave": {
     "_note": "Gem weights are intentionally low — each gem drop is a rare event within the 100/300 tick window.",
     "ItemLevel": 6,
+    "Category": "Underground",
     "Crystal": {
       "Small": {
         "Input": [
@@ -763,6 +767,7 @@
   },
   "Desert": {
     "ItemLevel": 4,
+    "Category": "Surface",
     "Crystal": {
       "Small": {
         "Input": [
@@ -976,6 +981,7 @@
   },
   "Egyptian_Temple": {
     "ItemLevel": 6,
+    "Category": "Surface",
     "Crystal": {
       "Small": {
         "Input": [
@@ -1169,6 +1175,7 @@
   },
   "Forest": {
     "ItemLevel": 3,
+    "Category": "Forest",
     "Crystal": {
       "Small": {
         "Input": [
@@ -1342,6 +1349,7 @@
   },
   "Deep_Forest": {
     "ItemLevel": 5,
+    "Category": "Forest",
     "Crystal": {
       "Small": {
         "Input": [
@@ -1531,6 +1539,7 @@
   },
   "Jungle": {
     "ItemLevel": 6,
+    "Category": "Forest",
     "Crystal": {
       "Small": {
         "Input": [
@@ -1732,6 +1741,7 @@
   },
   "Azure_Forest": {
     "ItemLevel": 7,
+    "Category": "Forest",
     "Crystal": {
       "Small": {
         "Input": [
@@ -1921,6 +1931,7 @@
   },
   "Fiery_Forest": {
     "ItemLevel": 8,
+    "Category": "Forest",
     "Crystal": {
       "Small": {
         "Input": [
@@ -2102,6 +2113,7 @@
   },
   "Snow": {
     "ItemLevel": 4,
+    "Category": "Cold",
     "Crystal": {
       "Small": {
         "Input": [
@@ -2295,6 +2307,7 @@
   },
   "Frozen_Forest": {
     "ItemLevel": 6,
+    "Category": "Cold",
     "Crystal": {
       "Small": {
         "Input": [
@@ -2488,6 +2501,7 @@
   },
   "Frozen_Cave": {
     "ItemLevel": 7,
+    "Category": "Underground",
     "Crystal": {
       "Small": {
         "Input": [
@@ -2681,6 +2695,7 @@
   },
   "Meadow": {
     "ItemLevel": 1,
+    "Category": "Surface",
     "Crystal": {
       "Small": {
         "Input": [
@@ -2818,6 +2833,7 @@
   },
   "Plains": {
     "ItemLevel": 2,
+    "Category": "Surface",
     "Crystal": {
       "Small": {
         "Input": [
@@ -3027,6 +3043,7 @@
   },
   "Inferno": {
     "ItemLevel": 8,
+    "Category": "Inferno",
     "Crystal": {
       "Small": {
         "Input": [
@@ -3208,6 +3225,7 @@
   },
   "Deep_Inferno": {
     "ItemLevel": 9,
+    "Category": "Inferno",
     "Crystal": {
       "Small": {
         "Input": [
@@ -3389,6 +3407,7 @@
   },
   "Graveyard": {
     "ItemLevel": 5,
+    "Category": "Dark",
     "Crystal": {
       "Small": {
         "Input": [
@@ -3566,6 +3585,7 @@
   },
   "Ancient_Graveyard": {
     "ItemLevel": 6,
+    "Category": "Dark",
     "Crystal": {
       "Small": {
         "Input": [
@@ -3755,6 +3775,7 @@
   },
   "Cursed_Crypt": {
     "ItemLevel": 8,
+    "Category": "Dark",
     "Crystal": {
       "Small": {
         "Input": [
@@ -3936,6 +3957,7 @@
   },
   "Primal_Jungle": {
     "ItemLevel": 5,
+    "Category": "Forest",
     "Crystal": {
       "Small": {
         "Input": [
@@ -4113,6 +4135,7 @@
   },
   "Dino_Caverns": {
     "ItemLevel": 7,
+    "Category": "Underground",
     "Crystal": {
       "Small": {
         "Input": [
@@ -4306,6 +4329,7 @@
   },
   "Volcanic_Badlands": {
     "ItemLevel": 8,
+    "Category": "Inferno",
     "Crystal": {
       "Small": {
         "Input": [

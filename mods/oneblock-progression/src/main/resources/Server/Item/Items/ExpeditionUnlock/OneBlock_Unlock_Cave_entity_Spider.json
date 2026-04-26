@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Cave_entity_Spider.name",
-    "Description": "server.items.OneBlock_Unlock_Cave_entity_Spider.description"
+    "Name": "items.OneBlock_Unlock_Cave_entity_Spider.name",
+    "Description": "items.OneBlock_Unlock_Cave_entity_Spider.description"
   },
   "Id": "OneBlock_Unlock_Cave_entity_Spider",
   "ItemLevel": 3,

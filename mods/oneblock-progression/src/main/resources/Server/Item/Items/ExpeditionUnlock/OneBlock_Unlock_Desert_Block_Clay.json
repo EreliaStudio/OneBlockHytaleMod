@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Desert_Block_Clay.name",
-    "Description": "server.items.OneBlock_Unlock_Desert_Block_Clay.description"
+    "Name": "items.OneBlock_Unlock_Desert_Block_Clay.name",
+    "Description": "items.OneBlock_Unlock_Desert_Block_Clay.description"
   },
   "Id": "OneBlock_Unlock_Desert_Block_Clay",
   "ItemLevel": 1,

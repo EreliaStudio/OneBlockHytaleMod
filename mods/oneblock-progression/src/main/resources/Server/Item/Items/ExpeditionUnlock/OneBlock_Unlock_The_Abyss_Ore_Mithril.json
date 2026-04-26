@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_The_Abyss_Ore_Mithril.name",
-    "Description": "server.items.OneBlock_Unlock_The_Abyss_Ore_Mithril.description"
+    "Name": "items.OneBlock_Unlock_The_Abyss_Ore_Mithril.name",
+    "Description": "items.OneBlock_Unlock_The_Abyss_Ore_Mithril.description"
   },
   "Id": "OneBlock_Unlock_The_Abyss_Ore_Mithril",
   "ItemLevel": 3,

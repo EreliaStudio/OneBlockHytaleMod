@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure.name",
-    "Description": "server.items.OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure.description"
+    "Name": "items.OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure.name",
+    "Description": "items.OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure.description"
   },
   "Id": "OneBlock_Unlock_Azure_Forest_Plant_Fruit_Azure",
   "ItemLevel": 1,

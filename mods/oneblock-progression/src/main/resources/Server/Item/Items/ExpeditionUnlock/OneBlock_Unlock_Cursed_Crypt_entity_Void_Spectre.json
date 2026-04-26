@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre.name",
-    "Description": "server.items.OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre.description"
+    "Name": "items.OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre.name",
+    "Description": "items.OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre.description"
   },
   "Id": "OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre",
   "ItemLevel": 3,

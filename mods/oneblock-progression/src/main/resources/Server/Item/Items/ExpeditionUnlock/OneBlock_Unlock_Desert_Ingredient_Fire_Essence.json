@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Desert_Ingredient_Fire_Essence.name",
-    "Description": "server.items.OneBlock_Unlock_Desert_Ingredient_Fire_Essence.description"
+    "Name": "items.OneBlock_Unlock_Desert_Ingredient_Fire_Essence.name",
+    "Description": "items.OneBlock_Unlock_Desert_Ingredient_Fire_Essence.description"
   },
   "Id": "OneBlock_Unlock_Desert_Ingredient_Fire_Essence",
   "ItemLevel": 3,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Ranger.name",
-    "Description": "server.items.OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Ranger.description"
+    "Name": "items.OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Ranger.name",
+    "Description": "items.OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Ranger.description"
   },
   "Id": "OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Ranger",
   "ItemLevel": 2,

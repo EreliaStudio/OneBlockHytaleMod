@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Desert_entity_Armadillo.name",
-    "Description": "server.items.OneBlock_Unlock_Desert_entity_Armadillo.description"
+    "Name": "items.OneBlock_Unlock_Desert_entity_Armadillo.name",
+    "Description": "items.OneBlock_Unlock_Desert_entity_Armadillo.description"
   },
   "Id": "OneBlock_Unlock_Desert_entity_Armadillo",
   "ItemLevel": 2,

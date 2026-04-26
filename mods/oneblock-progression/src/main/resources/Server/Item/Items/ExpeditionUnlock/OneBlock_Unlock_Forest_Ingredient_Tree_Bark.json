@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Forest_Ingredient_Tree_Bark.name",
-    "Description": "server.items.OneBlock_Unlock_Forest_Ingredient_Tree_Bark.description"
+    "Name": "items.OneBlock_Unlock_Forest_Ingredient_Tree_Bark.name",
+    "Description": "items.OneBlock_Unlock_Forest_Ingredient_Tree_Bark.description"
   },
   "Id": "OneBlock_Unlock_Forest_Ingredient_Tree_Bark",
   "ItemLevel": 3,

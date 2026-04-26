@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz.name",
-    "Description": "server.items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz.description"
+    "Name": "items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz.name",
+    "Description": "items.OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz.description"
   },
   "Id": "OneBlock_Unlock_Gem_Cave_Rock_Gem_Topaz",
   "ItemLevel": 1,

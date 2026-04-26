@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_The_Abyss_Large.name",
-    "Description": "server.items.OneBlock_Crystal_The_Abyss_Large.description"
+    "Name": "items.OneBlock_Crystal_The_Abyss_Large.name",
+    "Description": "items.OneBlock_Crystal_The_Abyss_Large.description"
   },
   "Id": "OneBlock_Crystal_The_Abyss_Large",
   "ItemLevel": 9,

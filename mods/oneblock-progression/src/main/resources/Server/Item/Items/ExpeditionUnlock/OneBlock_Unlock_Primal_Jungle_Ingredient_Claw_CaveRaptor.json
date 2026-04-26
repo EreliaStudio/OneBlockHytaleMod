@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Primal_Jungle_Ingredient_Claw_CaveRaptor.name",
-    "Description": "server.items.OneBlock_Unlock_Primal_Jungle_Ingredient_Claw_CaveRaptor.description"
+    "Name": "items.OneBlock_Unlock_Primal_Jungle_Ingredient_Claw_CaveRaptor.name",
+    "Description": "items.OneBlock_Unlock_Primal_Jungle_Ingredient_Claw_CaveRaptor.description"
   },
   "Id": "OneBlock_Unlock_Primal_Jungle_Ingredient_Claw_CaveRaptor",
   "ItemLevel": 3,

@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_Frozen_Forest.name"
+    "Name": "items.OneBlock_Block_Frozen_Forest.name"
   },
   "Id": "OneBlock_Block_Frozen_Forest",
   "ItemLevel": 6,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_Plant_Ice_Flower_White.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_Plant_Ice_Flower_White.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Forest_Plant_Ice_Flower_White.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Forest_Plant_Ice_Flower_White.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_Plant_Ice_Flower_White",
   "ItemLevel": 1,

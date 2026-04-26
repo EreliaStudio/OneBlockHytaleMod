@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.name",
-    "Description": "server.items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.description"
+    "Name": "items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.name",
+    "Description": "items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.description"
   },
   "Id": "OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy",
   "ItemLevel": 1,

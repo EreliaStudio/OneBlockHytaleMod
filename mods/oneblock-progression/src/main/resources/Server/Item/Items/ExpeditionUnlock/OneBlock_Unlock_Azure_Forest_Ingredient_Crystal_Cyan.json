@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Cyan.name",
-    "Description": "server.items.OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Cyan.description"
+    "Name": "items.OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Cyan.name",
+    "Description": "items.OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Cyan.description"
   },
   "Id": "OneBlock_Unlock_Azure_Forest_Ingredient_Crystal_Cyan",
   "ItemLevel": 3,

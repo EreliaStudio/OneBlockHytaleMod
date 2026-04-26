@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Cave_Ingredient_Scale_IceDragon.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Cave_Ingredient_Scale_IceDragon.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Cave_Ingredient_Scale_IceDragon.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Cave_Ingredient_Scale_IceDragon.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Cave_Ingredient_Scale_IceDragon",
   "ItemLevel": 3,

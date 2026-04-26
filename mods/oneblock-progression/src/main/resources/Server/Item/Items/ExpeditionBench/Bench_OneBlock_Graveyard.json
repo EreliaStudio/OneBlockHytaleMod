@@ -1,14 +1,8 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.Bench_OneBlock_Graveyard.name",
-    "Description": "server.items.Bench_OneBlock_Graveyard.description"
+    "Name": "items.Bench_OneBlock_Graveyard.name",
+    "Description": "items.Bench_OneBlock_Graveyard.description"
   },
-  "Id": "Bench_OneBlock_Graveyard",
-  "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
-  "Categories": [
-    "Furniture.Benches"
-  ],
   "Recipe": {
     "Input": [
       {
@@ -31,6 +25,10 @@
     ],
     "KnowledgeRequired": true
   },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
   "BlockType": {
     "Material": "Solid",
     "DrawType": "Model",
@@ -47,46 +45,11 @@
     "Bench": {
       "Id": "OneBlock_Bench_Graveyard",
       "Type": "Crafting",
-      "TierLevels": [
-        {
-          "UpgradeRequirement": {
-            "Material": [
-              {
-                "ItemId": "OneBlock_Crystal_Red",
-                "Quantity": 32
-              }
-            ],
-            "TimeSeconds": 10
-          }
-        },
-        {
-          "UpgradeRequirement": {
-            "Material": [
-              {
-                "ItemId": "OneBlock_Crystal_Red",
-                "Quantity": 32
-              }
-            ],
-            "TimeSeconds": 18
-          }
-        },
-        {
-          "UpgradeRequirement": {
-            "Material": [
-              {
-                "ItemId": "OneBlock_Crystal_Red",
-                "Quantity": 32
-              }
-            ],
-            "TimeSeconds": 0
-          }
-        }
-      ],
       "Categories": [
         {
           "Id": "OneBlock_Bench_Graveyard_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Graveyard_Tier1",
+          "Name": "benchCategories.OneBlock_Bench_Graveyard_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Graveyard_Ingredient_Bone_Fragment",
             "OneBlock_Unlock_Graveyard_Plant_Bramble_Moss_Twisted"
@@ -95,7 +58,7 @@
         {
           "Id": "OneBlock_Bench_Graveyard_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Graveyard_Tier2",
+          "Name": "benchCategories.OneBlock_Bench_Graveyard_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Graveyard_entity_Zombie",
             "OneBlock_Unlock_Graveyard_entity_Skeleton_Scout",
@@ -105,7 +68,7 @@
         {
           "Id": "OneBlock_Bench_Graveyard_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Graveyard_Tier3",
+          "Name": "benchCategories.OneBlock_Bench_Graveyard_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Graveyard_entity_Skeleton_Knight",
             "OneBlock_Unlock_Graveyard_entity_Pale_Danger",
@@ -139,6 +102,7 @@
       }
     },
     "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
     "Support": {
       "Down": [
         {
@@ -149,11 +113,24 @@
     "BlockSoundSetId": "Wood"
   },
   "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [
+      22.5,
+      45.0,
+      22.5
+    ],
+    "Translation": [
+      12.9,
+      -11.7
+    ]
+  },
   "Tags": {
     "Type": [
       "Bench"
     ]
   },
   "MaxStack": 1,
+  "ItemLevel": 5,
   "ItemSoundSetId": "ISS_Blocks_Wood"
 }

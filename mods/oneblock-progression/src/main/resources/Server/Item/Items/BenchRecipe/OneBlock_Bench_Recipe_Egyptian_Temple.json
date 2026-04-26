@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Bench_Recipe_Egyptian_Temple.name",
-    "Description": "server.items.OneBlock_Bench_Recipe_Egyptian_Temple.description"
+    "Name": "items.OneBlock_Bench_Recipe_Egyptian_Temple.name",
+    "Description": "items.OneBlock_Bench_Recipe_Egyptian_Temple.description"
   },
   "Id": "OneBlock_Bench_Recipe_Egyptian_Temple",
   "ItemLevel": 6,

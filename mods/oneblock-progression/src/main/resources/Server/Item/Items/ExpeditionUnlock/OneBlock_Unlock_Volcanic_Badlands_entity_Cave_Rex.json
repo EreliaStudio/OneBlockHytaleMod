@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Volcanic_Badlands_entity_Cave_Rex.name",
-    "Description": "server.items.OneBlock_Unlock_Volcanic_Badlands_entity_Cave_Rex.description"
+    "Name": "items.OneBlock_Unlock_Volcanic_Badlands_entity_Cave_Rex.name",
+    "Description": "items.OneBlock_Unlock_Volcanic_Badlands_entity_Cave_Rex.description"
   },
   "Id": "OneBlock_Unlock_Volcanic_Badlands_entity_Cave_Rex",
   "ItemLevel": 2,

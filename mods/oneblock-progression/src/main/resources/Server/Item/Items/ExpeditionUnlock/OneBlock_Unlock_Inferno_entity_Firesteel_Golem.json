@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Inferno_entity_Firesteel_Golem.name",
-    "Description": "server.items.OneBlock_Unlock_Inferno_entity_Firesteel_Golem.description"
+    "Name": "items.OneBlock_Unlock_Inferno_entity_Firesteel_Golem.name",
+    "Description": "items.OneBlock_Unlock_Inferno_entity_Firesteel_Golem.description"
   },
   "Id": "OneBlock_Unlock_Inferno_entity_Firesteel_Golem",
   "ItemLevel": 3,

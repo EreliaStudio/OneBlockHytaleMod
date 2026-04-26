@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Volcanic_Badlands_Large.name",
-    "Description": "server.items.OneBlock_Crystal_Volcanic_Badlands_Large.description"
+    "Name": "items.OneBlock_Crystal_Volcanic_Badlands_Large.name",
+    "Description": "items.OneBlock_Crystal_Volcanic_Badlands_Large.description"
   },
   "Id": "OneBlock_Crystal_Volcanic_Badlands_Large",
   "ItemLevel": 8,

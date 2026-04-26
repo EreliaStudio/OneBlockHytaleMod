@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Jungle_entity_Crocodile.name",
-    "Description": "server.items.OneBlock_Unlock_Jungle_entity_Crocodile.description"
+    "Name": "items.OneBlock_Unlock_Jungle_entity_Crocodile.name",
+    "Description": "items.OneBlock_Unlock_Jungle_entity_Crocodile.description"
   },
   "Id": "OneBlock_Unlock_Jungle_entity_Crocodile",
   "ItemLevel": 2,

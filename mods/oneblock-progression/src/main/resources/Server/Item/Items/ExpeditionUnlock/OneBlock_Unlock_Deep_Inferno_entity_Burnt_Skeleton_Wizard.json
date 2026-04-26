@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Wizard.name",
-    "Description": "server.items.OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Wizard.description"
+    "Name": "items.OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Wizard.name",
+    "Description": "items.OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Wizard.description"
   },
   "Id": "OneBlock_Unlock_Deep_Inferno_entity_Burnt_Skeleton_Wizard",
   "ItemLevel": 2,

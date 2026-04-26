@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Deep_Inferno_Small.name",
-    "Description": "server.items.OneBlock_Crystal_Deep_Inferno_Small.description"
+    "Name": "items.OneBlock_Crystal_Deep_Inferno_Small.name",
+    "Description": "items.OneBlock_Crystal_Deep_Inferno_Small.description"
   },
   "Id": "OneBlock_Crystal_Deep_Inferno_Small",
   "ItemLevel": 9,

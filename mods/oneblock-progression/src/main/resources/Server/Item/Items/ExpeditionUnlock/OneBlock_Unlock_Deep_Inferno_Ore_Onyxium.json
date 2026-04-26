@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Deep_Inferno_Ore_Onyxium.name",
-    "Description": "server.items.OneBlock_Unlock_Deep_Inferno_Ore_Onyxium.description"
+    "Name": "items.OneBlock_Unlock_Deep_Inferno_Ore_Onyxium.name",
+    "Description": "items.OneBlock_Unlock_Deep_Inferno_Ore_Onyxium.description"
   },
   "Id": "OneBlock_Unlock_Deep_Inferno_Ore_Onyxium",
   "ItemLevel": 1,

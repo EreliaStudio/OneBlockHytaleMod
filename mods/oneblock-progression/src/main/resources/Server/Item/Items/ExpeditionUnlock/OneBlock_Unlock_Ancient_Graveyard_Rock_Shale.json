@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Ancient_Graveyard_Rock_Shale.name",
-    "Description": "server.items.OneBlock_Unlock_Ancient_Graveyard_Rock_Shale.description"
+    "Name": "items.OneBlock_Unlock_Ancient_Graveyard_Rock_Shale.name",
+    "Description": "items.OneBlock_Unlock_Ancient_Graveyard_Rock_Shale.description"
   },
   "Id": "OneBlock_Unlock_Ancient_Graveyard_Rock_Shale",
   "ItemLevel": 1,

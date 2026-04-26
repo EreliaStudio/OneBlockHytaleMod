@@ -1,14 +1,8 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.Bench_OneBlock_Volcanic_Badlands.name",
-    "Description": "server.items.Bench_OneBlock_Volcanic_Badlands.description"
+    "Name": "items.Bench_OneBlock_Volcanic_Badlands.name",
+    "Description": "items.Bench_OneBlock_Volcanic_Badlands.description"
   },
-  "Id": "Bench_OneBlock_Volcanic_Badlands",
-  "ItemLevel": 8,
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
-  "Categories": [
-    "Furniture.Benches"
-  ],
   "Recipe": {
     "Input": [
       {
@@ -31,6 +25,10 @@
     ],
     "KnowledgeRequired": true
   },
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
   "BlockType": {
     "Material": "Solid",
     "DrawType": "Model",
@@ -47,46 +45,11 @@
     "Bench": {
       "Id": "OneBlock_Bench_Volcanic_Badlands",
       "Type": "Crafting",
-      "TierLevels": [
-        {
-          "UpgradeRequirement": {
-            "Material": [
-              {
-                "ItemId": "OneBlock_Crystal_Yellow",
-                "Quantity": 40
-              }
-            ],
-            "TimeSeconds": 20
-          }
-        },
-        {
-          "UpgradeRequirement": {
-            "Material": [
-              {
-                "ItemId": "OneBlock_Crystal_Yellow",
-                "Quantity": 64
-              }
-            ],
-            "TimeSeconds": 35
-          }
-        },
-        {
-          "UpgradeRequirement": {
-            "Material": [
-              {
-                "ItemId": "OneBlock_Crystal_Yellow",
-                "Quantity": 64
-              }
-            ],
-            "TimeSeconds": 0
-          }
-        }
-      ],
       "Categories": [
         {
           "Id": "OneBlock_Bench_Volcanic_Badlands_Tier1",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier1",
+          "Name": "benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier1",
           "Recipes": [
             "OneBlock_Unlock_Volcanic_Badlands_Ore_Primal_Iron",
             "OneBlock_Unlock_Volcanic_Badlands_Ingredient_Primal_Core"
@@ -95,7 +58,7 @@
         {
           "Id": "OneBlock_Bench_Volcanic_Badlands_Tier2",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier2",
+          "Name": "benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier2",
           "Recipes": [
             "OneBlock_Unlock_Volcanic_Badlands_entity_Earthen_Golem",
             "OneBlock_Unlock_Volcanic_Badlands_entity_Earth_Elemental",
@@ -105,7 +68,7 @@
         {
           "Id": "OneBlock_Bench_Volcanic_Badlands_Tier3",
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-          "Name": "server.benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier3",
+          "Name": "benchCategories.OneBlock_Bench_Volcanic_Badlands_Tier3",
           "Recipes": [
             "OneBlock_Unlock_Volcanic_Badlands_Ingredient_Hide_Trillodon",
             "OneBlock_Unlock_Volcanic_Badlands_entity_Emberwulf",
@@ -139,6 +102,7 @@
       }
     },
     "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
     "Support": {
       "Down": [
         {
@@ -149,11 +113,24 @@
     "BlockSoundSetId": "Wood"
   },
   "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [
+      22.5,
+      45.0,
+      22.5
+    ],
+    "Translation": [
+      12.9,
+      -11.7
+    ]
+  },
   "Tags": {
     "Type": [
       "Bench"
     ]
   },
   "MaxStack": 1,
+  "ItemLevel": 8,
   "ItemSoundSetId": "ISS_Blocks_Wood"
 }

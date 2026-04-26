@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Desert_Large.name",
-    "Description": "server.items.OneBlock_Crystal_Desert_Large.description"
+    "Name": "items.OneBlock_Crystal_Desert_Large.name",
+    "Description": "items.OneBlock_Crystal_Desert_Large.description"
   },
   "Id": "OneBlock_Crystal_Desert_Large",
   "ItemLevel": 4,

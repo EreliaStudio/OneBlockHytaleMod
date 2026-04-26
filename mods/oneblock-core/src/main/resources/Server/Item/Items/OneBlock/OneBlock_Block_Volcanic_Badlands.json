@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_Volcanic_Badlands.name"
+    "Name": "items.OneBlock_Block_Volcanic_Badlands.name"
   },
   "Id": "OneBlock_Block_Volcanic_Badlands",
   "ItemLevel": 8,

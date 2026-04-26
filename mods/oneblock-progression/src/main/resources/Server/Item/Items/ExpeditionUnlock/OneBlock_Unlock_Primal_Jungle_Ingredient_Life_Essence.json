@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Primal_Jungle_Ingredient_Life_Essence.name",
-    "Description": "server.items.OneBlock_Unlock_Primal_Jungle_Ingredient_Life_Essence.description"
+    "Name": "items.OneBlock_Unlock_Primal_Jungle_Ingredient_Life_Essence.name",
+    "Description": "items.OneBlock_Unlock_Primal_Jungle_Ingredient_Life_Essence.description"
   },
   "Id": "OneBlock_Unlock_Primal_Jungle_Ingredient_Life_Essence",
   "ItemLevel": 3,

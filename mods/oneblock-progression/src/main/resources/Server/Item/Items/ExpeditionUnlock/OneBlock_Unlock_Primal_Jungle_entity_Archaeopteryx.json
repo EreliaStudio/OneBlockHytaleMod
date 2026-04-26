@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Primal_Jungle_entity_Archaeopteryx.name",
-    "Description": "server.items.OneBlock_Unlock_Primal_Jungle_entity_Archaeopteryx.description"
+    "Name": "items.OneBlock_Unlock_Primal_Jungle_entity_Archaeopteryx.name",
+    "Description": "items.OneBlock_Unlock_Primal_Jungle_entity_Archaeopteryx.description"
   },
   "Id": "OneBlock_Unlock_Primal_Jungle_entity_Archaeopteryx",
   "ItemLevel": 2,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Knight.name",
-    "Description": "server.items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Knight.description"
+    "Name": "items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Knight.name",
+    "Description": "items.OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Knight.description"
   },
   "Id": "OneBlock_Unlock_Frozen_Cave_entity_Frost_Skeleton_Knight",
   "ItemLevel": 2,

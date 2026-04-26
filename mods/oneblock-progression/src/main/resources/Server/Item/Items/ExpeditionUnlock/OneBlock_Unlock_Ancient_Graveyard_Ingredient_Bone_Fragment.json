@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment.name",
-    "Description": "server.items.OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment.description"
+    "Name": "items.OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment.name",
+    "Description": "items.OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment.description"
   },
   "Id": "OneBlock_Unlock_Ancient_Graveyard_Ingredient_Bone_Fragment",
   "ItemLevel": 1,

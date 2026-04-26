@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Hunter.name",
-    "Description": "server.items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Hunter.description"
+    "Name": "items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Hunter.name",
+    "Description": "items.OneBlock_Unlock_Azure_Forest_entity_Outlander_Hunter.description"
   },
   "Id": "OneBlock_Unlock_Azure_Forest_entity_Outlander_Hunter",
   "ItemLevel": 2,

@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Azure_Forest_Large.name",
-    "Description": "server.items.OneBlock_Crystal_Azure_Forest_Large.description"
+    "Name": "items.OneBlock_Crystal_Azure_Forest_Large.name",
+    "Description": "items.OneBlock_Crystal_Azure_Forest_Large.description"
   },
   "Id": "OneBlock_Crystal_Azure_Forest_Large",
   "ItemLevel": 7,

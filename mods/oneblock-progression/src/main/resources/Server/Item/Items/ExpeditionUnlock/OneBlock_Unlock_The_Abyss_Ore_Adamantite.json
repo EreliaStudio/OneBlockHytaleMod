@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Unlock_The_Abyss_Ore_Adamantite.name",
-    "Description": "server.items.OneBlock_Unlock_The_Abyss_Ore_Adamantite.description"
+    "Name": "items.OneBlock_Unlock_The_Abyss_Ore_Adamantite.name",
+    "Description": "items.OneBlock_Unlock_The_Abyss_Ore_Adamantite.description"
   },
   "Id": "OneBlock_Unlock_The_Abyss_Ore_Adamantite",
   "ItemLevel": 1,
