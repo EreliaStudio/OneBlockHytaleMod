@@ -58,7 +58,13 @@
                 "Quantity": 64
               }
             ],
-            "TimeSeconds": 5
+            "TimeSeconds": 5,
+            "Material": [
+              {
+                "ItemId": "Rubble_Stone",
+                "Quantity": 64
+              }
+            ]
           },
           "CraftingTimeReductionModifier": 0,
           "ExtraInputSlot": 0,
@@ -72,7 +78,13 @@
                 "Quantity": 128
               }
             ],
-            "TimeSeconds": 8
+            "TimeSeconds": 8,
+            "Material": [
+              {
+                "ItemId": "Rubble_Stone",
+                "Quantity": 128
+              }
+            ]
           },
           "CraftingTimeReductionModifier": 0,
           "ExtraInputSlot": 0,
@@ -81,7 +93,13 @@
         {
           "UpgradeRequirement": {
             "Input": [],
-            "TimeSeconds": 0
+            "TimeSeconds": 0,
+            "Material": [
+              {
+                "ItemId": "Rubble_Stone",
+                "Quantity": 128
+              }
+            ]
           },
           "CraftingTimeReductionModifier": 0,
           "ExtraInputSlot": 0,

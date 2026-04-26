@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Bench_Recipe_Cursed_Crypt",
   "ItemLevel": 8,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

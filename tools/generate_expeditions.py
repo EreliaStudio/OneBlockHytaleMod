@@ -105,7 +105,7 @@ def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) 
         },
         "Id":       item_id,
         "ItemLevel": item_level,
-        "Icon":     "Icons/ItemsGenerated/Crystal_Expedition.png",
+        "Icon":     "Icons/ItemsGenerated/ExpeditionKey.png",
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "BlockType": {
@@ -152,7 +152,7 @@ def build_bench_recipe_item(expedition_id: str, item_level: int) -> dict:
         },
         "Id":       item_id,
         "ItemLevel": item_level,
-        "Icon":     "Icons/ItemsGenerated/RecipeDrop.png",
+        "Icon":     "Icons/ItemsGenerated/BlockUpgrade.png",
         "Categories": ["Items.RecipeDrop"],
         "PlayerAnimationsId": "Item",
         "Consumable": True,
@@ -191,7 +191,7 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
         },
         "Id":       item_id,
         "ItemLevel": tier,
-        "Icon":     "Icons/ItemsGenerated/RecipeDrop.png",
+        "Icon":     "Icons/ItemsGenerated/ExpeditionKey.png",
         "Categories": ["Items.RecipeDrop"],
         "PlayerAnimationsId": "Item",
         "Recipe": {
@@ -257,8 +257,7 @@ def _build_upgrade_requirement(upgrade: dict, fallback_stack: dict | None = None
         stack = _first_item_stack(upgrade.get("Input"), fallback_stack)
 
     return {
-        "Material": stack["ItemId"],
-        "Quantity": stack["Quantity"],
+        "Material": [{"ItemId": stack["ItemId"], "Quantity": stack["Quantity"]}],
         "TimeSeconds": int(upgrade.get("TimeSeconds", 0))
     }
 
@@ -280,13 +279,14 @@ def build_expedition_bench(expedition_id: str, item_level: int,
     for index in range(3):
         upgrade = upgrades[index] if index < len(upgrades) else {
             "Material": previous_stack["ItemId"],
-            "Quantity": 0,
+            "Quantity": previous_stack["Quantity"],
             "TimeSeconds": 0
         }
         requirement = _build_upgrade_requirement(upgrade, previous_stack)
+        first_mat = requirement["Material"][0]
         previous_stack = {
-            "ItemId": requirement["Material"],
-            "Quantity": requirement["Quantity"]
+            "ItemId": first_mat["ItemId"],
+            "Quantity": first_mat["Quantity"]
         }
         tier_levels.append({"UpgradeRequirement": requirement})
 
@@ -719,23 +719,25 @@ def main():
 
     if java_defaults_path.exists():
         source = java_defaults_path.read_text(encoding="utf-8")
-        # Replace everything between the first "    static" and its closing "    }"
         import re
-        new_source = re.sub(
-            r"    static\s*\{.*?    \}",
-            static_block,
-            source,
-            count=1,
-            flags=re.DOTALL,
-        )
-        if new_source == source:
+        if not re.search(r"    static\s*\{.*?    \}", source, re.DOTALL):
             print("\n[warn]  Could not locate static block in OneBlockExpeditionDefaults.java — printing to stdout instead.")
             print(static_block)
-        elif args.dry_run:
-            print("\n[dry-run] Would overwrite static block in OneBlockExpeditionDefaults.java")
         else:
-            java_defaults_path.write_text(new_source, encoding="utf-8")
-            print(f"\n[write]  OneBlockExpeditionDefaults.java static block updated ({len(all_expedition_drops)} expeditions)")
+            new_source = re.sub(
+                r"    static\s*\{.*?    \}",
+                static_block,
+                source,
+                count=1,
+                flags=re.DOTALL,
+            )
+            if new_source == source:
+                print(f"\n[skip]   OneBlockExpeditionDefaults.java static block already up to date")
+            elif args.dry_run:
+                print("\n[dry-run] Would overwrite static block in OneBlockExpeditionDefaults.java")
+            else:
+                java_defaults_path.write_text(new_source, encoding="utf-8")
+                print(f"\n[write]  OneBlockExpeditionDefaults.java static block updated ({len(all_expedition_drops)} expeditions)")
     else:
         print(f"\n[warn]  {java_defaults_path} not found — printing static block to stdout:")
         print(static_block)

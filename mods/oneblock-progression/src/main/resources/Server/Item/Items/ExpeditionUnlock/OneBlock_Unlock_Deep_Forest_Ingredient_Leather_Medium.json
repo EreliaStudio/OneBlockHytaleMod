@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

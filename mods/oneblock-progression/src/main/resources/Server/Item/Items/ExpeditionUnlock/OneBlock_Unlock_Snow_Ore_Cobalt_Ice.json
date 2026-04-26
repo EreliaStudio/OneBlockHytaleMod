@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Snow_Ore_Cobalt_Ice",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Snow_Large",
   "ItemLevel": 4,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Egyptian_Temple_entity_Sand_Empress",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

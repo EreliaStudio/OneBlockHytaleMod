@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_The_Abyss_entity_Void_Eye",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

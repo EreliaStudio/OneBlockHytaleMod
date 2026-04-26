@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Deep_Cave_Large",
   "ItemLevel": 7,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

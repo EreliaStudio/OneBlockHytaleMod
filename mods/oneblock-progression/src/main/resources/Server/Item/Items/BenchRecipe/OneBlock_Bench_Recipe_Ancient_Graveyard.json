@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Bench_Recipe_Ancient_Graveyard",
   "ItemLevel": 6,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

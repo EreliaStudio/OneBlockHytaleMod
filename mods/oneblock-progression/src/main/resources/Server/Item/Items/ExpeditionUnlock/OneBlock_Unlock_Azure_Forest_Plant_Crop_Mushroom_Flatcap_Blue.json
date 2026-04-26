@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Azure_Forest_Plant_Crop_Mushroom_Flatcap_Blue",
   "ItemLevel": 2,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

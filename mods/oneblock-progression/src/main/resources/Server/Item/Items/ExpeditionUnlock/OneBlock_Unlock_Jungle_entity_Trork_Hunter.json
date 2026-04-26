@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Jungle_entity_Trork_Hunter",
   "ItemLevel": 2,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archer",
   "ItemLevel": 2,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

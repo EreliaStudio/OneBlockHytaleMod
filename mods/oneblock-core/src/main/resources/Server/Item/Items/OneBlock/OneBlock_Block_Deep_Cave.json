@@ -1,10 +1,10 @@
-﻿{
+{
   "TranslationProperties": {
     "Name": "server.items.OneBlock_Block_Deep_Cave.name"
   },
   "Id": "OneBlock_Block_Deep_Cave",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Deep Cave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

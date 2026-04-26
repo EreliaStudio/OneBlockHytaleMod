@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Azure_Forest_Large",
   "ItemLevel": 7,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

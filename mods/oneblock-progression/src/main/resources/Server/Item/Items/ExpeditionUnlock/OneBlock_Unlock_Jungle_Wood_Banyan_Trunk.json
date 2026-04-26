@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Jungle_Wood_Banyan_Trunk",
   "ItemLevel": 1,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

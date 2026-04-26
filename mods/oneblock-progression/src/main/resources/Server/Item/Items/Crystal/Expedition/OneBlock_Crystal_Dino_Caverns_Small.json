@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Dino_Caverns_Small",
   "ItemLevel": 7,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

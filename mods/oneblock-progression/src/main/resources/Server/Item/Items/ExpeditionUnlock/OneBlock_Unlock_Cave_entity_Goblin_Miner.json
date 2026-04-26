@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Cave_entity_Goblin_Miner",
   "ItemLevel": 2,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

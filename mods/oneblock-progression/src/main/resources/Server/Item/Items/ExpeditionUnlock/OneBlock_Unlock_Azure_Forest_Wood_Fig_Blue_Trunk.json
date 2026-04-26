@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Azure_Forest_Wood_Fig_Blue_Trunk",
   "ItemLevel": 1,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

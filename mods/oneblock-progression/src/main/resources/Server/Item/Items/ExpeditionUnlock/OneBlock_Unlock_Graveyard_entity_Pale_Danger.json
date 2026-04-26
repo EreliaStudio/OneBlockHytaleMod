@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Graveyard_entity_Pale_Danger",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

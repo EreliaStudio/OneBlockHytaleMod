@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Cave",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Cave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Deep_Inferno_Large",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

@@ -1,10 +1,10 @@
-﻿{
+{
   "TranslationProperties": {
     "Name": "server.items.OneBlock_Block_The_Abyss.name"
   },
   "Id": "OneBlock_Block_The_Abyss",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_The Abyss.png",
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

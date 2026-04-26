@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

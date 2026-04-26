@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Ancient_Graveyard_entity_Large_Aberrant_Zombie",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

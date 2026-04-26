@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Deep_Inferno_Ore_Mithril",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

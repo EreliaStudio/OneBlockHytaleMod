@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Snow_Ingredient_Ice_Essence",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Meadow",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Meadow.png",
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

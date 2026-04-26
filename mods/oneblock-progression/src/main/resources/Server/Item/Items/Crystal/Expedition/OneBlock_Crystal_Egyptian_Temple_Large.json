@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Egyptian_Temple_Large",
   "ItemLevel": 6,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

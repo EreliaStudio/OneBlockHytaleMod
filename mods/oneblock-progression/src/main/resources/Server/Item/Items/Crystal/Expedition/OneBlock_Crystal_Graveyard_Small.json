@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_Graveyard_Small",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

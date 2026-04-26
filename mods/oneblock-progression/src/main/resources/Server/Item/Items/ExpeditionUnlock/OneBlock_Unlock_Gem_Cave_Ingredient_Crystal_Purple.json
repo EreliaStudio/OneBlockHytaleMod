@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

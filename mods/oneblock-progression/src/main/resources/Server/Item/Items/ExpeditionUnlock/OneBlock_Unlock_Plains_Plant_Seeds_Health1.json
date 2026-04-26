@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Plains_Plant_Seeds_Health1",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],

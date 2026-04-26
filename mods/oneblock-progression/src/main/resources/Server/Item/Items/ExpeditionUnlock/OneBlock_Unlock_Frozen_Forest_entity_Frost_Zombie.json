@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie",
   "ItemLevel": 2,
-  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.RecipeDrop"
   ],
