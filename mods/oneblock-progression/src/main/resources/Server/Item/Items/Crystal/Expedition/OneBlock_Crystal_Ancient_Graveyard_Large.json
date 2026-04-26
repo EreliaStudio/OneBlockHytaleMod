@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Ancient_Graveyard_Large.name",
+    "Description": "server.items.OneBlock_Crystal_Ancient_Graveyard_Large.description"
+  },
+  "Id": "OneBlock_Crystal_Ancient_Graveyard_Large",
+  "ItemLevel": 6,
+  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
+        "Weight": 1
+      }
+    ]
+  },
+  "Interactions": {
+    "Use": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "OneBlock_Crystal_Red",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "OneBlock_Crystal_Yellow",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Ancient_Graveyard"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Ancient_Graveyard"
+    ],
+    "OneBlockCrystalSize": [
+      "Large"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

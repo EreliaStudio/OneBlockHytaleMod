@@ -35,19 +35,19 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Life_Essence", 2)
         ));
 
-        defaults.put("Deep Cave", List.of(
+        defaults.put("Deep_Cave", List.of(
                 drop("Rock_Basalt", 30),
                 drop("Rubble_Basalt", 20),
                 drop("Ingredient_Void_Essence", 2)
         ));
 
-        defaults.put("The Abyss", List.of(
+        defaults.put("The_Abyss", List.of(
                 drop("Rock_Volcanic", 25),
                 drop("Rock_Slate", 15),
                 drop("Ingredient_Void_Essence", 3)
         ));
 
-        defaults.put("Gem Cave", List.of(
+        defaults.put("Gem_Cave", List.of(
                 drop("Rock_Stone", 20),
                 drop("Rock_Basalt", 15),
                 drop("Rock_Shale", 10)
@@ -60,7 +60,7 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Fire_Essence", 2)
         ));
 
-        defaults.put("Egyptian Temple", List.of(
+        defaults.put("Egyptian_Temple", List.of(
                 drop("Block_Sandstone_Smooth", 25),
                 drop("Block_Sandstone_Red", 15),
                 drop("Rock_Sandstone", 15),
@@ -74,7 +74,7 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Life_Essence", 3)
         ));
 
-        defaults.put("Deep Forest", List.of(
+        defaults.put("Deep_Forest", List.of(
                 drop("Wood_Ash_Trunk", 20),
                 drop("Wood_Birch_Trunk", 15),
                 drop("Ingredient_Fibre", 10),
@@ -88,14 +88,14 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Life_Essence", 2)
         ));
 
-        defaults.put("Azure Forest", List.of(
+        defaults.put("Azure_Forest", List.of(
                 drop("Wood_Azure_Trunk", 20),
                 drop("Plant_Crop_Mushroom_Block_Blue", 15),
                 drop("Plant_Fruit_Azure", 8),
                 drop("Ingredient_Ice_Essence", 2)
         ));
 
-        defaults.put("Fiery Forest", List.of(
+        defaults.put("Fiery_Forest", List.of(
                 drop("Wood_Burnt_Trunk", 20),
                 drop("Rock_Volcanic", 15),
                 drop("Ingredient_Charcoal", 12),
@@ -108,14 +108,14 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Ice_Essence", 2)
         ));
 
-        defaults.put("Frozen Forest", List.of(
+        defaults.put("Frozen_Forest", List.of(
                 drop("Wood_Ice_Trunk", 20),
                 drop("Block_Snow", 15),
                 drop("Block_Permafrost", 15),
                 drop("Ingredient_Ice_Essence", 2)
         ));
 
-        defaults.put("Frozen Cave", List.of(
+        defaults.put("Frozen_Cave", List.of(
                 drop("Block_Ice_Blue", 25),
                 drop("Rock_Ice", 20),
                 drop("Rock_Ice_Permafrost", 15),
@@ -136,7 +136,7 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Fire_Essence", 3)
         ));
 
-        defaults.put("Deep Inferno", List.of(
+        defaults.put("Deep_Inferno", List.of(
                 drop("Block_Lava_Rock_Cracked", 20),
                 drop("Rock_Volcanic", 20),
                 drop("Ingredient_Fire_Essence", 3),
@@ -149,35 +149,35 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Void_Essence", 2)
         ));
 
-        defaults.put("Ancient Graveyard", List.of(
+        defaults.put("Ancient_Graveyard", List.of(
                 drop("Rock_Stone_Mossy", 20),
                 drop("Rock_Slate", 15),
                 drop("Ingredient_Bone_Fragment", 10),
                 drop("Ingredient_Void_Essence", 3)
         ));
 
-        defaults.put("Cursed Crypt", List.of(
+        defaults.put("Cursed_Crypt", List.of(
                 drop("Rock_Basalt", 20),
                 drop("Rock_Volcanic", 15),
                 drop("Ingredient_Bone_Fragment", 10),
                 drop("Ingredient_Void_Essence", 3)
         ));
 
-        defaults.put("Primal Jungle", List.of(
+        defaults.put("Primal_Jungle", List.of(
                 drop("Wood_Jungle_Trunk", 20),
                 drop("Block_Fossil_Stone", 15),
                 drop("Plant_Primal_Fern", 10),
                 drop("Ingredient_Life_Essence", 2)
         ));
 
-        defaults.put("Dino Caverns", List.of(
+        defaults.put("Dino_Caverns", List.of(
                 drop("Block_Primal_Stone", 20),
                 drop("Block_Lava_Rock_Cracked", 15),
                 drop("Rock_Volcanic", 15),
                 drop("Ingredient_Life_Essence", 2)
         ));
 
-        defaults.put("Volcanic Badlands", List.of(
+        defaults.put("Volcanic_Badlands", List.of(
                 drop("Block_Volcanic_Ash", 20),
                 drop("Rock_Volcanic", 20),
                 drop("Block_Lava_Rock_Cracked", 15),

@@ -1,0 +1,58 @@
+﻿{
+    "Id":  "OneBlock_Block_Egyptian_Temple",
+    "Tags":  {
+                 "Type":  [
+                              "OneBlock_Block"
+                          ]
+             },
+    "ItemSoundSetId":  "ISS_Blocks_Stone",
+    "PlayerAnimationsId":  "Block",
+    "ItemLevel":  5,
+    "Icon":  "Icons/ItemsGenerated/OneBlock_Egyptian_Temple.png",
+    "TranslationProperties":  {
+                                  "Name":  "server.items.OneBlock_Block_Egyptian_Temple.name"
+                              },
+    "BlockType":  {
+                      "Gathering":  {
+                                        "Breaking":  {
+                                                         "Quantity":  0,
+                                                         "GatherType":  "Soils",
+                                                         "ItemId":  "Soil_Dirt"
+                                                     }
+                                    },
+                      "ParticleColor":  "#ffffff",
+                      "Group":  "OneBlock",
+                      "Textures":  [
+                                       {
+                                           "Weight":  1,
+                                           "Down":  "BlockTextures/OneBlock_Block_Egyptian_Temple.png",
+                                           "Sides":  "BlockTextures/OneBlock_Block_Egyptian_Temple.png",
+                                           "Up":  "BlockTextures/OneBlock_Block_Egyptian_Temple.png"
+                                       }
+                                   ],
+                      "DrawType":  "Cube",
+                      "Flags":  {
+
+                                },
+                      "TransitionToGroups":  [
+
+                                             ],
+                      "Material":  "Solid"
+                  },
+    "Categories":  [
+                       "Blocks.OneBlock"
+                   ],
+    "IconProperties":  {
+                           "Scale":  0.3,
+                           "Rotation":  [
+                                            339.295,
+                                            229.107,
+                                            337.792
+                                        ],
+                           "Translation":  [
+                                               0,
+                                               -6
+                                           ]
+                       },
+    "Set":  "OneBlock"
+}

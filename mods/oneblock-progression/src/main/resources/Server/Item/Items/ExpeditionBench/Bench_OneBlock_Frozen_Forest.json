@@ -1,0 +1,150 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlock_Frozen_Forest.name",
+    "Description": "server.items.Bench_OneBlock_Frozen_Forest.description"
+  },
+  "Id": "Bench_OneBlock_Frozen_Forest",
+  "ItemLevel": 6,
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Ice_Trunk",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Block_Permafrost",
+        "Quantity": 8
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Workbench_ExpeditionBenches"
+        ],
+        "Id": "OneBlockWorkbench"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlock_Bench_Frozen_Forest",
+      "Type": "Crafting",
+      "TierLevels": [
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 24
+              }
+            ],
+            "TimeSeconds": 12
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 40
+              }
+            ],
+            "TimeSeconds": 20
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [],
+            "TimeSeconds": 0
+          }
+        }
+      ],
+      "Categories": [
+        {
+          "Id": "OneBlock_Bench_Frozen_Forest_Tier1",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Frozen_Forest_Tier1",
+          "Recipes": [
+            "OneBlock_Unlock_Frozen_Forest_Block_Ice_Frosted",
+            "OneBlock_Unlock_Frozen_Forest_Plant_Snow_Shrub",
+            "OneBlock_Unlock_Frozen_Forest_Plant_Ice_Flower_White"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Frozen_Forest_Tier2",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Frozen_Forest_Tier2",
+          "Recipes": [
+            "OneBlock_Unlock_Frozen_Forest_entity_Wolf",
+            "OneBlock_Unlock_Frozen_Forest_entity_Frost_Zombie",
+            "OneBlock_Unlock_Frozen_Forest_entity_Frost_Skeleton_Scout"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Frozen_Forest_Tier3",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Frozen_Forest_Tier3",
+          "Recipes": [
+            "OneBlock_Unlock_Frozen_Forest_Ingredient_Fur_Yeti",
+            "OneBlock_Unlock_Frozen_Forest_Rock_Glacial_Crystal",
+            "OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence"
+          ]
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

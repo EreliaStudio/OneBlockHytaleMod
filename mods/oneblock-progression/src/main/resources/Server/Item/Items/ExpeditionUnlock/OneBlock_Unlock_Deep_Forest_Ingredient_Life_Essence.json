@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Life_Essence.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Life_Essence.description"
+  },
+  "Id": "OneBlock_Unlock_Deep_Forest_Ingredient_Life_Essence",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Maple_Trunk",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Deep_Forest_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Deep_Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep_Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Life_Essence"
+    ],
+    "OneBlockUnlockWeight": [
+      "3"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

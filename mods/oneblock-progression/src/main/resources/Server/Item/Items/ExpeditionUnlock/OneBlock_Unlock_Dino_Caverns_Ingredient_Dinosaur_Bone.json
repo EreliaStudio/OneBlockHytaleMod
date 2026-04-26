@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.name",
+    "Description": "server.items.OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone.description"
+  },
+  "Id": "OneBlock_Unlock_Dino_Caverns_Ingredient_Dinosaur_Bone",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Fossil_Stone",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Dino_Caverns_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Dino_Caverns"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Dino_Caverns"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Dinosaur_Bone"
+    ],
+    "OneBlockUnlockWeight": [
+      "10"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Volcanic_Badlands.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Volcanic_Badlands.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Volcanic_Badlands",
+  "ItemLevel": 8,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Volcanic_Badlands"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Epic"
+}

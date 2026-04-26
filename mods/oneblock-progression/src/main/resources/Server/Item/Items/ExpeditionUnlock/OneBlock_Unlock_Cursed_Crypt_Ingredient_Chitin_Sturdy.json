@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.name",
+    "Description": "server.items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy.description"
+  },
+  "Id": "OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Basalt",
+        "Quantity": 32
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Cursed_Crypt_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Cursed_Crypt"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cursed_Crypt"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Chitin_Sturdy"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

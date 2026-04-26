@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Deep_Inferno_Ingredient_Bolt_Cindercloth.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Inferno_Ingredient_Bolt_Cindercloth.description"
+  },
+  "Id": "OneBlock_Unlock_Deep_Inferno_Ingredient_Bolt_Cindercloth",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Sinue_Cindersinue",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Deep_Inferno_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Deep_Inferno"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep_Inferno"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Bolt_Cindercloth"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

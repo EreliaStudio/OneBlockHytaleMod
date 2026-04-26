@@ -1,0 +1,52 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Deep_Cave_Ore_Gold.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Cave_Ore_Gold.description"
+  },
+  "Id": "OneBlock_Unlock_Deep_Cave_Ore_Gold",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Iron",
+        "Quantity": 32
+      },
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Deep_Cave_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Deep_Cave"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep_Cave"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ore_Gold"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

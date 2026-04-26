@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archer.name",
+    "Description": "server.items.OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archer.description"
+  },
+  "Id": "OneBlock_Unlock_Ancient_Graveyard_entity_Skeleton_Archer",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bone_Fragment",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Ancient_Graveyard_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Ancient_Graveyard"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Ancient_Graveyard"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Skeleton_Archer"
+    ],
+    "OneBlockUnlockWeight": [
+      "4"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

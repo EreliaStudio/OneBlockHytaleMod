@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium.name",
+    "Description": "server.items.OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium.description"
+  },
+  "Id": "OneBlock_Unlock_Deep_Forest_Ingredient_Leather_Medium",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Leather_Light",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Deep_Forest_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Deep_Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Deep_Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Leather_Medium"
+    ],
+    "OneBlockUnlockWeight": [
+      "4"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

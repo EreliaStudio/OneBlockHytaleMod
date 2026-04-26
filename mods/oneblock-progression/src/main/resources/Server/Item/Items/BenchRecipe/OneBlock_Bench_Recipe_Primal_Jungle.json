@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Primal_Jungle.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Primal_Jungle.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Primal_Jungle",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Primal_Jungle"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

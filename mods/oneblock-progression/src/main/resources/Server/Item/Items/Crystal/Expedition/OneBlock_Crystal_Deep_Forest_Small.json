@@ -1,0 +1,66 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Deep_Forest_Small.name",
+    "Description": "server.items.OneBlock_Crystal_Deep_Forest_Small.description"
+  },
+  "Id": "OneBlock_Crystal_Deep_Forest_Small",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/Crystal_Expedition.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
+        "Weight": 1
+      }
+    ]
+  },
+  "Interactions": {
+    "Use": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "OneBlock_Crystal_Red",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Deep_Forest"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Deep_Forest"
+    ],
+    "OneBlockCrystalSize": [
+      "Small"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

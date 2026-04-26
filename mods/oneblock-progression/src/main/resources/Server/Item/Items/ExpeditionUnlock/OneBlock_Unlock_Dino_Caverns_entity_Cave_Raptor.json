@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Dino_Caverns_entity_Cave_Raptor.name",
+    "Description": "server.items.OneBlock_Unlock_Dino_Caverns_entity_Cave_Raptor.description"
+  },
+  "Id": "OneBlock_Unlock_Dino_Caverns_entity_Cave_Raptor",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Dinosaur_Bone",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Dino_Caverns_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Dino_Caverns"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Dino_Caverns"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Cave_Raptor"
+    ],
+    "OneBlockUnlockWeight": [
+      "5"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Motes_Light.name",
+    "Description": "server.items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Motes_Light.description"
+  },
+  "Id": "OneBlock_Unlock_Cursed_Crypt_Ingredient_Motes_Light",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Voidheart",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Cursed_Crypt_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Cursed_Crypt"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cursed_Crypt"
+    ],
+    "OneBlockUnlockDropId": [
+      "Ingredient_Motes_Light"
+    ],
+    "OneBlockUnlockWeight": [
+      "2"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Epic"
+}

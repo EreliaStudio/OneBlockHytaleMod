@@ -1,0 +1,149 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlock_The_Abyss.name",
+    "Description": "server.items.Bench_OneBlock_The_Abyss.description"
+  },
+  "Id": "Bench_OneBlock_The_Abyss",
+  "ItemLevel": 9,
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Volcanic",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Bar_Thorium",
+        "Quantity": 8
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Workbench_ExpeditionBenches"
+        ],
+        "Id": "OneBlockWorkbench"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlock_Bench_The_Abyss",
+      "Type": "Crafting",
+      "TierLevels": [
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 48
+              }
+            ],
+            "TimeSeconds": 20
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 64
+              }
+            ],
+            "TimeSeconds": 35
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [],
+            "TimeSeconds": 0
+          }
+        }
+      ],
+      "Categories": [
+        {
+          "Id": "OneBlock_Bench_The_Abyss_Tier1",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_The_Abyss_Tier1",
+          "Recipes": [
+            "OneBlock_Unlock_The_Abyss_Ore_Cobalt",
+            "OneBlock_Unlock_The_Abyss_Ore_Adamantite"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_The_Abyss_Tier2",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_The_Abyss_Tier2",
+          "Recipes": [
+            "OneBlock_Unlock_The_Abyss_entity_Void_Crawler",
+            "OneBlock_Unlock_The_Abyss_entity_Void_Spawn",
+            "OneBlock_Unlock_The_Abyss_entity_Earth_Elemental"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_The_Abyss_Tier3",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_The_Abyss_Tier3",
+          "Recipes": [
+            "OneBlock_Unlock_The_Abyss_Ore_Mithril",
+            "OneBlock_Unlock_The_Abyss_Ore_Onyxium",
+            "OneBlock_Unlock_The_Abyss_entity_Void_Eye"
+          ]
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

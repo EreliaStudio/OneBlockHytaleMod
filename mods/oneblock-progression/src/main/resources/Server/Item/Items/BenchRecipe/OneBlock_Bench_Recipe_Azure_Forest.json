@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Azure_Forest.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Azure_Forest.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Azure_Forest",
+  "ItemLevel": 7,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Azure_Forest"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Rare"
+}

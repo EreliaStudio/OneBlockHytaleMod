@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Soldier.name",
+    "Description": "server.items.OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Soldier.description"
+  },
+  "Id": "OneBlock_Unlock_Egyptian_Temple_entity_Skeleton_Soldier",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Gold",
+        "Quantity": 16
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Egyptian_Temple_Tier2"
+        ],
+        "Id": "OneBlock_Bench_Egyptian_Temple"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Egyptian_Temple"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Skeleton_Soldier"
+    ],
+    "OneBlockUnlockWeight": [
+      "4"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Uncommon"
+}

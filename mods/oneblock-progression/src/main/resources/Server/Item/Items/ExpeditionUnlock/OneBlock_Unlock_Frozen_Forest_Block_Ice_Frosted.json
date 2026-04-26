@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Frozen_Forest_Block_Ice_Frosted.name",
+    "Description": "server.items.OneBlock_Unlock_Frozen_Forest_Block_Ice_Frosted.description"
+  },
+  "Id": "OneBlock_Unlock_Frozen_Forest_Block_Ice_Frosted",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Wood_Ice_Trunk",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Frozen_Forest_Tier1"
+        ],
+        "Id": "OneBlock_Bench_Frozen_Forest"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Frozen_Forest"
+    ],
+    "OneBlockUnlockDropId": [
+      "Block_Ice_Frosted"
+    ],
+    "OneBlockUnlockWeight": [
+      "15"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Common"
+}

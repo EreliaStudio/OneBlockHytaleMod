@@ -1,0 +1,24 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Bench_Recipe_Deep_Inferno.name",
+    "Description": "server.items.OneBlock_Bench_Recipe_Deep_Inferno.description"
+  },
+  "Id": "OneBlock_Bench_Recipe_Deep_Inferno",
+  "ItemLevel": 9,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "RecipeDrop"
+    ],
+    "RecipeDropTarget": [
+      "Bench_OneBlock_Deep_Inferno"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Epic"
+}

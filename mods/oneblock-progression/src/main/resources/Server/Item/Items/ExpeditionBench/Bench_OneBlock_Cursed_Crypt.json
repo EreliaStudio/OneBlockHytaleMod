@@ -1,0 +1,150 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlock_Cursed_Crypt.name",
+    "Description": "server.items.Bench_OneBlock_Cursed_Crypt.description"
+  },
+  "Id": "Bench_OneBlock_Cursed_Crypt",
+  "ItemLevel": 8,
+  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Basalt",
+        "Quantity": 16
+      },
+      {
+        "ItemId": "Ingredient_Bone_Fragment",
+        "Quantity": 16
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Workbench_ExpeditionBenches"
+        ],
+        "Id": "OneBlockWorkbench"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlock_Bench_Cursed_Crypt",
+      "Type": "Crafting",
+      "TierLevels": [
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 40
+              }
+            ],
+            "TimeSeconds": 18
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [
+              {
+                "ItemId": "OneBlock_Crystal_Yellow",
+                "Quantity": 64
+              }
+            ],
+            "TimeSeconds": 30
+          }
+        },
+        {
+          "UpgradeRequirement": {
+            "Input": [],
+            "TimeSeconds": 0
+          }
+        }
+      ],
+      "Categories": [
+        {
+          "Id": "OneBlock_Bench_Cursed_Crypt_Tier1",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Cursed_Crypt_Tier1",
+          "Recipes": [
+            "OneBlock_Unlock_Cursed_Crypt_Ingredient_Bone_Fragment",
+            "OneBlock_Unlock_Cursed_Crypt_Ingredient_Chitin_Sturdy"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Cursed_Crypt_Tier2",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Cursed_Crypt_Tier2",
+          "Recipes": [
+            "OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Knight",
+            "OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Ranger",
+            "OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Mage"
+          ]
+        },
+        {
+          "Id": "OneBlock_Bench_Cursed_Crypt_Tier3",
+          "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+          "Name": "server.benchCategories.OneBlock_Bench_Cursed_Crypt_Tier3",
+          "Recipes": [
+            "OneBlock_Unlock_Cursed_Crypt_entity_Skeleton_Archmage",
+            "OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre",
+            "OneBlock_Unlock_Cursed_Crypt_Ingredient_Void_Essence",
+            "OneBlock_Unlock_Cursed_Crypt_Ingredient_Motes_Light"
+          ]
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+        }
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood"
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

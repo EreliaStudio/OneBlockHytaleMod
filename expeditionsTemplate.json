@@ -4,732 +4,4336 @@
   "_crystal_costs": "Level 2-3: Blue only | Level 4-5: Blue+Red | Level 6-7: Red+Yellow | Level 8-9: Yellow only",
   "_unlock_note": "BaseDropPool = available from the first break. Unlocks = added to the pool by consuming a craftable item from the bench.",
   "_gem_cave_note": "Gem Cave uses low gem weights to convey rarity — each drop is a lucky find within the normal 100/300 ticks.",
-
   "Cave": {
     "ItemLevel": 5,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Stone", "Quantity": 16 }, { "ItemId": "Rubble_Stone", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Stone",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Rubble_Stone",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 32 } ], "TimeSeconds": 10 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 16 } ], "TimeSeconds": 20 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 10
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 16
+            }
+          ],
+          "TimeSeconds": 20
+        }
       ],
       "Unlocks": [
-        { "DropId": "Rock_Stone_Mossy",       "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Stone",   "Quantity": 16 } ] },
-        { "DropId": "Plant_Roots_Cave",        "Weight": 6,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rubble_Stone", "Quantity": 8  } ] },
-        { "DropId": "Ore_Copper",              "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Stone",   "Quantity": 32 } ] },
-        { "DropId": "entity:Goblin_Miner",     "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Copper",   "Quantity": 16 }, { "ItemId": "Rock_Stone", "Quantity": 32 } ] },
-        { "DropId": "entity:Goblin_Scrapper",  "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Copper",   "Quantity": 16 } ] },
-        { "DropId": "entity:Goblin_Thief",     "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Copper",   "Quantity": 16 } ] },
-        { "DropId": "Ore_Iron",                "Weight": 5,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Copper",   "Quantity": 32 }, { "ItemId": "Ingredient_Bar_Copper", "Quantity": 16 } ] },
-        { "DropId": "entity:Spider",           "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Iron",     "Quantity": 16 } ] }
+        {
+          "DropId": "Rock_Stone_Mossy",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Roots_Cave",
+          "Weight": 6,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rubble_Stone",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Copper",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Goblin_Miner",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Copper",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "Rock_Stone",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Goblin_Scrapper",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Copper",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Goblin_Thief",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Copper",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Iron",
+          "Weight": 5,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Copper",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ingredient_Bar_Copper",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Spider",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Iron",
+              "Quantity": 16
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Stone",                "Weight": 30 },
-      { "ID": "Rubble_Stone",              "Weight": 20 },
-      { "ID": "Ingredient_Life_Essence",   "Weight": 2  }
+      {
+        "ID": "Rock_Stone",
+        "Weight": 30
+      },
+      {
+        "ID": "Rubble_Stone",
+        "Weight": 20
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Deep Cave": {
+  "Deep_Cave": {
     "ItemLevel": 7,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 12 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 6 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 24 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 12 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 12
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 6
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 24
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 12
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Basalt", "Quantity": 16 }, { "ItemId": "Ingredient_Bar_Iron", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Basalt",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Bar_Iron",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ], "TimeSeconds": 15 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 25 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 15
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 25
+        }
       ],
       "Unlocks": [
-        { "DropId": "Rock_Shale",              "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Basalt",          "Quantity": 16 } ] },
-        { "DropId": "Ore_Iron",                "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rubble_Basalt",        "Quantity": 16 } ] },
-        { "DropId": "Ore_Gold",                "Weight": 5,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Iron",             "Quantity": 32 }, { "ItemId": "Ingredient_Bar_Iron",  "Quantity": 16 } ] },
-        { "DropId": "Ore_Silver",              "Weight": 5,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Iron",             "Quantity": 32 } ] },
-        { "DropId": "entity:Cave_Spider",      "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Basalt",          "Quantity": 32 } ] },
-        { "DropId": "entity:Goblin_Ogre",      "Weight": 2,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Gold",             "Quantity": 16 } ] },
-        { "DropId": "Ore_Thorium",             "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bar_Gold",  "Quantity": 16 }, { "ItemId": "Ore_Gold", "Quantity": 32 } ] },
-        { "DropId": "entity:Void_Crawler",     "Weight": 4,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Thorium",          "Quantity": 16 } ] },
-        { "DropId": "entity:Earth_Elemental",  "Weight": 2,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Thorium",          "Quantity": 32 } ] }
+        {
+          "DropId": "Rock_Shale",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Iron",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rubble_Basalt",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Gold",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Iron",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ingredient_Bar_Iron",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Silver",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Iron",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Cave_Spider",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Goblin_Ogre",
+          "Weight": 2,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Thorium",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bar_Gold",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Void_Crawler",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Thorium",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Earth_Elemental",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Thorium",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Basalt",             "Weight": 30 },
-      { "ID": "Rubble_Basalt",           "Weight": 20 },
-      { "ID": "Ingredient_Void_Essence", "Weight": 2  }
+      {
+        "ID": "Rock_Basalt",
+        "Weight": 30
+      },
+      {
+        "ID": "Rubble_Basalt",
+        "Weight": 20
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "The Abyss": {
+  "The_Abyss": {
     "ItemLevel": 9,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 12 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 12
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 24
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Volcanic", "Quantity": 16 }, { "ItemId": "Ingredient_Bar_Thorium", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Volcanic",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Bar_Thorium",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 20 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 64 } ], "TimeSeconds": 35 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 20
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 64
+            }
+          ],
+          "TimeSeconds": 35
+        }
       ],
       "Unlocks": [
-        { "DropId": "Ore_Cobalt",              "Weight": 8,  "Tier": 1, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Volcanic",        "Quantity": 32 } ] },
-        { "DropId": "Ore_Adamantite",          "Weight": 5,  "Tier": 1, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Cobalt",           "Quantity": 32 } ] },
-        { "DropId": "entity:Void_Crawler",     "Weight": 5,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Cobalt",           "Quantity": 16 } ] },
-        { "DropId": "entity:Void_Spawn",       "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Adamantite",       "Quantity": 16 } ] },
-        { "DropId": "entity:Earth_Elemental",  "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Cobalt",           "Quantity": 32 } ] },
-        { "DropId": "Ore_Mithril",             "Weight": 3,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ingredient_Bar_Cobalt","Quantity": 32 }, { "ItemId": "Ore_Adamantite", "Quantity": 32 } ] },
-        { "DropId": "Ore_Onyxium",             "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ore_Mithril",          "Quantity": 16 } ] },
-        { "DropId": "entity:Void_Eye",         "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ingredient_Voidheart", "Quantity": 4  } ] }
+        {
+          "DropId": "Ore_Cobalt",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Adamantite",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Cobalt",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Void_Crawler",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Cobalt",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Void_Spawn",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Adamantite",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Earth_Elemental",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Cobalt",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Mithril",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bar_Cobalt",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ore_Adamantite",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Onyxium",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Mithril",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Void_Eye",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Voidheart",
+              "Quantity": 4
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Volcanic",           "Weight": 25 },
-      { "ID": "Rock_Slate",              "Weight": 15 },
-      { "ID": "Ingredient_Void_Essence", "Weight": 3  }
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 25
+      },
+      {
+        "ID": "Rock_Slate",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 3
+      }
     ]
   },
-
-  "Gem Cave": {
+  "Gem_Cave": {
     "_note": "Gem weights are intentionally low — each gem drop is a rare event within the 100/300 tick window.",
     "ItemLevel": 6,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Stone", "Quantity": 16 }, { "ItemId": "Rock_Basalt", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Stone",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Rock_Basalt",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 32 } ], "TimeSeconds": 12 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 20 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 12
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 20
+        }
       ],
       "Unlocks": [
-        { "DropId": "Rock_Gem_Emerald",   "Weight": 3, "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Stone",   "Quantity": 32 }, { "ItemId": "Ore_Copper", "Quantity": 16 } ] },
-        { "DropId": "Rock_Gem_Topaz",     "Weight": 3, "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Stone",   "Quantity": 32 }, { "ItemId": "Ore_Copper", "Quantity": 16 } ] },
-        { "DropId": "Rock_Gem_Sapphire",  "Weight": 3, "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Basalt",  "Quantity": 32 }, { "ItemId": "Ore_Iron",   "Quantity": 16 } ] },
-        { "DropId": "Rock_Gem_Ruby",      "Weight": 2, "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Gold",     "Quantity": 16 }, { "ItemId": "Rock_Shale", "Quantity": 32 } ] },
-        { "DropId": "Rock_Gem_Diamond",   "Weight": 2, "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Silver",   "Quantity": 16 }, { "ItemId": "Ore_Gold",   "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Crystal_Blue",   "Weight": 5, "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Gem_Sapphire", "Quantity": 4 } ] },
-        { "DropId": "Rock_Gem_Zephyr",    "Weight": 1, "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Rock_Gem_Diamond",  "Quantity": 8  }, { "ItemId": "Ore_Thorium", "Quantity": 32 } ] },
-        { "DropId": "Ore_Prisma",         "Weight": 2, "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Rock_Gem_Ruby",     "Quantity": 8  }, { "ItemId": "Ore_Thorium", "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Crystal_Purple", "Weight": 3, "Tier": 3, "Rank": "Rare",  "Cost": [ { "ItemId": "Rock_Gem_Zephyr",   "Quantity": 4  } ] }
+        {
+          "DropId": "Rock_Gem_Emerald",
+          "Weight": 3,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ore_Copper",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Gem_Topaz",
+          "Weight": 3,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ore_Copper",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Gem_Sapphire",
+          "Weight": 3,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ore_Iron",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Gem_Ruby",
+          "Weight": 2,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "Rock_Shale",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Gem_Diamond",
+          "Weight": 2,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Silver",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Crystal_Blue",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Gem_Sapphire",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Gem_Zephyr",
+          "Weight": 1,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Rock_Gem_Diamond",
+              "Quantity": 8
+            },
+            {
+              "ItemId": "Ore_Thorium",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Prisma",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Rock_Gem_Ruby",
+              "Quantity": 8
+            },
+            {
+              "ItemId": "Ore_Thorium",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Crystal_Purple",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Gem_Zephyr",
+              "Quantity": 4
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Stone",   "Weight": 20 },
-      { "ID": "Rock_Basalt",  "Weight": 15 },
-      { "ID": "Rock_Shale",   "Weight": 10 }
+      {
+        "ID": "Rock_Stone",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Basalt",
+        "Weight": 15
+      },
+      {
+        "ID": "Rock_Shale",
+        "Weight": 10
+      }
     ]
   },
-
   "Desert": {
     "ItemLevel": 4,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Red", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Sand", "Quantity": 32 }, { "ItemId": "Rock_Sandstone", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Sand",
+          "Quantity": 32
+        },
+        {
+          "ItemId": "Rock_Sandstone",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 16 } ], "TimeSeconds": 8 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8  } ], "TimeSeconds": 15 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 16
+            }
+          ],
+          "TimeSeconds": 8
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 8
+            }
+          ],
+          "TimeSeconds": 15
+        }
       ],
       "Unlocks": [
-        { "DropId": "Block_Sand_White",          "Weight": 12, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Sand",      "Quantity": 32 } ] },
-        { "DropId": "Block_Clay",                "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Sandstone",  "Quantity": 16 } ] },
-        { "DropId": "Plant_Cactus_1",            "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Sand",      "Quantity": 16 } ] },
-        { "DropId": "Plant_Desert_Dry_Shrub",    "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Sand",      "Quantity": 8  } ] },
-        { "DropId": "entity:Camel",              "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Sand",      "Quantity": 64 } ] },
-        { "DropId": "entity:Cactee",             "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Sandstone_Rough", "Quantity": 16 } ] },
-        { "DropId": "entity:Armadillo",          "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Sand",      "Quantity": 32 } ] },
-        { "DropId": "Ore_Gold",                  "Weight": 5,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Thorium_Desert", "Quantity": 8 }, { "ItemId": "Block_Sand_Red", "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Shell_Scorpion", "Weight": 4,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Desert_Cracked", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Fire_Essence",   "Weight": 2,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Gold",        "Quantity": 16 } ] }
+        {
+          "DropId": "Block_Sand_White",
+          "Weight": 12,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Sand",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Block_Clay",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Sandstone",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Cactus_1",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Sand",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Desert_Dry_Shrub",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Sand",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Camel",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Sand",
+              "Quantity": 64
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Cactee",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Sandstone_Rough",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Armadillo",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Sand",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Gold",
+          "Weight": 5,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Thorium_Desert",
+              "Quantity": 8
+            },
+            {
+              "ItemId": "Block_Sand_Red",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Shell_Scorpion",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Desert_Cracked",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Fire_Essence",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 16
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Sand",                "Weight": 25 },
-      { "ID": "Rock_Sandstone",            "Weight": 20 },
-      { "ID": "Block_Sandstone_Rough",     "Weight": 15 },
-      { "ID": "Ingredient_Fire_Essence",   "Weight": 2  }
+      {
+        "ID": "Block_Sand",
+        "Weight": 25
+      },
+      {
+        "ID": "Rock_Sandstone",
+        "Weight": 20
+      },
+      {
+        "ID": "Block_Sandstone_Rough",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Fire_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Egyptian Temple": {
+  "Egyptian_Temple": {
     "ItemLevel": 6,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Sandstone_Smooth", "Quantity": 16 }, { "ItemId": "Ore_Gold", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Sandstone_Smooth",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ore_Gold",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ], "TimeSeconds": 12 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 20 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 12
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 20
+        }
       ],
       "Unlocks": [
-        { "DropId": "Block_Sand_White",             "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Sandstone_Smooth", "Quantity": 16 } ] },
-        { "DropId": "Block_Clay_Red",               "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Sandstone_Red",    "Quantity": 16 } ] },
-        { "DropId": "Ore_Gold",                     "Weight": 8,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Sandstone_Smooth", "Quantity": 32 } ] },
-        { "DropId": "entity:Sandswept_Zombie",      "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Gold",               "Quantity": 16 } ] },
-        { "DropId": "entity:Skeleton_Soldier",      "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Gold",               "Quantity": 16 } ] },
-        { "DropId": "entity:Skeleton_Archer",       "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ore_Gold",               "Quantity": 24 } ] },
-        { "DropId": "Rock_Desert_Fossil",           "Weight": 4,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Thorium_Desert",     "Quantity": 8  } ] },
-        { "DropId": "Ingredient_Claw_Scorpion",     "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Desert_Cracked",    "Quantity": 32 } ] },
-        { "DropId": "entity:Sand_Empress",          "Weight": 1,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ore_Gold",               "Quantity": 64 }, { "ItemId": "Ingredient_Bar_Gold", "Quantity": 16 } ] }
+        {
+          "DropId": "Block_Sand_White",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Sandstone_Smooth",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Block_Clay_Red",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Sandstone_Red",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Gold",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Sandstone_Smooth",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Sandswept_Zombie",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Soldier",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Archer",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 24
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Desert_Fossil",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Thorium_Desert",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Claw_Scorpion",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Desert_Cracked",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Sand_Empress",
+          "Weight": 1,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Gold",
+              "Quantity": 64
+            },
+            {
+              "ItemId": "Ingredient_Bar_Gold",
+              "Quantity": 16
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Sandstone_Smooth",  "Weight": 25 },
-      { "ID": "Block_Sandstone_Red",     "Weight": 15 },
-      { "ID": "Rock_Sandstone",          "Weight": 15 },
-      { "ID": "Ingredient_Fire_Essence", "Weight": 2  }
+      {
+        "ID": "Block_Sandstone_Smooth",
+        "Weight": 25
+      },
+      {
+        "ID": "Block_Sandstone_Red",
+        "Weight": 15
+      },
+      {
+        "ID": "Rock_Sandstone",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Fire_Essence",
+        "Weight": 2
+      }
     ]
   },
-
   "Forest": {
     "ItemLevel": 3,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 16 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 16
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Oak_Trunk", "Quantity": 16 }, { "ItemId": "Ingredient_Fibre", "Quantity": 16 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Oak_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Fibre",
+          "Quantity": 16
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 32 } ], "TimeSeconds": 5 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",  "Quantity": 16 } ], "TimeSeconds": 10 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 5
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 16
+            }
+          ],
+          "TimeSeconds": 10
+        }
       ],
       "Unlocks": [
-        { "DropId": "Plant_Fruit_Apple",      "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Oak_Trunk",  "Quantity": 8  } ] },
-        { "DropId": "Wood_Beech_Trunk",       "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Oak_Trunk",  "Quantity": 16 } ] },
-        { "DropId": "Plant_Sapling_Oak",      "Weight": 5,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Ingredient_Fibre","Quantity": 16 } ] },
-        { "DropId": "entity:Boar",            "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Beech_Trunk","Quantity": 16 } ] },
-        { "DropId": "entity:Deer",            "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Beech_Trunk","Quantity": 16 } ] },
-        { "DropId": "entity:Rabbit",          "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Oak_Trunk",  "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Leather_Light","Weight": 5, "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Fibre","Quantity": 32 }, { "ItemId": "Wood_Beech_Trunk", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Tree_Bark",   "Weight": 8,  "Tier": 3, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Oak_Trunk",  "Quantity": 32 } ] }
+        {
+          "DropId": "Plant_Fruit_Apple",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Oak_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Wood_Beech_Trunk",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Oak_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Sapling_Oak",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Boar",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Beech_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Deer",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Beech_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Rabbit",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Oak_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Leather_Light",
+          "Weight": 5,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Wood_Beech_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Tree_Bark",
+          "Weight": 8,
+          "Tier": 3,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Oak_Trunk",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Oak_Trunk",          "Weight": 20 },
-      { "ID": "Plant_Leaves_Oak",        "Weight": 15 },
-      { "ID": "Ingredient_Fibre",        "Weight": 15 },
-      { "ID": "Ingredient_Life_Essence", "Weight": 3  }
+      {
+        "ID": "Wood_Oak_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Plant_Leaves_Oak",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Fibre",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 3
+      }
     ]
   },
-
-  "Deep Forest": {
+  "Deep_Forest": {
     "ItemLevel": 5,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Ash_Trunk", "Quantity": 16 }, { "ItemId": "Wood_Birch_Trunk", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Ash_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Wood_Birch_Trunk",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",    "Quantity": 32 } ], "TimeSeconds": 10 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",    "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ], "TimeSeconds": 18 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 10
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 8
+            }
+          ],
+          "TimeSeconds": 18
+        }
       ],
       "Unlocks": [
-        { "DropId": "Wood_Maple_Trunk",           "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Ash_Trunk",   "Quantity": 16 } ] },
-        { "DropId": "Plant_Bush",                 "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Ingredient_Fibre", "Quantity": 16 } ] },
-        { "DropId": "Plant_Vine",                 "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Birch_Trunk", "Quantity": 8  } ] },
-        { "DropId": "entity:Wolf",                "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Ash_Trunk",   "Quantity": 32 } ] },
-        { "DropId": "entity:Fox",                 "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Maple_Trunk", "Quantity": 16 } ] },
-        { "DropId": "entity:Boar",                "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Maple_Trunk", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Leather_Medium",  "Weight": 4,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Leather_Light", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Feathers_Light",  "Weight": 5,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Wood_Ash_Trunk",   "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Life_Essence",    "Weight": 3,  "Tier": 3, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Maple_Trunk", "Quantity": 32 } ] }
+        {
+          "DropId": "Wood_Maple_Trunk",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Ash_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Bush",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Vine",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Birch_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Wolf",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Ash_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Fox",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Maple_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Boar",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Maple_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Leather_Medium",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Leather_Light",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Feathers_Light",
+          "Weight": 5,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Wood_Ash_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Life_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Maple_Trunk",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Ash_Trunk",          "Weight": 20 },
-      { "ID": "Wood_Birch_Trunk",        "Weight": 15 },
-      { "ID": "Ingredient_Fibre",        "Weight": 10 },
-      { "ID": "Ingredient_Life_Essence", "Weight": 2  }
+      {
+        "ID": "Wood_Ash_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Wood_Birch_Trunk",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Fibre",
+        "Weight": 10
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 2
+      }
     ]
   },
-
   "Jungle": {
     "ItemLevel": 6,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Jungle_Trunk", "Quantity": 16 }, { "ItemId": "Wood_Bamboo_Trunk", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Jungle_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Wood_Bamboo_Trunk",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ], "TimeSeconds": 12 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 20 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 12
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 20
+        }
       ],
       "Unlocks": [
-        { "DropId": "Wood_Banyan_Trunk",          "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Jungle_Trunk",  "Quantity": 16 } ] },
-        { "DropId": "Plant_Fruit_Mango",          "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Bamboo_Trunk",  "Quantity": 8  } ] },
-        { "DropId": "Plant_Fruit_Coconut",        "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Jungle_Trunk",  "Quantity": 8  } ] },
-        { "DropId": "Plant_Leaves_Jungle_Floor",  "Weight": 12, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Ingredient_Fibre",   "Quantity": 8  } ] },
-        { "DropId": "entity:Crocodile",           "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Jungle_Trunk",  "Quantity": 32 } ] },
-        { "DropId": "entity:Trork_Hunter",        "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Banyan_Trunk",  "Quantity": 16 } ] },
-        { "DropId": "entity:Frog",                "Weight": 5,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Bamboo_Trunk",  "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Leather_Heavy",   "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Hide_Heavy","Quantity": 8  } ] },
-        { "DropId": "Ingredient_Water_Essence",   "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Wood_Banyan_Trunk",  "Quantity": 32 } ] },
-        { "DropId": "entity:Fen_Stalker",         "Weight": 2,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Wood_Jungle_Trunk",  "Quantity": 64 } ] }
+        {
+          "DropId": "Wood_Banyan_Trunk",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Fruit_Mango",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Bamboo_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Fruit_Coconut",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Leaves_Jungle_Floor",
+          "Weight": 12,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Crocodile",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Trork_Hunter",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Banyan_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frog",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Bamboo_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Leather_Heavy",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Hide_Heavy",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Water_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Wood_Banyan_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Fen_Stalker",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 64
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Jungle_Trunk",       "Weight": 20 },
-      { "ID": "Wood_Bamboo_Trunk",       "Weight": 15 },
-      { "ID": "Plant_Reeds_Marsh",       "Weight": 10 },
-      { "ID": "Ingredient_Life_Essence", "Weight": 2  }
+      {
+        "ID": "Wood_Jungle_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Wood_Bamboo_Trunk",
+        "Weight": 15
+      },
+      {
+        "ID": "Plant_Reeds_Marsh",
+        "Weight": 10
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Azure Forest": {
+  "Azure_Forest": {
     "ItemLevel": 7,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 12 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 6 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 24 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 12 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 12
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 6
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 24
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 12
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Azure_Trunk", "Quantity": 16 }, { "ItemId": "Plant_Crop_Mushroom_Block_Blue", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Azure_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Plant_Crop_Mushroom_Block_Blue",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 32 } ], "TimeSeconds": 15 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 25 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 15
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 25
+        }
       ],
       "Unlocks": [
-        { "DropId": "Plant_Crop_Mushroom_Glowing_Blue",  "Weight": 8, "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Azure_Trunk",           "Quantity": 8  } ] },
-        { "DropId": "Plant_Fruit_Azure",                 "Weight": 8, "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Azure_Trunk",           "Quantity": 16 } ] },
-        { "DropId": "Wood_Fig_Blue_Trunk",               "Weight": 10,"Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Azure_Trunk",           "Quantity": 16 } ] },
-        { "DropId": "Plant_Crop_Mushroom_Flatcap_Blue",  "Weight": 6, "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Plant_Fruit_Azure",          "Quantity": 8  } ] },
-        { "DropId": "entity:Outlander_Initiate",         "Weight": 3, "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Azure_Trunk",           "Quantity": 32 } ] },
-        { "DropId": "entity:Outlander_Hunter",           "Weight": 3, "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Plant_Fruit_Azure",          "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Crystal_Blue",           "Weight": 4, "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Plant_Crop_Mushroom_Glowing_Blue", "Quantity": 8 } ] },
-        { "DropId": "Ingredient_Crystal_Cyan",           "Weight": 4, "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Plant_Crop_Mushroom_Glowing_Blue", "Quantity": 8 } ] },
-        { "DropId": "Ingredient_Ice_Essence",            "Weight": 3, "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Plant_Fruit_Azure",          "Quantity": 32 } ] }
+        {
+          "DropId": "Plant_Crop_Mushroom_Glowing_Blue",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Azure_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Fruit_Azure",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Azure_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Wood_Fig_Blue_Trunk",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Azure_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Crop_Mushroom_Flatcap_Blue",
+          "Weight": 6,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Plant_Fruit_Azure",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Outlander_Initiate",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Azure_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Outlander_Hunter",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Plant_Fruit_Azure",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Crystal_Blue",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Plant_Crop_Mushroom_Glowing_Blue",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Crystal_Cyan",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Plant_Crop_Mushroom_Glowing_Blue",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Ice_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Plant_Fruit_Azure",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Azure_Trunk",            "Weight": 20 },
-      { "ID": "Plant_Crop_Mushroom_Block_Blue", "Weight": 15 },
-      { "ID": "Plant_Fruit_Azure",           "Weight": 8  },
-      { "ID": "Ingredient_Ice_Essence",      "Weight": 2  }
+      {
+        "ID": "Wood_Azure_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Plant_Crop_Mushroom_Block_Blue",
+        "Weight": 15
+      },
+      {
+        "ID": "Plant_Fruit_Azure",
+        "Weight": 8
+      },
+      {
+        "ID": "Ingredient_Ice_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Fiery Forest": {
+  "Fiery_Forest": {
     "ItemLevel": 8,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 16 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 16
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Burnt_Trunk", "Quantity": 16 }, { "ItemId": "Ingredient_Charcoal", "Quantity": 16 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Burnt_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Charcoal",
+          "Quantity": 16
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 40 } ], "TimeSeconds": 18 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 64 } ], "TimeSeconds": 30 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 40
+            }
+          ],
+          "TimeSeconds": 18
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 64
+            }
+          ],
+          "TimeSeconds": 30
+        }
       ],
       "Unlocks": [
-        { "DropId": "Wood_Fire_Trunk",                   "Weight": 15, "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Burnt_Trunk",     "Quantity": 16 } ] },
-        { "DropId": "Plant_Crop_Mushroom_Glowing_Red",   "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Ingredient_Charcoal",  "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Charcoal",               "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Burnt_Trunk",     "Quantity": 8  } ] },
-        { "DropId": "entity:Emberwulf",                  "Weight": 4,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Wood_Fire_Trunk",      "Quantity": 16 } ] },
-        { "DropId": "entity:Zombie_Burnt",               "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Burnt_Trunk",     "Quantity": 32 } ] },
-        { "DropId": "entity:Ember_Golem",                "Weight": 2,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Wood_Fire_Trunk",      "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Sinue_Cindersinue",      "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Wood_Fire_Trunk",      "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Bolt_Cindercloth",       "Weight": 2,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Sinue_Cindersinue", "Quantity": 4 } ] },
-        { "DropId": "Ingredient_Fire_Essence",           "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Charcoal",  "Quantity": 64 } ] }
+        {
+          "DropId": "Wood_Fire_Trunk",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Burnt_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Crop_Mushroom_Glowing_Red",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Charcoal",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Charcoal",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Burnt_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Emberwulf",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Wood_Fire_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Zombie_Burnt",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Burnt_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Ember_Golem",
+          "Weight": 2,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Wood_Fire_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Sinue_Cindersinue",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Wood_Fire_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Bolt_Cindercloth",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Sinue_Cindersinue",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Fire_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Charcoal",
+              "Quantity": 64
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Burnt_Trunk",        "Weight": 20 },
-      { "ID": "Rock_Volcanic",           "Weight": 15 },
-      { "ID": "Ingredient_Charcoal",     "Weight": 12 },
-      { "ID": "Ingredient_Fire_Essence", "Weight": 3  }
+      {
+        "ID": "Wood_Burnt_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Charcoal",
+        "Weight": 12
+      },
+      {
+        "ID": "Ingredient_Fire_Essence",
+        "Weight": 3
+      }
     ]
   },
-
   "Snow": {
     "ItemLevel": 4,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Red", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Snow_Packed", "Quantity": 16 }, { "ItemId": "Block_Snow", "Quantity": 16 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Snow_Packed",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Block_Snow",
+          "Quantity": 16
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 16 } ], "TimeSeconds": 8 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8  } ], "TimeSeconds": 15 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 16
+            }
+          ],
+          "TimeSeconds": 8
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 8
+            }
+          ],
+          "TimeSeconds": 15
+        }
       ],
       "Unlocks": [
-        { "DropId": "Plant_Frost_Fern",         "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Snow",        "Quantity": 16 } ] },
-        { "DropId": "Plant_Ice_Flower_Blue",    "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Snow",        "Quantity": 8  } ] },
-        { "DropId": "Plant_Frozen_Grass",       "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Snow_Packed", "Quantity": 8  } ] },
-        { "DropId": "entity:Sheep",             "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Snow_Packed", "Quantity": 32 } ] },
-        { "DropId": "entity:Bison",             "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Snow_Packed", "Quantity": 32 } ] },
-        { "DropId": "entity:Fox",               "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Snow",        "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Fur_PolarBear", "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Cobalt_Ice",    "Quantity": 8  } ] },
-        { "DropId": "Ore_Cobalt_Ice",           "Weight": 5,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Block_Permafrost",  "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Ice_Essence",   "Weight": 2,  "Tier": 3, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Snow_Packed", "Quantity": 64 } ] }
+        {
+          "DropId": "Plant_Frost_Fern",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Ice_Flower_Blue",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Frozen_Grass",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow_Packed",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Sheep",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow_Packed",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Bison",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow_Packed",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Fox",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Fur_PolarBear",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Cobalt_Ice",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Cobalt_Ice",
+          "Weight": 5,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Block_Permafrost",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Ice_Essence",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Snow_Packed",
+              "Quantity": 64
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Snow",              "Weight": 30 },
-      { "ID": "Block_Snow_Packed",       "Weight": 20 },
-      { "ID": "Ingredient_Ice_Essence",  "Weight": 2  }
+      {
+        "ID": "Block_Snow",
+        "Weight": 30
+      },
+      {
+        "ID": "Block_Snow_Packed",
+        "Weight": 20
+      },
+      {
+        "ID": "Ingredient_Ice_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Frozen Forest": {
+  "Frozen_Forest": {
     "ItemLevel": 6,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Ice_Trunk", "Quantity": 16 }, { "ItemId": "Block_Permafrost", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Ice_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Block_Permafrost",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ], "TimeSeconds": 12 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 40 } ], "TimeSeconds": 20 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 12
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 40
+            }
+          ],
+          "TimeSeconds": 20
+        }
       ],
       "Unlocks": [
-        { "DropId": "Block_Ice_Frosted",          "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Ice_Trunk",    "Quantity": 8  } ] },
-        { "DropId": "Plant_Snow_Shrub",           "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Permafrost",  "Quantity": 8  } ] },
-        { "DropId": "Plant_Ice_Flower_White",     "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Frozen_Soil", "Quantity": 8  } ] },
-        { "DropId": "entity:Wolf",                "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Ice_Trunk",    "Quantity": 16 } ] },
-        { "DropId": "entity:Frost_Zombie",        "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Permafrost",  "Quantity": 32 } ] },
-        { "DropId": "entity:Frost_Skeleton_Scout","Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Frozen_Soil", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Fur_Yeti",        "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Block_Permafrost",  "Quantity": 32 }, { "ItemId": "Ore_Cobalt_Ice", "Quantity": 8 } ] },
-        { "DropId": "Rock_Glacial_Crystal",       "Weight": 4,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Cobalt_Ice",    "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Ice_Essence",     "Weight": 3,  "Tier": 3, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Ice_Trunk",    "Quantity": 32 } ] }
+        {
+          "DropId": "Block_Ice_Frosted",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Ice_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Snow_Shrub",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Permafrost",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Ice_Flower_White",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Frozen_Soil",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Wolf",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Ice_Trunk",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frost_Zombie",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Permafrost",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frost_Skeleton_Scout",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Frozen_Soil",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Fur_Yeti",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Block_Permafrost",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ore_Cobalt_Ice",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Glacial_Crystal",
+          "Weight": 4,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Cobalt_Ice",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Ice_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Ice_Trunk",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Ice_Trunk",          "Weight": 20 },
-      { "ID": "Block_Snow",              "Weight": 15 },
-      { "ID": "Block_Permafrost",        "Weight": 15 },
-      { "ID": "Ingredient_Ice_Essence",  "Weight": 2  }
+      {
+        "ID": "Wood_Ice_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Block_Snow",
+        "Weight": 15
+      },
+      {
+        "ID": "Block_Permafrost",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Ice_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Frozen Cave": {
+  "Frozen_Cave": {
     "ItemLevel": 7,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 12 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 6 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 24 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 12 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 12
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 6
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 24
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 12
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Ice_Blue", "Quantity": 16 }, { "ItemId": "Rock_Ice", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Ice_Blue",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Rock_Ice",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 32 } ], "TimeSeconds": 15 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 25 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 15
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 25
+        }
       ],
       "Unlocks": [
-        { "DropId": "Block_Ice_Clear",             "Weight": 20, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Ice_Blue",       "Quantity": 16 } ] },
-        { "DropId": "Rock_Frozen_Stone",           "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Ice",             "Quantity": 8  } ] },
-        { "DropId": "entity:Frost_Skeleton_Fighter","Weight": 4, "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Ice_Blue",       "Quantity": 32 } ] },
-        { "DropId": "entity:Frost_Skeleton_Knight","Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Frozen_Stone",    "Quantity": 16 } ] },
-        { "DropId": "entity:Frost_Golem",          "Weight": 2,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Glacial_Crystal", "Quantity": 8  } ] },
-        { "DropId": "Ore_Cobalt_Ice",              "Weight": 5,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Glacial_Crystal", "Quantity": 16 } ] },
-        { "DropId": "entity:Frost_Skeleton_Mage",  "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Glacial_Crystal", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Scale_IceDragon",  "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ore_Cobalt_Ice",       "Quantity": 32 } ] },
-        { "DropId": "entity:Ice_Dragon",           "Weight": 1,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ingredient_Scale_IceDragon", "Quantity": 4 }, { "ItemId": "Ore_Cobalt_Ice", "Quantity": 32 } ] }
+        {
+          "DropId": "Block_Ice_Clear",
+          "Weight": 20,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Ice_Blue",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Rock_Frozen_Stone",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Ice",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frost_Skeleton_Fighter",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Ice_Blue",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frost_Skeleton_Knight",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Frozen_Stone",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frost_Golem",
+          "Weight": 2,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Glacial_Crystal",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Cobalt_Ice",
+          "Weight": 5,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Glacial_Crystal",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Frost_Skeleton_Mage",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Glacial_Crystal",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Scale_IceDragon",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Cobalt_Ice",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Ice_Dragon",
+          "Weight": 1,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Scale_IceDragon",
+              "Quantity": 4
+            },
+            {
+              "ItemId": "Ore_Cobalt_Ice",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Ice_Blue",          "Weight": 25 },
-      { "ID": "Rock_Ice",                "Weight": 20 },
-      { "ID": "Rock_Ice_Permafrost",     "Weight": 15 },
-      { "ID": "Ingredient_Ice_Essence",  "Weight": 3  }
+      {
+        "ID": "Block_Ice_Blue",
+        "Weight": 25
+      },
+      {
+        "ID": "Rock_Ice",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Ice_Permafrost",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Ice_Essence",
+        "Weight": 3
+      }
     ]
   },
-
   "Plains": {
     "ItemLevel": 2,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 6 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 12 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 6
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Blue",
+            "Quantity": 12
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Soil_Grass", "Quantity": 16 }, { "ItemId": "Ingredient_Fibre", "Quantity": 16 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Soil_Grass",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Fibre",
+          "Quantity": 16
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 24 } ], "TimeSeconds": 5 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Blue", "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ], "TimeSeconds": 10 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 5
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Blue",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 8
+            }
+          ],
+          "TimeSeconds": 10
+        }
       ],
       "Unlocks": [
-        { "DropId": "Plant_Crop_Wheat_Item",      "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Ingredient_Fibre",    "Quantity": 8  } ] },
-        { "DropId": "Plant_Crop_Carrot_Item",     "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Ingredient_Fibre",    "Quantity": 8  } ] },
-        { "DropId": "Plant_Seeds_Wheat_Eternal",  "Weight": 8,  "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Plant_Crop_Wheat_Item","Quantity": 8  } ] },
-        { "DropId": "entity:Sheep",               "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Plant_Hay_Bundle",    "Quantity": 8  } ] },
-        { "DropId": "entity:Deer",                "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Soil_Grass",          "Quantity": 32 } ] },
-        { "DropId": "entity:Bison",               "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Plant_Hay_Bundle",    "Quantity": 16 } ] },
-        { "DropId": "entity:Rabbit",              "Weight": 5,  "Tier": 2, "Rank": "Common",   "Cost": [ { "ItemId": "Soil_Grass",          "Quantity": 16 } ] },
-        { "DropId": "Plant_Seeds_Health1",        "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Plant_Crop_Carrot_Item","Quantity": 16}, { "ItemId": "Ingredient_Life_Essence", "Quantity": 4 } ] },
-        { "DropId": "Plant_Seeds_Mana1",          "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Plant_Crop_Wheat_Item","Quantity": 16 }, { "ItemId": "Ingredient_Life_Essence", "Quantity": 4 } ] },
-        { "DropId": "Plant_Seeds_Stamina1",       "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Fibre",    "Quantity": 32 }, { "ItemId": "Ingredient_Life_Essence", "Quantity": 4 } ] }
+        {
+          "DropId": "Plant_Crop_Wheat_Item",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Crop_Carrot_Item",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Seeds_Wheat_Eternal",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Plant_Crop_Wheat_Item",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Sheep",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Plant_Hay_Bundle",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Deer",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Soil_Grass",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Bison",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Plant_Hay_Bundle",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Rabbit",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Soil_Grass",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Seeds_Health1",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Plant_Crop_Carrot_Item",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "Ingredient_Life_Essence",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Seeds_Mana1",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Plant_Crop_Wheat_Item",
+              "Quantity": 16
+            },
+            {
+              "ItemId": "Ingredient_Life_Essence",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Seeds_Stamina1",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Fibre",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ingredient_Life_Essence",
+              "Quantity": 4
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Soil_Grass",              "Weight": 25 },
-      { "ID": "Plant_Grass_Lush",        "Weight": 20 },
-      { "ID": "Ingredient_Fibre",        "Weight": 15 },
-      { "ID": "Ingredient_Life_Essence", "Weight": 3  }
+      {
+        "ID": "Soil_Grass",
+        "Weight": 25
+      },
+      {
+        "ID": "Plant_Grass_Lush",
+        "Weight": 20
+      },
+      {
+        "ID": "Ingredient_Fibre",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 3
+      }
     ]
   },
-
   "Inferno": {
     "ItemLevel": 8,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 16 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 16
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Volcanic", "Quantity": 16 }, { "ItemId": "Block_Volcanic_Ash", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Volcanic",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Block_Volcanic_Ash",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 40 } ], "TimeSeconds": 18 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 64 } ], "TimeSeconds": 30 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 40
+            }
+          ],
+          "TimeSeconds": 18
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 64
+            }
+          ],
+          "TimeSeconds": 30
+        }
       ],
       "Unlocks": [
-        { "DropId": "Ingredient_Sinue_Cindersinue",     "Weight": 5,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Volcanic",          "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Bolt_Cindercloth",      "Weight": 4,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Sinue_Cindersinue", "Quantity": 4 } ] },
-        { "DropId": "entity:Emberwulf",                 "Weight": 4,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Volcanic",          "Quantity": 32 } ] },
-        { "DropId": "entity:Burnt_Skeleton_Soldier",    "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Volcanic_Ash",      "Quantity": 32 } ] },
-        { "DropId": "entity:Burnt_Skeleton_Archer",     "Weight": 3,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Volcanic_Ash",      "Quantity": 32 } ] },
-        { "DropId": "entity:Ember_Golem",               "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Volcanic",          "Quantity": 64 } ] },
-        { "DropId": "entity:Burnt_Skeleton_Knight",     "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bolt_Cindercloth", "Quantity": 8 } ] },
-        { "DropId": "entity:Firesteel_Golem",           "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ingredient_Sinue_Cindersinue", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Fire_Essence",          "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Charcoal",    "Quantity": 64 } ] }
+        {
+          "DropId": "Ingredient_Sinue_Cindersinue",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Bolt_Cindercloth",
+          "Weight": 4,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Sinue_Cindersinue",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Emberwulf",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Burnt_Skeleton_Soldier",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Volcanic_Ash",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Burnt_Skeleton_Archer",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Volcanic_Ash",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Ember_Golem",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 64
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Burnt_Skeleton_Knight",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bolt_Cindercloth",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Firesteel_Golem",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Sinue_Cindersinue",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Fire_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Charcoal",
+              "Quantity": 64
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Volcanic",           "Weight": 25 },
-      { "ID": "Block_Volcanic_Ash",      "Weight": 15 },
-      { "ID": "Ingredient_Charcoal",     "Weight": 12 },
-      { "ID": "Ingredient_Fire_Essence", "Weight": 3  }
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 25
+      },
+      {
+        "ID": "Block_Volcanic_Ash",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Charcoal",
+        "Weight": 12
+      },
+      {
+        "ID": "Ingredient_Fire_Essence",
+        "Weight": 3
+      }
     ]
   },
-
-  "Deep Inferno": {
+  "Deep_Inferno": {
     "ItemLevel": 9,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 12 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 12
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 24
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Lava_Rock_Cracked", "Quantity": 16 }, { "ItemId": "Ingredient_Sinue_Cindersinue", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Lava_Rock_Cracked",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Sinue_Cindersinue",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 25 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 64 } ], "TimeSeconds": 40 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 25
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 64
+            }
+          ],
+          "TimeSeconds": 40
+        }
       ],
       "Unlocks": [
-        { "DropId": "Ore_Onyxium",                          "Weight": 5,  "Tier": 1, "Rank": "Rare",  "Cost": [ { "ItemId": "Block_Lava_Rock_Cracked",  "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Bolt_Cindercloth",          "Weight": 5,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Sinue_Cindersinue", "Quantity": 8 } ] },
-        { "DropId": "entity:Burnt_Skeleton_Wizard",         "Weight": 4,  "Tier": 2, "Rank": "Rare",  "Cost": [ { "ItemId": "Ore_Onyxium",              "Quantity": 8  } ] },
-        { "DropId": "entity:Burnt_Skeleton_Lancer",         "Weight": 3,  "Tier": 2, "Rank": "Rare",  "Cost": [ { "ItemId": "Ore_Onyxium",              "Quantity": 8  } ] },
-        { "DropId": "entity:Firesteel_Golem",               "Weight": 3,  "Tier": 2, "Rank": "Epic",  "Cost": [ { "ItemId": "Ore_Onyxium",              "Quantity": 16 } ] },
-        { "DropId": "entity:Incandescent_Skeleton_Fighter", "Weight": 3,  "Tier": 3, "Rank": "Epic",  "Cost": [ { "ItemId": "Ingredient_Bolt_Cindercloth","Quantity": 16 } ] },
-        { "DropId": "entity:Incandescent_Skeleton_Mage",    "Weight": 2,  "Tier": 3, "Rank": "Epic",  "Cost": [ { "ItemId": "Ingredient_Bolt_Cindercloth","Quantity": 16 } ] },
-        { "DropId": "Ore_Mithril",                          "Weight": 2,  "Tier": 3, "Rank": "Epic",  "Cost": [ { "ItemId": "Ore_Onyxium",              "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Void_Essence",              "Weight": 2,  "Tier": 3, "Rank": "Epic",  "Cost": [ { "ItemId": "Ore_Mithril",              "Quantity": 8  } ] }
+        {
+          "DropId": "Ore_Onyxium",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Block_Lava_Rock_Cracked",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Bolt_Cindercloth",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Sinue_Cindersinue",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Burnt_Skeleton_Wizard",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Onyxium",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Burnt_Skeleton_Lancer",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Onyxium",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Firesteel_Golem",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Onyxium",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Incandescent_Skeleton_Fighter",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bolt_Cindercloth",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Incandescent_Skeleton_Mage",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bolt_Cindercloth",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Mithril",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Onyxium",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Void_Essence",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Mithril",
+              "Quantity": 8
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Lava_Rock_Cracked", "Weight": 20 },
-      { "ID": "Rock_Volcanic",           "Weight": 20 },
-      { "ID": "Ingredient_Fire_Essence", "Weight": 3  },
-      { "ID": "Ingredient_Void_Essence", "Weight": 2  }
+      {
+        "ID": "Block_Lava_Rock_Cracked",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 20
+      },
+      {
+        "ID": "Ingredient_Fire_Essence",
+        "Weight": 3
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 2
+      }
     ]
   },
-
   "Graveyard": {
     "ItemLevel": 5,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Stone_Mossy", "Quantity": 16 }, { "ItemId": "Ingredient_Bone_Fragment", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Stone_Mossy",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Bone_Fragment",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",    "Quantity": 32 } ], "TimeSeconds": 10 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",    "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ], "TimeSeconds": 18 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 10
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 8
+            }
+          ],
+          "TimeSeconds": 18
+        }
       ],
       "Unlocks": [
-        { "DropId": "Ingredient_Bone_Fragment",  "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Stone_Mossy",       "Quantity": 8  } ] },
-        { "DropId": "Plant_Bramble_Moss_Twisted","Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Stone_Mossy",       "Quantity": 16 } ] },
-        { "DropId": "entity:Zombie",             "Weight": 5,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 8  } ] },
-        { "DropId": "entity:Skeleton_Scout",     "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 8  } ] },
-        { "DropId": "entity:Skeleton_Soldier",   "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 16 } ] },
-        { "DropId": "entity:Skeleton_Knight",    "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 32 } ] },
-        { "DropId": "entity:Pale_Danger",        "Weight": 2,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 32 }, { "ItemId": "Ore_Iron", "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Void_Essence",   "Weight": 2,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Stone_Mossy",       "Quantity": 64 } ] }
+        {
+          "DropId": "Ingredient_Bone_Fragment",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone_Mossy",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Bramble_Moss_Twisted",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone_Mossy",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Zombie",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Scout",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Soldier",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Knight",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Pale_Danger",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ore_Iron",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Void_Essence",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone_Mossy",
+              "Quantity": 64
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Soil_Dirt",               "Weight": 25 },
-      { "ID": "Rock_Stone_Mossy",        "Weight": 20 },
-      { "ID": "Ingredient_Void_Essence", "Weight": 2  }
+      {
+        "ID": "Soil_Dirt",
+        "Weight": 25
+      },
+      {
+        "ID": "Rock_Stone_Mossy",
+        "Weight": 20
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Ancient Graveyard": {
+  "Ancient_Graveyard": {
     "ItemLevel": 6,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Slate", "Quantity": 16 }, { "ItemId": "Ingredient_Bone_Fragment", "Quantity": 16 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Slate",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Bone_Fragment",
+          "Quantity": 16
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 24 } ], "TimeSeconds": 12 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 40 } ], "TimeSeconds": 20 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 24
+            }
+          ],
+          "TimeSeconds": 12
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 40
+            }
+          ],
+          "TimeSeconds": 20
+        }
       ],
       "Unlocks": [
-        { "DropId": "Rock_Shale",               "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Slate",            "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Bone_Fragment",  "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Stone_Mossy",      "Quantity": 8  } ] },
-        { "DropId": "entity:Zombie",             "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 8  } ] },
-        { "DropId": "entity:Aberrant_Zombie",    "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 16 } ] },
-        { "DropId": "entity:Skeleton_Mage",      "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Slate",            "Quantity": 32 } ] },
-        { "DropId": "entity:Skeleton_Archer",    "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 16 } ] },
-        { "DropId": "entity:Large_Aberrant_Zombie","Weight": 2, "Tier": 3, "Rank": "Epic",    "Cost": [ { "ItemId": "Rock_Shale",            "Quantity": 32 } ] },
-        { "DropId": "entity:Skeleton_Archmage",  "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Rock_Slate",            "Quantity": 64 } ] },
-        { "DropId": "Ingredient_Void_Essence",   "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Slate",            "Quantity": 32 } ] }
+        {
+          "DropId": "Rock_Shale",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Slate",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Bone_Fragment",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Stone_Mossy",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Zombie",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Aberrant_Zombie",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Mage",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Slate",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Archer",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Large_Aberrant_Zombie",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Rock_Shale",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Archmage",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Rock_Slate",
+              "Quantity": 64
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Void_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Slate",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Stone_Mossy",        "Weight": 20 },
-      { "ID": "Rock_Slate",              "Weight": 15 },
-      { "ID": "Ingredient_Bone_Fragment","Weight": 10 },
-      { "ID": "Ingredient_Void_Essence", "Weight": 3  }
+      {
+        "ID": "Rock_Stone_Mossy",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Slate",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Bone_Fragment",
+        "Weight": 10
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 3
+      }
     ]
   },
-
-  "Cursed Crypt": {
+  "Cursed_Crypt": {
     "ItemLevel": 8,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 16 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 16
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Rock_Basalt", "Quantity": 16 }, { "ItemId": "Ingredient_Bone_Fragment", "Quantity": 16 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Rock_Basalt",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Bone_Fragment",
+          "Quantity": 16
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 40 } ], "TimeSeconds": 18 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 64 } ], "TimeSeconds": 30 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 40
+            }
+          ],
+          "TimeSeconds": 18
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 64
+            }
+          ],
+          "TimeSeconds": 30
+        }
       ],
       "Unlocks": [
-        { "DropId": "Ingredient_Bone_Fragment",  "Weight": 15, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Rock_Basalt",           "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Chitin_Sturdy",  "Weight": 5,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Rock_Basalt",           "Quantity": 32 } ] },
-        { "DropId": "entity:Skeleton_Knight",    "Weight": 4,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 32 } ] },
-        { "DropId": "entity:Skeleton_Ranger",    "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Bone_Fragment","Quantity": 32 } ] },
-        { "DropId": "entity:Skeleton_Mage",      "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Basalt",           "Quantity": 32 } ] },
-        { "DropId": "entity:Skeleton_Archmage",  "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Rock_Volcanic",         "Quantity": 32 } ] },
-        { "DropId": "entity:Void_Spectre",       "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ingredient_Voidheart",  "Quantity": 4  } ] },
-        { "DropId": "Ingredient_Void_Essence",   "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Basalt",           "Quantity": 64 } ] },
-        { "DropId": "Ingredient_Motes_Light",    "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ingredient_Voidheart",  "Quantity": 8  } ] }
+        {
+          "DropId": "Ingredient_Bone_Fragment",
+          "Weight": 15,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Chitin_Sturdy",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Knight",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Ranger",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Bone_Fragment",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Mage",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Skeleton_Archmage",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Void_Spectre",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Voidheart",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Void_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Basalt",
+              "Quantity": 64
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Motes_Light",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Voidheart",
+              "Quantity": 8
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Rock_Basalt",             "Weight": 20 },
-      { "ID": "Rock_Volcanic",           "Weight": 15 },
-      { "ID": "Ingredient_Bone_Fragment","Weight": 10 },
-      { "ID": "Ingredient_Void_Essence", "Weight": 3  }
+      {
+        "ID": "Rock_Basalt",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Bone_Fragment",
+        "Weight": 10
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 3
+      }
     ]
   },
-
-  "Primal Jungle": {
+  "Primal_Jungle": {
     "ItemLevel": 5,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 16 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 4 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 16
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 4
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Wood_Jungle_Trunk", "Quantity": 16 }, { "ItemId": "Block_Fossil_Stone", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Wood_Jungle_Trunk",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Block_Fossil_Stone",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",    "Quantity": 32 } ], "TimeSeconds": 10 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Red",    "Quantity": 32 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ], "TimeSeconds": 18 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 10
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Red",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 8
+            }
+          ],
+          "TimeSeconds": 18
+        }
       ],
       "Unlocks": [
-        { "DropId": "Block_Amber",                 "Weight": 8,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Fossil_Stone",    "Quantity": 8  } ] },
-        { "DropId": "Ingredient_Primal_Meat",      "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Jungle_Trunk",    "Quantity": 8  } ] },
-        { "DropId": "Plant_Giant_Jungle_Leaf",     "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Wood_Jungle_Trunk",    "Quantity": 8  } ] },
-        { "DropId": "entity:Cave_Raptor",          "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Fossil_Stone",   "Quantity": 16 } ] },
-        { "DropId": "entity:Archaeopteryx",        "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Jungle_Trunk",    "Quantity": 32 } ] },
-        { "DropId": "Ingredient_Claw_CaveRaptor",  "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Meat","Quantity": 16 } ] },
-        { "DropId": "Ingredient_Feather_Pterodactyl","Weight": 3, "Tier": 3, "Rank": "Rare",    "Cost": [ { "ItemId": "Block_Amber",           "Quantity": 8  } ] },
-        { "DropId": "Ingredient_Life_Essence",     "Weight": 2,  "Tier": 3, "Rank": "Uncommon", "Cost": [ { "ItemId": "Wood_Jungle_Trunk",    "Quantity": 64 } ] }
+        {
+          "DropId": "Block_Amber",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Fossil_Stone",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Primal_Meat",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Plant_Giant_Jungle_Leaf",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Cave_Raptor",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Fossil_Stone",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Archaeopteryx",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Claw_CaveRaptor",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Meat",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Feather_Pterodactyl",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Block_Amber",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Life_Essence",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Wood_Jungle_Trunk",
+              "Quantity": 64
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Wood_Jungle_Trunk",       "Weight": 20 },
-      { "ID": "Block_Fossil_Stone",      "Weight": 15 },
-      { "ID": "Plant_Primal_Fern",       "Weight": 10 },
-      { "ID": "Ingredient_Life_Essence", "Weight": 2  }
+      {
+        "ID": "Wood_Jungle_Trunk",
+        "Weight": 20
+      },
+      {
+        "ID": "Block_Fossil_Stone",
+        "Weight": 15
+      },
+      {
+        "ID": "Plant_Primal_Fern",
+        "Weight": 10
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Dino Caverns": {
+  "Dino_Caverns": {
     "ItemLevel": 7,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 12 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 6 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Red", "Quantity": 24 }, { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 12 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 12
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 6
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Red",
+            "Quantity": 24
+          },
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 12
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Primal_Stone", "Quantity": 16 }, { "ItemId": "Ingredient_Dinosaur_Bone", "Quantity": 8 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Primal_Stone",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Dinosaur_Bone",
+          "Quantity": 8
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 32 } ], "TimeSeconds": 15 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 48 } ], "TimeSeconds": 25 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 32
+            }
+          ],
+          "TimeSeconds": 15
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 48
+            }
+          ],
+          "TimeSeconds": 25
+        }
       ],
       "Unlocks": [
-        { "DropId": "Rock_Amber_Encased",          "Weight": 8,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Primal_Stone",    "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Dinosaur_Bone",    "Weight": 10, "Tier": 1, "Rank": "Common",   "Cost": [ { "ItemId": "Block_Fossil_Stone",   "Quantity": 8  } ] },
-        { "DropId": "Ore_Primal_Iron",             "Weight": 5,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Primal_Stone",   "Quantity": 32 } ] },
-        { "DropId": "entity:Cave_Raptor",          "Weight": 5,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Ingredient_Dinosaur_Bone","Quantity": 8 } ] },
-        { "DropId": "entity:Crawler",              "Weight": 4,  "Tier": 2, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Primal_Stone",   "Quantity": 16 } ] },
-        { "DropId": "entity:Cave_Rex",             "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Core","Quantity": 4  } ] },
-        { "DropId": "Ingredient_Tooth_CaveRex",    "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Core","Quantity": 8  } ] },
-        { "DropId": "Ingredient_Scale_Dimetrodon", "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Meat","Quantity": 32 } ] },
-        { "DropId": "Ingredient_Primal_Core",      "Weight": 2,  "Tier": 3, "Rank": "Epic",     "Cost": [ { "ItemId": "Ore_Primal_Iron",      "Quantity": 32 }, { "ItemId": "Ingredient_Dinosaur_Bone", "Quantity": 32 } ] }
+        {
+          "DropId": "Rock_Amber_Encased",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Primal_Stone",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Dinosaur_Bone",
+          "Weight": 10,
+          "Tier": 1,
+          "Rank": "Common",
+          "Cost": [
+            {
+              "ItemId": "Block_Fossil_Stone",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ore_Primal_Iron",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Primal_Stone",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Cave_Raptor",
+          "Weight": 5,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Dinosaur_Bone",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Crawler",
+          "Weight": 4,
+          "Tier": 2,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Primal_Stone",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Cave_Rex",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Core",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Tooth_CaveRex",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Core",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Scale_Dimetrodon",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Meat",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Primal_Core",
+          "Weight": 2,
+          "Tier": 3,
+          "Rank": "Epic",
+          "Cost": [
+            {
+              "ItemId": "Ore_Primal_Iron",
+              "Quantity": 32
+            },
+            {
+              "ItemId": "Ingredient_Dinosaur_Bone",
+              "Quantity": 32
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Primal_Stone",      "Weight": 20 },
-      { "ID": "Block_Lava_Rock_Cracked", "Weight": 15 },
-      { "ID": "Rock_Volcanic",           "Weight": 15 },
-      { "ID": "Ingredient_Life_Essence", "Weight": 2  }
+      {
+        "ID": "Block_Primal_Stone",
+        "Weight": 20
+      },
+      {
+        "ID": "Block_Lava_Rock_Cracked",
+        "Weight": 15
+      },
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Life_Essence",
+        "Weight": 2
+      }
     ]
   },
-
-  "Volcanic Badlands": {
+  "Volcanic_Badlands": {
     "ItemLevel": 8,
     "Crystal": {
-      "Small": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 8 } ] },
-      "Large": { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 16 } ] }
+      "Small": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 8
+          }
+        ]
+      },
+      "Large": {
+        "Input": [
+          {
+            "ItemId": "OneBlock_Crystal_Yellow",
+            "Quantity": 16
+          }
+        ]
+      }
     },
     "Bench": {
-      "CraftInput": [ { "ItemId": "Block_Volcanic_Ash", "Quantity": 16 }, { "ItemId": "Ingredient_Primal_Core", "Quantity": 4 } ],
+      "CraftInput": [
+        {
+          "ItemId": "Block_Volcanic_Ash",
+          "Quantity": 16
+        },
+        {
+          "ItemId": "Ingredient_Primal_Core",
+          "Quantity": 4
+        }
+      ],
       "Upgrades": [
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 40 } ], "TimeSeconds": 20 },
-        { "Input": [ { "ItemId": "OneBlock_Crystal_Yellow", "Quantity": 64 } ], "TimeSeconds": 35 }
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 40
+            }
+          ],
+          "TimeSeconds": 20
+        },
+        {
+          "Input": [
+            {
+              "ItemId": "OneBlock_Crystal_Yellow",
+              "Quantity": 64
+            }
+          ],
+          "TimeSeconds": 35
+        }
       ],
       "Unlocks": [
-        { "DropId": "Ore_Primal_Iron",             "Weight": 8,  "Tier": 1, "Rank": "Uncommon", "Cost": [ { "ItemId": "Block_Volcanic_Ash",   "Quantity": 16 } ] },
-        { "DropId": "Ingredient_Primal_Core",      "Weight": 5,  "Tier": 1, "Rank": "Rare",     "Cost": [ { "ItemId": "Ore_Primal_Iron",      "Quantity": 16 } ] },
-        { "DropId": "entity:Earthen_Golem",        "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Volcanic",        "Quantity": 32 } ] },
-        { "DropId": "entity:Earth_Elemental",      "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Rock_Volcanic",        "Quantity": 32 } ] },
-        { "DropId": "entity:Cave_Rex",             "Weight": 3,  "Tier": 2, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Core","Quantity": 4  } ] },
-        { "DropId": "Ingredient_Hide_Trillodon",   "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Meat","Quantity": 32 } ] },
-        { "DropId": "entity:Emberwulf",            "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Core","Quantity": 8  } ] },
-        { "DropId": "Ingredient_Fire_Essence",     "Weight": 3,  "Tier": 3, "Rank": "Rare",     "Cost": [ { "ItemId": "Ingredient_Primal_Core","Quantity": 8  } ] }
+        {
+          "DropId": "Ore_Primal_Iron",
+          "Weight": 8,
+          "Tier": 1,
+          "Rank": "Uncommon",
+          "Cost": [
+            {
+              "ItemId": "Block_Volcanic_Ash",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Primal_Core",
+          "Weight": 5,
+          "Tier": 1,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ore_Primal_Iron",
+              "Quantity": 16
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Earthen_Golem",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Earth_Elemental",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Rock_Volcanic",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Cave_Rex",
+          "Weight": 3,
+          "Tier": 2,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Core",
+              "Quantity": 4
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Hide_Trillodon",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Meat",
+              "Quantity": 32
+            }
+          ]
+        },
+        {
+          "DropId": "entity:Emberwulf",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Core",
+              "Quantity": 8
+            }
+          ]
+        },
+        {
+          "DropId": "Ingredient_Fire_Essence",
+          "Weight": 3,
+          "Tier": 3,
+          "Rank": "Rare",
+          "Cost": [
+            {
+              "ItemId": "Ingredient_Primal_Core",
+              "Quantity": 8
+            }
+          ]
+        }
       ]
     },
     "BaseDropPool": [
-      { "ID": "Block_Volcanic_Ash",      "Weight": 20 },
-      { "ID": "Rock_Volcanic",           "Weight": 20 },
-      { "ID": "Block_Lava_Rock_Cracked", "Weight": 15 },
-      { "ID": "Ingredient_Fire_Essence", "Weight": 2  }
+      {
+        "ID": "Block_Volcanic_Ash",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Volcanic",
+        "Weight": 20
+      },
+      {
+        "ID": "Block_Lava_Rock_Cracked",
+        "Weight": 15
+      },
+      {
+        "ID": "Ingredient_Fire_Essence",
+        "Weight": 2
+      }
     ]
   }
 }

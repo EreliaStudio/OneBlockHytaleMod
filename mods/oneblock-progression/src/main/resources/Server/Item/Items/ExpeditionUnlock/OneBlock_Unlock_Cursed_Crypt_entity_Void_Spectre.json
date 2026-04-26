@@ -1,0 +1,48 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre.name",
+    "Description": "server.items.OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre.description"
+  },
+  "Id": "OneBlock_Unlock_Cursed_Crypt_entity_Void_Spectre",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/RecipeDrop.png",
+  "Categories": [
+    "Items.RecipeDrop"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Voidheart",
+        "Quantity": 4
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Bench_Cursed_Crypt_Tier3"
+        ],
+        "Id": "OneBlock_Bench_Cursed_Crypt"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_Unlock_Consumable"
+    ],
+    "OneBlockUnlockExpedition": [
+      "Cursed_Crypt"
+    ],
+    "OneBlockUnlockDropId": [
+      "entity:Void_Spectre"
+    ],
+    "OneBlockUnlockWeight": [
+      "2"
+    ]
+  },
+  "MaxStack": 1,
+  "Quality": "Epic"
+}

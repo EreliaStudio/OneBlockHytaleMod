@@ -75,6 +75,17 @@ RECIPE_DIR    = ITEMS / "BenchRecipe"
 UNLOCK_DIR    = ITEMS / "ExpeditionUnlock"
 
 
+# ── ID sanitization ──────────────────────────────────────────────────────────
+
+def _safe_eid(expedition_id: str) -> str:
+    """Convert expedition display name to a safe identifier (no spaces).
+    e.g. "Deep Cave" -> "Deep_Cave", "The Abyss" -> "The_Abyss"
+    Used for item IDs, file names, bench IDs, category IDs, and lang keys.
+    The raw expedition_id (with spaces) is kept only for Java map keys and tag values.
+    """
+    return expedition_id.replace(" ", "_")
+
+
 # ── Quality helper ────────────────────────────────────────────────────────────
 def _quality(item_level: int) -> str:
     if item_level <= 4: return "Uncommon"
@@ -85,7 +96,8 @@ def _quality(item_level: int) -> str:
 # ── JSON builders ─────────────────────────────────────────────────────────────
 
 def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) -> dict:
-    item_id = f"OneBlock_Crystal_{expedition_id}_{size}"
+    eid     = _safe_eid(expedition_id)
+    item_id = f"OneBlock_Crystal_{eid}_{size}"
     return {
         "TranslationProperties": {
             "Name":        f"server.items.{item_id}.name",
@@ -114,7 +126,7 @@ def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) 
             "BenchRequirement": [
                 {
                     "Type": "Crafting",
-                    "Categories": [f"OneBlock_Enchanter_{expedition_id}"],
+                    "Categories": [f"OneBlock_Enchanter_{eid}"],
                     "Id": "OneBlockEnchanter"
                 }
             ]
@@ -131,7 +143,8 @@ def build_crystal(expedition_id: str, size: str, item_level: int, inputs: list) 
 
 
 def build_bench_recipe_item(expedition_id: str, item_level: int) -> dict:
-    item_id = f"OneBlock_Bench_Recipe_{expedition_id}"
+    eid     = _safe_eid(expedition_id)
+    item_id = f"OneBlock_Bench_Recipe_{eid}"
     return {
         "TranslationProperties": {
             "Name":        f"server.items.{item_id}.name",
@@ -145,7 +158,7 @@ def build_bench_recipe_item(expedition_id: str, item_level: int) -> dict:
         "Consumable": True,
         "Tags": {
             "Type": ["RecipeDrop"],
-            "RecipeDropTarget": [f"Bench_OneBlock_{expedition_id}"]
+            "RecipeDropTarget": [f"Bench_OneBlock_{eid}"]
         },
         "MaxStack": 1,
         "Quality": _quality(item_level)
@@ -159,16 +172,16 @@ def _safe_drop_id(drop_id: str) -> str:
 
 def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
     """Build the consumable unlock item that adds a drop to the expedition loot table."""
+    eid       = _safe_eid(expedition_id)
     drop_id   = unlock["DropId"]
     weight    = unlock["Weight"]
     tier      = unlock["Tier"]
     quality   = unlock.get("Rank", "Common")
     cost      = unlock["Cost"]
-    bench_id  = f"OneBlock_Bench_{expedition_id}"
-    item_id   = f"OneBlock_Unlock_{expedition_id}_{_safe_drop_id(drop_id)}"
+    bench_id  = f"OneBlock_Bench_{eid}"
+    item_id   = f"OneBlock_Unlock_{eid}_{_safe_drop_id(drop_id)}"
     cat_id    = f"{bench_id}_Tier{tier}"
 
-    # Human-readable drop name for display (strip entity: prefix)
     drop_name = drop_id.split(":")[-1].replace("_", " ")
 
     return {
@@ -207,8 +220,9 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
 def build_expedition_bench(expedition_id: str, item_level: int,
                            craft_input: list, upgrades: list,
                            unlocks_by_tier: dict) -> dict:
-    bench_id      = f"OneBlock_Bench_{expedition_id}"
-    item_bench_id = f"Bench_OneBlock_{expedition_id}"
+    eid           = _safe_eid(expedition_id)
+    bench_id      = f"OneBlock_Bench_{eid}"
+    item_bench_id = f"Bench_OneBlock_{eid}"
 
     tier_levels = []
     for upg in upgrades:
@@ -293,20 +307,21 @@ def build_expedition_bench(expedition_id: str, item_level: int,
 # ── Lang builder ──────────────────────────────────────────────────────────────
 
 def build_lang_block(expedition_id: str) -> str:
-    eid   = expedition_id
-    sep   = "─" * max(0, 55 - len(eid))
+    eid      = _safe_eid(expedition_id)
+    display  = expedition_id
+    sep      = "─" * max(0, 55 - len(display))
     lines = [
-        f"\n# GENERATED ─── {eid} {sep}",
-        f"server.items.OneBlock_Crystal_{eid}_Small.name={eid} Crystal (Small)",
-        f"server.items.OneBlock_Crystal_{eid}_Small.description=Use on the OneBlock to begin a 100-tick {eid} expedition.",
-        f"server.items.OneBlock_Crystal_{eid}_Large.name={eid} Crystal (Large)",
-        f"server.items.OneBlock_Crystal_{eid}_Large.description=Use on the OneBlock to begin a 300-tick {eid} expedition.",
-        f"server.items.Bench_OneBlock_{eid}.name={eid} Bench",
-        f"server.items.Bench_OneBlock_{eid}.description=An expedition bench for {eid}. Upgrade it to unlock more powerful recipes.",
-        f"server.items.OneBlock_Bench_Recipe_{eid}.name=Recipe: {eid} Bench",
-        f"server.items.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {eid} Bench crafting recipe at the OneBlock Workbench.",
-        f"server.benchCategories.OneBlockEnchanter_{eid}={eid} Crystals",
-        f"server.benchCategories.OneBlock_Bench_{eid}_Tier1={eid} Recipes",
+        f"\n# GENERATED ─── {display} {sep}",
+        f"server.items.OneBlock_Crystal_{eid}_Small.name={display} Crystal (Small)",
+        f"server.items.OneBlock_Crystal_{eid}_Small.description=Use on the OneBlock to begin a 100-tick {display} expedition.",
+        f"server.items.OneBlock_Crystal_{eid}_Large.name={display} Crystal (Large)",
+        f"server.items.OneBlock_Crystal_{eid}_Large.description=Use on the OneBlock to begin a 300-tick {display} expedition.",
+        f"server.items.Bench_OneBlock_{eid}.name={display} Bench",
+        f"server.items.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
+        f"server.items.OneBlock_Bench_Recipe_{eid}.name=Recipe: {display} Bench",
+        f"server.items.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {display} Bench crafting recipe at the OneBlock Workbench.",
+        f"server.benchCategories.OneBlockEnchanter_{eid}={display} Crystals",
+        f"server.benchCategories.OneBlock_Bench_{eid}_Tier1={display} Recipes",
     ]
     return "\n".join(lines)
 
@@ -361,9 +376,10 @@ def _save_json(path: Path, data: dict, dry_run: bool):
 
 
 def patch_enchanter(path: Path, expedition_id: str, dry_run: bool):
+    eid  = _safe_eid(expedition_id)
     data = _load_json(path)
     categories = data["BlockType"]["Bench"]["Categories"]
-    cat_id = f"OneBlock_Enchanter_{expedition_id}"
+    cat_id = f"OneBlock_Enchanter_{eid}"
     if any(c["Id"] == cat_id for c in categories):
         print(f"  [skip]   Enchanter already has category {cat_id}")
         return
@@ -372,17 +388,18 @@ def patch_enchanter(path: Path, expedition_id: str, dry_run: bool):
         "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
         "Name": f"server.benchCategories.{cat_id}",
         "Recipes": [
-            f"OneBlock_Crystal_{expedition_id}_Small",
-            f"OneBlock_Crystal_{expedition_id}_Large"
+            f"OneBlock_Crystal_{eid}_Small",
+            f"OneBlock_Crystal_{eid}_Large"
         ]
     })
     _save_json(path, data, dry_run)
 
 
 def patch_workbench(path: Path, expedition_id: str, dry_run: bool):
-    data    = _load_json(path)
-    recipes = data["BlockType"]["Bench"]["Categories"][0]["Recipes"]
-    bench_item_id = f"Bench_OneBlock_{expedition_id}"
+    eid           = _safe_eid(expedition_id)
+    data          = _load_json(path)
+    recipes       = data["BlockType"]["Bench"]["Categories"][0]["Recipes"]
+    bench_item_id = f"Bench_OneBlock_{eid}"
     if bench_item_id in recipes:
         print(f"  [skip]   Workbench already lists {bench_item_id}")
         return
@@ -409,8 +426,9 @@ def append_lang_recipe(path: Path, item_id: str, name: str, description: str, dr
 
 
 def patch_lang(path: Path, expedition_id: str, dry_run: bool):
+    eid      = _safe_eid(expedition_id)
     existing = path.read_text(encoding="utf-8")
-    marker = f"server.items.OneBlock_Crystal_{expedition_id}_Small.name"
+    marker   = f"server.items.OneBlock_Crystal_{eid}_Small.name"
     if marker in existing:
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
@@ -567,16 +585,18 @@ def main():
         bench_cfg   = cfg["Bench"]
         drop_pool   = cfg["BaseDropPool"]
 
+        eid = _safe_eid(expedition_id)
+
         # Crystal Small
         write_json(
-            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{expedition_id}_Small.json",
+            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Small.json",
             build_crystal(expedition_id, "Small", item_level, crystal_cfg["Small"]["Input"]),
             args.dry_run
         )
 
         # Crystal Large
         write_json(
-            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{expedition_id}_Large.json",
+            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Large.json",
             build_crystal(expedition_id, "Large", item_level, crystal_cfg["Large"]["Input"]),
             args.dry_run
         )
@@ -584,9 +604,9 @@ def main():
         # Bench unlock items — group by tier for bench categories
         unlocks_by_tier: dict = {}
         for unlock in bench_cfg.get("Unlocks", []):
-            drop_id  = unlock["DropId"]
-            tier     = unlock["Tier"]
-            item_id  = f"OneBlock_Unlock_{expedition_id}_{_safe_drop_id(drop_id)}"
+            drop_id   = unlock["DropId"]
+            tier      = unlock["Tier"]
+            item_id   = f"OneBlock_Unlock_{eid}_{_safe_drop_id(drop_id)}"
             drop_name = drop_id.split(":")[-1].replace("_", " ")
 
             write_json(
@@ -607,7 +627,7 @@ def main():
 
         # Expedition bench
         write_json(
-            repo_root / BENCH_DIR / f"Bench_OneBlock_{expedition_id}.json",
+            repo_root / BENCH_DIR / f"Bench_OneBlock_{eid}.json",
             build_expedition_bench(expedition_id, item_level,
                                    bench_cfg["CraftInput"], bench_cfg["Upgrades"],
                                    unlocks_by_tier),
@@ -616,7 +636,7 @@ def main():
 
         # Bench recipe drop item
         write_json(
-            repo_root / RECIPE_DIR / f"OneBlock_Bench_Recipe_{expedition_id}.json",
+            repo_root / RECIPE_DIR / f"OneBlock_Bench_Recipe_{eid}.json",
             build_bench_recipe_item(expedition_id, item_level),
             args.dry_run
         )
