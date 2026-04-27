@@ -6,6 +6,7 @@ generate_expeditions.py — OneBlock Expedition Asset Generator
 import argparse
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -33,6 +34,12 @@ CRYSTAL_DIR = ITEMS / "Crystal/Expedition"
 BENCH_DIR = ITEMS / "ExpeditionBench"
 RECIPE_DIR = ITEMS / "BenchRecipe"
 UNLOCK_DIR = ITEMS / "ExpeditionUnlock"
+
+BENCH_TEXTURE_DIR = PROGRESSION / "Common/Blocks/BenchTextures"
+DEFAULT_BENCH_TEXTURE = PROGRESSION / "Common/Blocks/Benches/OneBlock_ResearchStatue_Texture.png"
+
+BENCH_ICON_DIR = PROGRESSION / "Common/Icons/ItemsGenerated"
+DEFAULT_BENCH_ICON = BENCH_ICON_DIR / "OneBlock_ResearchStatue_Default.png"
 
 CORE = Path("mods/oneblock-core/src/main/resources")
 BLOCK_DIR = CORE / "Server/Item/Items/OneBlock"
@@ -114,7 +121,14 @@ def build_crystal(expedition_id: str, category: str, size: str, item_level: int,
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "Interactions": {
-            "Use": {
+            "Primary": {
+                "Interactions": [
+                    {
+                        "Type": "oneblock_crystal_use",
+                    }
+                ]
+            },
+            "Secondary": {
                 "Interactions": [
                     {
                         "Type": "oneblock_crystal_use",
@@ -242,20 +256,20 @@ def build_expedition_bench(
             ],
             "KnowledgeRequired": knowledge_required,
         },
-        "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+        "Icon": f"Icons/ItemsGenerated/Bench_OneBlock_{eid}.png",
         "Categories": ["Furniture.Benches"],
         "BlockType": {
             "Material": "Solid",
             "DrawType": "Model",
             "Opacity": "Transparent",
-            "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+            "CustomModel": "Blocks/Benches/OneBlock_ResearchStatue.blockymodel",
             "CustomModelTexture": [
                 {
-                    "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+                    "Texture": f"Blocks/BenchTextures/Bench_OneBlock_{eid}_Texture.png",
                     "Weight": 1,
                 }
             ],
-            "HitboxType": "Bench_Workbench",
+            "HitboxType": "Statue_Large",
             "VariantRotation": "NESW",
             "Bench": {
                 "Id": bench_id,
@@ -272,18 +286,6 @@ def build_expedition_bench(
                 "LocalOpenSoundEventId": "SFX_Workbench_Open",
                 "LocalCloseSoundEventId": "SFX_Workbench_Close",
             },
-            "State": {
-                "Id": "crafting",
-                "Definitions": {
-                    "CraftCompleted": {
-                        "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
-                        "Looping": True,
-                    },
-                    "CraftCompletedInstant": {
-                        "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
-                    },
-                },
-            },
             "BlockEntity": {
                 "Components": {
                     "BenchBlock": {},
@@ -294,8 +296,8 @@ def build_expedition_bench(
                     "GatherType": "Benches",
                 }
             },
-            "BlockParticleSetId": "Wood",
-            "ParticleColor": "#6e4a2f",
+            "BlockParticleSetId": "Stone",
+            "ParticleColor": "#bbbbaf",
             "Support": {
                 "Down": [
                     {
@@ -303,7 +305,7 @@ def build_expedition_bench(
                     }
                 ]
             },
-            "BlockSoundSetId": "Wood",
+            "BlockSoundSetId": "Stone",
         },
         "PlayerAnimationsId": "Block",
         "IconProperties": {
@@ -316,7 +318,7 @@ def build_expedition_bench(
         },
         "MaxStack": 1,
         "ItemLevel": item_level,
-        "ItemSoundSetId": "ISS_Blocks_Wood",
+        "ItemSoundSetId": "ISS_Blocks_Stone",
     }
 
 
@@ -597,6 +599,34 @@ def patch_group_lang(path: Path, group: str, dry_run: bool):
         print(f"  [patch]  lang ← {line.split('=', 1)[0]}")
 
 
+def ensure_bench_texture(repo_root: Path, expedition_id: str, dry_run: bool):
+    eid = _safe_eid(expedition_id)
+    dest = repo_root / BENCH_TEXTURE_DIR / f"Bench_OneBlock_{eid}_Texture.png"
+    if dest.exists():
+        return
+    src = repo_root / DEFAULT_BENCH_TEXTURE
+    if dry_run:
+        print(f"  [dry-run] Would create texture {dest.name}")
+        return
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dest)
+    print(f"  [texture] {dest.name}")
+
+
+def ensure_bench_icon(repo_root: Path, expedition_id: str, dry_run: bool):
+    eid = _safe_eid(expedition_id)
+    dest = repo_root / BENCH_ICON_DIR / f"Bench_OneBlock_{eid}.png"
+    if dest.exists():
+        return
+    src = repo_root / DEFAULT_BENCH_ICON
+    if dry_run:
+        print(f"  [dry-run] Would create icon {dest.name}")
+        return
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dest)
+    print(f"  [icon]    {dest.name}")
+
+
 def write_json(path: Path, data: dict, dry_run: bool):
     if dry_run:
         print(f"  [dry-run] Would write {path.name}")
@@ -808,6 +838,9 @@ def main():
         group = cfg.get("Category", cfg.get("Group", expedition_id))
 
         eid = _safe_eid(expedition_id)
+
+        ensure_bench_texture(repo_root, expedition_id, args.dry_run)
+        ensure_bench_icon(repo_root, expedition_id, args.dry_run)
 
         write_json(
             repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",

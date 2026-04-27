@@ -2,6 +2,7 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
@@ -85,7 +86,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         stateProvider.endExpedition();
         if (world != null)
         {
-            world.execute(() -> world.setBlock(0, 100, 0, OneBlockBlockIds.DEFAULT_BLOCK_ID));
+            Vector3i pos = OneBlockBlockIds.ONEBLOCK_POSITION;
+            world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
         }
         ctx.sendMessage(Message.raw("Stopped expedition '" + expeditionId + "'. OneBlock reset to default."));
     }

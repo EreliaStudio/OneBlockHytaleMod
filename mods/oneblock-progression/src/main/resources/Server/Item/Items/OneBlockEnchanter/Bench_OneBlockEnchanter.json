@@ -24,7 +24,7 @@
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Icon": "Icons/ItemsGenerated/OneBlockEnchanter.png",
   "Categories": [
     "Furniture.Benches"
   ],
@@ -32,14 +32,14 @@
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
-    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModel": "Blocks/Benches/OneBlock_CrystalEnchanter.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Texture": "Blocks/BenchTextures/OneBlockEnchanter_Texture.png",
         "Weight": 1
       }
     ],
-    "HitboxType": "Bench_Workbench",
+    "HitboxType": "Bench_Alchemy",
     "VariantRotation": "NESW",
     "Bench": {
       "Id": "OneBlockEnchanter",
@@ -136,18 +136,18 @@
           ]
         }
       ],
-      "LocalOpenSoundEventId": "SFX_Workbench_Open",
-      "LocalCloseSoundEventId": "SFX_Workbench_Close"
+      "LocalOpenSoundEventId": "SFX_Arcane_Workbench_Open_Local",
+      "LocalCloseSoundEventId": "SFX_Arcane_Workbench_Close_Local"
     },
     "State": {
       "Id": "crafting",
       "Definitions": {
         "CraftCompleted": {
-          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
+          "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim",
           "Looping": true
         },
         "CraftCompletedInstant": {
-          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
+          "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim"
         }
       }
     },
@@ -170,7 +170,7 @@
         }
       ]
     },
-    "BlockSoundSetId": "Wood"
+    "BlockSoundSetId": "Stone"
   },
   "PlayerAnimationsId": "Block",
   "IconProperties": {

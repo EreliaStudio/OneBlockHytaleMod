@@ -25,7 +25,7 @@
     ],
     "KnowledgeRequired": true
   },
-  "Icon": "Icons/ItemsGenerated/OneBlockUpgrader.png",
+  "Icon": "Icons/ItemsGenerated/Bench_OneBlock_Volcanic_Badlands.png",
   "Categories": [
     "Furniture.Benches"
   ],
@@ -33,14 +33,14 @@
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
-    "CustomModel": "Blocks/Benches/Workbench.blockymodel",
+    "CustomModel": "Blocks/Benches/OneBlock_ResearchStatue.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Texture": "Blocks/BenchTextures/Bench_OneBlock_Volcanic_Badlands_Texture.png",
         "Weight": 1
       }
     ],
-    "HitboxType": "Bench_Workbench",
+    "HitboxType": "Statue_Large",
     "VariantRotation": "NESW",
     "Bench": {
       "Id": "Bench_OneBlock_Volcanic_Badlands",
@@ -79,18 +79,6 @@
       "LocalOpenSoundEventId": "SFX_Workbench_Open",
       "LocalCloseSoundEventId": "SFX_Workbench_Close"
     },
-    "State": {
-      "Id": "crafting",
-      "Definitions": {
-        "CraftCompleted": {
-          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim",
-          "Looping": true
-        },
-        "CraftCompletedInstant": {
-          "CustomModelAnimation": "Blocks/Benches/Workbench_Crafting.blockyanim"
-        }
-      }
-    },
     "BlockEntity": {
       "Components": {
         "BenchBlock": {}
@@ -101,8 +89,8 @@
         "GatherType": "Benches"
       }
     },
-    "BlockParticleSetId": "Wood",
-    "ParticleColor": "#6e4a2f",
+    "BlockParticleSetId": "Stone",
+    "ParticleColor": "#bbbbaf",
     "Support": {
       "Down": [
         {
@@ -110,7 +98,7 @@
         }
       ]
     },
-    "BlockSoundSetId": "Wood"
+    "BlockSoundSetId": "Stone"
   },
   "PlayerAnimationsId": "Block",
   "IconProperties": {
@@ -132,5 +120,5 @@
   },
   "MaxStack": 1,
   "ItemLevel": 8,
-  "ItemSoundSetId": "ISS_Blocks_Wood"
+  "ItemSoundSetId": "ISS_Blocks_Stone"
 }

@@ -7,6 +7,7 @@ import com.hypixel.hytale.server.core.entity.InteractionContext;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction;
+import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -83,6 +84,10 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
 		}
 
 		plugin.getExpeditionStateProvider().startExpedition(expeditionId, ticks);
+
+		String newBlockId = OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
+		Vector3i pos = OneBlockBlockIds.ONEBLOCK_POSITION;
+		world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), newBlockId));
 
 		OneBlockInteractionUtil.consumeHeldItem(interactionContext, heldItem);
 

@@ -35,7 +35,7 @@
     "CustomModel": "Blocks/Benches/Workbench.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Blocks/OneBlockUpgrader_Texture.png",
+        "Texture": "Blocks/BenchTextures/OneBlockWorkbench_Texture.png",
         "Weight": 1
       }
     ],

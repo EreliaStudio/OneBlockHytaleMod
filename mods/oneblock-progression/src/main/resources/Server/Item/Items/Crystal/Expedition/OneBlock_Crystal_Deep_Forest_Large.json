@@ -11,7 +11,7 @@
   ],
   "PlayerAnimationsId": "Item",
   "Interactions": {
-    "Use": {
+    "Primary": {
       "Interactions": [
         {
           "Type": "oneblock_crystal_use"
