@@ -95,9 +95,9 @@ items.OneBlock_Unlock_Cave_entity_Spider.description=Consume to add Spider to th
 
 # GENERATED ─── Cave ───────────────────────────────────────────────────
 items.OneBlock_Crystal_Cave_Small.name=Cave Crystal (Small)
-items.OneBlock_Crystal_Cave_Small.description=Use on the OneBlock to begin a 100-tick Cave expedition.
+items.OneBlock_Crystal_Cave_Small.description=Consume to begin a 100-tick Cave expedition.
 items.OneBlock_Crystal_Cave_Large.name=Cave Crystal (Large)
-items.OneBlock_Crystal_Cave_Large.description=Use on the OneBlock to begin a 300-tick Cave expedition.
+items.OneBlock_Crystal_Cave_Large.description=Consume to begin a 300-tick Cave expedition.
 items.Bench_OneBlock_Cave.name=Cave Bench
 items.Bench_OneBlock_Cave.description=An expedition bench for Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Cave.name=Recipe: Cave Bench
@@ -126,9 +126,9 @@ items.OneBlock_Unlock_Deep_Cave_entity_Earth_Elemental.description=Consume to ad
 
 # GENERATED ─── Deep_Cave ──────────────────────────────────────────────
 items.OneBlock_Crystal_Deep_Cave_Small.name=Deep_Cave Crystal (Small)
-items.OneBlock_Crystal_Deep_Cave_Small.description=Use on the OneBlock to begin a 100-tick Deep_Cave expedition.
+items.OneBlock_Crystal_Deep_Cave_Small.description=Consume to begin a 100-tick Deep_Cave expedition.
 items.OneBlock_Crystal_Deep_Cave_Large.name=Deep_Cave Crystal (Large)
-items.OneBlock_Crystal_Deep_Cave_Large.description=Use on the OneBlock to begin a 300-tick Deep_Cave expedition.
+items.OneBlock_Crystal_Deep_Cave_Large.description=Consume to begin a 300-tick Deep_Cave expedition.
 items.Bench_OneBlock_Deep_Cave.name=Deep_Cave Bench
 items.Bench_OneBlock_Deep_Cave.description=An expedition bench for Deep_Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Deep_Cave.name=Recipe: Deep_Cave Bench
@@ -153,9 +153,9 @@ items.OneBlock_Unlock_The_Abyss_entity_Void_Eye.description=Consume to add Void 
 
 # GENERATED ─── The_Abyss ──────────────────────────────────────────────
 items.OneBlock_Crystal_The_Abyss_Small.name=The_Abyss Crystal (Small)
-items.OneBlock_Crystal_The_Abyss_Small.description=Use on the OneBlock to begin a 100-tick The_Abyss expedition.
+items.OneBlock_Crystal_The_Abyss_Small.description=Consume to begin a 100-tick The_Abyss expedition.
 items.OneBlock_Crystal_The_Abyss_Large.name=The_Abyss Crystal (Large)
-items.OneBlock_Crystal_The_Abyss_Large.description=Use on the OneBlock to begin a 300-tick The_Abyss expedition.
+items.OneBlock_Crystal_The_Abyss_Large.description=Consume to begin a 300-tick The_Abyss expedition.
 items.Bench_OneBlock_The_Abyss.name=The_Abyss Bench
 items.Bench_OneBlock_The_Abyss.description=An expedition bench for The_Abyss. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_The_Abyss.name=Recipe: The_Abyss Bench
@@ -182,9 +182,9 @@ items.OneBlock_Unlock_Gem_Cave_Ingredient_Crystal_Purple.description=Consume to 
 
 # GENERATED ─── Gem_Cave ───────────────────────────────────────────────
 items.OneBlock_Crystal_Gem_Cave_Small.name=Gem_Cave Crystal (Small)
-items.OneBlock_Crystal_Gem_Cave_Small.description=Use on the OneBlock to begin a 100-tick Gem_Cave expedition.
+items.OneBlock_Crystal_Gem_Cave_Small.description=Consume to begin a 100-tick Gem_Cave expedition.
 items.OneBlock_Crystal_Gem_Cave_Large.name=Gem_Cave Crystal (Large)
-items.OneBlock_Crystal_Gem_Cave_Large.description=Use on the OneBlock to begin a 300-tick Gem_Cave expedition.
+items.OneBlock_Crystal_Gem_Cave_Large.description=Consume to begin a 300-tick Gem_Cave expedition.
 items.Bench_OneBlock_Gem_Cave.name=Gem_Cave Bench
 items.Bench_OneBlock_Gem_Cave.description=An expedition bench for Gem_Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Gem_Cave.name=Recipe: Gem_Cave Bench
@@ -213,9 +213,9 @@ items.OneBlock_Unlock_Desert_Ingredient_Fire_Essence.description=Consume to add 
 
 # GENERATED ─── Desert ─────────────────────────────────────────────────
 items.OneBlock_Crystal_Desert_Small.name=Desert Crystal (Small)
-items.OneBlock_Crystal_Desert_Small.description=Use on the OneBlock to begin a 100-tick Desert expedition.
+items.OneBlock_Crystal_Desert_Small.description=Consume to begin a 100-tick Desert expedition.
 items.OneBlock_Crystal_Desert_Large.name=Desert Crystal (Large)
-items.OneBlock_Crystal_Desert_Large.description=Use on the OneBlock to begin a 300-tick Desert expedition.
+items.OneBlock_Crystal_Desert_Large.description=Consume to begin a 300-tick Desert expedition.
 items.Bench_OneBlock_Desert.name=Desert Bench
 items.Bench_OneBlock_Desert.description=An expedition bench for Desert. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Desert.name=Recipe: Desert Bench
@@ -244,9 +244,9 @@ items.OneBlock_Unlock_Egyptian_Temple_entity_Sand_Empress.description=Consume to
 
 # GENERATED ─── Egyptian_Temple ────────────────────────────────────────
 items.OneBlock_Crystal_Egyptian_Temple_Small.name=Egyptian_Temple Crystal (Small)
-items.OneBlock_Crystal_Egyptian_Temple_Small.description=Use on the OneBlock to begin a 100-tick Egyptian_Temple expedition.
+items.OneBlock_Crystal_Egyptian_Temple_Small.description=Consume to begin a 100-tick Egyptian_Temple expedition.
 items.OneBlock_Crystal_Egyptian_Temple_Large.name=Egyptian_Temple Crystal (Large)
-items.OneBlock_Crystal_Egyptian_Temple_Large.description=Use on the OneBlock to begin a 300-tick Egyptian_Temple expedition.
+items.OneBlock_Crystal_Egyptian_Temple_Large.description=Consume to begin a 300-tick Egyptian_Temple expedition.
 items.Bench_OneBlock_Egyptian_Temple.name=Egyptian_Temple Bench
 items.Bench_OneBlock_Egyptian_Temple.description=An expedition bench for Egyptian_Temple. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Egyptian_Temple.name=Recipe: Egyptian_Temple Bench
@@ -271,9 +271,9 @@ items.OneBlock_Unlock_Forest_Ingredient_Tree_Bark.description=Consume to add Ing
 
 # GENERATED ─── Forest ─────────────────────────────────────────────────
 items.OneBlock_Crystal_Forest_Small.name=Forest Crystal (Small)
-items.OneBlock_Crystal_Forest_Small.description=Use on the OneBlock to begin a 100-tick Forest expedition.
+items.OneBlock_Crystal_Forest_Small.description=Consume to begin a 100-tick Forest expedition.
 items.OneBlock_Crystal_Forest_Large.name=Forest Crystal (Large)
-items.OneBlock_Crystal_Forest_Large.description=Use on the OneBlock to begin a 300-tick Forest expedition.
+items.OneBlock_Crystal_Forest_Large.description=Consume to begin a 300-tick Forest expedition.
 items.Bench_OneBlock_Forest.name=Forest Bench
 items.Bench_OneBlock_Forest.description=An expedition bench for Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Forest.name=Recipe: Forest Bench
@@ -302,9 +302,9 @@ items.OneBlock_Unlock_Deep_Forest_Ingredient_Life_Essence.description=Consume to
 
 # GENERATED ─── Deep_Forest ────────────────────────────────────────────
 items.OneBlock_Crystal_Deep_Forest_Small.name=Deep_Forest Crystal (Small)
-items.OneBlock_Crystal_Deep_Forest_Small.description=Use on the OneBlock to begin a 100-tick Deep_Forest expedition.
+items.OneBlock_Crystal_Deep_Forest_Small.description=Consume to begin a 100-tick Deep_Forest expedition.
 items.OneBlock_Crystal_Deep_Forest_Large.name=Deep_Forest Crystal (Large)
-items.OneBlock_Crystal_Deep_Forest_Large.description=Use on the OneBlock to begin a 300-tick Deep_Forest expedition.
+items.OneBlock_Crystal_Deep_Forest_Large.description=Consume to begin a 300-tick Deep_Forest expedition.
 items.Bench_OneBlock_Deep_Forest.name=Deep_Forest Bench
 items.Bench_OneBlock_Deep_Forest.description=An expedition bench for Deep_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Deep_Forest.name=Recipe: Deep_Forest Bench
@@ -333,9 +333,9 @@ items.OneBlock_Unlock_Jungle_entity_Fen_Stalker.description=Consume to add Fen S
 
 # GENERATED ─── Jungle ─────────────────────────────────────────────────
 items.OneBlock_Crystal_Jungle_Small.name=Jungle Crystal (Small)
-items.OneBlock_Crystal_Jungle_Small.description=Use on the OneBlock to begin a 100-tick Jungle expedition.
+items.OneBlock_Crystal_Jungle_Small.description=Consume to begin a 100-tick Jungle expedition.
 items.OneBlock_Crystal_Jungle_Large.name=Jungle Crystal (Large)
-items.OneBlock_Crystal_Jungle_Large.description=Use on the OneBlock to begin a 300-tick Jungle expedition.
+items.OneBlock_Crystal_Jungle_Large.description=Consume to begin a 300-tick Jungle expedition.
 items.Bench_OneBlock_Jungle.name=Jungle Bench
 items.Bench_OneBlock_Jungle.description=An expedition bench for Jungle. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Jungle.name=Recipe: Jungle Bench
@@ -362,9 +362,9 @@ items.OneBlock_Unlock_Azure_Forest_Ingredient_Ice_Essence.description=Consume to
 
 # GENERATED ─── Azure_Forest ───────────────────────────────────────────
 items.OneBlock_Crystal_Azure_Forest_Small.name=Azure_Forest Crystal (Small)
-items.OneBlock_Crystal_Azure_Forest_Small.description=Use on the OneBlock to begin a 100-tick Azure_Forest expedition.
+items.OneBlock_Crystal_Azure_Forest_Small.description=Consume to begin a 100-tick Azure_Forest expedition.
 items.OneBlock_Crystal_Azure_Forest_Large.name=Azure_Forest Crystal (Large)
-items.OneBlock_Crystal_Azure_Forest_Large.description=Use on the OneBlock to begin a 300-tick Azure_Forest expedition.
+items.OneBlock_Crystal_Azure_Forest_Large.description=Consume to begin a 300-tick Azure_Forest expedition.
 items.Bench_OneBlock_Azure_Forest.name=Azure_Forest Bench
 items.Bench_OneBlock_Azure_Forest.description=An expedition bench for Azure_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Azure_Forest.name=Recipe: Azure_Forest Bench
@@ -391,9 +391,9 @@ items.OneBlock_Unlock_Fiery_Forest_Ingredient_Fire_Essence.description=Consume t
 
 # GENERATED ─── Fiery_Forest ───────────────────────────────────────────
 items.OneBlock_Crystal_Fiery_Forest_Small.name=Fiery_Forest Crystal (Small)
-items.OneBlock_Crystal_Fiery_Forest_Small.description=Use on the OneBlock to begin a 100-tick Fiery_Forest expedition.
+items.OneBlock_Crystal_Fiery_Forest_Small.description=Consume to begin a 100-tick Fiery_Forest expedition.
 items.OneBlock_Crystal_Fiery_Forest_Large.name=Fiery_Forest Crystal (Large)
-items.OneBlock_Crystal_Fiery_Forest_Large.description=Use on the OneBlock to begin a 300-tick Fiery_Forest expedition.
+items.OneBlock_Crystal_Fiery_Forest_Large.description=Consume to begin a 300-tick Fiery_Forest expedition.
 items.Bench_OneBlock_Fiery_Forest.name=Fiery_Forest Bench
 items.Bench_OneBlock_Fiery_Forest.description=An expedition bench for Fiery_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Fiery_Forest.name=Recipe: Fiery_Forest Bench
@@ -420,9 +420,9 @@ items.OneBlock_Unlock_Snow_Ingredient_Ice_Essence.description=Consume to add Ing
 
 # GENERATED ─── Snow ───────────────────────────────────────────────────
 items.OneBlock_Crystal_Snow_Small.name=Snow Crystal (Small)
-items.OneBlock_Crystal_Snow_Small.description=Use on the OneBlock to begin a 100-tick Snow expedition.
+items.OneBlock_Crystal_Snow_Small.description=Consume to begin a 100-tick Snow expedition.
 items.OneBlock_Crystal_Snow_Large.name=Snow Crystal (Large)
-items.OneBlock_Crystal_Snow_Large.description=Use on the OneBlock to begin a 300-tick Snow expedition.
+items.OneBlock_Crystal_Snow_Large.description=Consume to begin a 300-tick Snow expedition.
 items.Bench_OneBlock_Snow.name=Snow Bench
 items.Bench_OneBlock_Snow.description=An expedition bench for Snow. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Snow.name=Recipe: Snow Bench
@@ -451,9 +451,9 @@ items.OneBlock_Unlock_Frozen_Forest_Ingredient_Ice_Essence.description=Consume t
 
 # GENERATED ─── Frozen_Forest ──────────────────────────────────────────
 items.OneBlock_Crystal_Frozen_Forest_Small.name=Frozen_Forest Crystal (Small)
-items.OneBlock_Crystal_Frozen_Forest_Small.description=Use on the OneBlock to begin a 100-tick Frozen_Forest expedition.
+items.OneBlock_Crystal_Frozen_Forest_Small.description=Consume to begin a 100-tick Frozen_Forest expedition.
 items.OneBlock_Crystal_Frozen_Forest_Large.name=Frozen_Forest Crystal (Large)
-items.OneBlock_Crystal_Frozen_Forest_Large.description=Use on the OneBlock to begin a 300-tick Frozen_Forest expedition.
+items.OneBlock_Crystal_Frozen_Forest_Large.description=Consume to begin a 300-tick Frozen_Forest expedition.
 items.Bench_OneBlock_Frozen_Forest.name=Frozen_Forest Bench
 items.Bench_OneBlock_Frozen_Forest.description=An expedition bench for Frozen_Forest. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Frozen_Forest.name=Recipe: Frozen_Forest Bench
@@ -480,9 +480,9 @@ items.OneBlock_Unlock_Frozen_Cave_entity_Ice_Dragon.description=Consume to add I
 
 # GENERATED ─── Frozen_Cave ────────────────────────────────────────────
 items.OneBlock_Crystal_Frozen_Cave_Small.name=Frozen_Cave Crystal (Small)
-items.OneBlock_Crystal_Frozen_Cave_Small.description=Use on the OneBlock to begin a 100-tick Frozen_Cave expedition.
+items.OneBlock_Crystal_Frozen_Cave_Small.description=Consume to begin a 100-tick Frozen_Cave expedition.
 items.OneBlock_Crystal_Frozen_Cave_Large.name=Frozen_Cave Crystal (Large)
-items.OneBlock_Crystal_Frozen_Cave_Large.description=Use on the OneBlock to begin a 300-tick Frozen_Cave expedition.
+items.OneBlock_Crystal_Frozen_Cave_Large.description=Consume to begin a 300-tick Frozen_Cave expedition.
 items.Bench_OneBlock_Frozen_Cave.name=Frozen_Cave Bench
 items.Bench_OneBlock_Frozen_Cave.description=An expedition bench for Frozen_Cave. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Frozen_Cave.name=Recipe: Frozen_Cave Bench
@@ -501,9 +501,9 @@ items.OneBlock_Unlock_Meadow_Plant_Seeds_Wheat_Eternal.description=Consume to ad
 
 # GENERATED ─── Meadow ─────────────────────────────────────────────────
 items.OneBlock_Crystal_Meadow_Small.name=Meadow Crystal (Small)
-items.OneBlock_Crystal_Meadow_Small.description=Use on the OneBlock to begin a 100-tick Meadow expedition.
+items.OneBlock_Crystal_Meadow_Small.description=Consume to begin a 100-tick Meadow expedition.
 items.OneBlock_Crystal_Meadow_Large.name=Meadow Crystal (Large)
-items.OneBlock_Crystal_Meadow_Large.description=Use on the OneBlock to begin a 300-tick Meadow expedition.
+items.OneBlock_Crystal_Meadow_Large.description=Consume to begin a 300-tick Meadow expedition.
 items.Bench_OneBlock_Meadow.name=Meadow Bench
 items.Bench_OneBlock_Meadow.description=An expedition bench for Meadow. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Meadow.name=Recipe: Meadow Bench
@@ -532,9 +532,9 @@ items.OneBlock_Unlock_Plains_Plant_Seeds_Stamina1.description=Consume to add Pla
 
 # GENERATED ─── Plains ─────────────────────────────────────────────────
 items.OneBlock_Crystal_Plains_Small.name=Plains Crystal (Small)
-items.OneBlock_Crystal_Plains_Small.description=Use on the OneBlock to begin a 100-tick Plains expedition.
+items.OneBlock_Crystal_Plains_Small.description=Consume to begin a 100-tick Plains expedition.
 items.OneBlock_Crystal_Plains_Large.name=Plains Crystal (Large)
-items.OneBlock_Crystal_Plains_Large.description=Use on the OneBlock to begin a 300-tick Plains expedition.
+items.OneBlock_Crystal_Plains_Large.description=Consume to begin a 300-tick Plains expedition.
 items.Bench_OneBlock_Plains.name=Plains Bench
 items.Bench_OneBlock_Plains.description=An expedition bench for Plains. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Plains.name=Recipe: Plains Bench
@@ -561,9 +561,9 @@ items.OneBlock_Unlock_Inferno_Ingredient_Fire_Essence.description=Consume to add
 
 # GENERATED ─── Inferno ────────────────────────────────────────────────
 items.OneBlock_Crystal_Inferno_Small.name=Inferno Crystal (Small)
-items.OneBlock_Crystal_Inferno_Small.description=Use on the OneBlock to begin a 100-tick Inferno expedition.
+items.OneBlock_Crystal_Inferno_Small.description=Consume to begin a 100-tick Inferno expedition.
 items.OneBlock_Crystal_Inferno_Large.name=Inferno Crystal (Large)
-items.OneBlock_Crystal_Inferno_Large.description=Use on the OneBlock to begin a 300-tick Inferno expedition.
+items.OneBlock_Crystal_Inferno_Large.description=Consume to begin a 300-tick Inferno expedition.
 items.Bench_OneBlock_Inferno.name=Inferno Bench
 items.Bench_OneBlock_Inferno.description=An expedition bench for Inferno. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Inferno.name=Recipe: Inferno Bench
@@ -592,9 +592,9 @@ items.OneBlock_Unlock_Deep_Inferno_Ingredient_Void_Essence.description=Consume t
 
 # GENERATED ─── Deep_Inferno ───────────────────────────────────────────
 items.OneBlock_Crystal_Deep_Inferno_Small.name=Deep_Inferno Crystal (Small)
-items.OneBlock_Crystal_Deep_Inferno_Small.description=Use on the OneBlock to begin a 100-tick Deep_Inferno expedition.
+items.OneBlock_Crystal_Deep_Inferno_Small.description=Consume to begin a 100-tick Deep_Inferno expedition.
 items.OneBlock_Crystal_Deep_Inferno_Large.name=Deep_Inferno Crystal (Large)
-items.OneBlock_Crystal_Deep_Inferno_Large.description=Use on the OneBlock to begin a 300-tick Deep_Inferno expedition.
+items.OneBlock_Crystal_Deep_Inferno_Large.description=Consume to begin a 300-tick Deep_Inferno expedition.
 items.Bench_OneBlock_Deep_Inferno.name=Deep_Inferno Bench
 items.Bench_OneBlock_Deep_Inferno.description=An expedition bench for Deep_Inferno. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Deep_Inferno.name=Recipe: Deep_Inferno Bench
@@ -619,9 +619,9 @@ items.OneBlock_Unlock_Graveyard_Ingredient_Void_Essence.description=Consume to a
 
 # GENERATED ─── Graveyard ──────────────────────────────────────────────
 items.OneBlock_Crystal_Graveyard_Small.name=Graveyard Crystal (Small)
-items.OneBlock_Crystal_Graveyard_Small.description=Use on the OneBlock to begin a 100-tick Graveyard expedition.
+items.OneBlock_Crystal_Graveyard_Small.description=Consume to begin a 100-tick Graveyard expedition.
 items.OneBlock_Crystal_Graveyard_Large.name=Graveyard Crystal (Large)
-items.OneBlock_Crystal_Graveyard_Large.description=Use on the OneBlock to begin a 300-tick Graveyard expedition.
+items.OneBlock_Crystal_Graveyard_Large.description=Consume to begin a 300-tick Graveyard expedition.
 items.Bench_OneBlock_Graveyard.name=Graveyard Bench
 items.Bench_OneBlock_Graveyard.description=An expedition bench for Graveyard. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Graveyard.name=Recipe: Graveyard Bench
@@ -650,9 +650,9 @@ items.OneBlock_Unlock_Ancient_Graveyard_Ingredient_Void_Essence.description=Cons
 
 # GENERATED ─── Ancient_Graveyard ──────────────────────────────────────
 items.OneBlock_Crystal_Ancient_Graveyard_Small.name=Ancient_Graveyard Crystal (Small)
-items.OneBlock_Crystal_Ancient_Graveyard_Small.description=Use on the OneBlock to begin a 100-tick Ancient_Graveyard expedition.
+items.OneBlock_Crystal_Ancient_Graveyard_Small.description=Consume to begin a 100-tick Ancient_Graveyard expedition.
 items.OneBlock_Crystal_Ancient_Graveyard_Large.name=Ancient_Graveyard Crystal (Large)
-items.OneBlock_Crystal_Ancient_Graveyard_Large.description=Use on the OneBlock to begin a 300-tick Ancient_Graveyard expedition.
+items.OneBlock_Crystal_Ancient_Graveyard_Large.description=Consume to begin a 300-tick Ancient_Graveyard expedition.
 items.Bench_OneBlock_Ancient_Graveyard.name=Ancient_Graveyard Bench
 items.Bench_OneBlock_Ancient_Graveyard.description=An expedition bench for Ancient_Graveyard. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Ancient_Graveyard.name=Recipe: Ancient_Graveyard Bench
@@ -679,9 +679,9 @@ items.OneBlock_Unlock_Cursed_Crypt_Ingredient_Motes_Light.description=Consume to
 
 # GENERATED ─── Cursed_Crypt ───────────────────────────────────────────
 items.OneBlock_Crystal_Cursed_Crypt_Small.name=Cursed_Crypt Crystal (Small)
-items.OneBlock_Crystal_Cursed_Crypt_Small.description=Use on the OneBlock to begin a 100-tick Cursed_Crypt expedition.
+items.OneBlock_Crystal_Cursed_Crypt_Small.description=Consume to begin a 100-tick Cursed_Crypt expedition.
 items.OneBlock_Crystal_Cursed_Crypt_Large.name=Cursed_Crypt Crystal (Large)
-items.OneBlock_Crystal_Cursed_Crypt_Large.description=Use on the OneBlock to begin a 300-tick Cursed_Crypt expedition.
+items.OneBlock_Crystal_Cursed_Crypt_Large.description=Consume to begin a 300-tick Cursed_Crypt expedition.
 items.Bench_OneBlock_Cursed_Crypt.name=Cursed_Crypt Bench
 items.Bench_OneBlock_Cursed_Crypt.description=An expedition bench for Cursed_Crypt. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Cursed_Crypt.name=Recipe: Cursed_Crypt Bench
@@ -706,9 +706,9 @@ items.OneBlock_Unlock_Primal_Jungle_Ingredient_Life_Essence.description=Consume 
 
 # GENERATED ─── Primal_Jungle ──────────────────────────────────────────
 items.OneBlock_Crystal_Primal_Jungle_Small.name=Primal_Jungle Crystal (Small)
-items.OneBlock_Crystal_Primal_Jungle_Small.description=Use on the OneBlock to begin a 100-tick Primal_Jungle expedition.
+items.OneBlock_Crystal_Primal_Jungle_Small.description=Consume to begin a 100-tick Primal_Jungle expedition.
 items.OneBlock_Crystal_Primal_Jungle_Large.name=Primal_Jungle Crystal (Large)
-items.OneBlock_Crystal_Primal_Jungle_Large.description=Use on the OneBlock to begin a 300-tick Primal_Jungle expedition.
+items.OneBlock_Crystal_Primal_Jungle_Large.description=Consume to begin a 300-tick Primal_Jungle expedition.
 items.Bench_OneBlock_Primal_Jungle.name=Primal_Jungle Bench
 items.Bench_OneBlock_Primal_Jungle.description=An expedition bench for Primal_Jungle. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Primal_Jungle.name=Recipe: Primal_Jungle Bench
@@ -735,9 +735,9 @@ items.OneBlock_Unlock_Dino_Caverns_Ingredient_Primal_Core.description=Consume to
 
 # GENERATED ─── Dino_Caverns ───────────────────────────────────────────
 items.OneBlock_Crystal_Dino_Caverns_Small.name=Dino_Caverns Crystal (Small)
-items.OneBlock_Crystal_Dino_Caverns_Small.description=Use on the OneBlock to begin a 100-tick Dino_Caverns expedition.
+items.OneBlock_Crystal_Dino_Caverns_Small.description=Consume to begin a 100-tick Dino_Caverns expedition.
 items.OneBlock_Crystal_Dino_Caverns_Large.name=Dino_Caverns Crystal (Large)
-items.OneBlock_Crystal_Dino_Caverns_Large.description=Use on the OneBlock to begin a 300-tick Dino_Caverns expedition.
+items.OneBlock_Crystal_Dino_Caverns_Large.description=Consume to begin a 300-tick Dino_Caverns expedition.
 items.Bench_OneBlock_Dino_Caverns.name=Dino_Caverns Bench
 items.Bench_OneBlock_Dino_Caverns.description=An expedition bench for Dino_Caverns. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Dino_Caverns.name=Recipe: Dino_Caverns Bench
@@ -762,9 +762,9 @@ items.OneBlock_Unlock_Volcanic_Badlands_Ingredient_Fire_Essence.description=Cons
 
 # GENERATED ─── Volcanic_Badlands ──────────────────────────────────────
 items.OneBlock_Crystal_Volcanic_Badlands_Small.name=Volcanic_Badlands Crystal (Small)
-items.OneBlock_Crystal_Volcanic_Badlands_Small.description=Use on the OneBlock to begin a 100-tick Volcanic_Badlands expedition.
+items.OneBlock_Crystal_Volcanic_Badlands_Small.description=Consume to begin a 100-tick Volcanic_Badlands expedition.
 items.OneBlock_Crystal_Volcanic_Badlands_Large.name=Volcanic_Badlands Crystal (Large)
-items.OneBlock_Crystal_Volcanic_Badlands_Large.description=Use on the OneBlock to begin a 300-tick Volcanic_Badlands expedition.
+items.OneBlock_Crystal_Volcanic_Badlands_Large.description=Consume to begin a 300-tick Volcanic_Badlands expedition.
 items.Bench_OneBlock_Volcanic_Badlands.name=Volcanic_Badlands Bench
 items.Bench_OneBlock_Volcanic_Badlands.description=An expedition bench for Volcanic_Badlands. Upgrade it to unlock more powerful recipes.
 items.OneBlock_Bench_Recipe_Volcanic_Badlands.name=Recipe: Volcanic_Badlands Bench

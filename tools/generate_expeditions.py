@@ -113,18 +113,6 @@ def build_crystal(expedition_id: str, category: str, size: str, item_level: int,
         "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
-        "BlockType": {
-            "DrawType": "Model",
-            "Material": "Solid",
-            "Opacity": "Transparent",
-            "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
-            "CustomModelTexture": [
-                {
-                    "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
-                    "Weight": 1,
-                }
-            ],
-        },
         "Interactions": {
             "Use": {
                 "Interactions": [
@@ -389,9 +377,9 @@ def build_lang_block(expedition_id: str) -> str:
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Small.name={display} Crystal (Small)",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Small.description=Use on the OneBlock to begin a 100-tick {display} expedition.",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Small.description=Consume to begin a 100-tick {display} expedition.",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Large.name={display} Crystal (Large)",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Large.description=Use on the OneBlock to begin a 300-tick {display} expedition.",
+		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Large.description=Consume to begin a 300-tick {display} expedition.",
         f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.name={display} Bench",
         f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_{eid}.name=Recipe: {display} Bench",

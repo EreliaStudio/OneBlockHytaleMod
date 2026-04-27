@@ -10,18 +10,6 @@
     "Items.OneBlockExpeditionCrystal"
   ],
   "PlayerAnimationsId": "Item",
-  "BlockType": {
-    "DrawType": "Model",
-    "Material": "Solid",
-    "Opacity": "Transparent",
-    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
-    "CustomModelTexture": [
-      {
-        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
-        "Weight": 1
-      }
-    ]
-  },
   "Interactions": {
     "Use": {
       "Interactions": [
