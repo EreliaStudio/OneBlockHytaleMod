@@ -54,14 +54,7 @@ public final class OneBlockProgressionPlugin extends JavaPlugin
             registerDropables(base.getDropRegistry(), entry.getValue());
         }
 
-        // Register recipe-unlock dropables: one per expedition, dropped at the OneBlock on completion
-        for (String expeditionId : OneBlockExpeditionDefaults.getExpeditionIds())
-        {
-            String recipeItemId = benchRecipeItemId(expeditionId);
-            base.getDropRegistry().registerDropable(new ItemDropable(recipeItemId));
-        }
-
-        // Register completion callback — spawns the bench recipe item at the OneBlock position
+        // Register completion callback — grants knowledge for each expedition's unlock IDs
         base.setExpeditionCompleteCallback((expeditionId, ctx) -> onExpeditionComplete(expeditionId, ctx));
 
         // Register crystal interaction
@@ -89,18 +82,28 @@ public final class OneBlockProgressionPlugin extends JavaPlugin
 
     private void onExpeditionComplete(String expeditionId, DropableContext ctx)
     {
-        LOGGER.at(Level.INFO).log("Expedition complete: " + expeditionId + ". Spawning bench recipe item.");
+        if (ctx == null) return;
 
-        OneBlockPlugin base = OneBlockPlugin.getInstance();
-        if (base == null || ctx == null) return;
+        List<String> knowledgeIds = OneBlockExpeditionDefaults.getUnlockKnowledgeIds(expeditionId);
+        if (knowledgeIds.isEmpty())
+        {
+            LOGGER.at(Level.WARNING).log("Expedition complete: " + expeditionId + " — no knowledge IDs defined, nothing to unlock.");
+            return;
+        }
 
-        String recipeItemId = benchRecipeItemId(expeditionId);
-        base.getDropRegistry().executeDropable(recipeItemId, ctx);
+        LOGGER.at(Level.INFO).log("Expedition complete: " + expeditionId + ". Granting " + knowledgeIds.size() + " knowledge ID(s): " + knowledgeIds);
+        for (String knowledgeId : knowledgeIds)
+        {
+            grantKnowledge(ctx, knowledgeId);
+        }
     }
 
-    private static String benchRecipeItemId(String expeditionId)
+    private void grantKnowledge(DropableContext ctx, String knowledgeId)
     {
-        return "OneBlock_Bench_Recipe_" + expeditionId;
+        LOGGER.at(Level.INFO).log("Granting knowledge '" + knowledgeId + "' to player " + ctx.getPlayerId());
+        // TODO: replace with the real Hytale knowledge-grant API call once available.
+        // Expected signature: something like ctx.getPlayerRef().grantKnowledge(knowledgeId)
+        // or a KnowledgeService.grant(ctx.getPlayerRef(), knowledgeId).
     }
 
     private static void registerDropables(OneBlockDropRegistry registry, Iterable<String> dropableIds)

@@ -54,6 +54,7 @@ public final class OneBlockExpeditionResolver
     public static String blockIdForExpedition(String expeditionId)
     {
         if (expeditionId == null || expeditionId.isEmpty()) return null;
-        return BLOCK_PREFIX + expeditionId;
+        String blockId = OneBlockExpeditionDefaults.getBlockId(expeditionId);
+        return blockId != null ? blockId : BLOCK_PREFIX + expeditionId;
     }
 }

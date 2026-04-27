@@ -17,6 +17,13 @@
           "Type": "oneblock_crystal_use"
         }
       ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
     }
   },
   "Recipe": {

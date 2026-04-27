@@ -32,7 +32,6 @@ ENCHANTER = ITEMS / "OneBlockEnchanter/Bench_OneBlockEnchanter.json"
 WORKBENCH = ITEMS / "OneBlockWorkbench/Bench_OneBlockWorkbench.json"
 CRYSTAL_DIR = ITEMS / "Crystal/Expedition"
 BENCH_DIR = ITEMS / "ExpeditionBench"
-RECIPE_DIR = ITEMS / "BenchRecipe"
 UNLOCK_DIR = ITEMS / "ExpeditionUnlock"
 
 BENCH_TEXTURE_DIR = PROGRESSION / "Common/Blocks/BenchTextures"
@@ -157,29 +156,6 @@ def build_crystal(expedition_id: str, category: str, size: str, item_level: int,
         "Quality": _quality(item_level),
     }
 
-
-def build_bench_recipe_item(expedition_id: str, item_level: int) -> dict:
-    eid = _safe_eid(expedition_id)
-    item_id = f"OneBlock_Bench_Recipe_{eid}"
-
-    return {
-        "TranslationProperties": {
-            "Name": f"{PREFIX_ITEMS_JSON}.{item_id}.name",
-            "Description": f"{PREFIX_ITEMS_JSON}.{item_id}.description",
-        },
-        "Id": item_id,
-        "ItemLevel": item_level,
-        "Icon": "Icons/ItemsGenerated/BlockUpgrade.png",
-        "Categories": ["Items.RecipeDrop"],
-        "PlayerAnimationsId": "Item",
-        "Consumable": True,
-        "Tags": {
-            "Type": ["RecipeDrop"],
-            "RecipeDropTarget": [f"Bench_OneBlock_{eid}"],
-        },
-        "MaxStack": 1,
-        "Quality": _quality(item_level),
-    }
 
 
 def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
@@ -384,8 +360,6 @@ def build_lang_block(expedition_id: str) -> str:
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Large.description=Consume to begin a 300-tick {display} expedition.",
         f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.name={display} Bench",
         f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_{eid}.name=Recipe: {display} Bench",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_{eid}.description=Consume to unlock the {display} Bench crafting recipe at the OneBlock Workbench.",
         f"{PREFIX_BENCH_LANG}.Bench_OneBlock_{eid}_Tier1={display} Recipes",
     ]
 
@@ -407,7 +381,7 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, list]]) -> str:
     lines = [
         "    static",
         "    {",
-        "        Map<String, List<DropDefinition>> defaults = new HashMap<>();",
+        "        Map<String, ExpeditionDefinition> expeditions = new HashMap<>();",
     ]
 
     for expedition_id, drop_pool in all_expeditions:
@@ -418,15 +392,15 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, list]]) -> str:
             for entry in drop_pool
         ]
 
-        lines.append(f'        defaults.put("{expedition_id}", List.of(')
+        lines.append(f'        register(expeditions, "{expedition_id}", List.of(')
         lines.append(",\n".join(entries))
         lines.append("        ));")
 
     lines += [
         "",
-        "        DEFAULTS = Collections.unmodifiableMap(defaults);",
-        "        DEFAULT_IDS = buildDefaultIds(DEFAULTS);",
-        "        DEFAULT_WEIGHTS = buildDefaultWeights(DEFAULTS);",
+        "        EXPEDITIONS = Collections.unmodifiableMap(expeditions);",
+        "        DEFAULT_IDS = buildDefaultIds(EXPEDITIONS);",
+        "        DEFAULT_WEIGHTS = buildDefaultWeights(EXPEDITIONS);",
         "    }",
     ]
 
@@ -680,7 +654,7 @@ def _is_generated_lang_line(line: str) -> bool:
 def cleanup(repo_root: Path, dry_run: bool):
     print("\n=== Cleanup ===")
 
-    for gen_dir in [CRYSTAL_DIR, BENCH_DIR, RECIPE_DIR, UNLOCK_DIR, BLOCK_DIR]:
+    for gen_dir in [CRYSTAL_DIR, BENCH_DIR, UNLOCK_DIR, BLOCK_DIR]:
         dir_path = repo_root / gen_dir
 
         if not dir_path.exists():
@@ -908,12 +882,6 @@ def main():
                 group,
                 bench_cfg.get("KnowledgeRequired", True),
             ),
-            args.dry_run,
-        )
-
-        write_json(
-            repo_root / RECIPE_DIR / f"OneBlock_Bench_Recipe_{eid}.json",
-            build_bench_recipe_item(expedition_id, item_level),
             args.dry_run,
         )
 
