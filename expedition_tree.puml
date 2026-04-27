@@ -1,0 +1,582 @@
+@startuml ExpeditionTree
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam groupInheritance 2
+hide empty members
+
+title Expedition Progression Tree\n(arrows = \"drops from A are used to craft B's crystal\")
+
+' ─────────────────────────────────────────────
+' TIER 1  IL 1
+' ─────────────────────────────────────────────
+package "Tier 1 – Starter (IL 1)" #DDFFDD {
+  class Meadow {
+    IL: 1 | Surface
+    ..Crystal cost (Small)..
+    8x Fibre + 4x Stick
+    ..Key drops..
+    Fibre, Stick, Rubble_Stone
+    Soil_Dirt, Grass, Hay_Bundle
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 2  IL 2
+' ─────────────────────────────────────────────
+package "Tier 2 – Early (IL 2)" #CCFFCC {
+  class Plains {
+    IL: 2 | Surface
+    ..Crystal cost (Small)..
+    12x Fibre + 8x Soil_Dirt
+    ..Key drops..
+    Soil_Grass, Life_Essence
+    Hay_Bundle, Sapling_Oak
+  }
+  class Flower_Field {
+    IL: 2 | Surface
+    ..Crystal cost (Small)..
+    10x Fibre + 6x Plant_Grass_Lush
+    ..Key drops..
+    White Flower, Lavender, Sunflower
+    Petals_White, Cactus_Flower
+  }
+  class Farmland {
+    IL: 2 | Surface
+    ..Crystal cost (Small)..
+    10x Soil_Dirt + 6x Fibre
+    ..Key drops..
+    Wheat, Carrot, Corn, Potato
+    Rice, Onion
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 3  IL 3
+' ─────────────────────────────────────────────
+package "Tier 3 – IL 3" #AAFFAA {
+  class Forest {
+    IL: 3 | Forest
+    ..Crystal cost (Small)..
+    8x Rubble_Stone + 10x Fibre
+    ..Key drops..
+    Oak_Trunk, Leaves_Oak
+    Tree_Bark, Life_Essence
+  }
+  class Garden {
+    IL: 3 | Surface
+    ..Crystal cost (Small)..
+    10x Soil_Dirt + 6x Wheat_Item
+    ..Key drops..
+    Tomato, Lettuce, Aubergine
+    Cauliflower, Turnip, Pumpkin
+    Chilli, Cotton
+  }
+  class Cactus_Field {
+    IL: 3 | Surface
+    ..Crystal cost (Small)..
+    8x Fibre + 6x Rubble_Stone
+    ..Key drops..
+    Cactus_1/2/3, Cactus_Ball
+    Cactus_Flat, Cactus_Flower
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 4  IL 4
+' ─────────────────────────────────────────────
+package "Tier 4 – IL 4" #88EE88 {
+  class Desert {
+    IL: 4 | Surface
+    ..Crystal cost (Small)..
+    10x Rubble_Stone + 8x Fibre
+    ..Key drops..
+    Block_Sand, Rock_Sandstone
+    Block_Clay, Fire_Essence
+  }
+  class Desert_Oasis {
+    IL: 4 | Surface
+    ..Crystal cost (Small)..
+    10x Block_Sand + 6x Rubble_Stone
+    ..Key drops..
+    Sand_White, Desert_Aloe
+    Desert_Flower, Clay_Red
+    Water_Essence
+  }
+  class Autumn_Forest {
+    IL: 4 | Forest
+    ..Crystal cost (Small)..
+    6x Oak_Trunk + 8x Fibre
+    ..Key drops..
+    Beech/Maple/Aspen Trunk
+    Autumn_Leaves, Apple, Berries
+  }
+  class Snow {
+    IL: 4 | Cold
+    ..Crystal cost (Small)..
+    10x Rubble_Stone + 8x Fibre
+    ..Key drops..
+    Block_Snow, Snow_Packed
+    Frozen_Soil, Frost_Fern
+    Ice_Essence
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 5  IL 5
+' ─────────────────────────────────────────────
+package "Tier 5 – IL 5" #55CC55 {
+  class Cave {
+    IL: 5 | Underground
+    ..Crystal cost (Small)..
+    12x Rubble_Stone + 4x Life_Essence
+    ..Key drops..
+    Rock_Stone, Rubble_Stone, Rock_Shale
+    Ore_Copper, Roots_Cave
+  }
+  class Graveyard {
+    IL: 5 | Dark
+    ..Crystal cost (Small)..
+    12x Soil_Dirt + 8x Rubble_Stone
+    ..Key drops..
+    Soil_Dirt, Rock_Stone_Mossy
+    Bone_Fragment, Void_Essence
+  }
+  class Deep_Forest {
+    IL: 5 | Forest
+    ..Crystal cost (Small)..
+    8x Oak_Trunk + 4x Life_Essence
+    ..Key drops..
+    Ash_Trunk, Birch_Trunk, Vine
+    Tree_Bark, Tree_Sap
+  }
+  class Swamp {
+    IL: 5 | Forest
+    ..Crystal cost (Small)..
+    8x Soil_Dirt + 6x Hay_Bundle
+    ..Key drops..
+    Sallow_Trunk, Reeds_Marsh
+    Barnacles, Vine_Rug, Seaweed
+    Water_Essence
+  }
+  class Tropical_Forest {
+    IL: 5 | Forest
+    ..Crystal cost (Small)..
+    8x Oak_Trunk + 10x Fibre
+    ..Key drops..
+    Palm/Banyan/Bottletree Trunk
+    Coconut, Mango, Pinkberry
+  }
+  class Mushroom_Grove {
+    IL: 5 | Forest
+    ..Crystal cost (Small)..
+    6x Oak_Trunk + 8x Soil_Dirt
+    ..Key drops..
+    Mushroom_Block (base/Brown/Red)
+    Mushroom_Cap (Brown/Red/White)
+    Mushroom_Shelve_Brown
+  }
+  class Ice_Fields {
+    IL: 5 | Cold
+    ..Crystal cost (Small)..
+    10x Block_Snow + 4x Ice_Essence
+    ..Key drops..
+    Ice_Clear, Ice_Frosted
+    Frozen_Water, Ice_Flowers
+  }
+  class Primal_Jungle {
+    IL: 5 | Forest
+    ..Crystal cost (Small)..
+    6x Jungle_Trunk + 4x Life_Essence
+    ..Key drops..
+    Jungle_Trunk, Jungle_Fern_Giant
+    Primal_Fern, Glowcap_Jungle
+    Toxic_Jungle_Vine
+  }
+  class Seed_Vault {
+    IL: 5 | Surface
+    ..Crystal cost (Small)..
+    6x Wheat_Item + 6x Corn_Item
+    ..Key drops..
+    All 14 Eternal crop seeds
+  }
+  class Textile_Workshop {
+    IL: 5 | Surface
+    ..Crystal cost (Small)..
+    8x Cotton_Item + 8x Fibre
+    ..Key drops..
+    Bolt_Cotton/Linen/Wool
+    Fabric_Scrap_Cotton/Linen/Wool
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 6  IL 6
+' ─────────────────────────────────────────────
+package "Tier 6 – IL 6" #44BB44 {
+  class Gem_Cave {
+    IL: 6 | Underground
+    ..Crystal cost (Small)..
+    10x Rock_Stone + 6x Ore_Copper
+    ..Key drops..
+    Rock_Stone/Basalt/Shale
+    Gem: Emerald/Ruby/Sapphire/Topaz
+  }
+  class Precious_Vein {
+    IL: 6 | Underground
+    ..Crystal cost (Small)..
+    12x Rock_Stone + 8x Rock_Basalt
+    ..Key drops..
+    Ore_Gold, Ore_Silver
+    Gem_Topaz, Gem_Emerald
+  }
+  class Egyptian_Temple {
+    IL: 6 | Surface
+    ..Crystal cost (Small)..
+    12x Block_Sand + 8x Rock_Sandstone
+    ..Key drops..
+    Sandstone_Smooth/Red
+    Clay_Red, Ore_Gold, Fire_Essence
+  }
+  class Desert_Ruins {
+    IL: 6 | Surface
+    ..Crystal cost (Small)..
+    10x Block_Sand + 6x Sandstone_Rough
+    ..Key drops..
+    Desert_Cracked, Desert_Fossil
+    Desert_Dried_Mud, Sand_Red
+    Ore_Thorium_Desert
+  }
+  class Fungi_Cavern {
+    IL: 6 | Underground
+    ..Crystal cost (Small)..
+    8x Mushroom_Block + 6x Rock_Stone
+    ..Key drops..
+    Mushroom_Block (Green/Purple/White/Yellow)
+    Mushroom_Cap (Green/Poison)
+    Mushroom_Common_Blue/Lime
+    Mushroom_Flatcap_Blue/Green
+  }
+  class Jungle {
+    IL: 6 | Forest
+    ..Crystal cost (Small)..
+    8x Jungle_Trunk + 6x Life_Essence
+    ..Key drops..
+    Jungle_Trunk, Bamboo_Trunk
+    Reeds_Marsh, Vine_Rug, Mango
+  }
+  class Poison_Grove {
+    IL: 6 | Forest
+    ..Crystal cost (Small)..
+    8x Jungle_Trunk + 4x Life_Essence
+    ..Key drops..
+    Poisoned_Trunk, Fruit_Poison
+    Poisoned_Floor, Toxic_Vine
+  }
+  class Redwood_Grove {
+    IL: 6 | Forest
+    ..Crystal cost (Small)..
+    8x Ash_Trunk + 6x Tree_Bark
+    ..Key drops..
+    Redwood/Cedar/Fir/Camphor Trunk
+    Tree_Bark, Tree_Sap
+  }
+  class Frozen_Forest {
+    IL: 6 | Cold
+    ..Crystal cost (Small)..
+    12x Block_Snow + 4x Ice_Essence
+    ..Key drops..
+    Ice_Trunk, Block_Snow
+    Permafrost, Frost_Fern
+    Ice_Flower (Blue/White)
+  }
+  class Ancient_Graveyard {
+    IL: 6 | Dark
+    ..Crystal cost (Small)..
+    10x Rock_Stone_Mossy + 6x Bone_Fragment
+    ..Key drops..
+    Rock_Stone_Mossy, Rock_Slate
+    Rock_Basalt, Bone_Fragment
+    Roots_Leafy, Void_Essence
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 7  IL 7
+' ─────────────────────────────────────────────
+package "Tier 7 – IL 7" #339933 {
+  class Azure_Forest {
+    IL: 7 | Forest
+    ..Crystal cost (Small)..
+    10x Ash_Trunk + 6x Ice_Essence
+    ..Key drops..
+    Azure_Trunk, Crystal_Trunk
+    Mushroom_Block (Blue/Yellow)
+    Fruit_Azure, Ice_Flower_Blue
+  }
+  class Mystical_Forest {
+    IL: 7 | Forest
+    ..Crystal cost (Small)..
+    8x Azure_Trunk + 6x Life_Essence
+    ..Key drops..
+    Crystal/Spiral/Wisteria_Wild Trunk
+    Fruit_Spiral, Fruit_Windwillow
+    Motes_Light
+  }
+  class Storm_Wilds {
+    IL: 7 | Forest
+    ..Crystal cost (Small)..
+    10x Ash_Trunk + 6x Life_Essence
+    ..Key drops..
+    Stormbark_Trunk, Windwillow_Trunk
+    Fruit_Windwillow, Lightning_Essence
+  }
+  class Ancient_Grove {
+    IL: 7 | Surface
+    ..Crystal cost (Small)..
+    8x Redwood_Trunk + 10x Rock_Stone
+    ..Key drops..
+    Petrified/Gumboab/Palo/Dry Trunk
+    Desert_Fossil, Life_Essence
+  }
+  class Deep_Cave {
+    IL: 7 | Underground
+    ..Crystal cost (Small)..
+    12x Rock_Stone + 8x Ore_Copper
+    ..Key drops..
+    Rock_Basalt, Rubble_Basalt
+    Rock_Slate, Ore_Iron, Ore_Silver
+    Void_Essence
+  }
+  class Deep_Mine {
+    IL: 7 | Underground
+    ..Crystal cost (Small)..
+    8x Ore_Iron + 10x Rock_Basalt
+    ..Key drops..
+    Ore_Mithril, Ore_Cobalt
+    Ore_Gold, Ore_Silver
+    Rock_Volcanic, Rock_Slate
+  }
+  class Frozen_Cave {
+    IL: 7 | Underground
+    ..Crystal cost (Small)..
+    10x Ice_Clear + 6x Ice_Essence
+    ..Key drops..
+    Ice_Blue, Rock_Ice
+    Rock_Ice_Permafrost, Ice_Frosted
+    Rock_Frozen_Stone
+  }
+  class Glowing_Cavern {
+    IL: 7 | Underground
+    ..Crystal cost (Small)..
+    8x Mushroom_Block + 8x Rock_Stone
+    ..Key drops..
+    Glowing Mushroom (6 colors)
+    Roots_Leafy, Motes_Light
+  }
+  class Dino_Caverns {
+    IL: 7 | Underground
+    ..Crystal cost (Small)..
+    8x Fossil_Stone + 8x Rock_Volcanic
+    ..Key drops..
+    Primal_Stone, Fossil_Stone
+    Block_Amber, Lava_Rock_Cracked
+    Rock_Amber_Encased
+  }
+  class Mystic_Seeds {
+    IL: 7 | Surface
+    ..Crystal cost (Small)..
+    4x Seeds_Wheat_Eternal + 6x Life_Essence
+    ..Key drops..
+    Seeds_Health (1/2/3)
+    Seeds_Mana (1/2/3)
+    Seeds_Stamina (1/2/3)
+    Seeds_Mushroom, Seeds_Wild
+  }
+  class Amber_Dig {
+    IL: 7 | Surface
+    ..Crystal cost (Small)..
+    6x Block_Amber + 8x Rock_Volcanic
+    ..Key drops..
+    Amber_Encased, Dinosaur_Fossil
+    Dinosaur_Bone, Ore_Primal_Iron
+    Primal_Core
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 8  IL 8
+' ─────────────────────────────────────────────
+package "Tier 8 – IL 8" #CC6600 {
+  class Fiery_Forest {
+    IL: 8 | Forest
+    ..Crystal cost (Small)..
+    8x Burnt_Trunk + 6x Fire_Essence
+    ..Key drops..
+    Burnt_Trunk, Fire_Trunk
+    Rock_Volcanic, Charcoal
+  }
+  class Inferno {
+    IL: 8 | Inferno
+    ..Crystal cost (Small)..
+    10x Rock_Volcanic + 6x Fire_Essence
+    ..Key drops..
+    Rock_Volcanic, Volcanic_Ash
+    Lava_Rock_Cracked, Charcoal
+    Powder_Boom, Sinue_Cindersinue
+  }
+  class Volcanic_Badlands {
+    IL: 8 | Inferno
+    ..Crystal cost (Small)..
+    10x Rock_Volcanic + 6x Volcanic_Ash
+    ..Key drops..
+    Volcanic_Ash, Rock_Volcanic
+    Lava_Rock_Cracked, Ore_Thorium
+  }
+  class Cursed_Crypt {
+    IL: 8 | Dark
+    ..Crystal cost (Small)..
+    10x Bone_Fragment + 6x Void_Essence
+    ..Key drops..
+    Rock_Basalt, Rock_Slate
+    Rock_Volcanic, Bone_Fragment
+    Voidheart, Void_Essence
+  }
+  class Glacial_Depths {
+    IL: 8 | Cold
+    ..Crystal cost (Small)..
+    10x Ice_Blue + 8x Ice_Essence
+    ..Key drops..
+    Glacial_Crystal, Frozen_Stone
+    Ice_Blue, Ore_Cobalt_Ice
+    Ice_Permafrost
+  }
+  class Crystal_Depths {
+    IL: 8 | Underground
+    ..Crystal cost (Small)..
+    4x Gem_Emerald + 10x Rock_Basalt
+    ..Key drops..
+    Gem_Diamond, Gem_Zephyr (rare!)
+    Ore_Prisma, Rock_Volcanic
+    Motes_Light, Void_Essence
+  }
+  class Advanced_Textile {
+    IL: 8 | Surface
+    ..Crystal cost (Small)..
+    6x Bolt_Cotton + 4x Bolt_Wool
+    ..Key drops..
+    Bolt (Silk/Shadoweave/Stormsilk
+    Cindercloth/Prismaloom)
+    Fabric_Scrap (all 5 types)
+  }
+}
+
+' ─────────────────────────────────────────────
+' TIER 9  IL 9 — ENDGAME
+' ─────────────────────────────────────────────
+package "Tier 9 – Endgame (IL 9)" #880000 {
+  class The_Abyss {
+    IL: 9 | Underground
+    ..Crystal cost (Small)..
+    10x Void_Essence + 12x Rock_Volcanic
+    ..Key drops..
+    Rock_Volcanic/Slate/Basalt
+    Ore_Onyxium, Voidheart
+  }
+  class Deep_Inferno {
+    IL: 9 | Inferno
+    ..Crystal cost (Small)..
+    12x Fire_Essence + 12x Rock_Volcanic
+    ..Key drops..
+    Lava_Rock_Cracked, Rock_Volcanic
+    Ore_Adamantite, Sinue_Cindersinue
+    Void_Essence
+  }
+  class Abyssal_Mine {
+    IL: 9 | Underground
+    ..Crystal cost (Small)..
+    6x Ore_Mithril + 8x Void_Essence
+    ..Key drops..
+    Ore_Adamantite, Ore_Onyxium
+    Ore_Prisma, Ore_Thorium
+    Voidheart
+  }
+}
+
+' ─────────────────────────────────────────────
+' PROGRESSION ARROWS  (A --> B = A drops unlock B)
+' ─────────────────────────────────────────────
+
+' From OneBlock / Meadow (IL1)
+Meadow --> Plains         : Fibre+Soil_Dirt
+Meadow --> Flower_Field   : Fibre+Grass
+Meadow --> Farmland       : Soil_Dirt+Fibre
+Meadow --> Forest         : Rubble_Stone+Fibre
+Meadow --> Cactus_Field   : Fibre+Rubble_Stone
+Meadow --> Desert         : Rubble_Stone+Fibre
+Meadow --> Snow           : Rubble_Stone+Fibre
+
+' IL2 -> IL3
+Farmland  --> Garden      : Soil_Dirt+Wheat_Item
+Plains    --> Garden      : Soil_Dirt
+Plains    --> Forest      : Rubble_Stone
+Plains    --> Flower_Field : Grass
+
+' IL3 -> IL4
+Forest      --> Autumn_Forest : Oak_Trunk+Fibre
+Forest      --> Deep_Forest   : Oak_Trunk+Life_Essence
+Forest      --> Tropical_Forest: Oak_Trunk+Fibre
+Forest      --> Mushroom_Grove : Oak_Trunk+Soil_Dirt
+Desert      --> Desert_Oasis  : Block_Sand+Rubble_Stone
+Desert      --> Egyptian_Temple: Block_Sand+Sandstone
+Desert      --> Desert_Ruins  : Block_Sand+Sandstone_Rough
+Snow        --> Ice_Fields    : Block_Snow+Ice_Essence
+Snow        --> Frozen_Forest : Block_Snow+Ice_Essence
+
+' IL4 -> IL5
+Plains      --> Cave          : Rubble_Stone+Life_Essence
+Plains      --> Graveyard     : Soil_Dirt+Rubble_Stone
+Plains      --> Swamp         : Soil_Dirt+Hay_Bundle
+Farmland    --> Seed_Vault    : Wheat_Item+Corn_Item
+Garden      --> Textile_Workshop: Cotton_Item+Fibre
+Primal_Jungle --> Jungle      : Jungle_Trunk+Life_Essence
+Primal_Jungle --> Poison_Grove: Jungle_Trunk+Life_Essence
+
+' IL5 -> IL6
+Cave        --> Gem_Cave      : Rock_Stone+Ore_Copper
+Cave        --> Precious_Vein : Rock_Stone+Rock_Basalt
+Cave        --> Deep_Cave     : Rock_Stone+Ore_Copper
+Cave        --> Fungi_Cavern  : Mushroom_Block+Rock_Stone
+Deep_Forest --> Redwood_Grove : Ash_Trunk+Tree_Bark
+Deep_Forest --> Azure_Forest  : Ash_Trunk+Ice_Essence
+Deep_Forest --> Storm_Wilds   : Ash_Trunk+Life_Essence
+Ice_Fields  --> Frozen_Cave   : Ice_Clear+Ice_Essence
+Graveyard   --> Ancient_Graveyard: Stone_Mossy+Bone_Fragment
+Mushroom_Grove --> Fungi_Cavern: Mushroom_Block+Rock_Stone
+Mushroom_Grove --> Glowing_Cavern: Mushroom_Block+Rock_Stone
+
+' IL6 -> IL7
+Azure_Forest --> Mystical_Forest: Azure_Trunk+Life_Essence
+Redwood_Grove --> Ancient_Grove : Redwood_Trunk+Rock_Stone
+Precious_Vein --> Deep_Mine     : Ore_Iron+Rock_Basalt
+Deep_Cave   --> Deep_Mine       : Ore_Iron+Rock_Basalt
+Dino_Caverns --> Amber_Dig      : Block_Amber+Rock_Volcanic
+Seed_Vault  --> Mystic_Seeds    : Seeds_Wheat_Eternal+Life_Essence
+Fungi_Cavern --> Glowing_Cavern : Mushroom_Block+Rock_Stone
+
+' IL7 -> IL8
+Dino_Caverns --> Inferno        : Rock_Volcanic+Fire_Essence
+Deep_Cave   --> Inferno         : Rock_Volcanic+Fire_Essence
+Deep_Mine   --> Abyssal_Mine    : Ore_Mithril+Void_Essence
+Ancient_Graveyard --> Cursed_Crypt: Bone_Fragment+Void_Essence
+Frozen_Cave --> Glacial_Depths  : Ice_Blue+Ice_Essence
+Gem_Cave    --> Crystal_Depths  : Gem_Emerald+Rock_Basalt
+Textile_Workshop --> Advanced_Textile: Bolt_Cotton+Bolt_Wool
+Fiery_Forest --> Inferno        : Burnt_Trunk+Fire_Essence
+
+' IL8 -> IL9
+Inferno     --> Deep_Inferno    : Fire_Essence+Rock_Volcanic
+Cursed_Crypt --> The_Abyss      : Void_Essence+Rock_Volcanic
+Abyssal_Mine --> The_Abyss      : Void_Essence+Rock_Volcanic
+Deep_Mine   --> Abyssal_Mine    : Ore_Mithril+Void_Essence
+
+@enduml

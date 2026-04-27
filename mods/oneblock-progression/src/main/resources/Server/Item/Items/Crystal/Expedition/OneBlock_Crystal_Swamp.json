@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Swamp.name",
+    "Description": "server.items.OneBlock_Crystal_Swamp.description"
+  },
+  "Id": "OneBlock_Crystal_Swamp",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Soil_Dirt",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Plant_Hay_Bundle",
+        "Quantity": 6
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Forest"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Swamp"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Desert_Ruins.name",
+    "Description": "server.items.OneBlock_Crystal_Desert_Ruins.description"
+  },
+  "Id": "OneBlock_Crystal_Desert_Ruins",
+  "ItemLevel": 6,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Sand",
+        "Quantity": 10
+      },
+      {
+        "ItemId": "Block_Sandstone_Rough",
+        "Quantity": 6
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Surface"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Desert_Ruins"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

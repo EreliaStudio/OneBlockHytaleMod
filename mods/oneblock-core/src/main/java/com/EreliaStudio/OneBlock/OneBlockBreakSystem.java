@@ -80,12 +80,8 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         );
         dropRegistry.executeDropable(rewardId, context);
 
-        if (completedExpedition != null)
-        {
-            if (player != null)
-                player.sendMessage(Message.raw("Expedition complete: " + completedExpedition + ". The OneBlock has returned to default."));
-            OneBlockPlugin.getInstance().fireExpeditionComplete(completedExpedition, context);
-        }
+        if (completedExpedition != null && player != null)
+            player.sendMessage(Message.raw("Expedition complete: " + completedExpedition + ". The OneBlock has returned to default."));
     }
 
     private static boolean isValidOneBlockBreak(Player player, BreakBlockEvent event)

@@ -1,0 +1,1593 @@
+@startuml ExpeditionSeparatedOverview
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Expedition Progression Overview\n(separated by gameplay lane)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "Surface / Starter Line" #DDFFDD {
+  package "IL 1" {
+    class Meadow
+  }
+  package "IL 2" {
+    class Flower_Field
+    class Rocky_Meadow
+  }
+  package "IL 4" {
+    class Desert
+    class Textile_Cottage
+  }
+  package "IL 5" {
+    class BottleTree_Savanna
+    class Feather_Rookery
+    class Leatherworker_Camp
+    class Palm_Coast
+    class Palo_Drywood
+    class Red_Dunes
+    class White_Dunes
+  }
+  package "IL 6" {
+    class Cactus_Garden
+    class Saltbush_Dunes
+    class Sandstone_Ruins
+  }
+  package "IL 7" {
+    class Scorched_Desert_Cache
+  }
+  package "IL 8" {
+    class Thorium_Desert_Mine
+  }
+}
+
+package "Forest and Wood Lines" #B8F5B8 {
+  package "IL 2" {
+    class Oak_Forest
+  }
+  package "IL 3" {
+    class Beech_Forest
+    class Birch_Forest
+    class Bramble_Thicket
+    class Marsh_Reeds
+  }
+  package "IL 4" {
+    class Ash_Grove
+    class Aspen_Grove
+    class Maple_Forest
+  }
+  package "IL 5" {
+    class Bamboo_Jungle
+    class Cedar_Woods
+    class Fir_Woods
+  }
+  package "IL 6" {
+    class Camphor_Grove
+    class Jungle
+    class Redwood_Forest
+    class Sallow_Wetland
+    class Silk_Warren
+  }
+  package "IL 7" {
+    class Banyan_Jungle
+    class Blue_Fig_Grove
+    class Primal_Jungle
+    class Spiral_Woods
+  }
+  package "IL 8" {
+    class Azure_Forest
+    class Storm_Leather_Camp
+    class Storm_Loom
+    class Windwillow_Grove
+    class Wisteria_Wildwood
+  }
+  package "IL 9" {
+    class Crystal_Grove
+    class Stormbark_Woods
+  }
+}
+
+package "Cave, Ore and Gem Lines" #D8D8D8 {
+  package "IL 2" {
+    class Cave
+  }
+  package "IL 3" {
+    class Copper_Cave
+    class Deep_Cave
+  }
+  package "IL 4" {
+    class Common_Mushroom_Cave
+    class Iron_Cave
+  }
+  package "IL 5" {
+    class Ancient_Forge
+    class Colored_Mushroom_Cave
+    class Gem_Cave
+    class Silver_Cave
+  }
+  package "IL 6" {
+    class Blue_Mushroom_Grotto
+    class Gold_Cave
+    class Redcap_Mushroom_Cave
+    class Thorium_Cave
+  }
+  package "IL 7" {
+    class Mithril_Cave
+  }
+  package "IL 8" {
+    class Cobalt_Depths
+    class Dino_Caverns
+    class Glowing_Mushroom_Cavern
+    class Petrified_Forest
+  }
+  package "IL 9" {
+    class Adamantite_Depths
+    class Primal_Iron_Mine
+    class Primal_Trophy_Cache
+  }
+}
+
+package "Cold / Ice Line" #DDEEFF {
+  package "IL 4" {
+    class Snowfield
+  }
+  package "IL 5" {
+    class Frozen_Lake
+  }
+  package "IL 6" {
+    class Frost_Fern_Forest
+    class Permafrost_Cave
+  }
+  package "IL 7" {
+    class Frozen_Trophy_Cache
+  }
+  package "IL 8" {
+    class Cobalt_Ice_Mine
+    class Ice_Woodland
+  }
+}
+
+package "Inferno / Fire Line" #FFCC99 {
+  package "IL 8" {
+    class Cinder_Loom
+    class Volcanic_Badlands
+  }
+  package "IL 9" {
+    class Deep_Inferno
+    class Fire_Woodland
+  }
+}
+
+package "Dark / Graveyard Line" #D9C2FF {
+  package "IL 6" {
+    class Essence_Font
+  }
+  package "IL 7" {
+    class Dark_Leather_Camp
+    class Poison_Mushroom_Grotto
+  }
+  package "IL 8" {
+    class Poisoned_Woods
+    class Shadow_Loom
+  }
+  package "IL 10" {
+    class Onyxium_Abyss
+  }
+  package "IL 11" {
+    class Prisma_Rift
+  }
+}
+
+' Full cross-lane progression links
+Meadow --> Flower_Field : Flower_Common_White+Fibre
+Meadow --> Oak_Forest : Fibre
+Meadow --> Rocky_Meadow : Fibre
+Meadow --> Beech_Forest : Fibre
+Meadow --> Birch_Forest : Fibre
+Meadow --> Bramble_Thicket : Bush+Fibre
+Meadow --> Marsh_Reeds : Grass_Lush+Fibre
+Meadow --> Textile_Cottage : Hay_Bundle
+Meadow --> BottleTree_Savanna : Hay_Bundle
+Cave --> Rocky_Meadow : Stone
+Cave --> Copper_Cave : Stone
+Cave --> Deep_Cave : Stone
+Cave --> Common_Mushroom_Cave : Roots_Cave
+Oak_Forest --> Beech_Forest : Oak
+Rocky_Meadow --> Cave : Stone
+Rocky_Meadow --> Leatherworker_Camp : Stick
+Beech_Forest --> Meadow : Fibre
+Beech_Forest --> Birch_Forest : Beech
+Beech_Forest --> Aspen_Grove : Tree_Bark
+Beech_Forest --> Maple_Forest : Tree_Sap
+Beech_Forest --> Textile_Cottage : Fibre
+Beech_Forest --> BottleTree_Savanna : Fibre
+Beech_Forest --> Feather_Rookery : Beech+Fibre
+Beech_Forest --> Leatherworker_Camp : Fibre
+Beech_Forest --> Palo_Drywood : Fibre
+Birch_Forest --> Ash_Grove : Birch
+Birch_Forest --> Aspen_Grove : Birch
+Birch_Forest --> Maple_Forest : Birch
+Birch_Forest --> Bamboo_Jungle : Birch
+Birch_Forest --> Cedar_Woods : Birch
+Birch_Forest --> Fir_Woods : Birch
+Copper_Cave --> Iron_Cave : Copper
+Deep_Cave --> Common_Mushroom_Cave : Basalt
+Deep_Cave --> Iron_Cave : Basalt
+Deep_Cave --> Essence_Font : Stone_Mossy
+Deep_Cave --> Petrified_Forest : Stone_Mossy
+Marsh_Reeds --> Bamboo_Jungle : Reeds_Marsh
+Marsh_Reeds --> Palm_Coast : Seaweed_Grass+Water_Essence
+Ash_Grove --> Ancient_Forge : Charcoal
+Ash_Grove --> Cedar_Woods : Ash
+Common_Mushroom_Cave --> Colored_Mushroom_Cave : Mush_Common_Brown
+Desert --> Palo_Drywood : Sand
+Desert --> Red_Dunes : Sand+Sandstone
+Desert --> White_Dunes : Sand+Sandstone
+Desert --> Cactus_Garden : Cactus_1
+Desert --> Sandstone_Ruins : Sandstone_Rough+Sand
+Desert --> Thorium_Desert_Mine : Sand
+Iron_Cave --> Ancient_Forge : Iron
+Iron_Cave --> Colored_Mushroom_Cave : Basalt
+Iron_Cave --> Gem_Cave : Slate+Basalt
+Iron_Cave --> Silver_Cave : Iron+Basalt
+Iron_Cave --> Blue_Mushroom_Grotto : Iron
+Iron_Cave --> Gold_Cave : Iron
+Iron_Cave --> Redcap_Mushroom_Cave : Iron
+Iron_Cave --> Thorium_Cave : Iron
+Iron_Cave --> Mithril_Cave : Iron
+Maple_Forest --> Ash_Grove : Maple
+Maple_Forest --> Redwood_Forest : Maple
+Maple_Forest --> Silk_Warren : Maple
+Maple_Forest --> Blue_Fig_Grove : Maple
+Maple_Forest --> Spiral_Woods : Maple
+Maple_Forest --> Azure_Forest : Maple
+Maple_Forest --> Wisteria_Wildwood : Maple
+Snowfield --> Frozen_Lake : Snow+Ice_Essence
+Snowfield --> Frost_Fern_Forest : Snow_Packed
+Snowfield --> Permafrost_Cave : Ice_Essence
+Snowfield --> Ice_Woodland : Snow
+Textile_Cottage --> Cinder_Loom : Scrap_Wool
+Bamboo_Jungle --> Jungle : Bamboo+Jungle
+Bamboo_Jungle --> Sallow_Wetland : Reeds_Marsh
+Bamboo_Jungle --> Silk_Warren : Vine
+Cedar_Woods --> Fir_Woods : Cedar
+Cedar_Woods --> Camphor_Grove : Cedar
+Colored_Mushroom_Cave --> Redcap_Mushroom_Cave : Mush_Red
+Colored_Mushroom_Cave --> Poison_Mushroom_Grotto : Mushroom_Cap_Green
+Feather_Rookery --> Essence_Font : Bone_Fragment
+Fir_Woods --> Camphor_Grove : Life_Essence
+Fir_Woods --> Redwood_Forest : Fir
+Frozen_Lake --> Permafrost_Cave : Ice_Blue
+Frozen_Lake --> Sallow_Wetland : Water_Essence
+Leatherworker_Camp --> Dark_Leather_Camp : Leather_Light
+Palo_Drywood --> Saltbush_Dunes : Desert_Saltbush
+Red_Dunes --> Cactus_Garden : Sand_Red
+Silver_Cave --> Gold_Cave : Silver
+White_Dunes --> Saltbush_Dunes : Sand_White
+Blue_Mushroom_Grotto --> Frozen_Trophy_Cache : Ice_Essence
+Blue_Mushroom_Grotto --> Glowing_Mushroom_Cavern : Glow_Mush_Blue
+Cactus_Garden --> Scorched_Desert_Cache : Cactus_Flower
+Camphor_Grove --> Blue_Fig_Grove : Camphor
+Essence_Font --> Dark_Leather_Camp : Void_Essence
+Essence_Font --> Scorched_Desert_Cache : Fire_Essence
+Essence_Font --> Cinder_Loom : Fire_Essence
+Essence_Font --> Volcanic_Badlands : Fire_Essence
+Frost_Fern_Forest --> Frozen_Trophy_Cache : Ice_Flower_Blue
+Gold_Cave --> Thorium_Cave : Gold
+Jungle --> Banyan_Jungle : Jungle+Vine
+Jungle --> Primal_Jungle : Jungle
+Permafrost_Cave --> Frost_Fern_Forest : Ice_Permafrost
+Permafrost_Cave --> Cobalt_Ice_Mine : Frozen_Stone+Ice_Permafrost
+Redwood_Forest --> Spiral_Woods : Redwood
+Sallow_Wetland --> Primal_Jungle : Reeds_Marsh
+Sandstone_Ruins --> Desert : Sandstone
+Sandstone_Ruins --> Thorium_Desert_Mine : Desert_Fossil
+Silk_Warren --> Shadow_Loom : Scrap_Silk
+Silk_Warren --> Storm_Loom : Scrap_Silk
+Thorium_Cave --> Mithril_Cave : Thorium
+Thorium_Cave --> Dino_Caverns : Volcanic
+Thorium_Cave --> Volcanic_Badlands : Volcanic
+Blue_Fig_Grove --> Azure_Forest : Fruit_Azure
+Frozen_Trophy_Cache --> Ice_Woodland : Ice_Essence
+Mithril_Cave --> Cobalt_Depths : Mithril+Diamond
+Mithril_Cave --> Glowing_Mushroom_Cavern : Mithril
+Mithril_Cave --> Storm_Leather_Camp : Lightning_Essence
+Mithril_Cave --> Storm_Loom : Lightning_Essence
+Mithril_Cave --> Windwillow_Grove : Lightning_Essence
+Mithril_Cave --> Adamantite_Depths : Mithril
+Mithril_Cave --> Crystal_Grove : Zephyr
+Poison_Mushroom_Grotto --> Petrified_Forest : Void_Essence
+Poison_Mushroom_Grotto --> Poisoned_Woods : Void_Essence
+Poison_Mushroom_Grotto --> Shadow_Loom : Void_Essence
+Primal_Jungle --> Dino_Caverns : Jungle_Fern_Giant
+Spiral_Woods --> Windwillow_Grove : Spiral
+Spiral_Woods --> Wisteria_Wildwood : Spiral
+Azure_Forest --> Blue_Mushroom_Grotto : Mush_Blue
+Azure_Forest --> Crystal_Grove : Azure
+Cinder_Loom --> Deep_Inferno : Fire_Essence
+Cinder_Loom --> Fire_Woodland : Burnt+Fire_Essence
+Cobalt_Depths --> Snowfield : Ice
+Cobalt_Depths --> Adamantite_Depths : Cobalt
+Dino_Caverns --> Primal_Iron_Mine : Primal_Stone+Dinosaur_Bone
+Dino_Caverns --> Primal_Trophy_Cache : Dinosaur_Bone
+Ice_Woodland --> Snowfield : Snow
+Poisoned_Woods --> Poison_Mushroom_Grotto : Sac_Venom
+Storm_Loom --> Stormbark_Woods : Lightning_Essence
+Volcanic_Badlands --> Deep_Inferno : Lava_Rock_Cracked
+Windwillow_Grove --> Stormbark_Woods : Windwillow
+Wisteria_Wildwood --> Poisoned_Woods : Wisteria_Wild
+Adamantite_Depths --> Onyxium_Abyss : Adamantite
+Deep_Inferno --> Onyxium_Abyss : Void_Essence
+Primal_Iron_Mine --> Primal_Trophy_Cache : Primal_Core
+Onyxium_Abyss --> Prisma_Rift : Onyxium+Voidheart
+@enduml
+
+
+@startuml Expedition_Surface
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Surface / Starter Line\n(detail view)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "IL 1" #DDFFDD {
+  class Meadow {
+    IL: 1 | Surface
+    ..Crystal cost..
+    4x Fibre
+    ..Key drops..
+    Fibre, Stick, Grass_Lush
+    Bush, Flower_Common_White, Hay_Bundle
+  }
+
+}
+
+package "IL 2" #DDFFDD {
+  class Flower_Field {
+    IL: 2 | Surface
+    ..Crystal cost..
+    8x Flower_Common_White + 8x Fibre
+    ..Key drops..
+    Lavender_Block, Lavender_Stage_0, Sunflower_Block
+    Sunflower_Stage_0, Petals_White, Flower_Common_White
+  }
+
+  class Rocky_Meadow {
+    IL: 2 | Surface
+    ..Crystal cost..
+    8x Fibre + 6x Stone
+    ..Key drops..
+    Stone, Shale, Stick
+    Roots_Leafy, Petals_White, Life_Essence
+  }
+
+}
+
+package "IL 4" #DDFFDD {
+  class Desert {
+    IL: 4 | Surface
+    ..Crystal cost..
+    12x Sandstone + 12x Sand
+    ..Key drops..
+    Sand, Sandstone_Rough, Sandstone
+    Desert_Dry_Shrub, Cactus_1, Fire_Essence
+  }
+
+  class Textile_Cottage {
+    IL: 4 | Surface
+    ..Crystal cost..
+    10x Hay_Bundle + 16x Fibre
+    ..Key drops..
+    Scrap_Cotton, Scrap_Linen, Scrap_Wool
+    Bolt_Cotton, Bolt_Linen, Bolt_Wool
+  }
+
+}
+
+package "IL 5" #DDFFDD {
+  class BottleTree_Savanna {
+    IL: 5 | Surface
+    ..Crystal cost..
+    12x Hay_Bundle + 8x Fibre
+    ..Key drops..
+    Bottletree, Fruit_Coconut, Hay_Bundle
+    Tree_Bark, Tree_Sap, Fibre
+  }
+
+  class Feather_Rookery {
+    IL: 5 | Surface
+    ..Crystal cost..
+    10x Beech + 8x Fibre
+    ..Key drops..
+    Feathers_Light, Feathers_Blue, Feathers_Red
+    Feathers_Dark, Bone_Fragment, Sinue_Cindersinue
+  }
+
+  class Leatherworker_Camp {
+    IL: 5 | Surface
+    ..Crystal cost..
+    12x Fibre + 12x Stick
+    ..Key drops..
+    Hide_Light, Hide_Medium, Hide_Heavy
+    Hide_Soft, Strap_Leather, Leather_Light
+  }
+
+  class Palm_Coast {
+    IL: 5 | Surface
+    ..Crystal cost..
+    10x Seaweed_Grass + 4x Water_Essence
+    ..Key drops..
+    Palm, Fruit_Coconut, Seaweed_Grass
+    Seaweed_Grass_Stack, Water_Essence, Barnacles
+  }
+
+  class Palo_Drywood {
+    IL: 5 | Surface
+    ..Crystal cost..
+    12x Sand + 8x Fibre
+    ..Key drops..
+    Palo, Dry, Desert_Dry_Shrub
+    Desert_Saltbush, Tree_Bark, Tree_Sap
+  }
+
+  class Red_Dunes {
+    IL: 5 | Surface
+    ..Crystal cost..
+    16x Sand + 6x Sandstone
+    ..Key drops..
+    Sand_Red, Clay_Red, Desert_Red_Featherleaf
+    Cactus_Flower, Cactus_2, Desert_Fossil
+  }
+
+  class White_Dunes {
+    IL: 5 | Surface
+    ..Crystal cost..
+    16x Sand + 6x Sandstone
+    ..Key drops..
+    Sand_White, Clay, Desert_Yellow_Arid_Flower
+    Desert_Saltbush, Cactus_Flat_1, Desert_Cracked
+  }
+
+}
+
+package "IL 6" #DDFFDD {
+  class Cactus_Garden {
+    IL: 6 | Surface
+    ..Crystal cost..
+    10x Cactus_1 + 10x Sand_Red
+    ..Key drops..
+    Cactus_1, Cactus_2, Cactus_3
+    Cactus_Ball_1, Cactus_Flat_1, Cactus_Flat_2
+    Cactus_Flat_3, Cactus_Flower
+  }
+
+  class Saltbush_Dunes {
+    IL: 6 | Surface
+    ..Crystal cost..
+    12x Sand_White + 8x Desert_Saltbush
+    ..Key drops..
+    Desert_Hardened_Earth, Desert_Dried_Mud, Desert_Saltbush
+    Desert_Blue_Aloe, Cactus_Ball_1, Water_Essence
+  }
+
+  class Sandstone_Ruins {
+    IL: 6 | Surface
+    ..Crystal cost..
+    12x Sandstone_Rough + 12x Sand
+    ..Key drops..
+    Sandstone_Smooth, Sandstone_Red, Sandstone_Rough
+    Sandstone, Desert_Fossil, Motes_Light
+  }
+
+}
+
+package "IL 7" #DDFFDD {
+  class Scorched_Desert_Cache {
+    IL: 7 | Surface
+    ..Crystal cost..
+    8x Cactus_Flower + 6x Fire_Essence
+    ..Key drops..
+    Shell_Scorpion, Claw_Scorpion, Fang_SaberTooth
+    Feather_Vulture, Hide_Camel, Hide_Scarak
+  }
+
+}
+
+package "IL 8" #DDFFDD {
+  class Thorium_Desert_Mine {
+    IL: 8 | Surface
+    ..Crystal cost..
+    8x Desert_Fossil + 12x Sand
+    ..Key drops..
+    Thorium_Desert, Desert_Cracked, Desert_Fossil
+    Desert_Hardened_Earth, Fire_Essence, Topaz
+  }
+
+}
+
+' Internal progression links for this lane
+Meadow --> Flower_Field : Flower_Common_White+Fibre
+Meadow --> Rocky_Meadow : Fibre
+Meadow --> Textile_Cottage : Hay_Bundle
+Meadow --> BottleTree_Savanna : Hay_Bundle
+Rocky_Meadow --> Leatherworker_Camp : Stick
+Desert --> Palo_Drywood : Sand
+Desert --> Red_Dunes : Sand+Sandstone
+Desert --> White_Dunes : Sand+Sandstone
+Desert --> Cactus_Garden : Cactus_1
+Desert --> Sandstone_Ruins : Sandstone_Rough+Sand
+Desert --> Thorium_Desert_Mine : Sand
+Palo_Drywood --> Saltbush_Dunes : Desert_Saltbush
+Red_Dunes --> Cactus_Garden : Sand_Red
+White_Dunes --> Saltbush_Dunes : Sand_White
+Cactus_Garden --> Scorched_Desert_Cache : Cactus_Flower
+Sandstone_Ruins --> Desert : Sandstone
+Sandstone_Ruins --> Thorium_Desert_Mine : Desert_Fossil
+@enduml
+
+
+@startuml Expedition_Forest
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Forest and Wood Lines\n(detail view)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "IL 2" #B8F5B8 {
+  class Oak_Forest {
+    IL: 2 | Forest
+    ..Crystal cost..
+    8x Fibre + 4x Oak
+    ..Key drops..
+    Oak, Leaves_Oak, Fruit_Apple
+    Tree_Bark, Tree_Sap, Life_Essence
+  }
+
+}
+
+package "IL 3" #B8F5B8 {
+  class Beech_Forest {
+    IL: 3 | Forest
+    ..Crystal cost..
+    12x Oak + 8x Fibre
+    ..Key drops..
+    Beech, Leaves_Autumn_Floor, Fruit_Berries_Red
+    Tree_Bark, Tree_Sap, Fibre
+  }
+
+  class Birch_Forest {
+    IL: 3 | Forest
+    ..Crystal cost..
+    12x Beech + 8x Fibre
+    ..Key drops..
+    Birch, Leaves_Autumn_Floor, Fruit_Pinkberry
+    Tree_Bark, Tree_Sap, Vine
+  }
+
+  class Bramble_Thicket {
+    IL: 3 | Forest
+    ..Crystal cost..
+    10x Bush + 8x Fibre
+    ..Key drops..
+    Bramble_Moss_Twisted, Vine, Vine_Rug
+    Roots_Leafy, Tree_Bark, Tree_Sap
+  }
+
+  class Marsh_Reeds {
+    IL: 3 | Forest
+    ..Crystal cost..
+    10x Grass_Lush + 8x Fibre
+    ..Key drops..
+    Reeds_Marsh, Barnacles, Seaweed_Grass
+    Seaweed_Grass_Stack, Water_Essence, Roots_Cave_Small
+  }
+
+}
+
+package "IL 4" #B8F5B8 {
+  class Ash_Grove {
+    IL: 4 | Forest
+    ..Crystal cost..
+    12x Maple + 6x Birch
+    ..Key drops..
+    Ash, Roots_Leafy, Bramble_Moss_Twisted
+    Tree_Bark, Charcoal, Fire_Essence
+  }
+
+  class Aspen_Grove {
+    IL: 4 | Forest
+    ..Crystal cost..
+    12x Birch + 8x Tree_Bark
+    ..Key drops..
+    Aspen, Leaves_Autumn_Floor, Flower_Common_White
+    Tree_Bark, Tree_Sap, Life_Essence
+  }
+
+  class Maple_Forest {
+    IL: 4 | Forest
+    ..Crystal cost..
+    12x Birch + 8x Tree_Sap
+    ..Key drops..
+    Maple, Leaves_Autumn_Floor, Fruit_Berries_Red
+    Tree_Sap, Tree_Bark, Lavender_Block
+  }
+
+}
+
+package "IL 5" #B8F5B8 {
+  class Bamboo_Jungle {
+    IL: 5 | Forest
+    ..Crystal cost..
+    12x Reeds_Marsh + 6x Birch
+    ..Key drops..
+    Bamboo, Jungle, Leaves_Jungle_Floor
+    Vine, Reeds_Marsh, Fruit_Mango
+  }
+
+  class Cedar_Woods {
+    IL: 5 | Forest
+    ..Crystal cost..
+    12x Ash + 6x Birch
+    ..Key drops..
+    Cedar, Roots_Leafy, Tree_Bark
+    Tree_Sap, Stick, Fibre
+  }
+
+  class Fir_Woods {
+    IL: 5 | Forest
+    ..Crystal cost..
+    12x Cedar + 6x Birch
+    ..Key drops..
+    Fir, Roots_Leafy, Leaves_Autumn_Floor
+    Tree_Bark, Tree_Sap, Life_Essence
+  }
+
+}
+
+package "IL 6" #B8F5B8 {
+  class Camphor_Grove {
+    IL: 6 | Forest
+    ..Crystal cost..
+    10x Cedar + 6x Life_Essence
+    ..Key drops..
+    Camphor, Flower_Common_White, Petals_White
+    Tree_Sap, Tree_Bark, Life_Essence
+  }
+
+  class Jungle {
+    IL: 6 | Forest
+    ..Crystal cost..
+    12x Bamboo + 8x Jungle
+    ..Key drops..
+    Jungle, Banyan, Leaves_Jungle_Floor
+    Vine, Fruit_Mango, Life_Essence
+  }
+
+  class Redwood_Forest {
+    IL: 6 | Forest
+    ..Crystal cost..
+    12x Fir + 8x Maple
+    ..Key drops..
+    Redwood, Vine, Roots_Leafy
+    Tree_Bark, Tree_Sap, Life_Essence
+  }
+
+  class Sallow_Wetland {
+    IL: 6 | Forest
+    ..Crystal cost..
+    10x Reeds_Marsh + 6x Water_Essence
+    ..Key drops..
+    Sallow, Barnacles, Reeds_Marsh
+    Seaweed_Grass, Water_Essence, Roots_Leafy
+  }
+
+  class Silk_Warren {
+    IL: 6 | Forest
+    ..Crystal cost..
+    12x Vine + 8x Maple
+    ..Key drops..
+    Scrap_Silk, Bolt_Silk, Chitin_Sturdy
+    Fibre, Sinue_Cindersinue, Life_Essence
+  }
+
+}
+
+package "IL 7" #B8F5B8 {
+  class Banyan_Jungle {
+    IL: 7 | Forest
+    ..Crystal cost..
+    12x Jungle + 12x Vine
+    ..Key drops..
+    Banyan, Gumboab, Leaves_Jungle_Floor
+    Roots_Leafy, Fruit_Mango, Tree_Sap
+  }
+
+  class Blue_Fig_Grove {
+    IL: 7 | Forest
+    ..Crystal cost..
+    10x Camphor + 8x Maple
+    ..Key drops..
+    Fig_Blue, Fruit_Azure, Fruit_Pinkberry
+    Leaves_Jungle_Floor, Tree_Sap, Life_Essence
+  }
+
+  class Primal_Jungle {
+    IL: 7 | Forest
+    ..Crystal cost..
+    12x Jungle + 8x Reeds_Marsh
+    ..Key drops..
+    Jungle_Fern_Giant, Glowing_Jungle_Plant, Primal_Fern
+    Glowcap_Jungle, Toxic_Jungle_Vine, Giant_Jungle_Leaf
+  }
+
+  class Spiral_Woods {
+    IL: 7 | Forest
+    ..Crystal cost..
+    10x Redwood + 8x Maple
+    ..Key drops..
+    Spiral, Fruit_Spiral, Vine_Rug
+    Roots_Leafy, Tree_Sap, Life_Essence
+  }
+
+}
+
+package "IL 8" #B8F5B8 {
+  class Azure_Forest {
+    IL: 8 | Forest
+    ..Crystal cost..
+    8x Fruit_Azure + 8x Maple
+    ..Key drops..
+    Azure, Fruit_Azure, Mush_Blue
+    Mush_Common_Blue, Ice_Essence
+  }
+
+  class Storm_Leather_Camp {
+    IL: 8 | Forest
+    ..Crystal cost..
+    6x Lightning_Essence + 8x Leather_Medium
+    ..Key drops..
+    Hide_Storm, Leather_Storm, Leather_Medium
+    Leather_Heavy, Leather_Soft, Chitin_Sturdy
+  }
+
+  class Storm_Loom {
+    IL: 8 | Forest
+    ..Crystal cost..
+    8x Lightning_Essence + 8x Scrap_Silk
+    ..Key drops..
+    Scrap_Stormsilk, Bolt_Stormsilk, Lightning_Essence
+    Stormbark, Fruit_Windwillow, Motes_Light
+  }
+
+  class Windwillow_Grove {
+    IL: 8 | Forest
+    ..Crystal cost..
+    10x Spiral + 6x Lightning_Essence
+    ..Key drops..
+    Windwillow, Fruit_Windwillow, Vine
+    Petals_White, Lightning_Essence, Tree_Sap
+  }
+
+  class Wisteria_Wildwood {
+    IL: 8 | Forest
+    ..Crystal cost..
+    10x Spiral + 8x Maple
+    ..Key drops..
+    Wisteria_Wild, Petals_White, Vine_Rug
+    Fruit_Pinkberry, Tree_Sap, Life_Essence
+  }
+
+}
+
+package "IL 9" #B8F5B8 {
+  class Crystal_Grove {
+    IL: 9 | Forest
+    ..Crystal cost..
+    10x Azure + 2x Zephyr
+    ..Key drops..
+    Crystal, Bolt_Prismaloom, Scrap_Prismaloom
+    Motes_Light
+  }
+
+  class Stormbark_Woods {
+    IL: 9 | Forest
+    ..Crystal cost..
+    10x Windwillow + 8x Lightning_Essence
+    ..Key drops..
+    Stormbark, Fruit_Windwillow, Lightning_Essence
+    Bolt_Stormsilk, Scrap_Stormsilk, Hide_Storm
+  }
+
+}
+
+' Internal progression links for this lane
+Oak_Forest --> Beech_Forest : Oak
+Beech_Forest --> Birch_Forest : Beech
+Beech_Forest --> Aspen_Grove : Tree_Bark
+Beech_Forest --> Maple_Forest : Tree_Sap
+Birch_Forest --> Ash_Grove : Birch
+Birch_Forest --> Aspen_Grove : Birch
+Birch_Forest --> Maple_Forest : Birch
+Birch_Forest --> Bamboo_Jungle : Birch
+Birch_Forest --> Cedar_Woods : Birch
+Birch_Forest --> Fir_Woods : Birch
+Marsh_Reeds --> Bamboo_Jungle : Reeds_Marsh
+Ash_Grove --> Cedar_Woods : Ash
+Maple_Forest --> Ash_Grove : Maple
+Maple_Forest --> Redwood_Forest : Maple
+Maple_Forest --> Silk_Warren : Maple
+Maple_Forest --> Blue_Fig_Grove : Maple
+Maple_Forest --> Spiral_Woods : Maple
+Maple_Forest --> Azure_Forest : Maple
+Maple_Forest --> Wisteria_Wildwood : Maple
+Bamboo_Jungle --> Jungle : Bamboo+Jungle
+Bamboo_Jungle --> Sallow_Wetland : Reeds_Marsh
+Bamboo_Jungle --> Silk_Warren : Vine
+Cedar_Woods --> Fir_Woods : Cedar
+Cedar_Woods --> Camphor_Grove : Cedar
+Fir_Woods --> Camphor_Grove : Life_Essence
+Fir_Woods --> Redwood_Forest : Fir
+Camphor_Grove --> Blue_Fig_Grove : Camphor
+Jungle --> Banyan_Jungle : Jungle+Vine
+Jungle --> Primal_Jungle : Jungle
+Redwood_Forest --> Spiral_Woods : Redwood
+Sallow_Wetland --> Primal_Jungle : Reeds_Marsh
+Silk_Warren --> Storm_Loom : Scrap_Silk
+Blue_Fig_Grove --> Azure_Forest : Fruit_Azure
+Spiral_Woods --> Windwillow_Grove : Spiral
+Spiral_Woods --> Wisteria_Wildwood : Spiral
+Azure_Forest --> Crystal_Grove : Azure
+Storm_Loom --> Stormbark_Woods : Lightning_Essence
+Windwillow_Grove --> Stormbark_Woods : Windwillow
+@enduml
+
+
+@startuml Expedition_Underground
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Cave, Ore and Gem Lines\n(detail view)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "IL 2" #D8D8D8 {
+  class Cave {
+    IL: 2 | Underground
+    ..Crystal cost..
+    8x Stone
+    ..Key drops..
+    Stone, Shale, Roots_Cave
+    Roots_Cave_Small, Life_Essence
+  }
+
+}
+
+package "IL 3" #D8D8D8 {
+  class Copper_Cave {
+    IL: 3 | Underground
+    ..Crystal cost..
+    16x Stone
+    ..Key drops..
+    Copper, Stone, Shale
+    Topaz, Bar_Copper
+  }
+
+  class Deep_Cave {
+    IL: 3 | Underground
+    ..Crystal cost..
+    16x Stone
+    ..Key drops..
+    Basalt, Slate, Stone_Mossy
+    Bone_Fragment, Void_Essence
+  }
+
+}
+
+package "IL 4" #D8D8D8 {
+  class Common_Mushroom_Cave {
+    IL: 4 | Underground
+    ..Crystal cost..
+    10x Roots_Cave + 10x Basalt
+    ..Key drops..
+    Mush_Block, Mush_Brown, Mush_Common_Brown
+    Mushroom_Cap_Brown, Mushroom_Shelve_Brown, Life_Essence
+  }
+
+  class Iron_Cave {
+    IL: 4 | Underground
+    ..Crystal cost..
+    12x Copper + 10x Basalt
+    ..Key drops..
+    Iron, Slate, Basalt
+    Ruby, Bar_Iron
+  }
+
+}
+
+package "IL 5" #D8D8D8 {
+  class Ancient_Forge {
+    IL: 5 | Underground
+    ..Crystal cost..
+    12x Iron + 8x Charcoal
+    ..Key drops..
+    Bar_Bronze, Bar_Copper, Bar_Iron
+    Stud_Iron, Charcoal, Powder_Boom
+  }
+
+  class Colored_Mushroom_Cave {
+    IL: 5 | Underground
+    ..Crystal cost..
+    10x Mush_Common_Brown + 10x Basalt
+    ..Key drops..
+    Mush_Green, Mush_Red, Mush_White
+    Mush_Yellow, Mush_Common_Lime, Mushroom_Cap_Green
+  }
+
+  class Gem_Cave {
+    IL: 5 | Underground
+    ..Crystal cost..
+    16x Slate + 10x Basalt
+    ..Key drops..
+    Topaz, Sapphire, Ruby
+    Emerald, Diamond, Zephyr
+  }
+
+  class Silver_Cave {
+    IL: 5 | Underground
+    ..Crystal cost..
+    12x Iron + 10x Basalt
+    ..Key drops..
+    Silver, Basalt, Sapphire
+    Bar_Silver, Motes_Light
+  }
+
+}
+
+package "IL 6" #D8D8D8 {
+  class Blue_Mushroom_Grotto {
+    IL: 6 | Underground
+    ..Crystal cost..
+    8x Mush_Blue + 10x Iron
+    ..Key drops..
+    Mush_Blue, Mush_Common_Blue, Mushroom_Flatcap_Blue
+    Glow_Mush_Blue, Ice_Essence
+  }
+
+  class Gold_Cave {
+    IL: 6 | Underground
+    ..Crystal cost..
+    12x Silver + 10x Iron
+    ..Key drops..
+    Gold, Slate, Emerald
+    Bar_Gold, Lightning_Essence
+  }
+
+  class Redcap_Mushroom_Cave {
+    IL: 6 | Underground
+    ..Crystal cost..
+    8x Mush_Red + 10x Iron
+    ..Key drops..
+    Mushroom_Cap_Red, Mushroom_Cap_White, Mushroom_Flatcap_Green
+    Glow_Mush_Green, Glow_Mush_Orange, Life_Essence
+  }
+
+  class Thorium_Cave {
+    IL: 6 | Underground
+    ..Crystal cost..
+    10x Gold + 10x Iron
+    ..Key drops..
+    Thorium, Volcanic, Diamond
+    Bar_Thorium, Fire_Essence
+  }
+
+}
+
+package "IL 7" #D8D8D8 {
+  class Mithril_Cave {
+    IL: 7 | Underground
+    ..Crystal cost..
+    10x Thorium + 10x Iron
+    ..Key drops..
+    Mithril, Diamond, Zephyr
+    Bar_Mithril, Lightning_Essence
+  }
+
+}
+
+package "IL 8" #D8D8D8 {
+  class Cobalt_Depths {
+    IL: 8 | Underground
+    ..Crystal cost..
+    10x Mithril + 2x Diamond
+    ..Key drops..
+    Cobalt, Basalt, Ice
+    Bar_Cobalt, Ice_Essence
+  }
+
+  class Dino_Caverns {
+    IL: 8 | Underground
+    ..Crystal cost..
+    10x Jungle_Fern_Giant + 12x Volcanic
+    ..Key drops..
+    Primal_Stone, Fossil_Stone, Amber
+    Amber_Encased, Dinosaur_Fossil, Dinosaur_Bone
+  }
+
+  class Glowing_Mushroom_Cavern {
+    IL: 8 | Underground
+    ..Crystal cost..
+    8x Glow_Mush_Blue + 8x Mithril
+    ..Key drops..
+    Glow_Mush_Green, Glow_Mush_Orange, Glow_Mush_Red
+    Glow_Mush_Purple, Glow_Mush_Violet, Motes_Light
+  }
+
+  class Petrified_Forest {
+    IL: 8 | Underground
+    ..Crystal cost..
+    16x Stone_Mossy + 6x Void_Essence
+    ..Key drops..
+    Petrified, Stone_Mossy, Slate
+    Bone_Fragment, Void_Essence, Roots_Cave
+  }
+
+}
+
+package "IL 9" #D8D8D8 {
+  class Adamantite_Depths {
+    IL: 9 | Underground
+    ..Crystal cost..
+    10x Cobalt + 8x Mithril
+    ..Key drops..
+    Adamantite, Volcanic, Diamond
+    Bar_Adamantite, Fire_Essence
+  }
+
+  class Primal_Iron_Mine {
+    IL: 9 | Underground
+    ..Crystal cost..
+    12x Primal_Stone + 6x Dinosaur_Bone
+    ..Key drops..
+    Primal_Iron, Amber_Encased, Dinosaur_Fossil
+    Primal_Core, Dinosaur_Bone, Fire_Essence
+  }
+
+  class Primal_Trophy_Cache {
+    IL: 9 | Underground
+    ..Crystal cost..
+    4x Primal_Core + 8x Dinosaur_Bone
+    ..Key drops..
+    Tooth_CaveRex, Claw_CaveRaptor, Scale_Dimetrodon
+    Hide_Trillodon, Feather_Pterodactyl, Primal_Meat
+  }
+
+}
+
+' Internal progression links for this lane
+Cave --> Copper_Cave : Stone
+Cave --> Deep_Cave : Stone
+Cave --> Common_Mushroom_Cave : Roots_Cave
+Copper_Cave --> Iron_Cave : Copper
+Deep_Cave --> Common_Mushroom_Cave : Basalt
+Deep_Cave --> Iron_Cave : Basalt
+Deep_Cave --> Petrified_Forest : Stone_Mossy
+Common_Mushroom_Cave --> Colored_Mushroom_Cave : Mush_Common_Brown
+Iron_Cave --> Ancient_Forge : Iron
+Iron_Cave --> Colored_Mushroom_Cave : Basalt
+Iron_Cave --> Gem_Cave : Slate+Basalt
+Iron_Cave --> Silver_Cave : Iron+Basalt
+Iron_Cave --> Blue_Mushroom_Grotto : Iron
+Iron_Cave --> Gold_Cave : Iron
+Iron_Cave --> Redcap_Mushroom_Cave : Iron
+Iron_Cave --> Thorium_Cave : Iron
+Iron_Cave --> Mithril_Cave : Iron
+Colored_Mushroom_Cave --> Redcap_Mushroom_Cave : Mush_Red
+Silver_Cave --> Gold_Cave : Silver
+Blue_Mushroom_Grotto --> Glowing_Mushroom_Cavern : Glow_Mush_Blue
+Gold_Cave --> Thorium_Cave : Gold
+Thorium_Cave --> Mithril_Cave : Thorium
+Thorium_Cave --> Dino_Caverns : Volcanic
+Mithril_Cave --> Cobalt_Depths : Mithril+Diamond
+Mithril_Cave --> Glowing_Mushroom_Cavern : Mithril
+Mithril_Cave --> Adamantite_Depths : Mithril
+Cobalt_Depths --> Adamantite_Depths : Cobalt
+Dino_Caverns --> Primal_Iron_Mine : Primal_Stone+Dinosaur_Bone
+Dino_Caverns --> Primal_Trophy_Cache : Dinosaur_Bone
+Primal_Iron_Mine --> Primal_Trophy_Cache : Primal_Core
+@enduml
+
+
+@startuml Expedition_Cold
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Cold / Ice Line\n(detail view)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "IL 4" #DDEEFF {
+  class Snowfield {
+    IL: 4 | Cold
+    ..Crystal cost..
+    8x Ice + 12x Snow
+    ..Key drops..
+    Snow, Snow_Packed, Snow_Shrub
+    Frozen_Grass, Ice_Essence, Ice
+  }
+
+}
+
+package "IL 5" #DDEEFF {
+  class Frozen_Lake {
+    IL: 5 | Cold
+    ..Crystal cost..
+    16x Snow + 6x Ice_Essence
+    ..Key drops..
+    Ice_Clear, Ice_Blue, Frozen_Water
+    Ice_Flower_Blue, Ice_Flower_White, Water_Essence
+  }
+
+}
+
+package "IL 6" #DDEEFF {
+  class Frost_Fern_Forest {
+    IL: 6 | Cold
+    ..Crystal cost..
+    12x Snow_Packed + 10x Ice_Permafrost
+    ..Key drops..
+    Frost_Fern, Ice_Flower_Blue, Ice_Flower_White
+    Frozen_Grass, Snow_Shrub, Ice
+  }
+
+  class Permafrost_Cave {
+    IL: 6 | Cold
+    ..Crystal cost..
+    12x Ice_Blue + 8x Ice_Essence
+    ..Key drops..
+    Permafrost, Frozen_Soil, Ice_Frosted
+    Ice_Permafrost, Frozen_Stone, Ice_Essence
+  }
+
+}
+
+package "IL 7" #DDEEFF {
+  class Frozen_Trophy_Cache {
+    IL: 7 | Cold
+    ..Crystal cost..
+    8x Ice_Flower_Blue + 6x Ice_Essence
+    ..Key drops..
+    Fur_PolarBear, Fur_Yeti, Horn_Ram
+    Tusk_Moose, Scale_IceDragon, Ice_Essence
+  }
+
+}
+
+package "IL 8" #DDEEFF {
+  class Cobalt_Ice_Mine {
+    IL: 8 | Cold
+    ..Crystal cost..
+    10x Frozen_Stone + 10x Ice_Permafrost
+    ..Key drops..
+    Cobalt_Ice, Glacial_Crystal, Frozen_Stone
+    Ice_Blue, Ice_Essence, Sapphire
+  }
+
+  class Ice_Woodland {
+    IL: 8 | Cold
+    ..Crystal cost..
+    16x Snow + 8x Ice_Essence
+    ..Key drops..
+    Ice, Snow, Ice_Blue
+    Snow_Shrub, Ice_Essence, Ice
+  }
+
+}
+
+' Internal progression links for this lane
+Snowfield --> Frozen_Lake : Snow+Ice_Essence
+Snowfield --> Frost_Fern_Forest : Snow_Packed
+Snowfield --> Permafrost_Cave : Ice_Essence
+Snowfield --> Ice_Woodland : Snow
+Frozen_Lake --> Permafrost_Cave : Ice_Blue
+Frost_Fern_Forest --> Frozen_Trophy_Cache : Ice_Flower_Blue
+Permafrost_Cave --> Frost_Fern_Forest : Ice_Permafrost
+Permafrost_Cave --> Cobalt_Ice_Mine : Frozen_Stone+Ice_Permafrost
+Frozen_Trophy_Cache --> Ice_Woodland : Ice_Essence
+Ice_Woodland --> Snowfield : Snow
+@enduml
+
+
+@startuml Expedition_Inferno
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Inferno / Fire Line\n(detail view)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "IL 8" #FFCC99 {
+  class Cinder_Loom {
+    IL: 8 | Inferno
+    ..Crystal cost..
+    8x Fire_Essence + 8x Scrap_Wool
+    ..Key drops..
+    Scrap_Cindercloth, Bolt_Cindercloth, Charcoal
+    Fire_Essence, Burnt, Volcanic
+  }
+
+  class Volcanic_Badlands {
+    IL: 8 | Inferno
+    ..Crystal cost..
+    16x Volcanic + 8x Fire_Essence
+    ..Key drops..
+    Volcanic_Ash, Lava_Rock_Cracked, Volcanic
+    Charcoal, Fire_Essence
+  }
+
+}
+
+package "IL 9" #FFCC99 {
+  class Deep_Inferno {
+    IL: 9 | Inferno
+    ..Crystal cost..
+    12x Lava_Rock_Cracked + 10x Fire_Essence
+    ..Key drops..
+    Volcanic, Lava_Rock_Cracked, Fire_Essence
+    Void_Essence, Bolt_Cindercloth, Scrap_Cindercloth
+  }
+
+  class Fire_Woodland {
+    IL: 9 | Inferno
+    ..Crystal cost..
+    10x Burnt + 8x Fire_Essence
+    ..Key drops..
+    Fire, Burnt, Charcoal
+    Fire_Essence, Bolt_Cindercloth, Scrap_Cindercloth
+  }
+
+}
+
+' Internal progression links for this lane
+Cinder_Loom --> Deep_Inferno : Fire_Essence
+Cinder_Loom --> Fire_Woodland : Burnt+Fire_Essence
+Volcanic_Badlands --> Deep_Inferno : Lava_Rock_Cracked
+@enduml
+
+
+@startuml Expedition_Dark
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Dark / Graveyard Line\n(detail view)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "IL 6" #D9C2FF {
+  class Essence_Font {
+    IL: 6 | Dark
+    ..Crystal cost..
+    12x Stone_Mossy + 6x Bone_Fragment
+    ..Key drops..
+    Fire_Essence, Ice_Essence, Life_Essence
+    Lightning_Essence, Void_Essence, Water_Essence
+    Motes_Light, Voidheart
+  }
+
+}
+
+package "IL 7" #D9C2FF {
+  class Dark_Leather_Camp {
+    IL: 7 | Dark
+    ..Crystal cost..
+    8x Leather_Light + 6x Void_Essence
+    ..Key drops..
+    Hide_Dark, Leather_Dark, Hide_Scaled
+    Leather_Scaled, Hide_Prismic, Leather_Prismic
+  }
+
+  class Poison_Mushroom_Grotto {
+    IL: 7 | Dark
+    ..Crystal cost..
+    8x Mushroom_Cap_Green + 4x Sac_Venom
+    ..Key drops..
+    Mush_Purple, Mushroom_Cap_Poison, Glow_Mush_Purple
+    Glow_Mush_Violet, Sac_Venom, Void_Essence
+  }
+
+}
+
+package "IL 8" #D9C2FF {
+  class Poisoned_Woods {
+    IL: 8 | Dark
+    ..Crystal cost..
+    8x Wisteria_Wild + 6x Void_Essence
+    ..Key drops..
+    Poisoned, Leaves_Poisoned_Floor, Fruit_Poison
+    Mushroom_Cap_Poison, Sac_Venom, Void_Essence
+  }
+
+  class Shadow_Loom {
+    IL: 8 | Dark
+    ..Crystal cost..
+    8x Void_Essence + 8x Scrap_Silk
+    ..Key drops..
+    Scrap_Shadoweave, Bolt_Shadoweave, Scrap_Prismaloom
+    Bolt_Prismaloom, Voidheart, Motes_Light
+  }
+
+}
+
+package "IL 10" #D9C2FF {
+  class Onyxium_Abyss {
+    IL: 10 | Dark
+    ..Crystal cost..
+    8x Adamantite + 8x Void_Essence
+    ..Key drops..
+    Onyxium, Volcanic, Stone_Mossy
+    Voidheart, Bar_Onyxium, Void_Essence
+  }
+
+}
+
+package "IL 11" #D9C2FF {
+  class Prisma_Rift {
+    IL: 11 | Dark
+    ..Crystal cost..
+    8x Onyxium + 4x Voidheart
+    ..Key drops..
+    Prisma, Zephyr, Bar_Prisma
+    Bolt_Prismaloom, Scrap_Prismaloom
+  }
+
+}
+
+' Internal progression links for this lane
+Essence_Font --> Dark_Leather_Camp : Void_Essence
+Poison_Mushroom_Grotto --> Poisoned_Woods : Void_Essence
+Poison_Mushroom_Grotto --> Shadow_Loom : Void_Essence
+Poisoned_Woods --> Poison_Mushroom_Grotto : Sac_Venom
+Onyxium_Abyss --> Prisma_Rift : Onyxium+Voidheart
+@enduml
+
+
+@startuml ExpeditionCrossLaneLinks
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam packageFontSize 15
+skinparam groupInheritance 2
+skinparam linetype ortho
+skinparam shadowing false
+skinparam nodesep 80
+skinparam ranksep 70
+hide empty members
+
+title Cross-lane Expedition Dependencies\n(links between different categories only)
+
+legend right
+  Arrows mean:
+  drops from A are used to craft B's crystal
+
+  Schema:
+  Crystal.Input only
+  No Small / Large
+  No crystal shards
+endlegend
+
+
+package "Surface / Starter Line" #DDFFDD {
+  class Meadow
+  class Rocky_Meadow
+  class Textile_Cottage
+  class BottleTree_Savanna
+  class Feather_Rookery
+  class Leatherworker_Camp
+  class Palm_Coast
+  class Palo_Drywood
+  class Scorched_Desert_Cache
+}
+
+package "Forest and Wood Lines" #B8F5B8 {
+  class Oak_Forest
+  class Beech_Forest
+  class Birch_Forest
+  class Bramble_Thicket
+  class Marsh_Reeds
+  class Ash_Grove
+  class Sallow_Wetland
+  class Silk_Warren
+  class Primal_Jungle
+  class Azure_Forest
+  class Storm_Leather_Camp
+  class Storm_Loom
+  class Windwillow_Grove
+  class Wisteria_Wildwood
+  class Crystal_Grove
+}
+
+package "Cave, Ore and Gem Lines" #D8D8D8 {
+  class Cave
+  class Deep_Cave
+  class Ancient_Forge
+  class Colored_Mushroom_Cave
+  class Blue_Mushroom_Grotto
+  class Thorium_Cave
+  class Mithril_Cave
+  class Cobalt_Depths
+  class Dino_Caverns
+  class Petrified_Forest
+  class Adamantite_Depths
+}
+
+package "Cold / Ice Line" #DDEEFF {
+  class Snowfield
+  class Frozen_Lake
+  class Frozen_Trophy_Cache
+}
+
+package "Inferno / Fire Line" #FFCC99 {
+  class Cinder_Loom
+  class Volcanic_Badlands
+  class Deep_Inferno
+}
+
+package "Dark / Graveyard Line" #D9C2FF {
+  class Essence_Font
+  class Dark_Leather_Camp
+  class Poison_Mushroom_Grotto
+  class Poisoned_Woods
+  class Shadow_Loom
+  class Onyxium_Abyss
+}
+
+Meadow --> Oak_Forest : Fibre
+Meadow --> Beech_Forest : Fibre
+Meadow --> Birch_Forest : Fibre
+Meadow --> Bramble_Thicket : Bush+Fibre
+Meadow --> Marsh_Reeds : Grass_Lush+Fibre
+Cave --> Rocky_Meadow : Stone
+Rocky_Meadow --> Cave : Stone
+Beech_Forest --> Meadow : Fibre
+Beech_Forest --> Textile_Cottage : Fibre
+Beech_Forest --> BottleTree_Savanna : Fibre
+Beech_Forest --> Feather_Rookery : Beech+Fibre
+Beech_Forest --> Leatherworker_Camp : Fibre
+Beech_Forest --> Palo_Drywood : Fibre
+Deep_Cave --> Essence_Font : Stone_Mossy
+Marsh_Reeds --> Palm_Coast : Seaweed_Grass+Water_Essence
+Ash_Grove --> Ancient_Forge : Charcoal
+Textile_Cottage --> Cinder_Loom : Scrap_Wool
+Colored_Mushroom_Cave --> Poison_Mushroom_Grotto : Mushroom_Cap_Green
+Feather_Rookery --> Essence_Font : Bone_Fragment
+Frozen_Lake --> Sallow_Wetland : Water_Essence
+Leatherworker_Camp --> Dark_Leather_Camp : Leather_Light
+Blue_Mushroom_Grotto --> Frozen_Trophy_Cache : Ice_Essence
+Essence_Font --> Scorched_Desert_Cache : Fire_Essence
+Essence_Font --> Cinder_Loom : Fire_Essence
+Essence_Font --> Volcanic_Badlands : Fire_Essence
+Silk_Warren --> Shadow_Loom : Scrap_Silk
+Thorium_Cave --> Volcanic_Badlands : Volcanic
+Mithril_Cave --> Storm_Leather_Camp : Lightning_Essence
+Mithril_Cave --> Storm_Loom : Lightning_Essence
+Mithril_Cave --> Windwillow_Grove : Lightning_Essence
+Mithril_Cave --> Crystal_Grove : Zephyr
+Poison_Mushroom_Grotto --> Petrified_Forest : Void_Essence
+Primal_Jungle --> Dino_Caverns : Jungle_Fern_Giant
+Azure_Forest --> Blue_Mushroom_Grotto : Mush_Blue
+Cobalt_Depths --> Snowfield : Ice
+Wisteria_Wildwood --> Poisoned_Woods : Wisteria_Wild
+Adamantite_Depths --> Onyxium_Abyss : Adamantite
+Deep_Inferno --> Onyxium_Abyss : Void_Essence
+@enduml

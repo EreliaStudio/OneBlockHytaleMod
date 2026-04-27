@@ -50,14 +50,22 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Surface",
           "Recipes": [
-            "OneBlock_Crystal_Desert_Small",
-            "OneBlock_Crystal_Desert_Large",
-            "OneBlock_Crystal_Egyptian_Temple_Small",
-            "OneBlock_Crystal_Egyptian_Temple_Large",
-            "OneBlock_Crystal_Meadow_Small",
-            "OneBlock_Crystal_Meadow_Large",
-            "OneBlock_Crystal_Plains_Small",
-            "OneBlock_Crystal_Plains_Large"
+            "OneBlock_Crystal_Meadow",
+            "OneBlock_Crystal_Plains",
+            "OneBlock_Crystal_Flower_Field",
+            "OneBlock_Crystal_Farmland",
+            "OneBlock_Crystal_Garden",
+            "OneBlock_Crystal_Cactus_Field",
+            "OneBlock_Crystal_Desert",
+            "OneBlock_Crystal_Desert_Oasis",
+            "OneBlock_Crystal_Seed_Vault",
+            "OneBlock_Crystal_Textile_Workshop",
+            "OneBlock_Crystal_Egyptian_Temple",
+            "OneBlock_Crystal_Desert_Ruins",
+            "OneBlock_Crystal_Ancient_Grove",
+            "OneBlock_Crystal_Mystic_Seeds",
+            "OneBlock_Crystal_Amber_Dig",
+            "OneBlock_Crystal_Advanced_Textile"
           ]
         },
         {
@@ -65,18 +73,20 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Forest",
           "Recipes": [
-            "OneBlock_Crystal_Forest_Small",
-            "OneBlock_Crystal_Forest_Large",
-            "OneBlock_Crystal_Deep_Forest_Small",
-            "OneBlock_Crystal_Deep_Forest_Large",
-            "OneBlock_Crystal_Jungle_Small",
-            "OneBlock_Crystal_Jungle_Large",
-            "OneBlock_Crystal_Azure_Forest_Small",
-            "OneBlock_Crystal_Azure_Forest_Large",
-            "OneBlock_Crystal_Fiery_Forest_Small",
-            "OneBlock_Crystal_Fiery_Forest_Large",
-            "OneBlock_Crystal_Primal_Jungle_Small",
-            "OneBlock_Crystal_Primal_Jungle_Large"
+            "OneBlock_Crystal_Forest",
+            "OneBlock_Crystal_Autumn_Forest",
+            "OneBlock_Crystal_Deep_Forest",
+            "OneBlock_Crystal_Swamp",
+            "OneBlock_Crystal_Tropical_Forest",
+            "OneBlock_Crystal_Mushroom_Grove",
+            "OneBlock_Crystal_Primal_Jungle",
+            "OneBlock_Crystal_Jungle",
+            "OneBlock_Crystal_Poison_Grove",
+            "OneBlock_Crystal_Redwood_Grove",
+            "OneBlock_Crystal_Azure_Forest",
+            "OneBlock_Crystal_Mystical_Forest",
+            "OneBlock_Crystal_Storm_Wilds",
+            "OneBlock_Crystal_Fiery_Forest"
           ]
         },
         {
@@ -84,18 +94,18 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Underground",
           "Recipes": [
-            "OneBlock_Crystal_Cave_Small",
-            "OneBlock_Crystal_Cave_Large",
-            "OneBlock_Crystal_Deep_Cave_Small",
-            "OneBlock_Crystal_Deep_Cave_Large",
-            "OneBlock_Crystal_The_Abyss_Small",
-            "OneBlock_Crystal_The_Abyss_Large",
-            "OneBlock_Crystal_Gem_Cave_Small",
-            "OneBlock_Crystal_Gem_Cave_Large",
-            "OneBlock_Crystal_Frozen_Cave_Small",
-            "OneBlock_Crystal_Frozen_Cave_Large",
-            "OneBlock_Crystal_Dino_Caverns_Small",
-            "OneBlock_Crystal_Dino_Caverns_Large"
+            "OneBlock_Crystal_Cave",
+            "OneBlock_Crystal_Gem_Cave",
+            "OneBlock_Crystal_Precious_Vein",
+            "OneBlock_Crystal_Fungi_Cavern",
+            "OneBlock_Crystal_Deep_Cave",
+            "OneBlock_Crystal_Deep_Mine",
+            "OneBlock_Crystal_Frozen_Cave",
+            "OneBlock_Crystal_Glowing_Cavern",
+            "OneBlock_Crystal_Dino_Caverns",
+            "OneBlock_Crystal_Crystal_Depths",
+            "OneBlock_Crystal_The_Abyss",
+            "OneBlock_Crystal_Abyssal_Mine"
           ]
         },
         {
@@ -103,10 +113,10 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Cold",
           "Recipes": [
-            "OneBlock_Crystal_Snow_Small",
-            "OneBlock_Crystal_Snow_Large",
-            "OneBlock_Crystal_Frozen_Forest_Small",
-            "OneBlock_Crystal_Frozen_Forest_Large"
+            "OneBlock_Crystal_Snow",
+            "OneBlock_Crystal_Ice_Fields",
+            "OneBlock_Crystal_Frozen_Forest",
+            "OneBlock_Crystal_Glacial_Depths"
           ]
         },
         {
@@ -114,12 +124,9 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Inferno",
           "Recipes": [
-            "OneBlock_Crystal_Inferno_Small",
-            "OneBlock_Crystal_Inferno_Large",
-            "OneBlock_Crystal_Deep_Inferno_Small",
-            "OneBlock_Crystal_Deep_Inferno_Large",
-            "OneBlock_Crystal_Volcanic_Badlands_Small",
-            "OneBlock_Crystal_Volcanic_Badlands_Large"
+            "OneBlock_Crystal_Inferno",
+            "OneBlock_Crystal_Volcanic_Badlands",
+            "OneBlock_Crystal_Deep_Inferno"
           ]
         },
         {
@@ -127,12 +134,9 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Dark",
           "Recipes": [
-            "OneBlock_Crystal_Graveyard_Small",
-            "OneBlock_Crystal_Graveyard_Large",
-            "OneBlock_Crystal_Ancient_Graveyard_Small",
-            "OneBlock_Crystal_Ancient_Graveyard_Large",
-            "OneBlock_Crystal_Cursed_Crypt_Small",
-            "OneBlock_Crystal_Cursed_Crypt_Large"
+            "OneBlock_Crystal_Graveyard",
+            "OneBlock_Crystal_Ancient_Graveyard",
+            "OneBlock_Crystal_Cursed_Crypt"
           ]
         }
       ],

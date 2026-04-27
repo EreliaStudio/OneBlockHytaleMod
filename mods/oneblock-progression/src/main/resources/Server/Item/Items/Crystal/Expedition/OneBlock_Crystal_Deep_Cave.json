@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Deep_Cave.name",
+    "Description": "server.items.OneBlock_Crystal_Deep_Cave.description"
+  },
+  "Id": "OneBlock_Crystal_Deep_Cave",
+  "ItemLevel": 7,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Rock_Stone",
+        "Quantity": 12
+      },
+      {
+        "ItemId": "Ore_Copper",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Underground"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Deep_Cave"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

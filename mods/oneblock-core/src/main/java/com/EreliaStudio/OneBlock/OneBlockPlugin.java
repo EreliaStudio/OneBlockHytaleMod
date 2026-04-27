@@ -5,7 +5,6 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 
 import javax.annotation.Nonnull;
-import java.util.function.BiConsumer;
 import java.util.logging.Level;
 
 public final class OneBlockPlugin extends JavaPlugin
@@ -65,18 +64,5 @@ public final class OneBlockPlugin extends JavaPlugin
     public OneBlockDropRegistry getDropRegistry()
     {
         return dropRegistry;
-    }
-
-    private BiConsumer<String, DropableContext> expeditionCompleteCallback;
-
-    public void setExpeditionCompleteCallback(BiConsumer<String, DropableContext> callback)
-    {
-        this.expeditionCompleteCallback = callback;
-    }
-
-    public void fireExpeditionComplete(String expeditionId, DropableContext context)
-    {
-        if (expeditionCompleteCallback != null && expeditionId != null)
-            expeditionCompleteCallback.accept(expeditionId, context);
     }
 }

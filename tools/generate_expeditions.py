@@ -6,7 +6,6 @@ generate_expeditions.py — OneBlock Expedition Asset Generator
 import argparse
 import json
 import re
-import shutil
 import sys
 from pathlib import Path
 
@@ -15,11 +14,9 @@ if hasattr(sys.stdout, "reconfigure"):
 
 
 # ── Translation prefixes ──────────────────────────────────────────────────────
-# JSON needs "server."
 PREFIX_ITEMS_JSON = "server.items"
 PREFIX_BENCH_JSON = "server.benchCategories"
 
-# server.lang does NOT need "server."
 PREFIX_ITEMS_LANG = "items"
 PREFIX_BENCH_LANG = "benchCategories"
 
@@ -29,16 +26,7 @@ PROGRESSION = Path("mods/oneblock-progression/src/main/resources")
 ITEMS = PROGRESSION / "Server/Item/Items"
 LANG_FILE = PROGRESSION / "Server/Languages/en-US/server.lang"
 ENCHANTER = ITEMS / "OneBlockEnchanter/Bench_OneBlockEnchanter.json"
-WORKBENCH = ITEMS / "OneBlockWorkbench/Bench_OneBlockWorkbench.json"
 CRYSTAL_DIR = ITEMS / "Crystal/Expedition"
-BENCH_DIR = ITEMS / "ExpeditionBench"
-UNLOCK_DIR = ITEMS / "ExpeditionUnlock"
-
-BENCH_TEXTURE_DIR = PROGRESSION / "Common/Blocks/BenchTextures"
-DEFAULT_BENCH_TEXTURE = PROGRESSION / "Common/Blocks/Benches/OneBlock_ResearchStatue_Texture.png"
-
-BENCH_ICON_DIR = PROGRESSION / "Common/Icons/ItemsGenerated"
-DEFAULT_BENCH_ICON = BENCH_ICON_DIR / "OneBlock_ResearchStatue_Default.png"
 
 CORE = Path("mods/oneblock-core/src/main/resources")
 BLOCK_DIR = CORE / "Server/Item/Items/OneBlock"
@@ -52,22 +40,9 @@ ENCHANTER_CATEGORY_ORDER = [
     "Dark",
 ]
 
-WORKBENCH_CATEGORY_ORDER = [
-    "Surface",
-    "Forest",
-    "Underground",
-    "Cold",
-    "Inferno",
-    "Dark",
-]
-
 
 def _safe_eid(expedition_id: str) -> str:
     return expedition_id.replace(" ", "_")
-
-
-def _safe_drop_id(drop_id: str) -> str:
-    return drop_id.replace(":", "_").replace(" ", "_")
 
 
 def _quality(item_level: int) -> str:
@@ -80,35 +55,18 @@ def _quality(item_level: int) -> str:
 
 def _category_sort_key(category: dict) -> tuple[int, str]:
     category_id = category.get("Id", "")
-
     prefix = "OneBlock_Enchanter_"
     if category_id.startswith(prefix):
         group = category_id[len(prefix):]
-
         if group in ENCHANTER_CATEGORY_ORDER:
             return (ENCHANTER_CATEGORY_ORDER.index(group), category_id)
-
     return (len(ENCHANTER_CATEGORY_ORDER), category_id)
 
 
-def _workbench_category_sort_key(category: dict) -> tuple[int, str]:
-    category_id = category.get("Id", "")
-
-    prefix = "OneBlock_Workbench_"
-    if category_id.startswith(prefix):
-        group = category_id[len(prefix):]
-
-        if group in WORKBENCH_CATEGORY_ORDER:
-            return (WORKBENCH_CATEGORY_ORDER.index(group), category_id)
-
-    return (len(WORKBENCH_CATEGORY_ORDER), category_id)
-
-
-def build_crystal(expedition_id: str, category: str, size: str, item_level: int, inputs: list) -> dict:
+def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list) -> dict:
     eid = _safe_eid(expedition_id)
-    cid = _safe_eid(category)
-    item_id = f"OneBlock_Crystal_{eid}_{size}"
-
+    gid = _safe_eid(category)
+    item_id = f"OneBlock_Crystal_{eid}"
     return {
         "TranslationProperties": {
             "Name": f"{PREFIX_ITEMS_JSON}.{item_id}.name",
@@ -121,19 +79,11 @@ def build_crystal(expedition_id: str, category: str, size: str, item_level: int,
         "PlayerAnimationsId": "Item",
         "Interactions": {
             "Primary": {
-                "Interactions": [
-                    {
-                        "Type": "oneblock_crystal_use",
-                    }
-                ]
+                "Interactions": [{"Type": "oneblock_crystal_use"}]
             },
             "Secondary": {
-                "Interactions": [
-                    {
-                        "Type": "oneblock_crystal_use",
-                    }
-                ]
-            }
+                "Interactions": [{"Type": "oneblock_crystal_use"}]
+            },
         },
         "Recipe": {
             "Input": inputs,
@@ -141,7 +91,7 @@ def build_crystal(expedition_id: str, category: str, size: str, item_level: int,
             "BenchRequirement": [
                 {
                     "Type": "Crafting",
-                    "Categories": [f"OneBlock_Enchanter_{cid}"],
+                    "Categories": [f"OneBlock_Enchanter_{gid}"],
                     "Id": "OneBlockEnchanter",
                 }
             ],
@@ -150,167 +100,9 @@ def build_crystal(expedition_id: str, category: str, size: str, item_level: int,
         "Tags": {
             "Type": ["OneBlock_ExpeditionCrystal"],
             "OneBlockCrystalExpedition": [expedition_id],
-            "OneBlockCrystalSize": [size],
         },
         "MaxStack": 4,
         "Quality": _quality(item_level),
-    }
-
-
-
-def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
-    eid = _safe_eid(expedition_id)
-    drop_id = unlock["DropId"]
-    weight = unlock["Weight"]
-    tier = unlock["Tier"]
-    quality = unlock.get("Rank", "Common")
-    cost = unlock["Cost"]
-
-    bench_id = f"Bench_OneBlock_{eid}"
-    item_id = f"OneBlock_Unlock_{eid}_{_safe_drop_id(drop_id)}"
-    cat_id = f"{bench_id}_Tier{tier}"
-
-    return {
-        "TranslationProperties": {
-            "Name": f"{PREFIX_ITEMS_JSON}.{item_id}.name",
-            "Description": f"{PREFIX_ITEMS_JSON}.{item_id}.description",
-        },
-        "Id": item_id,
-        "ItemLevel": tier,
-        "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
-        "Categories": ["Items.RecipeDrop"],
-        "PlayerAnimationsId": "Item",
-        "Interactions": {
-		"Primary": {
-				"Interactions": [
-					{
-						"Type": "oneblock_unlock_use",
-					}
-				]
-			},
-			"Secondary": {
-				"Interactions": [
-					{
-						"Type": "oneblock_unlock_use",
-					}
-				]
-			}
-		},
-        "Recipe": {
-            "Input": cost,
-            "OutputQuantity": 1,
-            "BenchRequirement": [
-                {
-                    "Type": "Crafting",
-                    "Categories": [cat_id],
-                    "Id": bench_id,
-                }
-            ],
-        },
-        "Consumable": True,
-        "Tags": {
-            "Type": ["OneBlock_Unlock_Consumable"],
-            "OneBlockUnlockExpedition": [expedition_id],
-            "OneBlockUnlockDropId": [drop_id],
-            "OneBlockUnlockWeight": [str(weight)],
-        },
-        "MaxStack": 1,
-        "Quality": quality,
-    }
-
-
-def build_expedition_bench(
-    expedition_id: str,
-    item_level: int,
-    craft_input: list,
-    unlocks_by_tier: dict,
-    group: str,
-    knowledge_required: bool,
-) -> dict:
-    eid = _safe_eid(expedition_id)
-    gid = _safe_eid(group)
-    bench_id = f"Bench_OneBlock_{eid}"
-    item_bench_id = f"Bench_OneBlock_{eid}"
-
-    return {
-        "TranslationProperties": {
-            "Name": f"{PREFIX_ITEMS_JSON}.{item_bench_id}.name",
-            "Description": f"{PREFIX_ITEMS_JSON}.{item_bench_id}.description",
-        },
-        "Recipe": {
-            "Input": craft_input,
-            "BenchRequirement": [
-                {
-                    "Type": "Crafting",
-                    "Categories": [f"OneBlock_Workbench_{gid}"],
-                    "Id": "OneBlockWorkbench",
-                }
-            ],
-            "KnowledgeRequired": knowledge_required,
-        },
-        "Icon": f"Icons/ItemsGenerated/Bench_OneBlock_{eid}.png",
-        "Categories": ["Furniture.Benches"],
-        "BlockType": {
-            "Material": "Solid",
-            "DrawType": "Model",
-            "Opacity": "Transparent",
-            "CustomModel": "Blocks/Benches/OneBlock_ResearchStatue.blockymodel",
-            "CustomModelTexture": [
-                {
-                    "Texture": f"Blocks/BenchTextures/Bench_OneBlock_{eid}_Texture.png",
-                    "Weight": 1,
-                }
-            ],
-            "HitboxType": "Statue_Large",
-            "VariantRotation": "NESW",
-            "Bench": {
-                "Id": bench_id,
-                "Type": "Crafting",
-                "Categories": [
-                    {
-                        "Id": f"{bench_id}_Tier{tier}",
-                        "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-                        "Name": f"{PREFIX_BENCH_JSON}.{bench_id}_Tier{tier}",
-                        "Recipes": ids,
-                    }
-                    for tier, ids in sorted(unlocks_by_tier.items())
-                ],
-                "LocalOpenSoundEventId": "SFX_Workbench_Open",
-                "LocalCloseSoundEventId": "SFX_Workbench_Close",
-            },
-            "BlockEntity": {
-                "Components": {
-                    "BenchBlock": {},
-                }
-            },
-            "Gathering": {
-                "Breaking": {
-                    "GatherType": "Benches",
-                }
-            },
-            "BlockParticleSetId": "Stone",
-            "ParticleColor": "#bbbbaf",
-            "Support": {
-                "Down": [
-                    {
-                        "FaceType": "Full",
-                    }
-                ]
-            },
-            "BlockSoundSetId": "Stone",
-        },
-        "PlayerAnimationsId": "Block",
-        "IconProperties": {
-            "Scale": 0.42,
-            "Rotation": [22.5, 45.0, 22.5],
-            "Translation": [12.9, -11.7],
-        },
-        "Tags": {
-            "Type": ["Bench"],
-        },
-        "MaxStack": 1,
-        "ItemLevel": item_level,
-        "ItemSoundSetId": "ISS_Blocks_Stone",
     }
 
 
@@ -370,13 +162,8 @@ def build_lang_block(expedition_id: str) -> str:
 
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Small.name={display} Crystal (Small)",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Small.description=Consume to begin a 100-tick {display} expedition.",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Large.name={display} Crystal (Large)",
-		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Large.description=Consume to begin a 300-tick {display} expedition.",
-        f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.name={display} Bench",
-        f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_{eid}.description=An expedition bench for {display}. Upgrade it to unlock more powerful recipes.",
-        f"{PREFIX_BENCH_LANG}.Bench_OneBlock_{eid}_Tier1={display} Recipes",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.",
     ]
 
     return "\n".join(lines)
@@ -389,7 +176,6 @@ def _java_drop_expr(drop_id: str, weight: int) -> str:
     if drop_id.startswith(JAVA_ENTITY_PREFIX):
         entity = drop_id[len(JAVA_ENTITY_PREFIX):]
         return f'drop(OneBlockDropId.entityDropId("{entity}"), {weight})'
-
     return f'drop("{drop_id}", {weight})'
 
 
@@ -431,7 +217,6 @@ def _save_json(path: Path, data: dict, dry_run: bool):
     if dry_run:
         print(f"  [dry-run] Would overwrite {path}")
         return
-
     path.write_bytes(
         (json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
     )
@@ -441,15 +226,13 @@ def _save_json(path: Path, data: dict, dry_run: bool):
 def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(group)
-
     cat_id = f"OneBlock_Enchanter_{gid}"
     lang_key = f"OneBlockEnchanter_{gid}"
 
     data = _load_json(path)
     categories = data["BlockType"]["Bench"]["Categories"]
 
-    cat = next((candidate for candidate in categories if candidate["Id"] == cat_id), None)
-
+    cat = next((c for c in categories if c["Id"] == cat_id), None)
     if cat is None:
         cat = {
             "Id": cat_id,
@@ -461,87 +244,19 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     else:
         cat["Name"] = f"{PREFIX_BENCH_JSON}.{lang_key}"
 
-    for recipe_id in [
-        f"OneBlock_Crystal_{eid}_Small",
-        f"OneBlock_Crystal_{eid}_Large",
-    ]:
-        if recipe_id not in cat["Recipes"]:
-            cat["Recipes"].append(recipe_id)
+    recipe_id = f"OneBlock_Crystal_{eid}"
+    if recipe_id not in cat["Recipes"]:
+        cat["Recipes"].append(recipe_id)
 
     categories.sort(key=_category_sort_key)
-
     _save_json(path, data, dry_run)
     print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
 
-def patch_workbench(path: Path, expedition_id: str, group: str, dry_run: bool):
-    eid = _safe_eid(expedition_id)
-    gid = _safe_eid(group)
-
-    data = _load_json(path)
-    categories = data["BlockType"]["Bench"]["Categories"]
-
-    cat_id = f"OneBlock_Workbench_{gid}"
-    lang_key = f"OneBlockWorkbench_{gid}"
-    bench_item_id = f"Bench_OneBlock_{eid}"
-
-    cat = next((candidate for candidate in categories if candidate["Id"] == cat_id), None)
-
-    if cat is None:
-        cat = {
-            "Id": cat_id,
-            "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
-            "Name": f"{PREFIX_BENCH_JSON}.{lang_key}",
-            "Recipes": [],
-        }
-        categories.append(cat)
-    else:
-        cat["Name"] = f"{PREFIX_BENCH_JSON}.{lang_key}"
-
-    if bench_item_id not in cat["Recipes"]:
-        cat["Recipes"].append(bench_item_id)
-
-    categories.sort(key=_workbench_category_sort_key)
-
-    _save_json(path, data, dry_run)
-    print(f"  [patch]  Workbench ← {eid} → group {gid}")
-
-
-def append_lang_recipe(
-    path: Path,
-    item_id: str,
-    name: str,
-    description: str,
-    dry_run: bool,
-):
-    existing = path.read_text(encoding="utf-8")
-    marker = f"{PREFIX_ITEMS_LANG}.{item_id}.name"
-
-    if marker in existing:
-        print(f"  [skip]   Lang already has entry for {item_id}")
-        return
-
-    lines = [
-        f"{PREFIX_ITEMS_LANG}.{item_id}.name={name}",
-        f"{PREFIX_ITEMS_LANG}.{item_id}.description={description}",
-    ]
-
-    if dry_run:
-        print(f"  [dry-run] Would append lang entry for {item_id}")
-        return
-
-    path.write_text(
-        existing.rstrip() + "\n" + "\n".join(lines) + "\n",
-        encoding="utf-8",
-    )
-    print(f"  [patch]  lang ← {item_id}")
-
-
 def patch_lang(path: Path, expedition_id: str, dry_run: bool):
     eid = _safe_eid(expedition_id)
-
     existing = path.read_text(encoding="utf-8")
-    marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}_Small.name"
+    marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name"
 
     if marker in existing:
         print(f"  [skip]   Lang already has entries for {expedition_id}")
@@ -559,69 +274,27 @@ def patch_lang(path: Path, expedition_id: str, dry_run: bool):
 
 def patch_group_lang(path: Path, group: str, dry_run: bool):
     gid = _safe_eid(group)
-
-    entries = {
-        f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_{gid}": f"{group} Crystals",
-        f"{PREFIX_BENCH_LANG}.OneBlockWorkbench_{gid}": f"{group} Expedition Benches",
-    }
+    key = f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_{gid}"
+    value = f"{group} Crystals"
 
     existing = path.read_text(encoding="utf-8")
-    missing_lines = []
-
-    for key, value in entries.items():
-        if key not in existing:
-            missing_lines.append(f"{key}={value}")
-
-    if not missing_lines:
+    if key in existing:
         return
+
+    line = f"{key}={value}"
 
     if dry_run:
-        for line in missing_lines:
-            print(f"  [dry-run] Would append lang entry for {line.split('=', 1)[0]}")
+        print(f"  [dry-run] Would append lang entry for {key}")
         return
 
-    path.write_text(
-        existing.rstrip() + "\n" + "\n".join(missing_lines) + "\n",
-        encoding="utf-8",
-    )
-
-    for line in missing_lines:
-        print(f"  [patch]  lang ← {line.split('=', 1)[0]}")
-
-
-def ensure_bench_texture(repo_root: Path, expedition_id: str, dry_run: bool):
-    eid = _safe_eid(expedition_id)
-    dest = repo_root / BENCH_TEXTURE_DIR / f"Bench_OneBlock_{eid}_Texture.png"
-    if dest.exists():
-        return
-    src = repo_root / DEFAULT_BENCH_TEXTURE
-    if dry_run:
-        print(f"  [dry-run] Would create texture {dest.name}")
-        return
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, dest)
-    print(f"  [texture] {dest.name}")
-
-
-def ensure_bench_icon(repo_root: Path, expedition_id: str, dry_run: bool):
-    eid = _safe_eid(expedition_id)
-    dest = repo_root / BENCH_ICON_DIR / f"Bench_OneBlock_{eid}.png"
-    if dest.exists():
-        return
-    src = repo_root / DEFAULT_BENCH_ICON
-    if dry_run:
-        print(f"  [dry-run] Would create icon {dest.name}")
-        return
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, dest)
-    print(f"  [icon]    {dest.name}")
+    path.write_text(existing.rstrip() + "\n" + line + "\n", encoding="utf-8")
+    print(f"  [patch]  lang ← {key}")
 
 
 def write_json(path: Path, data: dict, dry_run: bool):
     if dry_run:
         print(f"  [dry-run] Would write {path.name}")
         return
-
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(
         (json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
@@ -634,126 +307,69 @@ def _is_generated_lang_line(line: str) -> bool:
 
     if stripped.startswith("# GENERATED"):
         return True
-
     if not stripped or stripped.startswith("#"):
         return False
-
     if "=" not in stripped:
         return False
 
     key = stripped.split("=", 1)[0].strip()
 
     return (
-        (
-            key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_")
-            and ("_Small." in key or "_Large." in key)
-        )
-        or key.startswith(f"{PREFIX_ITEMS_LANG}.Bench_OneBlock_")
-        or key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Bench_Recipe_")
-        or key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Unlock_")
+        key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_")
-        or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockWorkbench_")
-        or key.startswith(f"{PREFIX_BENCH_LANG}.Bench_OneBlock_")
-        or (
-            key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Crystal_")
-            and ("_Small." in key or "_Large." in key)
-        )
-        or key.startswith(f"{PREFIX_ITEMS_JSON}.Bench_OneBlock_")
-        or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Bench_Recipe_")
-        or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Unlock_")
+        or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockEnchanter_")
-        or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockWorkbench_")
-        or key.startswith(f"{PREFIX_BENCH_JSON}.Bench_OneBlock_")
     )
 
 
 def cleanup(repo_root: Path, dry_run: bool):
     print("\n=== Cleanup ===")
 
-    for gen_dir in [CRYSTAL_DIR, BENCH_DIR, UNLOCK_DIR, BLOCK_DIR]:
+    for gen_dir in [CRYSTAL_DIR, BLOCK_DIR]:
         dir_path = repo_root / gen_dir
-
         if not dir_path.exists():
             continue
-
         files = list(dir_path.glob("*.json"))
-
         if not files:
             continue
-
         for file_path in files:
             if dry_run:
                 print(f"  [dry-run] Would delete {gen_dir.name}/{file_path.name}")
             else:
                 file_path.unlink()
-
         if not dry_run:
             print(f"  [clean]  Deleted {len(files)} file(s) from {gen_dir.name}/")
 
     enchanter_path = repo_root / ENCHANTER
-
     if enchanter_path.exists():
         data = _load_json(enchanter_path)
         categories = data["BlockType"]["Bench"]["Categories"]
-
         before = len(categories)
-
         data["BlockType"]["Bench"]["Categories"] = [
-            category
-            for category in categories
-            if not category.get("Id", "").startswith("OneBlock_Enchanter_")
+            c for c in categories
+            if not c.get("Id", "").startswith("OneBlock_Enchanter_")
         ]
-
         removed = before - len(data["BlockType"]["Bench"]["Categories"])
-
         if removed:
             _save_json(enchanter_path, data, dry_run)
-
             if not dry_run:
                 print(f"  [clean]  Removed {removed} category/categories from Enchanter")
 
-    workbench_path = repo_root / WORKBENCH
-
-    if workbench_path.exists():
-        data = _load_json(workbench_path)
-        categories = data["BlockType"]["Bench"]["Categories"]
-
-        before = len(categories)
-
-        data["BlockType"]["Bench"]["Categories"] = [
-            category
-            for category in categories
-            if not category.get("Id", "").startswith("OneBlock_Workbench_")
-        ]
-
-        removed = before - len(data["BlockType"]["Bench"]["Categories"])
-
-        if removed:
-            _save_json(workbench_path, data, dry_run)
-
-            if not dry_run:
-                print(f"  [clean]  Removed {removed} category/categories from Workbench")
-
     lang_path = repo_root / LANG_FILE
-
     if lang_path.exists():
         lines = lang_path.read_text(encoding="utf-8").splitlines()
         cleaned = [line for line in lines if not _is_generated_lang_line(line)]
 
         result = []
         previous_blank = False
-
         for line in cleaned:
             is_blank = not line.strip()
-
             if is_blank and previous_blank:
                 continue
-
             result.append(line)
             previous_blank = is_blank
 
         removed = len(lines) - len(result)
-
         if removed:
             if dry_run:
                 print(f"  [dry-run] Would remove ~{removed} generated line(s) from lang")
@@ -771,42 +387,20 @@ def main():
     parser = argparse.ArgumentParser(
         description="Generate OneBlock expedition assets from a JSON definition file."
     )
-
-    parser.add_argument(
-        "input",
-        help="Input JSON, for example expeditionsTemplate.json",
-    )
-
-    parser.add_argument(
-        "--repo-root",
-        default=".",
-        help="Repo root directory. Default: .",
-    )
-
-    parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Show what would be done without writing files",
-    )
-
+    parser.add_argument("input", help="Input JSON, for example expeditionsTemplate.json")
+    parser.add_argument("--repo-root", default=".", help="Repo root directory. Default: .")
+    parser.add_argument("--dry-run", action="store_true", help="Show what would be done without writing files")
     args = parser.parse_args()
 
     repo_root = Path(args.repo_root).resolve()
     input_path = Path(args.input)
-
     if not input_path.is_absolute():
         input_path = repo_root / input_path
 
-    raw = json.loads(input_path.read_text(encoding="utf-8"))
-
-    expeditions = {
-        key: value
-        for key, value in raw.items()
-        if not key.startswith("_")
-    }
+    raw = json.loads(input_path.read_text(encoding="utf-8-sig"))
+    expeditions = {k: v for k, v in raw.items() if not k.startswith("_")}
 
     enchanter_path = repo_root / ENCHANTER
-    workbench_path = repo_root / WORKBENCH
     lang_path = repo_root / LANG_FILE
 
     cleanup(repo_root, args.dry_run)
@@ -823,14 +417,9 @@ def main():
 
         item_level = cfg["ItemLevel"]
         crystal_cfg = cfg["Crystal"]
-        bench_cfg = cfg["Bench"]
         drop_pool = cfg["BaseDropPool"]
         group = cfg.get("Category", cfg.get("Group", expedition_id))
-
         eid = _safe_eid(expedition_id)
-
-        ensure_bench_texture(repo_root, expedition_id, args.dry_run)
-        ensure_bench_icon(repo_root, expedition_id, args.dry_run)
 
         write_json(
             repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",
@@ -839,87 +428,15 @@ def main():
         )
 
         write_json(
-            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Small.json",
-            build_crystal(
-                expedition_id,
-                group,
-                "Small",
-                item_level,
-                crystal_cfg["Small"]["Input"],
-            ),
-            args.dry_run,
-        )
-
-        write_json(
-            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}_Large.json",
-            build_crystal(
-                expedition_id,
-                group,
-                "Large",
-                item_level,
-                crystal_cfg["Large"]["Input"],
-            ),
-            args.dry_run,
-        )
-
-        unlocks_by_tier: dict[int, list[str]] = {}
-
-        for unlock in bench_cfg.get("Unlocks", []):
-            drop_id = unlock["DropId"]
-            tier = unlock["Tier"]
-            item_id = f"OneBlock_Unlock_{eid}_{_safe_drop_id(drop_id)}"
-            drop_name = drop_id.split(":")[-1].replace("_", " ")
-
-            write_json(
-                repo_root / UNLOCK_DIR / f"{item_id}.json",
-                build_unlock_item(expedition_id, unlock),
-                args.dry_run,
-            )
-
-            if lang_path.exists():
-                append_lang_recipe(
-                    lang_path,
-                    item_id,
-                    f"Unlock: {drop_name}",
-                    f"Consume to add {drop_name} to the {expedition_id} loot pool "
-                    f"(weight {unlock['Weight']}).",
-                    args.dry_run,
-                )
-
-            unlocks_by_tier.setdefault(tier, []).append(item_id)
-
-        write_json(
-            repo_root / BENCH_DIR / f"Bench_OneBlock_{eid}.json",
-            build_expedition_bench(
-                expedition_id,
-                item_level,
-                bench_cfg["CraftInput"],
-                unlocks_by_tier,
-                group,
-                bench_cfg.get("KnowledgeRequired", True),
-            ),
+            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
+            build_crystal(expedition_id, group, item_level, crystal_cfg["Input"]),
             args.dry_run,
         )
 
         if enchanter_path.exists():
-            patch_enchanter(
-                enchanter_path,
-                expedition_id,
-                group,
-                args.dry_run,
-            )
+            patch_enchanter(enchanter_path, expedition_id, group, args.dry_run)
         else:
             print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
-
-        if workbench_path.exists():
-            patch_workbench(
-                workbench_path,
-                expedition_id,
-                group,
-                args.dry_run,
-            )
-        else:
-            print(f"  [warn]   Workbench JSON not found: {workbench_path}")
 
         if lang_path.exists():
             patch_lang(lang_path, expedition_id, args.dry_run)
@@ -933,7 +450,6 @@ def main():
 
     if java_defaults_path.exists():
         source = java_defaults_path.read_text(encoding="utf-8")
-
         if not re.search(r"    static\s*\{.*?    \}", source, re.DOTALL):
             print(
                 "\n[warn]  Could not locate static block in "
@@ -948,28 +464,18 @@ def main():
                 count=1,
                 flags=re.DOTALL,
             )
-
             if new_source == source:
-                print(
-                    "\n[skip]   OneBlockExpeditionDefaults.java static block "
-                    "already up to date"
-                )
+                print("\n[skip]   OneBlockExpeditionDefaults.java static block already up to date")
             elif args.dry_run:
-                print(
-                    "\n[dry-run] Would overwrite static block in "
-                    "OneBlockExpeditionDefaults.java"
-                )
+                print("\n[dry-run] Would overwrite static block in OneBlockExpeditionDefaults.java")
             else:
                 java_defaults_path.write_text(new_source, encoding="utf-8")
                 print(
-                    "\n[write]  OneBlockExpeditionDefaults.java static block "
+                    f"\n[write]  OneBlockExpeditionDefaults.java static block "
                     f"updated ({len(all_expedition_drops)} expeditions)"
                 )
     else:
-        print(
-            f"\n[warn]  {java_defaults_path} not found — "
-            "printing static block to stdout:"
-        )
+        print(f"\n[warn]  {java_defaults_path} not found — printing static block to stdout:")
         print(static_block)
 
     print(f"\nDone. {len(expeditions)} expedition(s) processed.")

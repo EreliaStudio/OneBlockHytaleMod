@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Dino_Caverns.name",
+    "Description": "server.items.OneBlock_Crystal_Dino_Caverns.description"
+  },
+  "Id": "OneBlock_Crystal_Dino_Caverns",
+  "ItemLevel": 7,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Fossil_Stone",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Rock_Volcanic",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Underground"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Dino_Caverns"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

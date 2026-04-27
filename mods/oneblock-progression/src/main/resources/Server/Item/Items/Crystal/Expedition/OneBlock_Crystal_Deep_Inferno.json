@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Deep_Inferno.name",
+    "Description": "server.items.OneBlock_Crystal_Deep_Inferno.description"
+  },
+  "Id": "OneBlock_Crystal_Deep_Inferno",
+  "ItemLevel": 9,
+  "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 12
+      },
+      {
+        "ItemId": "Rock_Volcanic",
+        "Quantity": 12
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Inferno"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Deep_Inferno"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}
