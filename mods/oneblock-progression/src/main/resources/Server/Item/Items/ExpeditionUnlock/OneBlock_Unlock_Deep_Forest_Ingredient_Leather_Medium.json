@@ -10,6 +10,22 @@
     "Items.RecipeDrop"
   ],
   "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_unlock_use"
+        }
+      ]
+    }
+  },
   "Recipe": {
     "Input": [
       {

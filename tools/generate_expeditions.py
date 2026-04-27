@@ -180,6 +180,22 @@ def build_unlock_item(expedition_id: str, unlock: dict) -> dict:
         "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
         "Categories": ["Items.RecipeDrop"],
         "PlayerAnimationsId": "Item",
+        "Interactions": {
+		"Primary": {
+				"Interactions": [
+					{
+						"Type": "oneblock_unlock_use",
+					}
+				]
+			},
+			"Secondary": {
+				"Interactions": [
+					{
+						"Type": "oneblock_unlock_use",
+					}
+				]
+			}
+		},
         "Recipe": {
             "Input": cost,
             "OutputQuantity": 1,

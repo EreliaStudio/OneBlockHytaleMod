@@ -1,9 +1,13 @@
 package com.EreliaStudio.OneBlock;
 
+import com.hypixel.hytale.builtin.crafting.CraftingPlugin;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
+import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.component.Ref;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -59,10 +63,16 @@ public final class OneBlockProgressionPlugin extends JavaPlugin
 
         // Register crystal interaction
         getCodecRegistry(Interaction.CODEC).register(
-                OneBlockCrystalInteraction.INTERACTION_ID,
-                OneBlockCrystalInteraction.class,
-                OneBlockCrystalInteraction.CODEC
-        );
+			OneBlockCrystalInteraction.INTERACTION_ID,
+			OneBlockCrystalInteraction.class,
+			OneBlockCrystalInteraction.CODEC
+		);
+
+		getCodecRegistry(Interaction.CODEC).register(
+			OneBlockUnlockInteraction.INTERACTION_ID,
+			OneBlockUnlockInteraction.class,
+			OneBlockUnlockInteraction.CODEC
+		);
 
         LOGGER.at(Level.INFO).log("Setup complete.");
     }
@@ -98,13 +108,33 @@ public final class OneBlockProgressionPlugin extends JavaPlugin
         }
     }
 
-    private void grantKnowledge(DropableContext ctx, String knowledgeId)
+    private void grantKnowledge(DropableContext ctx, String itemId)
+{
+    PlayerRef playerRef = ctx.getPlayerRef();
+
+    Ref<EntityStore> playerEntityRef = playerRef.getReference();
+
+    if (playerEntityRef == null)
     {
-        LOGGER.at(Level.INFO).log("Granting knowledge '" + knowledgeId + "' to player " + ctx.getPlayerId());
-        // TODO: replace with the real Hytale knowledge-grant API call once available.
-        // Expected signature: something like ctx.getPlayerRef().grantKnowledge(knowledgeId)
-        // or a KnowledgeService.grant(ctx.getPlayerRef(), knowledgeId).
+        LOGGER.at(Level.WARNING).log("Cannot grant recipe '" + itemId + "': player has no valid entity reference.");
+        return;
     }
+
+    boolean learned = CraftingPlugin.learnRecipe(
+        playerEntityRef,
+        itemId,
+        playerEntityRef.getStore()
+    );
+
+    if (learned)
+    {
+        LOGGER.at(Level.INFO).log("Granted recipe '" + itemId + "' to player " + playerRef.getUuid());
+    }
+    else
+    {
+        LOGGER.at(Level.INFO).log("Recipe '" + itemId + "' was already known by player " + playerRef.getUuid());
+    }
+}
 
     private static void registerDropables(OneBlockDropRegistry registry, Iterable<String> dropableIds)
     {
