@@ -116,16 +116,6 @@ public final class OneBlockExpeditionDefaults
                 drop(OneBlockDropId.entityDropId("Goblin_Miner"), 5)
         ));
 
-        register(expeditions, "Gobelin_Dungeon", 6, List.of(
-                drop("Goblin_Miner", 10),
-                drop("Goblin_Thief", 2),
-                drop("Goblin_Scrapper", 10)
-        ), List.of(
-                reward("Ingredient_Life_Essence", 10),
-                reward("Ore_Iron", 12),
-                reward("Ingredient_Charcoal", 20)
-        ));
-
         register(expeditions, "Forest", 25, List.of(
                 drop("Wood_Oak_Trunk", 10),
                 drop("Plant_Sapling_Oak", 2),

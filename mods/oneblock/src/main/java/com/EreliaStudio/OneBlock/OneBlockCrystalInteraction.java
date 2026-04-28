@@ -75,20 +75,32 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
             return;
         }
 
-        int ticks = OneBlockExpeditionDefaults.getTicks(expeditionId);
-        plugin.getExpeditionStateProvider().startExpedition(expeditionId, ticks);
-
         String newBlockId = OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
         Vector3i pos = OneBlockBlockIds.ONEBLOCK_POSITION;
         world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), newBlockId));
 
         OneBlockInteractionUtil.consumeHeldItem(interactionContext, heldItem);
 
-        OneBlockInteractionUtil.notifyPlayer(
-                commandBuffer,
-                interactionContext,
-                "Expedition " + expeditionId + " started — " + ticks + " ticks remaining."
-        );
+        if (OneBlockDungeonDefaults.isDungeon(expeditionId))
+        {
+            plugin.getDungeonStateProvider().startDungeon(expeditionId);
+            int waveCount = OneBlockDungeonDefaults.getWaveCount(expeditionId);
+            OneBlockInteractionUtil.notifyPlayer(
+                    commandBuffer,
+                    interactionContext,
+                    "Dungeon " + expeditionId + " started — " + waveCount + " waves incoming."
+            );
+        }
+        else
+        {
+            int ticks = OneBlockExpeditionDefaults.getTicks(expeditionId);
+            plugin.getExpeditionStateProvider().startExpedition(expeditionId, ticks);
+            OneBlockInteractionUtil.notifyPlayer(
+                    commandBuffer,
+                    interactionContext,
+                    "Expedition " + expeditionId + " started — " + ticks + " ticks remaining."
+            );
+        }
 
         OneBlockInteractionUtil.finish(interactionContext);
     }

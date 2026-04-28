@@ -22,12 +22,16 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
     private final OneBlockDropRegistry dropRegistry;
     private final OneBlockExpeditionStateProvider expeditionState;
+    private final OneBlockDungeonStateProvider dungeonState;
 
-    public OneBlockBreakSystem(OneBlockDropRegistry dropRegistry, OneBlockExpeditionStateProvider expeditionState)
+    public OneBlockBreakSystem(OneBlockDropRegistry dropRegistry,
+                               OneBlockExpeditionStateProvider expeditionState,
+                               OneBlockDungeonStateProvider dungeonState)
     {
         super(BreakBlockEvent.class);
         this.dropRegistry = dropRegistry;
         this.expeditionState = expeditionState;
+        this.dungeonState = dungeonState;
     }
 
     @Override
@@ -54,21 +58,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         World world = entityStore.getWorld();
         if (world == null) return;
 
-        String poolId = OneBlockPools.resolvePoolId(event.getBlockType());
-        List<String> drops = dropRegistry.getKnownDrops(poolId);
-        String rewardId = dropRegistry.pickReward(poolId, drops);
-        if (rewardId == null || rewardId.isEmpty()) return;
-
         Vector3i pos = event.getTargetBlock();
-
-        String completedExpedition = expeditionState.onBreak();
-        String nextBlockId = (completedExpedition != null)
-                ? OneBlockBlockIds.DEFAULT_BLOCK_ID
-                : event.getBlockType().getId();
-
-        Vector3i finalPos = pos;
-        String finalBlockId = nextBlockId;
-        world.execute(() -> world.setBlock(finalPos.getX(), finalPos.getY(), finalPos.getZ(), finalBlockId));
 
         DropableContext context = new DropableContext(
                 store, world, pos,
@@ -78,16 +68,85 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                 ref,
                 store.getComponent(ref, PlayerRef.getComponentType())
         );
+
+        if (dungeonState.isDungeonActive())
+        {
+            handleDungeonBreak(world, pos, player, context);
+        }
+        else
+        {
+            handleExpeditionBreak(world, pos, player, event, context);
+        }
+    }
+
+    private void handleDungeonBreak(World world, Vector3i pos, Player player, DropableContext context)
+    {
+        String dungeonId = dungeonState.getActiveDungeonId();
+        int waveIndex = dungeonState.getCurrentWaveIndex();
+        List<String> wave = OneBlockDungeonDefaults.getWave(dungeonId, waveIndex);
+
+        for (String entityId : wave)
+            dropRegistry.executeDropable(entityId, context);
+
+        String completedDungeon = dungeonState.onWaveCompleted();
+
+        if (completedDungeon != null)
+        {
+            world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
+            executeDungeonCompletionRewards(completedDungeon, context);
+            if (player != null)
+                player.sendMessage(Message.raw("Dungeon complete: " + completedDungeon + ". The OneBlock has returned to default."));
+        }
+        else
+        {
+            String dungeonBlockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
+            if (dungeonBlockId == null) dungeonBlockId = OneBlockBlockIds.DEFAULT_BLOCK_ID;
+            String finalBlockId = dungeonBlockId;
+            world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), finalBlockId));
+            int nextWave = dungeonState.getCurrentWaveIndex() + 1;
+            int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
+            if (player != null)
+                player.sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + nextWave + "/" + totalWaves + " waves completed."));
+        }
+    }
+
+    private void handleExpeditionBreak(World world, Vector3i pos, Player player,
+                                       BreakBlockEvent event, DropableContext context)
+    {
+        String poolId = OneBlockPools.resolvePoolId(event.getBlockType());
+        List<String> drops = dropRegistry.getKnownDrops(poolId);
+        String rewardId = dropRegistry.pickReward(poolId, drops);
+        if (rewardId == null || rewardId.isEmpty()) return;
+
+        String completedExpedition = expeditionState.onBreak();
+        String nextBlockId = (completedExpedition != null)
+                ? OneBlockBlockIds.DEFAULT_BLOCK_ID
+                : event.getBlockType().getId();
+
+        String finalBlockId = nextBlockId;
+        world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), finalBlockId));
+
         dropRegistry.executeDropable(rewardId, context);
 
         if (completedExpedition != null && player != null)
         {
-            executeCompletionRewards(completedExpedition, context);
+            executeExpeditionCompletionRewards(completedExpedition, context);
             player.sendMessage(Message.raw("Expedition complete: " + completedExpedition + ". The OneBlock has returned to default."));
         }
     }
 
-    private void executeCompletionRewards(String expeditionId, DropableContext context)
+    private void executeDungeonCompletionRewards(String dungeonId, DropableContext context)
+    {
+        List<OneBlockDungeonDefaults.CompletionRewardDefinition> rewards =
+                OneBlockDungeonDefaults.getCompletionRewards(dungeonId);
+        for (OneBlockDungeonDefaults.CompletionRewardDefinition reward : rewards)
+        {
+            if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
+            dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+        }
+    }
+
+    private void executeExpeditionCompletionRewards(String expeditionId, DropableContext context)
     {
         List<OneBlockExpeditionDefaults.CompletionRewardDefinition> rewards =
                 OneBlockExpeditionDefaults.getCompletionRewards(expeditionId);

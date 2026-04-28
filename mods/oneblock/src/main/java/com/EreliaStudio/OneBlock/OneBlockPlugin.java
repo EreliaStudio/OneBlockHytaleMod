@@ -25,6 +25,7 @@ public final class OneBlockPlugin extends JavaPlugin
 
     private OneBlockDropRegistry dropRegistry;
     private OneBlockExpeditionStateProvider expeditionStateProvider;
+    private OneBlockDungeonStateProvider dungeonStateProvider;
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -46,9 +47,11 @@ public final class OneBlockPlugin extends JavaPlugin
         dropRegistry = new OneBlockDropRegistry();
         expeditionStateProvider = new OneBlockExpeditionStateProvider(
                 getDataDirectory().resolve("oneblock-expedition.json"));
+        dungeonStateProvider = new OneBlockDungeonStateProvider(
+                getDataDirectory().resolve("oneblock-dungeon.json"));
 
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
-        getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, expeditionStateProvider));
+        getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, expeditionStateProvider, dungeonStateProvider));
         getCommandRegistry().registerCommand(new OneBlockCommand());
 
         // ── Expedition progression ───────────────────────────────────────────
@@ -61,6 +64,8 @@ public final class OneBlockPlugin extends JavaPlugin
         for (Map.Entry<String, Set<String>> entry : dropsByExpedition.entrySet())
             registerDropables(dropRegistry, entry.getValue());
         registerDropables(dropRegistry, OneBlockExpeditionDefaults.getCompletionRewardDropIds());
+        registerDropables(dropRegistry, OneBlockDungeonDefaults.getAllEntityIds());
+        registerDropables(dropRegistry, OneBlockDungeonDefaults.getCompletionRewardDropIds());
 
         getCodecRegistry(Interaction.CODEC).register(
                 OneBlockCrystalInteraction.INTERACTION_ID,
@@ -131,6 +136,11 @@ public final class OneBlockPlugin extends JavaPlugin
     public OneBlockExpeditionStateProvider getExpeditionStateProvider()
     {
         return expeditionStateProvider;
+    }
+
+    public OneBlockDungeonStateProvider getDungeonStateProvider()
+    {
+        return dungeonStateProvider;
     }
 
     public OneBlockDropRegistry getDropRegistry()

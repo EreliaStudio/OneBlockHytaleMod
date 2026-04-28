@@ -194,7 +194,6 @@
 	"Gobelin_Dungeon": {
 		"ItemLevel": 1,
 		"Category": "Dungeon",
-		"Ticks": 6,
 		"Crystal": {
 			"Input": [
 				{
@@ -207,19 +206,9 @@
 				}
 			]
 		},
-		"BaseDropPool": [
-			{
-				"ID": "Goblin_Miner",
-				"Weight": 10
-			},
-			{
-				"ID": "Goblin_Thief",
-				"Weight": 2
-			},
-			{
-				"ID": "Goblin_Scrapper",
-				"Weight": 10
-			}
+		"Waves": [
+				["Goblin_Miner", "Goblin_Miner", "Goblin_Scrapper"],
+				["Goblin_Miner", "Goblin_Thief", "Goblin_Scrapper"]
 		],
 		"CompletionRewards": [
 			{

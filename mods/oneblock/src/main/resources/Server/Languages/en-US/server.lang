@@ -1,6 +1,8 @@
 # ─── Crystal Enchanter bench ───────────────────────────────────────────────────
 items.Bench_OneBlockEnchanter.name=Crystal Enchanter
 items.Bench_OneBlockEnchanter.description=Fuses salvaged resources into expedition crystals.
+items.Bench_OneBlockDungeonEnchanter.name=Dungeon Crystal Enchanter
+items.Bench_OneBlockDungeonEnchanter.description=Fuses salvaged resources into expedition crystals for dungeon.
 
 # GENERATED ─── Meadow ─────────────────────────────────────────────────
 items.OneBlock_Block_Meadow.name=OneBlock Meadow
@@ -37,8 +39,8 @@ items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 
 # GENERATED ─── Gobelin Dungeon ────────────────────────────────────────
 items.OneBlock_Block_Gobelin_Dungeon.name=OneBlock Gobelin Dungeon
 items.OneBlock_Crystal_Gobelin_Dungeon.name=Gobelin Dungeon Crystal
-items.OneBlock_Crystal_Gobelin_Dungeon.description=Consume to begin a Gobelin Dungeon expedition.\n6 ticks.\nLoot :\n- Goblin Miner\n- Goblin Thief\n- Goblin Scrapper\nCompletion rewards :\n- 10x Life Essence\n- 12x Iron Ore\n- 20x Charcoal
-benchCategories.OneBlockEnchanter_Dungeon=Dungeon Crystals
+items.OneBlock_Crystal_Gobelin_Dungeon.description=Consume to begin the Gobelin Dungeon dungeon.\n2 waves :\n  Wave 1: Goblin Miner, Goblin Miner, Goblin Scrapper\n  Wave 2: Goblin Miner, Goblin Thief, Goblin Scrapper\nCompletion rewards :\n- 10x Life Essence\n- 12x Iron Ore\n- 20x Charcoal
+benchCategories.OneBlockDungeonEnchanter_Dungeon=Dungeon Crystals
 
 # GENERATED ─── Forest ─────────────────────────────────────────────────
 items.OneBlock_Block_Forest.name=OneBlock Forest

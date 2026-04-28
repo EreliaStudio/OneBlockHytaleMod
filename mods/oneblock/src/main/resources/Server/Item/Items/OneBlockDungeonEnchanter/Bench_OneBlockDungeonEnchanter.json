@@ -1,7 +1,7 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.Bench_OneBlockEnchanter.name",
-    "Description": "server.items.Bench_OneBlockEnchanter.description"
+    "Name": "server.items.Bench_OneBlockDungeonEnchanter.name",
+    "Description": "server.items.Bench_OneBlockDungeonEnchanter.description"
   },
   "Recipe": {
     "Input": [
@@ -24,7 +24,7 @@
       }
     ]
   },
-  "Icon": "Icons/ItemsGenerated/OneBlock_CrystalEnchantingTable_Icon.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock_DungeonEnchantingTable_Icon.png",
   "Categories": [
     "Furniture.Benches"
   ],
@@ -32,46 +32,25 @@
     "Material": "Solid",
     "DrawType": "Model",
     "Opacity": "Transparent",
-    "CustomModel": "Blocks/Benches/OneBlock_CrystalEnchanter.blockymodel",
+    "CustomModel": "Blocks/Benches/OneBlock_DungeonEnchantingTable.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Blocks/BenchTextures/OneBlock_CrystalEnchantingTable_Texture.png",
+        "Texture": "Blocks/BenchTextures/OneBlock_DungeonEnchantingTable_Texture.png",
         "Weight": 1
       }
     ],
     "HitboxType": "Bench_Alchemy",
     "VariantRotation": "NESW",
     "Bench": {
-      "Id": "OneBlockEnchanter",
+      "Id": "OneBlockDungeonEnchanter",
       "Type": "Crafting",
       "Categories": [
         {
-          "Id": "OneBlock_Enchanter_Surface",
+          "Id": "OneBlock_DungeonEnchanter_Dungeon",
           "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Surface",
+          "Name": "server.benchCategories.OneBlockDungeonEnchanter_Dungeon",
           "Recipes": [
-            "OneBlock_Crystal_Meadow",
-            "OneBlock_Crystal_Meadow_Cave",
-            "OneBlock_Crystal_Meadow_Forest",
-            "OneBlock_Crystal_Quarry"
-          ]
-        },
-        {
-          "Id": "OneBlock_Enchanter_Forest",
-          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Forest",
-          "Recipes": [
-            "OneBlock_Crystal_Forest",
-            "OneBlock_Crystal_Fairy_pond"
-          ]
-        },
-        {
-          "Id": "OneBlock_Enchanter_Cavern",
-          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Cavern",
-          "Recipes": [
-            "OneBlock_Crystal_Cave_Entry",
-            "OneBlock_Crystal_Cave"
+            "OneBlock_Crystal_Gobelin_Dungeon"
           ]
         }
       ],

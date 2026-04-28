@@ -27,6 +27,7 @@ ONEBLOCK = Path("mods/oneblock/src/main/resources")
 ITEMS     = ONEBLOCK / "Server/Item/Items"
 LANG_FILE = ONEBLOCK / "Server/Languages/en-US/server.lang"
 ENCHANTER = ITEMS / "OneBlockEnchanter/Bench_OneBlockEnchanter.json"
+DUNGEON_ENCHANTER = ITEMS / "OneBlockDungeonEnchanter/Bench_OneBlockDungeonEnchanter.json"
 CRYSTAL_DIR = ITEMS / "Crystal/Expedition"
 BLOCK_DIR   = ITEMS / "OneBlock"
 
@@ -71,7 +72,7 @@ def _category_sort_key(category: dict) -> tuple[int, str]:
     return (len(ENCHANTER_CATEGORY_ORDER), category_id)
 
 
-def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list, ticks: int) -> dict:
+def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list, ticks: int, bench_id: str = "OneBlockEnchanter") -> dict:
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(category)
     item_id = f"OneBlock_Crystal_{eid}"
@@ -99,8 +100,8 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
             "BenchRequirement": [
                 {
                     "Type": "Crafting",
-                    "Categories": [f"OneBlock_Enchanter_{gid}"],
-                    "Id": "OneBlockEnchanter",
+                    "Categories": [f"OneBlock_{bench_id[len('OneBlock'):]}_{gid}"],
+                    "Id": bench_id,
                 }
             ],
         },
@@ -276,6 +277,75 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list]]
     return "\n".join(lines)
 
 
+def build_lang_dungeon_block(expedition_id: str,
+                             waves: list,
+                             completion_rewards: list,
+                             render_names: dict[str, str]) -> str:
+    eid = _safe_eid(expedition_id)
+    display = expedition_id.replace("_", " ")
+    sep = "─" * max(0, 55 - len(display))
+
+    wave_lines = f"\\n{len(waves)} waves :"
+    for i, wave in enumerate(waves, 1):
+        names = ", ".join(w.replace("_", " ") for w in wave)
+        wave_lines += f"\\n  Wave {i}: {names}"
+
+    reward_lines = ""
+    if completion_rewards:
+        reward_lines = "\\nCompletion rewards :"
+        for entry in completion_rewards:
+            reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
+
+    lines = [
+        f"\n# GENERATED ─── {display} {sep}",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin the {display} dungeon.{wave_lines}{reward_lines}",
+    ]
+
+    return "\n".join(lines)
+
+
+def build_java_dungeon_defaults_block(all_dungeons: list[tuple[str, list, list]]) -> str:
+    lines = [
+        "    static",
+        "    {",
+        "        Map<String, DungeonDefinition> dungeons = new HashMap<>();",
+    ]
+
+    for dungeon_id, waves, completion_rewards in all_dungeons:
+        lines.append("")
+
+        wave_entries = []
+        for wave in waves:
+            entity_ids = ", ".join(f'"entity:{e}"' for e in wave)
+            wave_entries.append(f"                        List.of({entity_ids})")
+        if wave_entries:
+            waves_expr = "List.of(\n" + ",\n".join(wave_entries) + "\n                )"
+        else:
+            waves_expr = "List.of()"
+
+        reward_entries = [
+            f"                {_java_reward_expr(entry)}"
+            for entry in completion_rewards
+        ]
+        if reward_entries:
+            reward_list = _java_list_expr(reward_entries, "        ")
+            lines.append(f'        register(dungeons, "{dungeon_id}", {waves_expr}, {reward_list});')
+        else:
+            lines.append(f'        register(dungeons, "{dungeon_id}", {waves_expr}, List.of());')
+
+    lines += [
+        "",
+        "        DUNGEONS = Collections.unmodifiableMap(dungeons);",
+        "        ALL_ENTITY_IDS = buildAllEntityIds(DUNGEONS);",
+        "        COMPLETION_REWARD_DROP_IDS = buildCompletionRewardDropIds(DUNGEONS);",
+        "    }",
+    ]
+
+    return "\n".join(lines)
+
+
 def _load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -335,11 +405,12 @@ def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool):
             print(f"  [warn]   No default block icon found at {DEFAULT_BLOCK_ICON}")
 
 
-def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
+def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool, bench_id: str = "OneBlockEnchanter"):
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(group)
-    cat_id = f"OneBlock_Enchanter_{gid}"
-    lang_key = f"OneBlockEnchanter_{gid}"
+    bench_suffix = bench_id[len("OneBlock"):]
+    cat_id = f"OneBlock_{bench_suffix}_{gid}"
+    lang_key = f"{bench_id}_{gid}"
 
     data = _load_json(path)
     categories = data["BlockType"]["Bench"]["Categories"]
@@ -362,7 +433,7 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
 
     categories.sort(key=_category_sort_key)
     _save_json(path, data, dry_run)
-    print(f"  [patch]  Enchanter ← {eid} → group {gid}")
+    print(f"  [patch]  {bench_id} ← {eid} → group {gid}")
 
 
 def patch_lang(path: Path,
@@ -390,9 +461,9 @@ def patch_lang(path: Path,
     print(f"  [patch]  lang ← {expedition_id}")
 
 
-def patch_group_lang(path: Path, group: str, dry_run: bool):
+def patch_group_lang(path: Path, group: str, dry_run: bool, bench_id: str = "OneBlockEnchanter"):
     gid = _safe_eid(group)
-    key = f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_{gid}"
+    key = f"{PREFIX_BENCH_LANG}.{bench_id}_{gid}"
     value = f"{group.replace('_', ' ')} Crystals"
 
     existing = path.read_text(encoding="utf-8")
@@ -407,6 +478,58 @@ def patch_group_lang(path: Path, group: str, dry_run: bool):
 
     path.write_text(existing.rstrip() + "\n" + line + "\n", encoding="utf-8")
     print(f"  [patch]  lang ← {key}")
+
+
+def _patch_dungeon_lang(path: Path,
+                        expedition_id: str,
+                        waves: list,
+                        completion_rewards: list,
+                        render_names: dict[str, str],
+                        dry_run: bool):
+    eid = _safe_eid(expedition_id)
+    existing = path.read_text(encoding="utf-8")
+    marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
+
+    if marker in existing:
+        print(f"  [skip]   Lang already has entries for {expedition_id}")
+        return
+
+    block = build_lang_dungeon_block(expedition_id, waves, completion_rewards, render_names)
+
+    if dry_run:
+        print(f"  [dry-run] Would append lang entries for {expedition_id}")
+        return
+
+    path.write_text(existing.rstrip() + "\n" + block + "\n", encoding="utf-8")
+    print(f"  [patch]  lang ← {expedition_id}")
+
+
+def _patch_java_static(java_path: Path, static_block: str, label: str, count: int, dry_run: bool):
+    if not java_path.exists():
+        print(f"\n[warn]  {java_path} not found — printing static block to stdout:")
+        print(static_block)
+        return
+
+    source = java_path.read_text(encoding="utf-8")
+    if not re.search(r"    static\s*\{.*?    \}", source, re.DOTALL):
+        print(f"\n[warn]  Could not locate static block in {label} — printing to stdout instead.")
+        print(static_block)
+        return
+
+    new_source = re.sub(
+        r"    static\s*\{.*?    \}",
+        static_block,
+        source,
+        count=1,
+        flags=re.DOTALL,
+    )
+    if new_source == source:
+        print(f"\n[skip]   {label} static block already up to date")
+    elif dry_run:
+        print(f"\n[dry-run] Would overwrite static block in {label}")
+    else:
+        java_path.write_text(new_source, encoding="utf-8")
+        print(f"\n[write]  {label} static block updated ({count} entries)")
 
 
 def write_json(path: Path, data: dict, dry_run: bool):
@@ -436,9 +559,11 @@ def _is_generated_lang_line(line: str) -> bool:
         key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Block_")
         or key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_")
+        or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockDungeonEnchanter_")
         or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Block_")
         or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockEnchanter_")
+        or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockDungeonEnchanter_")
     )
 
 
@@ -460,20 +585,23 @@ def cleanup(repo_root: Path, dry_run: bool):
         if not dry_run:
             print(f"  [clean]  Deleted {len(files)} file(s) from {gen_dir.name}/")
 
-    enchanter_path = repo_root / ENCHANTER
-    if enchanter_path.exists():
-        data = _load_json(enchanter_path)
-        categories = data["BlockType"]["Bench"]["Categories"]
-        before = len(categories)
-        data["BlockType"]["Bench"]["Categories"] = [
-            c for c in categories
-            if not c.get("Id", "").startswith("OneBlock_Enchanter_")
-        ]
-        removed = before - len(data["BlockType"]["Bench"]["Categories"])
-        if removed:
-            _save_json(enchanter_path, data, dry_run)
-            if not dry_run:
-                print(f"  [clean]  Removed {removed} category/categories from Enchanter")
+    for enc_path, prefix, label in [
+        (repo_root / ENCHANTER, "OneBlock_Enchanter_", "Enchanter"),
+        (repo_root / DUNGEON_ENCHANTER, "OneBlock_DungeonEnchanter_", "DungeonEnchanter"),
+    ]:
+        if enc_path.exists():
+            data = _load_json(enc_path)
+            categories = data["BlockType"]["Bench"]["Categories"]
+            before = len(categories)
+            data["BlockType"]["Bench"]["Categories"] = [
+                c for c in categories
+                if not c.get("Id", "").startswith(prefix)
+            ]
+            removed = before - len(data["BlockType"]["Bench"]["Categories"])
+            if removed:
+                _save_json(enc_path, data, dry_run)
+                if not dry_run:
+                    print(f"  [clean]  Removed {removed} category/categories from {label}")
 
     lang_path = repo_root / LANG_FILE
     if lang_path.exists():
@@ -539,19 +667,24 @@ def main():
         "mods/oneblock/src/main/java"
         "/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java"
     )
+    java_dungeon_defaults_path = repo_root / Path(
+        "mods/oneblock/src/main/java"
+        "/com/EreliaStudio/OneBlock/OneBlockDungeonDefaults.java"
+    )
+    dungeon_enchanter_path = repo_root / DUNGEON_ENCHANTER
 
     all_expedition_drops: list[tuple[str, int, list, list]] = []
+    all_dungeon_waves: list[tuple[str, list, list]] = []
 
     for expedition_id, cfg in expeditions.items():
         print(f"\n=== {expedition_id} ===")
 
         item_level = cfg["ItemLevel"]
-        ticks = cfg.get("Ticks", 100)
         crystal_cfg = cfg["Crystal"]
-        drop_pool = cfg["BaseDropPool"]
-        completion_rewards = cfg.get("CompletionRewards", cfg.get("Rewards", [])) or []
         group = cfg.get("Category", cfg.get("Group", expedition_id))
+        completion_rewards = cfg.get("CompletionRewards", cfg.get("Rewards", [])) or []
         eid = _safe_eid(expedition_id)
+        is_dungeon = group == "Dungeon"
 
         ensure_block_assets(repo_root, expedition_id, args.dry_run)
 
@@ -561,58 +694,58 @@ def main():
             args.dry_run,
         )
 
-        write_json(
-            repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
-            build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks),
-            args.dry_run,
-        )
+        if is_dungeon:
+            waves = cfg.get("Waves", [])
+            ticks = len(waves)
 
-        if enchanter_path.exists():
-            patch_enchanter(enchanter_path, expedition_id, group, args.dry_run)
-        else:
-            print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
-
-        if lang_path.exists():
-            patch_lang(lang_path, expedition_id, drop_pool, completion_rewards, ticks, render_names, args.dry_run)
-            patch_group_lang(lang_path, group, args.dry_run)
-        else:
-            print(f"  [warn]   Lang file not found: {lang_path}")
-
-        all_expedition_drops.append((expedition_id, ticks, drop_pool, completion_rewards))
-
-    static_block = build_java_defaults_block(all_expedition_drops)
-
-    if java_defaults_path.exists():
-        source = java_defaults_path.read_text(encoding="utf-8")
-        if not re.search(r"    static\s*\{.*?    \}", source, re.DOTALL):
-            print(
-                "\n[warn]  Could not locate static block in "
-                "OneBlockExpeditionDefaults.java — printing to stdout instead."
+            write_json(
+                repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
+                build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks, "OneBlockDungeonEnchanter"),
+                args.dry_run,
             )
-            print(static_block)
-        else:
-            new_source = re.sub(
-                r"    static\s*\{.*?    \}",
-                static_block,
-                source,
-                count=1,
-                flags=re.DOTALL,
-            )
-            if new_source == source:
-                print("\n[skip]   OneBlockExpeditionDefaults.java static block already up to date")
-            elif args.dry_run:
-                print("\n[dry-run] Would overwrite static block in OneBlockExpeditionDefaults.java")
+
+            if dungeon_enchanter_path.exists():
+                patch_enchanter(dungeon_enchanter_path, expedition_id, group, args.dry_run, "OneBlockDungeonEnchanter")
             else:
-                java_defaults_path.write_text(new_source, encoding="utf-8")
-                print(
-                    f"\n[write]  OneBlockExpeditionDefaults.java static block "
-                    f"updated ({len(all_expedition_drops)} expeditions)"
-                )
-    else:
-        print(f"\n[warn]  {java_defaults_path} not found — printing static block to stdout:")
-        print(static_block)
+                print(f"  [warn]   DungeonEnchanter JSON not found: {dungeon_enchanter_path}")
 
-    print(f"\nDone. {len(expeditions)} expedition(s) processed.")
+            if lang_path.exists():
+                _patch_dungeon_lang(lang_path, expedition_id, waves, completion_rewards, render_names, args.dry_run)
+                patch_group_lang(lang_path, group, args.dry_run, "OneBlockDungeonEnchanter")
+            else:
+                print(f"  [warn]   Lang file not found: {lang_path}")
+
+            all_dungeon_waves.append((expedition_id, waves, completion_rewards))
+        else:
+            ticks = cfg.get("Ticks", 100)
+            drop_pool = cfg["BaseDropPool"]
+
+            write_json(
+                repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
+                build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks),
+                args.dry_run,
+            )
+
+            if enchanter_path.exists():
+                patch_enchanter(enchanter_path, expedition_id, group, args.dry_run)
+            else:
+                print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
+
+            if lang_path.exists():
+                patch_lang(lang_path, expedition_id, drop_pool, completion_rewards, ticks, render_names, args.dry_run)
+                patch_group_lang(lang_path, group, args.dry_run)
+            else:
+                print(f"  [warn]   Lang file not found: {lang_path}")
+
+            all_expedition_drops.append((expedition_id, ticks, drop_pool, completion_rewards))
+
+    _patch_java_static(java_defaults_path, build_java_defaults_block(all_expedition_drops),
+                       "OneBlockExpeditionDefaults.java", len(all_expedition_drops), args.dry_run)
+    _patch_java_static(java_dungeon_defaults_path, build_java_dungeon_defaults_block(all_dungeon_waves),
+                       "OneBlockDungeonDefaults.java", len(all_dungeon_waves), args.dry_run)
+
+    total = len(expeditions)
+    print(f"\nDone. {total} expedition(s) processed ({len(all_dungeon_waves)} dungeon(s)).")
 
 
 if __name__ == "__main__":

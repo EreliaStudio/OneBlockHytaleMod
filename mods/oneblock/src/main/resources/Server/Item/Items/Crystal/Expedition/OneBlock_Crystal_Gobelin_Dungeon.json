@@ -42,9 +42,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Dungeon"
+          "OneBlock_DungeonEnchanter_Dungeon"
         ],
-        "Id": "OneBlockEnchanter"
+        "Id": "OneBlockDungeonEnchanter"
       }
     ]
   },
@@ -57,7 +57,7 @@
       "Gobelin_Dungeon"
     ],
     "OneBlockCrystalTicks": [
-      "6"
+      "2"
     ]
   },
   "MaxStack": 4,

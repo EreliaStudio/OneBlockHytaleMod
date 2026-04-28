@@ -1,2411 +1,330 @@
 {
-  "_comment": "Expedition definition file for generate_expeditions.py",
-  "_usage": "python tools/generate_expeditions.py expeditionsTemplate.json --repo-root . [--dry-run]",
-  "_design": "Crystal costs use farmed resources from prerequisite expeditions — no crystal shards required. Progression flows from IL1 (Meadow) through IL9 (Abyss/Deep_Inferno). Starting resources assumed from OneBlock: Rubble_Stone, Ingredient_Fibre, Ingredient_Stick, Soil_Dirt.",
-  "Meadow": {
-    "ItemLevel": 1,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Stick",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ingredient_Fibre",
-        "Weight": 25
-      },
-      {
-        "ID": "Ingredient_Stick",
-        "Weight": 20
-      },
-      {
-        "ID": "Rubble_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Soil_Dirt",
-        "Weight": 20
-      },
-      {
-        "ID": "Plant_Grass_Lush",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Hay_Bundle",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Bush",
-        "Weight": 8
-      }
-    ]
-  },
-  "Plains": {
-    "ItemLevel": 2,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Soil_Grass",
-        "Weight": 25
-      },
-      {
-        "ID": "Plant_Grass_Lush",
-        "Weight": 20
-      },
-      {
-        "ID": "Ingredient_Fibre",
-        "Weight": 15
-      },
-      {
-        "ID": "Rubble_Stone",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Hay_Bundle",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Sapling_Oak",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Flower_Field": {
-    "ItemLevel": 2,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Plant_Grass_Lush",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Flower_Common_White",
-        "Weight": 20
-      },
-      {
-        "ID": "Plant_Lavender_Block",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Sunflower_Block",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Petals_White",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Grass_Lush",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Fibre",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Cactus_Flower",
-        "Weight": 5
-      }
-    ]
-  },
-  "Farmland": {
-    "ItemLevel": 2,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Crop_Wheat_Item",
-        "Weight": 20
-      },
-      {
-        "ID": "Plant_Crop_Carrot_Item",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Crop_Corn_Item",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Crop_Potato_Item",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Crop_Rice_Item",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Onion_Item",
-        "Weight": 12
-      },
-      {
-        "ID": "Soil_Dirt",
-        "Weight": 8
-      }
-    ]
-  },
-  "Forest": {
-    "ItemLevel": 3,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 10
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Oak_Trunk",
-        "Weight": 25
-      },
-      {
-        "ID": "Plant_Leaves_Oak",
-        "Weight": 20
-      },
-      {
-        "ID": "Ingredient_Fibre",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Stick",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Tree_Bark",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Sapling_Oak",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Garden": {
-    "ItemLevel": 3,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Plant_Crop_Wheat_Item",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Crop_Tomato_Item",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Lettuce_Item",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Aubergine_Item",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Cauliflower_Item",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Turnip_Item",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Crop_Pumpkin_Item",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Crop_Chilli_Item",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Crop_Cotton_Item",
-        "Weight": 10
-      }
-    ]
-  },
-  "Cactus_Field": {
-    "ItemLevel": 3,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Cactus_1",
-        "Weight": 22
-      },
-      {
-        "ID": "Plant_Cactus_2",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Cactus_3",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Cactus_Ball_1",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Cactus_Flat_1",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Cactus_Flat_2",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Cactus_Flat_3",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Cactus_Flower",
-        "Weight": 6
-      }
-    ]
-  },
-  "Desert": {
-    "ItemLevel": 4,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Sand",
-        "Weight": 30
-      },
-      {
-        "ID": "Rock_Sandstone",
-        "Weight": 22
-      },
-      {
-        "ID": "Block_Sandstone_Rough",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Clay",
-        "Weight": 14
-      },
-      {
-        "ID": "Block_Desert_Hardened_Earth",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Desert_Dry_Shrub",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Desert_Oasis": {
-    "ItemLevel": 4,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Sand",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Sand_White",
-        "Weight": 20
-      },
-      {
-        "ID": "Plant_Desert_Blue_Aloe",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Desert_Yellow_Arid_Flower",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Desert_Red_Featherleaf",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Desert_Saltbush",
-        "Weight": 14
-      },
-      {
-        "ID": "Block_Clay_Red",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Water_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Autumn_Forest": {
-    "ItemLevel": 4,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Oak_Trunk",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Beech_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Maple_Trunk",
-        "Weight": 20
-      },
-      {
-        "ID": "Wood_Aspen_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Leaves_Autumn_Floor",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Fruit_Berries_Red",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Fruit_Apple",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Sapling_Apple",
-        "Weight": 6
-      }
-    ]
-  },
-  "Snow": {
-    "ItemLevel": 4,
-    "Category": "Cold",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Snow",
-        "Weight": 30
-      },
-      {
-        "ID": "Block_Snow_Packed",
-        "Weight": 22
-      },
-      {
-        "ID": "Block_Frozen_Soil",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Snow_Shrub",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Frost_Fern",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Frozen_Grass",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Ice_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Deep_Forest": {
-    "ItemLevel": 5,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Oak_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Ash_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Birch_Trunk",
-        "Weight": 20
-      },
-      {
-        "ID": "Plant_Vine",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Tree_Bark",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Tree_Sap",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Fibre",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Swamp": {
-    "ItemLevel": 5,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Plant_Hay_Bundle",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Sallow_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Reeds_Marsh",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Barnacles",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Bramble_Moss_Twisted",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Vine_Rug",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Seaweed_Grass",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seaweed_Grass_Stack",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Water_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Tropical_Forest": {
-    "ItemLevel": 5,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Oak_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 10
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Palm_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Banyan_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Wood_Bottletree_Trunk",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Fruit_Coconut",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Fruit_Mango",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Fruit_Pinkberry",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Mushroom_Grove": {
-    "ItemLevel": 5,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Oak_Trunk",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Crop_Mushroom_Block",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Brown",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Red",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Cap_Brown",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Cap_Red",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Cap_White",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Shelve_Brown",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Common_Brown",
-        "Weight": 8
-      }
-    ]
-  },
-  "Cave": {
-    "ItemLevel": 5,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Stone",
-        "Weight": 28
-      },
-      {
-        "ID": "Rubble_Stone",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Shale",
-        "Weight": 18
-      },
-      {
-        "ID": "Ore_Copper",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Roots_Cave",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Roots_Cave_Small",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Graveyard": {
-    "ItemLevel": 5,
-    "Category": "Dark",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Soil_Dirt",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Soil_Dirt",
-        "Weight": 28
-      },
-      {
-        "ID": "Rock_Stone_Mossy",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Stone",
-        "Weight": 18
-      },
-      {
-        "ID": "Ingredient_Bone_Fragment",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Ice_Fields": {
-    "ItemLevel": 5,
-    "Category": "Cold",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Snow",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Ice_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Ice_Clear",
-        "Weight": 25
-      },
-      {
-        "ID": "Block_Ice_Frosted",
-        "Weight": 22
-      },
-      {
-        "ID": "Block_Frozen_Water",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Ice_Flower_Blue",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Ice_Flower_White",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Ice_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Primal_Jungle": {
-    "ItemLevel": 5,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Jungle_Trunk",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Jungle_Trunk",
-        "Weight": 20
-      },
-      {
-        "ID": "Block_Jungle_Fern_Giant",
-        "Weight": 16
-      },
-      {
-        "ID": "Block_Glowing_Jungle_Plant",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Primal_Fern",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Toxic_Jungle_Vine",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Giant_Jungle_Leaf",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Glowcap_Jungle",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Seed_Vault": {
-    "ItemLevel": 5,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Plant_Crop_Wheat_Item",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Plant_Crop_Corn_Item",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Seeds_Wheat_Eternal",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Seeds_Carrot_Eternal",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Seeds_Corn_Eternal",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Seeds_Potato_Eternal",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Seeds_Rice_Eternal",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Seeds_Onion_Eternal",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seeds_Lettuce_Eternal",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seeds_Tomato_Eternal",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seeds_Turnip_Eternal",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Pumpkin_Eternal",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Aubergine_Eternal",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Cauliflower_Eternal",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Chilli_Eternal",
-        "Weight": 6
-      },
-      {
-        "ID": "Plant_Seeds_Cotton_Eternal",
-        "Weight": 6
-      }
-    ]
-  },
-  "Textile_Workshop": {
-    "ItemLevel": 5,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Plant_Crop_Cotton_Item",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ingredient_Bolt_Cotton",
-        "Weight": 20
-      },
-      {
-        "ID": "Ingredient_Bolt_Linen",
-        "Weight": 18
-      },
-      {
-        "ID": "Ingredient_Bolt_Wool",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Cotton",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Linen",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Wool",
-        "Weight": 12
-      }
-    ]
-  },
-  "Jungle": {
-    "ItemLevel": 6,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Jungle_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Jungle_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Bamboo_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Reeds_Marsh",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Vine_Rug",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Leaves_Jungle_Floor",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Fruit_Mango",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Gem_Cave": {
-    "_note": "Gem weights are intentionally low — each gem drop is a rare event within the tick window.",
-    "ItemLevel": 6,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ore_Copper",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 16
-      },
-      {
-        "ID": "Rock_Shale",
-        "Weight": 14
-      },
-      {
-        "ID": "Rock_Gem_Emerald",
-        "Weight": 7
-      },
-      {
-        "ID": "Rock_Gem_Ruby",
-        "Weight": 6
-      },
-      {
-        "ID": "Rock_Gem_Sapphire",
-        "Weight": 6
-      },
-      {
-        "ID": "Rock_Gem_Topaz",
-        "Weight": 6
-      }
-    ]
-  },
-  "Precious_Vein": {
-    "ItemLevel": 6,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Rock_Basalt",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ore_Gold",
-        "Weight": 16
-      },
-      {
-        "ID": "Ore_Silver",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Gem_Topaz",
-        "Weight": 10
-      },
-      {
-        "ID": "Rock_Gem_Emerald",
-        "Weight": 8
-      },
-      {
-        "ID": "Rock_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 15
-      }
-    ]
-  },
-  "Egyptian_Temple": {
-    "ItemLevel": 6,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Sand",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Rock_Sandstone",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Sandstone_Smooth",
-        "Weight": 25
-      },
-      {
-        "ID": "Block_Sandstone_Red",
-        "Weight": 18
-      },
-      {
-        "ID": "Rock_Sandstone",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Clay_Red",
-        "Weight": 12
-      },
-      {
-        "ID": "Ore_Gold",
-        "Weight": 6
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Desert_Ruins": {
-    "ItemLevel": 6,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Sand",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Block_Sandstone_Rough",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Desert_Cracked",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Desert_Fossil",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Desert_Dried_Mud",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Sand_Red",
-        "Weight": 15
-      },
-      {
-        "ID": "Ore_Thorium_Desert",
-        "Weight": 6
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Fungi_Cavern": {
-    "ItemLevel": 6,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Plant_Crop_Mushroom_Block",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Green",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Purple",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_White",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Yellow",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Cap_Green",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Cap_Poison",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Common_Blue",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Common_Lime",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Flatcap_Blue",
-        "Weight": 6
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Flatcap_Green",
-        "Weight": 6
-      }
-    ]
-  },
-  "Poison_Grove": {
-    "ItemLevel": 6,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Jungle_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Poisoned_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Plant_Fruit_Poison",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Leaves_Poisoned_Floor",
-        "Weight": 18
-      },
-      {
-        "ID": "Plant_Toxic_Jungle_Vine",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Vine",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Redwood_Grove": {
-    "ItemLevel": 6,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Ash_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Tree_Bark",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Redwood_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Cedar_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Wood_Fir_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Wood_Camphor_Trunk",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Tree_Bark",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Tree_Sap",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Frozen_Forest": {
-    "ItemLevel": 6,
-    "Category": "Cold",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Snow",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Ingredient_Ice_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Ice_Trunk",
-        "Weight": 25
-      },
-      {
-        "ID": "Block_Snow",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Permafrost",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Frost_Fern",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Ice_Flower_Blue",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Ice_Flower_White",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Ice_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Ancient_Graveyard": {
-    "ItemLevel": 6,
-    "Category": "Dark",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Stone_Mossy",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Bone_Fragment",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Stone_Mossy",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Slate",
-        "Weight": 18
-      },
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Bone_Fragment",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Roots_Leafy",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Azure_Forest": {
-    "ItemLevel": 7,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Ash_Trunk",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Ice_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Azure_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Blue",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Block_Yellow",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Fruit_Azure",
-        "Weight": 12
-      },
-      {
-        "ID": "Wood_Crystal_Trunk",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Ice_Flower_Blue",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Ice_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Mystical_Forest": {
-    "ItemLevel": 7,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Azure_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Crystal_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Wood_Spiral_Trunk",
-        "Weight": 16
-      },
-      {
-        "ID": "Wood_Wisteria_Wild_Trunk",
-        "Weight": 16
-      },
-      {
-        "ID": "Plant_Fruit_Spiral",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Fruit_Windwillow",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Roots_Leafy",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Motes_Light",
-        "Weight": 3
-      }
-    ]
-  },
-  "Storm_Wilds": {
-    "ItemLevel": 7,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Ash_Trunk",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Stormbark_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Windwillow_Trunk",
-        "Weight": 20
-      },
-      {
-        "ID": "Plant_Fruit_Windwillow",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Roots_Leafy",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Lightning_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Ancient_Grove": {
-    "ItemLevel": 7,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Redwood_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 10
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Petrified_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Gumboab_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Wood_Palo_Trunk",
-        "Weight": 16
-      },
-      {
-        "ID": "Wood_Dry_Trunk",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Bush",
-        "Weight": 12
-      },
-      {
-        "ID": "Rock_Desert_Fossil",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Deep_Cave": {
-    "ItemLevel": 7,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Ore_Copper",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 25
-      },
-      {
-        "ID": "Rubble_Basalt",
-        "Weight": 18
-      },
-      {
-        "ID": "Rock_Slate",
-        "Weight": 18
-      },
-      {
-        "ID": "Ore_Iron",
-        "Weight": 14
-      },
-      {
-        "ID": "Ore_Silver",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Roots_Cave",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Deep_Mine": {
-    "ItemLevel": 7,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ore_Iron",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Rock_Basalt",
-          "Quantity": 10
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ore_Mithril",
-        "Weight": 16
-      },
-      {
-        "ID": "Ore_Cobalt",
-        "Weight": 14
-      },
-      {
-        "ID": "Ore_Gold",
-        "Weight": 14
-      },
-      {
-        "ID": "Ore_Silver",
-        "Weight": 12
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 15
-      },
-      {
-        "ID": "Rock_Slate",
-        "Weight": 12
-      }
-    ]
-  },
-  "Frozen_Cave": {
-    "ItemLevel": 7,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Ice_Clear",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Ice_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Ice_Blue",
-        "Weight": 25
-      },
-      {
-        "ID": "Rock_Ice",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Ice_Permafrost",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Ice_Frosted",
-        "Weight": 15
-      },
-      {
-        "ID": "Rock_Frozen_Stone",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Ice_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Glowing_Cavern": {
-    "ItemLevel": 7,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Plant_Crop_Mushroom_Block",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Blue",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Green",
-        "Weight": 15
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Purple",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Red",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Orange",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Violet",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Roots_Leafy",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Motes_Light",
-        "Weight": 3
-      }
-    ]
-  },
-  "Dino_Caverns": {
-    "ItemLevel": 7,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Fossil_Stone",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Rock_Volcanic",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Primal_Stone",
-        "Weight": 22
-      },
-      {
-        "ID": "Block_Fossil_Stone",
-        "Weight": 18
-      },
-      {
-        "ID": "Block_Amber",
-        "Weight": 14
-      },
-      {
-        "ID": "Block_Lava_Rock_Cracked",
-        "Weight": 14
-      },
-      {
-        "ID": "Rock_Amber_Encased",
-        "Weight": 10
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Life_Essence",
-        "Weight": 2
-      }
-    ]
-  },
-  "Mystic_Seeds": {
-    "ItemLevel": 7,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Plant_Seeds_Wheat_Eternal",
-          "Quantity": 4
-        },
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Seeds_Health1",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Seeds_Health2",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seeds_Health3",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Mana1",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Seeds_Mana2",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seeds_Mana3",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Stamina1",
-        "Weight": 12
-      },
-      {
-        "ID": "Plant_Seeds_Stamina2",
-        "Weight": 10
-      },
-      {
-        "ID": "Plant_Seeds_Stamina3",
-        "Weight": 8
-      },
-      {
-        "ID": "Plant_Seeds_Mushroom",
-        "Weight": 6
-      },
-      {
-        "ID": "Plant_Seeds_Wild",
-        "Weight": 4
-      }
-    ]
-  },
-  "Amber_Dig": {
-    "ItemLevel": 7,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Amber",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Rock_Volcanic",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Amber_Encased",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Dinosaur_Fossil",
-        "Weight": 20
-      },
-      {
-        "ID": "Ingredient_Dinosaur_Bone",
-        "Weight": 16
-      },
-      {
-        "ID": "Ore_Primal_Iron",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Primal_Core",
-        "Weight": 8
-      },
-      {
-        "ID": "Block_Fossil_Stone",
-        "Weight": 12
-      }
-    ]
-  },
-  "Fiery_Forest": {
-    "ItemLevel": 8,
-    "Category": "Forest",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Wood_Burnt_Trunk",
-          "Quantity": 8
-        },
-        {
-          "ItemId": "Ingredient_Fire_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Burnt_Trunk",
-        "Weight": 22
-      },
-      {
-        "ID": "Wood_Fire_Trunk",
-        "Weight": 18
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Charcoal",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Fruit_Poison",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Inferno": {
-    "ItemLevel": 8,
-    "Category": "Inferno",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Volcanic",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Fire_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 28
-      },
-      {
-        "ID": "Block_Volcanic_Ash",
-        "Weight": 20
-      },
-      {
-        "ID": "Block_Lava_Rock_Cracked",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Charcoal",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Powder_Boom",
-        "Weight": 6
-      },
-      {
-        "ID": "Ingredient_Sinue_Cindersinue",
-        "Weight": 5
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Volcanic_Badlands": {
-    "ItemLevel": 8,
-    "Category": "Inferno",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Volcanic",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Block_Volcanic_Ash",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Volcanic_Ash",
-        "Weight": 25
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 22
-      },
-      {
-        "ID": "Block_Lava_Rock_Cracked",
-        "Weight": 18
-      },
-      {
-        "ID": "Ore_Thorium",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Charcoal",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Cursed_Crypt": {
-    "ItemLevel": 8,
-    "Category": "Dark",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Bone_Fragment",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Void_Essence",
-          "Quantity": 6
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Slate",
-        "Weight": 18
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 15
-      },
-      {
-        "ID": "Ingredient_Bone_Fragment",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Voidheart",
-        "Weight": 5
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 4
-      }
-    ]
-  },
-  "Glacial_Depths": {
-    "ItemLevel": 8,
-    "Category": "Cold",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Block_Ice_Blue",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Ingredient_Ice_Essence",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Glacial_Crystal",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Frozen_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Block_Ice_Blue",
-        "Weight": 18
-      },
-      {
-        "ID": "Ore_Cobalt_Ice",
-        "Weight": 12
-      },
-      {
-        "ID": "Rock_Ice_Permafrost",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Ice_Essence",
-        "Weight": 4
-      }
-    ]
-  },
-  "Crystal_Depths": {
-    "_note": "Diamond and Zephyr weights are very low — these are the rarest gems in the game.",
-    "ItemLevel": 8,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Gem_Emerald",
-          "Quantity": 4
-        },
-        {
-          "ItemId": "Rock_Basalt",
-          "Quantity": 10
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Gem_Diamond",
-        "Weight": 8
-      },
-      {
-        "ID": "Rock_Gem_Zephyr",
-        "Weight": 6
-      },
-      {
-        "ID": "Ore_Prisma",
-        "Weight": 10
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 18
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 4
-      },
-      {
-        "ID": "Ingredient_Motes_Light",
-        "Weight": 4
-      }
-    ]
-  },
-  "Advanced_Textile": {
-    "ItemLevel": 8,
-    "Category": "Surface",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Bolt_Cotton",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Ingredient_Bolt_Wool",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ingredient_Bolt_Silk",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Bolt_Shadoweave",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Bolt_Stormsilk",
-        "Weight": 14
-      },
-      {
-        "ID": "Ingredient_Bolt_Cindercloth",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Bolt_Prismaloom",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Silk",
-        "Weight": 12
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Shadoweave",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Stormsilk",
-        "Weight": 10
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Cindercloth",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Fabric_Scrap_Prismaloom",
-        "Weight": 6
-      }
-    ]
-  },
-  "The_Abyss": {
-    "ItemLevel": 9,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Void_Essence",
-          "Quantity": 10
-        },
-        {
-          "ItemId": "Rock_Volcanic",
-          "Quantity": 12
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 22
-      },
-      {
-        "ID": "Rock_Slate",
-        "Weight": 18
-      },
-      {
-        "ID": "Rock_Basalt",
-        "Weight": 15
-      },
-      {
-        "ID": "Ore_Onyxium",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 4
-      },
-      {
-        "ID": "Ingredient_Voidheart",
-        "Weight": 4
-      }
-    ]
-  },
-  "Deep_Inferno": {
-    "ItemLevel": 9,
-    "Category": "Inferno",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fire_Essence",
-          "Quantity": 12
-        },
-        {
-          "ItemId": "Rock_Volcanic",
-          "Quantity": 12
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Block_Lava_Rock_Cracked",
-        "Weight": 25
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 22
-      },
-      {
-        "ID": "Ore_Adamantite",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Sinue_Cindersinue",
-        "Weight": 8
-      },
-      {
-        "ID": "Ingredient_Fire_Essence",
-        "Weight": 4
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 3
-      }
-    ]
-  },
-  "Abyssal_Mine": {
-    "ItemLevel": 9,
-    "Category": "Underground",
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ore_Mithril",
-          "Quantity": 6
-        },
-        {
-          "ItemId": "Ingredient_Void_Essence",
-          "Quantity": 8
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ore_Adamantite",
-        "Weight": 14
-      },
-      {
-        "ID": "Ore_Onyxium",
-        "Weight": 12
-      },
-      {
-        "ID": "Ore_Prisma",
-        "Weight": 10
-      },
-      {
-        "ID": "Ore_Thorium",
-        "Weight": 12
-      },
-      {
-        "ID": "Rock_Volcanic",
-        "Weight": 16
-      },
-      {
-        "ID": "Ingredient_Void_Essence",
-        "Weight": 4
-      },
-      {
-        "ID": "Ingredient_Voidheart",
-        "Weight": 3
-      }
-    ]
-  }
+	"_comment": "Generated place-progression expedition definitions. Crop items, seed items, seed recipes, animals, and monsters are intentionally excluded.",
+	"_usage": "python tools/generate_expeditions.py expeditions.json --repo-root . [--render-names item_render_names.json] [--dry-run]",
+	"Meadow": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Fibre",
+				"Weight": 20
+			},
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "Soil_Dirt",
+				"Weight": 10
+			}
+		]
+	},
+	"Meadow_Cave": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rubble_Stone",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			}
+		]
+	},
+	"Meadow_Forest": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Stick",
+				"Weight": 20
+			},
+			{
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Oak",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Rabbit",
+				"Weight": 2
+			}
+		]
+	},
+	"Cave_Entry": {
+		"ItemLevel": 1,
+		"Category": "Cavern",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Stone",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Wood_Oak_Trunk",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Stone",
+				"Weight": 10
+			},
+			{
+				"ID": "Ore_Copper",
+				"Weight": 6
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Goblin_Miner",
+				"Weight": 2
+			}
+		]
+	},
+	"Quarry": {
+		"ItemLevel": 2,
+		"Category": "Surface",
+		"Ticks": 50,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Tool_Pickaxe_Crude",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Stone",
+				"Weight": 10
+			},
+			{
+				"ID": "Soil_Dirt",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Stone_Mossy",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			}
+		]
+	},
+	"Cave": {
+		"ItemLevel": 1,
+		"Category": "Cavern",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Tool_Pickaxe_Copper",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Stone",
+				"Weight": 15
+			},
+			{
+				"ID": "Ore_Copper",
+				"Weight": 10
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 6
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Goblin_Miner",
+				"Weight": 5
+			}
+		]
+	},
+	"Gobelin_Dungeon": {
+		"ItemLevel": 1,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Weapon_Sword_Iron",
+					"Quantity": 1
+				},
+				{
+					"ItemId": "Weapon_Shield_Iron",
+					"Quantity": 1
+				}
+			]
+		},
+		"Waves": [
+				["Goblin_Miner", "Goblin_Miner", "Goblin_Scrapper"],
+				["Goblin_Miner", "Goblin_Thief", "Goblin_Scrapper"],
+		],
+		"CompletionRewards": [
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Quantity": 10
+			},
+			{
+				"ID": "Ore_Iron",
+				"Quantity": 12
+			},
+			{
+				"ID": "Ingredient_Charcoal",
+				"Quantity": 20
+			}
+		]
+	},
+	"Forest": {
+		"ItemLevel": 1,
+		"Category": "Forest",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Tool_Hatchet_Copper",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Oak",
+				"Weight": 2
+			},
+			{
+				"ID": "Wood_Beech_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Beech",
+				"Weight": 2
+			},
+			{
+				"ID": "Wood_Birch_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Birch",
+				"Weight": 2
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Common_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Cap_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Chicken",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Boar",
+				"Weight": 2
+			}
+		]
+	},
+	"Fairy_pond": {
+		"ItemLevel": 3,
+		"Category": "Forest",
+		"Ticks": 50,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Life_Essence",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Crop_Mushroom_Glowing_Blue",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Glowing_Purple",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Fruit_Azure",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 3
+			},
+			{
+				"ID": "Wood_Azure_Trunk",
+				"Weight": 15
+			},
+			{
+				"ID": "Plant_Sapling_Azure",
+				"Weight": 4
+			},
+			{
+				"ID": "*Container_Bucket_State_Filled_Water",
+				"Weight": 1
+			}
+		]
+	}
 }
