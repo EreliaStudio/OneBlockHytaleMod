@@ -51,21 +51,22 @@
           "Name": "server.benchCategories.OneBlockEnchanter_Surface",
           "Recipes": [
             "OneBlock_Crystal_Meadow",
-            "OneBlock_Crystal_Plains",
+            "OneBlock_Crystal_Rocky_Meadow",
             "OneBlock_Crystal_Flower_Field",
-            "OneBlock_Crystal_Farmland",
-            "OneBlock_Crystal_Garden",
-            "OneBlock_Crystal_Cactus_Field",
+            "OneBlock_Crystal_Palm_Coast",
+            "OneBlock_Crystal_Palo_Drywood",
+            "OneBlock_Crystal_BottleTree_Savanna",
             "OneBlock_Crystal_Desert",
-            "OneBlock_Crystal_Desert_Oasis",
-            "OneBlock_Crystal_Seed_Vault",
-            "OneBlock_Crystal_Textile_Workshop",
-            "OneBlock_Crystal_Egyptian_Temple",
-            "OneBlock_Crystal_Desert_Ruins",
-            "OneBlock_Crystal_Ancient_Grove",
-            "OneBlock_Crystal_Mystic_Seeds",
-            "OneBlock_Crystal_Amber_Dig",
-            "OneBlock_Crystal_Advanced_Textile"
+            "OneBlock_Crystal_White_Dunes",
+            "OneBlock_Crystal_Red_Dunes",
+            "OneBlock_Crystal_Saltbush_Dunes",
+            "OneBlock_Crystal_Sandstone_Ruins",
+            "OneBlock_Crystal_Cactus_Garden",
+            "OneBlock_Crystal_Thorium_Desert_Mine",
+            "OneBlock_Crystal_Scorched_Desert_Cache",
+            "OneBlock_Crystal_Leatherworker_Camp",
+            "OneBlock_Crystal_Feather_Rookery",
+            "OneBlock_Crystal_Textile_Cottage"
           ]
         },
         {
@@ -73,20 +74,33 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Forest",
           "Recipes": [
-            "OneBlock_Crystal_Forest",
-            "OneBlock_Crystal_Autumn_Forest",
-            "OneBlock_Crystal_Deep_Forest",
-            "OneBlock_Crystal_Swamp",
-            "OneBlock_Crystal_Tropical_Forest",
-            "OneBlock_Crystal_Mushroom_Grove",
-            "OneBlock_Crystal_Primal_Jungle",
+            "OneBlock_Crystal_Bramble_Thicket",
+            "OneBlock_Crystal_Marsh_Reeds",
+            "OneBlock_Crystal_Oak_Forest",
+            "OneBlock_Crystal_Beech_Forest",
+            "OneBlock_Crystal_Birch_Forest",
+            "OneBlock_Crystal_Maple_Forest",
+            "OneBlock_Crystal_Ash_Grove",
+            "OneBlock_Crystal_Aspen_Grove",
+            "OneBlock_Crystal_Cedar_Woods",
+            "OneBlock_Crystal_Fir_Woods",
+            "OneBlock_Crystal_Redwood_Forest",
+            "OneBlock_Crystal_Bamboo_Jungle",
             "OneBlock_Crystal_Jungle",
-            "OneBlock_Crystal_Poison_Grove",
-            "OneBlock_Crystal_Redwood_Grove",
+            "OneBlock_Crystal_Banyan_Jungle",
+            "OneBlock_Crystal_Camphor_Grove",
+            "OneBlock_Crystal_Blue_Fig_Grove",
+            "OneBlock_Crystal_Spiral_Woods",
+            "OneBlock_Crystal_Windwillow_Grove",
+            "OneBlock_Crystal_Stormbark_Woods",
+            "OneBlock_Crystal_Wisteria_Wildwood",
             "OneBlock_Crystal_Azure_Forest",
-            "OneBlock_Crystal_Mystical_Forest",
-            "OneBlock_Crystal_Storm_Wilds",
-            "OneBlock_Crystal_Fiery_Forest"
+            "OneBlock_Crystal_Crystal_Grove",
+            "OneBlock_Crystal_Sallow_Wetland",
+            "OneBlock_Crystal_Primal_Jungle",
+            "OneBlock_Crystal_Storm_Leather_Camp",
+            "OneBlock_Crystal_Silk_Warren",
+            "OneBlock_Crystal_Storm_Loom"
           ]
         },
         {
@@ -95,17 +109,26 @@
           "Name": "server.benchCategories.OneBlockEnchanter_Underground",
           "Recipes": [
             "OneBlock_Crystal_Cave",
-            "OneBlock_Crystal_Gem_Cave",
-            "OneBlock_Crystal_Precious_Vein",
-            "OneBlock_Crystal_Fungi_Cavern",
             "OneBlock_Crystal_Deep_Cave",
-            "OneBlock_Crystal_Deep_Mine",
-            "OneBlock_Crystal_Frozen_Cave",
-            "OneBlock_Crystal_Glowing_Cavern",
+            "OneBlock_Crystal_Copper_Cave",
+            "OneBlock_Crystal_Iron_Cave",
+            "OneBlock_Crystal_Silver_Cave",
+            "OneBlock_Crystal_Gold_Cave",
+            "OneBlock_Crystal_Thorium_Cave",
+            "OneBlock_Crystal_Mithril_Cave",
+            "OneBlock_Crystal_Cobalt_Depths",
+            "OneBlock_Crystal_Adamantite_Depths",
+            "OneBlock_Crystal_Gem_Cave",
+            "OneBlock_Crystal_Ancient_Forge",
+            "OneBlock_Crystal_Petrified_Forest",
             "OneBlock_Crystal_Dino_Caverns",
-            "OneBlock_Crystal_Crystal_Depths",
-            "OneBlock_Crystal_The_Abyss",
-            "OneBlock_Crystal_Abyssal_Mine"
+            "OneBlock_Crystal_Primal_Iron_Mine",
+            "OneBlock_Crystal_Primal_Trophy_Cache",
+            "OneBlock_Crystal_Common_Mushroom_Cave",
+            "OneBlock_Crystal_Colored_Mushroom_Cave",
+            "OneBlock_Crystal_Blue_Mushroom_Grotto",
+            "OneBlock_Crystal_Glowing_Mushroom_Cavern",
+            "OneBlock_Crystal_Redcap_Mushroom_Cave"
           ]
         },
         {
@@ -113,10 +136,13 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Cold",
           "Recipes": [
-            "OneBlock_Crystal_Snow",
-            "OneBlock_Crystal_Ice_Fields",
-            "OneBlock_Crystal_Frozen_Forest",
-            "OneBlock_Crystal_Glacial_Depths"
+            "OneBlock_Crystal_Ice_Woodland",
+            "OneBlock_Crystal_Snowfield",
+            "OneBlock_Crystal_Frozen_Lake",
+            "OneBlock_Crystal_Permafrost_Cave",
+            "OneBlock_Crystal_Frost_Fern_Forest",
+            "OneBlock_Crystal_Cobalt_Ice_Mine",
+            "OneBlock_Crystal_Frozen_Trophy_Cache"
           ]
         },
         {
@@ -124,9 +150,10 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Inferno",
           "Recipes": [
-            "OneBlock_Crystal_Inferno",
+            "OneBlock_Crystal_Fire_Woodland",
             "OneBlock_Crystal_Volcanic_Badlands",
-            "OneBlock_Crystal_Deep_Inferno"
+            "OneBlock_Crystal_Deep_Inferno",
+            "OneBlock_Crystal_Cinder_Loom"
           ]
         },
         {
@@ -134,9 +161,13 @@
           "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Dark",
           "Recipes": [
-            "OneBlock_Crystal_Graveyard",
-            "OneBlock_Crystal_Ancient_Graveyard",
-            "OneBlock_Crystal_Cursed_Crypt"
+            "OneBlock_Crystal_Onyxium_Abyss",
+            "OneBlock_Crystal_Prisma_Rift",
+            "OneBlock_Crystal_Poisoned_Woods",
+            "OneBlock_Crystal_Poison_Mushroom_Grotto",
+            "OneBlock_Crystal_Dark_Leather_Camp",
+            "OneBlock_Crystal_Shadow_Loom",
+            "OneBlock_Crystal_Essence_Font"
           ]
         }
       ],

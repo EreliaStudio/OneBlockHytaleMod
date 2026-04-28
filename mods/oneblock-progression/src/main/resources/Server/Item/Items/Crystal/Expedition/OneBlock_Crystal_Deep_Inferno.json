@@ -29,12 +29,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fire_Essence",
+        "ItemId": "Block_Lava_Rock_Cracked",
         "Quantity": 12
       },
       {
-        "ItemId": "Rock_Volcanic",
-        "Quantity": 12
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,

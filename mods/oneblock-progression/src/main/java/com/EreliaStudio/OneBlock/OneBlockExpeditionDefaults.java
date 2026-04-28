@@ -44,525 +44,737 @@ public final class OneBlockExpeditionDefaults
         Map<String, ExpeditionDefinition> expeditions = new HashMap<>();
 
         register(expeditions, "Meadow", List.of(
-                drop("Ingredient_Fibre", 25),
-                drop("Ingredient_Stick", 20),
-                drop("Rubble_Stone", 20),
-                drop("Soil_Dirt", 20),
-                drop("Plant_Grass_Lush", 15),
-                drop("Plant_Hay_Bundle", 10),
-                drop("Plant_Bush", 8)
+                drop("Ingredient_Fibre", 30),
+                drop("Ingredient_Stick", 24),
+                drop("Plant_Grass_Lush", 18),
+                drop("Plant_Bush", 14),
+                drop("Plant_Flower_Common_White", 10),
+                drop("Plant_Hay_Bundle", 8)
         ));
 
-        register(expeditions, "Plains", List.of(
-                drop("Soil_Grass", 25),
-                drop("Plant_Grass_Lush", 20),
-                drop("Ingredient_Fibre", 15),
-                drop("Rubble_Stone", 15),
-                drop("Plant_Hay_Bundle", 10),
-                drop("Plant_Sapling_Oak", 8),
-                drop("Ingredient_Life_Essence", 3)
+        register(expeditions, "Rocky_Meadow", List.of(
+                drop("Rock_Stone", 30),
+                drop("Rock_Shale", 24),
+                drop("Ingredient_Stick", 18),
+                drop("Plant_Roots_Leafy", 14),
+                drop("Plant_Petals_White", 10),
+                drop("Ingredient_Life_Essence", 8)
         ));
 
         register(expeditions, "Flower_Field", List.of(
-                drop("Plant_Flower_Common_White", 20),
-                drop("Plant_Lavender_Block", 15),
-                drop("Plant_Sunflower_Block", 15),
-                drop("Plant_Petals_White", 15),
-                drop("Plant_Grass_Lush", 15),
-                drop("Ingredient_Fibre", 12),
-                drop("Plant_Cactus_Flower", 5)
+                drop("Plant_Lavender_Block", 30),
+                drop("Plant_Lavender_Stage_0", 24),
+                drop("Plant_Sunflower_Block", 18),
+                drop("Plant_Sunflower_Stage_0", 14),
+                drop("Plant_Petals_White", 10),
+                drop("Plant_Flower_Common_White", 8)
         ));
 
-        register(expeditions, "Farmland", List.of(
-                drop("Plant_Crop_Wheat_Item", 20),
-                drop("Plant_Crop_Carrot_Item", 18),
-                drop("Plant_Crop_Corn_Item", 18),
-                drop("Plant_Crop_Potato_Item", 18),
-                drop("Plant_Crop_Rice_Item", 15),
-                drop("Plant_Crop_Onion_Item", 12),
-                drop("Soil_Dirt", 8)
-        ));
-
-        register(expeditions, "Forest", List.of(
-                drop("Wood_Oak_Trunk", 25),
-                drop("Plant_Leaves_Oak", 20),
-                drop("Ingredient_Fibre", 15),
-                drop("Ingredient_Stick", 15),
+        register(expeditions, "Bramble_Thicket", List.of(
+                drop("Plant_Bramble_Moss_Twisted", 30),
+                drop("Plant_Vine", 24),
+                drop("Plant_Vine_Rug", 18),
+                drop("Plant_Roots_Leafy", 14),
                 drop("Ingredient_Tree_Bark", 10),
-                drop("Plant_Sapling_Oak", 8),
-                drop("Ingredient_Life_Essence", 3)
+                drop("Ingredient_Tree_Sap", 8)
         ));
 
-        register(expeditions, "Garden", List.of(
-                drop("Plant_Crop_Tomato_Item", 15),
-                drop("Plant_Crop_Lettuce_Item", 15),
-                drop("Plant_Crop_Aubergine_Item", 14),
-                drop("Plant_Crop_Cauliflower_Item", 14),
-                drop("Plant_Crop_Turnip_Item", 12),
-                drop("Plant_Crop_Pumpkin_Item", 12),
-                drop("Plant_Crop_Chilli_Item", 10),
-                drop("Plant_Crop_Cotton_Item", 10)
+        register(expeditions, "Marsh_Reeds", List.of(
+                drop("Plant_Reeds_Marsh", 30),
+                drop("Plant_Barnacles", 24),
+                drop("Plant_Seaweed_Grass", 18),
+                drop("Plant_Seaweed_Grass_Stack", 14),
+                drop("Ingredient_Water_Essence", 10),
+                drop("Plant_Roots_Cave_Small", 8)
         ));
 
-        register(expeditions, "Cactus_Field", List.of(
-                drop("Plant_Cactus_1", 22),
-                drop("Plant_Cactus_2", 18),
-                drop("Plant_Cactus_3", 16),
-                drop("Plant_Cactus_Ball_1", 15),
-                drop("Plant_Cactus_Flat_1", 12),
-                drop("Plant_Cactus_Flat_2", 10),
-                drop("Plant_Cactus_Flat_3", 10),
-                drop("Plant_Cactus_Flower", 6)
+        register(expeditions, "Cave", List.of(
+                drop("Rock_Stone", 30),
+                drop("Rock_Shale", 24),
+                drop("Plant_Roots_Cave", 18),
+                drop("Plant_Roots_Cave_Small", 14),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Deep_Cave", List.of(
+                drop("Rock_Basalt", 30),
+                drop("Rock_Slate", 24),
+                drop("Rock_Stone_Mossy", 18),
+                drop("Ingredient_Bone_Fragment", 10),
+                drop("Ingredient_Void_Essence", 8)
+        ));
+
+        register(expeditions, "Copper_Cave", List.of(
+                drop("Ore_Copper", 30),
+                drop("Rock_Stone", 24),
+                drop("Rock_Shale", 18),
+                drop("Rock_Gem_Topaz", 10),
+                drop("Ingredient_Bar_Copper", 8)
+        ));
+
+        register(expeditions, "Iron_Cave", List.of(
+                drop("Ore_Iron", 30),
+                drop("Rock_Slate", 24),
+                drop("Rock_Basalt", 18),
+                drop("Rock_Gem_Ruby", 10),
+                drop("Ingredient_Bar_Iron", 8)
+        ));
+
+        register(expeditions, "Silver_Cave", List.of(
+                drop("Ore_Silver", 30),
+                drop("Rock_Basalt", 24),
+                drop("Rock_Gem_Sapphire", 18),
+                drop("Ingredient_Bar_Silver", 10),
+                drop("Ingredient_Motes_Light", 8)
+        ));
+
+        register(expeditions, "Gold_Cave", List.of(
+                drop("Ore_Gold", 30),
+                drop("Rock_Slate", 24),
+                drop("Rock_Gem_Emerald", 18),
+                drop("Ingredient_Bar_Gold", 10),
+                drop("Ingredient_Lightning_Essence", 8)
+        ));
+
+        register(expeditions, "Thorium_Cave", List.of(
+                drop("Ore_Thorium", 30),
+                drop("Rock_Volcanic", 24),
+                drop("Rock_Gem_Diamond", 18),
+                drop("Ingredient_Bar_Thorium", 10),
+                drop("Ingredient_Fire_Essence", 8)
+        ));
+
+        register(expeditions, "Mithril_Cave", List.of(
+                drop("Ore_Mithril", 30),
+                drop("Rock_Gem_Diamond", 24),
+                drop("Rock_Gem_Zephyr", 18),
+                drop("Ingredient_Bar_Mithril", 10),
+                drop("Ingredient_Lightning_Essence", 8)
+        ));
+
+        register(expeditions, "Cobalt_Depths", List.of(
+                drop("Ore_Cobalt", 30),
+                drop("Rock_Basalt", 24),
+                drop("Rock_Ice", 18),
+                drop("Ingredient_Bar_Cobalt", 10),
+                drop("Ingredient_Ice_Essence", 8)
+        ));
+
+        register(expeditions, "Adamantite_Depths", List.of(
+                drop("Ore_Adamantite", 30),
+                drop("Rock_Volcanic", 24),
+                drop("Rock_Gem_Diamond", 18),
+                drop("Ingredient_Bar_Adamantite", 10),
+                drop("Ingredient_Fire_Essence", 8)
+        ));
+
+        register(expeditions, "Onyxium_Abyss", List.of(
+                drop("Ore_Onyxium", 30),
+                drop("Rock_Volcanic", 24),
+                drop("Rock_Stone_Mossy", 18),
+                drop("Ingredient_Voidheart", 14),
+                drop("Ingredient_Bar_Onyxium", 10),
+                drop("Ingredient_Void_Essence", 8)
+        ));
+
+        register(expeditions, "Prisma_Rift", List.of(
+                drop("Ore_Prisma", 30),
+                drop("Rock_Gem_Zephyr", 24),
+                drop("Ingredient_Bar_Prisma", 14),
+                drop("Ingredient_Bolt_Prismaloom", 10),
+                drop("Ingredient_Fabric_Scrap_Prismaloom", 8)
+        ));
+
+        register(expeditions, "Gem_Cave", List.of(
+                drop("Rock_Gem_Topaz", 12),
+                drop("Rock_Gem_Sapphire", 10),
+                drop("Rock_Gem_Ruby", 8),
+                drop("Rock_Gem_Emerald", 8),
+                drop("Rock_Gem_Diamond", 4),
+                drop("Rock_Gem_Zephyr", 3)
+        ));
+
+        register(expeditions, "Ancient_Forge", List.of(
+                drop("Ingredient_Bar_Bronze", 30),
+                drop("Ingredient_Bar_Copper", 24),
+                drop("Ingredient_Bar_Iron", 18),
+                drop("Ingredient_Stud_Iron", 14),
+                drop("Ingredient_Charcoal", 10),
+                drop("Ingredient_Powder_Boom", 8)
+        ));
+
+        register(expeditions, "Oak_Forest", List.of(
+                drop("Wood_Oak_Trunk", 30),
+                drop("Plant_Leaves_Oak", 24),
+                drop("Plant_Fruit_Apple", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Beech_Forest", List.of(
+                drop("Wood_Beech_Trunk", 30),
+                drop("Plant_Leaves_Autumn_Floor", 24),
+                drop("Plant_Fruit_Berries_Red", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Fibre", 8)
+        ));
+
+        register(expeditions, "Birch_Forest", List.of(
+                drop("Wood_Birch_Trunk", 30),
+                drop("Plant_Leaves_Autumn_Floor", 24),
+                drop("Plant_Fruit_Pinkberry", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Plant_Vine", 8)
+        ));
+
+        register(expeditions, "Maple_Forest", List.of(
+                drop("Wood_Maple_Trunk", 30),
+                drop("Plant_Leaves_Autumn_Floor", 24),
+                drop("Plant_Fruit_Berries_Red", 18),
+                drop("Ingredient_Tree_Sap", 14),
+                drop("Ingredient_Tree_Bark", 10),
+                drop("Plant_Lavender_Block", 8)
+        ));
+
+        register(expeditions, "Ash_Grove", List.of(
+                drop("Wood_Ash_Trunk", 30),
+                drop("Plant_Roots_Leafy", 24),
+                drop("Plant_Bramble_Moss_Twisted", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Charcoal", 10),
+                drop("Ingredient_Fire_Essence", 8)
+        ));
+
+        register(expeditions, "Aspen_Grove", List.of(
+                drop("Wood_Aspen_Trunk", 30),
+                drop("Plant_Leaves_Autumn_Floor", 24),
+                drop("Plant_Flower_Common_White", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Cedar_Woods", List.of(
+                drop("Wood_Cedar_Trunk", 30),
+                drop("Plant_Roots_Leafy", 24),
+                drop("Ingredient_Tree_Bark", 18),
+                drop("Ingredient_Tree_Sap", 14),
+                drop("Ingredient_Stick", 10),
+                drop("Ingredient_Fibre", 8)
+        ));
+
+        register(expeditions, "Fir_Woods", List.of(
+                drop("Wood_Fir_Trunk", 30),
+                drop("Plant_Roots_Leafy", 24),
+                drop("Plant_Leaves_Autumn_Floor", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Redwood_Forest", List.of(
+                drop("Wood_Redwood_Trunk", 30),
+                drop("Plant_Vine", 24),
+                drop("Plant_Roots_Leafy", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Bamboo_Jungle", List.of(
+                drop("Wood_Bamboo_Trunk", 30),
+                drop("Wood_Jungle_Trunk", 24),
+                drop("Plant_Leaves_Jungle_Floor", 18),
+                drop("Plant_Vine", 14),
+                drop("Plant_Reeds_Marsh", 10),
+                drop("Plant_Fruit_Mango", 8)
+        ));
+
+        register(expeditions, "Jungle", List.of(
+                drop("Wood_Jungle_Trunk", 30),
+                drop("Wood_Banyan_Trunk", 24),
+                drop("Plant_Leaves_Jungle_Floor", 18),
+                drop("Plant_Vine", 14),
+                drop("Plant_Fruit_Mango", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Banyan_Jungle", List.of(
+                drop("Wood_Banyan_Trunk", 30),
+                drop("Wood_Gumboab_Trunk", 24),
+                drop("Plant_Leaves_Jungle_Floor", 18),
+                drop("Plant_Roots_Leafy", 14),
+                drop("Plant_Fruit_Mango", 10),
+                drop("Ingredient_Tree_Sap", 8)
+        ));
+
+        register(expeditions, "Palm_Coast", List.of(
+                drop("Wood_Palm_Trunk", 30),
+                drop("Plant_Fruit_Coconut", 24),
+                drop("Plant_Seaweed_Grass", 18),
+                drop("Plant_Seaweed_Grass_Stack", 14),
+                drop("Ingredient_Water_Essence", 10),
+                drop("Plant_Barnacles", 8)
+        ));
+
+        register(expeditions, "Palo_Drywood", List.of(
+                drop("Wood_Palo_Trunk", 30),
+                drop("Wood_Dry_Trunk", 24),
+                drop("Plant_Desert_Dry_Shrub", 18),
+                drop("Plant_Desert_Saltbush", 14),
+                drop("Ingredient_Tree_Bark", 10),
+                drop("Ingredient_Tree_Sap", 8)
+        ));
+
+        register(expeditions, "BottleTree_Savanna", List.of(
+                drop("Wood_Bottletree_Trunk", 30),
+                drop("Plant_Fruit_Coconut", 24),
+                drop("Plant_Hay_Bundle", 18),
+                drop("Ingredient_Tree_Bark", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Fibre", 8)
+        ));
+
+        register(expeditions, "Camphor_Grove", List.of(
+                drop("Wood_Camphor_Trunk", 30),
+                drop("Plant_Flower_Common_White", 24),
+                drop("Plant_Petals_White", 18),
+                drop("Ingredient_Tree_Sap", 14),
+                drop("Ingredient_Tree_Bark", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Blue_Fig_Grove", List.of(
+                drop("Wood_Fig_Blue_Trunk", 30),
+                drop("Plant_Fruit_Azure", 24),
+                drop("Plant_Fruit_Pinkberry", 18),
+                drop("Plant_Leaves_Jungle_Floor", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Spiral_Woods", List.of(
+                drop("Wood_Spiral_Trunk", 30),
+                drop("Plant_Fruit_Spiral", 24),
+                drop("Plant_Vine_Rug", 18),
+                drop("Plant_Roots_Leafy", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Windwillow_Grove", List.of(
+                drop("Wood_Windwillow_Trunk", 30),
+                drop("Plant_Fruit_Windwillow", 24),
+                drop("Plant_Vine", 18),
+                drop("Plant_Petals_White", 14),
+                drop("Ingredient_Lightning_Essence", 10),
+                drop("Ingredient_Tree_Sap", 8)
+        ));
+
+        register(expeditions, "Stormbark_Woods", List.of(
+                drop("Wood_Stormbark_Trunk", 30),
+                drop("Plant_Fruit_Windwillow", 24),
+                drop("Ingredient_Lightning_Essence", 18),
+                drop("Ingredient_Bolt_Stormsilk", 14),
+                drop("Ingredient_Fabric_Scrap_Stormsilk", 10),
+                drop("Ingredient_Hide_Storm", 8)
+        ));
+
+        register(expeditions, "Wisteria_Wildwood", List.of(
+                drop("Wood_Wisteria_Wild_Trunk", 30),
+                drop("Plant_Petals_White", 24),
+                drop("Plant_Vine_Rug", 18),
+                drop("Plant_Fruit_Pinkberry", 14),
+                drop("Ingredient_Tree_Sap", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Azure_Forest", List.of(
+                drop("Wood_Azure_Trunk", 30),
+                drop("Plant_Fruit_Azure", 24),
+                drop("Plant_Crop_Mushroom_Block_Blue", 18),
+                drop("Plant_Crop_Mushroom_Common_Blue", 14),
+                drop("Ingredient_Ice_Essence", 10)
+        ));
+
+        register(expeditions, "Crystal_Grove", List.of(
+                drop("Wood_Crystal_Trunk", 30),
+                drop("Ingredient_Bolt_Prismaloom", 14),
+                drop("Ingredient_Fabric_Scrap_Prismaloom", 10),
+                drop("Ingredient_Motes_Light", 8)
+        ));
+
+        register(expeditions, "Poisoned_Woods", List.of(
+                drop("Wood_Poisoned_Trunk", 30),
+                drop("Plant_Leaves_Poisoned_Floor", 24),
+                drop("Plant_Fruit_Poison", 18),
+                drop("Plant_Crop_Mushroom_Cap_Poison", 14),
+                drop("Ingredient_Sac_Venom", 10),
+                drop("Ingredient_Void_Essence", 8)
+        ));
+
+        register(expeditions, "Petrified_Forest", List.of(
+                drop("Wood_Petrified_Trunk", 30),
+                drop("Rock_Stone_Mossy", 24),
+                drop("Rock_Slate", 18),
+                drop("Ingredient_Bone_Fragment", 14),
+                drop("Ingredient_Void_Essence", 10),
+                drop("Plant_Roots_Cave", 8)
+        ));
+
+        register(expeditions, "Sallow_Wetland", List.of(
+                drop("Wood_Sallow_Trunk", 30),
+                drop("Plant_Barnacles", 24),
+                drop("Plant_Reeds_Marsh", 18),
+                drop("Plant_Seaweed_Grass", 14),
+                drop("Ingredient_Water_Essence", 10),
+                drop("Plant_Roots_Leafy", 8)
+        ));
+
+        register(expeditions, "Fire_Woodland", List.of(
+                drop("Wood_Fire_Trunk", 30),
+                drop("Wood_Burnt_Trunk", 24),
+                drop("Ingredient_Charcoal", 18),
+                drop("Ingredient_Fire_Essence", 14),
+                drop("Ingredient_Bolt_Cindercloth", 10),
+                drop("Ingredient_Fabric_Scrap_Cindercloth", 8)
+        ));
+
+        register(expeditions, "Ice_Woodland", List.of(
+                drop("Wood_Ice_Trunk", 30),
+                drop("Block_Snow", 24),
+                drop("Block_Ice_Blue", 18),
+                drop("Plant_Snow_Shrub", 14),
+                drop("Ingredient_Ice_Essence", 10),
+                drop("Rock_Ice", 8)
         ));
 
         register(expeditions, "Desert", List.of(
                 drop("Block_Sand", 30),
-                drop("Rock_Sandstone", 22),
-                drop("Block_Sandstone_Rough", 18),
-                drop("Block_Clay", 14),
-                drop("Block_Desert_Hardened_Earth", 12),
-                drop("Plant_Desert_Dry_Shrub", 8),
-                drop("Ingredient_Fire_Essence", 2)
+                drop("Block_Sandstone_Rough", 24),
+                drop("Rock_Sandstone", 18),
+                drop("Plant_Desert_Dry_Shrub", 14),
+                drop("Plant_Cactus_1", 10),
+                drop("Ingredient_Fire_Essence", 8)
         ));
 
-        register(expeditions, "Desert_Oasis", List.of(
-                drop("Block_Sand_White", 20),
-                drop("Plant_Desert_Blue_Aloe", 18),
+        register(expeditions, "White_Dunes", List.of(
+                drop("Block_Sand_White", 30),
+                drop("Block_Clay", 24),
                 drop("Plant_Desert_Yellow_Arid_Flower", 18),
-                drop("Plant_Desert_Red_Featherleaf", 15),
                 drop("Plant_Desert_Saltbush", 14),
-                drop("Block_Clay_Red", 12),
-                drop("Ingredient_Water_Essence", 3)
+                drop("Plant_Cactus_Flat_1", 10),
+                drop("Rock_Desert_Cracked", 8)
         ));
 
-        register(expeditions, "Autumn_Forest", List.of(
-                drop("Wood_Beech_Trunk", 22),
-                drop("Wood_Maple_Trunk", 20),
-                drop("Wood_Aspen_Trunk", 18),
-                drop("Plant_Leaves_Autumn_Floor", 16),
-                drop("Plant_Fruit_Berries_Red", 12),
-                drop("Plant_Fruit_Apple", 10),
-                drop("Plant_Sapling_Apple", 6)
+        register(expeditions, "Red_Dunes", List.of(
+                drop("Block_Sand_Red", 30),
+                drop("Block_Clay_Red", 24),
+                drop("Plant_Desert_Red_Featherleaf", 18),
+                drop("Plant_Cactus_Flower", 14),
+                drop("Plant_Cactus_2", 10),
+                drop("Rock_Desert_Fossil", 8)
         ));
 
-        register(expeditions, "Snow", List.of(
+        register(expeditions, "Saltbush_Dunes", List.of(
+                drop("Block_Desert_Hardened_Earth", 30),
+                drop("Block_Desert_Dried_Mud", 24),
+                drop("Plant_Desert_Saltbush", 18),
+                drop("Plant_Desert_Blue_Aloe", 14),
+                drop("Plant_Cactus_Ball_1", 10),
+                drop("Ingredient_Water_Essence", 8)
+        ));
+
+        register(expeditions, "Sandstone_Ruins", List.of(
+                drop("Block_Sandstone_Smooth", 30),
+                drop("Block_Sandstone_Red", 24),
+                drop("Block_Sandstone_Rough", 18),
+                drop("Rock_Sandstone", 14),
+                drop("Rock_Desert_Fossil", 10),
+                drop("Ingredient_Motes_Light", 8)
+        ));
+
+        register(expeditions, "Cactus_Garden", List.of(
+                drop("Plant_Cactus_1", 30),
+                drop("Plant_Cactus_2", 24),
+                drop("Plant_Cactus_3", 18),
+                drop("Plant_Cactus_Ball_1", 14),
+                drop("Plant_Cactus_Flat_1", 10),
+                drop("Plant_Cactus_Flat_2", 8),
+                drop("Plant_Cactus_Flat_3", 5),
+                drop("Plant_Cactus_Flower", 3)
+        ));
+
+        register(expeditions, "Thorium_Desert_Mine", List.of(
+                drop("Ore_Thorium_Desert", 30),
+                drop("Rock_Desert_Cracked", 24),
+                drop("Rock_Desert_Fossil", 18),
+                drop("Block_Desert_Hardened_Earth", 14),
+                drop("Ingredient_Fire_Essence", 10),
+                drop("Rock_Gem_Topaz", 8)
+        ));
+
+        register(expeditions, "Scorched_Desert_Cache", List.of(
+                drop("Ingredient_Shell_Scorpion", 30),
+                drop("Ingredient_Claw_Scorpion", 24),
+                drop("Ingredient_Fang_SaberTooth", 18),
+                drop("Ingredient_Feather_Vulture", 14),
+                drop("Ingredient_Hide_Camel", 10),
+                drop("Ingredient_Hide_Scarak", 8)
+        ));
+
+        register(expeditions, "Snowfield", List.of(
                 drop("Block_Snow", 30),
-                drop("Block_Snow_Packed", 22),
-                drop("Block_Frozen_Soil", 18),
-                drop("Plant_Snow_Shrub", 14),
-                drop("Plant_Frost_Fern", 12),
-                drop("Plant_Frozen_Grass", 10),
-                drop("Ingredient_Ice_Essence", 2)
+                drop("Block_Snow_Packed", 24),
+                drop("Plant_Snow_Shrub", 18),
+                drop("Plant_Frozen_Grass", 14),
+                drop("Ingredient_Ice_Essence", 10),
+                drop("Rock_Ice", 8)
         ));
 
-        register(expeditions, "Deep_Forest", List.of(
-                drop("Wood_Ash_Trunk", 22),
-                drop("Wood_Birch_Trunk", 20),
-                drop("Plant_Vine", 16),
-                drop("Ingredient_Tree_Bark", 14),
-                drop("Ingredient_Tree_Sap", 12),
-                drop("Ingredient_Fibre", 10),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Swamp", List.of(
-                drop("Wood_Sallow_Trunk", 18),
-                drop("Plant_Reeds_Marsh", 18),
-                drop("Plant_Barnacles", 14),
-                drop("Plant_Bramble_Moss_Twisted", 14),
-                drop("Plant_Vine_Rug", 12),
-                drop("Plant_Seaweed_Grass", 10),
-                drop("Plant_Seaweed_Grass_Stack", 8),
-                drop("Ingredient_Water_Essence", 2)
-        ));
-
-        register(expeditions, "Tropical_Forest", List.of(
-                drop("Wood_Palm_Trunk", 22),
-                drop("Wood_Banyan_Trunk", 18),
-                drop("Wood_Bottletree_Trunk", 15),
-                drop("Plant_Fruit_Coconut", 15),
-                drop("Plant_Fruit_Mango", 15),
-                drop("Plant_Fruit_Pinkberry", 12),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Mushroom_Grove", List.of(
-                drop("Plant_Crop_Mushroom_Block", 18),
-                drop("Plant_Crop_Mushroom_Block_Brown", 16),
-                drop("Plant_Crop_Mushroom_Block_Red", 14),
-                drop("Plant_Crop_Mushroom_Cap_Brown", 14),
-                drop("Plant_Crop_Mushroom_Cap_Red", 12),
-                drop("Plant_Crop_Mushroom_Cap_White", 12),
-                drop("Plant_Crop_Mushroom_Shelve_Brown", 10),
-                drop("Plant_Crop_Mushroom_Common_Brown", 8)
-        ));
-
-        register(expeditions, "Cave", List.of(
-                drop("Rock_Stone", 28),
-                drop("Rubble_Stone", 22),
-                drop("Rock_Shale", 18),
-                drop("Ore_Copper", 12),
-                drop("Plant_Roots_Cave", 10),
-                drop("Plant_Roots_Cave_Small", 8),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Graveyard", List.of(
-                drop("Soil_Dirt", 28),
-                drop("Rock_Stone_Mossy", 22),
-                drop("Rock_Stone", 18),
-                drop("Ingredient_Bone_Fragment", 10),
-                drop("Ingredient_Void_Essence", 2)
-        ));
-
-        register(expeditions, "Ice_Fields", List.of(
-                drop("Block_Ice_Clear", 25),
-                drop("Block_Ice_Frosted", 22),
+        register(expeditions, "Frozen_Lake", List.of(
+                drop("Block_Ice_Clear", 30),
+                drop("Block_Ice_Blue", 24),
                 drop("Block_Frozen_Water", 18),
                 drop("Plant_Ice_Flower_Blue", 14),
-                drop("Plant_Ice_Flower_White", 14),
-                drop("Ingredient_Ice_Essence", 3)
-        ));
-
-        register(expeditions, "Primal_Jungle", List.of(
-                drop("Wood_Jungle_Trunk", 20),
-                drop("Block_Jungle_Fern_Giant", 16),
-                drop("Block_Glowing_Jungle_Plant", 14),
-                drop("Plant_Primal_Fern", 14),
-                drop("Plant_Toxic_Jungle_Vine", 12),
-                drop("Plant_Giant_Jungle_Leaf", 12),
-                drop("Plant_Glowcap_Jungle", 8),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Seed_Vault", List.of(
-                drop("Plant_Seeds_Wheat_Eternal", 14),
-                drop("Plant_Seeds_Carrot_Eternal", 14),
-                drop("Plant_Seeds_Corn_Eternal", 14),
-                drop("Plant_Seeds_Potato_Eternal", 12),
-                drop("Plant_Seeds_Rice_Eternal", 12),
-                drop("Plant_Seeds_Onion_Eternal", 10),
-                drop("Plant_Seeds_Lettuce_Eternal", 10),
-                drop("Plant_Seeds_Tomato_Eternal", 10),
-                drop("Plant_Seeds_Turnip_Eternal", 8),
-                drop("Plant_Seeds_Pumpkin_Eternal", 8),
-                drop("Plant_Seeds_Aubergine_Eternal", 8),
-                drop("Plant_Seeds_Cauliflower_Eternal", 8),
-                drop("Plant_Seeds_Chilli_Eternal", 6),
-                drop("Plant_Seeds_Cotton_Eternal", 6)
-        ));
-
-        register(expeditions, "Textile_Workshop", List.of(
-                drop("Ingredient_Bolt_Cotton", 20),
-                drop("Ingredient_Bolt_Linen", 18),
-                drop("Ingredient_Bolt_Wool", 16),
-                drop("Ingredient_Fabric_Scrap_Cotton", 15),
-                drop("Ingredient_Fabric_Scrap_Linen", 15),
-                drop("Ingredient_Fabric_Scrap_Wool", 12)
-        ));
-
-        register(expeditions, "Jungle", List.of(
-                drop("Wood_Jungle_Trunk", 22),
-                drop("Wood_Bamboo_Trunk", 18),
-                drop("Plant_Reeds_Marsh", 14),
-                drop("Plant_Vine_Rug", 14),
-                drop("Plant_Leaves_Jungle_Floor", 12),
-                drop("Plant_Fruit_Mango", 10),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Gem_Cave", List.of(
-                drop("Rock_Stone", 20),
-                drop("Rock_Basalt", 16),
-                drop("Rock_Shale", 14),
-                drop("Rock_Gem_Emerald", 7),
-                drop("Rock_Gem_Ruby", 6),
-                drop("Rock_Gem_Sapphire", 6),
-                drop("Rock_Gem_Topaz", 6)
-        ));
-
-        register(expeditions, "Precious_Vein", List.of(
-                drop("Ore_Gold", 16),
-                drop("Ore_Silver", 20),
-                drop("Rock_Gem_Topaz", 10),
-                drop("Rock_Gem_Emerald", 8),
-                drop("Rock_Stone", 20),
-                drop("Rock_Basalt", 15)
-        ));
-
-        register(expeditions, "Egyptian_Temple", List.of(
-                drop("Block_Sandstone_Smooth", 25),
-                drop("Block_Sandstone_Red", 18),
-                drop("Rock_Sandstone", 18),
-                drop("Block_Clay_Red", 12),
-                drop("Ore_Gold", 6),
-                drop("Ingredient_Fire_Essence", 3)
-        ));
-
-        register(expeditions, "Desert_Ruins", List.of(
-                drop("Rock_Desert_Cracked", 22),
-                drop("Rock_Desert_Fossil", 18),
-                drop("Block_Desert_Dried_Mud", 18),
-                drop("Block_Sand_Red", 15),
-                drop("Ore_Thorium_Desert", 6),
-                drop("Ingredient_Fire_Essence", 3)
-        ));
-
-        register(expeditions, "Fungi_Cavern", List.of(
-                drop("Plant_Crop_Mushroom_Block_Green", 15),
-                drop("Plant_Crop_Mushroom_Block_Purple", 15),
-                drop("Plant_Crop_Mushroom_Block_White", 14),
-                drop("Plant_Crop_Mushroom_Block_Yellow", 14),
-                drop("Plant_Crop_Mushroom_Cap_Green", 10),
-                drop("Plant_Crop_Mushroom_Cap_Poison", 8),
-                drop("Plant_Crop_Mushroom_Common_Blue", 8),
-                drop("Plant_Crop_Mushroom_Common_Lime", 8),
-                drop("Plant_Crop_Mushroom_Flatcap_Blue", 6),
-                drop("Plant_Crop_Mushroom_Flatcap_Green", 6)
-        ));
-
-        register(expeditions, "Poison_Grove", List.of(
-                drop("Wood_Poisoned_Trunk", 22),
-                drop("Plant_Fruit_Poison", 18),
-                drop("Plant_Leaves_Poisoned_Floor", 18),
-                drop("Plant_Toxic_Jungle_Vine", 16),
-                drop("Plant_Vine", 12),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Redwood_Grove", List.of(
-                drop("Wood_Redwood_Trunk", 22),
-                drop("Wood_Cedar_Trunk", 18),
-                drop("Wood_Fir_Trunk", 18),
-                drop("Wood_Camphor_Trunk", 16),
-                drop("Ingredient_Tree_Bark", 14),
-                drop("Ingredient_Tree_Sap", 10),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Frozen_Forest", List.of(
-                drop("Wood_Ice_Trunk", 25),
-                drop("Block_Snow", 18),
-                drop("Block_Permafrost", 16),
-                drop("Plant_Frost_Fern", 14),
-                drop("Plant_Ice_Flower_Blue", 12),
                 drop("Plant_Ice_Flower_White", 10),
-                drop("Ingredient_Ice_Essence", 2)
+                drop("Ingredient_Water_Essence", 8)
         ));
 
-        register(expeditions, "Ancient_Graveyard", List.of(
-                drop("Rock_Stone_Mossy", 22),
-                drop("Rock_Slate", 18),
-                drop("Rock_Basalt", 15),
-                drop("Ingredient_Bone_Fragment", 12),
-                drop("Plant_Roots_Leafy", 10),
-                drop("Ingredient_Void_Essence", 3)
+        register(expeditions, "Permafrost_Cave", List.of(
+                drop("Block_Permafrost", 30),
+                drop("Block_Frozen_Soil", 24),
+                drop("Block_Ice_Frosted", 18),
+                drop("Rock_Ice_Permafrost", 14),
+                drop("Rock_Frozen_Stone", 10),
+                drop("Ingredient_Ice_Essence", 8)
         ));
 
-        register(expeditions, "Azure_Forest", List.of(
-                drop("Wood_Azure_Trunk", 22),
-                drop("Plant_Crop_Mushroom_Block_Blue", 16),
-                drop("Plant_Crop_Mushroom_Block_Yellow", 14),
-                drop("Plant_Fruit_Azure", 12),
-                drop("Wood_Crystal_Trunk", 10),
-                drop("Plant_Ice_Flower_Blue", 10),
-                drop("Ingredient_Ice_Essence", 3)
+        register(expeditions, "Frost_Fern_Forest", List.of(
+                drop("Plant_Frost_Fern", 30),
+                drop("Plant_Ice_Flower_Blue", 24),
+                drop("Plant_Ice_Flower_White", 18),
+                drop("Plant_Frozen_Grass", 14),
+                drop("Plant_Snow_Shrub", 10),
+                drop("Wood_Ice_Trunk", 8)
         ));
 
-        register(expeditions, "Mystical_Forest", List.of(
-                drop("Wood_Crystal_Trunk", 18),
-                drop("Wood_Spiral_Trunk", 16),
-                drop("Wood_Wisteria_Wild_Trunk", 16),
-                drop("Plant_Fruit_Spiral", 14),
-                drop("Plant_Fruit_Windwillow", 12),
-                drop("Plant_Roots_Leafy", 10),
-                drop("Ingredient_Motes_Light", 3)
+        register(expeditions, "Cobalt_Ice_Mine", List.of(
+                drop("Ore_Cobalt_Ice", 30),
+                drop("Rock_Glacial_Crystal", 24),
+                drop("Rock_Frozen_Stone", 18),
+                drop("Block_Ice_Blue", 14),
+                drop("Ingredient_Ice_Essence", 10),
+                drop("Rock_Gem_Sapphire", 8)
         ));
 
-        register(expeditions, "Storm_Wilds", List.of(
-                drop("Wood_Stormbark_Trunk", 22),
-                drop("Wood_Windwillow_Trunk", 20),
-                drop("Plant_Fruit_Windwillow", 15),
-                drop("Plant_Roots_Leafy", 14),
-                drop("Ingredient_Lightning_Essence", 3)
-        ));
-
-        register(expeditions, "Ancient_Grove", List.of(
-                drop("Wood_Petrified_Trunk", 22),
-                drop("Wood_Gumboab_Trunk", 18),
-                drop("Wood_Palo_Trunk", 16),
-                drop("Wood_Dry_Trunk", 14),
-                drop("Plant_Bush", 12),
-                drop("Rock_Desert_Fossil", 8),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Deep_Cave", List.of(
-                drop("Rock_Basalt", 25),
-                drop("Rubble_Basalt", 18),
-                drop("Rock_Slate", 18),
-                drop("Ore_Iron", 14),
-                drop("Ore_Silver", 8),
-                drop("Plant_Roots_Cave", 10),
-                drop("Ingredient_Void_Essence", 3)
-        ));
-
-        register(expeditions, "Deep_Mine", List.of(
-                drop("Ore_Mithril", 16),
-                drop("Ore_Cobalt", 14),
-                drop("Ore_Gold", 14),
-                drop("Ore_Silver", 12),
-                drop("Rock_Volcanic", 15),
-                drop("Rock_Slate", 12)
-        ));
-
-        register(expeditions, "Frozen_Cave", List.of(
-                drop("Block_Ice_Blue", 25),
-                drop("Rock_Ice", 20),
-                drop("Rock_Ice_Permafrost", 18),
-                drop("Block_Ice_Frosted", 15),
-                drop("Rock_Frozen_Stone", 12),
-                drop("Ingredient_Ice_Essence", 3)
-        ));
-
-        register(expeditions, "Glowing_Cavern", List.of(
-                drop("Plant_Crop_Mushroom_Glowing_Blue", 15),
-                drop("Plant_Crop_Mushroom_Glowing_Green", 15),
-                drop("Plant_Crop_Mushroom_Glowing_Purple", 14),
-                drop("Plant_Crop_Mushroom_Glowing_Red", 12),
-                drop("Plant_Crop_Mushroom_Glowing_Orange", 12),
-                drop("Plant_Crop_Mushroom_Glowing_Violet", 12),
-                drop("Plant_Roots_Leafy", 10),
-                drop("Ingredient_Motes_Light", 3)
-        ));
-
-        register(expeditions, "Dino_Caverns", List.of(
-                drop("Block_Primal_Stone", 22),
-                drop("Block_Fossil_Stone", 18),
-                drop("Block_Amber", 14),
-                drop("Block_Lava_Rock_Cracked", 14),
-                drop("Rock_Amber_Encased", 10),
-                drop("Rock_Volcanic", 12),
-                drop("Ingredient_Life_Essence", 2)
-        ));
-
-        register(expeditions, "Mystic_Seeds", List.of(
-                drop("Plant_Seeds_Health1", 12),
-                drop("Plant_Seeds_Health2", 10),
-                drop("Plant_Seeds_Health3", 8),
-                drop("Plant_Seeds_Mana1", 12),
-                drop("Plant_Seeds_Mana2", 10),
-                drop("Plant_Seeds_Mana3", 8),
-                drop("Plant_Seeds_Stamina1", 12),
-                drop("Plant_Seeds_Stamina2", 10),
-                drop("Plant_Seeds_Stamina3", 8),
-                drop("Plant_Seeds_Mushroom", 6),
-                drop("Plant_Seeds_Wild", 4)
-        ));
-
-        register(expeditions, "Amber_Dig", List.of(
-                drop("Rock_Amber_Encased", 22),
-                drop("Rock_Dinosaur_Fossil", 20),
-                drop("Ingredient_Dinosaur_Bone", 16),
-                drop("Ore_Primal_Iron", 12),
-                drop("Ingredient_Primal_Core", 8),
-                drop("Block_Fossil_Stone", 12)
-        ));
-
-        register(expeditions, "Fiery_Forest", List.of(
-                drop("Wood_Burnt_Trunk", 22),
-                drop("Wood_Fire_Trunk", 18),
-                drop("Rock_Volcanic", 16),
-                drop("Ingredient_Charcoal", 14),
-                drop("Plant_Fruit_Poison", 8),
-                drop("Ingredient_Fire_Essence", 3)
-        ));
-
-        register(expeditions, "Inferno", List.of(
-                drop("Rock_Volcanic", 28),
-                drop("Block_Volcanic_Ash", 20),
-                drop("Block_Lava_Rock_Cracked", 16),
-                drop("Ingredient_Charcoal", 14),
-                drop("Ingredient_Powder_Boom", 6),
-                drop("Ingredient_Sinue_Cindersinue", 5),
-                drop("Ingredient_Fire_Essence", 3)
+        register(expeditions, "Frozen_Trophy_Cache", List.of(
+                drop("Ingredient_Fur_PolarBear", 30),
+                drop("Ingredient_Fur_Yeti", 24),
+                drop("Ingredient_Horn_Ram", 18),
+                drop("Ingredient_Tusk_Moose", 14),
+                drop("Ingredient_Scale_IceDragon", 10),
+                drop("Ingredient_Ice_Essence", 8)
         ));
 
         register(expeditions, "Volcanic_Badlands", List.of(
-                drop("Block_Volcanic_Ash", 25),
-                drop("Rock_Volcanic", 22),
-                drop("Block_Lava_Rock_Cracked", 18),
-                drop("Ore_Thorium", 8),
-                drop("Ingredient_Charcoal", 12),
-                drop("Ingredient_Fire_Essence", 3)
-        ));
-
-        register(expeditions, "Cursed_Crypt", List.of(
-                drop("Rock_Basalt", 22),
-                drop("Rock_Slate", 18),
-                drop("Rock_Volcanic", 15),
-                drop("Ingredient_Bone_Fragment", 12),
-                drop("Ingredient_Voidheart", 5),
-                drop("Ingredient_Void_Essence", 4)
-        ));
-
-        register(expeditions, "Glacial_Depths", List.of(
-                drop("Rock_Glacial_Crystal", 22),
-                drop("Rock_Frozen_Stone", 20),
-                drop("Block_Ice_Blue", 18),
-                drop("Ore_Cobalt_Ice", 12),
-                drop("Rock_Ice_Permafrost", 14),
-                drop("Ingredient_Ice_Essence", 4)
-        ));
-
-        register(expeditions, "Crystal_Depths", List.of(
-                drop("Rock_Gem_Diamond", 8),
-                drop("Rock_Gem_Zephyr", 6),
-                drop("Ore_Prisma", 10),
-                drop("Rock_Volcanic", 20),
-                drop("Rock_Basalt", 18),
-                drop("Ingredient_Void_Essence", 4),
-                drop("Ingredient_Motes_Light", 4)
-        ));
-
-        register(expeditions, "Advanced_Textile", List.of(
-                drop("Ingredient_Bolt_Silk", 16),
-                drop("Ingredient_Bolt_Shadoweave", 14),
-                drop("Ingredient_Bolt_Stormsilk", 14),
-                drop("Ingredient_Bolt_Cindercloth", 12),
-                drop("Ingredient_Bolt_Prismaloom", 8),
-                drop("Ingredient_Fabric_Scrap_Silk", 12),
-                drop("Ingredient_Fabric_Scrap_Shadoweave", 10),
-                drop("Ingredient_Fabric_Scrap_Stormsilk", 10),
-                drop("Ingredient_Fabric_Scrap_Cindercloth", 8),
-                drop("Ingredient_Fabric_Scrap_Prismaloom", 6)
-        ));
-
-        register(expeditions, "The_Abyss", List.of(
-                drop("Rock_Volcanic", 22),
-                drop("Rock_Slate", 18),
-                drop("Rock_Basalt", 15),
-                drop("Ore_Onyxium", 8),
-                drop("Ingredient_Void_Essence", 4),
-                drop("Ingredient_Voidheart", 4)
+                drop("Block_Volcanic_Ash", 30),
+                drop("Block_Lava_Rock_Cracked", 24),
+                drop("Rock_Volcanic", 18),
+                drop("Ingredient_Charcoal", 14),
+                drop("Ingredient_Fire_Essence", 10)
         ));
 
         register(expeditions, "Deep_Inferno", List.of(
-                drop("Block_Lava_Rock_Cracked", 25),
-                drop("Rock_Volcanic", 22),
-                drop("Ore_Adamantite", 8),
-                drop("Ingredient_Sinue_Cindersinue", 8),
-                drop("Ingredient_Fire_Essence", 4),
-                drop("Ingredient_Void_Essence", 3)
+                drop("Rock_Volcanic", 30),
+                drop("Block_Lava_Rock_Cracked", 24),
+                drop("Ingredient_Fire_Essence", 18),
+                drop("Ingredient_Void_Essence", 14),
+                drop("Ingredient_Bolt_Cindercloth", 10),
+                drop("Ingredient_Fabric_Scrap_Cindercloth", 8)
         ));
 
-        register(expeditions, "Abyssal_Mine", List.of(
-                drop("Ore_Adamantite", 14),
-                drop("Ore_Onyxium", 12),
-                drop("Ore_Prisma", 10),
-                drop("Ore_Thorium", 12),
-                drop("Rock_Volcanic", 16),
-                drop("Ingredient_Void_Essence", 4),
+        register(expeditions, "Primal_Jungle", List.of(
+                drop("Block_Jungle_Fern_Giant", 30),
+                drop("Block_Glowing_Jungle_Plant", 24),
+                drop("Plant_Primal_Fern", 18),
+                drop("Plant_Glowcap_Jungle", 14),
+                drop("Plant_Toxic_Jungle_Vine", 10),
+                drop("Plant_Giant_Jungle_Leaf", 8)
+        ));
+
+        register(expeditions, "Dino_Caverns", List.of(
+                drop("Block_Primal_Stone", 30),
+                drop("Block_Fossil_Stone", 24),
+                drop("Block_Amber", 18),
+                drop("Rock_Amber_Encased", 14),
+                drop("Rock_Dinosaur_Fossil", 10),
+                drop("Ingredient_Dinosaur_Bone", 8)
+        ));
+
+        register(expeditions, "Primal_Iron_Mine", List.of(
+                drop("Ore_Primal_Iron", 30),
+                drop("Rock_Amber_Encased", 24),
+                drop("Rock_Dinosaur_Fossil", 18),
+                drop("Ingredient_Primal_Core", 14),
+                drop("Ingredient_Dinosaur_Bone", 10),
+                drop("Ingredient_Fire_Essence", 8)
+        ));
+
+        register(expeditions, "Primal_Trophy_Cache", List.of(
+                drop("Ingredient_Tooth_CaveRex", 30),
+                drop("Ingredient_Claw_CaveRaptor", 24),
+                drop("Ingredient_Scale_Dimetrodon", 18),
+                drop("Ingredient_Hide_Trillodon", 14),
+                drop("Ingredient_Feather_Pterodactyl", 10),
+                drop("Ingredient_Primal_Meat", 8)
+        ));
+
+        register(expeditions, "Common_Mushroom_Cave", List.of(
+                drop("Plant_Crop_Mushroom_Block", 30),
+                drop("Plant_Crop_Mushroom_Block_Brown", 24),
+                drop("Plant_Crop_Mushroom_Common_Brown", 18),
+                drop("Plant_Crop_Mushroom_Cap_Brown", 14),
+                drop("Plant_Crop_Mushroom_Shelve_Brown", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Colored_Mushroom_Cave", List.of(
+                drop("Plant_Crop_Mushroom_Block_Green", 30),
+                drop("Plant_Crop_Mushroom_Block_Red", 24),
+                drop("Plant_Crop_Mushroom_Block_White", 18),
+                drop("Plant_Crop_Mushroom_Block_Yellow", 14),
+                drop("Plant_Crop_Mushroom_Common_Lime", 10),
+                drop("Plant_Crop_Mushroom_Cap_Green", 8)
+        ));
+
+        register(expeditions, "Blue_Mushroom_Grotto", List.of(
+                drop("Plant_Crop_Mushroom_Block_Blue", 30),
+                drop("Plant_Crop_Mushroom_Common_Blue", 24),
+                drop("Plant_Crop_Mushroom_Flatcap_Blue", 18),
+                drop("Plant_Crop_Mushroom_Glowing_Blue", 14),
+                drop("Ingredient_Ice_Essence", 10)
+        ));
+
+        register(expeditions, "Poison_Mushroom_Grotto", List.of(
+                drop("Plant_Crop_Mushroom_Block_Purple", 30),
+                drop("Plant_Crop_Mushroom_Cap_Poison", 24),
+                drop("Plant_Crop_Mushroom_Glowing_Purple", 18),
+                drop("Plant_Crop_Mushroom_Glowing_Violet", 14),
+                drop("Ingredient_Sac_Venom", 10),
+                drop("Ingredient_Void_Essence", 8)
+        ));
+
+        register(expeditions, "Glowing_Mushroom_Cavern", List.of(
+                drop("Plant_Crop_Mushroom_Glowing_Green", 30),
+                drop("Plant_Crop_Mushroom_Glowing_Orange", 24),
+                drop("Plant_Crop_Mushroom_Glowing_Red", 18),
+                drop("Plant_Crop_Mushroom_Glowing_Purple", 14),
+                drop("Plant_Crop_Mushroom_Glowing_Violet", 10),
+                drop("Ingredient_Motes_Light", 8)
+        ));
+
+        register(expeditions, "Redcap_Mushroom_Cave", List.of(
+                drop("Plant_Crop_Mushroom_Cap_Red", 30),
+                drop("Plant_Crop_Mushroom_Cap_White", 24),
+                drop("Plant_Crop_Mushroom_Flatcap_Green", 18),
+                drop("Plant_Crop_Mushroom_Glowing_Green", 14),
+                drop("Plant_Crop_Mushroom_Glowing_Orange", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Leatherworker_Camp", List.of(
+                drop("Ingredient_Hide_Light", 30),
+                drop("Ingredient_Hide_Medium", 24),
+                drop("Ingredient_Hide_Heavy", 18),
+                drop("Ingredient_Hide_Soft", 14),
+                drop("Ingredient_Strap_Leather", 10),
+                drop("Ingredient_Leather_Light", 8)
+        ));
+
+        register(expeditions, "Dark_Leather_Camp", List.of(
+                drop("Ingredient_Hide_Dark", 30),
+                drop("Ingredient_Leather_Dark", 24),
+                drop("Ingredient_Hide_Scaled", 18),
+                drop("Ingredient_Leather_Scaled", 14),
+                drop("Ingredient_Hide_Prismic", 10),
+                drop("Ingredient_Leather_Prismic", 8)
+        ));
+
+        register(expeditions, "Storm_Leather_Camp", List.of(
+                drop("Ingredient_Hide_Storm", 30),
+                drop("Ingredient_Leather_Storm", 24),
+                drop("Ingredient_Leather_Medium", 18),
+                drop("Ingredient_Leather_Heavy", 14),
+                drop("Ingredient_Leather_Soft", 10),
+                drop("Ingredient_Chitin_Sturdy", 8)
+        ));
+
+        register(expeditions, "Feather_Rookery", List.of(
+                drop("Ingredient_Feathers_Light", 30),
+                drop("Ingredient_Feathers_Blue", 24),
+                drop("Ingredient_Feathers_Red", 18),
+                drop("Ingredient_Feathers_Dark", 14),
+                drop("Ingredient_Bone_Fragment", 10),
+                drop("Ingredient_Sinue_Cindersinue", 8)
+        ));
+
+        register(expeditions, "Textile_Cottage", List.of(
+                drop("Ingredient_Fabric_Scrap_Cotton", 30),
+                drop("Ingredient_Fabric_Scrap_Linen", 24),
+                drop("Ingredient_Fabric_Scrap_Wool", 18),
+                drop("Ingredient_Bolt_Cotton", 14),
+                drop("Ingredient_Bolt_Linen", 10),
+                drop("Ingredient_Bolt_Wool", 8)
+        ));
+
+        register(expeditions, "Silk_Warren", List.of(
+                drop("Ingredient_Fabric_Scrap_Silk", 30),
+                drop("Ingredient_Bolt_Silk", 24),
+                drop("Ingredient_Chitin_Sturdy", 18),
+                drop("Ingredient_Fibre", 14),
+                drop("Ingredient_Sinue_Cindersinue", 10),
+                drop("Ingredient_Life_Essence", 8)
+        ));
+
+        register(expeditions, "Shadow_Loom", List.of(
+                drop("Ingredient_Fabric_Scrap_Shadoweave", 30),
+                drop("Ingredient_Bolt_Shadoweave", 24),
+                drop("Ingredient_Fabric_Scrap_Prismaloom", 18),
+                drop("Ingredient_Bolt_Prismaloom", 14),
+                drop("Ingredient_Voidheart", 10),
+                drop("Ingredient_Motes_Light", 8)
+        ));
+
+        register(expeditions, "Cinder_Loom", List.of(
+                drop("Ingredient_Fabric_Scrap_Cindercloth", 30),
+                drop("Ingredient_Bolt_Cindercloth", 24),
+                drop("Ingredient_Charcoal", 18),
+                drop("Ingredient_Fire_Essence", 14),
+                drop("Wood_Burnt_Trunk", 10),
+                drop("Rock_Volcanic", 8)
+        ));
+
+        register(expeditions, "Storm_Loom", List.of(
+                drop("Ingredient_Fabric_Scrap_Stormsilk", 30),
+                drop("Ingredient_Bolt_Stormsilk", 24),
+                drop("Ingredient_Lightning_Essence", 18),
+                drop("Wood_Stormbark_Trunk", 14),
+                drop("Plant_Fruit_Windwillow", 10),
+                drop("Ingredient_Motes_Light", 8)
+        ));
+
+        register(expeditions, "Essence_Font", List.of(
+                drop("Ingredient_Fire_Essence", 30),
+                drop("Ingredient_Ice_Essence", 24),
+                drop("Ingredient_Life_Essence", 18),
+                drop("Ingredient_Lightning_Essence", 14),
+                drop("Ingredient_Void_Essence", 10),
+                drop("Ingredient_Water_Essence", 8),
+                drop("Ingredient_Motes_Light", 5),
                 drop("Ingredient_Voidheart", 3)
         ));
 

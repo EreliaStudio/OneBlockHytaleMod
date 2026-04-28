@@ -29,12 +29,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Wood_Jungle_Trunk",
-        "Quantity": 8
+        "ItemId": "Wood_Bamboo_Trunk",
+        "Quantity": 12
       },
       {
-        "ItemId": "Ingredient_Life_Essence",
-        "Quantity": 6
+        "ItemId": "Wood_Jungle_Trunk",
+        "Quantity": 8
       }
     ],
     "OutputQuantity": 1,

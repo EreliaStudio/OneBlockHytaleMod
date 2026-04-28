@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_Deep_Cave.description"
   },
   "Id": "OneBlock_Crystal_Deep_Cave",
-  "ItemLevel": 7,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -30,11 +30,7 @@
     "Input": [
       {
         "ItemId": "Rock_Stone",
-        "Quantity": 12
-      },
-      {
-        "ItemId": "Ore_Copper",
-        "Quantity": 8
+        "Quantity": 16
       }
     ],
     "OutputQuantity": 1,
@@ -58,5 +54,5 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Rare"
+  "Quality": "Uncommon"
 }

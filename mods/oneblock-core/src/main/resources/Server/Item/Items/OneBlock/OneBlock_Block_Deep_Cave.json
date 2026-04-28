@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Deep_Cave.name"
   },
   "Id": "OneBlock_Block_Deep_Cave",
-  "ItemLevel": 7,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlock_Deep_Cave.png",
   "Categories": [
     "Blocks.OneBlock"

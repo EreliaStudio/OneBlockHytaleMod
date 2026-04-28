@@ -30,11 +30,11 @@
     "Input": [
       {
         "ItemId": "Rock_Volcanic",
-        "Quantity": 10
+        "Quantity": 16
       },
       {
-        "ItemId": "Block_Volcanic_Ash",
-        "Quantity": 6
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 8
       }
     ],
     "OutputQuantity": 1,

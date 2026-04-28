@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Azure_Forest.name"
   },
   "Id": "OneBlock_Block_Azure_Forest",
-  "ItemLevel": 7,
+  "ItemLevel": 8,
   "Icon": "Icons/ItemsGenerated/OneBlock_Azure_Forest.png",
   "Categories": [
     "Blocks.OneBlock"

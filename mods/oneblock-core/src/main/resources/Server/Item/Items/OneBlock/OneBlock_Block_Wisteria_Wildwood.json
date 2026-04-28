@@ -1,0 +1,54 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Block_Wisteria_Wildwood.name"
+  },
+  "Id": "OneBlock_Block_Wisteria_Wildwood",
+  "ItemLevel": 8,
+  "Icon": "Icons/ItemsGenerated/OneBlock_Wisteria_Wildwood.png",
+  "Categories": [
+    "Blocks.OneBlock"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "OneBlock",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "OneBlock",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Soils",
+        "ItemId": "Soil_Dirt",
+        "Quantity": 0
+      }
+    },
+    "Textures": [
+      {
+        "Down": "BlockTextures/OneBlock_Block_Wisteria_Wildwood.png",
+        "Sides": "BlockTextures/OneBlock_Block_Wisteria_Wildwood.png",
+        "Up": "BlockTextures/OneBlock_Block_Wisteria_Wildwood.png",
+        "Weight": 1
+      }
+    ],
+    "TransitionToGroups": [],
+    "ParticleColor": "#ffffff"
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Block"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

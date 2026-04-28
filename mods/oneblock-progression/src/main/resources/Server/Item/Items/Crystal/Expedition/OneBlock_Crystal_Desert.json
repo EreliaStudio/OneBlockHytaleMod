@@ -29,12 +29,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rubble_Stone",
-        "Quantity": 10
+        "ItemId": "Rock_Sandstone",
+        "Quantity": 12
       },
       {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 8
+        "ItemId": "Block_Sand",
+        "Quantity": 12
       }
     ],
     "OutputQuantity": 1,

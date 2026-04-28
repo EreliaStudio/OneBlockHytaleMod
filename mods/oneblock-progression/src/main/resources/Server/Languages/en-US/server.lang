@@ -594,211 +594,335 @@ items.OneBlock_Crystal_Meadow.name=Meadow Crystal
 items.OneBlock_Crystal_Meadow.description=Consume to begin a Meadow expedition.
 benchCategories.OneBlockEnchanter_Surface=Surface Crystals
 
-# GENERATED ─── Plains ─────────────────────────────────────────────────
-items.OneBlock_Crystal_Plains.name=Plains Crystal
-items.OneBlock_Crystal_Plains.description=Consume to begin a Plains expedition.
+# GENERATED ─── Rocky_Meadow ───────────────────────────────────────────
+items.OneBlock_Crystal_Rocky_Meadow.name=Rocky_Meadow Crystal
+items.OneBlock_Crystal_Rocky_Meadow.description=Consume to begin a Rocky_Meadow expedition.
 
 # GENERATED ─── Flower_Field ───────────────────────────────────────────
 items.OneBlock_Crystal_Flower_Field.name=Flower_Field Crystal
 items.OneBlock_Crystal_Flower_Field.description=Consume to begin a Flower_Field expedition.
 
-# GENERATED ─── Farmland ───────────────────────────────────────────────
-items.OneBlock_Crystal_Farmland.name=Farmland Crystal
-items.OneBlock_Crystal_Farmland.description=Consume to begin a Farmland expedition.
-
-# GENERATED ─── Forest ─────────────────────────────────────────────────
-items.OneBlock_Crystal_Forest.name=Forest Crystal
-items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.
+# GENERATED ─── Bramble_Thicket ────────────────────────────────────────
+items.OneBlock_Crystal_Bramble_Thicket.name=Bramble_Thicket Crystal
+items.OneBlock_Crystal_Bramble_Thicket.description=Consume to begin a Bramble_Thicket expedition.
 benchCategories.OneBlockEnchanter_Forest=Forest Crystals
 
-# GENERATED ─── Garden ─────────────────────────────────────────────────
-items.OneBlock_Crystal_Garden.name=Garden Crystal
-items.OneBlock_Crystal_Garden.description=Consume to begin a Garden expedition.
-
-# GENERATED ─── Cactus_Field ───────────────────────────────────────────
-items.OneBlock_Crystal_Cactus_Field.name=Cactus_Field Crystal
-items.OneBlock_Crystal_Cactus_Field.description=Consume to begin a Cactus_Field expedition.
-
-# GENERATED ─── Desert ─────────────────────────────────────────────────
-items.OneBlock_Crystal_Desert.name=Desert Crystal
-items.OneBlock_Crystal_Desert.description=Consume to begin a Desert expedition.
-
-# GENERATED ─── Desert_Oasis ───────────────────────────────────────────
-items.OneBlock_Crystal_Desert_Oasis.name=Desert_Oasis Crystal
-items.OneBlock_Crystal_Desert_Oasis.description=Consume to begin a Desert_Oasis expedition.
-
-# GENERATED ─── Autumn_Forest ──────────────────────────────────────────
-items.OneBlock_Crystal_Autumn_Forest.name=Autumn_Forest Crystal
-items.OneBlock_Crystal_Autumn_Forest.description=Consume to begin a Autumn_Forest expedition.
-
-# GENERATED ─── Snow ───────────────────────────────────────────────────
-items.OneBlock_Crystal_Snow.name=Snow Crystal
-items.OneBlock_Crystal_Snow.description=Consume to begin a Snow expedition.
-benchCategories.OneBlockEnchanter_Cold=Cold Crystals
-
-# GENERATED ─── Deep_Forest ────────────────────────────────────────────
-items.OneBlock_Crystal_Deep_Forest.name=Deep_Forest Crystal
-items.OneBlock_Crystal_Deep_Forest.description=Consume to begin a Deep_Forest expedition.
-
-# GENERATED ─── Swamp ──────────────────────────────────────────────────
-items.OneBlock_Crystal_Swamp.name=Swamp Crystal
-items.OneBlock_Crystal_Swamp.description=Consume to begin a Swamp expedition.
-
-# GENERATED ─── Tropical_Forest ────────────────────────────────────────
-items.OneBlock_Crystal_Tropical_Forest.name=Tropical_Forest Crystal
-items.OneBlock_Crystal_Tropical_Forest.description=Consume to begin a Tropical_Forest expedition.
-
-# GENERATED ─── Mushroom_Grove ─────────────────────────────────────────
-items.OneBlock_Crystal_Mushroom_Grove.name=Mushroom_Grove Crystal
-items.OneBlock_Crystal_Mushroom_Grove.description=Consume to begin a Mushroom_Grove expedition.
+# GENERATED ─── Marsh_Reeds ────────────────────────────────────────────
+items.OneBlock_Crystal_Marsh_Reeds.name=Marsh_Reeds Crystal
+items.OneBlock_Crystal_Marsh_Reeds.description=Consume to begin a Marsh_Reeds expedition.
 
 # GENERATED ─── Cave ───────────────────────────────────────────────────
 items.OneBlock_Crystal_Cave.name=Cave Crystal
 items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.
 benchCategories.OneBlockEnchanter_Underground=Underground Crystals
 
-# GENERATED ─── Graveyard ──────────────────────────────────────────────
-items.OneBlock_Crystal_Graveyard.name=Graveyard Crystal
-items.OneBlock_Crystal_Graveyard.description=Consume to begin a Graveyard expedition.
+# GENERATED ─── Deep_Cave ──────────────────────────────────────────────
+items.OneBlock_Crystal_Deep_Cave.name=Deep_Cave Crystal
+items.OneBlock_Crystal_Deep_Cave.description=Consume to begin a Deep_Cave expedition.
+
+# GENERATED ─── Copper_Cave ────────────────────────────────────────────
+items.OneBlock_Crystal_Copper_Cave.name=Copper_Cave Crystal
+items.OneBlock_Crystal_Copper_Cave.description=Consume to begin a Copper_Cave expedition.
+
+# GENERATED ─── Iron_Cave ──────────────────────────────────────────────
+items.OneBlock_Crystal_Iron_Cave.name=Iron_Cave Crystal
+items.OneBlock_Crystal_Iron_Cave.description=Consume to begin a Iron_Cave expedition.
+
+# GENERATED ─── Silver_Cave ────────────────────────────────────────────
+items.OneBlock_Crystal_Silver_Cave.name=Silver_Cave Crystal
+items.OneBlock_Crystal_Silver_Cave.description=Consume to begin a Silver_Cave expedition.
+
+# GENERATED ─── Gold_Cave ──────────────────────────────────────────────
+items.OneBlock_Crystal_Gold_Cave.name=Gold_Cave Crystal
+items.OneBlock_Crystal_Gold_Cave.description=Consume to begin a Gold_Cave expedition.
+
+# GENERATED ─── Thorium_Cave ───────────────────────────────────────────
+items.OneBlock_Crystal_Thorium_Cave.name=Thorium_Cave Crystal
+items.OneBlock_Crystal_Thorium_Cave.description=Consume to begin a Thorium_Cave expedition.
+
+# GENERATED ─── Mithril_Cave ───────────────────────────────────────────
+items.OneBlock_Crystal_Mithril_Cave.name=Mithril_Cave Crystal
+items.OneBlock_Crystal_Mithril_Cave.description=Consume to begin a Mithril_Cave expedition.
+
+# GENERATED ─── Cobalt_Depths ──────────────────────────────────────────
+items.OneBlock_Crystal_Cobalt_Depths.name=Cobalt_Depths Crystal
+items.OneBlock_Crystal_Cobalt_Depths.description=Consume to begin a Cobalt_Depths expedition.
+
+# GENERATED ─── Adamantite_Depths ──────────────────────────────────────
+items.OneBlock_Crystal_Adamantite_Depths.name=Adamantite_Depths Crystal
+items.OneBlock_Crystal_Adamantite_Depths.description=Consume to begin a Adamantite_Depths expedition.
+
+# GENERATED ─── Onyxium_Abyss ──────────────────────────────────────────
+items.OneBlock_Crystal_Onyxium_Abyss.name=Onyxium_Abyss Crystal
+items.OneBlock_Crystal_Onyxium_Abyss.description=Consume to begin a Onyxium_Abyss expedition.
 benchCategories.OneBlockEnchanter_Dark=Dark Crystals
 
-# GENERATED ─── Ice_Fields ─────────────────────────────────────────────
-items.OneBlock_Crystal_Ice_Fields.name=Ice_Fields Crystal
-items.OneBlock_Crystal_Ice_Fields.description=Consume to begin a Ice_Fields expedition.
-
-# GENERATED ─── Primal_Jungle ──────────────────────────────────────────
-items.OneBlock_Crystal_Primal_Jungle.name=Primal_Jungle Crystal
-items.OneBlock_Crystal_Primal_Jungle.description=Consume to begin a Primal_Jungle expedition.
-
-# GENERATED ─── Seed_Vault ─────────────────────────────────────────────
-items.OneBlock_Crystal_Seed_Vault.name=Seed_Vault Crystal
-items.OneBlock_Crystal_Seed_Vault.description=Consume to begin a Seed_Vault expedition.
-
-# GENERATED ─── Textile_Workshop ───────────────────────────────────────
-items.OneBlock_Crystal_Textile_Workshop.name=Textile_Workshop Crystal
-items.OneBlock_Crystal_Textile_Workshop.description=Consume to begin a Textile_Workshop expedition.
-
-# GENERATED ─── Jungle ─────────────────────────────────────────────────
-items.OneBlock_Crystal_Jungle.name=Jungle Crystal
-items.OneBlock_Crystal_Jungle.description=Consume to begin a Jungle expedition.
+# GENERATED ─── Prisma_Rift ────────────────────────────────────────────
+items.OneBlock_Crystal_Prisma_Rift.name=Prisma_Rift Crystal
+items.OneBlock_Crystal_Prisma_Rift.description=Consume to begin a Prisma_Rift expedition.
 
 # GENERATED ─── Gem_Cave ───────────────────────────────────────────────
 items.OneBlock_Crystal_Gem_Cave.name=Gem_Cave Crystal
 items.OneBlock_Crystal_Gem_Cave.description=Consume to begin a Gem_Cave expedition.
 
-# GENERATED ─── Precious_Vein ──────────────────────────────────────────
-items.OneBlock_Crystal_Precious_Vein.name=Precious_Vein Crystal
-items.OneBlock_Crystal_Precious_Vein.description=Consume to begin a Precious_Vein expedition.
+# GENERATED ─── Ancient_Forge ──────────────────────────────────────────
+items.OneBlock_Crystal_Ancient_Forge.name=Ancient_Forge Crystal
+items.OneBlock_Crystal_Ancient_Forge.description=Consume to begin a Ancient_Forge expedition.
 
-# GENERATED ─── Egyptian_Temple ────────────────────────────────────────
-items.OneBlock_Crystal_Egyptian_Temple.name=Egyptian_Temple Crystal
-items.OneBlock_Crystal_Egyptian_Temple.description=Consume to begin a Egyptian_Temple expedition.
+# GENERATED ─── Oak_Forest ─────────────────────────────────────────────
+items.OneBlock_Crystal_Oak_Forest.name=Oak_Forest Crystal
+items.OneBlock_Crystal_Oak_Forest.description=Consume to begin a Oak_Forest expedition.
 
-# GENERATED ─── Desert_Ruins ───────────────────────────────────────────
-items.OneBlock_Crystal_Desert_Ruins.name=Desert_Ruins Crystal
-items.OneBlock_Crystal_Desert_Ruins.description=Consume to begin a Desert_Ruins expedition.
+# GENERATED ─── Beech_Forest ───────────────────────────────────────────
+items.OneBlock_Crystal_Beech_Forest.name=Beech_Forest Crystal
+items.OneBlock_Crystal_Beech_Forest.description=Consume to begin a Beech_Forest expedition.
 
-# GENERATED ─── Fungi_Cavern ───────────────────────────────────────────
-items.OneBlock_Crystal_Fungi_Cavern.name=Fungi_Cavern Crystal
-items.OneBlock_Crystal_Fungi_Cavern.description=Consume to begin a Fungi_Cavern expedition.
+# GENERATED ─── Birch_Forest ───────────────────────────────────────────
+items.OneBlock_Crystal_Birch_Forest.name=Birch_Forest Crystal
+items.OneBlock_Crystal_Birch_Forest.description=Consume to begin a Birch_Forest expedition.
 
-# GENERATED ─── Poison_Grove ───────────────────────────────────────────
-items.OneBlock_Crystal_Poison_Grove.name=Poison_Grove Crystal
-items.OneBlock_Crystal_Poison_Grove.description=Consume to begin a Poison_Grove expedition.
+# GENERATED ─── Maple_Forest ───────────────────────────────────────────
+items.OneBlock_Crystal_Maple_Forest.name=Maple_Forest Crystal
+items.OneBlock_Crystal_Maple_Forest.description=Consume to begin a Maple_Forest expedition.
 
-# GENERATED ─── Redwood_Grove ──────────────────────────────────────────
-items.OneBlock_Crystal_Redwood_Grove.name=Redwood_Grove Crystal
-items.OneBlock_Crystal_Redwood_Grove.description=Consume to begin a Redwood_Grove expedition.
+# GENERATED ─── Ash_Grove ──────────────────────────────────────────────
+items.OneBlock_Crystal_Ash_Grove.name=Ash_Grove Crystal
+items.OneBlock_Crystal_Ash_Grove.description=Consume to begin a Ash_Grove expedition.
 
-# GENERATED ─── Frozen_Forest ──────────────────────────────────────────
-items.OneBlock_Crystal_Frozen_Forest.name=Frozen_Forest Crystal
-items.OneBlock_Crystal_Frozen_Forest.description=Consume to begin a Frozen_Forest expedition.
+# GENERATED ─── Aspen_Grove ────────────────────────────────────────────
+items.OneBlock_Crystal_Aspen_Grove.name=Aspen_Grove Crystal
+items.OneBlock_Crystal_Aspen_Grove.description=Consume to begin a Aspen_Grove expedition.
 
-# GENERATED ─── Ancient_Graveyard ──────────────────────────────────────
-items.OneBlock_Crystal_Ancient_Graveyard.name=Ancient_Graveyard Crystal
-items.OneBlock_Crystal_Ancient_Graveyard.description=Consume to begin a Ancient_Graveyard expedition.
+# GENERATED ─── Cedar_Woods ────────────────────────────────────────────
+items.OneBlock_Crystal_Cedar_Woods.name=Cedar_Woods Crystal
+items.OneBlock_Crystal_Cedar_Woods.description=Consume to begin a Cedar_Woods expedition.
+
+# GENERATED ─── Fir_Woods ──────────────────────────────────────────────
+items.OneBlock_Crystal_Fir_Woods.name=Fir_Woods Crystal
+items.OneBlock_Crystal_Fir_Woods.description=Consume to begin a Fir_Woods expedition.
+
+# GENERATED ─── Redwood_Forest ─────────────────────────────────────────
+items.OneBlock_Crystal_Redwood_Forest.name=Redwood_Forest Crystal
+items.OneBlock_Crystal_Redwood_Forest.description=Consume to begin a Redwood_Forest expedition.
+
+# GENERATED ─── Bamboo_Jungle ──────────────────────────────────────────
+items.OneBlock_Crystal_Bamboo_Jungle.name=Bamboo_Jungle Crystal
+items.OneBlock_Crystal_Bamboo_Jungle.description=Consume to begin a Bamboo_Jungle expedition.
+
+# GENERATED ─── Jungle ─────────────────────────────────────────────────
+items.OneBlock_Crystal_Jungle.name=Jungle Crystal
+items.OneBlock_Crystal_Jungle.description=Consume to begin a Jungle expedition.
+
+# GENERATED ─── Banyan_Jungle ──────────────────────────────────────────
+items.OneBlock_Crystal_Banyan_Jungle.name=Banyan_Jungle Crystal
+items.OneBlock_Crystal_Banyan_Jungle.description=Consume to begin a Banyan_Jungle expedition.
+
+# GENERATED ─── Palm_Coast ─────────────────────────────────────────────
+items.OneBlock_Crystal_Palm_Coast.name=Palm_Coast Crystal
+items.OneBlock_Crystal_Palm_Coast.description=Consume to begin a Palm_Coast expedition.
+
+# GENERATED ─── Palo_Drywood ───────────────────────────────────────────
+items.OneBlock_Crystal_Palo_Drywood.name=Palo_Drywood Crystal
+items.OneBlock_Crystal_Palo_Drywood.description=Consume to begin a Palo_Drywood expedition.
+
+# GENERATED ─── BottleTree_Savanna ─────────────────────────────────────
+items.OneBlock_Crystal_BottleTree_Savanna.name=BottleTree_Savanna Crystal
+items.OneBlock_Crystal_BottleTree_Savanna.description=Consume to begin a BottleTree_Savanna expedition.
+
+# GENERATED ─── Camphor_Grove ──────────────────────────────────────────
+items.OneBlock_Crystal_Camphor_Grove.name=Camphor_Grove Crystal
+items.OneBlock_Crystal_Camphor_Grove.description=Consume to begin a Camphor_Grove expedition.
+
+# GENERATED ─── Blue_Fig_Grove ─────────────────────────────────────────
+items.OneBlock_Crystal_Blue_Fig_Grove.name=Blue_Fig_Grove Crystal
+items.OneBlock_Crystal_Blue_Fig_Grove.description=Consume to begin a Blue_Fig_Grove expedition.
+
+# GENERATED ─── Spiral_Woods ───────────────────────────────────────────
+items.OneBlock_Crystal_Spiral_Woods.name=Spiral_Woods Crystal
+items.OneBlock_Crystal_Spiral_Woods.description=Consume to begin a Spiral_Woods expedition.
+
+# GENERATED ─── Windwillow_Grove ───────────────────────────────────────
+items.OneBlock_Crystal_Windwillow_Grove.name=Windwillow_Grove Crystal
+items.OneBlock_Crystal_Windwillow_Grove.description=Consume to begin a Windwillow_Grove expedition.
+
+# GENERATED ─── Stormbark_Woods ────────────────────────────────────────
+items.OneBlock_Crystal_Stormbark_Woods.name=Stormbark_Woods Crystal
+items.OneBlock_Crystal_Stormbark_Woods.description=Consume to begin a Stormbark_Woods expedition.
+
+# GENERATED ─── Wisteria_Wildwood ──────────────────────────────────────
+items.OneBlock_Crystal_Wisteria_Wildwood.name=Wisteria_Wildwood Crystal
+items.OneBlock_Crystal_Wisteria_Wildwood.description=Consume to begin a Wisteria_Wildwood expedition.
 
 # GENERATED ─── Azure_Forest ───────────────────────────────────────────
 items.OneBlock_Crystal_Azure_Forest.name=Azure_Forest Crystal
 items.OneBlock_Crystal_Azure_Forest.description=Consume to begin a Azure_Forest expedition.
 
-# GENERATED ─── Mystical_Forest ────────────────────────────────────────
-items.OneBlock_Crystal_Mystical_Forest.name=Mystical_Forest Crystal
-items.OneBlock_Crystal_Mystical_Forest.description=Consume to begin a Mystical_Forest expedition.
+# GENERATED ─── Crystal_Grove ──────────────────────────────────────────
+items.OneBlock_Crystal_Crystal_Grove.name=Crystal_Grove Crystal
+items.OneBlock_Crystal_Crystal_Grove.description=Consume to begin a Crystal_Grove expedition.
 
-# GENERATED ─── Storm_Wilds ────────────────────────────────────────────
-items.OneBlock_Crystal_Storm_Wilds.name=Storm_Wilds Crystal
-items.OneBlock_Crystal_Storm_Wilds.description=Consume to begin a Storm_Wilds expedition.
+# GENERATED ─── Poisoned_Woods ─────────────────────────────────────────
+items.OneBlock_Crystal_Poisoned_Woods.name=Poisoned_Woods Crystal
+items.OneBlock_Crystal_Poisoned_Woods.description=Consume to begin a Poisoned_Woods expedition.
 
-# GENERATED ─── Ancient_Grove ──────────────────────────────────────────
-items.OneBlock_Crystal_Ancient_Grove.name=Ancient_Grove Crystal
-items.OneBlock_Crystal_Ancient_Grove.description=Consume to begin a Ancient_Grove expedition.
+# GENERATED ─── Petrified_Forest ───────────────────────────────────────
+items.OneBlock_Crystal_Petrified_Forest.name=Petrified_Forest Crystal
+items.OneBlock_Crystal_Petrified_Forest.description=Consume to begin a Petrified_Forest expedition.
 
-# GENERATED ─── Deep_Cave ──────────────────────────────────────────────
-items.OneBlock_Crystal_Deep_Cave.name=Deep_Cave Crystal
-items.OneBlock_Crystal_Deep_Cave.description=Consume to begin a Deep_Cave expedition.
+# GENERATED ─── Sallow_Wetland ─────────────────────────────────────────
+items.OneBlock_Crystal_Sallow_Wetland.name=Sallow_Wetland Crystal
+items.OneBlock_Crystal_Sallow_Wetland.description=Consume to begin a Sallow_Wetland expedition.
 
-# GENERATED ─── Deep_Mine ──────────────────────────────────────────────
-items.OneBlock_Crystal_Deep_Mine.name=Deep_Mine Crystal
-items.OneBlock_Crystal_Deep_Mine.description=Consume to begin a Deep_Mine expedition.
-
-# GENERATED ─── Frozen_Cave ────────────────────────────────────────────
-items.OneBlock_Crystal_Frozen_Cave.name=Frozen_Cave Crystal
-items.OneBlock_Crystal_Frozen_Cave.description=Consume to begin a Frozen_Cave expedition.
-
-# GENERATED ─── Glowing_Cavern ─────────────────────────────────────────
-items.OneBlock_Crystal_Glowing_Cavern.name=Glowing_Cavern Crystal
-items.OneBlock_Crystal_Glowing_Cavern.description=Consume to begin a Glowing_Cavern expedition.
-
-# GENERATED ─── Dino_Caverns ───────────────────────────────────────────
-items.OneBlock_Crystal_Dino_Caverns.name=Dino_Caverns Crystal
-items.OneBlock_Crystal_Dino_Caverns.description=Consume to begin a Dino_Caverns expedition.
-
-# GENERATED ─── Mystic_Seeds ───────────────────────────────────────────
-items.OneBlock_Crystal_Mystic_Seeds.name=Mystic_Seeds Crystal
-items.OneBlock_Crystal_Mystic_Seeds.description=Consume to begin a Mystic_Seeds expedition.
-
-# GENERATED ─── Amber_Dig ──────────────────────────────────────────────
-items.OneBlock_Crystal_Amber_Dig.name=Amber_Dig Crystal
-items.OneBlock_Crystal_Amber_Dig.description=Consume to begin a Amber_Dig expedition.
-
-# GENERATED ─── Fiery_Forest ───────────────────────────────────────────
-items.OneBlock_Crystal_Fiery_Forest.name=Fiery_Forest Crystal
-items.OneBlock_Crystal_Fiery_Forest.description=Consume to begin a Fiery_Forest expedition.
-
-# GENERATED ─── Inferno ────────────────────────────────────────────────
-items.OneBlock_Crystal_Inferno.name=Inferno Crystal
-items.OneBlock_Crystal_Inferno.description=Consume to begin a Inferno expedition.
+# GENERATED ─── Fire_Woodland ──────────────────────────────────────────
+items.OneBlock_Crystal_Fire_Woodland.name=Fire_Woodland Crystal
+items.OneBlock_Crystal_Fire_Woodland.description=Consume to begin a Fire_Woodland expedition.
 benchCategories.OneBlockEnchanter_Inferno=Inferno Crystals
+
+# GENERATED ─── Ice_Woodland ───────────────────────────────────────────
+items.OneBlock_Crystal_Ice_Woodland.name=Ice_Woodland Crystal
+items.OneBlock_Crystal_Ice_Woodland.description=Consume to begin a Ice_Woodland expedition.
+benchCategories.OneBlockEnchanter_Cold=Cold Crystals
+
+# GENERATED ─── Desert ─────────────────────────────────────────────────
+items.OneBlock_Crystal_Desert.name=Desert Crystal
+items.OneBlock_Crystal_Desert.description=Consume to begin a Desert expedition.
+
+# GENERATED ─── White_Dunes ────────────────────────────────────────────
+items.OneBlock_Crystal_White_Dunes.name=White_Dunes Crystal
+items.OneBlock_Crystal_White_Dunes.description=Consume to begin a White_Dunes expedition.
+
+# GENERATED ─── Red_Dunes ──────────────────────────────────────────────
+items.OneBlock_Crystal_Red_Dunes.name=Red_Dunes Crystal
+items.OneBlock_Crystal_Red_Dunes.description=Consume to begin a Red_Dunes expedition.
+
+# GENERATED ─── Saltbush_Dunes ─────────────────────────────────────────
+items.OneBlock_Crystal_Saltbush_Dunes.name=Saltbush_Dunes Crystal
+items.OneBlock_Crystal_Saltbush_Dunes.description=Consume to begin a Saltbush_Dunes expedition.
+
+# GENERATED ─── Sandstone_Ruins ────────────────────────────────────────
+items.OneBlock_Crystal_Sandstone_Ruins.name=Sandstone_Ruins Crystal
+items.OneBlock_Crystal_Sandstone_Ruins.description=Consume to begin a Sandstone_Ruins expedition.
+
+# GENERATED ─── Cactus_Garden ──────────────────────────────────────────
+items.OneBlock_Crystal_Cactus_Garden.name=Cactus_Garden Crystal
+items.OneBlock_Crystal_Cactus_Garden.description=Consume to begin a Cactus_Garden expedition.
+
+# GENERATED ─── Thorium_Desert_Mine ────────────────────────────────────
+items.OneBlock_Crystal_Thorium_Desert_Mine.name=Thorium_Desert_Mine Crystal
+items.OneBlock_Crystal_Thorium_Desert_Mine.description=Consume to begin a Thorium_Desert_Mine expedition.
+
+# GENERATED ─── Scorched_Desert_Cache ──────────────────────────────────
+items.OneBlock_Crystal_Scorched_Desert_Cache.name=Scorched_Desert_Cache Crystal
+items.OneBlock_Crystal_Scorched_Desert_Cache.description=Consume to begin a Scorched_Desert_Cache expedition.
+
+# GENERATED ─── Snowfield ──────────────────────────────────────────────
+items.OneBlock_Crystal_Snowfield.name=Snowfield Crystal
+items.OneBlock_Crystal_Snowfield.description=Consume to begin a Snowfield expedition.
+
+# GENERATED ─── Frozen_Lake ────────────────────────────────────────────
+items.OneBlock_Crystal_Frozen_Lake.name=Frozen_Lake Crystal
+items.OneBlock_Crystal_Frozen_Lake.description=Consume to begin a Frozen_Lake expedition.
+
+# GENERATED ─── Permafrost_Cave ────────────────────────────────────────
+items.OneBlock_Crystal_Permafrost_Cave.name=Permafrost_Cave Crystal
+items.OneBlock_Crystal_Permafrost_Cave.description=Consume to begin a Permafrost_Cave expedition.
+
+# GENERATED ─── Frost_Fern_Forest ──────────────────────────────────────
+items.OneBlock_Crystal_Frost_Fern_Forest.name=Frost_Fern_Forest Crystal
+items.OneBlock_Crystal_Frost_Fern_Forest.description=Consume to begin a Frost_Fern_Forest expedition.
+
+# GENERATED ─── Cobalt_Ice_Mine ────────────────────────────────────────
+items.OneBlock_Crystal_Cobalt_Ice_Mine.name=Cobalt_Ice_Mine Crystal
+items.OneBlock_Crystal_Cobalt_Ice_Mine.description=Consume to begin a Cobalt_Ice_Mine expedition.
+
+# GENERATED ─── Frozen_Trophy_Cache ────────────────────────────────────
+items.OneBlock_Crystal_Frozen_Trophy_Cache.name=Frozen_Trophy_Cache Crystal
+items.OneBlock_Crystal_Frozen_Trophy_Cache.description=Consume to begin a Frozen_Trophy_Cache expedition.
 
 # GENERATED ─── Volcanic_Badlands ──────────────────────────────────────
 items.OneBlock_Crystal_Volcanic_Badlands.name=Volcanic_Badlands Crystal
 items.OneBlock_Crystal_Volcanic_Badlands.description=Consume to begin a Volcanic_Badlands expedition.
 
-# GENERATED ─── Cursed_Crypt ───────────────────────────────────────────
-items.OneBlock_Crystal_Cursed_Crypt.name=Cursed_Crypt Crystal
-items.OneBlock_Crystal_Cursed_Crypt.description=Consume to begin a Cursed_Crypt expedition.
-
-# GENERATED ─── Glacial_Depths ─────────────────────────────────────────
-items.OneBlock_Crystal_Glacial_Depths.name=Glacial_Depths Crystal
-items.OneBlock_Crystal_Glacial_Depths.description=Consume to begin a Glacial_Depths expedition.
-
-# GENERATED ─── Crystal_Depths ─────────────────────────────────────────
-items.OneBlock_Crystal_Crystal_Depths.name=Crystal_Depths Crystal
-items.OneBlock_Crystal_Crystal_Depths.description=Consume to begin a Crystal_Depths expedition.
-
-# GENERATED ─── Advanced_Textile ───────────────────────────────────────
-items.OneBlock_Crystal_Advanced_Textile.name=Advanced_Textile Crystal
-items.OneBlock_Crystal_Advanced_Textile.description=Consume to begin a Advanced_Textile expedition.
-
-# GENERATED ─── The_Abyss ──────────────────────────────────────────────
-items.OneBlock_Crystal_The_Abyss.name=The_Abyss Crystal
-items.OneBlock_Crystal_The_Abyss.description=Consume to begin a The_Abyss expedition.
-
 # GENERATED ─── Deep_Inferno ───────────────────────────────────────────
 items.OneBlock_Crystal_Deep_Inferno.name=Deep_Inferno Crystal
 items.OneBlock_Crystal_Deep_Inferno.description=Consume to begin a Deep_Inferno expedition.
 
-# GENERATED ─── Abyssal_Mine ───────────────────────────────────────────
-items.OneBlock_Crystal_Abyssal_Mine.name=Abyssal_Mine Crystal
-items.OneBlock_Crystal_Abyssal_Mine.description=Consume to begin a Abyssal_Mine expedition.
+# GENERATED ─── Primal_Jungle ──────────────────────────────────────────
+items.OneBlock_Crystal_Primal_Jungle.name=Primal_Jungle Crystal
+items.OneBlock_Crystal_Primal_Jungle.description=Consume to begin a Primal_Jungle expedition.
+
+# GENERATED ─── Dino_Caverns ───────────────────────────────────────────
+items.OneBlock_Crystal_Dino_Caverns.name=Dino_Caverns Crystal
+items.OneBlock_Crystal_Dino_Caverns.description=Consume to begin a Dino_Caverns expedition.
+
+# GENERATED ─── Primal_Iron_Mine ───────────────────────────────────────
+items.OneBlock_Crystal_Primal_Iron_Mine.name=Primal_Iron_Mine Crystal
+items.OneBlock_Crystal_Primal_Iron_Mine.description=Consume to begin a Primal_Iron_Mine expedition.
+
+# GENERATED ─── Primal_Trophy_Cache ────────────────────────────────────
+items.OneBlock_Crystal_Primal_Trophy_Cache.name=Primal_Trophy_Cache Crystal
+items.OneBlock_Crystal_Primal_Trophy_Cache.description=Consume to begin a Primal_Trophy_Cache expedition.
+
+# GENERATED ─── Common_Mushroom_Cave ───────────────────────────────────
+items.OneBlock_Crystal_Common_Mushroom_Cave.name=Common_Mushroom_Cave Crystal
+items.OneBlock_Crystal_Common_Mushroom_Cave.description=Consume to begin a Common_Mushroom_Cave expedition.
+
+# GENERATED ─── Colored_Mushroom_Cave ──────────────────────────────────
+items.OneBlock_Crystal_Colored_Mushroom_Cave.name=Colored_Mushroom_Cave Crystal
+items.OneBlock_Crystal_Colored_Mushroom_Cave.description=Consume to begin a Colored_Mushroom_Cave expedition.
+
+# GENERATED ─── Blue_Mushroom_Grotto ───────────────────────────────────
+items.OneBlock_Crystal_Blue_Mushroom_Grotto.name=Blue_Mushroom_Grotto Crystal
+items.OneBlock_Crystal_Blue_Mushroom_Grotto.description=Consume to begin a Blue_Mushroom_Grotto expedition.
+
+# GENERATED ─── Poison_Mushroom_Grotto ─────────────────────────────────
+items.OneBlock_Crystal_Poison_Mushroom_Grotto.name=Poison_Mushroom_Grotto Crystal
+items.OneBlock_Crystal_Poison_Mushroom_Grotto.description=Consume to begin a Poison_Mushroom_Grotto expedition.
+
+# GENERATED ─── Glowing_Mushroom_Cavern ────────────────────────────────
+items.OneBlock_Crystal_Glowing_Mushroom_Cavern.name=Glowing_Mushroom_Cavern Crystal
+items.OneBlock_Crystal_Glowing_Mushroom_Cavern.description=Consume to begin a Glowing_Mushroom_Cavern expedition.
+
+# GENERATED ─── Redcap_Mushroom_Cave ───────────────────────────────────
+items.OneBlock_Crystal_Redcap_Mushroom_Cave.name=Redcap_Mushroom_Cave Crystal
+items.OneBlock_Crystal_Redcap_Mushroom_Cave.description=Consume to begin a Redcap_Mushroom_Cave expedition.
+
+# GENERATED ─── Leatherworker_Camp ─────────────────────────────────────
+items.OneBlock_Crystal_Leatherworker_Camp.name=Leatherworker_Camp Crystal
+items.OneBlock_Crystal_Leatherworker_Camp.description=Consume to begin a Leatherworker_Camp expedition.
+
+# GENERATED ─── Dark_Leather_Camp ──────────────────────────────────────
+items.OneBlock_Crystal_Dark_Leather_Camp.name=Dark_Leather_Camp Crystal
+items.OneBlock_Crystal_Dark_Leather_Camp.description=Consume to begin a Dark_Leather_Camp expedition.
+
+# GENERATED ─── Storm_Leather_Camp ─────────────────────────────────────
+items.OneBlock_Crystal_Storm_Leather_Camp.name=Storm_Leather_Camp Crystal
+items.OneBlock_Crystal_Storm_Leather_Camp.description=Consume to begin a Storm_Leather_Camp expedition.
+
+# GENERATED ─── Feather_Rookery ────────────────────────────────────────
+items.OneBlock_Crystal_Feather_Rookery.name=Feather_Rookery Crystal
+items.OneBlock_Crystal_Feather_Rookery.description=Consume to begin a Feather_Rookery expedition.
+
+# GENERATED ─── Textile_Cottage ────────────────────────────────────────
+items.OneBlock_Crystal_Textile_Cottage.name=Textile_Cottage Crystal
+items.OneBlock_Crystal_Textile_Cottage.description=Consume to begin a Textile_Cottage expedition.
+
+# GENERATED ─── Silk_Warren ────────────────────────────────────────────
+items.OneBlock_Crystal_Silk_Warren.name=Silk_Warren Crystal
+items.OneBlock_Crystal_Silk_Warren.description=Consume to begin a Silk_Warren expedition.
+
+# GENERATED ─── Shadow_Loom ────────────────────────────────────────────
+items.OneBlock_Crystal_Shadow_Loom.name=Shadow_Loom Crystal
+items.OneBlock_Crystal_Shadow_Loom.description=Consume to begin a Shadow_Loom expedition.
+
+# GENERATED ─── Cinder_Loom ────────────────────────────────────────────
+items.OneBlock_Crystal_Cinder_Loom.name=Cinder_Loom Crystal
+items.OneBlock_Crystal_Cinder_Loom.description=Consume to begin a Cinder_Loom expedition.
+
+# GENERATED ─── Storm_Loom ─────────────────────────────────────────────
+items.OneBlock_Crystal_Storm_Loom.name=Storm_Loom Crystal
+items.OneBlock_Crystal_Storm_Loom.description=Consume to begin a Storm_Loom expedition.
+
+# GENERATED ─── Essence_Font ───────────────────────────────────────────
+items.OneBlock_Crystal_Essence_Font.name=Essence_Font Crystal
+items.OneBlock_Crystal_Essence_Font.description=Consume to begin a Essence_Font expedition.

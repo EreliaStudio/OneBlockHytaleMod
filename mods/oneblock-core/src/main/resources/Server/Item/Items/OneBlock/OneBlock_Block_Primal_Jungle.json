@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Primal_Jungle.name"
   },
   "Id": "OneBlock_Block_Primal_Jungle",
-  "ItemLevel": 5,
+  "ItemLevel": 7,
   "Icon": "Icons/ItemsGenerated/OneBlock_Primal_Jungle.png",
   "Categories": [
     "Blocks.OneBlock"

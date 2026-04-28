@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_Dino_Caverns.description"
   },
   "Id": "OneBlock_Crystal_Dino_Caverns",
-  "ItemLevel": 7,
+  "ItemLevel": 8,
   "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -29,12 +29,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Block_Fossil_Stone",
-        "Quantity": 8
+        "ItemId": "Block_Jungle_Fern_Giant",
+        "Quantity": 10
       },
       {
         "ItemId": "Rock_Volcanic",
-        "Quantity": 8
+        "Quantity": 12
       }
     ],
     "OutputQuantity": 1,
@@ -58,5 +58,5 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Rare"
+  "Quality": "Epic"
 }

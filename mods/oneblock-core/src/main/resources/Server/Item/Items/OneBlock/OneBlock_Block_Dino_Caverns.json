@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Dino_Caverns.name"
   },
   "Id": "OneBlock_Block_Dino_Caverns",
-  "ItemLevel": 7,
+  "ItemLevel": 8,
   "Icon": "Icons/ItemsGenerated/OneBlock_Dino_Caverns.png",
   "Categories": [
     "Blocks.OneBlock"

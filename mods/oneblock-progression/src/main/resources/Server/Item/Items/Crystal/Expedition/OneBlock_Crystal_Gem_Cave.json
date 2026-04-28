@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_Gem_Cave.description"
   },
   "Id": "OneBlock_Crystal_Gem_Cave",
-  "ItemLevel": 6,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -29,12 +29,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rock_Stone",
-        "Quantity": 10
+        "ItemId": "Rock_Slate",
+        "Quantity": 16
       },
       {
-        "ItemId": "Ore_Copper",
-        "Quantity": 6
+        "ItemId": "Rock_Basalt",
+        "Quantity": 10
       }
     ],
     "OutputQuantity": 1,
