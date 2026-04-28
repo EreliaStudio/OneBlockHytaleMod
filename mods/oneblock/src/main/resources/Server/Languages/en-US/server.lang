@@ -12,3 +12,35 @@ benchCategories.OneBlockEnchanter_Surface=Surface Crystals
 items.OneBlock_Block_Meadow_Cave.name=OneBlock Meadow Cave
 items.OneBlock_Crystal_Meadow_Cave.name=Meadow Cave Crystal
 items.OneBlock_Crystal_Meadow_Cave.description=Consume to begin a Meadow Cave expedition.
+
+# GENERATED ─── Meadow Forest ──────────────────────────────────────────
+items.OneBlock_Block_Meadow_Forest.name=OneBlock Meadow Forest
+items.OneBlock_Crystal_Meadow_Forest.name=Meadow Forest Crystal
+items.OneBlock_Crystal_Meadow_Forest.description=Consume to begin a Meadow Forest expedition.
+
+# GENERATED ─── Cave Entry ─────────────────────────────────────────────
+items.OneBlock_Block_Cave_Entry.name=OneBlock Cave Entry
+items.OneBlock_Crystal_Cave_Entry.name=Cave Entry Crystal
+items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave Entry expedition.
+benchCategories.OneBlockEnchanter_Cavern=Cavern Crystals
+
+# GENERATED ─── Quarry ─────────────────────────────────────────────────
+items.OneBlock_Block_Quarry.name=OneBlock Quarry
+items.OneBlock_Crystal_Quarry.name=Quarry Crystal
+items.OneBlock_Crystal_Quarry.description=Consume to begin a Quarry expedition.
+
+# GENERATED ─── Cave ───────────────────────────────────────────────────
+items.OneBlock_Block_Cave.name=OneBlock Cave
+items.OneBlock_Crystal_Cave.name=Cave Crystal
+items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.
+
+# GENERATED ─── Forest ─────────────────────────────────────────────────
+items.OneBlock_Block_Forest.name=OneBlock Forest
+items.OneBlock_Crystal_Forest.name=Forest Crystal
+items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.
+benchCategories.OneBlockEnchanter_Forest=Forest Crystals
+
+# GENERATED ─── Fairy pond ─────────────────────────────────────────────
+items.OneBlock_Block_Fairy_pond.name=OneBlock Fairy pond
+items.OneBlock_Crystal_Fairy_pond.name=Fairy pond Crystal
+items.OneBlock_Crystal_Fairy_pond.description=Consume to begin a Fairy pond expedition.

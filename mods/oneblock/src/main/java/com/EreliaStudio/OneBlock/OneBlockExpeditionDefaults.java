@@ -46,13 +46,52 @@ public final class OneBlockExpeditionDefaults
         register(expeditions, "Meadow", List.of(
                 drop("Ingredient_Fibre", 20),
                 drop("Rubble_Stone", 20),
-                drop("Soil_Dirt", 10),
-                drop("Soil_Grass", 10)
+                drop("Soil_Dirt", 10)
         ));
 
         register(expeditions, "Meadow_Cave", List.of(
                 drop("Rubble_Stone", 20),
                 drop("Rock_Stone", 20)
+        ));
+
+        register(expeditions, "Meadow_Forest", List.of(
+                drop("Ingredient_Stick", 20),
+                drop("Wood_Oak_Trunk", 10)
+        ));
+
+        register(expeditions, "Cave_Entry", List.of(
+                drop("Rubble_Stone", 20),
+                drop("Rock_Stone", 10),
+                drop("Ore_Copper", 6)
+        ));
+
+        register(expeditions, "Quarry", List.of(
+                drop("Rock_Stone", 10),
+                drop("Soil_Dirt", 6),
+                drop("Rock_Stone_Mossy", 1)
+        ));
+
+        register(expeditions, "Cave", List.of(
+                drop("Rock_Stone", 15),
+                drop("Ore_Copper", 10),
+                drop("Ore_Iron", 3)
+        ));
+
+        register(expeditions, "Forest", List.of(
+                drop("Wood_Oak_Trunk", 10),
+                drop("Wood_Beech_Trunk", 10),
+                drop("Wood_Birch_Trunk", 10),
+                drop("Plant_Crop_Mushroom_Common_Brown", 5),
+                drop("Plant_Crop_Mushroom_Cap_Brown", 5),
+                drop("Ingredient_Life_Essence", 1)
+        ));
+
+        register(expeditions, "Fairy_pond", List.of(
+                drop("Plant_Crop_Mushroom_Glowing_Blue", 10),
+                drop("Plant_Crop_Mushroom_Glowing_Purple", 10),
+                drop("Plant_Fruit_Azure", 3),
+                drop("Ingredient_Life_Essence", 3),
+                drop("Wood_Azure_Trunk", 15)
         ));
 
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);

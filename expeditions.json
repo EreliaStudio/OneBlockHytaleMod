@@ -24,10 +24,6 @@
       {
         "ID": "Soil_Dirt",
         "Weight": 10
-      },
-      {
-        "ID": "Soil_Grass",
-        "Weight": 10
       }
     ]
   },
@@ -51,6 +47,182 @@
         "ID": "Rock_Stone",
         "Weight": 20
       }
+    ]
+  },
+  "Meadow_Forest": {
+    "ItemLevel": 1,
+    "Category": "Surface",
+    "Crystal": {
+      "Input": [
+        {
+          "ItemId": "Ingredient_Fibre",
+          "Quantity": 4
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Ingredient_Stick",
+        "Weight": 20
+      },
+      {
+        "ID": "Wood_Oak_Trunk",
+        "Weight": 10
+      }
+    ]
+  },
+  "Cave_Entry": {
+    "ItemLevel": 1,
+    "Category": "Cavern",
+    "Crystal": {
+      "Input": [
+        {
+          "ItemId": "Rock_Stone",
+          "Quantity": 4
+        },
+        {
+          "ItemId": "Wood_Oak_Trunk",
+          "Quantity": 4
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Rubble_Stone",
+        "Weight": 20
+      },
+      {
+        "ID": "Rock_Stone",
+        "Weight": 10
+      },
+      {
+        "ID": "Ore_Copper",
+        "Weight": 6
+      }
+    ]
+  },
+  "Quarry": {
+    "ItemLevel": 2,
+    "Category": "Surface",
+    "Crystal": {
+      "Input": [
+        {
+          "ItemId": "Tool_Pickaxe_Crude",
+          "Quantity": 1
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Rock_Stone",
+        "Weight": 10
+      },
+      {
+        "ID": "Soil_Dirt",
+        "Weight": 6
+      },
+	  {
+		"ID":"Rock_Stone_Mossy",
+		"Weight": 1
+	  }
+    ]
+  },
+  "Cave": {
+    "ItemLevel": 1,
+    "Category": "Cavern",
+    "Crystal": {
+      "Input": [
+        {
+          "ItemId": "Tool_Pickaxe_Copper",
+          "Quantity": 1
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Rock_Stone",
+        "Weight": 15
+      },
+      {
+        "ID": "Ore_Copper",
+        "Weight": 10
+      },
+      {
+        "ID": "Ore_Iron",
+        "Weight": 3
+      }
+    ]
+  },
+  "Forest": {
+    "ItemLevel": 1,
+    "Category": "Forest",
+    "Crystal": {
+      "Input": [
+        {
+          "ItemId": "Tool_Hatchet_Copper",
+          "Quantity": 1
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Wood_Oak_Trunk",
+        "Weight": 10
+      },
+      {
+        "ID": "Wood_Beech_Trunk",
+        "Weight": 10
+      },
+      {
+        "ID": "Wood_Birch_Trunk",
+        "Weight": 10
+      },
+      {
+        "ID": "Plant_Crop_Mushroom_Common_Brown",
+        "Weight": 5
+      },
+      {
+        "ID": "Plant_Crop_Mushroom_Cap_Brown",
+        "Weight": 5
+      },
+	  {
+		"ID": "Ingredient_Life_Essence",
+		"Weight":1
+	  }
+    ]
+  },
+  "Fairy_pond": {
+    "ItemLevel": 3,
+    "Category": "Forest",
+    "Crystal": {
+      "Input": [
+        {
+          "ItemId": "Ingredient_Life_Essence",
+          "Quantity": 4
+        }
+      ]
+    },
+    "BaseDropPool": [
+      {
+        "ID": "Plant_Crop_Mushroom_Glowing_Blue",
+        "Weight": 10
+      },
+      {
+        "ID": "Plant_Crop_Mushroom_Glowing_Purple",
+        "Weight": 10
+      },
+      {
+        "ID": "Plant_Fruit_Azure",
+        "Weight": 3
+      },
+	  {
+		"ID": "Ingredient_Life_Essence",
+		"Weight":3
+	  },
+	  {
+		"ID": "Wood_Azure_Trunk",
+		"Weight":15
+	  }
     ]
   }
 }

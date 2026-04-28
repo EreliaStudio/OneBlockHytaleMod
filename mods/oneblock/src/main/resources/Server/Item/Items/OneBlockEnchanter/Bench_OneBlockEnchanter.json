@@ -51,7 +51,27 @@
           "Name": "server.benchCategories.OneBlockEnchanter_Surface",
           "Recipes": [
             "OneBlock_Crystal_Meadow",
-            "OneBlock_Crystal_Meadow_Cave"
+            "OneBlock_Crystal_Meadow_Cave",
+            "OneBlock_Crystal_Meadow_Forest",
+            "OneBlock_Crystal_Quarry"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Forest",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Forest",
+          "Recipes": [
+            "OneBlock_Crystal_Forest",
+            "OneBlock_Crystal_Fairy_pond"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Cavern",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Cavern",
+          "Recipes": [
+            "OneBlock_Crystal_Cave_Entry",
+            "OneBlock_Crystal_Cave"
           ]
         }
       ],
