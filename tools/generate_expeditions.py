@@ -6,6 +6,7 @@ generate_expeditions.py — OneBlock Expedition Asset Generator
 import argparse
 import json
 import re
+import shutil
 import sys
 from pathlib import Path
 
@@ -21,15 +22,21 @@ PREFIX_ITEMS_LANG = "items"
 PREFIX_BENCH_LANG = "benchCategories"
 
 
-# ── Repo-relative paths ───────────────────────────────────────────────────────
-PROGRESSION = Path("mods/oneblock-progression/src/main/resources")
-ITEMS = PROGRESSION / "Server/Item/Items"
-LANG_FILE = PROGRESSION / "Server/Languages/en-US/server.lang"
+# ── Repo-relative paths (all inside the single oneblock mod) ──────────────────
+ONEBLOCK = Path("mods/oneblock/src/main/resources")
+ITEMS     = ONEBLOCK / "Server/Item/Items"
+LANG_FILE = ONEBLOCK / "Server/Languages/en-US/server.lang"
 ENCHANTER = ITEMS / "OneBlockEnchanter/Bench_OneBlockEnchanter.json"
 CRYSTAL_DIR = ITEMS / "Crystal/Expedition"
+BLOCK_DIR   = ITEMS / "OneBlock"
 
-CORE = Path("mods/oneblock-core/src/main/resources")
-BLOCK_DIR = CORE / "Server/Item/Items/OneBlock"
+BLOCK_TEXTURE_DIR = ONEBLOCK / "Common/BlockTextures"
+BLOCK_ICON_DIR    = ONEBLOCK / "Common/Icons/ItemsGenerated"
+
+# ── Default asset templates (next to this script) ────────────────────────────
+SCRIPT_DIR           = Path(__file__).parent
+DEFAULT_BLOCK_TEXTURE = SCRIPT_DIR / "OneBlock_DefaultTexture.png"
+DEFAULT_BLOCK_ICON    = SCRIPT_DIR / "OneBlock_DefaultIcon.png"
 
 ENCHANTER_CATEGORY_ORDER = [
     "Surface",
@@ -74,7 +81,7 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         },
         "Id": item_id,
         "ItemLevel": item_level,
-        "Icon": "Icons/ItemsGenerated/ExpeditionKey.png",
+        "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "Interactions": {
@@ -134,9 +141,9 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
             },
             "Textures": [
                 {
-                    "Down": f"BlockTextures/{item_id}.png",
-                    "Sides": f"BlockTextures/{item_id}.png",
-                    "Up": f"BlockTextures/{item_id}.png",
+                    "Down": f"BlockTextures/OneBlock_Block_{eid}.png",
+                    "Sides": f"BlockTextures/OneBlock_Block_{eid}.png",
+                    "Up": f"BlockTextures/OneBlock_Block_{eid}.png",
                     "Weight": 1,
                 }
             ],
@@ -157,11 +164,12 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
 
 def build_lang_block(expedition_id: str) -> str:
     eid = _safe_eid(expedition_id)
-    display = expedition_id
+    display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
 
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.",
     ]
@@ -223,6 +231,35 @@ def _save_json(path: Path, data: dict, dry_run: bool):
     print(f"  [patch]  {path}")
 
 
+def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool):
+    """Copy default texture/icon for a new expedition block if specific files don't exist."""
+    eid = _safe_eid(expedition_id)
+
+    texture_dst = repo_root / BLOCK_TEXTURE_DIR / f"OneBlock_Block_{eid}.png"
+    if not texture_dst.exists():
+        if DEFAULT_BLOCK_TEXTURE.exists():
+            if not dry_run:
+                texture_dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(DEFAULT_BLOCK_TEXTURE, texture_dst)
+                print(f"  [copy]   {texture_dst.name} ← default block texture")
+            else:
+                print(f"  [dry-run] Would copy default block texture → {texture_dst.name}")
+        else:
+            print(f"  [warn]   No default block texture found at {DEFAULT_BLOCK_TEXTURE}")
+
+    icon_dst = repo_root / BLOCK_ICON_DIR / f"OneBlock_{eid}.png"
+    if not icon_dst.exists():
+        if DEFAULT_BLOCK_ICON.exists():
+            if not dry_run:
+                icon_dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(DEFAULT_BLOCK_ICON, icon_dst)
+                print(f"  [copy]   {icon_dst.name} ← default block icon")
+            else:
+                print(f"  [dry-run] Would copy default block icon → {icon_dst.name}")
+        else:
+            print(f"  [warn]   No default block icon found at {DEFAULT_BLOCK_ICON}")
+
+
 def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(group)
@@ -236,7 +273,7 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     if cat is None:
         cat = {
             "Id": cat_id,
-            "Icon": "Icons/CraftingCategories/ExpeditionKey.png",
+            "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
             "Name": f"{PREFIX_BENCH_JSON}.{lang_key}",
             "Recipes": [],
         }
@@ -256,7 +293,7 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
 def patch_lang(path: Path, expedition_id: str, dry_run: bool):
     eid = _safe_eid(expedition_id)
     existing = path.read_text(encoding="utf-8")
-    marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name"
+    marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
 
     if marker in existing:
         print(f"  [skip]   Lang already has entries for {expedition_id}")
@@ -275,7 +312,7 @@ def patch_lang(path: Path, expedition_id: str, dry_run: bool):
 def patch_group_lang(path: Path, group: str, dry_run: bool):
     gid = _safe_eid(group)
     key = f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_{gid}"
-    value = f"{group} Crystals"
+    value = f"{group.replace('_', ' ')} Crystals"
 
     existing = path.read_text(encoding="utf-8")
     if key in existing:
@@ -315,8 +352,10 @@ def _is_generated_lang_line(line: str) -> bool:
     key = stripped.split("=", 1)[0].strip()
 
     return (
-        key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_")
+        key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Block_")
+        or key.startswith(f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_LANG}.OneBlockEnchanter_")
+        or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Block_")
         or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockEnchanter_")
     )
@@ -406,7 +445,7 @@ def main():
     cleanup(repo_root, args.dry_run)
 
     java_defaults_path = repo_root / Path(
-        "mods/oneblock-progression/src/main/java"
+        "mods/oneblock/src/main/java"
         "/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java"
     )
 
@@ -420,6 +459,8 @@ def main():
         drop_pool = cfg["BaseDropPool"]
         group = cfg.get("Category", cfg.get("Group", expedition_id))
         eid = _safe_eid(expedition_id)
+
+        ensure_block_assets(repo_root, expedition_id, args.dry_run)
 
         write_json(
             repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",

@@ -1,0 +1,14 @@
+# ─── Crystal Enchanter bench ───────────────────────────────────────────────────
+items.Bench_OneBlockEnchanter.name=Crystal Enchanter
+items.Bench_OneBlockEnchanter.description=Fuses salvaged resources into expedition crystals.
+
+# GENERATED ─── Meadow ─────────────────────────────────────────────────
+items.OneBlock_Block_Meadow.name=OneBlock Meadow
+items.OneBlock_Crystal_Meadow.name=Meadow Crystal
+items.OneBlock_Crystal_Meadow.description=Consume to begin a Meadow expedition.
+benchCategories.OneBlockEnchanter_Surface=Surface Crystals
+
+# GENERATED ─── Meadow Cave ────────────────────────────────────────────
+items.OneBlock_Block_Meadow_Cave.name=OneBlock Meadow Cave
+items.OneBlock_Crystal_Meadow_Cave.name=Meadow Cave Crystal
+items.OneBlock_Crystal_Meadow_Cave.description=Consume to begin a Meadow Cave expedition.
