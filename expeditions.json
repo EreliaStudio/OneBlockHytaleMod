@@ -1,275 +1,341 @@
 {
-  "_comment": "Generated place-progression expedition definitions. Crop items, seed items, seed recipes, animals, and monsters are intentionally excluded.",
-  "_usage": "python tools/generate_expeditions.py oneblock_expeditions_place_progression.json --repo-root . [--dry-run]",
-  "Meadow": {
-    "ItemLevel": 1,
-    "Category": "Surface",
-    "Ticks": 25,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ingredient_Fibre",
-        "Weight": 20,
-		"RenderName":"Fibre"
-      },
-      {
-        "ID": "Rubble_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Soil_Dirt",
-        "Weight": 10
-      }
-    ]
-  },
-  "Meadow_Cave": {
-    "ItemLevel": 1,
-    "Category": "Surface",
-    "Ticks": 25,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rubble_Stone",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rubble_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Stone",
-        "Weight": 20
-      }
-    ]
-  },
-  "Meadow_Forest": {
-    "ItemLevel": 1,
-    "Category": "Surface",
-    "Ticks": 25,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Fibre",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Ingredient_Stick",
-        "Weight": 20,
-		"RenderName":"Stick"
-      },
-      {
-        "ID": "Wood_Oak_Trunk",
-        "Weight": 10
-      },
-	  {
-		"ID":"Plant_Sapling_Oak",
-		"Weight":1,
-		"RenderName":"Oak Sapling"
-	  }
-    ]
-  },
-  "Cave_Entry": {
-    "ItemLevel": 1,
-    "Category": "Cavern",
-    "Ticks": 25,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Rock_Stone",
-          "Quantity": 4
-        },
-        {
-          "ItemId": "Wood_Oak_Trunk",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rubble_Stone",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Stone",
-        "Weight": 10
-      },
-      {
-        "ID": "Ore_Copper",
-        "Weight": 6
-      }
-    ]
-  },
-  "Quarry": {
-    "ItemLevel": 2,
-    "Category": "Surface",
-    "Ticks": 150,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Tool_Pickaxe_Crude",
-          "Quantity": 1
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Stone",
-        "Weight": 10
-      },
-      {
-        "ID": "Soil_Dirt",
-        "Weight": 6
-      },
-	  {
-		"ID":"Rock_Stone_Mossy",
-		"Weight": 1
-	  }
-    ]
-  },
-  "Cave": {
-    "ItemLevel": 1,
-    "Category": "Cavern",
-    "Ticks": 25,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Tool_Pickaxe_Copper",
-          "Quantity": 1
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Rock_Stone",
-        "Weight": 15
-      },
-      {
-        "ID": "Ore_Copper",
-        "Weight": 10
-      },
-      {
-        "ID": "Ore_Iron",
-        "Weight": 3
-      }
-    ]
-  },
-  "Forest": {
-    "ItemLevel": 1,
-    "Category": "Forest",
-    "Ticks": 25,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Tool_Hatchet_Copper",
-          "Quantity": 1
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Wood_Oak_Trunk",
-        "Weight": 10
-      },
-	  {
-		"ID":"Plant_Sapling_Oak",
-		"Weight":2,
-		"RenderName":"Oak Sapling"
-	  },
-      {
-        "ID": "Wood_Beech_Trunk",
-        "Weight": 10
-      },
-	  {
-		"ID":"Plant_Sapling_Beech",
-		"Weight":2,
-		"RenderName":"Beech Sapling"
-	  },
-      {
-        "ID": "Wood_Birch_Trunk",
-        "Weight": 10
-      },
-	  {
-		"ID":"Plant_Sapling_Birch",
-		"Weight":2,
-		"RenderName":"Birch Sapling"
-	  },
-      {
-        "ID": "Plant_Crop_Mushroom_Common_Brown",
-        "Weight": 5,
-		"RenderName":"Brown Common Mushroom"
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Cap_Brown",
-        "Weight": 5,
-		"RenderName":"Brown Cap Mushroom"
-      },
-	  {
-		"ID": "Ingredient_Life_Essence",
-		"Weight":5,
-		"RenderName":"Life Essence"
-	  }
-    ]
-  },
-  "Fairy_pond": {
-    "ItemLevel": 3,
-    "Category": "Forest",
-    "Ticks": 200,
-    "Crystal": {
-      "Input": [
-        {
-          "ItemId": "Ingredient_Life_Essence",
-          "Quantity": 4
-        }
-      ]
-    },
-    "BaseDropPool": [
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Blue",
-        "Weight": 10,
-		"RenderName":"Blue Glowing Mushroom"
-      },
-      {
-        "ID": "Plant_Crop_Mushroom_Glowing_Purple",
-        "Weight": 10,
-		"RenderName":"Purple Glowing Mushroom"
-      },
-      {
-        "ID": "Plant_Fruit_Azure",
-        "Weight": 3,
-		"RenderName":"Azure Fruit"
-      },
-	  {
-		"ID": "Ingredient_Life_Essence",
-		"Weight":3,
-		"RenderName":"Life Essence"
-	  },
-	  {
-		"ID": "Wood_Azure_Trunk",
-		"Weight":15
-	  },
-	  {
-		"ID":"Plant_Sapling_Azure",
-		"Weight":4,
-		"RenderName":"Azure Sapling"
-	  },
-	  {
-		"ID":"*Container_Bucket_State_Filled_Water",
-		"Weight":1,
-		"RenderName":"Water Bucket"
-	  }
-    ]
-  }
+	"_comment": "Generated place-progression expedition definitions. Crop items, seed items, seed recipes, animals, and monsters are intentionally excluded.",
+	"_usage": "python tools/generate_expeditions.py expeditions.json --repo-root . [--render-names item_render_names.json] [--dry-run]",
+	"Meadow": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Fibre",
+				"Weight": 20
+			},
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "Soil_Dirt",
+				"Weight": 10
+			}
+		]
+	},
+	"Meadow_Cave": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rubble_Stone",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			}
+		]
+	},
+	"Meadow_Forest": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Stick",
+				"Weight": 20
+			},
+			{
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Oak",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Rabbit",
+				"Weight": 2
+			}
+		]
+	},
+	"Cave_Entry": {
+		"ItemLevel": 1,
+		"Category": "Cavern",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Stone",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Wood_Oak_Trunk",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Stone",
+				"Weight": 10
+			},
+			{
+				"ID": "Ore_Copper",
+				"Weight": 6
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Goblin_Miner",
+				"Weight": 2
+			}
+		]
+	},
+	"Quarry": {
+		"ItemLevel": 2,
+		"Category": "Surface",
+		"Ticks": 50,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Tool_Pickaxe_Crude",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Stone",
+				"Weight": 10
+			},
+			{
+				"ID": "Soil_Dirt",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Stone_Mossy",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			}
+		]
+	},
+	"Cave": {
+		"ItemLevel": 1,
+		"Category": "Cavern",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Tool_Pickaxe_Copper",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Stone",
+				"Weight": 15
+			},
+			{
+				"ID": "Ore_Copper",
+				"Weight": 10
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 6
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Goblin_Miner",
+				"Weight": 5
+			}
+		]
+	},
+	"Gobelin_Dungeon": {
+		"ItemLevel": 1,
+		"Category": "Dungeon",
+		"Ticks": 6,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Weapon_Sword_Iron",
+					"Quantity": 1
+				},
+				{
+					"ItemId": "Weapon_Shield_Iron",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Goblin_Miner",
+				"Weight": 10
+			},
+			{
+				"ID": "Goblin_Thief",
+				"Weight": 2
+			},
+			{
+				"ID": "Goblin_Scrapper",
+				"Weight": 10
+			}
+		],
+		"CompletionRewards": [
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Quantity": 10
+			},
+			{
+				"ID": "Ore_Iron",
+				"Quantity": 12
+			},
+			{
+				"ID": "Ingredient_Charcoal",
+				"Quantity": 20
+			}
+		]
+	},
+	"Forest": {
+		"ItemLevel": 1,
+		"Category": "Forest",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Tool_Hatchet_Copper",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Oak",
+				"Weight": 2
+			},
+			{
+				"ID": "Wood_Beech_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Beech",
+				"Weight": 2
+			},
+			{
+				"ID": "Wood_Birch_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Sapling_Birch",
+				"Weight": 2
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Common_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Cap_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Chicken",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Boar",
+				"Weight": 2
+			}
+		]
+	},
+	"Fairy_pond": {
+		"ItemLevel": 3,
+		"Category": "Forest",
+		"Ticks": 50,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Life_Essence",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Crop_Mushroom_Glowing_Blue",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Glowing_Purple",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Fruit_Azure",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 3
+			},
+			{
+				"ID": "Wood_Azure_Trunk",
+				"Weight": 15
+			},
+			{
+				"ID": "Plant_Sapling_Azure",
+				"Weight": 4
+			},
+			{
+				"ID": "*Container_Bucket_State_Filled_Water",
+				"Weight": 1
+			}
+		]
+	}
 }

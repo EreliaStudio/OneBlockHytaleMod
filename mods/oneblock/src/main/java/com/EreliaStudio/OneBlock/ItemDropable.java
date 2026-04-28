@@ -29,6 +29,11 @@ public final class ItemDropable implements Dropable
     @Override
     public void execute(DropableContext context)
     {
+        execute(context, 1);
+    }
+
+    public void execute(DropableContext context, int quantity)
+    {
         if (context == null || itemId == null || itemId.isEmpty()) return;
 
         Store<EntityStore> store = context.getStore();
@@ -36,11 +41,12 @@ public final class ItemDropable implements Dropable
         Vector3i spawnBlock = context.getSpawnBlock();
         if (store == null || world == null || spawnBlock == null) return;
 
+        int safeQuantity = Math.max(1, quantity);
         Vector3d dropPos = new Vector3d(spawnBlock.getX() + 0.5, spawnBlock.getY() + 0.1, spawnBlock.getZ() + 0.5);
 
         world.execute(() ->
         {
-            var drop = ItemComponent.generateItemDrop(store, new ItemStack(itemId, 1), dropPos, Vector3f.ZERO, 0.0F, 3.25F, 0.0F);
+            var drop = ItemComponent.generateItemDrop(store, new ItemStack(itemId, safeQuantity), dropPos, Vector3f.ZERO, 0.0F, 3.25F, 0.0F);
             if (drop != null) store.addEntity(drop, AddReason.SPAWN);
         });
     }

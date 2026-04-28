@@ -32,6 +32,7 @@ BLOCK_DIR   = ITEMS / "OneBlock"
 
 BLOCK_TEXTURE_DIR = ONEBLOCK / "Common/BlockTextures"
 BLOCK_ICON_DIR    = ONEBLOCK / "Common/Icons/ItemsGenerated"
+DEFAULT_RENDER_NAMES_FILE = Path("item_render_names.json")
 
 # ── Default asset templates (next to this script) ────────────────────────────
 SCRIPT_DIR           = Path(__file__).parent
@@ -164,27 +165,30 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
     }
 
 
-def build_lang_block(expedition_id: str, drop_pool: list, ticks: int) -> str:
+def build_lang_block(expedition_id: str,
+                     drop_pool: list,
+                     completion_rewards: list,
+                     ticks: int,
+                     render_names: dict[str, str]) -> str:
     eid = _safe_eid(expedition_id)
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
 
     loot_lines = "\\nLoot :"
     for entry in drop_pool:
-        item_id = entry["ID"]
-        if "RenderName" in entry:
-            display_name = entry["RenderName"]
-        else:
-            if item_id.startswith(JAVA_ENTITY_PREFIX):
-                item_id = item_id[len(JAVA_ENTITY_PREFIX):]
-            display_name = item_id.replace("_", " ")
-        loot_lines += f"\\n- {display_name}"
+        loot_lines += f"\\n- {_display_drop_name(entry, render_names)}"
+
+    reward_lines = ""
+    if completion_rewards:
+        reward_lines = "\\nCompletion rewards :"
+        for entry in completion_rewards:
+            reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
 
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.{loot_lines}",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.{loot_lines}{reward_lines}",
     ]
 
     return "\n".join(lines)
@@ -193,37 +197,79 @@ def build_lang_block(expedition_id: str, drop_pool: list, ticks: int) -> str:
 JAVA_ENTITY_PREFIX = "entity:"
 
 
-def _java_drop_expr(drop_id: str, weight: int) -> str:
+def _display_drop_name(entry: dict, render_names: dict[str, str]) -> str:
+    item_id = entry["ID"]
+    if "RenderName" in entry:
+        return entry["RenderName"]
+    if item_id in render_names:
+        return render_names[item_id]
+    if item_id.startswith(JAVA_ENTITY_PREFIX):
+        item_id = item_id[len(JAVA_ENTITY_PREFIX):]
+        if item_id in render_names:
+            return render_names[item_id]
+    return item_id.replace("_", " ")
+
+
+def _entry_quantity(entry: dict) -> int:
+    try:
+        return max(1, int(entry.get("Quantity", 1)))
+    except (TypeError, ValueError):
+        return 1
+
+
+def _java_drop_id_expr(drop_id: str) -> str:
     if drop_id.startswith(JAVA_ENTITY_PREFIX):
         entity = drop_id[len(JAVA_ENTITY_PREFIX):]
-        return f'drop(OneBlockDropId.entityDropId("{entity}"), {weight})'
-    return f'drop("{drop_id}", {weight})'
+        return f'OneBlockDropId.entityDropId("{entity}")'
+    return f'"{drop_id}"'
 
 
-def build_java_defaults_block(all_expeditions: list[tuple[str, int, list]]) -> str:
+def _java_drop_expr(drop_id: str, weight: int) -> str:
+    return f"drop({_java_drop_id_expr(drop_id)}, {weight})"
+
+
+def _java_reward_expr(entry: dict) -> str:
+    return f"reward({_java_drop_id_expr(entry['ID'])}, {_entry_quantity(entry)})"
+
+
+def _java_list_expr(entries: list[str], closing_indent: str) -> str:
+    if not entries:
+        return "List.of()"
+    return "List.of(\n" + ",\n".join(entries) + "\n" + closing_indent + ")"
+
+
+def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list]]) -> str:
     lines = [
         "    static",
         "    {",
         "        Map<String, ExpeditionDefinition> expeditions = new HashMap<>();",
     ]
 
-    for expedition_id, ticks, drop_pool in all_expeditions:
+    for expedition_id, ticks, drop_pool, completion_rewards in all_expeditions:
         lines.append("")
 
         entries = [
             f"                {_java_drop_expr(entry['ID'], entry['Weight'])}"
             for entry in drop_pool
         ]
+        drop_list = _java_list_expr(entries, "        ")
 
-        lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, List.of(')
-        lines.append(",\n".join(entries))
-        lines.append("        ));")
+        reward_entries = [
+            f"                {_java_reward_expr(entry)}"
+            for entry in completion_rewards
+        ]
+        if reward_entries:
+            reward_list = _java_list_expr(reward_entries, "        ")
+            lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, {drop_list}, {reward_list});')
+        else:
+            lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, {drop_list});')
 
     lines += [
         "",
         "        EXPEDITIONS = Collections.unmodifiableMap(expeditions);",
         "        DEFAULT_IDS = buildDefaultIds(EXPEDITIONS);",
         "        DEFAULT_WEIGHTS = buildDefaultWeights(EXPEDITIONS);",
+        "        COMPLETION_REWARD_DROP_IDS = buildCompletionRewardDropIds(EXPEDITIONS);",
         "    }",
     ]
 
@@ -232,6 +278,22 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, int, list]]) -> s
 
 def _load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _load_render_names(path: Path) -> dict[str, str]:
+    if path is None or not path.exists():
+        return {}
+
+    data = json.loads(path.read_text(encoding="utf-8-sig"))
+    if not isinstance(data, dict):
+        raise ValueError(f"Render names file must contain a JSON object: {path}")
+
+    out: dict[str, str] = {}
+    for key, value in data.items():
+        if key.startswith("_") or value is None:
+            continue
+        out[str(key)] = str(value)
+    return out
 
 
 def _save_json(path: Path, data: dict, dry_run: bool):
@@ -303,7 +365,13 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
 
-def patch_lang(path: Path, expedition_id: str, drop_pool: list, ticks: int, dry_run: bool):
+def patch_lang(path: Path,
+               expedition_id: str,
+               drop_pool: list,
+               completion_rewards: list,
+               ticks: int,
+               render_names: dict[str, str],
+               dry_run: bool):
     eid = _safe_eid(expedition_id)
     existing = path.read_text(encoding="utf-8")
     marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
@@ -312,7 +380,7 @@ def patch_lang(path: Path, expedition_id: str, drop_pool: list, ticks: int, dry_
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
 
-    block = build_lang_block(expedition_id, drop_pool, ticks)
+    block = build_lang_block(expedition_id, drop_pool, completion_rewards, ticks, render_names)
 
     if dry_run:
         print(f"  [dry-run] Would append lang entries for {expedition_id}")
@@ -441,6 +509,11 @@ def main():
     )
     parser.add_argument("input", help="Input JSON, for example expeditionsTemplate.json")
     parser.add_argument("--repo-root", default=".", help="Repo root directory. Default: .")
+    parser.add_argument(
+        "--render-names",
+        default=str(DEFAULT_RENDER_NAMES_FILE),
+        help="JSON file mapping drop item/entity IDs to display names. Default: item_render_names.json",
+    )
     parser.add_argument("--dry-run", action="store_true", help="Show what would be done without writing files")
     args = parser.parse_args()
 
@@ -452,6 +525,11 @@ def main():
     raw = json.loads(input_path.read_text(encoding="utf-8-sig"))
     expeditions = {k: v for k, v in raw.items() if not k.startswith("_")}
 
+    render_names_path = Path(args.render_names)
+    if not render_names_path.is_absolute():
+        render_names_path = repo_root / render_names_path
+    render_names = _load_render_names(render_names_path)
+
     enchanter_path = repo_root / ENCHANTER
     lang_path = repo_root / LANG_FILE
 
@@ -462,7 +540,7 @@ def main():
         "/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java"
     )
 
-    all_expedition_drops: list[tuple[str, list]] = []
+    all_expedition_drops: list[tuple[str, int, list, list]] = []
 
     for expedition_id, cfg in expeditions.items():
         print(f"\n=== {expedition_id} ===")
@@ -471,6 +549,7 @@ def main():
         ticks = cfg.get("Ticks", 100)
         crystal_cfg = cfg["Crystal"]
         drop_pool = cfg["BaseDropPool"]
+        completion_rewards = cfg.get("CompletionRewards", cfg.get("Rewards", [])) or []
         group = cfg.get("Category", cfg.get("Group", expedition_id))
         eid = _safe_eid(expedition_id)
 
@@ -494,12 +573,12 @@ def main():
             print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
         if lang_path.exists():
-            patch_lang(lang_path, expedition_id, drop_pool, ticks, args.dry_run)
+            patch_lang(lang_path, expedition_id, drop_pool, completion_rewards, ticks, render_names, args.dry_run)
             patch_group_lang(lang_path, group, args.dry_run)
         else:
             print(f"  [warn]   Lang file not found: {lang_path}")
 
-        all_expedition_drops.append((expedition_id, ticks, drop_pool))
+        all_expedition_drops.append((expedition_id, ticks, drop_pool, completion_rewards))
 
     static_block = build_java_defaults_block(all_expedition_drops)
 

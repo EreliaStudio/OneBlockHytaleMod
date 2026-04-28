@@ -60,6 +60,7 @@ public final class OneBlockPlugin extends JavaPlugin
         Map<String, Set<String>> dropsByExpedition = OneBlockExpeditionDefaults.getDefaultDropIdsByExpedition();
         for (Map.Entry<String, Set<String>> entry : dropsByExpedition.entrySet())
             registerDropables(dropRegistry, entry.getValue());
+        registerDropables(dropRegistry, OneBlockExpeditionDefaults.getCompletionRewardDropIds());
 
         getCodecRegistry(Interaction.CODEC).register(
                 OneBlockCrystalInteraction.INTERACTION_ID,

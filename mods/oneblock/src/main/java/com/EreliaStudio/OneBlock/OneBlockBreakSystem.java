@@ -81,7 +81,23 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         dropRegistry.executeDropable(rewardId, context);
 
         if (completedExpedition != null && player != null)
+        {
+            executeCompletionRewards(completedExpedition, context);
             player.sendMessage(Message.raw("Expedition complete: " + completedExpedition + ". The OneBlock has returned to default."));
+        }
+    }
+
+    private void executeCompletionRewards(String expeditionId, DropableContext context)
+    {
+        List<OneBlockExpeditionDefaults.CompletionRewardDefinition> rewards =
+                OneBlockExpeditionDefaults.getCompletionRewards(expeditionId);
+        if (rewards.isEmpty()) return;
+
+        for (OneBlockExpeditionDefaults.CompletionRewardDefinition reward : rewards)
+        {
+            if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
+            dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+        }
     }
 
     private static boolean isValidOneBlockBreak(Player player, BreakBlockEvent event)

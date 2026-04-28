@@ -11,36 +11,42 @@ benchCategories.OneBlockEnchanter_Surface=Surface Crystals
 # GENERATED ─── Meadow Cave ────────────────────────────────────────────
 items.OneBlock_Block_Meadow_Cave.name=OneBlock Meadow Cave
 items.OneBlock_Crystal_Meadow_Cave.name=Meadow Cave Crystal
-items.OneBlock_Crystal_Meadow_Cave.description=Consume to begin a Meadow Cave expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Rock Stone
+items.OneBlock_Crystal_Meadow_Cave.description=Consume to begin a Meadow Cave expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\n- Rat
 
 # GENERATED ─── Meadow Forest ──────────────────────────────────────────
 items.OneBlock_Block_Meadow_Forest.name=OneBlock Meadow Forest
 items.OneBlock_Crystal_Meadow_Forest.name=Meadow Forest Crystal
-items.OneBlock_Crystal_Meadow_Forest.description=Consume to begin a Meadow Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Wood Oak Trunk\n- Oak Sapling
+items.OneBlock_Crystal_Meadow_Forest.description=Consume to begin a Meadow Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Oak Trunk\n- Oak Sapling\n- Rabbit
 
 # GENERATED ─── Cave Entry ─────────────────────────────────────────────
 items.OneBlock_Block_Cave_Entry.name=OneBlock Cave Entry
 items.OneBlock_Crystal_Cave_Entry.name=Cave Entry Crystal
-items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave Entry expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Rock Stone\n- Ore Copper
+items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave Entry expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\n- Copper Ore\n- Rat\n- Goblin Miner
 benchCategories.OneBlockEnchanter_Cavern=Cavern Crystals
 
 # GENERATED ─── Quarry ─────────────────────────────────────────────────
 items.OneBlock_Block_Quarry.name=OneBlock Quarry
 items.OneBlock_Crystal_Quarry.name=Quarry Crystal
-items.OneBlock_Crystal_Quarry.description=Consume to begin a Quarry expedition.\n150 ticks.\nLoot :\n- Rock Stone\n- Soil Dirt\n- Rock Stone Mossy
+items.OneBlock_Crystal_Quarry.description=Consume to begin a Quarry expedition.\n50 ticks.\nLoot :\n- Stone\n- Soil Dirt\n- Mossy Stone\n- Rat
 
 # GENERATED ─── Cave ───────────────────────────────────────────────────
 items.OneBlock_Block_Cave.name=OneBlock Cave
 items.OneBlock_Crystal_Cave.name=Cave Crystal
-items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Rock Stone\n- Ore Copper\n- Ore Iron
+items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Stone\n- Copper Ore\n- Iron Ore\n- Rat\n- Goblin Miner
+
+# GENERATED ─── Gobelin Dungeon ────────────────────────────────────────
+items.OneBlock_Block_Gobelin_Dungeon.name=OneBlock Gobelin Dungeon
+items.OneBlock_Crystal_Gobelin_Dungeon.name=Gobelin Dungeon Crystal
+items.OneBlock_Crystal_Gobelin_Dungeon.description=Consume to begin a Gobelin Dungeon expedition.\n6 ticks.\nLoot :\n- Goblin Miner\n- Goblin Thief\n- Goblin Scrapper\nCompletion rewards :\n- 10x Life Essence\n- 12x Iron Ore\n- 20x Charcoal
+benchCategories.OneBlockEnchanter_Dungeon=Dungeon Crystals
 
 # GENERATED ─── Forest ─────────────────────────────────────────────────
 items.OneBlock_Block_Forest.name=OneBlock Forest
 items.OneBlock_Crystal_Forest.name=Forest Crystal
-items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Wood Oak Trunk\n- Oak Sapling\n- Wood Beech Trunk\n- Beech Sapling\n- Wood Birch Trunk\n- Birch Sapling\n- Brown Common Mushroom\n- Brown Cap Mushroom\n- Life Essence
+items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Oak Trunk\n- Oak Sapling\n- Beech Trunk\n- Beech Sapling\n- Birch Trunk\n- Birch Sapling\n- Brown Common Mushroom\n- Brown Cap Mushroom\n- Life Essence\n- Chicken\n- Boar
 benchCategories.OneBlockEnchanter_Forest=Forest Crystals
 
 # GENERATED ─── Fairy pond ─────────────────────────────────────────────
 items.OneBlock_Block_Fairy_pond.name=OneBlock Fairy pond
 items.OneBlock_Crystal_Fairy_pond.name=Fairy pond Crystal
-items.OneBlock_Crystal_Fairy_pond.description=Consume to begin a Fairy pond expedition.\n200 ticks.\nLoot :\n- Blue Glowing Mushroom\n- Purple Glowing Mushroom\n- Azure Fruit\n- Life Essence\n- Wood Azure Trunk\n- Azure Sapling\n- Water Bucket
+items.OneBlock_Crystal_Fairy_pond.description=Consume to begin a Fairy pond expedition.\n50 ticks.\nLoot :\n- Blue Glowing Mushroom\n- Purple Glowing Mushroom\n- Azure Fruit\n- Life Essence\n- Azure Trunk\n- Azure Sapling\n- Water Bucket

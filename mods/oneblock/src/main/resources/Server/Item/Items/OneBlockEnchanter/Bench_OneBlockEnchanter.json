@@ -73,6 +73,14 @@
             "OneBlock_Crystal_Cave_Entry",
             "OneBlock_Crystal_Cave"
           ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Dungeon",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Dungeon",
+          "Recipes": [
+            "OneBlock_Crystal_Gobelin_Dungeon"
+          ]
         }
       ],
       "LocalOpenSoundEventId": "SFX_Arcane_Workbench_Open_Local",

@@ -88,9 +88,22 @@ public final class OneBlockDropRegistry
 
     public boolean executeDropable(String dropableId, DropableContext context)
     {
+        return executeDropable(dropableId, context, 1);
+    }
+
+    public boolean executeDropable(String dropableId, DropableContext context, int quantity)
+    {
         Dropable dropable = getDropable(dropableId);
         if (dropable == null || context == null) return false;
-        dropable.execute(context);
+        int safeQuantity = Math.max(1, quantity);
+        if (dropable instanceof ItemDropable itemDropable)
+        {
+            itemDropable.execute(context, safeQuantity);
+            return true;
+        }
+
+        for (int i = 0; i < safeQuantity; i++)
+            dropable.execute(context);
         return true;
     }
 
