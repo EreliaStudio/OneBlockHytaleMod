@@ -4,6 +4,7 @@ import com.hypixel.hytale.component.ArchetypeChunk;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.Ref;
+import com.hypixel.hytale.component.RemoveReason;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.system.tick.ArchetypeTickingSystem;
@@ -29,7 +30,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
     @Override
     public Query<EntityStore> getQuery()
     {
-        return Query.and(Player.getComponentType(), TransformComponent.getComponentType(), PlayerRef.getComponentType());
+        return TransformComponent.getComponentType();
     }
 
     @Override
@@ -63,12 +64,6 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
         int size = chunk.size();
         for (int i = 0; i < size; i++)
         {
-            Player player = chunk.getComponent(i, playerType);
-            if (player == null)
-            {
-                continue;
-            }
-
             TransformComponent transform = chunk.getComponent(i, transformType);
             if (transform == null)
             {
@@ -87,18 +82,21 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
                 continue;
             }
 
+            Player player = chunk.getComponent(i, playerType);
+            PlayerRef playerRef = chunk.getComponent(i, playerRefType);
+            if (player == null && playerRef == null)
+            {
+                buffer.removeEntity(ref, RemoveReason.REMOVE);
+                continue;
+            }
+
             if (buffer.getComponent(ref, teleportType) != null)
             {
                 continue;
             }
 
-            PlayerRef playerRef = chunk.getComponent(i, playerRefType);
-            if (playerRef == null)
-            {
-                continue;
-            }
-
-            Transform spawn = resolveSpawn(world, playerRef.getUuid());
+            UUID playerId = playerRef == null ? null : playerRef.getUuid();
+            Transform spawn = resolveSpawn(world, playerId);
             if (spawn == null)
             {
                 continue;
