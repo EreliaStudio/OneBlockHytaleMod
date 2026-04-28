@@ -80,8 +80,11 @@ public final class OneBlockExpeditionDefaults
 
         register(expeditions, "Forest", List.of(
                 drop("Wood_Oak_Trunk", 10),
+                drop("Plant_Sapling_Oak", 1),
                 drop("Wood_Beech_Trunk", 10),
+                drop("Plant_Sapling_Beech", 1),
                 drop("Wood_Birch_Trunk", 10),
+                drop("Plant_Sapling_Birch", 1),
                 drop("Plant_Crop_Mushroom_Common_Brown", 5),
                 drop("Plant_Crop_Mushroom_Cap_Brown", 5),
                 drop("Ingredient_Life_Essence", 1)
@@ -93,6 +96,7 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Fruit_Azure", 3),
                 drop("Ingredient_Life_Essence", 3),
                 drop("Wood_Azure_Trunk", 15),
+                drop("Plant_Sapling_Azure", 4),
                 drop("*Container_Bucket_State_Filled_Water", 1)
         ));
 

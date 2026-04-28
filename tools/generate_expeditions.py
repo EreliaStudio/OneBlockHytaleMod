@@ -162,16 +162,27 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
     }
 
 
-def build_lang_block(expedition_id: str) -> str:
+def build_lang_block(expedition_id: str, drop_pool: list) -> str:
     eid = _safe_eid(expedition_id)
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
+
+    loot_lines = "\\nLoot :"
+    for entry in drop_pool:
+        item_id = entry["ID"]
+        if "RenderName" in entry:
+            display_name = entry["RenderName"]
+        else:
+            if item_id.startswith(JAVA_ENTITY_PREFIX):
+                item_id = item_id[len(JAVA_ENTITY_PREFIX):]
+            display_name = item_id.replace("_", " ")
+        loot_lines += f"\\n- {display_name}"
 
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.{loot_lines}",
     ]
 
     return "\n".join(lines)
@@ -290,7 +301,7 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
 
-def patch_lang(path: Path, expedition_id: str, dry_run: bool):
+def patch_lang(path: Path, expedition_id: str, drop_pool: list, dry_run: bool):
     eid = _safe_eid(expedition_id)
     existing = path.read_text(encoding="utf-8")
     marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
@@ -299,7 +310,7 @@ def patch_lang(path: Path, expedition_id: str, dry_run: bool):
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
 
-    block = build_lang_block(expedition_id)
+    block = build_lang_block(expedition_id, drop_pool)
 
     if dry_run:
         print(f"  [dry-run] Would append lang entries for {expedition_id}")
@@ -480,7 +491,7 @@ def main():
             print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
         if lang_path.exists():
-            patch_lang(lang_path, expedition_id, args.dry_run)
+            patch_lang(lang_path, expedition_id, drop_pool, args.dry_run)
             patch_group_lang(lang_path, group, args.dry_run)
         else:
             print(f"  [warn]   Lang file not found: {lang_path}")

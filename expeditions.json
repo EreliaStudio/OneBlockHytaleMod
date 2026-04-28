@@ -15,7 +15,8 @@
     "BaseDropPool": [
       {
         "ID": "Ingredient_Fibre",
-        "Weight": 20
+        "Weight": 20,
+		"RenderName":"Fibre"
       },
       {
         "ID": "Rubble_Stone",
@@ -63,7 +64,8 @@
     "BaseDropPool": [
       {
         "ID": "Ingredient_Stick",
-        "Weight": 20
+        "Weight": 20,
+		"RenderName":"Stick"
       },
       {
         "ID": "Wood_Oak_Trunk",
@@ -71,7 +73,8 @@
       },
 	  {
 		"ID":"Plant_Sapling_Oak",
-		"Weight":1
+		"Weight":1,
+		"RenderName":"Oak Sapling"
 	  }
     ]
   },
@@ -173,25 +176,43 @@
         "ID": "Wood_Oak_Trunk",
         "Weight": 10
       },
+	  {
+		"ID":"Plant_Sapling_Oak",
+		"Weight":1,
+		"RenderName":"Oak Sapling"
+	  },
       {
         "ID": "Wood_Beech_Trunk",
         "Weight": 10
       },
+	  {
+		"ID":"Plant_Sapling_Beech",
+		"Weight":1,
+		"RenderName":"Beech Sapling"
+	  },
       {
         "ID": "Wood_Birch_Trunk",
         "Weight": 10
       },
+	  {
+		"ID":"Plant_Sapling_Birch",
+		"Weight":1,
+		"RenderName":"Birch Sapling"
+	  },
       {
         "ID": "Plant_Crop_Mushroom_Common_Brown",
-        "Weight": 5
+        "Weight": 5,
+		"RenderName":"Brown Common Mushroom"
       },
       {
         "ID": "Plant_Crop_Mushroom_Cap_Brown",
-        "Weight": 5
+        "Weight": 5,
+		"RenderName":"Brown Cap Mushroom"
       },
 	  {
 		"ID": "Ingredient_Life_Essence",
-		"Weight":1
+		"Weight":1,
+		"RenderName":"Life Essence"
 	  }
     ]
   },
@@ -209,27 +230,37 @@
     "BaseDropPool": [
       {
         "ID": "Plant_Crop_Mushroom_Glowing_Blue",
-        "Weight": 10
+        "Weight": 10,
+		"RenderName":"Blue Glowing Mushroom"
       },
       {
         "ID": "Plant_Crop_Mushroom_Glowing_Purple",
-        "Weight": 10
+        "Weight": 10,
+		"RenderName":"Purple Glowing Mushroom"
       },
       {
         "ID": "Plant_Fruit_Azure",
-        "Weight": 3
+        "Weight": 3,
+		"RenderName":"Azure Fruit"
       },
 	  {
 		"ID": "Ingredient_Life_Essence",
-		"Weight":3
+		"Weight":3,
+		"RenderName":"Life Essence"
 	  },
 	  {
 		"ID": "Wood_Azure_Trunk",
 		"Weight":15
 	  },
 	  {
+		"ID":"Plant_Sapling_Azure",
+		"Weight":4,
+		"RenderName":"Azure Sapling"
+	  },
+	  {
 		"ID":"*Container_Bucket_State_Filled_Water",
-		"Weight":1
+		"Weight":1,
+		"RenderName":"Water Bucket"
 	  }
     ]
   }
