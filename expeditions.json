@@ -222,6 +222,10 @@
 			{
 				"ID": "Ingredient_Charcoal",
 				"Quantity": 20
+			},
+			{
+				"CustomID":"Locket_GobelinDungeon",
+				"Quantity":1
 			}
 		]
 	},

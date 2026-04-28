@@ -61,7 +61,8 @@ public final class OneBlockDungeonDefaults
                 ), List.of(
                 reward("Ingredient_Life_Essence", 10),
                 reward("Ore_Iron", 12),
-                reward("Ingredient_Charcoal", 20)
+                reward("Ingredient_Charcoal", 20),
+                reward("Locket_GobelinDungeon", 1)
         ));
 
         DUNGEONS = Collections.unmodifiableMap(dungeons);

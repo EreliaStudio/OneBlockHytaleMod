@@ -30,15 +30,22 @@ ENCHANTER = ITEMS / "OneBlockEnchanter/Bench_OneBlockEnchanter.json"
 DUNGEON_ENCHANTER = ITEMS / "OneBlockDungeonEnchanter/Bench_OneBlockDungeonEnchanter.json"
 CRYSTAL_DIR = ITEMS / "Crystal/Expedition"
 BLOCK_DIR   = ITEMS / "OneBlock"
+CUSTOM_ITEM_DIR = ITEMS / "CustomItems"
 
 BLOCK_TEXTURE_DIR = ONEBLOCK / "Common/BlockTextures"
 BLOCK_ICON_DIR    = ONEBLOCK / "Common/Icons/ItemsGenerated"
+CUSTOM_ITEM_TEXTURE_DIR = ONEBLOCK / "Common/Items/CustomItems"
+CUSTOM_ITEM_MODEL = ONEBLOCK / "Common/Blocks/CustomItems/OneBlock_CustomItem.blockymodel"
+CUSTOM_ITEM_MODEL_RESOURCE = "Blocks/CustomItems/OneBlock_CustomItem.blockymodel"
 DEFAULT_RENDER_NAMES_FILE = Path("item_render_names.json")
 
 # ── Default asset templates (next to this script) ────────────────────────────
 SCRIPT_DIR           = Path(__file__).parent
 DEFAULT_BLOCK_TEXTURE = SCRIPT_DIR / "OneBlock_DefaultTexture.png"
 DEFAULT_BLOCK_ICON    = SCRIPT_DIR / "OneBlock_DefaultIcon.png"
+DEFAULT_CUSTOM_ITEM_ICON = SCRIPT_DIR / "OneBlock_CustomItem.png"
+
+CUSTOM_ID_KEY = "CustomID"
 
 ENCHANTER_CATEGORY_ORDER = [
     "Surface",
@@ -166,6 +173,99 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
     }
 
 
+def build_custom_item(custom_id: str) -> dict:
+    icon = f"Icons/ItemsGenerated/{custom_id}_Icon.png"
+    texture = f"Items/CustomItems/{custom_id}_Texture.png"
+    return {
+        "TranslationProperties": {
+            "Name": f"{PREFIX_ITEMS_JSON}.{custom_id}.name",
+        },
+        "Id": custom_id,
+        "Icon": icon,
+        "Categories": ["Items"],
+        "Model": CUSTOM_ITEM_MODEL_RESOURCE,
+        "Texture": texture,
+        "PlayerAnimationsId": "Item",
+        "IconProperties": {
+            "Scale": 1,
+            "Translation": [0, -3],
+            "Rotation": [22.5, 45, 22.5],
+        },
+        "Tags": {
+            "Type": ["Ingredient", "OneBlock_CustomItem"],
+        },
+        "ItemEntity": {
+            "ParticleSystemId": None,
+        },
+        "DropOnDeath": True,
+    }
+
+
+def build_custom_item_model() -> dict:
+    quad_shape = {
+        "type": "quad",
+        "offset": {"x": 0, "y": 0, "z": 0},
+        "stretch": {"x": 1, "y": 1, "z": 1},
+        "settings": {
+            "size": {"x": 22, "y": 32},
+            "normal": "+Z",
+        },
+        "visible": True,
+        "doubleSided": True,
+        "shadingMode": "fullbright",
+        "unwrapMode": "custom",
+        "textureLayout": {
+            "front": {
+                "offset": {"x": 4, "y": 0},
+                "mirror": {"x": False, "y": False},
+                "angle": 0,
+            },
+        },
+    }
+
+    return {
+        "lod": "auto",
+        "nodes": [
+            {
+                "id": "2",
+                "name": "R-Attachment",
+                "children": [
+                    {
+                        "id": "1",
+                        "name": "CustomItem",
+                        "children": [
+                            {
+                                "id": "0",
+                                "name": "Front",
+                                "children": [],
+                                "position": {"x": 0, "y": 0, "z": 0},
+                                "orientation": {"x": 0, "y": -0.707107, "z": 0, "w": 0.707107},
+                                "shape": quad_shape,
+                            },
+                        ],
+                        "position": {"x": 0, "y": 19, "z": 0},
+                        "orientation": {"x": 0, "y": 0.707107, "z": 0, "w": 0.707107},
+                        "shape": quad_shape,
+                    },
+                ],
+                "position": {"x": 0, "y": 0, "z": 0},
+                "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+                "shape": {
+                    "type": "none",
+                    "offset": {"x": 0, "y": 0, "z": 0},
+                    "stretch": {"x": 1, "y": 1, "z": 1},
+                    "settings": {"isPiece": True},
+                    "visible": True,
+                    "doubleSided": False,
+                    "shadingMode": "standard",
+                    "unwrapMode": "custom",
+                    "textureLayout": {},
+                },
+            },
+        ],
+    }
+
+
 def build_lang_block(expedition_id: str,
                      drop_pool: list,
                      completion_rewards: list,
@@ -198,8 +298,23 @@ def build_lang_block(expedition_id: str,
 JAVA_ENTITY_PREFIX = "entity:"
 
 
+def _entry_drop_id(entry: dict) -> str:
+    if CUSTOM_ID_KEY in entry:
+        return str(entry[CUSTOM_ID_KEY]).strip()
+    if "ID" in entry:
+        return str(entry["ID"]).strip()
+    raise ValueError(f"Drop entry must contain either ID or {CUSTOM_ID_KEY}: {entry}")
+
+
+def _entry_weight(entry: dict) -> int:
+    try:
+        return max(1, int(entry.get("Weight", 1)))
+    except (TypeError, ValueError):
+        return 1
+
+
 def _display_drop_name(entry: dict, render_names: dict[str, str]) -> str:
-    item_id = entry["ID"]
+    item_id = _entry_drop_id(entry)
     if "RenderName" in entry:
         return entry["RenderName"]
     if item_id in render_names:
@@ -230,7 +345,7 @@ def _java_drop_expr(drop_id: str, weight: int) -> str:
 
 
 def _java_reward_expr(entry: dict) -> str:
-    return f"reward({_java_drop_id_expr(entry['ID'])}, {_entry_quantity(entry)})"
+    return f"reward({_java_drop_id_expr(_entry_drop_id(entry))}, {_entry_quantity(entry)})"
 
 
 def _java_list_expr(entries: list[str], closing_indent: str) -> str:
@@ -250,7 +365,7 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list]]
         lines.append("")
 
         entries = [
-            f"                {_java_drop_expr(entry['ID'], entry['Weight'])}"
+            f"                {_java_drop_expr(_entry_drop_id(entry), _entry_weight(entry))}"
             for entry in drop_pool
         ]
         drop_list = _java_list_expr(entries, "        ")
@@ -405,6 +520,133 @@ def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool):
             print(f"  [warn]   No default block icon found at {DEFAULT_BLOCK_ICON}")
 
 
+def _custom_item_ids_from_entries(entries: list) -> set[str]:
+    out: set[str] = set()
+    for entry in entries or []:
+        if not isinstance(entry, dict):
+            continue
+        custom_id = entry.get(CUSTOM_ID_KEY)
+        if custom_id is None:
+            continue
+        custom_id = str(custom_id).strip()
+        if custom_id:
+            out.add(custom_id)
+    return out
+
+
+def _display_custom_item_name(custom_id: str) -> str:
+    return custom_id.replace("_", " ")
+
+
+def ensure_custom_item_model(repo_root: Path, dry_run: bool):
+    model_dst = repo_root / CUSTOM_ITEM_MODEL
+    if model_dst.exists():
+        return
+
+    if dry_run:
+        print(f"  [dry-run] Would write {model_dst.name}")
+        return
+
+    model_dst.parent.mkdir(parents=True, exist_ok=True)
+    model_dst.write_bytes(
+        (json.dumps(build_custom_item_model(), indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    )
+    print(f"  [write]  {model_dst.name}")
+
+
+def _patch_legacy_custom_item_asset_paths(item_dst: Path, custom_id: str, dry_run: bool):
+    data = _load_json(item_dst)
+    icon = f"Icons/ItemsGenerated/{custom_id}_Icon.png"
+    texture = f"Items/CustomItems/{custom_id}_Texture.png"
+
+    changed = False
+    if data.get("Icon") == f"Icons/ItemsGenerated/{custom_id}.png":
+        data["Icon"] = icon
+        changed = True
+
+    if data.get("Texture") in {
+        f"Icons/ItemsGenerated/{custom_id}.png",
+        f"Items/CustomItems/{custom_id}.png",
+    }:
+        data["Texture"] = texture
+        changed = True
+
+    if not changed:
+        return
+
+    if dry_run:
+        print(f"  [dry-run] Would patch legacy custom item asset paths in {item_dst.name}")
+        return
+
+    item_dst.write_bytes(
+        (json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    )
+    print(f"  [patch]  {item_dst.name} custom item asset paths")
+
+
+def _copy_custom_item_asset(default_src: Path,
+                            legacy_src: Path,
+                            dst: Path,
+                            label: str,
+                            dry_run: bool):
+    if dst.exists():
+        print(f"  [skip]   {dst.name} already exists")
+        return
+
+    src = legacy_src if legacy_src.exists() else default_src
+    if not src.exists():
+        print(f"  [warn]   No default custom item {label} found at {default_src}")
+        return
+
+    if dry_run:
+        print(f"  [dry-run] Would copy custom item {label} -> {dst.name}")
+        return
+
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, dst)
+    print(f"  [copy]   {dst.name} <- custom item {label}")
+
+
+def _remove_legacy_custom_item_asset(path: Path, replacement: Path, label: str, dry_run: bool):
+    if not path.exists() or not replacement.exists():
+        return
+
+    if dry_run:
+        print(f"  [dry-run] Would remove legacy custom item {label} {path.name}")
+        return
+
+    path.unlink()
+    print(f"  [clean]  removed legacy custom item {label} {path.name}")
+
+
+def ensure_custom_item_assets(repo_root: Path, custom_id: str, dry_run: bool):
+    ensure_custom_item_model(repo_root, dry_run)
+
+    item_dst = repo_root / CUSTOM_ITEM_DIR / f"{custom_id}.json"
+    if not item_dst.exists():
+        if dry_run:
+            print(f"  [dry-run] Would write {item_dst.name}")
+        else:
+            item_dst.parent.mkdir(parents=True, exist_ok=True)
+            item_dst.write_bytes(
+                (json.dumps(build_custom_item(custom_id), indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+            )
+            print(f"  [write]  {item_dst.name}")
+    else:
+        _patch_legacy_custom_item_asset_paths(item_dst, custom_id, dry_run)
+        print(f"  [skip]   {item_dst.name} already exists")
+
+    legacy_icon = repo_root / BLOCK_ICON_DIR / f"{custom_id}.png"
+    icon_dst = repo_root / BLOCK_ICON_DIR / f"{custom_id}_Icon.png"
+    _copy_custom_item_asset(DEFAULT_CUSTOM_ITEM_ICON, legacy_icon, icon_dst, "icon", dry_run)
+    _remove_legacy_custom_item_asset(legacy_icon, icon_dst, "icon", dry_run)
+
+    legacy_texture = repo_root / CUSTOM_ITEM_TEXTURE_DIR / f"{custom_id}.png"
+    texture_dst = repo_root / CUSTOM_ITEM_TEXTURE_DIR / f"{custom_id}_Texture.png"
+    _copy_custom_item_asset(DEFAULT_CUSTOM_ITEM_ICON, legacy_texture, texture_dst, "texture", dry_run)
+    _remove_legacy_custom_item_asset(legacy_texture, texture_dst, "texture", dry_run)
+
+
 def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool, bench_id: str = "OneBlockEnchanter"):
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(group)
@@ -478,6 +720,22 @@ def patch_group_lang(path: Path, group: str, dry_run: bool, bench_id: str = "One
 
     path.write_text(existing.rstrip() + "\n" + line + "\n", encoding="utf-8")
     print(f"  [patch]  lang ← {key}")
+
+
+def patch_custom_item_lang(path: Path, custom_id: str, dry_run: bool):
+    key = f"{PREFIX_ITEMS_LANG}.{custom_id}.name"
+    existing = path.read_text(encoding="utf-8")
+    if key in existing:
+        return
+
+    line = f"{key}={_display_custom_item_name(custom_id)}"
+
+    if dry_run:
+        print(f"  [dry-run] Would append lang entry for {key}")
+        return
+
+    path.write_text(existing.rstrip() + "\n" + line + "\n", encoding="utf-8")
+    print(f"  [patch]  lang <- {key}")
 
 
 def _patch_dungeon_lang(path: Path,
@@ -675,6 +933,7 @@ def main():
 
     all_expedition_drops: list[tuple[str, int, list, list]] = []
     all_dungeon_waves: list[tuple[str, list, list]] = []
+    seen_custom_item_ids: set[str] = set()
 
     for expedition_id, cfg in expeditions.items():
         print(f"\n=== {expedition_id} ===")
@@ -685,6 +944,15 @@ def main():
         completion_rewards = cfg.get("CompletionRewards", cfg.get("Rewards", [])) or []
         eid = _safe_eid(expedition_id)
         is_dungeon = group == "Dungeon"
+
+        custom_item_ids = _custom_item_ids_from_entries(completion_rewards)
+        if not is_dungeon:
+            custom_item_ids.update(_custom_item_ids_from_entries(cfg.get("BaseDropPool", [])))
+        for custom_id in sorted(custom_item_ids - seen_custom_item_ids):
+            ensure_custom_item_assets(repo_root, custom_id, args.dry_run)
+            if lang_path.exists():
+                patch_custom_item_lang(lang_path, custom_id, args.dry_run)
+        seen_custom_item_ids.update(custom_item_ids)
 
         ensure_block_assets(repo_root, expedition_id, args.dry_run)
 
