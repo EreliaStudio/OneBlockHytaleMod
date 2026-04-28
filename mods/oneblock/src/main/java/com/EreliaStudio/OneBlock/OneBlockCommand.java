@@ -71,8 +71,10 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
             ctx.sendMessage(Message.raw("Usage: /oneblock - start <expeditionId>"));
             return;
         }
-        stateProvider.startExpedition(expeditionId.trim(), 100);
-        ctx.sendMessage(Message.raw("Started expedition '" + expeditionId.trim() + "' with 100 ticks."));
+        String eid = expeditionId.trim();
+        int ticks = OneBlockExpeditionDefaults.getTicks(eid);
+        stateProvider.startExpedition(eid, ticks);
+        ctx.sendMessage(Message.raw("Started expedition '" + eid + "' with " + ticks + " ticks."));
     }
 
     private static void handleStop(CommandContext ctx, OneBlockExpeditionStateProvider stateProvider, World world)

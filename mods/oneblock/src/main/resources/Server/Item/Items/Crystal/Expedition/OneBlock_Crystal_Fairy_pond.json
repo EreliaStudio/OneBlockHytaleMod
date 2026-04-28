@@ -51,6 +51,9 @@
     ],
     "OneBlockCrystalExpedition": [
       "Fairy_pond"
+    ],
+    "OneBlockCrystalTicks": [
+      "200"
     ]
   },
   "MaxStack": 4,

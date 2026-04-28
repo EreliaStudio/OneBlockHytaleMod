@@ -70,7 +70,7 @@ def _category_sort_key(category: dict) -> tuple[int, str]:
     return (len(ENCHANTER_CATEGORY_ORDER), category_id)
 
 
-def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list) -> dict:
+def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list, ticks: int) -> dict:
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(category)
     item_id = f"OneBlock_Crystal_{eid}"
@@ -107,6 +107,7 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         "Tags": {
             "Type": ["OneBlock_ExpeditionCrystal"],
             "OneBlockCrystalExpedition": [expedition_id],
+            "OneBlockCrystalTicks": [str(ticks)],
         },
         "MaxStack": 4,
         "Quality": _quality(item_level),
@@ -132,6 +133,7 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
             "DrawType": "Cube",
             "Group": "OneBlock",
             "Flags": {},
+            # Keep all variants hand-breakable; expedition length is controlled by Ticks.
             "Gathering": {
                 "Breaking": {
                     "GatherType": "Soils",
@@ -162,7 +164,7 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
     }
 
 
-def build_lang_block(expedition_id: str, drop_pool: list) -> str:
+def build_lang_block(expedition_id: str, drop_pool: list, ticks: int) -> str:
     eid = _safe_eid(expedition_id)
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
@@ -182,7 +184,7 @@ def build_lang_block(expedition_id: str, drop_pool: list) -> str:
         f"\n# GENERATED ─── {display} {sep}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
         f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.{loot_lines}",
+        f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.{loot_lines}",
     ]
 
     return "\n".join(lines)
@@ -198,14 +200,14 @@ def _java_drop_expr(drop_id: str, weight: int) -> str:
     return f'drop("{drop_id}", {weight})'
 
 
-def build_java_defaults_block(all_expeditions: list[tuple[str, list]]) -> str:
+def build_java_defaults_block(all_expeditions: list[tuple[str, int, list]]) -> str:
     lines = [
         "    static",
         "    {",
         "        Map<String, ExpeditionDefinition> expeditions = new HashMap<>();",
     ]
 
-    for expedition_id, drop_pool in all_expeditions:
+    for expedition_id, ticks, drop_pool in all_expeditions:
         lines.append("")
 
         entries = [
@@ -213,7 +215,7 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, list]]) -> str:
             for entry in drop_pool
         ]
 
-        lines.append(f'        register(expeditions, "{expedition_id}", List.of(')
+        lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, List.of(')
         lines.append(",\n".join(entries))
         lines.append("        ));")
 
@@ -301,7 +303,7 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool):
     print(f"  [patch]  Enchanter ← {eid} → group {gid}")
 
 
-def patch_lang(path: Path, expedition_id: str, drop_pool: list, dry_run: bool):
+def patch_lang(path: Path, expedition_id: str, drop_pool: list, ticks: int, dry_run: bool):
     eid = _safe_eid(expedition_id)
     existing = path.read_text(encoding="utf-8")
     marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
@@ -310,7 +312,7 @@ def patch_lang(path: Path, expedition_id: str, drop_pool: list, dry_run: bool):
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
 
-    block = build_lang_block(expedition_id, drop_pool)
+    block = build_lang_block(expedition_id, drop_pool, ticks)
 
     if dry_run:
         print(f"  [dry-run] Would append lang entries for {expedition_id}")
@@ -466,6 +468,7 @@ def main():
         print(f"\n=== {expedition_id} ===")
 
         item_level = cfg["ItemLevel"]
+        ticks = cfg.get("Ticks", 100)
         crystal_cfg = cfg["Crystal"]
         drop_pool = cfg["BaseDropPool"]
         group = cfg.get("Category", cfg.get("Group", expedition_id))
@@ -481,7 +484,7 @@ def main():
 
         write_json(
             repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
-            build_crystal(expedition_id, group, item_level, crystal_cfg["Input"]),
+            build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks),
             args.dry_run,
         )
 
@@ -491,12 +494,12 @@ def main():
             print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
         if lang_path.exists():
-            patch_lang(lang_path, expedition_id, drop_pool, args.dry_run)
+            patch_lang(lang_path, expedition_id, drop_pool, ticks, args.dry_run)
             patch_group_lang(lang_path, group, args.dry_run)
         else:
             print(f"  [warn]   Lang file not found: {lang_path}")
 
-        all_expedition_drops.append((expedition_id, drop_pool))
+        all_expedition_drops.append((expedition_id, ticks, drop_pool))
 
     static_block = build_java_defaults_block(all_expedition_drops)
 

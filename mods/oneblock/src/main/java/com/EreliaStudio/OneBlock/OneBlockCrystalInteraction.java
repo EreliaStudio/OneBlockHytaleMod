@@ -75,7 +75,7 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
             return;
         }
 
-        int ticks = OneBlockExpeditionResolver.DEFAULT_TICKS;
+        int ticks = OneBlockExpeditionDefaults.getTicks(expeditionId);
         plugin.getExpeditionStateProvider().startExpedition(expeditionId, ticks);
 
         String newBlockId = OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);

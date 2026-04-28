@@ -51,6 +51,9 @@
     ],
     "OneBlockCrystalExpedition": [
       "Forest"
+    ],
+    "OneBlockCrystalTicks": [
+      "25"
     ]
   },
   "MaxStack": 4,

@@ -1,14 +1,21 @@
 package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.event.events.PrepareUniverseEvent;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import com.hypixel.hytale.server.core.universe.world.World;
+import com.hypixel.hytale.server.core.universe.world.WorldConfig;
+import com.hypixel.hytale.server.core.universe.world.WorldConfigProvider;
 import com.hypixel.hytale.server.core.universe.world.events.AddWorldEvent;
+import com.hypixel.hytale.server.core.universe.world.worldgen.provider.VoidWorldGenProvider;
 
 import javax.annotation.Nonnull;
+import java.nio.file.Path;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
 
 public final class OneBlockPlugin extends JavaPlugin
@@ -64,11 +71,44 @@ public final class OneBlockPlugin extends JavaPlugin
         OneBlockWorldBootstrap.ensureVoidDefaultWorldConfig(getDataDirectory());
         getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem());
 
+        getEventRegistry().registerGlobal(PrepareUniverseEvent.class, event ->
+        {
+            WorldConfigProvider original = event.getWorldConfigProvider();
+            event.setWorldConfigProvider(new WorldConfigProvider()
+            {
+                @Override
+                public CompletableFuture<WorldConfig> load(Path path, String worldName)
+                {
+                    CompletableFuture<WorldConfig> future = original.load(path, worldName);
+                    if (!World.DEFAULT.equals(worldName))
+                        return future;
+                    return future.thenApply(config ->
+                    {
+                        if (config != null)
+                        {
+                            config.setWorldGenProvider(OneBlockWorldInitializer.voidWorldGenProvider());
+                            config.markChanged();
+                        }
+                        return config;
+                    });
+                }
+
+                @Override
+                public CompletableFuture<Void> save(Path path, WorldConfig config, World world)
+                {
+                    return original.save(path, config, world);
+                }
+            });
+        });
+
         getEventRegistry().registerGlobal(AddWorldEvent.class, event ->
         {
             var world = event.getWorld();
             if (OneBlockWorldInitializer.isDefaultWorld(world))
+            {
+                OneBlockWorldBootstrap.ensureVoidWorldAtSavePath(world.getSavePath());
                 OneBlockWorldInitializer.initializeWorld(world);
+            }
         });
 
         LOGGER.at(Level.INFO).log("Setup complete.");

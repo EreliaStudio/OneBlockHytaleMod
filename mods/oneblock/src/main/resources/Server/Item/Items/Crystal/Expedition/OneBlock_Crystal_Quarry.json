@@ -51,6 +51,9 @@
     ],
     "OneBlockCrystalExpedition": [
       "Quarry"
+    ],
+    "OneBlockCrystalTicks": [
+      "150"
     ]
   },
   "MaxStack": 4,

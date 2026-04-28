@@ -4,6 +4,7 @@
   "Meadow": {
     "ItemLevel": 1,
     "Category": "Surface",
+    "Ticks": 25,
     "Crystal": {
       "Input": [
         {
@@ -31,6 +32,7 @@
   "Meadow_Cave": {
     "ItemLevel": 1,
     "Category": "Surface",
+    "Ticks": 25,
     "Crystal": {
       "Input": [
         {
@@ -53,6 +55,7 @@
   "Meadow_Forest": {
     "ItemLevel": 1,
     "Category": "Surface",
+    "Ticks": 25,
     "Crystal": {
       "Input": [
         {
@@ -81,6 +84,7 @@
   "Cave_Entry": {
     "ItemLevel": 1,
     "Category": "Cavern",
+    "Ticks": 25,
     "Crystal": {
       "Input": [
         {
@@ -111,6 +115,7 @@
   "Quarry": {
     "ItemLevel": 2,
     "Category": "Surface",
+    "Ticks": 150,
     "Crystal": {
       "Input": [
         {
@@ -137,6 +142,7 @@
   "Cave": {
     "ItemLevel": 1,
     "Category": "Cavern",
+    "Ticks": 25,
     "Crystal": {
       "Input": [
         {
@@ -163,6 +169,7 @@
   "Forest": {
     "ItemLevel": 1,
     "Category": "Forest",
+    "Ticks": 25,
     "Crystal": {
       "Input": [
         {
@@ -178,7 +185,7 @@
       },
 	  {
 		"ID":"Plant_Sapling_Oak",
-		"Weight":1,
+		"Weight":2,
 		"RenderName":"Oak Sapling"
 	  },
       {
@@ -187,7 +194,7 @@
       },
 	  {
 		"ID":"Plant_Sapling_Beech",
-		"Weight":1,
+		"Weight":2,
 		"RenderName":"Beech Sapling"
 	  },
       {
@@ -196,7 +203,7 @@
       },
 	  {
 		"ID":"Plant_Sapling_Birch",
-		"Weight":1,
+		"Weight":2,
 		"RenderName":"Birch Sapling"
 	  },
       {
@@ -211,7 +218,7 @@
       },
 	  {
 		"ID": "Ingredient_Life_Essence",
-		"Weight":1,
+		"Weight":5,
 		"RenderName":"Life Essence"
 	  }
     ]
@@ -219,6 +226,7 @@
   "Fairy_pond": {
     "ItemLevel": 3,
     "Category": "Forest",
+    "Ticks": 200,
     "Crystal": {
       "Input": [
         {

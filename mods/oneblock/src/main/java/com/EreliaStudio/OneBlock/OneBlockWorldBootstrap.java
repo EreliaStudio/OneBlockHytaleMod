@@ -46,6 +46,21 @@ final class OneBlockWorldBootstrap
         }
 
         Path worldDir = serverRoot.resolve("universe").resolve("worlds").resolve(WORLD_NAME);
+        ensureVoidWorldDir(worldDir);
+    }
+
+    static void ensureVoidWorldAtSavePath(Path worldSavePath)
+    {
+        if (worldSavePath == null)
+        {
+            LOGGER.at(Level.WARNING).log("World save path is null, cannot configure void world.");
+            return;
+        }
+        ensureVoidWorldDir(worldSavePath);
+    }
+
+    private static void ensureVoidWorldDir(Path worldDir)
+    {
         boolean worldDirMissing = !Files.exists(worldDir);
         Path configPath = worldDir.resolve("config.json");
         if (worldDirMissing || !Files.exists(configPath))

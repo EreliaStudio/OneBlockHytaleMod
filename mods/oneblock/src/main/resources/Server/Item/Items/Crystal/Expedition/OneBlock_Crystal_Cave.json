@@ -51,6 +51,9 @@
     ],
     "OneBlockCrystalExpedition": [
       "Cave"
+    ],
+    "OneBlockCrystalTicks": [
+      "25"
     ]
   },
   "MaxStack": 4,
