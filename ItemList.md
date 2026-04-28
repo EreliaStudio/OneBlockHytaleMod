@@ -531,3 +531,6 @@ Tool_Hatchet_Iron
 Tool_Hatchet_Copper
 Tool_Hatchet_Crude
 Tool_Hatchet_Wood
+
+# Bucket
+*Container_Bucket_State_Filled_Water

@@ -68,7 +68,11 @@
       {
         "ID": "Wood_Oak_Trunk",
         "Weight": 10
-      }
+      },
+	  {
+		"ID":"Plant_Sapling_Oak",
+		"Weight":1
+	  }
     ]
   },
   "Cave_Entry": {
@@ -222,6 +226,10 @@
 	  {
 		"ID": "Wood_Azure_Trunk",
 		"Weight":15
+	  },
+	  {
+		"ID":"*Container_Bucket_State_Filled_Water",
+		"Weight":1
 	  }
     ]
   }

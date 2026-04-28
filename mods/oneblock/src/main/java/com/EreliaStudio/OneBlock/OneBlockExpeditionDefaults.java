@@ -56,7 +56,8 @@ public final class OneBlockExpeditionDefaults
 
         register(expeditions, "Meadow_Forest", List.of(
                 drop("Ingredient_Stick", 20),
-                drop("Wood_Oak_Trunk", 10)
+                drop("Wood_Oak_Trunk", 10),
+                drop("Plant_Sapling_Oak", 1)
         ));
 
         register(expeditions, "Cave_Entry", List.of(
@@ -91,7 +92,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Crop_Mushroom_Glowing_Purple", 10),
                 drop("Plant_Fruit_Azure", 3),
                 drop("Ingredient_Life_Essence", 3),
-                drop("Wood_Azure_Trunk", 15)
+                drop("Wood_Azure_Trunk", 15),
+                drop("*Container_Bucket_State_Filled_Water", 1)
         ));
 
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);
