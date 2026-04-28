@@ -8,17 +8,21 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.protocol.BlockMaterial;
 
 import com.hypixel.hytale.component.*;
 import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.system.EntityEventSystem;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlockEvent>
 {
     private static final Vector3i REWARD_OFFSET = new Vector3i(0, 1, 0);
+    private static final int DUNGEON_SPAWN_RADIUS = 5;
 
     private final OneBlockDropRegistry dropRegistry;
     private final OneBlockExpeditionStateProvider expeditionState;
@@ -84,9 +88,20 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         String dungeonId = dungeonState.getActiveDungeonId();
         int waveIndex = dungeonState.getCurrentWaveIndex();
         List<String> wave = OneBlockDungeonDefaults.getWave(dungeonId, waveIndex);
+        List<Vector3i> spawnBlocks = findDungeonSpawnBlocks(world, pos);
+        if (!spawnBlocks.isEmpty()) Collections.shuffle(spawnBlocks);
 
+        int spawnIndex = 0;
         for (String entityId : wave)
-            dropRegistry.executeDropable(entityId, context);
+        {
+            DropableContext spawnContext = context;
+            if (!spawnBlocks.isEmpty())
+            {
+                spawnContext = withSpawnBlock(context, spawnBlocks.get(spawnIndex % spawnBlocks.size()));
+                spawnIndex++;
+            }
+            dropRegistry.executeDropable(entityId, spawnContext);
+        }
 
         String completedDungeon = dungeonState.onWaveCompleted();
 
@@ -108,6 +123,65 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
             if (player != null)
                 player.sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + nextWave + "/" + totalWaves + " waves completed."));
         }
+    }
+
+    private static List<Vector3i> findDungeonSpawnBlocks(World world, Vector3i sourceBlock)
+    {
+        if (world == null || sourceBlock == null) return List.of();
+
+        List<Vector3i> spawnBlocks = new ArrayList<>();
+        int sourceX = sourceBlock.getX();
+        int sourceY = sourceBlock.getY();
+        int sourceZ = sourceBlock.getZ();
+
+        for (int y = sourceY; y >= sourceY - DUNGEON_SPAWN_RADIUS; y--)
+        {
+            for (int x = sourceX - DUNGEON_SPAWN_RADIUS; x <= sourceX + DUNGEON_SPAWN_RADIUS; x++)
+            {
+                for (int z = sourceZ - DUNGEON_SPAWN_RADIUS; z <= sourceZ + DUNGEON_SPAWN_RADIUS; z++)
+                {
+                    if (x == sourceX && y == sourceY && z == sourceZ) continue;
+                    if (isDungeonSpawnBlock(world, x, y, z))
+                        spawnBlocks.add(new Vector3i(x, y, z));
+                }
+            }
+        }
+
+        return spawnBlocks;
+    }
+
+    private static boolean isDungeonSpawnBlock(World world, int x, int y, int z)
+    {
+        BlockType floor = world.getBlockType(x, y, z);
+        BlockType feet = world.getBlockType(x, y + 1, z);
+        BlockType head = world.getBlockType(x, y + 2, z);
+
+        return isSolidBlock(floor) && isClearBlock(feet) && isClearBlock(head);
+    }
+
+    private static boolean isSolidBlock(BlockType blockType)
+    {
+        return blockType != null
+                && blockType != BlockType.EMPTY
+                && blockType.getMaterial() != BlockMaterial.Empty;
+    }
+
+    private static boolean isClearBlock(BlockType blockType)
+    {
+        return blockType != null
+                && (blockType == BlockType.EMPTY || blockType.getMaterial() == BlockMaterial.Empty);
+    }
+
+    private static DropableContext withSpawnBlock(DropableContext context, Vector3i spawnBlock)
+    {
+        return new DropableContext(
+                context.getStore(),
+                context.getWorld(),
+                context.getSourceBlock(),
+                spawnBlock,
+                context.getPlayerEntity(),
+                context.getPlayerRef()
+        );
     }
 
     private void handleExpeditionBreak(World world, Vector3i pos, Player player,
