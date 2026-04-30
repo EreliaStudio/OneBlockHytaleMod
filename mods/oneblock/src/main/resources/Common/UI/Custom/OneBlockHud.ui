@@ -2,18 +2,19 @@
 @OneBlockBarFill = PatchStyle(TexturePath: "OneBlockBarFill.png");
 
 Group #OneBlockHudRoot {
-  Anchor: (Top: 80, Left: 0, Right: 0, Height: 96);
+  Anchor: (Top: 80, Left: 0, Right: 0, Height: 72);
 
   Group #OneBlockHudContent {
-    Anchor: (Top: 0, Left: 752, Right: 752, Height: 96);
+    Anchor: (Top: 0, Left: 752, Right: 752, Height: 72);
 
     Label #OneBlockBarTitle {
-      Anchor: (Top: 0, Left: 0, Right: 0, Height: 28);
+      Anchor: (Top: 0, Left: 0, Right: 0, Height: 20);
       Text: "";
+      Style: (HorizontalAlignment: Center);
     }
 
     ProgressBar #OneBlockBar {
-      Anchor: (Top: 33, Left: 0, Right: 0, Height: 32);
+      Anchor: (Top: 25, Left: 0, Right: 0, Height: 32);
       Value: 0.0;
       Background: @OneBlockBarBackground;
       Bar: @OneBlockBarFill;
