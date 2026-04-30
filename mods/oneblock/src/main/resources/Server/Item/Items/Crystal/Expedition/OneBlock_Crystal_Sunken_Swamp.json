@@ -1,0 +1,66 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Sunken_Swamp.name",
+    "Description": "server.items.OneBlock_Crystal_Sunken_Swamp.description"
+  },
+  "Id": "OneBlock_Crystal_Sunken_Swamp",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Plant_Reeds_Marsh",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Wood_Sallow_Trunk",
+        "Quantity": 6
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Forest"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Sunken_Swamp"
+    ],
+    "OneBlockCrystalTicks": [
+      "55"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

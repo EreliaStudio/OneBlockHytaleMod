@@ -55,6 +55,72 @@ public final class OneBlockDungeonDefaults
     {
         Map<String, DungeonDefinition> dungeons = new HashMap<>();
 
+        register(dungeons, "Swamp_Ruins", List.of(
+                        List.of("entity:Fen_Stalker", "entity:Spider"),
+                        List.of("entity:Fen_Stalker", "entity:Zombie"),
+                        List.of("entity:Fen_Stalker", "entity:Crawler", "entity:Spider"),
+                        List.of("entity:Large_Aberrant_Zombie")
+                ), List.of(
+                reward("SwampRuinsToken", 1),
+                reward("ExpeditionPoint", 2),
+                crystalReward("Forgotten_Marsh", 1)
+        ));
+
+        register(dungeons, "Abandoned_Mine", List.of(
+                        List.of("entity:Goblin_Miner", "entity:Goblin_Miner"),
+                        List.of("entity:Goblin_Miner_Patrol", "entity:Goblin_Scavenger"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Lobber"),
+                        List.of("entity:Goblin_Ogre")
+                ), List.of(
+                reward("AbandonedMineToken", 1),
+                reward("ExpeditionPoint", 2),
+                crystalReward("Basalt_Gate", 1)
+        ));
+
+        register(dungeons, "Frozen_Ruins", List.of(
+                        List.of("entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Scout"),
+                        List.of("entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Ranger"),
+                        List.of("entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Mage"),
+                        List.of("entity:Frost_Golem")
+                ), List.of(
+                reward("FrozenRuinsToken", 1),
+                reward("ExpeditionPoint", 2),
+                crystalReward("Polar_Necropolis", 1)
+        ));
+
+        register(dungeons, "Desert_Temple", List.of(
+                        List.of("entity:Sandswept_Zombie", "entity:Sandswept_Zombie"),
+                        List.of("entity:Skeleton_Scout", "entity:Skeleton_Archer"),
+                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Mage"),
+                        List.of("entity:Sand_Empress")
+                ), List.of(
+                reward("DesertTempleToken", 1),
+                reward("ExpeditionPoint", 2),
+                crystalReward("Pharaoh_Catacombs", 1)
+        ));
+
+        register(dungeons, "Pharaoh_Catacombs", List.of(
+                        List.of("entity:Skeleton_Soldier", "entity:Skeleton_Archer"),
+                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Ranger"),
+                        List.of("entity:Skeleton_Mage", "entity:Skeleton_Fighter", "entity:Sandswept_Zombie"),
+                        List.of("entity:Skeleton_Archmage", "entity:Skeleton_Knight"),
+                        List.of("entity:Sand_Empress")
+                ), List.of(
+                reward("PharaohCatacombsToken", 1),
+                reward("ExpeditionPoint", 3),
+                crystalReward("Sunfire_Tomb", 1)
+        ));
+
+        register(dungeons, "Gobelin_Camp", List.of(
+                        List.of("entity:Goblin_Scavenger", "entity:Goblin_Thief"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Lobber"),
+                        List.of("entity:Goblin_Miner", "entity:Goblin_Scavenger_Battleaxe"),
+                        List.of("entity:Goblin_Ogre")
+                ), List.of(
+                reward("GobelinCampToken", 1),
+                reward("ExpeditionPoint", 2)
+        ));
+
         DUNGEONS = Collections.unmodifiableMap(dungeons);
         ALL_ENTITY_IDS = buildAllEntityIds(DUNGEONS);
         COMPLETION_REWARD_DROP_IDS = buildCompletionRewardDropIds(DUNGEONS);
@@ -115,6 +181,11 @@ public final class OneBlockDungeonDefaults
     private static CompletionRewardDefinition reward(String dropId, int quantity)
     {
         return new CompletionRewardDefinition(dropId, quantity);
+    }
+
+    private static CompletionRewardDefinition crystalReward(String dungeonId, int quantity)
+    {
+        return new CompletionRewardDefinition("Crystal_" + dungeonId, quantity);
     }
 
     private static void register(Map<String, DungeonDefinition> map,

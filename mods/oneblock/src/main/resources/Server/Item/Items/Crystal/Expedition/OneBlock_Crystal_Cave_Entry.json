@@ -38,11 +38,12 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Surface"
+          "OneBlock_Enchanter_Underground"
         ],
         "Id": "OneBlockEnchanter"
       }
-    ]
+    ],
+    "KnowledgeRequired": true
   },
   "Consumable": true,
   "Tags": {

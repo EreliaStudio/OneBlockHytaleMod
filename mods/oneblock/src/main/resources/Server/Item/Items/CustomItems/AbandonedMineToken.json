@@ -1,0 +1,35 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.AbandonedMineToken.name"
+  },
+  "Id": "AbandonedMineToken",
+  "Icon": "Icons/ItemsGenerated/AbandonedMineToken_Icon.png",
+  "Categories": [
+    "Items"
+  ],
+  "Model": "Blocks/CustomItems/OneBlock_CustomItem.blockymodel",
+  "Texture": "Items/CustomItems/AbandonedMineToken_Texture.png",
+  "PlayerAnimationsId": "Item",
+  "IconProperties": {
+    "Scale": 1,
+    "Translation": [
+      0,
+      -3
+    ],
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Ingredient",
+      "OneBlock_CustomItem"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "DropOnDeath": true
+}

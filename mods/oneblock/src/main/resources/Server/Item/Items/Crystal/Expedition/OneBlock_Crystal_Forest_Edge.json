@@ -29,8 +29,12 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Ingredient_Fibre",
+        "ItemId": "Ingredient_Stick",
         "Quantity": 4
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 2
       }
     ],
     "OutputQuantity": 1,
@@ -38,11 +42,12 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Surface"
+          "OneBlock_Enchanter_Forest"
         ],
         "Id": "OneBlockEnchanter"
       }
-    ]
+    ],
+    "KnowledgeRequired": true
   },
   "Consumable": true,
   "Tags": {

@@ -1,0 +1,54 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Block_Time_Locked_Glade.name"
+  },
+  "Id": "OneBlock_Block_Time_Locked_Glade",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/OneBlock_Time_Locked_Glade.png",
+  "Categories": [
+    "Blocks.OneBlock"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "OneBlock",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "OneBlock",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Soils",
+        "ID": "Soil_Dirt",
+        "Quantity": 0
+      }
+    },
+    "Textures": [
+      {
+        "Down": "BlockTextures/OneBlock_Block_Time_Locked_Glade.png",
+        "Sides": "BlockTextures/OneBlock_Block_Time_Locked_Glade.png",
+        "Up": "BlockTextures/OneBlock_Block_Time_Locked_Glade.png",
+        "Weight": 1
+      }
+    ],
+    "TransitionToGroups": [],
+    "ParticleColor": "#ffffff"
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Block"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

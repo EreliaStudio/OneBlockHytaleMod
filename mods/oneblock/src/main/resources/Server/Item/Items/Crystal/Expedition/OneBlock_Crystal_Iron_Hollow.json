@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Iron_Hollow.name",
+    "Description": "server.items.OneBlock_Crystal_Iron_Hollow.description"
+  },
+  "Id": "OneBlock_Crystal_Iron_Hollow",
+  "ItemLevel": 4,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Copper",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ore_Iron",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Rock_Stone",
+        "Quantity": 8
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Underground"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Iron_Hollow"
+    ],
+    "OneBlockCrystalTicks": [
+      "50"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Uncommon"
+}

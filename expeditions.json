@@ -1,6 +1,6 @@
 {
-	"_comment": "Generated place-progression expedition definitions. Crop items, seed items, seed recipes, animals, and monsters are intentionally excluded.",
-	"_usage": "python tools/generate_expeditions.py expeditions.json --repo-root . [--render-names item_render_names.json] [--dry-run]",
+	"_comment": "Expanded OneBlock expedition definitions. IDs are restricted to the provided item/entity list, except CustomID rewards such as ExpeditionPoint and dungeon tokens.",
+	"_usage": "python tools/generate_expeditions.py expeditions.json --repo-root . [--render-names item_render_names.json] [--dry-run] [--clean]",
 	"Default": {
 		"ItemLevel": 1,
 		"Category": "Surface",
@@ -19,18 +19,1160 @@
 				"Weight": 20
 			},
 			{
+				"ID": "Ingredient_Stick",
+				"Weight": 20
+			},
+			{
 				"ID": "Rubble_Stone",
 				"Weight": 20
 			},
 			{
 				"ID": "Soil_Dirt",
 				"Weight": 10
+			},
+			{
+				"ID": ,
+				"Weight": 10
 			}
-		]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Plain_Edge",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Forest_Edge",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Cave_Entry",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Plain_Edge": {
+		"ItemLevel": 1,
+		"Category": "Surface",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Plant_Grass_Lush",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Grass_Lush",
+				"Weight": 20
+			},
+			{
+				"ID": "Ingredient_Fibre",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Flower_Common_White",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Hay_Bundle",
+				"Weight": 6
+			},
+			{
+				"ID": "entity:Rabbit",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Chicken",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Plains",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Flower_Prairie",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Plains": {
+		"ItemLevel": 2,
+		"Category": "Surface",
+		"Ticks": 35,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Grass_Lush",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Grass_Lush",
+				"Weight": 20
+			},
+			{
+				"ID": "Plant_Hay_Bundle",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Flower_Common_White",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Sunflower_Block",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Fox",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Boar",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Horse_Field",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Cow_Pasture",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Fox_Hollow",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Windy_Steppe",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Gobelin_Camp",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Flower_Prairie": {
+		"ItemLevel": 2,
+		"Category": "Surface",
+		"Ticks": 35,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Flower_Common_White",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Plant_Grass_Lush",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Flower_Common_White",
+				"Weight": 18
+			},
+			{
+				"ID": "Plant_Lavender_Block",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Sunflower_Block",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Petals_White",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Grass_Lush",
+				"Weight": 8
+			},
+			{
+				"ID": "entity:Bluebird",
+				"Weight": 4
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ingredient_Motes_Light",
+							"Weight": 1,
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ingredient_Life_Essence",
+							"Weight": 1,
+							"Quantity": 1
+						}
+					]
+				}
+			]
+		}
+	},
+	"Horse_Field": {
+		"ItemLevel": 3,
+		"Category": "Surface",
+		"Ticks": 40,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Hay_Bundle",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Plant_Grass_Lush",
+					"Quantity": 8
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Grass_Lush",
+				"Weight": 20
+			},
+			{
+				"ID": "Plant_Hay_Bundle",
+				"Weight": 16
+			},
+			{
+				"ID": "Plant_Flower_Common_White",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Hide_Light",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Antelope",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Bison",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Cow_Pasture": {
+		"ItemLevel": 3,
+		"Category": "Surface",
+		"Ticks": 40,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Hay_Bundle",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Grass_Lush",
+				"Weight": 20
+			},
+			{
+				"ID": "Plant_Hay_Bundle",
+				"Weight": 16
+			},
+			{
+				"ID": "Ingredient_Hide_Soft",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Leather_Soft",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Sheep",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Bison_Calf",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Fox_Hollow": {
+		"ItemLevel": 3,
+		"Category": "Surface",
+		"Ticks": 40,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Fruit_Berries_Red",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Plant_Grass_Lush",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Fruit_Berries_Red",
+				"Weight": 16
+			},
+			{
+				"ID": "Plant_Bush",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Common_Brown",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Hide_Soft",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Fox",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Rabbit",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Windy_Steppe": {
+		"ItemLevel": 4,
+		"Category": "Surface",
+		"Ticks": 45,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Stone",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Plant_Hay_Bundle",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Grass_Lush",
+				"Weight": 14
+			},
+			{
+				"ID": "Rock_Stone",
+				"Weight": 10
+			},
+			{
+				"ID": "Ingredient_Feathers_Light",
+				"Weight": 5
+			},
+			{
+				"ID": "Plant_Fruit_Windwillow",
+				"Weight": 4
+			},
+			{
+				"ID": "Wood_Windwillow_Trunk",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Crow",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Sandstone_Cavern",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Forest_Edge": {
+		"ItemLevel": 1,
+		"Category": "Forest",
+		"Ticks": 25,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Stick",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Stick",
+				"Weight": 20
+			},
+			{
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Plant_Leaves_Oak",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Bush",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Fruit_Berries_Red",
+				"Weight": 5
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Young_Forest",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Young_Forest": {
+		"ItemLevel": 2,
+		"Category": "Forest",
+		"Ticks": 35,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Wood_Oak_Trunk",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ingredient_Stick",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Beech_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Ingredient_Stick",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Leaves_Oak",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Fruit_Apple",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Boar",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Deep_Forest",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Mushroom_Grove",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Fairy_Pond",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Deep_Forest": {
+		"ItemLevel": 3,
+		"Category": "Forest",
+		"Ticks": 45,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Wood_Beech_Trunk",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Wood_Birch_Trunk",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Beech_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Birch_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Wood_Maple_Trunk",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Vine",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Common_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Wolf",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Darkwood_Thicket",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Time_Locked_Glade",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Fairy_Pond": {
+		"ItemLevel": 3,
+		"Category": "Forest",
+		"Ticks": 40,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Lavender_Block",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Ingredient_Crystal_Cyan",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Lavender_Block",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Petals_White",
+				"Weight": 10
+			},
+			{
+				"ID": "Ingredient_Crystal_Cyan",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Motes_Light",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Water_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Frog",
+				"Weight": 4
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Time_Locked_Glade",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Mushroom_Grove": {
+		"ItemLevel": 3,
+		"Category": "Forest",
+		"Ticks": 40,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Crop_Mushroom_Common_Brown",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Wood_Beech_Trunk",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Crop_Mushroom_Common_Brown",
+				"Weight": 14
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Block_Brown",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Cap_Red",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Flatcap_Green",
+				"Weight": 5
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Shelve_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Spider",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Darkwood_Thicket": {
+		"ItemLevel": 4,
+		"Category": "Forest",
+		"Ticks": 50,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Wood_Ash_Trunk",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Plant_Vine",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Ash_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Wood_Poisoned_Trunk",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Vine",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Leaves_Poisoned_Floor",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Sac_Venom",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Spider",
+				"Weight": 4
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Swamp_Trail",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Swamp_Trail": {
+		"ItemLevel": 4,
+		"Category": "Forest",
+		"Ticks": 45,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Reeds_Marsh",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Rock_Stone_Mossy",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Reeds_Marsh",
+				"Weight": 14
+			},
+			{
+				"ID": "Rock_Stone_Mossy",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Vine_Rug",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Roots_Leafy",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Cap_Poison",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Frog",
+				"Weight": 4
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Sunken_Swamp",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Swamp_Ruins",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Sunken_Swamp": {
+		"ItemLevel": 5,
+		"Category": "Forest",
+		"Ticks": 55,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Reeds_Marsh",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Wood_Sallow_Trunk",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Sallow_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Reeds_Marsh",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Roots_Leafy",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Cap_Poison",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Sac_Venom",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Crocodile",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Forgotten_Marsh",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Swamp_Ruins": {
+		"ItemLevel": 5,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Stone_Mossy",
+					"Quantity": 10
+				},
+				{
+					"ItemId": "Ingredient_Sac_Venom",
+					"Quantity": 4
+				}
+			]
+		},
+		"Waves": [
+			[
+				"Fen_Stalker",
+				"Spider"
+			],
+			[
+				"Fen_Stalker",
+				"Zombie"
+			],
+			[
+				"Fen_Stalker",
+				"Crawler",
+				"Spider"
+			],
+			[
+				"Large_Aberrant_Zombie"
+			]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "SwampRuinsToken",
+					"Quantity": 1
+				},
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				},
+				{
+					"Crystal": "Forgotten_Marsh",
+					"Quantity": 1
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ingredient_Life_Essence",
+							"Weight": 1,
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ingredient_Void_Essence",
+							"Weight": 1,
+							"Quantity": 1
+						}
+					]
+				}
+			]
+		}
+	},
+	"Forgotten_Marsh": {
+		"ItemLevel": 6,
+		"Category": "Forest",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Wood_Poisoned_Trunk",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Life_Essence",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Poisoned_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Cap_Poison",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Reeds_Marsh",
+				"Weight": 8
+			},
+			{
+				"ID": "Ingredient_Bone_Fragment",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Void_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Fen_Stalker",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Desert_Fringe",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Time_Locked_Glade": {
+		"ItemLevel": 5,
+		"Category": "Forest",
+		"Ticks": 55,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Crystal_Green",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Wood_Crystal_Trunk",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Crystal_Trunk",
+				"Weight": 8
+			},
+			{
+				"ID": "Wood_Spiral_Trunk",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Fruit_Spiral",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Crystal_Green",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Motes_Light",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Archaeopteryx",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Primeval_Forest",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Primeval_Forest": {
+		"ItemLevel": 6,
+		"Category": "Forest",
+		"Ticks": 65,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Primal_Stone",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Plant_Primal_Fern",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Block_Primal_Stone",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Primal_Fern",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Giant_Jungle_Leaf",
+				"Weight": 8
+			},
+			{
+				"ID": "Rock_Dinosaur_Fossil",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Primal_Meat",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Cave_Raptor",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Dinosaur_Nest",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Dinosaur_Nest": {
+		"ItemLevel": 7,
+		"Category": "Forest",
+		"Ticks": 70,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Dinosaur_Fossil",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ingredient_Dinosaur_Bone",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Dinosaur_Bone",
+				"Weight": 10
+			},
+			{
+				"ID": "Rock_Dinosaur_Fossil",
+				"Weight": 8
+			},
+			{
+				"ID": "Ingredient_Claw_CaveRaptor",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Tooth_CaveRex",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Primal_Core",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Cave_Raptor",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Cave_Rex",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				}
+			],
+			"Random": []
+		}
 	},
 	"Cave_Entry": {
 		"ItemLevel": 1,
-		"Category": "Surface",
+		"Category": "Underground",
 		"Ticks": 25,
 		"Crystal": {
 			"Input": [
@@ -47,55 +1189,195 @@
 			},
 			{
 				"ID": "Rock_Stone",
-				"Weight": 20
+				"Weight": 12
+			},
+			{
+				"ID": "Rock_Shale",
+				"Weight": 5
+			},
+			{
+				"ID": "Rock_Slate",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Bat",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 3
 			}
 		],
 		"CompletionRewards": {
 			"Mandatory": [
 				{
-					"Crystal": "Cave",
+					"Crystal": "Shallow_Cave",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Stone_Gallery",
 					"Quantity": 1
 				}
 			],
 			"Random": []
 		}
 	},
-	"Forest_Edge": {
-		"ItemLevel": 1,
-		"Category": "Surface",
-		"Ticks": 25,
+	"Shallow_Cave": {
+		"ItemLevel": 2,
+		"Category": "Underground",
+		"Ticks": 35,
 		"Crystal": {
 			"Input": [
 				{
-					"ItemId": "Ingredient_Fibre",
+					"ItemId": "Rubble_Stone",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Rock_Stone",
 					"Quantity": 4
 				}
 			]
 		},
 		"BaseDropPool": [
 			{
-				"ID": "Ingredient_Stick",
-				"Weight": 20
+				"ID": "Rock_Stone",
+				"Weight": 18
 			},
 			{
-				"ID": "Wood_Oak_Trunk",
-				"Weight": 20
+				"ID": "Rubble_Stone",
+				"Weight": 12
+			},
+			{
+				"ID": "Rock_Shale",
+				"Weight": 8
+			},
+			{
+				"ID": "Rock_Slate",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Roots_Cave",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Bat",
+				"Weight": 3
 			}
 		],
 		"CompletionRewards": {
 			"Mandatory": [
 				{
-					"Crystal": "Forest",
+					"Crystal": "Copper_Cave",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Mossy_Cave",
 					"Quantity": 1
 				}
 			],
 			"Random": []
 		}
 	},
-	"Cave": {
+	"Stone_Gallery": {
 		"ItemLevel": 2,
-		"Category": "Surface",
-		"Ticks": 25,
+		"Category": "Underground",
+		"Ticks": 35,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rubble_Stone",
+					"Quantity": 10
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 16
+			},
+			{
+				"ID": "Rock_Stone",
+				"Weight": 14
+			},
+			{
+				"ID": "Rock_Shale",
+				"Weight": 10
+			},
+			{
+				"ID": "Rock_Slate",
+				"Weight": 10
+			},
+			{
+				"ID": "Rock_Stone_Mossy",
+				"Weight": 5
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Mossy_Cave": {
+		"ItemLevel": 3,
+		"Category": "Underground",
+		"Ticks": 40,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Stone_Mossy",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Plant_Roots_Cave",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Stone_Mossy",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Roots_Cave",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Roots_Cave_Small",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Glowing_Green",
+				"Weight": 5
+			},
+			{
+				"ID": "Plant_Crop_Mushroom_Common_Brown",
+				"Weight": 5
+			},
+			{
+				"ID": "entity:Cave_Spider",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Copper_Cave": {
+		"ItemLevel": 3,
+		"Category": "Underground",
+		"Ticks": 45,
 		"Crystal": {
 			"Input": [
 				{
@@ -111,39 +1393,1697 @@
 		"BaseDropPool": [
 			{
 				"ID": "Rock_Stone",
-				"Weight": 20
+				"Weight": 18
 			},
 			{
 				"ID": "Ore_Copper",
-				"Weight": 20
+				"Weight": 14
+			},
+			{
+				"ID": "Rubble_Stone",
+				"Weight": 8
+			},
+			{
+				"ID": "Rock_Shale",
+				"Weight": 6
+			},
+			{
+				"ID": "entity:Bat",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Goblin_Miner",
+				"Weight": 2
 			}
-		]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Iron_Hollow",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Gobelin_Camp",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
 	},
-	"Forest": {
-		"ItemLevel": 2,
-		"Category": "Surface",
-		"Ticks": 25,
+	"Iron_Hollow": {
+		"ItemLevel": 4,
+		"Category": "Underground",
+		"Ticks": 50,
 		"Crystal": {
 			"Input": [
 				{
+					"ItemId": "Ore_Copper",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Iron",
+					"Quantity": 3
+				},
+				{
+					"ItemId": "Rock_Stone",
+					"Quantity": 8
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Stone",
+				"Weight": 16
+			},
+			{
+				"ID": "Ore_Copper",
+				"Weight": 12
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 5
+			},
+			{
+				"ID": "Rock_Slate",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Stud_Iron",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Cave_Spider",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Abandoned_Mine",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Frozen_Cavern",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Sandstone_Cavern",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Abandoned_Mine": {
+		"ItemLevel": 5,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Iron",
+					"Quantity": 8
+				},
+				{
 					"ItemId": "Wood_Oak_Trunk",
+					"Quantity": 6
+				}
+			]
+		},
+		"Waves": [
+			[
+				"Goblin_Miner",
+				"Goblin_Miner"
+			],
+			[
+				"Goblin_Miner_Patrol",
+				"Goblin_Scavenger"
+			],
+			[
+				"Goblin_Scrapper",
+				"Goblin_Lobber"
+			],
+			[
+				"Goblin_Ogre"
+			]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "AbandonedMineToken",
+					"Quantity": 1
+				},
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				},
+				{
+					"Crystal": "Basalt_Gate",
+					"Quantity": 1
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ore_Iron",
+							"Weight": 1,
+							"Quantity": 6
+						}
+					]
+				},
+				{
+					"Weight": 2,
+					"Items": [
+						{
+							"ID": "Ingredient_Bar_Iron",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ore_Gold",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				}
+			]
+		}
+	},
+	"Basalt_Gate": {
+		"ItemLevel": 6,
+		"Category": "Underground",
+		"Ticks": 55,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Basalt",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Iron",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Basalt",
+				"Weight": 18
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 10
+			},
+			{
+				"ID": "Rock_Volcanic",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Charcoal",
+				"Weight": 5
+			},
+			{
+				"ID": "Ore_Thorium",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Earth_Elemental",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Basalt_Depths",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Basalt_Depths": {
+		"ItemLevel": 7,
+		"Category": "Underground",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Basalt",
+					"Quantity": 10
+				},
+				{
+					"ItemId": "Ore_Thorium",
 					"Quantity": 4
 				},
 				{
-					"ItemId": "Ingredient_Stick",
+					"ItemId": "Ore_Iron",
 					"Quantity": 4
 				}
 			]
 		},
 		"BaseDropPool": [
 			{
-				"ID": "entity:Boar",
+				"ID": "Rock_Basalt",
+				"Weight": 16
+			},
+			{
+				"ID": "Rock_Volcanic",
+				"Weight": 8
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 8
+			},
+			{
+				"ID": "Ore_Thorium",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Fire_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Earthen_Golem",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Thorium_Fissure",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Crystal_Grotto",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Thorium_Fissure": {
+		"ItemLevel": 8,
+		"Category": "Underground",
+		"Ticks": 65,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Thorium",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Rock_Basalt",
+					"Quantity": 8
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Basalt",
+				"Weight": 14
+			},
+			{
+				"ID": "Ore_Thorium",
 				"Weight": 10
 			},
 			{
-				"ID": "Wood_Oak_Trunk",
-				"Weight": 20
+				"ID": "Rock_Volcanic",
+				"Weight": 8
+			},
+			{
+				"ID": "Ore_Cobalt",
+				"Weight": 2
+			},
+			{
+				"ID": "Ingredient_Fire_Essence",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Ember_Golem",
+				"Weight": 2
 			}
-		]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Cobalt_Chasm",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Cobalt_Chasm": {
+		"ItemLevel": 9,
+		"Category": "Underground",
+		"Ticks": 70,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Thorium",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Cobalt",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Rock_Basalt",
+					"Quantity": 8
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Basalt",
+				"Weight": 12
+			},
+			{
+				"ID": "Ore_Thorium",
+				"Weight": 8
+			},
+			{
+				"ID": "Ore_Cobalt",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Gem_Sapphire",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Lightning_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Thunder_Golem",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Mithril_Vein",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Mithril_Vein": {
+		"ItemLevel": 10,
+		"Category": "Underground",
+		"Ticks": 75,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Cobalt",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ore_Mithril",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ore_Mithril",
+				"Weight": 7
+			},
+			{
+				"ID": "Ore_Cobalt",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Gem_Emerald",
+				"Weight": 3
+			},
+			{
+				"ID": "Rock_Gem_Sapphire",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Crystal_Cyan",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Earth_Elemental",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Onyxium_Pocket",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Onyxium_Pocket": {
+		"ItemLevel": 11,
+		"Category": "Dark",
+		"Ticks": 80,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Mithril",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Onyxium",
+					"Quantity": 3
+				},
+				{
+					"ItemId": "Ingredient_Void_Essence",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ore_Onyxium",
+				"Weight": 6
+			},
+			{
+				"ID": "Ore_Mithril",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Gem_Diamond",
+				"Weight": 2
+			},
+			{
+				"ID": "Ingredient_Void_Essence",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Voidheart",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Void_Crawler",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Adamantite_Core",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Adamantite_Core": {
+		"ItemLevel": 12,
+		"Category": "Dark",
+		"Ticks": 90,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Onyxium",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ore_Adamantite",
+					"Quantity": 3
+				},
+				{
+					"ItemId": "Ingredient_Voidheart",
+					"Quantity": 1
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ore_Adamantite",
+				"Weight": 6
+			},
+			{
+				"ID": "Ore_Onyxium",
+				"Weight": 5
+			},
+			{
+				"ID": "Rock_Gem_Diamond",
+				"Weight": 3
+			},
+			{
+				"ID": "Rock_Gem_Zephyr",
+				"Weight": 2
+			},
+			{
+				"ID": "Ingredient_Voidheart",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Void_Spectre",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Prisma_Crystal_Mine",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Prisma_Crystal_Mine": {
+		"ItemLevel": 13,
+		"Category": "Dark",
+		"Ticks": 100,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Adamantite",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ore_Prisma",
+					"Quantity": 3
+				},
+				{
+					"ItemId": "Ingredient_Crystal_White",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ore_Prisma",
+				"Weight": 5
+			},
+			{
+				"ID": "Ore_Adamantite",
+				"Weight": 5
+			},
+			{
+				"ID": "Rock_Gem_Zephyr",
+				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Crystal_White",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Bar_Prisma",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Void_Eye",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 4
+				}
+			],
+			"Random": []
+		}
+	},
+	"Crystal_Grotto": {
+		"ItemLevel": 8,
+		"Category": "Underground",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Crystal_Blue",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Rock_Gem_Sapphire",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Crystal_Blue",
+				"Weight": 8
+			},
+			{
+				"ID": "Ingredient_Crystal_Cyan",
+				"Weight": 8
+			},
+			{
+				"ID": "Rock_Gem_Sapphire",
+				"Weight": 4
+			},
+			{
+				"ID": "Rock_Gem_Emerald",
+				"Weight": 4
+			},
+			{
+				"ID": "Rock_Gem_Topaz",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Earth_Elemental",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Frozen_Ruins",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Frozen_Cavern": {
+		"ItemLevel": 6,
+		"Category": "Cold",
+		"Ticks": 55,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Ice",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Iron",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Ice",
+				"Weight": 14
+			},
+			{
+				"ID": "Rock_Ice_Permafrost",
+				"Weight": 8
+			},
+			{
+				"ID": "Block_Ice_Blue",
+				"Weight": 6
+			},
+			{
+				"ID": "Block_Snow",
+				"Weight": 6
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Frost_Zombie",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Snowy_Pass",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Snowy_Pass": {
+		"ItemLevel": 7,
+		"Category": "Cold",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Snow",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Rock_Ice",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Block_Snow",
+				"Weight": 12
+			},
+			{
+				"ID": "Block_Snow_Packed",
+				"Weight": 8
+			},
+			{
+				"ID": "Block_Ice_Clear",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Snow_Shrub",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Ice_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Wolf",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Snowy_Plains",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Snowy_Plains": {
+		"ItemLevel": 8,
+		"Category": "Cold",
+		"Ticks": 65,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Snow_Packed",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Plant_Frozen_Grass",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Block_Snow_Packed",
+				"Weight": 12
+			},
+			{
+				"ID": "Plant_Frozen_Grass",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Frost_Fern",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Hide_Heavy",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Ice_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Bison",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Frostpine_Forest",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Ice_Lake",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Whitefang_Den",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Frostpine_Forest": {
+		"ItemLevel": 8,
+		"Category": "Cold",
+		"Ticks": 65,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Wood_Fir_Trunk",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Block_Snow",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Fir_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Wood_Ice_Trunk",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Frost_Fern",
+				"Weight": 8
+			},
+			{
+				"ID": "Ingredient_Tree_Bark",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Ice_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Wolf",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Frozen_Ruins",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Ice_Lake": {
+		"ItemLevel": 8,
+		"Category": "Cold",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Ice_Clear",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Water_Essence",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Block_Ice_Clear",
+				"Weight": 12
+			},
+			{
+				"ID": "Block_Frozen_Water",
+				"Weight": 8
+			},
+			{
+				"ID": "Block_Ice_Blue",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Water_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "Ingredient_Ice_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Bluegill",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Whitefang_Den": {
+		"ItemLevel": 9,
+		"Category": "Cold",
+		"Ticks": 65,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ingredient_Hide_Heavy",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Ingredient_Ice_Essence",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Hide_Heavy",
+				"Weight": 8
+			},
+			{
+				"ID": "Ingredient_Leather_Heavy",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Bone_Fragment",
+				"Weight": 6
+			},
+			{
+				"ID": "Block_Permafrost",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Ice_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Wolf",
+				"Weight": 5
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Frozen_Ruins": {
+		"ItemLevel": 9,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Permafrost",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Ice_Essence",
+					"Quantity": 4
+				}
+			]
+		},
+		"Waves": [
+			[
+				"Frost_Skeleton_Scout",
+				"Frost_Skeleton_Scout"
+			],
+			[
+				"Frost_Skeleton_Fighter",
+				"Frost_Skeleton_Ranger"
+			],
+			[
+				"Frost_Skeleton_Knight",
+				"Frost_Skeleton_Mage"
+			],
+			[
+				"Frost_Golem"
+			]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "FrozenRuinsToken",
+					"Quantity": 1
+				},
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				},
+				{
+					"Crystal": "Polar_Necropolis",
+					"Quantity": 1
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ingredient_Ice_Essence",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ore_Cobalt_Ice",
+							"Weight": 1,
+							"Quantity": 3
+						}
+					]
+				}
+			]
+		}
+	},
+	"Polar_Necropolis": {
+		"ItemLevel": 10,
+		"Category": "Cold",
+		"Ticks": 80,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Cobalt_Ice",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Rock_Glacial_Crystal",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Ingredient_Ice_Essence",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ore_Cobalt_Ice",
+				"Weight": 8
+			},
+			{
+				"ID": "Rock_Glacial_Crystal",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Frozen_Stone",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Ice_Essence",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Scale_IceDragon",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Ice_Dragon",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 3
+				}
+			],
+			"Random": []
+		}
+	},
+	"Sandstone_Cavern": {
+		"ItemLevel": 6,
+		"Category": "Underground",
+		"Ticks": 55,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Rock_Sandstone",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Copper",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Rock_Sandstone",
+				"Weight": 14
+			},
+			{
+				"ID": "Block_Sandstone_Rough",
+				"Weight": 8
+			},
+			{
+				"ID": "Block_Sand",
+				"Weight": 6
+			},
+			{
+				"ID": "Ore_Copper",
+				"Weight": 5
+			},
+			{
+				"ID": "Ore_Iron",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Crawler",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Desert_Fringe",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Desert_Fringe": {
+		"ItemLevel": 7,
+		"Category": "Surface",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Sand",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Rock_Sandstone",
+					"Quantity": 6
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Block_Sand",
+				"Weight": 12
+			},
+			{
+				"ID": "Block_Desert_Hardened_Earth",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Desert_Dry_Shrub",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Cactus_1",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Hide_Camel",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Camel",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Oasis",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Scorpion_Dunes",
+					"Quantity": 1
+				},
+				{
+					"Crystal": "Cactus_Flats",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Oasis": {
+		"ItemLevel": 7,
+		"Category": "Surface",
+		"Ticks": 55,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Fruit_Coconut",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Plant_Reeds_Marsh",
+					"Quantity": 4
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Wood_Palm_Trunk",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Fruit_Coconut",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Reeds_Marsh",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Desert_Blue_Aloe",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Water_Essence",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Duck",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Scorpion_Dunes": {
+		"ItemLevel": 8,
+		"Category": "Surface",
+		"Ticks": 65,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Sand",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Shell_Scorpion",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Block_Sand",
+				"Weight": 12
+			},
+			{
+				"ID": "Block_Sand_Red",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Desert_Saltbush",
+				"Weight": 6
+			},
+			{
+				"ID": "Ingredient_Shell_Scorpion",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Claw_Scorpion",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Cactee",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Desert_Temple",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Cactus_Flats": {
+		"ItemLevel": 8,
+		"Category": "Surface",
+		"Ticks": 60,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Plant_Cactus_1",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Plant_Cactus_Flower",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Plant_Cactus_1",
+				"Weight": 10
+			},
+			{
+				"ID": "Plant_Cactus_2",
+				"Weight": 8
+			},
+			{
+				"ID": "Plant_Cactus_3",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Cactus_Ball_1",
+				"Weight": 6
+			},
+			{
+				"ID": "Plant_Cactus_Flower",
+				"Weight": 4
+			},
+			{
+				"ID": "entity:Armadillo",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
+	},
+	"Desert_Temple": {
+		"ItemLevel": 9,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Block_Sandstone_Smooth",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ore_Gold",
+					"Quantity": 4
+				}
+			]
+		},
+		"Waves": [
+			[
+				"Sandswept_Zombie",
+				"Sandswept_Zombie"
+			],
+			[
+				"Skeleton_Scout",
+				"Skeleton_Archer"
+			],
+			[
+				"Skeleton_Knight",
+				"Skeleton_Mage"
+			],
+			[
+				"Sand_Empress"
+			]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "DesertTempleToken",
+					"Quantity": 1
+				},
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				},
+				{
+					"Crystal": "Pharaoh_Catacombs",
+					"Quantity": 1
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ore_Gold",
+							"Weight": 1,
+							"Quantity": 4
+						}
+					]
+				},
+				{
+					"Weight": 2,
+					"Items": [
+						{
+							"ID": "Rock_Gem_Topaz",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ore_Thorium_Desert",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				}
+			]
+		}
+	},
+	"Pharaoh_Catacombs": {
+		"ItemLevel": 10,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Thorium_Desert",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Block_Sandstone_Smooth",
+					"Quantity": 8
+				}
+			]
+		},
+		"Waves": [
+			[
+				"Skeleton_Soldier",
+				"Skeleton_Archer"
+			],
+			[
+				"Skeleton_Knight",
+				"Skeleton_Ranger"
+			],
+			[
+				"Skeleton_Mage",
+				"Skeleton_Fighter",
+				"Sandswept_Zombie"
+			],
+			[
+				"Skeleton_Archmage",
+				"Skeleton_Knight"
+			],
+			[
+				"Sand_Empress"
+			]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "PharaohCatacombsToken",
+					"Quantity": 1
+				},
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 3
+				},
+				{
+					"Crystal": "Sunfire_Tomb",
+					"Quantity": 1
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ore_Thorium_Desert",
+							"Weight": 1,
+							"Quantity": 5
+						}
+					]
+				},
+				{
+					"Weight": 2,
+					"Items": [
+						{
+							"ID": "Rock_Gem_Ruby",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ingredient_Fire_Essence",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				}
+			]
+		}
+	},
+	"Sunfire_Tomb": {
+		"ItemLevel": 11,
+		"Category": "Inferno",
+		"Ticks": 85,
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Thorium_Desert",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Fire_Essence",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Rock_Gem_Ruby",
+					"Quantity": 2
+				}
+			]
+		},
+		"BaseDropPool": [
+			{
+				"ID": "Ore_Thorium_Desert",
+				"Weight": 8
+			},
+			{
+				"ID": "Rock_Gem_Ruby",
+				"Weight": 4
+			},
+			{
+				"ID": "Ingredient_Fire_Essence",
+				"Weight": 4
+			},
+			{
+				"ID": "Block_Sandstone_Red",
+				"Weight": 6
+			},
+			{
+				"ID": "Rock_Desert_Fossil",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Burnt_Skeleton_Wizard",
+				"Weight": 2
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 3
+				}
+			],
+			"Random": []
+		}
+	},
+	"Gobelin_Camp": {
+		"ItemLevel": 4,
+		"Category": "Dungeon",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "Ore_Copper",
+					"Quantity": 6
+				},
+				{
+					"ItemId": "Ingredient_Stick",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 8
+				}
+			]
+		},
+		"Waves": [
+			[
+				"Goblin_Scavenger",
+				"Goblin_Thief"
+			],
+			[
+				"Goblin_Scrapper",
+				"Goblin_Lobber"
+			],
+			[
+				"Goblin_Miner",
+				"Goblin_Scavenger_Battleaxe"
+			],
+			[
+				"Goblin_Ogre"
+			]
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "GobelinCampToken",
+					"Quantity": 1
+				},
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				}
+			],
+			"Random": [
+				{
+					"Weight": 3,
+					"Items": [
+						{
+							"ID": "Ore_Copper",
+							"Weight": 1,
+							"Quantity": 5
+						}
+					]
+				},
+				{
+					"Weight": 2,
+					"Items": [
+						{
+							"ID": "Ingredient_Bar_Copper",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"ID": "Ore_Silver",
+							"Weight": 1,
+							"Quantity": 2
+						}
+					]
+				}
+			]
+		}
 	}
 }

@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Onyxium_Pocket.name",
+    "Description": "server.items.OneBlock_Crystal_Onyxium_Pocket.description"
+  },
+  "Id": "OneBlock_Crystal_Onyxium_Pocket",
+  "ItemLevel": 11,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Mithril",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ore_Onyxium",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Ingredient_Void_Essence",
+        "Quantity": 2
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Dark"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Onyxium_Pocket"
+    ],
+    "OneBlockCrystalTicks": [
+      "80"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

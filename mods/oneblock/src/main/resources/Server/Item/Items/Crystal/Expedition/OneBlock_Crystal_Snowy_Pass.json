@@ -1,0 +1,66 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Snowy_Pass.name",
+    "Description": "server.items.OneBlock_Crystal_Snowy_Pass.description"
+  },
+  "Id": "OneBlock_Crystal_Snowy_Pass",
+  "ItemLevel": 7,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Block_Snow",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Rock_Ice",
+        "Quantity": 6
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Cold"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Snowy_Pass"
+    ],
+    "OneBlockCrystalTicks": [
+      "60"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Rare"
+}

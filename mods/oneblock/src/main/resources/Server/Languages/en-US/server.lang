@@ -158,53 +158,1569 @@ announcements.expedition_completed.Forest=Forest expedition complete. The OneBlo
 announcements.expedition_unlocked.Forest=New expedition unlocked: Forest
 progress.expedition.Forest=Forest: {0}/{1} ticks remaining
 
-# GENERATED ─── Default ────────────────────────────────────────────────
-items.OneBlock_Block_Default.name=OneBlock Default
-items.OneBlock_Crystal_Default.name=Default Crystal
-items.OneBlock_Crystal_Default.description=Consume to begin a Default expedition.\n25 ticks.\nLoot :\n- Fibre\n- Rubble Stone\n- Soil Dirt
 expeditions.Default.name=Default
 announcements.expedition_started.Default=Default expedition started.
 announcements.expedition_completed.Default=Default expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.Default=New expedition unlocked: Default
 progress.expedition.Default=Default: {0}/{1} ticks remaining
-benchCategories.OneBlockEnchanter_Surface=Surface Crystals
 
-# GENERATED ─── Cave ─────────────────────────────────────────────
-items.OneBlock_Block_Cave_Entry.name=OneBlock Cave
-items.OneBlock_Crystal_Cave_Entry.name=Cave Crystal
-items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\nCompletion rewards :\n- 1x Cave Crystal (unlocks Cave)
 expeditions.Cave_Entry.name=Cave
 announcements.expedition_started.Cave_Entry=Cave expedition started.
 announcements.expedition_completed.Cave_Entry=Cave expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Cave
 progress.expedition.Cave_Entry=Cave: {0}/{1} ticks remaining
 
-# GENERATED ─── Forest ────────────────────────────────────────────
-items.OneBlock_Block_Forest_Edge.name=OneBlock Forest
-items.OneBlock_Crystal_Forest_Edge.name=Forest Crystal
-items.OneBlock_Crystal_Forest_Edge.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Oak Trunk\nCompletion rewards :\n- 1x Forest Crystal (unlocks Forest)
 expeditions.Forest_Edge.name=Forest
 announcements.expedition_started.Forest_Edge=Forest expedition started.
 announcements.expedition_completed.Forest_Edge=Forest expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Forest
 progress.expedition.Forest_Edge=Forest: {0}/{1} ticks remaining
 
-# GENERATED ─── Cave ───────────────────────────────────────────────────
-items.OneBlock_Block_Cave.name=OneBlock Cave
-items.OneBlock_Crystal_Cave.name=Cave Crystal
-items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Stone\n- Copper Ore
 expeditions.Cave.name=Cave
 announcements.expedition_started.Cave=Cave expedition started.
 announcements.expedition_completed.Cave=Cave expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.Cave=New expedition unlocked: Cave
 progress.expedition.Cave=Cave: {0}/{1} ticks remaining
 
-# GENERATED ─── Forest ─────────────────────────────────────────────────
-items.OneBlock_Block_Forest.name=OneBlock Forest
-items.OneBlock_Crystal_Forest.name=Forest Crystal
-items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Boar\n- Oak Trunk
 expeditions.Forest.name=Forest
 announcements.expedition_started.Forest=Forest expedition started.
 announcements.expedition_completed.Forest=Forest expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.Forest=New expedition unlocked: Forest
 progress.expedition.Forest=Forest: {0}/{1} ticks remaining
+
+expeditions.Default.name=Default
+announcements.expedition_started.Default=Default expedition started.
+announcements.expedition_completed.Default=Default expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Default
+progress.expedition.Default=Default: {0}/{1} ticks remaining
+
+expeditions.Cave_Entry.name=Cave
+announcements.expedition_started.Cave_Entry=Cave expedition started.
+announcements.expedition_completed.Cave_Entry=Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Cave
+progress.expedition.Cave_Entry=Cave: {0}/{1} ticks remaining
+
+expeditions.Forest_Edge.name=Forest
+announcements.expedition_started.Forest_Edge=Forest expedition started.
+announcements.expedition_completed.Forest_Edge=Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Forest
+progress.expedition.Forest_Edge=Forest: {0}/{1} ticks remaining
+
+expeditions.Cave.name=Cave
+announcements.expedition_started.Cave=Cave expedition started.
+announcements.expedition_completed.Cave=Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave=New expedition unlocked: Cave
+progress.expedition.Cave=Cave: {0}/{1} ticks remaining
+
+expeditions.Forest.name=Forest
+announcements.expedition_started.Forest=Forest expedition started.
+announcements.expedition_completed.Forest=Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest=New expedition unlocked: Forest
+progress.expedition.Forest=Forest: {0}/{1} ticks remaining
+
+expeditions.Default.name=Default
+announcements.expedition_started.Default=Default expedition started.
+announcements.expedition_completed.Default=Default expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Default
+progress.expedition.Default=Default: {0}/{1} ticks remaining
+
+expeditions.Cave_Entry.name=Cave
+announcements.expedition_started.Cave_Entry=Cave expedition started.
+announcements.expedition_completed.Cave_Entry=Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Cave
+progress.expedition.Cave_Entry=Cave: {0}/{1} ticks remaining
+
+expeditions.Forest_Edge.name=Forest
+announcements.expedition_started.Forest_Edge=Forest expedition started.
+announcements.expedition_completed.Forest_Edge=Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Forest
+progress.expedition.Forest_Edge=Forest: {0}/{1} ticks remaining
+
+expeditions.Cave.name=Cave
+announcements.expedition_started.Cave=Cave expedition started.
+announcements.expedition_completed.Cave=Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave=New expedition unlocked: Cave
+progress.expedition.Cave=Cave: {0}/{1} ticks remaining
+
+expeditions.Forest.name=Forest
+announcements.expedition_started.Forest=Forest expedition started.
+announcements.expedition_completed.Forest=Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest=New expedition unlocked: Forest
+progress.expedition.Forest=Forest: {0}/{1} ticks remaining
+
+expeditions.Default.name=Cave Entry
+announcements.expedition_started.Default=Cave Entry expedition started.
+announcements.expedition_completed.Default=Cave Entry expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Cave Entry
+progress.expedition.Default=Cave Entry: {0}/{1} ticks remaining
+
+expeditions.Plain_Edge.name=Flower Prairie
+announcements.expedition_started.Plain_Edge=Flower Prairie expedition started.
+announcements.expedition_completed.Plain_Edge=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plain_Edge=New expedition unlocked: Flower Prairie
+progress.expedition.Plain_Edge=Flower Prairie: {0}/{1} ticks remaining
+
+expeditions.Plains.name=Gobelin Camp
+announcements.expedition_started.Plains=Gobelin Camp expedition started.
+announcements.expedition_completed.Plains=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plains=New expedition unlocked: Gobelin Camp
+progress.expedition.Plains=Gobelin Camp: {0}/{1} ticks remaining
+
+expeditions.Flower_Prairie.name=Flower Prairie
+announcements.expedition_started.Flower_Prairie=Flower Prairie expedition started.
+announcements.expedition_completed.Flower_Prairie=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Flower_Prairie=New expedition unlocked: Flower Prairie
+progress.expedition.Flower_Prairie=Flower Prairie: {0}/{1} ticks remaining
+
+expeditions.Horse_Field.name=Horse Field
+announcements.expedition_started.Horse_Field=Horse Field expedition started.
+announcements.expedition_completed.Horse_Field=Horse Field expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Horse_Field=New expedition unlocked: Horse Field
+progress.expedition.Horse_Field=Horse Field: {0}/{1} ticks remaining
+
+expeditions.Cow_Pasture.name=Cow Pasture
+announcements.expedition_started.Cow_Pasture=Cow Pasture expedition started.
+announcements.expedition_completed.Cow_Pasture=Cow Pasture expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cow_Pasture=New expedition unlocked: Cow Pasture
+progress.expedition.Cow_Pasture=Cow Pasture: {0}/{1} ticks remaining
+
+expeditions.Fox_Hollow.name=Fox Hollow
+announcements.expedition_started.Fox_Hollow=Fox Hollow expedition started.
+announcements.expedition_completed.Fox_Hollow=Fox Hollow expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fox_Hollow=New expedition unlocked: Fox Hollow
+progress.expedition.Fox_Hollow=Fox Hollow: {0}/{1} ticks remaining
+
+expeditions.Windy_Steppe.name=Sandstone Cavern
+announcements.expedition_started.Windy_Steppe=Sandstone Cavern expedition started.
+announcements.expedition_completed.Windy_Steppe=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Windy_Steppe=New expedition unlocked: Sandstone Cavern
+progress.expedition.Windy_Steppe=Sandstone Cavern: {0}/{1} ticks remaining
+
+expeditions.Forest_Edge.name=Young Forest
+announcements.expedition_started.Forest_Edge=Young Forest expedition started.
+announcements.expedition_completed.Forest_Edge=Young Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Young Forest
+progress.expedition.Forest_Edge=Young Forest: {0}/{1} ticks remaining
+
+expeditions.Young_Forest.name=Fairy Pond
+announcements.expedition_started.Young_Forest=Fairy Pond expedition started.
+announcements.expedition_completed.Young_Forest=Fairy Pond expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Young_Forest=New expedition unlocked: Fairy Pond
+progress.expedition.Young_Forest=Fairy Pond: {0}/{1} ticks remaining
+
+expeditions.Deep_Forest.name=Time Locked Glade
+announcements.expedition_started.Deep_Forest=Time Locked Glade expedition started.
+announcements.expedition_completed.Deep_Forest=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Deep_Forest=New expedition unlocked: Time Locked Glade
+progress.expedition.Deep_Forest=Time Locked Glade: {0}/{1} ticks remaining
+
+expeditions.Fairy_Pond.name=Time Locked Glade
+announcements.expedition_started.Fairy_Pond=Time Locked Glade expedition started.
+announcements.expedition_completed.Fairy_Pond=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fairy_Pond=New expedition unlocked: Time Locked Glade
+progress.expedition.Fairy_Pond=Time Locked Glade: {0}/{1} ticks remaining
+
+expeditions.Mushroom_Grove.name=Mushroom Grove
+announcements.expedition_started.Mushroom_Grove=Mushroom Grove expedition started.
+announcements.expedition_completed.Mushroom_Grove=Mushroom Grove expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mushroom_Grove=New expedition unlocked: Mushroom Grove
+progress.expedition.Mushroom_Grove=Mushroom Grove: {0}/{1} ticks remaining
+
+expeditions.Darkwood_Thicket.name=Swamp Trail
+announcements.expedition_started.Darkwood_Thicket=Swamp Trail expedition started.
+announcements.expedition_completed.Darkwood_Thicket=Swamp Trail expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Darkwood_Thicket=New expedition unlocked: Swamp Trail
+progress.expedition.Darkwood_Thicket=Swamp Trail: {0}/{1} ticks remaining
+
+expeditions.Swamp_Trail.name=Swamp Ruins
+announcements.expedition_started.Swamp_Trail=Swamp Ruins expedition started.
+announcements.expedition_completed.Swamp_Trail=Swamp Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Swamp_Trail=New expedition unlocked: Swamp Ruins
+progress.expedition.Swamp_Trail=Swamp Ruins: {0}/{1} ticks remaining
+
+expeditions.Sunken_Swamp.name=Forgotten Marsh
+announcements.expedition_started.Sunken_Swamp=Forgotten Marsh expedition started.
+announcements.expedition_completed.Sunken_Swamp=Forgotten Marsh expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunken_Swamp=New expedition unlocked: Forgotten Marsh
+progress.expedition.Sunken_Swamp=Forgotten Marsh: {0}/{1} ticks remaining
+items.SwampRuinsToken.name=SwampRuinsToken
+
+expeditions.Swamp_Ruins.name=Swamp Ruins
+announcements.dungeon_started.Swamp_Ruins=Swamp Ruins dungeon started.
+announcements.dungeon_completed.Swamp_Ruins=Swamp Ruins dungeon complete. The OneBlock has returned to default.
+
+expeditions.Forgotten_Marsh.name=Desert Fringe
+announcements.expedition_started.Forgotten_Marsh=Desert Fringe expedition started.
+announcements.expedition_completed.Forgotten_Marsh=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forgotten_Marsh=New expedition unlocked: Desert Fringe
+progress.expedition.Forgotten_Marsh=Desert Fringe: {0}/{1} ticks remaining
+
+expeditions.Time_Locked_Glade.name=Primeval Forest
+announcements.expedition_started.Time_Locked_Glade=Primeval Forest expedition started.
+announcements.expedition_completed.Time_Locked_Glade=Primeval Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Time_Locked_Glade=New expedition unlocked: Primeval Forest
+progress.expedition.Time_Locked_Glade=Primeval Forest: {0}/{1} ticks remaining
+
+expeditions.Primeval_Forest.name=Dinosaur Nest
+announcements.expedition_started.Primeval_Forest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Primeval_Forest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Primeval_Forest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Primeval_Forest=Dinosaur Nest: {0}/{1} ticks remaining
+
+expeditions.Dinosaur_Nest.name=Dinosaur Nest
+announcements.expedition_started.Dinosaur_Nest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Dinosaur_Nest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Dinosaur_Nest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Dinosaur_Nest=Dinosaur Nest: {0}/{1} ticks remaining
+
+expeditions.Cave_Entry.name=Stone Gallery
+announcements.expedition_started.Cave_Entry=Stone Gallery expedition started.
+announcements.expedition_completed.Cave_Entry=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Stone Gallery
+progress.expedition.Cave_Entry=Stone Gallery: {0}/{1} ticks remaining
+
+expeditions.Shallow_Cave.name=Mossy Cave
+announcements.expedition_started.Shallow_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Shallow_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Shallow_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Shallow_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+expeditions.Stone_Gallery.name=Stone Gallery
+announcements.expedition_started.Stone_Gallery=Stone Gallery expedition started.
+announcements.expedition_completed.Stone_Gallery=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Stone_Gallery=New expedition unlocked: Stone Gallery
+progress.expedition.Stone_Gallery=Stone Gallery: {0}/{1} ticks remaining
+
+expeditions.Mossy_Cave.name=Mossy Cave
+announcements.expedition_started.Mossy_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Mossy_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mossy_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Mossy_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+expeditions.Copper_Cave.name=Gobelin Camp
+announcements.expedition_started.Copper_Cave=Gobelin Camp expedition started.
+announcements.expedition_completed.Copper_Cave=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Copper_Cave=New expedition unlocked: Gobelin Camp
+progress.expedition.Copper_Cave=Gobelin Camp: {0}/{1} ticks remaining
+
+expeditions.Iron_Hollow.name=Sandstone Cavern
+announcements.expedition_started.Iron_Hollow=Sandstone Cavern expedition started.
+announcements.expedition_completed.Iron_Hollow=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Iron_Hollow=New expedition unlocked: Sandstone Cavern
+progress.expedition.Iron_Hollow=Sandstone Cavern: {0}/{1} ticks remaining
+items.AbandonedMineToken.name=AbandonedMineToken
+
+expeditions.Abandoned_Mine.name=Abandoned Mine
+announcements.dungeon_started.Abandoned_Mine=Abandoned Mine dungeon started.
+announcements.dungeon_completed.Abandoned_Mine=Abandoned Mine dungeon complete. The OneBlock has returned to default.
+
+expeditions.Basalt_Gate.name=Basalt Depths
+announcements.expedition_started.Basalt_Gate=Basalt Depths expedition started.
+announcements.expedition_completed.Basalt_Gate=Basalt Depths expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Gate=New expedition unlocked: Basalt Depths
+progress.expedition.Basalt_Gate=Basalt Depths: {0}/{1} ticks remaining
+
+expeditions.Basalt_Depths.name=Crystal Grotto
+announcements.expedition_started.Basalt_Depths=Crystal Grotto expedition started.
+announcements.expedition_completed.Basalt_Depths=Crystal Grotto expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Depths=New expedition unlocked: Crystal Grotto
+progress.expedition.Basalt_Depths=Crystal Grotto: {0}/{1} ticks remaining
+
+expeditions.Thorium_Fissure.name=Cobalt Chasm
+announcements.expedition_started.Thorium_Fissure=Cobalt Chasm expedition started.
+announcements.expedition_completed.Thorium_Fissure=Cobalt Chasm expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Thorium_Fissure=New expedition unlocked: Cobalt Chasm
+progress.expedition.Thorium_Fissure=Cobalt Chasm: {0}/{1} ticks remaining
+
+expeditions.Cobalt_Chasm.name=Mithril Vein
+announcements.expedition_started.Cobalt_Chasm=Mithril Vein expedition started.
+announcements.expedition_completed.Cobalt_Chasm=Mithril Vein expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cobalt_Chasm=New expedition unlocked: Mithril Vein
+progress.expedition.Cobalt_Chasm=Mithril Vein: {0}/{1} ticks remaining
+
+expeditions.Mithril_Vein.name=Onyxium Pocket
+announcements.expedition_started.Mithril_Vein=Onyxium Pocket expedition started.
+announcements.expedition_completed.Mithril_Vein=Onyxium Pocket expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mithril_Vein=New expedition unlocked: Onyxium Pocket
+progress.expedition.Mithril_Vein=Onyxium Pocket: {0}/{1} ticks remaining
+
+expeditions.Onyxium_Pocket.name=Adamantite Core
+announcements.expedition_started.Onyxium_Pocket=Adamantite Core expedition started.
+announcements.expedition_completed.Onyxium_Pocket=Adamantite Core expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Onyxium_Pocket=New expedition unlocked: Adamantite Core
+progress.expedition.Onyxium_Pocket=Adamantite Core: {0}/{1} ticks remaining
+
+expeditions.Adamantite_Core.name=Prisma Crystal Mine
+announcements.expedition_started.Adamantite_Core=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Adamantite_Core=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Adamantite_Core=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Adamantite_Core=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+expeditions.Prisma_Crystal_Mine.name=Prisma Crystal Mine
+announcements.expedition_started.Prisma_Crystal_Mine=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Prisma_Crystal_Mine=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Prisma_Crystal_Mine=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Prisma_Crystal_Mine=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+expeditions.Crystal_Grotto.name=Frozen Ruins
+announcements.expedition_started.Crystal_Grotto=Frozen Ruins expedition started.
+announcements.expedition_completed.Crystal_Grotto=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Crystal_Grotto=New expedition unlocked: Frozen Ruins
+progress.expedition.Crystal_Grotto=Frozen Ruins: {0}/{1} ticks remaining
+
+expeditions.Frozen_Cavern.name=Snowy Pass
+announcements.expedition_started.Frozen_Cavern=Snowy Pass expedition started.
+announcements.expedition_completed.Frozen_Cavern=Snowy Pass expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frozen_Cavern=New expedition unlocked: Snowy Pass
+progress.expedition.Frozen_Cavern=Snowy Pass: {0}/{1} ticks remaining
+
+expeditions.Snowy_Pass.name=Snowy Plains
+announcements.expedition_started.Snowy_Pass=Snowy Plains expedition started.
+announcements.expedition_completed.Snowy_Pass=Snowy Plains expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Pass=New expedition unlocked: Snowy Plains
+progress.expedition.Snowy_Pass=Snowy Plains: {0}/{1} ticks remaining
+
+expeditions.Snowy_Plains.name=Whitefang Den
+announcements.expedition_started.Snowy_Plains=Whitefang Den expedition started.
+announcements.expedition_completed.Snowy_Plains=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Plains=New expedition unlocked: Whitefang Den
+progress.expedition.Snowy_Plains=Whitefang Den: {0}/{1} ticks remaining
+
+expeditions.Frostpine_Forest.name=Frozen Ruins
+announcements.expedition_started.Frostpine_Forest=Frozen Ruins expedition started.
+announcements.expedition_completed.Frostpine_Forest=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frostpine_Forest=New expedition unlocked: Frozen Ruins
+progress.expedition.Frostpine_Forest=Frozen Ruins: {0}/{1} ticks remaining
+
+expeditions.Ice_Lake.name=Ice Lake
+announcements.expedition_started.Ice_Lake=Ice Lake expedition started.
+announcements.expedition_completed.Ice_Lake=Ice Lake expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Ice_Lake=New expedition unlocked: Ice Lake
+progress.expedition.Ice_Lake=Ice Lake: {0}/{1} ticks remaining
+
+expeditions.Whitefang_Den.name=Whitefang Den
+announcements.expedition_started.Whitefang_Den=Whitefang Den expedition started.
+announcements.expedition_completed.Whitefang_Den=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Whitefang_Den=New expedition unlocked: Whitefang Den
+progress.expedition.Whitefang_Den=Whitefang Den: {0}/{1} ticks remaining
+items.FrozenRuinsToken.name=FrozenRuinsToken
+
+expeditions.Frozen_Ruins.name=Frozen Ruins
+announcements.dungeon_started.Frozen_Ruins=Frozen Ruins dungeon started.
+announcements.dungeon_completed.Frozen_Ruins=Frozen Ruins dungeon complete. The OneBlock has returned to default.
+
+expeditions.Polar_Necropolis.name=Polar Necropolis
+announcements.expedition_started.Polar_Necropolis=Polar Necropolis expedition started.
+announcements.expedition_completed.Polar_Necropolis=Polar Necropolis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Polar_Necropolis=New expedition unlocked: Polar Necropolis
+progress.expedition.Polar_Necropolis=Polar Necropolis: {0}/{1} ticks remaining
+
+expeditions.Sandstone_Cavern.name=Desert Fringe
+announcements.expedition_started.Sandstone_Cavern=Desert Fringe expedition started.
+announcements.expedition_completed.Sandstone_Cavern=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sandstone_Cavern=New expedition unlocked: Desert Fringe
+progress.expedition.Sandstone_Cavern=Desert Fringe: {0}/{1} ticks remaining
+
+expeditions.Desert_Fringe.name=Cactus Flats
+announcements.expedition_started.Desert_Fringe=Cactus Flats expedition started.
+announcements.expedition_completed.Desert_Fringe=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Desert_Fringe=New expedition unlocked: Cactus Flats
+progress.expedition.Desert_Fringe=Cactus Flats: {0}/{1} ticks remaining
+
+expeditions.Oasis.name=Oasis
+announcements.expedition_started.Oasis=Oasis expedition started.
+announcements.expedition_completed.Oasis=Oasis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Oasis=New expedition unlocked: Oasis
+progress.expedition.Oasis=Oasis: {0}/{1} ticks remaining
+
+expeditions.Scorpion_Dunes.name=Desert Temple
+announcements.expedition_started.Scorpion_Dunes=Desert Temple expedition started.
+announcements.expedition_completed.Scorpion_Dunes=Desert Temple expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Scorpion_Dunes=New expedition unlocked: Desert Temple
+progress.expedition.Scorpion_Dunes=Desert Temple: {0}/{1} ticks remaining
+
+expeditions.Cactus_Flats.name=Cactus Flats
+announcements.expedition_started.Cactus_Flats=Cactus Flats expedition started.
+announcements.expedition_completed.Cactus_Flats=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cactus_Flats=New expedition unlocked: Cactus Flats
+progress.expedition.Cactus_Flats=Cactus Flats: {0}/{1} ticks remaining
+items.DesertTempleToken.name=DesertTempleToken
+
+expeditions.Desert_Temple.name=Desert Temple
+announcements.dungeon_started.Desert_Temple=Desert Temple dungeon started.
+announcements.dungeon_completed.Desert_Temple=Desert Temple dungeon complete. The OneBlock has returned to default.
+items.PharaohCatacombsToken.name=PharaohCatacombsToken
+
+expeditions.Pharaoh_Catacombs.name=Pharaoh Catacombs
+announcements.dungeon_started.Pharaoh_Catacombs=Pharaoh Catacombs dungeon started.
+announcements.dungeon_completed.Pharaoh_Catacombs=Pharaoh Catacombs dungeon complete. The OneBlock has returned to default.
+
+expeditions.Sunfire_Tomb.name=Sunfire Tomb
+announcements.expedition_started.Sunfire_Tomb=Sunfire Tomb expedition started.
+announcements.expedition_completed.Sunfire_Tomb=Sunfire Tomb expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunfire_Tomb=New expedition unlocked: Sunfire Tomb
+progress.expedition.Sunfire_Tomb=Sunfire Tomb: {0}/{1} ticks remaining
+items.GobelinCampToken.name=GobelinCampToken
+
+expeditions.Gobelin_Camp.name=Gobelin Camp
+announcements.dungeon_started.Gobelin_Camp=Gobelin Camp dungeon started.
+announcements.dungeon_completed.Gobelin_Camp=Gobelin Camp dungeon complete. The OneBlock has returned to default.
+
+expeditions.Default.name=Cave Entry
+announcements.expedition_started.Default=Cave Entry expedition started.
+announcements.expedition_completed.Default=Cave Entry expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Cave Entry
+progress.expedition.Default=Cave Entry: {0}/{1} ticks remaining
+
+expeditions.Plain_Edge.name=Flower Prairie
+announcements.expedition_started.Plain_Edge=Flower Prairie expedition started.
+announcements.expedition_completed.Plain_Edge=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plain_Edge=New expedition unlocked: Flower Prairie
+progress.expedition.Plain_Edge=Flower Prairie: {0}/{1} ticks remaining
+
+expeditions.Plains.name=Gobelin Camp
+announcements.expedition_started.Plains=Gobelin Camp expedition started.
+announcements.expedition_completed.Plains=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plains=New expedition unlocked: Gobelin Camp
+progress.expedition.Plains=Gobelin Camp: {0}/{1} ticks remaining
+
+expeditions.Flower_Prairie.name=Flower Prairie
+announcements.expedition_started.Flower_Prairie=Flower Prairie expedition started.
+announcements.expedition_completed.Flower_Prairie=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Flower_Prairie=New expedition unlocked: Flower Prairie
+progress.expedition.Flower_Prairie=Flower Prairie: {0}/{1} ticks remaining
+
+expeditions.Horse_Field.name=Horse Field
+announcements.expedition_started.Horse_Field=Horse Field expedition started.
+announcements.expedition_completed.Horse_Field=Horse Field expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Horse_Field=New expedition unlocked: Horse Field
+progress.expedition.Horse_Field=Horse Field: {0}/{1} ticks remaining
+
+expeditions.Cow_Pasture.name=Cow Pasture
+announcements.expedition_started.Cow_Pasture=Cow Pasture expedition started.
+announcements.expedition_completed.Cow_Pasture=Cow Pasture expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cow_Pasture=New expedition unlocked: Cow Pasture
+progress.expedition.Cow_Pasture=Cow Pasture: {0}/{1} ticks remaining
+
+expeditions.Fox_Hollow.name=Fox Hollow
+announcements.expedition_started.Fox_Hollow=Fox Hollow expedition started.
+announcements.expedition_completed.Fox_Hollow=Fox Hollow expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fox_Hollow=New expedition unlocked: Fox Hollow
+progress.expedition.Fox_Hollow=Fox Hollow: {0}/{1} ticks remaining
+
+expeditions.Windy_Steppe.name=Sandstone Cavern
+announcements.expedition_started.Windy_Steppe=Sandstone Cavern expedition started.
+announcements.expedition_completed.Windy_Steppe=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Windy_Steppe=New expedition unlocked: Sandstone Cavern
+progress.expedition.Windy_Steppe=Sandstone Cavern: {0}/{1} ticks remaining
+
+expeditions.Forest_Edge.name=Young Forest
+announcements.expedition_started.Forest_Edge=Young Forest expedition started.
+announcements.expedition_completed.Forest_Edge=Young Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Young Forest
+progress.expedition.Forest_Edge=Young Forest: {0}/{1} ticks remaining
+
+expeditions.Young_Forest.name=Fairy Pond
+announcements.expedition_started.Young_Forest=Fairy Pond expedition started.
+announcements.expedition_completed.Young_Forest=Fairy Pond expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Young_Forest=New expedition unlocked: Fairy Pond
+progress.expedition.Young_Forest=Fairy Pond: {0}/{1} ticks remaining
+
+expeditions.Deep_Forest.name=Time Locked Glade
+announcements.expedition_started.Deep_Forest=Time Locked Glade expedition started.
+announcements.expedition_completed.Deep_Forest=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Deep_Forest=New expedition unlocked: Time Locked Glade
+progress.expedition.Deep_Forest=Time Locked Glade: {0}/{1} ticks remaining
+
+expeditions.Fairy_Pond.name=Time Locked Glade
+announcements.expedition_started.Fairy_Pond=Time Locked Glade expedition started.
+announcements.expedition_completed.Fairy_Pond=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fairy_Pond=New expedition unlocked: Time Locked Glade
+progress.expedition.Fairy_Pond=Time Locked Glade: {0}/{1} ticks remaining
+
+expeditions.Mushroom_Grove.name=Mushroom Grove
+announcements.expedition_started.Mushroom_Grove=Mushroom Grove expedition started.
+announcements.expedition_completed.Mushroom_Grove=Mushroom Grove expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mushroom_Grove=New expedition unlocked: Mushroom Grove
+progress.expedition.Mushroom_Grove=Mushroom Grove: {0}/{1} ticks remaining
+
+expeditions.Darkwood_Thicket.name=Swamp Trail
+announcements.expedition_started.Darkwood_Thicket=Swamp Trail expedition started.
+announcements.expedition_completed.Darkwood_Thicket=Swamp Trail expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Darkwood_Thicket=New expedition unlocked: Swamp Trail
+progress.expedition.Darkwood_Thicket=Swamp Trail: {0}/{1} ticks remaining
+
+expeditions.Swamp_Trail.name=Swamp Ruins
+announcements.expedition_started.Swamp_Trail=Swamp Ruins expedition started.
+announcements.expedition_completed.Swamp_Trail=Swamp Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Swamp_Trail=New expedition unlocked: Swamp Ruins
+progress.expedition.Swamp_Trail=Swamp Ruins: {0}/{1} ticks remaining
+
+expeditions.Sunken_Swamp.name=Forgotten Marsh
+announcements.expedition_started.Sunken_Swamp=Forgotten Marsh expedition started.
+announcements.expedition_completed.Sunken_Swamp=Forgotten Marsh expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunken_Swamp=New expedition unlocked: Forgotten Marsh
+progress.expedition.Sunken_Swamp=Forgotten Marsh: {0}/{1} ticks remaining
+
+expeditions.Swamp_Ruins.name=Swamp Ruins
+announcements.dungeon_started.Swamp_Ruins=Swamp Ruins dungeon started.
+announcements.dungeon_completed.Swamp_Ruins=Swamp Ruins dungeon complete. The OneBlock has returned to default.
+
+expeditions.Forgotten_Marsh.name=Desert Fringe
+announcements.expedition_started.Forgotten_Marsh=Desert Fringe expedition started.
+announcements.expedition_completed.Forgotten_Marsh=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forgotten_Marsh=New expedition unlocked: Desert Fringe
+progress.expedition.Forgotten_Marsh=Desert Fringe: {0}/{1} ticks remaining
+
+expeditions.Time_Locked_Glade.name=Primeval Forest
+announcements.expedition_started.Time_Locked_Glade=Primeval Forest expedition started.
+announcements.expedition_completed.Time_Locked_Glade=Primeval Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Time_Locked_Glade=New expedition unlocked: Primeval Forest
+progress.expedition.Time_Locked_Glade=Primeval Forest: {0}/{1} ticks remaining
+
+expeditions.Primeval_Forest.name=Dinosaur Nest
+announcements.expedition_started.Primeval_Forest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Primeval_Forest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Primeval_Forest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Primeval_Forest=Dinosaur Nest: {0}/{1} ticks remaining
+
+expeditions.Dinosaur_Nest.name=Dinosaur Nest
+announcements.expedition_started.Dinosaur_Nest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Dinosaur_Nest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Dinosaur_Nest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Dinosaur_Nest=Dinosaur Nest: {0}/{1} ticks remaining
+
+expeditions.Cave_Entry.name=Stone Gallery
+announcements.expedition_started.Cave_Entry=Stone Gallery expedition started.
+announcements.expedition_completed.Cave_Entry=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Stone Gallery
+progress.expedition.Cave_Entry=Stone Gallery: {0}/{1} ticks remaining
+
+expeditions.Shallow_Cave.name=Mossy Cave
+announcements.expedition_started.Shallow_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Shallow_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Shallow_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Shallow_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+expeditions.Stone_Gallery.name=Stone Gallery
+announcements.expedition_started.Stone_Gallery=Stone Gallery expedition started.
+announcements.expedition_completed.Stone_Gallery=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Stone_Gallery=New expedition unlocked: Stone Gallery
+progress.expedition.Stone_Gallery=Stone Gallery: {0}/{1} ticks remaining
+
+expeditions.Mossy_Cave.name=Mossy Cave
+announcements.expedition_started.Mossy_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Mossy_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mossy_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Mossy_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+expeditions.Copper_Cave.name=Gobelin Camp
+announcements.expedition_started.Copper_Cave=Gobelin Camp expedition started.
+announcements.expedition_completed.Copper_Cave=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Copper_Cave=New expedition unlocked: Gobelin Camp
+progress.expedition.Copper_Cave=Gobelin Camp: {0}/{1} ticks remaining
+
+expeditions.Iron_Hollow.name=Sandstone Cavern
+announcements.expedition_started.Iron_Hollow=Sandstone Cavern expedition started.
+announcements.expedition_completed.Iron_Hollow=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Iron_Hollow=New expedition unlocked: Sandstone Cavern
+progress.expedition.Iron_Hollow=Sandstone Cavern: {0}/{1} ticks remaining
+
+expeditions.Abandoned_Mine.name=Abandoned Mine
+announcements.dungeon_started.Abandoned_Mine=Abandoned Mine dungeon started.
+announcements.dungeon_completed.Abandoned_Mine=Abandoned Mine dungeon complete. The OneBlock has returned to default.
+
+expeditions.Basalt_Gate.name=Basalt Depths
+announcements.expedition_started.Basalt_Gate=Basalt Depths expedition started.
+announcements.expedition_completed.Basalt_Gate=Basalt Depths expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Gate=New expedition unlocked: Basalt Depths
+progress.expedition.Basalt_Gate=Basalt Depths: {0}/{1} ticks remaining
+
+expeditions.Basalt_Depths.name=Crystal Grotto
+announcements.expedition_started.Basalt_Depths=Crystal Grotto expedition started.
+announcements.expedition_completed.Basalt_Depths=Crystal Grotto expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Depths=New expedition unlocked: Crystal Grotto
+progress.expedition.Basalt_Depths=Crystal Grotto: {0}/{1} ticks remaining
+
+expeditions.Thorium_Fissure.name=Cobalt Chasm
+announcements.expedition_started.Thorium_Fissure=Cobalt Chasm expedition started.
+announcements.expedition_completed.Thorium_Fissure=Cobalt Chasm expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Thorium_Fissure=New expedition unlocked: Cobalt Chasm
+progress.expedition.Thorium_Fissure=Cobalt Chasm: {0}/{1} ticks remaining
+
+expeditions.Cobalt_Chasm.name=Mithril Vein
+announcements.expedition_started.Cobalt_Chasm=Mithril Vein expedition started.
+announcements.expedition_completed.Cobalt_Chasm=Mithril Vein expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cobalt_Chasm=New expedition unlocked: Mithril Vein
+progress.expedition.Cobalt_Chasm=Mithril Vein: {0}/{1} ticks remaining
+
+expeditions.Mithril_Vein.name=Onyxium Pocket
+announcements.expedition_started.Mithril_Vein=Onyxium Pocket expedition started.
+announcements.expedition_completed.Mithril_Vein=Onyxium Pocket expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mithril_Vein=New expedition unlocked: Onyxium Pocket
+progress.expedition.Mithril_Vein=Onyxium Pocket: {0}/{1} ticks remaining
+
+expeditions.Onyxium_Pocket.name=Adamantite Core
+announcements.expedition_started.Onyxium_Pocket=Adamantite Core expedition started.
+announcements.expedition_completed.Onyxium_Pocket=Adamantite Core expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Onyxium_Pocket=New expedition unlocked: Adamantite Core
+progress.expedition.Onyxium_Pocket=Adamantite Core: {0}/{1} ticks remaining
+
+expeditions.Adamantite_Core.name=Prisma Crystal Mine
+announcements.expedition_started.Adamantite_Core=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Adamantite_Core=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Adamantite_Core=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Adamantite_Core=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+expeditions.Prisma_Crystal_Mine.name=Prisma Crystal Mine
+announcements.expedition_started.Prisma_Crystal_Mine=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Prisma_Crystal_Mine=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Prisma_Crystal_Mine=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Prisma_Crystal_Mine=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+expeditions.Crystal_Grotto.name=Frozen Ruins
+announcements.expedition_started.Crystal_Grotto=Frozen Ruins expedition started.
+announcements.expedition_completed.Crystal_Grotto=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Crystal_Grotto=New expedition unlocked: Frozen Ruins
+progress.expedition.Crystal_Grotto=Frozen Ruins: {0}/{1} ticks remaining
+
+expeditions.Frozen_Cavern.name=Snowy Pass
+announcements.expedition_started.Frozen_Cavern=Snowy Pass expedition started.
+announcements.expedition_completed.Frozen_Cavern=Snowy Pass expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frozen_Cavern=New expedition unlocked: Snowy Pass
+progress.expedition.Frozen_Cavern=Snowy Pass: {0}/{1} ticks remaining
+
+expeditions.Snowy_Pass.name=Snowy Plains
+announcements.expedition_started.Snowy_Pass=Snowy Plains expedition started.
+announcements.expedition_completed.Snowy_Pass=Snowy Plains expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Pass=New expedition unlocked: Snowy Plains
+progress.expedition.Snowy_Pass=Snowy Plains: {0}/{1} ticks remaining
+
+expeditions.Snowy_Plains.name=Whitefang Den
+announcements.expedition_started.Snowy_Plains=Whitefang Den expedition started.
+announcements.expedition_completed.Snowy_Plains=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Plains=New expedition unlocked: Whitefang Den
+progress.expedition.Snowy_Plains=Whitefang Den: {0}/{1} ticks remaining
+
+expeditions.Frostpine_Forest.name=Frozen Ruins
+announcements.expedition_started.Frostpine_Forest=Frozen Ruins expedition started.
+announcements.expedition_completed.Frostpine_Forest=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frostpine_Forest=New expedition unlocked: Frozen Ruins
+progress.expedition.Frostpine_Forest=Frozen Ruins: {0}/{1} ticks remaining
+
+expeditions.Ice_Lake.name=Ice Lake
+announcements.expedition_started.Ice_Lake=Ice Lake expedition started.
+announcements.expedition_completed.Ice_Lake=Ice Lake expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Ice_Lake=New expedition unlocked: Ice Lake
+progress.expedition.Ice_Lake=Ice Lake: {0}/{1} ticks remaining
+
+expeditions.Whitefang_Den.name=Whitefang Den
+announcements.expedition_started.Whitefang_Den=Whitefang Den expedition started.
+announcements.expedition_completed.Whitefang_Den=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Whitefang_Den=New expedition unlocked: Whitefang Den
+progress.expedition.Whitefang_Den=Whitefang Den: {0}/{1} ticks remaining
+
+expeditions.Frozen_Ruins.name=Frozen Ruins
+announcements.dungeon_started.Frozen_Ruins=Frozen Ruins dungeon started.
+announcements.dungeon_completed.Frozen_Ruins=Frozen Ruins dungeon complete. The OneBlock has returned to default.
+
+expeditions.Polar_Necropolis.name=Polar Necropolis
+announcements.expedition_started.Polar_Necropolis=Polar Necropolis expedition started.
+announcements.expedition_completed.Polar_Necropolis=Polar Necropolis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Polar_Necropolis=New expedition unlocked: Polar Necropolis
+progress.expedition.Polar_Necropolis=Polar Necropolis: {0}/{1} ticks remaining
+
+expeditions.Sandstone_Cavern.name=Desert Fringe
+announcements.expedition_started.Sandstone_Cavern=Desert Fringe expedition started.
+announcements.expedition_completed.Sandstone_Cavern=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sandstone_Cavern=New expedition unlocked: Desert Fringe
+progress.expedition.Sandstone_Cavern=Desert Fringe: {0}/{1} ticks remaining
+
+expeditions.Desert_Fringe.name=Cactus Flats
+announcements.expedition_started.Desert_Fringe=Cactus Flats expedition started.
+announcements.expedition_completed.Desert_Fringe=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Desert_Fringe=New expedition unlocked: Cactus Flats
+progress.expedition.Desert_Fringe=Cactus Flats: {0}/{1} ticks remaining
+
+expeditions.Oasis.name=Oasis
+announcements.expedition_started.Oasis=Oasis expedition started.
+announcements.expedition_completed.Oasis=Oasis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Oasis=New expedition unlocked: Oasis
+progress.expedition.Oasis=Oasis: {0}/{1} ticks remaining
+
+expeditions.Scorpion_Dunes.name=Desert Temple
+announcements.expedition_started.Scorpion_Dunes=Desert Temple expedition started.
+announcements.expedition_completed.Scorpion_Dunes=Desert Temple expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Scorpion_Dunes=New expedition unlocked: Desert Temple
+progress.expedition.Scorpion_Dunes=Desert Temple: {0}/{1} ticks remaining
+
+expeditions.Cactus_Flats.name=Cactus Flats
+announcements.expedition_started.Cactus_Flats=Cactus Flats expedition started.
+announcements.expedition_completed.Cactus_Flats=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cactus_Flats=New expedition unlocked: Cactus Flats
+progress.expedition.Cactus_Flats=Cactus Flats: {0}/{1} ticks remaining
+
+expeditions.Desert_Temple.name=Desert Temple
+announcements.dungeon_started.Desert_Temple=Desert Temple dungeon started.
+announcements.dungeon_completed.Desert_Temple=Desert Temple dungeon complete. The OneBlock has returned to default.
+
+expeditions.Pharaoh_Catacombs.name=Pharaoh Catacombs
+announcements.dungeon_started.Pharaoh_Catacombs=Pharaoh Catacombs dungeon started.
+announcements.dungeon_completed.Pharaoh_Catacombs=Pharaoh Catacombs dungeon complete. The OneBlock has returned to default.
+
+expeditions.Sunfire_Tomb.name=Sunfire Tomb
+announcements.expedition_started.Sunfire_Tomb=Sunfire Tomb expedition started.
+announcements.expedition_completed.Sunfire_Tomb=Sunfire Tomb expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunfire_Tomb=New expedition unlocked: Sunfire Tomb
+progress.expedition.Sunfire_Tomb=Sunfire Tomb: {0}/{1} ticks remaining
+
+expeditions.Gobelin_Camp.name=Gobelin Camp
+announcements.dungeon_started.Gobelin_Camp=Gobelin Camp dungeon started.
+announcements.dungeon_completed.Gobelin_Camp=Gobelin Camp dungeon complete. The OneBlock has returned to default.
+
+expeditions.Default.name=Cave Entry
+announcements.expedition_started.Default=Cave Entry expedition started.
+announcements.expedition_completed.Default=Cave Entry expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Cave Entry
+progress.expedition.Default=Cave Entry: {0}/{1} ticks remaining
+
+expeditions.Plain_Edge.name=Flower Prairie
+announcements.expedition_started.Plain_Edge=Flower Prairie expedition started.
+announcements.expedition_completed.Plain_Edge=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plain_Edge=New expedition unlocked: Flower Prairie
+progress.expedition.Plain_Edge=Flower Prairie: {0}/{1} ticks remaining
+
+expeditions.Plains.name=Gobelin Camp
+announcements.expedition_started.Plains=Gobelin Camp expedition started.
+announcements.expedition_completed.Plains=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plains=New expedition unlocked: Gobelin Camp
+progress.expedition.Plains=Gobelin Camp: {0}/{1} ticks remaining
+
+expeditions.Flower_Prairie.name=Flower Prairie
+announcements.expedition_started.Flower_Prairie=Flower Prairie expedition started.
+announcements.expedition_completed.Flower_Prairie=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Flower_Prairie=New expedition unlocked: Flower Prairie
+progress.expedition.Flower_Prairie=Flower Prairie: {0}/{1} ticks remaining
+
+expeditions.Horse_Field.name=Horse Field
+announcements.expedition_started.Horse_Field=Horse Field expedition started.
+announcements.expedition_completed.Horse_Field=Horse Field expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Horse_Field=New expedition unlocked: Horse Field
+progress.expedition.Horse_Field=Horse Field: {0}/{1} ticks remaining
+
+expeditions.Cow_Pasture.name=Cow Pasture
+announcements.expedition_started.Cow_Pasture=Cow Pasture expedition started.
+announcements.expedition_completed.Cow_Pasture=Cow Pasture expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cow_Pasture=New expedition unlocked: Cow Pasture
+progress.expedition.Cow_Pasture=Cow Pasture: {0}/{1} ticks remaining
+
+expeditions.Fox_Hollow.name=Fox Hollow
+announcements.expedition_started.Fox_Hollow=Fox Hollow expedition started.
+announcements.expedition_completed.Fox_Hollow=Fox Hollow expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fox_Hollow=New expedition unlocked: Fox Hollow
+progress.expedition.Fox_Hollow=Fox Hollow: {0}/{1} ticks remaining
+
+expeditions.Windy_Steppe.name=Sandstone Cavern
+announcements.expedition_started.Windy_Steppe=Sandstone Cavern expedition started.
+announcements.expedition_completed.Windy_Steppe=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Windy_Steppe=New expedition unlocked: Sandstone Cavern
+progress.expedition.Windy_Steppe=Sandstone Cavern: {0}/{1} ticks remaining
+
+expeditions.Forest_Edge.name=Young Forest
+announcements.expedition_started.Forest_Edge=Young Forest expedition started.
+announcements.expedition_completed.Forest_Edge=Young Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Young Forest
+progress.expedition.Forest_Edge=Young Forest: {0}/{1} ticks remaining
+
+expeditions.Young_Forest.name=Fairy Pond
+announcements.expedition_started.Young_Forest=Fairy Pond expedition started.
+announcements.expedition_completed.Young_Forest=Fairy Pond expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Young_Forest=New expedition unlocked: Fairy Pond
+progress.expedition.Young_Forest=Fairy Pond: {0}/{1} ticks remaining
+
+expeditions.Deep_Forest.name=Time Locked Glade
+announcements.expedition_started.Deep_Forest=Time Locked Glade expedition started.
+announcements.expedition_completed.Deep_Forest=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Deep_Forest=New expedition unlocked: Time Locked Glade
+progress.expedition.Deep_Forest=Time Locked Glade: {0}/{1} ticks remaining
+
+expeditions.Fairy_Pond.name=Time Locked Glade
+announcements.expedition_started.Fairy_Pond=Time Locked Glade expedition started.
+announcements.expedition_completed.Fairy_Pond=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fairy_Pond=New expedition unlocked: Time Locked Glade
+progress.expedition.Fairy_Pond=Time Locked Glade: {0}/{1} ticks remaining
+
+expeditions.Mushroom_Grove.name=Mushroom Grove
+announcements.expedition_started.Mushroom_Grove=Mushroom Grove expedition started.
+announcements.expedition_completed.Mushroom_Grove=Mushroom Grove expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mushroom_Grove=New expedition unlocked: Mushroom Grove
+progress.expedition.Mushroom_Grove=Mushroom Grove: {0}/{1} ticks remaining
+
+expeditions.Darkwood_Thicket.name=Swamp Trail
+announcements.expedition_started.Darkwood_Thicket=Swamp Trail expedition started.
+announcements.expedition_completed.Darkwood_Thicket=Swamp Trail expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Darkwood_Thicket=New expedition unlocked: Swamp Trail
+progress.expedition.Darkwood_Thicket=Swamp Trail: {0}/{1} ticks remaining
+
+expeditions.Swamp_Trail.name=Swamp Ruins
+announcements.expedition_started.Swamp_Trail=Swamp Ruins expedition started.
+announcements.expedition_completed.Swamp_Trail=Swamp Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Swamp_Trail=New expedition unlocked: Swamp Ruins
+progress.expedition.Swamp_Trail=Swamp Ruins: {0}/{1} ticks remaining
+
+expeditions.Sunken_Swamp.name=Forgotten Marsh
+announcements.expedition_started.Sunken_Swamp=Forgotten Marsh expedition started.
+announcements.expedition_completed.Sunken_Swamp=Forgotten Marsh expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunken_Swamp=New expedition unlocked: Forgotten Marsh
+progress.expedition.Sunken_Swamp=Forgotten Marsh: {0}/{1} ticks remaining
+
+expeditions.Swamp_Ruins.name=Swamp Ruins
+announcements.dungeon_started.Swamp_Ruins=Swamp Ruins dungeon started.
+announcements.dungeon_completed.Swamp_Ruins=Swamp Ruins dungeon complete. The OneBlock has returned to default.
+
+expeditions.Forgotten_Marsh.name=Desert Fringe
+announcements.expedition_started.Forgotten_Marsh=Desert Fringe expedition started.
+announcements.expedition_completed.Forgotten_Marsh=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forgotten_Marsh=New expedition unlocked: Desert Fringe
+progress.expedition.Forgotten_Marsh=Desert Fringe: {0}/{1} ticks remaining
+
+expeditions.Time_Locked_Glade.name=Primeval Forest
+announcements.expedition_started.Time_Locked_Glade=Primeval Forest expedition started.
+announcements.expedition_completed.Time_Locked_Glade=Primeval Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Time_Locked_Glade=New expedition unlocked: Primeval Forest
+progress.expedition.Time_Locked_Glade=Primeval Forest: {0}/{1} ticks remaining
+
+expeditions.Primeval_Forest.name=Dinosaur Nest
+announcements.expedition_started.Primeval_Forest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Primeval_Forest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Primeval_Forest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Primeval_Forest=Dinosaur Nest: {0}/{1} ticks remaining
+
+expeditions.Dinosaur_Nest.name=Dinosaur Nest
+announcements.expedition_started.Dinosaur_Nest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Dinosaur_Nest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Dinosaur_Nest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Dinosaur_Nest=Dinosaur Nest: {0}/{1} ticks remaining
+
+expeditions.Cave_Entry.name=Stone Gallery
+announcements.expedition_started.Cave_Entry=Stone Gallery expedition started.
+announcements.expedition_completed.Cave_Entry=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Stone Gallery
+progress.expedition.Cave_Entry=Stone Gallery: {0}/{1} ticks remaining
+
+expeditions.Shallow_Cave.name=Mossy Cave
+announcements.expedition_started.Shallow_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Shallow_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Shallow_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Shallow_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+expeditions.Stone_Gallery.name=Stone Gallery
+announcements.expedition_started.Stone_Gallery=Stone Gallery expedition started.
+announcements.expedition_completed.Stone_Gallery=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Stone_Gallery=New expedition unlocked: Stone Gallery
+progress.expedition.Stone_Gallery=Stone Gallery: {0}/{1} ticks remaining
+
+expeditions.Mossy_Cave.name=Mossy Cave
+announcements.expedition_started.Mossy_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Mossy_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mossy_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Mossy_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+expeditions.Copper_Cave.name=Gobelin Camp
+announcements.expedition_started.Copper_Cave=Gobelin Camp expedition started.
+announcements.expedition_completed.Copper_Cave=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Copper_Cave=New expedition unlocked: Gobelin Camp
+progress.expedition.Copper_Cave=Gobelin Camp: {0}/{1} ticks remaining
+
+expeditions.Iron_Hollow.name=Sandstone Cavern
+announcements.expedition_started.Iron_Hollow=Sandstone Cavern expedition started.
+announcements.expedition_completed.Iron_Hollow=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Iron_Hollow=New expedition unlocked: Sandstone Cavern
+progress.expedition.Iron_Hollow=Sandstone Cavern: {0}/{1} ticks remaining
+
+expeditions.Abandoned_Mine.name=Abandoned Mine
+announcements.dungeon_started.Abandoned_Mine=Abandoned Mine dungeon started.
+announcements.dungeon_completed.Abandoned_Mine=Abandoned Mine dungeon complete. The OneBlock has returned to default.
+
+expeditions.Basalt_Gate.name=Basalt Depths
+announcements.expedition_started.Basalt_Gate=Basalt Depths expedition started.
+announcements.expedition_completed.Basalt_Gate=Basalt Depths expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Gate=New expedition unlocked: Basalt Depths
+progress.expedition.Basalt_Gate=Basalt Depths: {0}/{1} ticks remaining
+
+expeditions.Basalt_Depths.name=Crystal Grotto
+announcements.expedition_started.Basalt_Depths=Crystal Grotto expedition started.
+announcements.expedition_completed.Basalt_Depths=Crystal Grotto expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Depths=New expedition unlocked: Crystal Grotto
+progress.expedition.Basalt_Depths=Crystal Grotto: {0}/{1} ticks remaining
+
+expeditions.Thorium_Fissure.name=Cobalt Chasm
+announcements.expedition_started.Thorium_Fissure=Cobalt Chasm expedition started.
+announcements.expedition_completed.Thorium_Fissure=Cobalt Chasm expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Thorium_Fissure=New expedition unlocked: Cobalt Chasm
+progress.expedition.Thorium_Fissure=Cobalt Chasm: {0}/{1} ticks remaining
+
+expeditions.Cobalt_Chasm.name=Mithril Vein
+announcements.expedition_started.Cobalt_Chasm=Mithril Vein expedition started.
+announcements.expedition_completed.Cobalt_Chasm=Mithril Vein expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cobalt_Chasm=New expedition unlocked: Mithril Vein
+progress.expedition.Cobalt_Chasm=Mithril Vein: {0}/{1} ticks remaining
+
+expeditions.Mithril_Vein.name=Onyxium Pocket
+announcements.expedition_started.Mithril_Vein=Onyxium Pocket expedition started.
+announcements.expedition_completed.Mithril_Vein=Onyxium Pocket expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mithril_Vein=New expedition unlocked: Onyxium Pocket
+progress.expedition.Mithril_Vein=Onyxium Pocket: {0}/{1} ticks remaining
+
+expeditions.Onyxium_Pocket.name=Adamantite Core
+announcements.expedition_started.Onyxium_Pocket=Adamantite Core expedition started.
+announcements.expedition_completed.Onyxium_Pocket=Adamantite Core expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Onyxium_Pocket=New expedition unlocked: Adamantite Core
+progress.expedition.Onyxium_Pocket=Adamantite Core: {0}/{1} ticks remaining
+
+expeditions.Adamantite_Core.name=Prisma Crystal Mine
+announcements.expedition_started.Adamantite_Core=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Adamantite_Core=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Adamantite_Core=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Adamantite_Core=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+expeditions.Prisma_Crystal_Mine.name=Prisma Crystal Mine
+announcements.expedition_started.Prisma_Crystal_Mine=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Prisma_Crystal_Mine=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Prisma_Crystal_Mine=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Prisma_Crystal_Mine=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+expeditions.Crystal_Grotto.name=Frozen Ruins
+announcements.expedition_started.Crystal_Grotto=Frozen Ruins expedition started.
+announcements.expedition_completed.Crystal_Grotto=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Crystal_Grotto=New expedition unlocked: Frozen Ruins
+progress.expedition.Crystal_Grotto=Frozen Ruins: {0}/{1} ticks remaining
+
+expeditions.Frozen_Cavern.name=Snowy Pass
+announcements.expedition_started.Frozen_Cavern=Snowy Pass expedition started.
+announcements.expedition_completed.Frozen_Cavern=Snowy Pass expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frozen_Cavern=New expedition unlocked: Snowy Pass
+progress.expedition.Frozen_Cavern=Snowy Pass: {0}/{1} ticks remaining
+
+expeditions.Snowy_Pass.name=Snowy Plains
+announcements.expedition_started.Snowy_Pass=Snowy Plains expedition started.
+announcements.expedition_completed.Snowy_Pass=Snowy Plains expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Pass=New expedition unlocked: Snowy Plains
+progress.expedition.Snowy_Pass=Snowy Plains: {0}/{1} ticks remaining
+
+expeditions.Snowy_Plains.name=Whitefang Den
+announcements.expedition_started.Snowy_Plains=Whitefang Den expedition started.
+announcements.expedition_completed.Snowy_Plains=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Plains=New expedition unlocked: Whitefang Den
+progress.expedition.Snowy_Plains=Whitefang Den: {0}/{1} ticks remaining
+
+expeditions.Frostpine_Forest.name=Frozen Ruins
+announcements.expedition_started.Frostpine_Forest=Frozen Ruins expedition started.
+announcements.expedition_completed.Frostpine_Forest=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frostpine_Forest=New expedition unlocked: Frozen Ruins
+progress.expedition.Frostpine_Forest=Frozen Ruins: {0}/{1} ticks remaining
+
+expeditions.Ice_Lake.name=Ice Lake
+announcements.expedition_started.Ice_Lake=Ice Lake expedition started.
+announcements.expedition_completed.Ice_Lake=Ice Lake expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Ice_Lake=New expedition unlocked: Ice Lake
+progress.expedition.Ice_Lake=Ice Lake: {0}/{1} ticks remaining
+
+expeditions.Whitefang_Den.name=Whitefang Den
+announcements.expedition_started.Whitefang_Den=Whitefang Den expedition started.
+announcements.expedition_completed.Whitefang_Den=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Whitefang_Den=New expedition unlocked: Whitefang Den
+progress.expedition.Whitefang_Den=Whitefang Den: {0}/{1} ticks remaining
+
+expeditions.Frozen_Ruins.name=Frozen Ruins
+announcements.dungeon_started.Frozen_Ruins=Frozen Ruins dungeon started.
+announcements.dungeon_completed.Frozen_Ruins=Frozen Ruins dungeon complete. The OneBlock has returned to default.
+
+expeditions.Polar_Necropolis.name=Polar Necropolis
+announcements.expedition_started.Polar_Necropolis=Polar Necropolis expedition started.
+announcements.expedition_completed.Polar_Necropolis=Polar Necropolis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Polar_Necropolis=New expedition unlocked: Polar Necropolis
+progress.expedition.Polar_Necropolis=Polar Necropolis: {0}/{1} ticks remaining
+
+expeditions.Sandstone_Cavern.name=Desert Fringe
+announcements.expedition_started.Sandstone_Cavern=Desert Fringe expedition started.
+announcements.expedition_completed.Sandstone_Cavern=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sandstone_Cavern=New expedition unlocked: Desert Fringe
+progress.expedition.Sandstone_Cavern=Desert Fringe: {0}/{1} ticks remaining
+
+expeditions.Desert_Fringe.name=Cactus Flats
+announcements.expedition_started.Desert_Fringe=Cactus Flats expedition started.
+announcements.expedition_completed.Desert_Fringe=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Desert_Fringe=New expedition unlocked: Cactus Flats
+progress.expedition.Desert_Fringe=Cactus Flats: {0}/{1} ticks remaining
+
+expeditions.Oasis.name=Oasis
+announcements.expedition_started.Oasis=Oasis expedition started.
+announcements.expedition_completed.Oasis=Oasis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Oasis=New expedition unlocked: Oasis
+progress.expedition.Oasis=Oasis: {0}/{1} ticks remaining
+
+expeditions.Scorpion_Dunes.name=Desert Temple
+announcements.expedition_started.Scorpion_Dunes=Desert Temple expedition started.
+announcements.expedition_completed.Scorpion_Dunes=Desert Temple expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Scorpion_Dunes=New expedition unlocked: Desert Temple
+progress.expedition.Scorpion_Dunes=Desert Temple: {0}/{1} ticks remaining
+
+expeditions.Cactus_Flats.name=Cactus Flats
+announcements.expedition_started.Cactus_Flats=Cactus Flats expedition started.
+announcements.expedition_completed.Cactus_Flats=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cactus_Flats=New expedition unlocked: Cactus Flats
+progress.expedition.Cactus_Flats=Cactus Flats: {0}/{1} ticks remaining
+
+expeditions.Desert_Temple.name=Desert Temple
+announcements.dungeon_started.Desert_Temple=Desert Temple dungeon started.
+announcements.dungeon_completed.Desert_Temple=Desert Temple dungeon complete. The OneBlock has returned to default.
+
+expeditions.Pharaoh_Catacombs.name=Pharaoh Catacombs
+announcements.dungeon_started.Pharaoh_Catacombs=Pharaoh Catacombs dungeon started.
+announcements.dungeon_completed.Pharaoh_Catacombs=Pharaoh Catacombs dungeon complete. The OneBlock has returned to default.
+
+expeditions.Sunfire_Tomb.name=Sunfire Tomb
+announcements.expedition_started.Sunfire_Tomb=Sunfire Tomb expedition started.
+announcements.expedition_completed.Sunfire_Tomb=Sunfire Tomb expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunfire_Tomb=New expedition unlocked: Sunfire Tomb
+progress.expedition.Sunfire_Tomb=Sunfire Tomb: {0}/{1} ticks remaining
+
+expeditions.Gobelin_Camp.name=Gobelin Camp
+announcements.dungeon_started.Gobelin_Camp=Gobelin Camp dungeon started.
+announcements.dungeon_completed.Gobelin_Camp=Gobelin Camp dungeon complete. The OneBlock has returned to default.
+
+# GENERATED ─── Cave Entry ────────────────────────────────────────────────
+items.OneBlock_Block_Default.name=OneBlock Cave Entry
+items.OneBlock_Crystal_Default.name=Cave Entry Crystal
+items.OneBlock_Crystal_Default.description=Consume to begin a Cave Entry expedition.\n25 ticks.\nLoot :\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\n- Grass Lush\nCompletion rewards :\n- 1x Plain Edge Crystal (unlocks Plain Edge)\n- 1x Forest Edge Crystal (unlocks Forest Edge)\n- 1x Cave Entry Crystal (unlocks Cave Entry)
+expeditions.Default.name=Cave Entry
+announcements.expedition_started.Default=Cave Entry expedition started.
+announcements.expedition_completed.Default=Cave Entry expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Cave Entry
+progress.expedition.Default=Cave Entry: {0}/{1} ticks remaining
+benchCategories.OneBlockEnchanter_Surface=Surface Crystals
+
+# GENERATED ─── Flower Prairie ─────────────────────────────────────────────
+items.OneBlock_Block_Plain_Edge.name=OneBlock Flower Prairie
+items.OneBlock_Crystal_Plain_Edge.name=Flower Prairie Crystal
+items.OneBlock_Crystal_Plain_Edge.description=Consume to begin a Flower Prairie expedition.\n25 ticks.\nLoot :\n- Grass Lush\n- Fibre\n- Common White Flower\n- Hay Bundle\n- Rabbit\n- Chicken\nCompletion rewards :\n- 1x Plains Crystal (unlocks Plains)\n- 1x Flower Prairie Crystal (unlocks Flower Prairie)
+expeditions.Plain_Edge.name=Flower Prairie
+announcements.expedition_started.Plain_Edge=Flower Prairie expedition started.
+announcements.expedition_completed.Plain_Edge=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plain_Edge=New expedition unlocked: Flower Prairie
+progress.expedition.Plain_Edge=Flower Prairie: {0}/{1} ticks remaining
+
+# GENERATED ─── Gobelin Camp ─────────────────────────────────────────────────
+items.OneBlock_Block_Plains.name=OneBlock Gobelin Camp
+items.OneBlock_Crystal_Plains.name=Gobelin Camp Crystal
+items.OneBlock_Crystal_Plains.description=Consume to begin a Gobelin Camp expedition.\n35 ticks.\nLoot :\n- Grass Lush\n- Hay Bundle\n- Common White Flower\n- Sunflower Block\n- Fox\n- Boar\nCompletion rewards :\n- 1x Horse Field Crystal (unlocks Horse Field)\n- 1x Cow Pasture Crystal (unlocks Cow Pasture)\n- 1x Fox Hollow Crystal (unlocks Fox Hollow)\n- 1x Windy Steppe Crystal (unlocks Windy Steppe)\n- 1x Gobelin Camp Crystal (unlocks Gobelin Camp)
+expeditions.Plains.name=Gobelin Camp
+announcements.expedition_started.Plains=Gobelin Camp expedition started.
+announcements.expedition_completed.Plains=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Plains=New expedition unlocked: Gobelin Camp
+progress.expedition.Plains=Gobelin Camp: {0}/{1} ticks remaining
+
+# GENERATED ─── Flower Prairie ─────────────────────────────────────────
+items.OneBlock_Block_Flower_Prairie.name=OneBlock Flower Prairie
+items.OneBlock_Crystal_Flower_Prairie.name=Flower Prairie Crystal
+items.OneBlock_Crystal_Flower_Prairie.description=Consume to begin a Flower Prairie expedition.\n35 ticks.\nLoot :\n- Common White Flower\n- Lavender Block\n- Sunflower Block\n- White Petals\n- Grass Lush\n- Bluebird\nCompletion rewards :\n- 1x ExpeditionPoint\nRandom reward (one bundle) :\n  [3] 1x Light Motes\n  [1] 1x Life Essence
+expeditions.Flower_Prairie.name=Flower Prairie
+announcements.expedition_started.Flower_Prairie=Flower Prairie expedition started.
+announcements.expedition_completed.Flower_Prairie=Flower Prairie expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Flower_Prairie=New expedition unlocked: Flower Prairie
+progress.expedition.Flower_Prairie=Flower Prairie: {0}/{1} ticks remaining
+
+# GENERATED ─── Horse Field ────────────────────────────────────────────
+items.OneBlock_Block_Horse_Field.name=OneBlock Horse Field
+items.OneBlock_Crystal_Horse_Field.name=Horse Field Crystal
+items.OneBlock_Crystal_Horse_Field.description=Consume to begin a Horse Field expedition.\n40 ticks.\nLoot :\n- Grass Lush\n- Hay Bundle\n- Common White Flower\n- Light Hide\n- Antelope\n- Bison\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Horse_Field.name=Horse Field
+announcements.expedition_started.Horse_Field=Horse Field expedition started.
+announcements.expedition_completed.Horse_Field=Horse Field expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Horse_Field=New expedition unlocked: Horse Field
+progress.expedition.Horse_Field=Horse Field: {0}/{1} ticks remaining
+
+# GENERATED ─── Cow Pasture ────────────────────────────────────────────
+items.OneBlock_Block_Cow_Pasture.name=OneBlock Cow Pasture
+items.OneBlock_Crystal_Cow_Pasture.name=Cow Pasture Crystal
+items.OneBlock_Crystal_Cow_Pasture.description=Consume to begin a Cow Pasture expedition.\n40 ticks.\nLoot :\n- Grass Lush\n- Hay Bundle\n- Soft Hide\n- Soft Leather\n- Sheep\n- Bison Calf\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Cow_Pasture.name=Cow Pasture
+announcements.expedition_started.Cow_Pasture=Cow Pasture expedition started.
+announcements.expedition_completed.Cow_Pasture=Cow Pasture expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cow_Pasture=New expedition unlocked: Cow Pasture
+progress.expedition.Cow_Pasture=Cow Pasture: {0}/{1} ticks remaining
+
+# GENERATED ─── Fox Hollow ─────────────────────────────────────────────
+items.OneBlock_Block_Fox_Hollow.name=OneBlock Fox Hollow
+items.OneBlock_Crystal_Fox_Hollow.name=Fox Hollow Crystal
+items.OneBlock_Crystal_Fox_Hollow.description=Consume to begin a Fox Hollow expedition.\n40 ticks.\nLoot :\n- Berries Red Fruit\n- Bush\n- Brown Common Mushroom\n- Soft Hide\n- Fox\n- Rabbit\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Fox_Hollow.name=Fox Hollow
+announcements.expedition_started.Fox_Hollow=Fox Hollow expedition started.
+announcements.expedition_completed.Fox_Hollow=Fox Hollow expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fox_Hollow=New expedition unlocked: Fox Hollow
+progress.expedition.Fox_Hollow=Fox Hollow: {0}/{1} ticks remaining
+
+# GENERATED ─── Sandstone Cavern ───────────────────────────────────────────
+items.OneBlock_Block_Windy_Steppe.name=OneBlock Sandstone Cavern
+items.OneBlock_Crystal_Windy_Steppe.name=Sandstone Cavern Crystal
+items.OneBlock_Crystal_Windy_Steppe.description=Consume to begin a Sandstone Cavern expedition.\n45 ticks.\nLoot :\n- Grass Lush\n- Stone\n- Light Feathers\n- Windwillow Fruit\n- Windwillow Trunk\n- Crow\nCompletion rewards :\n- 1x Sandstone Cavern Crystal (unlocks Sandstone Cavern)
+expeditions.Windy_Steppe.name=Sandstone Cavern
+announcements.expedition_started.Windy_Steppe=Sandstone Cavern expedition started.
+announcements.expedition_completed.Windy_Steppe=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Windy_Steppe=New expedition unlocked: Sandstone Cavern
+progress.expedition.Windy_Steppe=Sandstone Cavern: {0}/{1} ticks remaining
+
+# GENERATED ─── Young Forest ────────────────────────────────────────────
+items.OneBlock_Block_Forest_Edge.name=OneBlock Young Forest
+items.OneBlock_Crystal_Forest_Edge.name=Young Forest Crystal
+items.OneBlock_Crystal_Forest_Edge.description=Consume to begin a Young Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Oak Trunk\n- Oak Leaves\n- Bush\n- Berries Red Fruit\nCompletion rewards :\n- 1x Young Forest Crystal (unlocks Young Forest)
+expeditions.Forest_Edge.name=Young Forest
+announcements.expedition_started.Forest_Edge=Young Forest expedition started.
+announcements.expedition_completed.Forest_Edge=Young Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Young Forest
+progress.expedition.Forest_Edge=Young Forest: {0}/{1} ticks remaining
+benchCategories.OneBlockEnchanter_Forest=Forest Crystals
+
+# GENERATED ─── Fairy Pond ───────────────────────────────────────────
+items.OneBlock_Block_Young_Forest.name=OneBlock Fairy Pond
+items.OneBlock_Crystal_Young_Forest.name=Fairy Pond Crystal
+items.OneBlock_Crystal_Young_Forest.description=Consume to begin a Fairy Pond expedition.\n35 ticks.\nLoot :\n- Oak Trunk\n- Beech Trunk\n- Stick\n- Oak Leaves\n- Apple Fruit\n- Boar\nCompletion rewards :\n- 1x Deep Forest Crystal (unlocks Deep Forest)\n- 1x Mushroom Grove Crystal (unlocks Mushroom Grove)\n- 1x Fairy Pond Crystal (unlocks Fairy Pond)
+expeditions.Young_Forest.name=Fairy Pond
+announcements.expedition_started.Young_Forest=Fairy Pond expedition started.
+announcements.expedition_completed.Young_Forest=Fairy Pond expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Young_Forest=New expedition unlocked: Fairy Pond
+progress.expedition.Young_Forest=Fairy Pond: {0}/{1} ticks remaining
+
+# GENERATED ─── Time Locked Glade ────────────────────────────────────────────
+items.OneBlock_Block_Deep_Forest.name=OneBlock Time Locked Glade
+items.OneBlock_Crystal_Deep_Forest.name=Time Locked Glade Crystal
+items.OneBlock_Crystal_Deep_Forest.description=Consume to begin a Time Locked Glade expedition.\n45 ticks.\nLoot :\n- Beech Trunk\n- Birch Trunk\n- Maple Trunk\n- Vine\n- Brown Common Mushroom\n- Wolf\nCompletion rewards :\n- 1x Darkwood Thicket Crystal (unlocks Darkwood Thicket)\n- 1x Time Locked Glade Crystal (unlocks Time Locked Glade)
+expeditions.Deep_Forest.name=Time Locked Glade
+announcements.expedition_started.Deep_Forest=Time Locked Glade expedition started.
+announcements.expedition_completed.Deep_Forest=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Deep_Forest=New expedition unlocked: Time Locked Glade
+progress.expedition.Deep_Forest=Time Locked Glade: {0}/{1} ticks remaining
+
+# GENERATED ─── Time Locked Glade ─────────────────────────────────────────────
+items.OneBlock_Block_Fairy_Pond.name=OneBlock Time Locked Glade
+items.OneBlock_Crystal_Fairy_Pond.name=Time Locked Glade Crystal
+items.OneBlock_Crystal_Fairy_Pond.description=Consume to begin a Time Locked Glade expedition.\n40 ticks.\nLoot :\n- Lavender Block\n- White Petals\n- Cyan Crystal\n- Light Motes\n- Water Essence\n- Frog\nCompletion rewards :\n- 1x Time Locked Glade Crystal (unlocks Time Locked Glade)
+expeditions.Fairy_Pond.name=Time Locked Glade
+announcements.expedition_started.Fairy_Pond=Time Locked Glade expedition started.
+announcements.expedition_completed.Fairy_Pond=Time Locked Glade expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Fairy_Pond=New expedition unlocked: Time Locked Glade
+progress.expedition.Fairy_Pond=Time Locked Glade: {0}/{1} ticks remaining
+
+# GENERATED ─── Mushroom Grove ─────────────────────────────────────────
+items.OneBlock_Block_Mushroom_Grove.name=OneBlock Mushroom Grove
+items.OneBlock_Crystal_Mushroom_Grove.name=Mushroom Grove Crystal
+items.OneBlock_Crystal_Mushroom_Grove.description=Consume to begin a Mushroom Grove expedition.\n40 ticks.\nLoot :\n- Brown Common Mushroom\n- Brown Mushroom Block\n- Red Cap Mushroom\n- Green Flatcap Mushroom\n- Brown Shelve Mushroom\n- Spider\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Mushroom_Grove.name=Mushroom Grove
+announcements.expedition_started.Mushroom_Grove=Mushroom Grove expedition started.
+announcements.expedition_completed.Mushroom_Grove=Mushroom Grove expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mushroom_Grove=New expedition unlocked: Mushroom Grove
+progress.expedition.Mushroom_Grove=Mushroom Grove: {0}/{1} ticks remaining
+
+# GENERATED ─── Swamp Trail ───────────────────────────────────────
+items.OneBlock_Block_Darkwood_Thicket.name=OneBlock Swamp Trail
+items.OneBlock_Crystal_Darkwood_Thicket.name=Swamp Trail Crystal
+items.OneBlock_Crystal_Darkwood_Thicket.description=Consume to begin a Swamp Trail expedition.\n50 ticks.\nLoot :\n- Ash Trunk\n- Poisoned Trunk\n- Vine\n- Poisoned Floor Leaves\n- Venom Sac\n- Spider\nCompletion rewards :\n- 1x Swamp Trail Crystal (unlocks Swamp Trail)
+expeditions.Darkwood_Thicket.name=Swamp Trail
+announcements.expedition_started.Darkwood_Thicket=Swamp Trail expedition started.
+announcements.expedition_completed.Darkwood_Thicket=Swamp Trail expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Darkwood_Thicket=New expedition unlocked: Swamp Trail
+progress.expedition.Darkwood_Thicket=Swamp Trail: {0}/{1} ticks remaining
+
+# GENERATED ─── Swamp Ruins ────────────────────────────────────────────
+items.OneBlock_Block_Swamp_Trail.name=OneBlock Swamp Ruins
+items.OneBlock_Crystal_Swamp_Trail.name=Swamp Ruins Crystal
+items.OneBlock_Crystal_Swamp_Trail.description=Consume to begin a Swamp Ruins expedition.\n45 ticks.\nLoot :\n- Reeds Marsh\n- Mossy Stone\n- Vine Rug\n- Roots Leafy\n- Poison Cap Mushroom\n- Frog\nCompletion rewards :\n- 1x Sunken Swamp Crystal (unlocks Sunken Swamp)\n- 1x Swamp Ruins Crystal (unlocks Swamp Ruins)
+expeditions.Swamp_Trail.name=Swamp Ruins
+announcements.expedition_started.Swamp_Trail=Swamp Ruins expedition started.
+announcements.expedition_completed.Swamp_Trail=Swamp Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Swamp_Trail=New expedition unlocked: Swamp Ruins
+progress.expedition.Swamp_Trail=Swamp Ruins: {0}/{1} ticks remaining
+
+# GENERATED ─── Forgotten Marsh ───────────────────────────────────────────
+items.OneBlock_Block_Sunken_Swamp.name=OneBlock Forgotten Marsh
+items.OneBlock_Crystal_Sunken_Swamp.name=Forgotten Marsh Crystal
+items.OneBlock_Crystal_Sunken_Swamp.description=Consume to begin a Forgotten Marsh expedition.\n55 ticks.\nLoot :\n- Sallow Trunk\n- Reeds Marsh\n- Roots Leafy\n- Poison Cap Mushroom\n- Venom Sac\n- Crocodile\nCompletion rewards :\n- 1x Forgotten Marsh Crystal (unlocks Forgotten Marsh)
+expeditions.Sunken_Swamp.name=Forgotten Marsh
+announcements.expedition_started.Sunken_Swamp=Forgotten Marsh expedition started.
+announcements.expedition_completed.Sunken_Swamp=Forgotten Marsh expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunken_Swamp=New expedition unlocked: Forgotten Marsh
+progress.expedition.Sunken_Swamp=Forgotten Marsh: {0}/{1} ticks remaining
+
+# GENERATED ─── Swamp Ruins ────────────────────────────────────────────
+items.OneBlock_Block_Swamp_Ruins.name=OneBlock Swamp Ruins
+items.OneBlock_Crystal_Swamp_Ruins.name=Swamp Ruins Crystal
+items.OneBlock_Crystal_Swamp_Ruins.description=Consume to begin the Swamp Ruins dungeon.\n4 waves :\n  Wave 1: Fen Stalker, Spider\n  Wave 2: Fen Stalker, Zombie\n  Wave 3: Fen Stalker, Crawler, Spider\n  Wave 4: Large Aberrant Zombie\nCompletion rewards :\n- 1x SwampRuinsToken\n- 2x ExpeditionPoint\n- 1x OneBlock Crystal Forgotten Marsh
+expeditions.Swamp_Ruins.name=Swamp Ruins
+announcements.dungeon_started.Swamp_Ruins=Swamp Ruins dungeon started.
+announcements.dungeon_completed.Swamp_Ruins=Swamp Ruins dungeon complete. The OneBlock has returned to default.
+benchCategories.OneBlockDungeonEnchanter_Dungeon=Dungeon Crystals
+
+# GENERATED ─── Desert Fringe ────────────────────────────────────────
+items.OneBlock_Block_Forgotten_Marsh.name=OneBlock Desert Fringe
+items.OneBlock_Crystal_Forgotten_Marsh.name=Desert Fringe Crystal
+items.OneBlock_Crystal_Forgotten_Marsh.description=Consume to begin a Desert Fringe expedition.\n60 ticks.\nLoot :\n- Poisoned Trunk\n- Poison Cap Mushroom\n- Reeds Marsh\n- Bone Fragment\n- Void Essence\n- Fen Stalker\nCompletion rewards :\n- 1x Desert Fringe Crystal (unlocks Desert Fringe)
+expeditions.Forgotten_Marsh.name=Desert Fringe
+announcements.expedition_started.Forgotten_Marsh=Desert Fringe expedition started.
+announcements.expedition_completed.Forgotten_Marsh=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Forgotten_Marsh=New expedition unlocked: Desert Fringe
+progress.expedition.Forgotten_Marsh=Desert Fringe: {0}/{1} ticks remaining
+
+# GENERATED ─── Primeval Forest ──────────────────────────────────────
+items.OneBlock_Block_Time_Locked_Glade.name=OneBlock Primeval Forest
+items.OneBlock_Crystal_Time_Locked_Glade.name=Primeval Forest Crystal
+items.OneBlock_Crystal_Time_Locked_Glade.description=Consume to begin a Primeval Forest expedition.\n55 ticks.\nLoot :\n- Crystal Trunk\n- Spiral Trunk\n- Spiral Fruit\n- Green Crystal\n- Light Motes\n- Archaeopteryx\nCompletion rewards :\n- 1x Primeval Forest Crystal (unlocks Primeval Forest)
+expeditions.Time_Locked_Glade.name=Primeval Forest
+announcements.expedition_started.Time_Locked_Glade=Primeval Forest expedition started.
+announcements.expedition_completed.Time_Locked_Glade=Primeval Forest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Time_Locked_Glade=New expedition unlocked: Primeval Forest
+progress.expedition.Time_Locked_Glade=Primeval Forest: {0}/{1} ticks remaining
+
+# GENERATED ─── Dinosaur Nest ────────────────────────────────────────
+items.OneBlock_Block_Primeval_Forest.name=OneBlock Dinosaur Nest
+items.OneBlock_Crystal_Primeval_Forest.name=Dinosaur Nest Crystal
+items.OneBlock_Crystal_Primeval_Forest.description=Consume to begin a Dinosaur Nest expedition.\n65 ticks.\nLoot :\n- Primal Stone\n- Primal Fern\n- Giant Jungle Leaf\n- Dinosaur Fossil\n- Primal Meat\n- Cave Raptor\nCompletion rewards :\n- 1x Dinosaur Nest Crystal (unlocks Dinosaur Nest)
+expeditions.Primeval_Forest.name=Dinosaur Nest
+announcements.expedition_started.Primeval_Forest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Primeval_Forest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Primeval_Forest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Primeval_Forest=Dinosaur Nest: {0}/{1} ticks remaining
+
+# GENERATED ─── Dinosaur Nest ──────────────────────────────────────────
+items.OneBlock_Block_Dinosaur_Nest.name=OneBlock Dinosaur Nest
+items.OneBlock_Crystal_Dinosaur_Nest.name=Dinosaur Nest Crystal
+items.OneBlock_Crystal_Dinosaur_Nest.description=Consume to begin a Dinosaur Nest expedition.\n70 ticks.\nLoot :\n- Dinosaur Bone\n- Dinosaur Fossil\n- Cave Raptor Claw\n- Cave Rex Tooth\n- Primal Core\n- Cave Raptor\n- Cave Rex\nCompletion rewards :\n- 2x ExpeditionPoint
+expeditions.Dinosaur_Nest.name=Dinosaur Nest
+announcements.expedition_started.Dinosaur_Nest=Dinosaur Nest expedition started.
+announcements.expedition_completed.Dinosaur_Nest=Dinosaur Nest expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Dinosaur_Nest=New expedition unlocked: Dinosaur Nest
+progress.expedition.Dinosaur_Nest=Dinosaur Nest: {0}/{1} ticks remaining
+
+# GENERATED ─── Stone Gallery ─────────────────────────────────────────────
+items.OneBlock_Block_Cave_Entry.name=OneBlock Stone Gallery
+items.OneBlock_Crystal_Cave_Entry.name=Stone Gallery Crystal
+items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Stone Gallery expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\n- Shale\n- Slate\n- Bat\n- Rat\nCompletion rewards :\n- 1x Shallow Cave Crystal (unlocks Shallow Cave)\n- 1x Stone Gallery Crystal (unlocks Stone Gallery)
+expeditions.Cave_Entry.name=Stone Gallery
+announcements.expedition_started.Cave_Entry=Stone Gallery expedition started.
+announcements.expedition_completed.Cave_Entry=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Stone Gallery
+progress.expedition.Cave_Entry=Stone Gallery: {0}/{1} ticks remaining
+benchCategories.OneBlockEnchanter_Underground=Underground Crystals
+
+# GENERATED ─── Mossy Cave ───────────────────────────────────────────
+items.OneBlock_Block_Shallow_Cave.name=OneBlock Mossy Cave
+items.OneBlock_Crystal_Shallow_Cave.name=Mossy Cave Crystal
+items.OneBlock_Crystal_Shallow_Cave.description=Consume to begin a Mossy Cave expedition.\n35 ticks.\nLoot :\n- Stone\n- Rubble Stone\n- Shale\n- Slate\n- Roots Cave\n- Bat\nCompletion rewards :\n- 1x Copper Cave Crystal (unlocks Copper Cave)\n- 1x Mossy Cave Crystal (unlocks Mossy Cave)
+expeditions.Shallow_Cave.name=Mossy Cave
+announcements.expedition_started.Shallow_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Shallow_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Shallow_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Shallow_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+# GENERATED ─── Stone Gallery ──────────────────────────────────────────
+items.OneBlock_Block_Stone_Gallery.name=OneBlock Stone Gallery
+items.OneBlock_Crystal_Stone_Gallery.name=Stone Gallery Crystal
+items.OneBlock_Crystal_Stone_Gallery.description=Consume to begin a Stone Gallery expedition.\n35 ticks.\nLoot :\n- Rubble Stone\n- Stone\n- Shale\n- Slate\n- Mossy Stone\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Stone_Gallery.name=Stone Gallery
+announcements.expedition_started.Stone_Gallery=Stone Gallery expedition started.
+announcements.expedition_completed.Stone_Gallery=Stone Gallery expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Stone_Gallery=New expedition unlocked: Stone Gallery
+progress.expedition.Stone_Gallery=Stone Gallery: {0}/{1} ticks remaining
+
+# GENERATED ─── Mossy Cave ─────────────────────────────────────────────
+items.OneBlock_Block_Mossy_Cave.name=OneBlock Mossy Cave
+items.OneBlock_Crystal_Mossy_Cave.name=Mossy Cave Crystal
+items.OneBlock_Crystal_Mossy_Cave.description=Consume to begin a Mossy Cave expedition.\n40 ticks.\nLoot :\n- Mossy Stone\n- Roots Cave\n- Roots Cave Small\n- Green Glowing Mushroom\n- Brown Common Mushroom\n- Cave Spider\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Mossy_Cave.name=Mossy Cave
+announcements.expedition_started.Mossy_Cave=Mossy Cave expedition started.
+announcements.expedition_completed.Mossy_Cave=Mossy Cave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mossy_Cave=New expedition unlocked: Mossy Cave
+progress.expedition.Mossy_Cave=Mossy Cave: {0}/{1} ticks remaining
+
+# GENERATED ─── Gobelin Camp ────────────────────────────────────────────
+items.OneBlock_Block_Copper_Cave.name=OneBlock Gobelin Camp
+items.OneBlock_Crystal_Copper_Cave.name=Gobelin Camp Crystal
+items.OneBlock_Crystal_Copper_Cave.description=Consume to begin a Gobelin Camp expedition.\n45 ticks.\nLoot :\n- Stone\n- Copper Ore\n- Rubble Stone\n- Shale\n- Bat\n- Goblin Miner\nCompletion rewards :\n- 1x Iron Hollow Crystal (unlocks Iron Hollow)\n- 1x Gobelin Camp Crystal (unlocks Gobelin Camp)
+expeditions.Copper_Cave.name=Gobelin Camp
+announcements.expedition_started.Copper_Cave=Gobelin Camp expedition started.
+announcements.expedition_completed.Copper_Cave=Gobelin Camp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Copper_Cave=New expedition unlocked: Gobelin Camp
+progress.expedition.Copper_Cave=Gobelin Camp: {0}/{1} ticks remaining
+
+# GENERATED ─── Sandstone Cavern ────────────────────────────────────────────
+items.OneBlock_Block_Iron_Hollow.name=OneBlock Sandstone Cavern
+items.OneBlock_Crystal_Iron_Hollow.name=Sandstone Cavern Crystal
+items.OneBlock_Crystal_Iron_Hollow.description=Consume to begin a Sandstone Cavern expedition.\n50 ticks.\nLoot :\n- Stone\n- Copper Ore\n- Iron Ore\n- Slate\n- Stud Iron\n- Cave Spider\nCompletion rewards :\n- 1x Abandoned Mine Crystal (unlocks Abandoned Mine)\n- 1x Frozen Cavern Crystal (unlocks Frozen Cavern)\n- 1x Sandstone Cavern Crystal (unlocks Sandstone Cavern)
+expeditions.Iron_Hollow.name=Sandstone Cavern
+announcements.expedition_started.Iron_Hollow=Sandstone Cavern expedition started.
+announcements.expedition_completed.Iron_Hollow=Sandstone Cavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Iron_Hollow=New expedition unlocked: Sandstone Cavern
+progress.expedition.Iron_Hollow=Sandstone Cavern: {0}/{1} ticks remaining
+
+# GENERATED ─── Abandoned Mine ─────────────────────────────────────────
+items.OneBlock_Block_Abandoned_Mine.name=OneBlock Abandoned Mine
+items.OneBlock_Crystal_Abandoned_Mine.name=Abandoned Mine Crystal
+items.OneBlock_Crystal_Abandoned_Mine.description=Consume to begin the Abandoned Mine dungeon.\n4 waves :\n  Wave 1: Goblin Miner, Goblin Miner\n  Wave 2: Goblin Miner Patrol, Goblin Scavenger\n  Wave 3: Goblin Scrapper, Goblin Lobber\n  Wave 4: Goblin Ogre\nCompletion rewards :\n- 1x AbandonedMineToken\n- 2x ExpeditionPoint\n- 1x OneBlock Crystal Basalt Gate
+expeditions.Abandoned_Mine.name=Abandoned Mine
+announcements.dungeon_started.Abandoned_Mine=Abandoned Mine dungeon started.
+announcements.dungeon_completed.Abandoned_Mine=Abandoned Mine dungeon complete. The OneBlock has returned to default.
+
+# GENERATED ─── Basalt Depths ────────────────────────────────────────────
+items.OneBlock_Block_Basalt_Gate.name=OneBlock Basalt Depths
+items.OneBlock_Crystal_Basalt_Gate.name=Basalt Depths Crystal
+items.OneBlock_Crystal_Basalt_Gate.description=Consume to begin a Basalt Depths expedition.\n55 ticks.\nLoot :\n- Basalt\n- Iron Ore\n- Volcanic\n- Charcoal\n- Thorium Ore\n- Earth Elemental\nCompletion rewards :\n- 1x Basalt Depths Crystal (unlocks Basalt Depths)
+expeditions.Basalt_Gate.name=Basalt Depths
+announcements.expedition_started.Basalt_Gate=Basalt Depths expedition started.
+announcements.expedition_completed.Basalt_Gate=Basalt Depths expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Gate=New expedition unlocked: Basalt Depths
+progress.expedition.Basalt_Gate=Basalt Depths: {0}/{1} ticks remaining
+
+# GENERATED ─── Crystal Grotto ──────────────────────────────────────────
+items.OneBlock_Block_Basalt_Depths.name=OneBlock Crystal Grotto
+items.OneBlock_Crystal_Basalt_Depths.name=Crystal Grotto Crystal
+items.OneBlock_Crystal_Basalt_Depths.description=Consume to begin a Crystal Grotto expedition.\n60 ticks.\nLoot :\n- Basalt\n- Volcanic\n- Iron Ore\n- Thorium Ore\n- Fire Essence\n- Earthen Golem\nCompletion rewards :\n- 1x Thorium Fissure Crystal (unlocks Thorium Fissure)\n- 1x Crystal Grotto Crystal (unlocks Crystal Grotto)
+expeditions.Basalt_Depths.name=Crystal Grotto
+announcements.expedition_started.Basalt_Depths=Crystal Grotto expedition started.
+announcements.expedition_completed.Basalt_Depths=Crystal Grotto expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Basalt_Depths=New expedition unlocked: Crystal Grotto
+progress.expedition.Basalt_Depths=Crystal Grotto: {0}/{1} ticks remaining
+
+# GENERATED ─── Cobalt Chasm ────────────────────────────────────────
+items.OneBlock_Block_Thorium_Fissure.name=OneBlock Cobalt Chasm
+items.OneBlock_Crystal_Thorium_Fissure.name=Cobalt Chasm Crystal
+items.OneBlock_Crystal_Thorium_Fissure.description=Consume to begin a Cobalt Chasm expedition.\n65 ticks.\nLoot :\n- Basalt\n- Thorium Ore\n- Volcanic\n- Cobalt Ore\n- Fire Essence\n- Ember Golem\nCompletion rewards :\n- 1x Cobalt Chasm Crystal (unlocks Cobalt Chasm)
+expeditions.Thorium_Fissure.name=Cobalt Chasm
+announcements.expedition_started.Thorium_Fissure=Cobalt Chasm expedition started.
+announcements.expedition_completed.Thorium_Fissure=Cobalt Chasm expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Thorium_Fissure=New expedition unlocked: Cobalt Chasm
+progress.expedition.Thorium_Fissure=Cobalt Chasm: {0}/{1} ticks remaining
+
+# GENERATED ─── Mithril Vein ───────────────────────────────────────────
+items.OneBlock_Block_Cobalt_Chasm.name=OneBlock Mithril Vein
+items.OneBlock_Crystal_Cobalt_Chasm.name=Mithril Vein Crystal
+items.OneBlock_Crystal_Cobalt_Chasm.description=Consume to begin a Mithril Vein expedition.\n70 ticks.\nLoot :\n- Basalt\n- Thorium Ore\n- Cobalt Ore\n- Sapphire Gem\n- Lightning Essence\n- Thunder Golem\nCompletion rewards :\n- 1x Mithril Vein Crystal (unlocks Mithril Vein)
+expeditions.Cobalt_Chasm.name=Mithril Vein
+announcements.expedition_started.Cobalt_Chasm=Mithril Vein expedition started.
+announcements.expedition_completed.Cobalt_Chasm=Mithril Vein expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cobalt_Chasm=New expedition unlocked: Mithril Vein
+progress.expedition.Cobalt_Chasm=Mithril Vein: {0}/{1} ticks remaining
+
+# GENERATED ─── Onyxium Pocket ───────────────────────────────────────────
+items.OneBlock_Block_Mithril_Vein.name=OneBlock Onyxium Pocket
+items.OneBlock_Crystal_Mithril_Vein.name=Onyxium Pocket Crystal
+items.OneBlock_Crystal_Mithril_Vein.description=Consume to begin a Onyxium Pocket expedition.\n75 ticks.\nLoot :\n- Mithril Ore\n- Cobalt Ore\n- Emerald Gem\n- Sapphire Gem\n- Cyan Crystal\n- Earth Elemental\nCompletion rewards :\n- 1x Onyxium Pocket Crystal (unlocks Onyxium Pocket)
+expeditions.Mithril_Vein.name=Onyxium Pocket
+announcements.expedition_started.Mithril_Vein=Onyxium Pocket expedition started.
+announcements.expedition_completed.Mithril_Vein=Onyxium Pocket expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Mithril_Vein=New expedition unlocked: Onyxium Pocket
+progress.expedition.Mithril_Vein=Onyxium Pocket: {0}/{1} ticks remaining
+
+# GENERATED ─── Adamantite Core ─────────────────────────────────────────
+items.OneBlock_Block_Onyxium_Pocket.name=OneBlock Adamantite Core
+items.OneBlock_Crystal_Onyxium_Pocket.name=Adamantite Core Crystal
+items.OneBlock_Crystal_Onyxium_Pocket.description=Consume to begin a Adamantite Core expedition.\n80 ticks.\nLoot :\n- Onyxium Ore\n- Mithril Ore\n- Diamond Gem\n- Void Essence\n- Voidheart\n- Void Crawler\nCompletion rewards :\n- 1x Adamantite Core Crystal (unlocks Adamantite Core)
+expeditions.Onyxium_Pocket.name=Adamantite Core
+announcements.expedition_started.Onyxium_Pocket=Adamantite Core expedition started.
+announcements.expedition_completed.Onyxium_Pocket=Adamantite Core expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Onyxium_Pocket=New expedition unlocked: Adamantite Core
+progress.expedition.Onyxium_Pocket=Adamantite Core: {0}/{1} ticks remaining
+benchCategories.OneBlockEnchanter_Dark=Dark Crystals
+
+# GENERATED ─── Prisma Crystal Mine ────────────────────────────────────────
+items.OneBlock_Block_Adamantite_Core.name=OneBlock Prisma Crystal Mine
+items.OneBlock_Crystal_Adamantite_Core.name=Prisma Crystal Mine Crystal
+items.OneBlock_Crystal_Adamantite_Core.description=Consume to begin a Prisma Crystal Mine expedition.\n90 ticks.\nLoot :\n- Adamantite Ore\n- Onyxium Ore\n- Diamond Gem\n- Zephyr Gem\n- Voidheart\n- Void Spectre\nCompletion rewards :\n- 1x Prisma Crystal Mine Crystal (unlocks Prisma Crystal Mine)
+expeditions.Adamantite_Core.name=Prisma Crystal Mine
+announcements.expedition_started.Adamantite_Core=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Adamantite_Core=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Adamantite_Core=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Adamantite_Core=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+# GENERATED ─── Prisma Crystal Mine ────────────────────────────────────
+items.OneBlock_Block_Prisma_Crystal_Mine.name=OneBlock Prisma Crystal Mine
+items.OneBlock_Crystal_Prisma_Crystal_Mine.name=Prisma Crystal Mine Crystal
+items.OneBlock_Crystal_Prisma_Crystal_Mine.description=Consume to begin a Prisma Crystal Mine expedition.\n100 ticks.\nLoot :\n- Prisma Ore\n- Adamantite Ore\n- Zephyr Gem\n- White Crystal\n- Prisma Bar\n- Void Eye\nCompletion rewards :\n- 4x ExpeditionPoint
+expeditions.Prisma_Crystal_Mine.name=Prisma Crystal Mine
+announcements.expedition_started.Prisma_Crystal_Mine=Prisma Crystal Mine expedition started.
+announcements.expedition_completed.Prisma_Crystal_Mine=Prisma Crystal Mine expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Prisma_Crystal_Mine=New expedition unlocked: Prisma Crystal Mine
+progress.expedition.Prisma_Crystal_Mine=Prisma Crystal Mine: {0}/{1} ticks remaining
+
+# GENERATED ─── Frozen Ruins ─────────────────────────────────────────
+items.OneBlock_Block_Crystal_Grotto.name=OneBlock Frozen Ruins
+items.OneBlock_Crystal_Crystal_Grotto.name=Frozen Ruins Crystal
+items.OneBlock_Crystal_Crystal_Grotto.description=Consume to begin a Frozen Ruins expedition.\n60 ticks.\nLoot :\n- Blue Crystal\n- Cyan Crystal\n- Sapphire Gem\n- Emerald Gem\n- Topaz Gem\n- Earth Elemental\nCompletion rewards :\n- 1x Frozen Ruins Crystal (unlocks Frozen Ruins)
+expeditions.Crystal_Grotto.name=Frozen Ruins
+announcements.expedition_started.Crystal_Grotto=Frozen Ruins expedition started.
+announcements.expedition_completed.Crystal_Grotto=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Crystal_Grotto=New expedition unlocked: Frozen Ruins
+progress.expedition.Crystal_Grotto=Frozen Ruins: {0}/{1} ticks remaining
+
+# GENERATED ─── Snowy Pass ──────────────────────────────────────────
+items.OneBlock_Block_Frozen_Cavern.name=OneBlock Snowy Pass
+items.OneBlock_Crystal_Frozen_Cavern.name=Snowy Pass Crystal
+items.OneBlock_Crystal_Frozen_Cavern.description=Consume to begin a Snowy Pass expedition.\n55 ticks.\nLoot :\n- Ice\n- Permafrost Ice\n- Blue Ice\n- Snow\n- Iron Ore\n- Frost Zombie\nCompletion rewards :\n- 1x Snowy Pass Crystal (unlocks Snowy Pass)
+expeditions.Frozen_Cavern.name=Snowy Pass
+announcements.expedition_started.Frozen_Cavern=Snowy Pass expedition started.
+announcements.expedition_completed.Frozen_Cavern=Snowy Pass expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frozen_Cavern=New expedition unlocked: Snowy Pass
+progress.expedition.Frozen_Cavern=Snowy Pass: {0}/{1} ticks remaining
+benchCategories.OneBlockEnchanter_Cold=Cold Crystals
+
+# GENERATED ─── Snowy Plains ─────────────────────────────────────────────
+items.OneBlock_Block_Snowy_Pass.name=OneBlock Snowy Plains
+items.OneBlock_Crystal_Snowy_Pass.name=Snowy Plains Crystal
+items.OneBlock_Crystal_Snowy_Pass.description=Consume to begin a Snowy Plains expedition.\n60 ticks.\nLoot :\n- Snow\n- Packed Snow\n- Clear Ice\n- Snow Shrub\n- Ice Essence\n- Wolf\nCompletion rewards :\n- 1x Snowy Plains Crystal (unlocks Snowy Plains)
+expeditions.Snowy_Pass.name=Snowy Plains
+announcements.expedition_started.Snowy_Pass=Snowy Plains expedition started.
+announcements.expedition_completed.Snowy_Pass=Snowy Plains expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Pass=New expedition unlocked: Snowy Plains
+progress.expedition.Snowy_Pass=Snowy Plains: {0}/{1} ticks remaining
+
+# GENERATED ─── Whitefang Den ───────────────────────────────────────────
+items.OneBlock_Block_Snowy_Plains.name=OneBlock Whitefang Den
+items.OneBlock_Crystal_Snowy_Plains.name=Whitefang Den Crystal
+items.OneBlock_Crystal_Snowy_Plains.description=Consume to begin a Whitefang Den expedition.\n65 ticks.\nLoot :\n- Packed Snow\n- Frozen Grass\n- Frost Fern\n- Heavy Hide\n- Ice Essence\n- Bison\nCompletion rewards :\n- 1x Frostpine Forest Crystal (unlocks Frostpine Forest)\n- 1x Ice Lake Crystal (unlocks Ice Lake)\n- 1x Whitefang Den Crystal (unlocks Whitefang Den)
+expeditions.Snowy_Plains.name=Whitefang Den
+announcements.expedition_started.Snowy_Plains=Whitefang Den expedition started.
+announcements.expedition_completed.Snowy_Plains=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Snowy_Plains=New expedition unlocked: Whitefang Den
+progress.expedition.Snowy_Plains=Whitefang Den: {0}/{1} ticks remaining
+
+# GENERATED ─── Frozen Ruins ───────────────────────────────────────
+items.OneBlock_Block_Frostpine_Forest.name=OneBlock Frozen Ruins
+items.OneBlock_Crystal_Frostpine_Forest.name=Frozen Ruins Crystal
+items.OneBlock_Crystal_Frostpine_Forest.description=Consume to begin a Frozen Ruins expedition.\n65 ticks.\nLoot :\n- Fir Trunk\n- Ice Trunk\n- Frost Fern\n- Tree Bark\n- Ice Essence\n- Wolf\nCompletion rewards :\n- 1x Frozen Ruins Crystal (unlocks Frozen Ruins)
+expeditions.Frostpine_Forest.name=Frozen Ruins
+announcements.expedition_started.Frostpine_Forest=Frozen Ruins expedition started.
+announcements.expedition_completed.Frostpine_Forest=Frozen Ruins expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Frostpine_Forest=New expedition unlocked: Frozen Ruins
+progress.expedition.Frostpine_Forest=Frozen Ruins: {0}/{1} ticks remaining
+
+# GENERATED ─── Ice Lake ───────────────────────────────────────────────
+items.OneBlock_Block_Ice_Lake.name=OneBlock Ice Lake
+items.OneBlock_Crystal_Ice_Lake.name=Ice Lake Crystal
+items.OneBlock_Crystal_Ice_Lake.description=Consume to begin a Ice Lake expedition.\n60 ticks.\nLoot :\n- Clear Ice\n- Frozen Water\n- Blue Ice\n- Water Essence\n- Ice Essence\n- Bluegill\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Ice_Lake.name=Ice Lake
+announcements.expedition_started.Ice_Lake=Ice Lake expedition started.
+announcements.expedition_completed.Ice_Lake=Ice Lake expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Ice_Lake=New expedition unlocked: Ice Lake
+progress.expedition.Ice_Lake=Ice Lake: {0}/{1} ticks remaining
+
+# GENERATED ─── Whitefang Den ──────────────────────────────────────────
+items.OneBlock_Block_Whitefang_Den.name=OneBlock Whitefang Den
+items.OneBlock_Crystal_Whitefang_Den.name=Whitefang Den Crystal
+items.OneBlock_Crystal_Whitefang_Den.description=Consume to begin a Whitefang Den expedition.\n65 ticks.\nLoot :\n- Heavy Hide\n- Heavy Leather\n- Bone Fragment\n- Permafrost\n- Ice Essence\n- Wolf\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Whitefang_Den.name=Whitefang Den
+announcements.expedition_started.Whitefang_Den=Whitefang Den expedition started.
+announcements.expedition_completed.Whitefang_Den=Whitefang Den expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Whitefang_Den=New expedition unlocked: Whitefang Den
+progress.expedition.Whitefang_Den=Whitefang Den: {0}/{1} ticks remaining
+
+# GENERATED ─── Frozen Ruins ───────────────────────────────────────────
+items.OneBlock_Block_Frozen_Ruins.name=OneBlock Frozen Ruins
+items.OneBlock_Crystal_Frozen_Ruins.name=Frozen Ruins Crystal
+items.OneBlock_Crystal_Frozen_Ruins.description=Consume to begin the Frozen Ruins dungeon.\n4 waves :\n  Wave 1: Frost Skeleton Scout, Frost Skeleton Scout\n  Wave 2: Frost Skeleton Fighter, Frost Skeleton Ranger\n  Wave 3: Frost Skeleton Knight, Frost Skeleton Mage\n  Wave 4: Frost Golem\nCompletion rewards :\n- 1x FrozenRuinsToken\n- 2x ExpeditionPoint\n- 1x OneBlock Crystal Polar Necropolis
+expeditions.Frozen_Ruins.name=Frozen Ruins
+announcements.dungeon_started.Frozen_Ruins=Frozen Ruins dungeon started.
+announcements.dungeon_completed.Frozen_Ruins=Frozen Ruins dungeon complete. The OneBlock has returned to default.
+
+# GENERATED ─── Polar Necropolis ───────────────────────────────────────
+items.OneBlock_Block_Polar_Necropolis.name=OneBlock Polar Necropolis
+items.OneBlock_Crystal_Polar_Necropolis.name=Polar Necropolis Crystal
+items.OneBlock_Crystal_Polar_Necropolis.description=Consume to begin a Polar Necropolis expedition.\n80 ticks.\nLoot :\n- Ice Cobalt Ore\n- Glacial Crystal\n- Frozen Stone\n- Ice Essence\n- Ice Dragon Scale\n- Ice Dragon\nCompletion rewards :\n- 3x ExpeditionPoint
+expeditions.Polar_Necropolis.name=Polar Necropolis
+announcements.expedition_started.Polar_Necropolis=Polar Necropolis expedition started.
+announcements.expedition_completed.Polar_Necropolis=Polar Necropolis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Polar_Necropolis=New expedition unlocked: Polar Necropolis
+progress.expedition.Polar_Necropolis=Polar Necropolis: {0}/{1} ticks remaining
+
+# GENERATED ─── Desert Fringe ───────────────────────────────────────
+items.OneBlock_Block_Sandstone_Cavern.name=OneBlock Desert Fringe
+items.OneBlock_Crystal_Sandstone_Cavern.name=Desert Fringe Crystal
+items.OneBlock_Crystal_Sandstone_Cavern.description=Consume to begin a Desert Fringe expedition.\n55 ticks.\nLoot :\n- Sandstone\n- Rough Sandstone\n- Sand\n- Copper Ore\n- Iron Ore\n- Crawler\nCompletion rewards :\n- 1x Desert Fringe Crystal (unlocks Desert Fringe)
+expeditions.Sandstone_Cavern.name=Desert Fringe
+announcements.expedition_started.Sandstone_Cavern=Desert Fringe expedition started.
+announcements.expedition_completed.Sandstone_Cavern=Desert Fringe expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sandstone_Cavern=New expedition unlocked: Desert Fringe
+progress.expedition.Sandstone_Cavern=Desert Fringe: {0}/{1} ticks remaining
+
+# GENERATED ─── Cactus Flats ──────────────────────────────────────────
+items.OneBlock_Block_Desert_Fringe.name=OneBlock Cactus Flats
+items.OneBlock_Crystal_Desert_Fringe.name=Cactus Flats Crystal
+items.OneBlock_Crystal_Desert_Fringe.description=Consume to begin a Cactus Flats expedition.\n60 ticks.\nLoot :\n- Sand\n- Desert Hardened Earth\n- Desert Dry Shrub\n- Cactus 1\n- Camel Hide\n- Camel\nCompletion rewards :\n- 1x Oasis Crystal (unlocks Oasis)\n- 1x Scorpion Dunes Crystal (unlocks Scorpion Dunes)\n- 1x Cactus Flats Crystal (unlocks Cactus Flats)
+expeditions.Desert_Fringe.name=Cactus Flats
+announcements.expedition_started.Desert_Fringe=Cactus Flats expedition started.
+announcements.expedition_completed.Desert_Fringe=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Desert_Fringe=New expedition unlocked: Cactus Flats
+progress.expedition.Desert_Fringe=Cactus Flats: {0}/{1} ticks remaining
+
+# GENERATED ─── Oasis ──────────────────────────────────────────────────
+items.OneBlock_Block_Oasis.name=OneBlock Oasis
+items.OneBlock_Crystal_Oasis.name=Oasis Crystal
+items.OneBlock_Crystal_Oasis.description=Consume to begin a Oasis expedition.\n55 ticks.\nLoot :\n- Palm Trunk\n- Coconut Fruit\n- Reeds Marsh\n- Desert Blue Aloe\n- Water Essence\n- Duck\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Oasis.name=Oasis
+announcements.expedition_started.Oasis=Oasis expedition started.
+announcements.expedition_completed.Oasis=Oasis expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Oasis=New expedition unlocked: Oasis
+progress.expedition.Oasis=Oasis: {0}/{1} ticks remaining
+
+# GENERATED ─── Desert Temple ─────────────────────────────────────────
+items.OneBlock_Block_Scorpion_Dunes.name=OneBlock Desert Temple
+items.OneBlock_Crystal_Scorpion_Dunes.name=Desert Temple Crystal
+items.OneBlock_Crystal_Scorpion_Dunes.description=Consume to begin a Desert Temple expedition.\n65 ticks.\nLoot :\n- Sand\n- Red Sand\n- Desert Saltbush\n- Scorpion Shell\n- Scorpion Claw\n- Cactee\nCompletion rewards :\n- 1x Desert Temple Crystal (unlocks Desert Temple)
+expeditions.Scorpion_Dunes.name=Desert Temple
+announcements.expedition_started.Scorpion_Dunes=Desert Temple expedition started.
+announcements.expedition_completed.Scorpion_Dunes=Desert Temple expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Scorpion_Dunes=New expedition unlocked: Desert Temple
+progress.expedition.Scorpion_Dunes=Desert Temple: {0}/{1} ticks remaining
+
+# GENERATED ─── Cactus Flats ───────────────────────────────────────────
+items.OneBlock_Block_Cactus_Flats.name=OneBlock Cactus Flats
+items.OneBlock_Crystal_Cactus_Flats.name=Cactus Flats Crystal
+items.OneBlock_Crystal_Cactus_Flats.description=Consume to begin a Cactus Flats expedition.\n60 ticks.\nLoot :\n- Cactus 1\n- Cactus 2\n- Cactus 3\n- Cactus Ball 1\n- Cactus Flower\n- Armadillo\nCompletion rewards :\n- 1x ExpeditionPoint
+expeditions.Cactus_Flats.name=Cactus Flats
+announcements.expedition_started.Cactus_Flats=Cactus Flats expedition started.
+announcements.expedition_completed.Cactus_Flats=Cactus Flats expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Cactus_Flats=New expedition unlocked: Cactus Flats
+progress.expedition.Cactus_Flats=Cactus Flats: {0}/{1} ticks remaining
+
+# GENERATED ─── Desert Temple ──────────────────────────────────────────
+items.OneBlock_Block_Desert_Temple.name=OneBlock Desert Temple
+items.OneBlock_Crystal_Desert_Temple.name=Desert Temple Crystal
+items.OneBlock_Crystal_Desert_Temple.description=Consume to begin the Desert Temple dungeon.\n4 waves :\n  Wave 1: Sandswept Zombie, Sandswept Zombie\n  Wave 2: Skeleton Scout, Skeleton Archer\n  Wave 3: Skeleton Knight, Skeleton Mage\n  Wave 4: Sand Empress\nCompletion rewards :\n- 1x DesertTempleToken\n- 2x ExpeditionPoint\n- 1x OneBlock Crystal Pharaoh Catacombs
+expeditions.Desert_Temple.name=Desert Temple
+announcements.dungeon_started.Desert_Temple=Desert Temple dungeon started.
+announcements.dungeon_completed.Desert_Temple=Desert Temple dungeon complete. The OneBlock has returned to default.
+
+# GENERATED ─── Pharaoh Catacombs ──────────────────────────────────────
+items.OneBlock_Block_Pharaoh_Catacombs.name=OneBlock Pharaoh Catacombs
+items.OneBlock_Crystal_Pharaoh_Catacombs.name=Pharaoh Catacombs Crystal
+items.OneBlock_Crystal_Pharaoh_Catacombs.description=Consume to begin the Pharaoh Catacombs dungeon.\n5 waves :\n  Wave 1: Skeleton Soldier, Skeleton Archer\n  Wave 2: Skeleton Knight, Skeleton Ranger\n  Wave 3: Skeleton Mage, Skeleton Fighter, Sandswept Zombie\n  Wave 4: Skeleton Archmage, Skeleton Knight\n  Wave 5: Sand Empress\nCompletion rewards :\n- 1x PharaohCatacombsToken\n- 3x ExpeditionPoint\n- 1x OneBlock Crystal Sunfire Tomb
+expeditions.Pharaoh_Catacombs.name=Pharaoh Catacombs
+announcements.dungeon_started.Pharaoh_Catacombs=Pharaoh Catacombs dungeon started.
+announcements.dungeon_completed.Pharaoh_Catacombs=Pharaoh Catacombs dungeon complete. The OneBlock has returned to default.
+
+# GENERATED ─── Sunfire Tomb ───────────────────────────────────────────
+items.OneBlock_Block_Sunfire_Tomb.name=OneBlock Sunfire Tomb
+items.OneBlock_Crystal_Sunfire_Tomb.name=Sunfire Tomb Crystal
+items.OneBlock_Crystal_Sunfire_Tomb.description=Consume to begin a Sunfire Tomb expedition.\n85 ticks.\nLoot :\n- Desert Thorium Ore\n- Ruby Gem\n- Fire Essence\n- Red Sandstone\n- Fossil Desert Rock\n- Burnt Skeleton Wizard\nCompletion rewards :\n- 3x ExpeditionPoint
+expeditions.Sunfire_Tomb.name=Sunfire Tomb
+announcements.expedition_started.Sunfire_Tomb=Sunfire Tomb expedition started.
+announcements.expedition_completed.Sunfire_Tomb=Sunfire Tomb expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Sunfire_Tomb=New expedition unlocked: Sunfire Tomb
+progress.expedition.Sunfire_Tomb=Sunfire Tomb: {0}/{1} ticks remaining
+benchCategories.OneBlockEnchanter_Inferno=Inferno Crystals
+
+# GENERATED ─── Gobelin Camp ───────────────────────────────────────────
+items.OneBlock_Block_Gobelin_Camp.name=OneBlock Gobelin Camp
+items.OneBlock_Crystal_Gobelin_Camp.name=Gobelin Camp Crystal
+items.OneBlock_Crystal_Gobelin_Camp.description=Consume to begin the Gobelin Camp dungeon.\n4 waves :\n  Wave 1: Goblin Scavenger, Goblin Thief\n  Wave 2: Goblin Scrapper, Goblin Lobber\n  Wave 3: Goblin Miner, Goblin Scavenger Battleaxe\n  Wave 4: Goblin Ogre\nCompletion rewards :\n- 1x GobelinCampToken\n- 2x ExpeditionPoint
+expeditions.Gobelin_Camp.name=Gobelin Camp
+announcements.dungeon_started.Gobelin_Camp=Gobelin Camp dungeon started.
+announcements.dungeon_completed.Gobelin_Camp=Gobelin Camp dungeon complete. The OneBlock has returned to default.

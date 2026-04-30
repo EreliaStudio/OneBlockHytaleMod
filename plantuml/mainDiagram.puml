@@ -1,0 +1,930 @@
+@startuml ExpeditionProgression
+
+skinparam classAttributeIconSize 0
+skinparam classFontSize 11
+skinparam groupInheritance 2
+hide empty members
+
+title OneBlock Expedition Progression Tree\n(arrows = expedition unlock cost)
+
+class Default {
+	Ingredient_Fibre
+	Ingredient_Stick
+	Rubble_Stone
+	Soil_Dirt
+}
+
+class CaveEntry {
+	Rubble_Stone
+	Rock_Stone
+	Ore_Copper - Rare
+}
+
+class ForestEdge {
+	entity:Rabbit
+	entity:Boar
+	Ingredient_Stick
+	Wood_Oak_Trunk
+	Plant_Sapling_Oak
+	Plant_Fruit_Apple - Rare
+}
+
+class Plain {
+	entity:Rabbit
+	entity:Sheep
+	entity:Chicken
+	Plant_Crop_Carrot_Item
+	Plant_Crop_Corn_Item
+	Plant_Crop_Wheat_Item
+	Ingredient_Fibre
+}
+
+class Cave {
+	entity:Rat
+	entity:Bat
+	Rock_Stone
+	Rubble_Stone
+	Ore_Copper - Rare
+}
+
+enum RatCave <<Dungeon>> {
+	Wave 1 - entity:Rat x 3
+	Wave 2 - entity:Rat x 2 + entity:Spider x 1
+	Wave 3 - entity:Spider x 2 + entity:Cave_Spider x 1
+}
+
+class LowerCave {
+	entity:Rat
+	entity:Bat
+	Rock_Stone
+	Rubble_Stone
+	Ore_Copper - Rare
+}
+
+class CopperCave {
+	entity:Bat
+	Rock_Stone
+	Rubble_Stone
+	Ore_Copper
+	Ore_Iron - Rare
+}
+
+enum GobelinGank <<Dungeon>> {
+	Wave 1 - entity:Goblin_Scrapper x 2
+	Wave 2 - entity:Goblin_Scrapper x 2 + entity:Goblin_Miner x 1
+	Wave 3 - entity:Goblin_Scrapper x 3 + entity:Goblin_Miner x 2
+}
+
+class IronCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Basalt
+	Rubble_Basalt
+	Ore_Iron
+	Ore_Thorium - Rare
+}
+
+class SandCave {
+	Block_Sand
+	Rock_Sandstone
+	Rubble_Sandstone
+	Ore_Gold - Rare
+}
+
+class GoldCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Basalt
+	Rubble_Basalt
+	Ore_Gold
+	Rock_Gem_Topaz - Rare
+}
+
+class ThoriumCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Basalt
+	Rubble_Basalt
+	Ore_Thorium
+	Ore_Cobalt - Rare
+}
+
+enum GobelinInvasion <<Dungeon>> {
+	Wave 1 - entity:Goblin_Scrapper x 3 + entity:Goblin_Miner x 1
+	Wave 2 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 2
+	Wave 3 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 3
+	Wave 4 - entity:Goblin_Scrapper x 6 + entity:Goblin_Miner x 3
+}
+
+class SilverCave {
+	Rock_Shale
+	Rubble_Shale
+	Ore_Silver
+	Rock_Gem_Sapphire - Rare
+}
+
+class CobaltCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Shale
+	Rubble_Shale
+	Ore_Cobalt
+	Ore_Adamantite - Rare
+}
+
+class AdamantiteCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rubble_Shale
+	Rock_Shale
+	Ore_Adamantite
+	Ore_Mithril - Rare
+}
+
+class GemCave {
+	Rubble_Shale
+	Rock_Shale
+	Rock_Gem_Emerald
+	Rock_Gem_Topaz
+	Rock_Gem_Sapphire - Rare
+}
+
+class FireCave {
+	Rock_Volcanic
+	Rubble_Volcanic
+	Rubble_Volcanic_Medium
+	Ingredient_Fire_Essence
+	Ore_Thorium
+	Ore_Cobalt - Rare
+}
+
+class GemDeepCave {
+	Rock_Shale
+	Rubble_Shale
+	Rock_Gem_Emerald
+	Rock_Gem_Topaz
+	Rock_Gem_Sapphire
+	Rock_Gem_Diamond - Rare
+}
+
+class MithrilCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Ledge_Brick
+	Ore_Mithril
+	Ore_Onyxium - Rare
+}
+
+class OnyxiumCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Ledge_Brick
+	Ore_Onyxium
+	Ore_Prisma - Rare
+}
+
+class PrismaCave {
+	entity:Goblin_Scrapper
+	entity:Goblin_Miner
+	Rock_Volcanic
+	Rubble_Volcanic
+	Ore_Prisma
+	Rock_Gem_Zephyr - Rare
+}
+
+class SandCavern {
+	Rubble_Stone
+	Rock_Stone
+	Rock_Sandstone
+	Rubble_Sandstone
+	Ore_Gold - Rare
+}
+
+class Desert {
+	Block_Sand
+	Rock_Sandstone
+	Rubble_Sandstone
+	Plant_Cactus_1
+	Plant_Cactus_Ball_1
+	Plant_Cactus_Flat_1
+	Ore_Gold - Rare
+}
+
+class ForestEntry {
+	entity:Boar
+	entity:Boar_Piglet
+	entity:Pigeon
+	entity:Fox
+	Ingredient_Stick
+	Wood_Oak_Trunk
+	Wood_Beech_Trunk
+	Wood_Ash_Trunk
+	Plant_Sapling_Oak
+	Plant_Sapling_Beech
+	Plant_Sapling_Ash
+	Plant_Crop_Mushroom_Cap_Brown
+	Plant_Crop_Mushroom_Common_Brown
+	Plant_Crop_Mushroom_Shelve_Brown
+}
+
+class Pond {
+	Fish_Bluegill_Item
+	Plant_Moss_Block_Green
+	Plant_Moss_Rug_Green
+	Soil_Clay_Blue
+	Soil_Dirt
+}
+
+class River {
+	Fish_Bluegill_Item
+	Rubble_Stone
+	Rock_Stone
+	Soil_Clay_Blue
+	Plant_Moss_Green
+}
+
+class Lake {
+	Fish_Bluegill_Item
+	Plant_Moss_Block_Green
+	Plant_Moss_Rug_Green
+	Soil_Clay_Blue
+	Rock_Gem_Sapphire - Rare
+}
+
+class Sea {
+	Fish_Whale_Humpback_Item - Rare
+	Rock_Aqua_Brick
+	Rock_Aqua_Brick_Smooth
+	Plant_Coral_Block_Yellow
+	Plant_Coral_Bush_Yellow
+	Plant_Coral_Model_Yellow
+	Rock_Gem_Sapphire - Rare
+}
+
+class Costline {
+	Block_Sand
+	Rock_Sandstone
+	Rubble_Sandstone
+	Plant_Coral_Bush_Yellow
+	Plant_Coral_Model_Yellow
+	Rock_Gem_Sapphire - Rare
+}
+
+class SeaCavern {
+	Rock_Aqua_Brick
+	Rock_Aqua_Brick_Smooth
+	Rock_Aqua_Brick_Ornate
+	Rock_Gem_Sapphire
+	Rock_Gem_Diamond - Rare
+}
+
+class SeaInfestedNest {
+	Soil_Hive
+	Soil_Hive_Brick
+	Soil_Hive_Brick_Smooth
+	Ingredient_Hide_Scaled
+	Ingredient_Leather_Scaled
+	Rock_Gem_Sapphire
+	Rock_Gem_Diamond - Rare
+}
+
+enum SeaMonster <<Dungeon>> {
+	Wave 1 - entity:Spider x 3
+	Wave 2 - entity:Cave_Spider x 3 + entity:Spider x 2
+	Wave 3 - entity:Cave_Spider x 4 + entity:Rat x 3
+	Wave 4 - entity:Cave_Spider x 6
+}
+
+class Forest {
+	entity:Boar
+	entity:Boar_Piglet
+	entity:Fox
+	entity:Pigeon
+	Ingredient_Stick
+	Wood_Oak_Trunk
+	Wood_Beech_Trunk
+	Wood_Ash_Trunk
+	Plant_Sapling_Oak
+	Plant_Sapling_Beech
+	Plant_Sapling_Ash
+	Plant_Fruit_Apple
+}
+
+class AridForest {
+	Wood_Ash_Trunk
+	Wood_Bottletree_Trunk
+	Wood_Bottletree_Roots
+	Plant_Leaves_Bottle
+	Plant_Seeds_Bottletree
+	Rock_Sandstone
+	Rubble_Sandstone
+}
+
+class Swamp {
+	Soil_Dirt
+	Soil_Clay_Blue
+	Plant_Moss_Block_Green
+	Plant_Moss_Rug_Green
+	Plant_Crop_Mushroom_Common_Brown
+	Plant_Crop_Mushroom_Shelve_Brown
+	Plant_Crop_Mushroom_Block_Yellow
+}
+
+class EnchantedForest {
+	Wood_Amber_Trunk
+	Wood_Amber_Roots
+	Plant_Leaves_Amber
+	Plant_Leaves_Goldentree
+	Plant_Flower_Common_Yellow
+	Plant_Flower_Orchid_Yellow
+	Rock_Gem_Emerald
+	Rock_Gem_Topaz - Rare
+}
+
+class FairyPond {
+	Plant_Flower_Common_Pink2
+	Plant_Flower_Common_Yellow
+	Plant_Flower_Orchid_Yellow
+	Plant_Petals_Yellow
+	Plant_Moss_Yellow
+	Plant_Moss_Block_Yellow
+	Rock_Gem_Topaz
+}
+
+class DeepForest {
+	entity:Boar
+	entity:Fox
+	Wood_Beech_Trunk
+	Wood_Ash_Trunk
+	Wood_Maple_Trunk
+	Plant_Sapling_Beech
+	Plant_Sapling_Ash
+	Plant_Crop_Mushroom_Block_Yellow
+	Plant_Crop_Mushroom_Block_Yellow_Trunk
+	Rock_Gem_Emerald - Rare
+}
+
+class DarkForest {
+	Plant_Leaves_Bramble
+	Plant_Crop_Mushroom_Block_Yellow
+	Plant_Crop_Mushroom_Block_Yellow_Mycelium
+	Plant_Crop_Mushroom_Shelve_Yellow
+	Ingredient_Bone_Fragment
+	Rock_Gem_Ruby - Rare
+}
+
+class BurnedForest {
+	Wood_Ash_Trunk
+	Ingredient_Fire_Essence
+	Rock_Volcanic
+	Rubble_Volcanic
+	Ingredient_Powder_Boom
+	Ore_Thorium - Rare
+}
+
+class CursedForest {
+	Ingredient_Bone_Fragment
+	Deco_Bone_Full
+	Deco_Bone_Spike
+	Deco_Bone_Spine
+	Plant_Leaves_Bramble
+	Rock_Runic_Brick
+	Rock_Gem_Zephyr - Rare
+}
+
+class Graveyard {
+	Ingredient_Bone_Fragment
+	Deco_Bone_Full
+	Deco_Bone_Spike
+	Furniture_Village_Tombstone
+	Furniture_Ancient_Coffin
+	Weapon_Club_Zombie_Arm - Rare
+	Weapon_Club_Zombie_Leg - Rare
+}
+
+enum UndeadTemple <<Dungeon>> {
+	Wave 1 - entity:Rat x 4
+	Wave 2 - entity:Spider x 3 + entity:Rat x 2
+	Wave 3 - entity:Cave_Spider x 3 + entity:Spider x 3
+	Wave 4 - entity:Cave_Spider x 5 + entity:Bat x 3
+}
+
+class VoidPortal {
+	Portal_Device
+	Instance_Gateway
+	Rock_Runic_Brick
+	Rock_Runic_Brick_Ornate
+	Rock_Gem_Zephyr
+	Ore_Onyxium - Rare
+}
+
+enum VoidTemple <<Dungeon>> {
+	Wave 1 - entity:Cave_Spider x 4 + entity:Bat x 2
+	Wave 2 - entity:Goblin_Scrapper x 3 + entity:Goblin_Miner x 3
+	Wave 3 - entity:Cave_Spider x 6 + entity:Goblin_Scrapper x 3
+	Wave 4 - entity:Goblin_Scrapper x 6 + entity:Goblin_Miner x 4
+}
+
+class OutlanderForest {
+	Wood_Amber_Trunk
+	Wood_Amber_Roots
+	Plant_Leaves_Amber
+	Plant_Leaves_Bramble
+	Ingredient_Hide_Prismic - Rare
+	Rock_Gem_Zephyr - Rare
+}
+
+class OutlanderPlain {
+	Plant_Crop_Wheat_Item
+	Plant_Crop_Corn_Item
+	Plant_Crop_Carrot_Item
+	Ingredient_Hide_Prismic
+	Ingredient_Leather_Prismic
+	Ore_Adamantite - Rare
+}
+
+enum OutlanderGank <<Dungeon>> {
+	Wave 1 - entity:Goblin_Scrapper x 3
+	Wave 2 - entity:Goblin_Miner x 2 + entity:Goblin_Scrapper x 3
+	Wave 3 - entity:Goblin_Miner x 4 + entity:Goblin_Scrapper x 4
+}
+
+class Toundra {
+	Rock_Ice
+	Rubble_Ice
+	Rubble_Ice_Medium
+	Wood_Ice_Trunk
+	Plant_Seeds_Ice
+	Ingredient_Ice_Essence - Rare
+}
+
+enum OutlanderCity <<Dungeon>> {
+	Wave 1 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 2
+	Wave 2 - entity:Goblin_Scrapper x 5 + entity:Goblin_Miner x 4
+	Wave 3 - entity:Goblin_Scrapper x 6 + entity:Goblin_Miner x 5
+	Wave 4 - entity:Goblin_Scrapper x 8 + entity:Goblin_Miner x 6
+}
+
+class FrozenForest {
+	Wood_Birch_Trunk
+	Plant_Sapling_Birch
+	Plant_Leaves_Birch
+	Wood_Ice_Trunk
+	Rock_Ice
+	Rubble_Ice
+	Ingredient_Ice_Essence - Rare
+}
+
+class IceLand {
+	Rock_Ice
+	Rubble_Ice
+	Rubble_Ice_Medium
+	Rock_Ice_Icicles
+	Wood_Ice_Trunk
+	Ingredient_Ice_Essence
+}
+
+class IcyCavern {
+	Rock_Ice
+	Rubble_Ice
+	Rock_Ice_Icicles
+	Ore_Silver
+	Rock_Gem_Sapphire
+	Ingredient_Ice_Essence - Rare
+}
+
+class YetiCavern {
+	Rock_Ice
+	Rubble_Ice_Medium
+	Rock_Ice_Icicles
+	Ingredient_Ice_Essence
+	Rock_Gem_Diamond - Rare
+	Weapon_Staff_Crystal_Ice - Rare
+}
+
+enum IceTemple <<Dungeon>> {
+	Wave 1 - entity:Bat x 4
+	Wave 2 - entity:Cave_Spider x 4 + entity:Bat x 3
+	Wave 3 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 2
+	Wave 4 - entity:Goblin_Scrapper x 6 + entity:Cave_Spider x 4
+}
+
+class IcyForest {
+	Wood_Ice_Trunk
+	Plant_Seeds_Ice
+	Plant_Leaves_Birch
+	Wood_Birch_Trunk
+	Rock_Ice
+	Ingredient_Ice_Essence
+}
+
+class FireLand {
+	Rock_Volcanic
+	Rubble_Volcanic
+	Rubble_Volcanic_Medium
+	Ingredient_Fire_Essence
+	Ore_Thorium
+	Ore_Cobalt - Rare
+}
+
+enum Volcano <<Dungeon>> {
+	Wave 1 - entity:Bat x 4 + entity:Goblin_Miner x 2
+	Wave 2 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 3
+	Wave 3 - entity:Goblin_Scrapper x 6 + entity:Cave_Spider x 3
+	Wave 4 - entity:Goblin_Scrapper x 8 + entity:Goblin_Miner x 4
+}
+
+class FieryGraveward {
+	Ingredient_Bone_Fragment
+	Deco_Bone_Full
+	Deco_Bone_Spike
+	Rock_Volcanic
+	Ingredient_Fire_Essence
+	Rock_Gem_Ruby - Rare
+}
+
+class HellGate {
+	Portal_Device
+	Rock_Volcanic_Cracked_Incandescent
+	Rock_Volcanic_Cracked_Lava_Incandescent
+	Ingredient_Fire_Essence
+	Ore_Mithril - Rare
+	Ore_Onyxium - Rare
+}
+
+class HellPlain {
+	Rock_Volcanic
+	Rubble_Volcanic
+	Ingredient_Fire_Essence
+	Ingredient_Bolt_Cindercloth
+	Ore_Mithril
+	Ore_Onyxium - Rare
+}
+
+class HellSwamp {
+	Soil_Clay_Black
+	Plant_Moss_Yellow
+	Plant_Moss_Block_Yellow
+	Plant_Crop_Mushroom_Block_Yellow
+	Ingredient_Fire_Essence
+	Rock_Gem_Ruby
+	Ore_Onyxium - Rare
+}
+
+class FireGemCave {
+	Rock_Volcanic
+	Rock_Volcanic_Cracked_Incandescent
+	Rock_Gem_Ruby
+	Rock_Gem_Diamond
+	Ore_Onyxium
+	Ore_Prisma - Rare
+}
+
+class DesertTempleEntrace {
+	Rock_Sandstone
+	Rubble_Sandstone
+	Furniture_Ancient_Pot
+	Furniture_Ancient_Crate
+	Deco_Pot_Clay_Broken
+	Ore_Gold - Rare
+}
+
+class DeeperDesertTemple {
+	Rock_Sandstone
+	Rock_Sandstone_Brick
+	Furniture_Ancient_Pot
+	Furniture_Ancient_Statue
+	Furniture_Ancient_Candle
+	Rock_Gem_Topaz
+	Ore_Gold
+}
+
+enum DesertTemple <<Dungeon>> {
+	Wave 1 - entity:Spider x 4
+	Wave 2 - entity:Cave_Spider x 3 + entity:Spider x 3
+	Wave 3 - entity:Goblin_Scrapper x 4 + entity:Cave_Spider x 3
+	Wave 4 - entity:Goblin_Miner x 4 + entity:Goblin_Scrapper x 5
+}
+
+class PharaonRoom {
+	Deco_Treasure
+	Furniture_Ancient_Coffin
+	Furniture_Ancient_Statue
+	Furniture_Ancient_Chest_Large_Treasure
+	Ore_Gold
+	Rock_Gem_Diamond
+}
+
+class InnerDesert {
+	Block_Sand
+	Rock_Sandstone
+	Rubble_Sandstone
+	Plant_Cactus_1
+	Plant_Cactus_Ball_1
+	Plant_Cactus_Flat_1
+	Ore_Gold - Rare
+}
+
+class MuddyDesert {
+	Block_Sand
+	Soil_Dirt
+	Soil_Clay_Black
+	Soil_Gravel_Sand_Half
+	Plant_Cactus_1
+	Plant_Crop_Tomato_Item
+}
+
+enum InsectInvasion <<Dungeon>> {
+	Wave 1 - entity:Spider x 5
+	Wave 2 - entity:Cave_Spider x 4 + entity:Spider x 3
+	Wave 3 - entity:Cave_Spider x 6 + entity:Spider x 4
+}
+
+class InfestedDesert {
+	Soil_Hive
+	Soil_Hive_Brick
+	Soil_Hive_Brick_Smooth
+	Soil_Hive_Brick_Stairs
+	Plant_Cactus_Ball_1
+	Ingredient_Hide_Scaled
+}
+
+enum InsectNest <<Dungeon>> {
+	Wave 1 - entity:Spider x 6
+	Wave 2 - entity:Cave_Spider x 6
+	Wave 3 - entity:Cave_Spider x 8 + entity:Spider x 4
+}
+
+class InsideInsectNest {
+	Soil_Hive
+	Soil_Hive_Brick
+	Soil_Hive_Brick_Smooth
+	Soil_Hive_Brick_Beam
+	Soil_Hive_Brick_Stairs
+	Rock_Gem_Ruby
+}
+
+enum InsectCore <<Dungeon>> {
+	Wave 1 - entity:Cave_Spider x 6 + entity:Spider x 4
+	Wave 2 - entity:Cave_Spider x 8
+	Wave 3 - entity:Cave_Spider x 10 + entity:Spider x 6
+	Wave 4 - entity:Cave_Spider x 12
+}
+
+class Quarry {
+	Rubble_Stone
+	Rock_Stone
+	Rock_Slate
+	Rock_Shale
+	Rock_Basalt
+	Ore_Copper
+	Ore_Iron - Rare
+}
+
+class Hallow {
+	entity:Rabbit
+	entity:Sheep
+	entity:Chicken
+	Plant_Crop_Wheat_Item
+	Plant_Crop_Corn_Item
+	Plant_Crop_Carrot_Item
+	Food_Bread
+	Plant_Fruit_Apple
+}
+
+class CowHallow {
+	entity:Cow
+	Plant_Crop_Wheat_Item
+	Plant_Crop_Corn_Item
+	Ingredient_Bolt_Wool
+	Food_Bread
+	Plant_Fruit_Apple
+}
+
+class HorseHallow {
+	entity:Horse
+	Plant_Crop_Carrot_Item
+	Plant_Crop_Wheat_Item
+	Ingredient_Bolt_Wool
+	Food_Bread
+	Plant_Fruit_Apple
+}
+
+class MysteriousCavern {
+	Rubble_Stone
+	Rock_Stone
+	Rock_Slate
+	Rock_Shale
+	Rock_Gem_Sapphire - Rare
+	Ore_Iron
+}
+
+class MysticCave {
+	Rock_Runic_Brick
+	Rock_Runic_Brick_Ornate
+	Rock_Gem_Sapphire
+	Rock_Gem_Emerald
+	Ingredient_Crystal_Yellow - Rare
+}
+
+class LuxirousCave {
+	Rock_Gem_Emerald
+	Rock_Gem_Topaz
+	Rock_Gem_Diamond - Rare
+	Ore_Gold
+	Ore_Adamantite - Rare
+	Deco_Treasure
+}
+
+class JurassicCave {
+	entity:Archaeopteryx
+	entity:Crocodile
+	entity:Cave_Raptor
+	Ingredient_Bone_Fragment
+	Deco_Bone_Full
+	Deco_Bone_Spike_Large
+	Ingredient_Hide_Scaled
+	Ingredient_Leather_Scaled
+	Rock_Gem_Diamond
+	Ore_Adamantite
+}
+
+enum DinoCrisis <<Dungeon>> {
+	Wave 1 - entity:Archaeopteryx x 5 + entity:Crocodile x 2
+	Wave 2 - entity:Cave_Raptor x 4 + entity:Archaeopteryx x 3
+	Wave 3 - entity:Cave_Raptor x 6 + entity:Crawler x 2
+	Wave 4 - entity:Cave_Raptor x 5 + entity:Cave_Rex x 1
+	Wave 5 - entity:Cave_Raptor x 4 + entity:Cave_Rex x 2
+	Wave 6 - entity:Cave_Rex x 3 + entity:Earth_Elemental x 1
+}
+
+
+' ─────────────────────────────────────────────
+' ROOT
+' ─────────────────────────────────────────────
+
+Default --> CaveEntry : Rubble_Stone * 3
+Default --> ForestEdge : Ingredient_Stick * 3
+Default --> Plain : Ingredient_Fibre * 3
+
+
+' ─────────────────────────────────────────────
+' CAVE BRANCH
+' ─────────────────────────────────────────────
+
+CaveEntry --> Cave : Rock_Stone * 4 + Rubble_Stone * 4
+Cave --> RatCave : entity:Rat * 3
+Cave --> LowerCave : Rubble_Stone * 8 + entity:Bat * 1
+
+LowerCave --> CopperCave : Ore_Copper * 2 + Rock_Stone * 12
+CopperCave --> GobelinGank : Ore_Copper * 8 + Ore_Iron * 1
+
+GobelinGank --> IronCave : Ore_Iron * 3 + Ore_Copper * 12
+GobelinGank --> SandCave : Rubble_Stone * 16 + Rock_Stone * 8
+
+IronCave --> GoldCave : Ore_Iron * 8 + Rock_Basalt * 8
+IronCave --> ThoriumCave : Ore_Iron * 12 + Ore_Thorium * 1
+
+ThoriumCave --> GobelinInvasion : Ore_Thorium * 8 + Ore_Cobalt * 1
+ThoriumCave --> SilverCave : Ore_Thorium * 6 + Rock_Basalt * 12
+
+GobelinInvasion --> CobaltCave : Ore_Thorium * 12 + Ore_Cobalt * 3
+
+CobaltCave --> AdamantiteCave : Ore_Cobalt * 8 + Ore_Adamantite * 1
+CobaltCave --> GemCave : Ore_Cobalt * 4 + Rock_Shale * 12
+CobaltCave --> FireCave : Ore_Cobalt * 6 + Ore_Thorium * 6
+
+AdamantiteCave --> GemDeepCave : Ore_Adamantite * 6 + Rock_Gem_Emerald * 2
+AdamantiteCave --> MithrilCave : Ore_Adamantite * 8 + Ore_Mithril * 1
+
+MithrilCave --> OnyxiumCave : Ore_Mithril * 8 + Ore_Onyxium * 1
+OnyxiumCave --> PrismaCave : Ore_Onyxium * 8 + Ore_Prisma * 1
+
+SandCave --> SandCavern : Block_Sand * 12 + Rock_Sandstone * 8
+SandCavern --> Desert : Rock_Sandstone * 12 + Rubble_Sandstone * 6
+
+
+' ─────────────────────────────────────────────
+' FOREST / WATER BRANCH
+' ─────────────────────────────────────────────
+
+ForestEdge --> ForestEntry : Wood_Oak_Trunk * 4 + Ingredient_Stick * 8
+
+ForestEntry --> Pond : Wood_Beech_Trunk * 2 + Ingredient_Stick * 6
+Pond --> River : Wood_Oak_Trunk * 4 + Soil_Dirt * 12
+
+River --> Lake : Plant_Crop_Corn_Item * 8 + Wood_Oak_Trunk * 4
+River --> Sea : Wood_Beech_Trunk * 6 + Rock_Stone * 8
+River --> Costline : Block_Sand * 8 + Wood_Oak_Trunk * 4
+
+Costline --> SeaCavern : Rock_Sandstone * 8 + Ore_Copper * 2
+SeaCavern --> SeaInfestedNest : Ore_Iron * 4 + Rock_Gem_Sapphire * 2
+SeaInfestedNest --> SeaMonster : Ore_Cobalt * 4 + Ore_Silver * 4
+
+ForestEntry --> Forest : Wood_Oak_Trunk * 8 + Plant_Sapling_Oak * 2
+
+Forest --> AridForest : Wood_Ash_Trunk * 4 + Rock_Sandstone * 8
+Forest --> Swamp : Plant_Crop_Mushroom_Common_Brown * 4 + Soil_Dirt * 16
+Forest --> DeepForest : Wood_Beech_Trunk * 12 + Wood_Ash_Trunk * 8
+
+Swamp --> EnchantedForest : Rock_Gem_Emerald * 2 + Plant_Sapling_Beech * 4
+EnchantedForest --> FairyPond : Rock_Gem_Topaz * 2 + Plant_Crop_Mushroom_Shelve_Brown * 4
+
+AridForest --> Desert : Wood_Ash_Trunk * 8 + Rock_Sandstone * 12
+
+DeepForest --> DarkForest : Rock_Gem_Emerald * 4 + Wood_Oak_Trunk * 16
+DarkForest --> BurnedForest : Ore_Thorium * 4 + Wood_Ash_Trunk * 12
+DarkForest --> CursedForest : Rock_Gem_Topaz * 4 + Ore_Silver * 4
+
+CursedForest --> OutlanderForest : Ore_Cobalt * 4 + Plant_Crop_Mushroom_Shelve_Brown * 6
+
+OutlanderForest --> OutlanderGank : Ore_Cobalt * 6 + Wood_Ash_Trunk * 12
+OutlanderForest --> OutlanderPlain : Plant_Crop_Wheat_Item * 16 + entity:Sheep * 2
+
+OutlanderPlain --> OutlanderCity : Ore_Adamantite * 4 + Plant_Crop_Corn_Item * 16
+OutlanderPlain --> Toundra : Ore_Silver * 6 + Rock_Gem_Sapphire * 2
+
+Toundra --> FrozenForest : Rock_Ice * 8 + Wood_Ice_Trunk * 4
+Toundra --> IceLand : Rock_Ice * 12 + Rubble_Ice * 8
+
+IceLand --> IcyCavern : Rubble_Ice * 12 + Ore_Silver * 4
+IcyCavern --> YetiCavern : Ingredient_Ice_Essence * 4 + Ore_Cobalt * 4
+YetiCavern --> IceTemple : Ore_Adamantite * 4 + Rock_Gem_Diamond * 2
+
+FrozenForest --> IcyForest : Wood_Ice_Trunk * 8 + Rock_Ice * 8
+
+
+' ─────────────────────────────────────────────
+' FIRE / HELL BRANCH
+' ─────────────────────────────────────────────
+
+BurnedForest --> FireLand : Ore_Cobalt * 8 + Ore_Thorium * 8
+
+FireLand --> Volcano : Ore_Adamantite * 4 + Rock_Volcanic * 8
+FireLand --> FieryGraveward : Ore_Thorium * 12 + Rock_Basalt * 16
+
+FieryGraveward --> FireCave : Ore_Cobalt * 8 + Rock_Basalt * 24
+
+FireCave --> HellGate : Ore_Adamantite * 8 + Rock_Volcanic * 12
+HellGate --> HellPlain : Ore_Mithril * 6 + Ore_Onyxium * 1
+HellGate --> HellSwamp : Ore_Mithril * 4 + Rock_Gem_Ruby * 4
+
+HellPlain --> FireGemCave : Ore_Onyxium * 4 + Ore_Prisma * 1
+
+
+' ─────────────────────────────────────────────
+' DESERT / TEMPLE / INSECT BRANCH
+' ─────────────────────────────────────────────
+
+Desert --> DesertTempleEntrace : Plant_Cactus_1 * 4 + Rock_Sandstone * 12
+
+DesertTempleEntrace --> DeeperDesertTemple : Rock_Sandstone * 24 + Ore_Gold * 4
+DeeperDesertTemple --> DesertTemple : Ore_Gold * 8 + Rock_Gem_Topaz * 2
+DesertTemple --> PharaonRoom : Ore_Gold * 12 + Rock_Gem_Diamond * 1
+
+Desert --> InnerDesert : Plant_Cactus_Flat_1 * 4 + Block_Sand * 24
+InnerDesert --> InsectInvasion : Plant_Cactus_Ball_1 * 6 + Rock_Sandstone * 16
+
+InsectInvasion --> MuddyDesert : Soil_Dirt * 32 + Block_Sand * 16
+MuddyDesert --> InfestedDesert : Plant_Cactus_1 * 8 + Plant_Crop_Carrot_Item * 12
+
+InfestedDesert --> InsectNest : Ore_Iron * 8 + Plant_Cactus_Ball_1 * 8
+InsectNest --> InsideInsectNest : Ore_Cobalt * 6 + Rock_Gem_Ruby * 2
+InsideInsectNest --> InsectCore : Ore_Adamantite * 6 + Rock_Gem_Emerald * 4
+
+
+' ─────────────────────────────────────────────
+' PLAINS / HALLOW / QUARRY BRANCH
+' ─────────────────────────────────────────────
+
+Plain --> Quarry : Rubble_Stone * 12 + Rock_Stone * 8
+Plain --> Hallow : Plant_Crop_Wheat_Item * 12 + entity:Sheep * 2
+
+Hallow --> CowHallow : Plant_Crop_Wheat_Item * 16 + Plant_Crop_Corn_Item * 8
+Hallow --> HorseHallow : Plant_Crop_Carrot_Item * 16 + Plant_Crop_Wheat_Item * 8
+Hallow --> River : Plant_Crop_Corn_Item * 8 + Wood_Oak_Trunk * 4
+
+
+' ─────────────────────────────────────────────
+' CURSED / UNDEAD / VOID BRANCH
+' ─────────────────────────────────────────────
+
+CursedForest --> Graveyard : Ore_Silver * 8 + Rock_Shale * 16
+Graveyard --> UndeadTemple : Ore_Gold * 6 + Rock_Gem_Diamond * 1
+
+UndeadTemple --> VoidPortal : Ore_Onyxium * 4 + Rock_Gem_Zephyr * 2
+VoidPortal --> VoidTemple : Ore_Prisma * 4 + Rock_Gem_Zephyr * 4
+
+
+' ─────────────────────────────────────────────
+' MYSTERY / DINOSAUR BRANCH
+' ─────────────────────────────────────────────
+
+Quarry --> MysteriousCavern : Rock_Stone * 24 + Ore_Copper * 4
+MysteriousCavern --> MysticCave : Rock_Gem_Sapphire * 2 + Ore_Iron * 8
+
+MysticCave --> LuxirousCave : Rock_Gem_Emerald * 4 + Ore_Gold * 8
+LuxirousCave --> JurassicCave : Rock_Gem_Diamond * 2 + Ore_Adamantite * 8
+JurassicCave --> DinoCrisis : Ore_Mithril * 6 + Ore_Onyxium * 2
+
+@enduml

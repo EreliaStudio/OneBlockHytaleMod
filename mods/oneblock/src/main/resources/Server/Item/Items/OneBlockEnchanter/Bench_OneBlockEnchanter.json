@@ -51,10 +51,88 @@
           "Name": "server.benchCategories.OneBlockEnchanter_Surface",
           "Recipes": [
             "OneBlock_Crystal_Default",
-            "OneBlock_Crystal_Cave_Entry",
+            "OneBlock_Crystal_Plain_Edge",
+            "OneBlock_Crystal_Plains",
+            "OneBlock_Crystal_Flower_Prairie",
+            "OneBlock_Crystal_Horse_Field",
+            "OneBlock_Crystal_Cow_Pasture",
+            "OneBlock_Crystal_Fox_Hollow",
+            "OneBlock_Crystal_Windy_Steppe",
+            "OneBlock_Crystal_Desert_Fringe",
+            "OneBlock_Crystal_Oasis",
+            "OneBlock_Crystal_Scorpion_Dunes",
+            "OneBlock_Crystal_Cactus_Flats"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Forest",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Forest",
+          "Recipes": [
             "OneBlock_Crystal_Forest_Edge",
-            "OneBlock_Crystal_Cave",
-            "OneBlock_Crystal_Forest"
+            "OneBlock_Crystal_Young_Forest",
+            "OneBlock_Crystal_Deep_Forest",
+            "OneBlock_Crystal_Fairy_Pond",
+            "OneBlock_Crystal_Mushroom_Grove",
+            "OneBlock_Crystal_Darkwood_Thicket",
+            "OneBlock_Crystal_Swamp_Trail",
+            "OneBlock_Crystal_Sunken_Swamp",
+            "OneBlock_Crystal_Forgotten_Marsh",
+            "OneBlock_Crystal_Time_Locked_Glade",
+            "OneBlock_Crystal_Primeval_Forest",
+            "OneBlock_Crystal_Dinosaur_Nest"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Underground",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Underground",
+          "Recipes": [
+            "OneBlock_Crystal_Cave_Entry",
+            "OneBlock_Crystal_Shallow_Cave",
+            "OneBlock_Crystal_Stone_Gallery",
+            "OneBlock_Crystal_Mossy_Cave",
+            "OneBlock_Crystal_Copper_Cave",
+            "OneBlock_Crystal_Iron_Hollow",
+            "OneBlock_Crystal_Basalt_Gate",
+            "OneBlock_Crystal_Basalt_Depths",
+            "OneBlock_Crystal_Thorium_Fissure",
+            "OneBlock_Crystal_Cobalt_Chasm",
+            "OneBlock_Crystal_Mithril_Vein",
+            "OneBlock_Crystal_Crystal_Grotto",
+            "OneBlock_Crystal_Sandstone_Cavern"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Cold",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Cold",
+          "Recipes": [
+            "OneBlock_Crystal_Frozen_Cavern",
+            "OneBlock_Crystal_Snowy_Pass",
+            "OneBlock_Crystal_Snowy_Plains",
+            "OneBlock_Crystal_Frostpine_Forest",
+            "OneBlock_Crystal_Ice_Lake",
+            "OneBlock_Crystal_Whitefang_Den",
+            "OneBlock_Crystal_Polar_Necropolis"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Inferno",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Inferno",
+          "Recipes": [
+            "OneBlock_Crystal_Sunfire_Tomb"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Dark",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Dark",
+          "Recipes": [
+            "OneBlock_Crystal_Onyxium_Pocket",
+            "OneBlock_Crystal_Adamantite_Core",
+            "OneBlock_Crystal_Prisma_Crystal_Mine"
           ]
         }
       ],

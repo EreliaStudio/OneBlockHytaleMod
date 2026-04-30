@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Sunfire_Tomb.name",
+    "Description": "server.items.OneBlock_Crystal_Sunfire_Tomb.description"
+  },
+  "Id": "OneBlock_Crystal_Sunfire_Tomb",
+  "ItemLevel": 11,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Thorium_Desert",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ingredient_Fire_Essence",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Rock_Gem_Ruby",
+        "Quantity": 2
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Inferno"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Sunfire_Tomb"
+    ],
+    "OneBlockCrystalTicks": [
+      "85"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

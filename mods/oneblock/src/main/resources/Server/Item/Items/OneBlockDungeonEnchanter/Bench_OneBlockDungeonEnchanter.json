@@ -44,7 +44,21 @@
     "Bench": {
       "Id": "OneBlockDungeonEnchanter",
       "Type": "Crafting",
-      "Categories": [],
+      "Categories": [
+        {
+          "Id": "OneBlock_DungeonEnchanter_Dungeon",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockDungeonEnchanter_Dungeon",
+          "Recipes": [
+            "OneBlock_Crystal_Swamp_Ruins",
+            "OneBlock_Crystal_Abandoned_Mine",
+            "OneBlock_Crystal_Frozen_Ruins",
+            "OneBlock_Crystal_Desert_Temple",
+            "OneBlock_Crystal_Pharaoh_Catacombs",
+            "OneBlock_Crystal_Gobelin_Camp"
+          ]
+        }
+      ],
       "LocalOpenSoundEventId": "SFX_Arcane_Workbench_Open_Local",
       "LocalCloseSoundEventId": "SFX_Arcane_Workbench_Close_Local"
     },

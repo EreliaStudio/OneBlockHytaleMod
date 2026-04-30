@@ -47,6 +47,13 @@ DEFAULT_CUSTOM_ITEM_ICON = SCRIPT_DIR / "OneBlock_CustomItem.png"
 
 CUSTOM_ID_KEY = "CustomID"
 
+# PNGs in Icons/ItemsGenerated that are NOT expedition-generated and must be preserved
+_STATIC_ICON_NAMES = {
+    "OneBlock_ExpeditionCrystal_DefaultIcon.png",
+    "OneBlock_CrystalEnchantingTable_Icon.png",
+    "OneBlock_DungeonEnchantingTable_Icon.png",
+}
+
 ENCHANTER_CATEGORY_ORDER = [
     "Surface",
     "Forest",
@@ -149,7 +156,7 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
             "Gathering": {
                 "Breaking": {
                     "GatherType": "Soils",
-                    "ItemId": "Soil_Dirt",
+                    "ID": "Soil_Dirt",
                     "Quantity": 0,
                 }
             },
@@ -558,11 +565,13 @@ def _save_json(path: Path, data: dict, dry_run: bool):
     print(f"  [patch]  {path}")
 
 
-def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool):
+def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool, stale: "set[Path] | None" = None):
     """Copy default texture/icon for a new expedition block if specific files don't exist."""
     eid = _safe_eid(expedition_id)
 
     texture_dst = repo_root / BLOCK_TEXTURE_DIR / f"OneBlock_Block_{eid}.png"
+    if stale is not None:
+        stale.discard(texture_dst)
     if not texture_dst.exists():
         if DEFAULT_BLOCK_TEXTURE.exists():
             if not dry_run:
@@ -575,6 +584,8 @@ def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool):
             print(f"  [warn]   No default block texture found at {DEFAULT_BLOCK_TEXTURE}")
 
     icon_dst = repo_root / BLOCK_ICON_DIR / f"OneBlock_{eid}.png"
+    if stale is not None:
+        stale.discard(icon_dst)
     if not icon_dst.exists():
         if DEFAULT_BLOCK_ICON.exists():
             if not dry_run:
@@ -694,10 +705,12 @@ def _remove_legacy_custom_item_asset(path: Path, replacement: Path, label: str, 
     print(f"  [clean]  removed legacy custom item {label} {path.name}")
 
 
-def ensure_custom_item_assets(repo_root: Path, custom_id: str, dry_run: bool):
+def ensure_custom_item_assets(repo_root: Path, custom_id: str, dry_run: bool, stale: "set[Path] | None" = None):
     ensure_custom_item_model(repo_root, dry_run)
 
     item_dst = repo_root / CUSTOM_ITEM_DIR / f"{custom_id}.json"
+    if stale is not None:
+        stale.discard(item_dst)
     if not item_dst.exists():
         if dry_run:
             print(f"  [dry-run] Would write {item_dst.name}")
@@ -713,11 +726,15 @@ def ensure_custom_item_assets(repo_root: Path, custom_id: str, dry_run: bool):
 
     legacy_icon = repo_root / BLOCK_ICON_DIR / f"{custom_id}.png"
     icon_dst = repo_root / BLOCK_ICON_DIR / f"{custom_id}_Icon.png"
+    if stale is not None:
+        stale.discard(icon_dst)
     _copy_custom_item_asset(DEFAULT_CUSTOM_ITEM_ICON, legacy_icon, icon_dst, "icon", dry_run)
     _remove_legacy_custom_item_asset(legacy_icon, icon_dst, "icon", dry_run)
 
     legacy_texture = repo_root / CUSTOM_ITEM_TEXTURE_DIR / f"{custom_id}.png"
     texture_dst = repo_root / CUSTOM_ITEM_TEXTURE_DIR / f"{custom_id}_Texture.png"
+    if stale is not None:
+        stale.discard(texture_dst)
     _copy_custom_item_asset(DEFAULT_CUSTOM_ITEM_ICON, legacy_texture, texture_dst, "texture", dry_run)
     _remove_legacy_custom_item_asset(legacy_texture, texture_dst, "texture", dry_run)
 
@@ -866,7 +883,9 @@ def _patch_java_static(java_path: Path, static_block: str, label: str, count: in
         print(f"\n[write]  {label} static block updated ({count} entries)")
 
 
-def write_json(path: Path, data: dict, dry_run: bool):
+def write_json(path: Path, data: dict, dry_run: bool, stale: "set[Path] | None" = None):
+    if stale is not None:
+        stale.discard(path)
     if dry_run:
         print(f"  [dry-run] Would write {path.name}")
         return
@@ -901,23 +920,40 @@ def _is_generated_lang_line(line: str) -> bool:
     )
 
 
-def cleanup(repo_root: Path, dry_run: bool):
-    print("\n=== Cleanup ===")
+def collect_generated_files(repo_root: Path) -> "set[Path]":
+    """Return absolute paths of all currently generated files that the script manages."""
+    stale: set[Path] = set()
+    globs = [
+        (repo_root / CRYSTAL_DIR,            "*.json"),
+        (repo_root / BLOCK_DIR,              "OneBlock_Block_*.json"),
+        (repo_root / BLOCK_TEXTURE_DIR,      "OneBlock_Block_*.png"),
+        (repo_root / BLOCK_ICON_DIR,         "OneBlock_*.png"),
+        (repo_root / BLOCK_ICON_DIR,         "*_Icon.png"),
+        (repo_root / CUSTOM_ITEM_DIR,        "*.json"),
+        (repo_root / CUSTOM_ITEM_TEXTURE_DIR, "*_Texture.png"),
+    ]
+    for directory, pattern in globs:
+        if directory.exists():
+            stale.update(directory.glob(pattern))
+    for name in _STATIC_ICON_NAMES:
+        stale.discard(repo_root / BLOCK_ICON_DIR / name)
+    return stale
 
-    for gen_dir in [CRYSTAL_DIR, BLOCK_DIR]:
-        dir_path = repo_root / gen_dir
-        if not dir_path.exists():
-            continue
-        files = list(dir_path.glob("*.json"))
-        if not files:
-            continue
-        for file_path in files:
-            if dry_run:
-                print(f"  [dry-run] Would delete {gen_dir.name}/{file_path.name}")
-            else:
-                file_path.unlink()
-        if not dry_run:
-            print(f"  [clean]  Deleted {len(files)} file(s) from {gen_dir.name}/")
+
+def remove_stale_files(stale: "set[Path]", dry_run: bool):
+    if not stale:
+        return
+    print("\n=== Removing stale files ===")
+    for path in sorted(stale):
+        if dry_run:
+            print(f"  [dry-run] Would delete {path.name}")
+        else:
+            path.unlink(missing_ok=True)
+            print(f"  [clean]  {path.name}")
+
+
+def cleanup(repo_root: Path, dry_run: bool):
+    print("\n=== Cleanup (lang + enchanter) ===")
 
     for enc_path, prefix, label in [
         (repo_root / ENCHANTER, "OneBlock_Enchanter_", "Enchanter"),
@@ -977,6 +1013,7 @@ def main():
         help="JSON file mapping drop item/entity IDs to display names. Default: item_render_names.json",
     )
     parser.add_argument("--dry-run", action="store_true", help="Show what would be done without writing files")
+    parser.add_argument("--clean", action="store_true", help="Remove all previously generated files before regenerating (eliminates stale crystals, blocks, and lang entries)")
     args = parser.parse_args()
 
     repo_root = Path(args.repo_root).resolve()
@@ -1009,7 +1046,10 @@ def main():
     enchanter_path = repo_root / ENCHANTER
     lang_path = repo_root / LANG_FILE
 
-    cleanup(repo_root, args.dry_run)
+    stale: "set[Path] | None" = None
+    if args.clean:
+        stale = collect_generated_files(repo_root)
+        cleanup(repo_root, args.dry_run)
 
     java_defaults_path = repo_root / Path(
         "mods/oneblock/src/main/java"
@@ -1042,17 +1082,18 @@ def main():
         if not is_dungeon:
             custom_item_ids.update(_custom_item_ids_from_entries(cfg.get("BaseDropPool", [])))
         for custom_id in sorted(custom_item_ids - seen_custom_item_ids):
-            ensure_custom_item_assets(repo_root, custom_id, args.dry_run)
+            ensure_custom_item_assets(repo_root, custom_id, args.dry_run, stale)
             if lang_path.exists():
                 patch_custom_item_lang(lang_path, custom_id, args.dry_run)
         seen_custom_item_ids.update(custom_item_ids)
 
-        ensure_block_assets(repo_root, expedition_id, args.dry_run)
+        ensure_block_assets(repo_root, expedition_id, args.dry_run, stale)
 
         write_json(
             repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",
             build_oneblock_block(expedition_id, item_level),
             args.dry_run,
+            stale,
         )
 
         if is_dungeon:
@@ -1063,6 +1104,7 @@ def main():
                 repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
                 build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks, "OneBlockDungeonEnchanter", knowledge_required=(eid in knowledge_gated_ids)),
                 args.dry_run,
+                stale,
             )
 
             if dungeon_enchanter_path.exists():
@@ -1085,6 +1127,7 @@ def main():
                 repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
                 build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks, knowledge_required=(eid in knowledge_gated_ids)),
                 args.dry_run,
+                stale,
             )
 
             if enchanter_path.exists():
@@ -1104,6 +1147,9 @@ def main():
                        "OneBlockExpeditionDefaults.java", len(all_expedition_drops), args.dry_run)
     _patch_java_static(java_dungeon_defaults_path, build_java_dungeon_defaults_block(all_dungeon_waves),
                        "OneBlockDungeonDefaults.java", len(all_dungeon_waves), args.dry_run)
+
+    if stale is not None:
+        remove_stale_files(stale, args.dry_run)
 
     total = len(expeditions)
     print(f"\nDone. {total} expedition(s) processed ({len(all_dungeon_waves)} dungeon(s)).")

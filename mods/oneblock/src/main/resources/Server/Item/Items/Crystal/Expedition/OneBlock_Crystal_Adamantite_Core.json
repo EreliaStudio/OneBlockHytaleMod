@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_Adamantite_Core.name",
+    "Description": "server.items.OneBlock_Crystal_Adamantite_Core.description"
+  },
+  "Id": "OneBlock_Crystal_Adamantite_Core",
+  "ItemLevel": 12,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ore_Onyxium",
+        "Quantity": 6
+      },
+      {
+        "ItemId": "Ore_Adamantite",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Ingredient_Voidheart",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Dark"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "Adamantite_Core"
+    ],
+    "OneBlockCrystalTicks": [
+      "90"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

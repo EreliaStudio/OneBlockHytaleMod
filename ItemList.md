@@ -29,6 +29,26 @@ Rock_Ice_Permafrost
 Rock_Sandstone
 Rock_Stone
 
+# Rubble
+Rubble_Sandstone
+Rubble_Basalt
+Rubble_Quartzite
+Rubble_Sandstone_White
+Rubble_Stone_Mossy
+Rubble_Slate
+Rubble_Aqua
+Rubble_Calcite
+Rubble_Marble
+Rubble_Stone_Medium
+Rubble_Sandstone_Red
+Rubble_Stone
+Rubble_Shale
+Rubble_Volcanic
+Rubble_Lime
+Rubble_Chalk
+Rubble_Dawnstone
+Rubble_Magma_Cooled
+
 # WOOD (TRUNKS)
 Wood_Oak_Trunk
 Wood_Beech_Trunk
@@ -534,3 +554,36 @@ Tool_Hatchet_Wood
 
 # Bucket
 *Container_Bucket_State_Filled_Water
+
+# Soil
+Soil_Roots_Poisoned
+Soil_Pathway_ThreeQuarter
+Soil_Ash
+Soil_Pathway
+Soil_Pathway_Quarter
+Soil_Pathway_Half
+Soil_Needles
+Soil_Leaves
+Soil_Grass_Wet
+Soil_Grass_Dry
+Soil_Grass
+Soil_Hive_Corrupted
+Soil_Hive
+Soil_Snow_Half
+Filter_Soils
+Template_Soil
+Soil_Clay_Smooth_GreenDark
+Soil_Clay_Smooth_Grey2
+Soil_Clay_Smooth_Red2
+Soil_Clay_Smooth_Yellow2
+Soil_Dirt_Dry
+Soil_Dirt_Poisoned
+Soil_Dirt_Tilled
+Soil_Dirt
+Soil_Dirt_Cold
+Soil_Dirt_Burnt
+Soil_Dirt_Crystal
+Soil_Dirt_Half
+Soil_Dirt_Lush
+Soil_Dirt_Stairs
+Soil_Dirt_Wet
