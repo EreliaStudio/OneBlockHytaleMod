@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_CursedForest.name",
+    "Description": "server.items.OneBlock_Crystal_CursedForest.description"
+  },
+  "Id": "OneBlock_Crystal_CursedForest",
+  "ItemLevel": 13,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 13
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Dark"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "CursedForest"
+    ],
+    "OneBlockCrystalTicks": [
+      "25"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

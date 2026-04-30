@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_InsideInsectNest.name",
+    "Description": "server.items.OneBlock_Crystal_InsideInsectNest.description"
+  },
+  "Id": "OneBlock_Crystal_InsideInsectNest",
+  "ItemLevel": 14,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 14
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Surface"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "InsideInsectNest"
+    ],
+    "OneBlockCrystalTicks": [
+      "25"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

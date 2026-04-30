@@ -1,0 +1,54 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Block_IceTemple.name"
+  },
+  "Id": "OneBlock_Block_IceTemple",
+  "ItemLevel": 24,
+  "Icon": "Icons/ItemsGenerated/OneBlock_IceTemple.png",
+  "Categories": [
+    "Blocks.OneBlock"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "OneBlock",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "OneBlock",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Soils",
+        "ID": "Soil_Dirt",
+        "Quantity": 0
+      }
+    },
+    "Textures": [
+      {
+        "Down": "BlockTextures/OneBlock_Block_IceTemple.png",
+        "Sides": "BlockTextures/OneBlock_Block_IceTemple.png",
+        "Up": "BlockTextures/OneBlock_Block_IceTemple.png",
+        "Weight": 1
+      }
+    ],
+    "TransitionToGroups": [],
+    "ParticleColor": "#ffffff"
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Block"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

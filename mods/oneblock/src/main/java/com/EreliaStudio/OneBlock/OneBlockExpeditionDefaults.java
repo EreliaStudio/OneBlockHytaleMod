@@ -115,553 +115,1406 @@ public final class OneBlockExpeditionDefaults
         Map<String, ExpeditionDefinition> expeditions = new HashMap<>();
 
         register(expeditions, "Default", 25, List.of(
-                drop("Ingredient_Fibre", 20),
-                drop("Ingredient_Stick", 20),
-                drop("Rubble_Stone", 20),
-                drop("Soil_Dirt", 10),
-                drop("Plant_Grass_Lush", 10)
+                drop(OneBlockDropId.entityDropId("Rabbit"), 3),
+                drop(OneBlockDropId.entityDropId("Chicken"), 3),
+                drop("Ingredient_Fibre", 35),
+                drop("Ingredient_Stick", 30),
+                drop("Rubble_Stone", 25),
+                drop("Soil_Dirt", 25)
         ), List.of(
-                crystalReward("Plain_Edge", 1),
-                crystalReward("Forest_Edge", 1),
-                crystalReward("Cave_Entry", 1)
+                reward("ExpeditionPoint", 1),
+                crystalReward("CaveEntry", 1),
+                crystalReward("ForestEdge", 1),
+                crystalReward("Plain", 1)
         ));
 
-        register(expeditions, "Plain_Edge", 25, List.of(
-                drop("Plant_Grass_Lush", 20),
-                drop("Ingredient_Fibre", 12),
-                drop("Plant_Flower_Common_White", 8),
-                drop("Plant_Hay_Bundle", 6),
+        register(expeditions, "CaveEntry", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Rat"), 2),
+                drop("Rubble_Stone", 35),
+                drop("Rock_Stone", 30),
+                drop("Ore_Copper", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 1),
+                crystalReward("Cave", 1)
+        ));
+
+        register(expeditions, "ForestEdge", 25, List.of(
                 drop(OneBlockDropId.entityDropId("Rabbit"), 4),
-                drop(OneBlockDropId.entityDropId("Chicken"), 3)
+                drop(OneBlockDropId.entityDropId("Boar"), 2),
+                drop(OneBlockDropId.entityDropId("Boar_Piglet"), 3),
+                drop(OneBlockDropId.entityDropId("Fox"), 1),
+                drop("Ingredient_Stick", 35),
+                drop("Wood_Oak_Trunk", 28),
+                drop("Plant_Sapling_Oak", 8),
+                drop("Plant_Fruit_Apple", 3)
         ), List.of(
-                crystalReward("Plains", 1),
-                crystalReward("Flower_Prairie", 1)
+                reward("ExpeditionPoint", 1),
+                crystalReward("ForestEntry", 1)
         ));
 
-        register(expeditions, "Plains", 35, List.of(
-                drop("Plant_Grass_Lush", 20),
-                drop("Plant_Hay_Bundle", 12),
-                drop("Plant_Flower_Common_White", 8),
-                drop("Plant_Sunflower_Block", 5),
-                drop(OneBlockDropId.entityDropId("Fox"), 3),
-                drop(OneBlockDropId.entityDropId("Boar"), 3)
-        ), List.of(
-                crystalReward("Horse_Field", 1),
-                crystalReward("Cow_Pasture", 1),
-                crystalReward("Fox_Hollow", 1),
-                crystalReward("Windy_Steppe", 1),
-                crystalReward("Gobelin_Camp", 1)
-        ));
-
-        register(expeditions, "Flower_Prairie", 35, List.of(
-                drop("Plant_Flower_Common_White", 18),
-                drop("Plant_Lavender_Block", 12),
-                drop("Plant_Sunflower_Block", 10),
-                drop("Plant_Petals_White", 8),
-                drop("Plant_Grass_Lush", 8),
-                drop(OneBlockDropId.entityDropId("Bluebird"), 4)
-        ), List.of(
-                reward("ExpeditionPoint", 1)
-        ), List.of(
-                bundle(List.of(reward("Ingredient_Motes_Light", 1)), 3),
-                bundle(List.of(reward("Ingredient_Life_Essence", 1)), 1)
-        ));
-
-        register(expeditions, "Horse_Field", 40, List.of(
-                drop("Plant_Grass_Lush", 20),
-                drop("Plant_Hay_Bundle", 16),
-                drop("Plant_Flower_Common_White", 6),
-                drop("Ingredient_Hide_Light", 3),
-                drop(OneBlockDropId.entityDropId("Antelope"), 3),
-                drop(OneBlockDropId.entityDropId("Bison"), 2)
-        ), List.of(
-                reward("ExpeditionPoint", 1)
-        ));
-
-        register(expeditions, "Cow_Pasture", 40, List.of(
-                drop("Plant_Grass_Lush", 20),
-                drop("Plant_Hay_Bundle", 16),
-                drop("Ingredient_Hide_Soft", 5),
-                drop("Ingredient_Leather_Soft", 2),
+        register(expeditions, "Plain", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Rabbit"), 4),
                 drop(OneBlockDropId.entityDropId("Sheep"), 3),
-                drop(OneBlockDropId.entityDropId("Bison_Calf"), 2)
+                drop(OneBlockDropId.entityDropId("Chicken"), 4),
+                drop(OneBlockDropId.entityDropId("Antelope"), 1),
+                drop("Plant_Crop_Carrot_Item", 16),
+                drop("Plant_Crop_Corn_Item", 16),
+                drop("Plant_Crop_Wheat_Item", 24),
+                drop("Ingredient_Fibre", 30)
         ), List.of(
-                reward("ExpeditionPoint", 1)
+                reward("ExpeditionPoint", 1),
+                crystalReward("Quarry", 1),
+                crystalReward("Hallow", 1)
         ));
 
-        register(expeditions, "Fox_Hollow", 40, List.of(
-                drop("Plant_Fruit_Berries_Red", 16),
-                drop("Plant_Bush", 10),
-                drop("Plant_Crop_Mushroom_Common_Brown", 6),
-                drop("Ingredient_Hide_Soft", 3),
-                drop(OneBlockDropId.entityDropId("Fox"), 5),
-                drop(OneBlockDropId.entityDropId("Rabbit"), 3)
-        ), List.of(
-                reward("ExpeditionPoint", 1)
-        ));
-
-        register(expeditions, "Windy_Steppe", 45, List.of(
-                drop("Plant_Grass_Lush", 14),
-                drop("Rock_Stone", 10),
-                drop("Ingredient_Feathers_Light", 5),
-                drop("Plant_Fruit_Windwillow", 4),
-                drop("Wood_Windwillow_Trunk", 4),
-                drop(OneBlockDropId.entityDropId("Crow"), 3)
-        ), List.of(
-                crystalReward("Sandstone_Cavern", 1)
-        ));
-
-        register(expeditions, "Forest_Edge", 25, List.of(
-                drop("Ingredient_Stick", 20),
-                drop("Wood_Oak_Trunk", 18),
-                drop("Plant_Leaves_Oak", 12),
-                drop("Plant_Bush", 8),
-                drop("Plant_Fruit_Berries_Red", 5)
-        ), List.of(
-                crystalReward("Young_Forest", 1)
-        ));
-
-        register(expeditions, "Young_Forest", 35, List.of(
-                drop("Wood_Oak_Trunk", 18),
-                drop("Wood_Beech_Trunk", 10),
-                drop("Ingredient_Stick", 12),
-                drop("Plant_Leaves_Oak", 10),
-                drop("Plant_Fruit_Apple", 4),
-                drop(OneBlockDropId.entityDropId("Boar"), 3)
-        ), List.of(
-                crystalReward("Deep_Forest", 1),
-                crystalReward("Mushroom_Grove", 1),
-                crystalReward("Fairy_Pond", 1)
-        ));
-
-        register(expeditions, "Deep_Forest", 45, List.of(
-                drop("Wood_Beech_Trunk", 14),
-                drop("Wood_Birch_Trunk", 10),
-                drop("Wood_Maple_Trunk", 8),
-                drop("Plant_Vine", 6),
-                drop("Plant_Crop_Mushroom_Common_Brown", 5),
-                drop(OneBlockDropId.entityDropId("Wolf"), 3)
-        ), List.of(
-                crystalReward("Darkwood_Thicket", 1),
-                crystalReward("Time_Locked_Glade", 1)
-        ));
-
-        register(expeditions, "Fairy_Pond", 40, List.of(
-                drop("Plant_Lavender_Block", 12),
-                drop("Plant_Petals_White", 10),
-                drop("Ingredient_Crystal_Cyan", 4),
-                drop("Ingredient_Motes_Light", 4),
-                drop("Ingredient_Water_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Frog"), 4)
-        ), List.of(
-                crystalReward("Time_Locked_Glade", 1)
-        ));
-
-        register(expeditions, "Mushroom_Grove", 40, List.of(
-                drop("Plant_Crop_Mushroom_Common_Brown", 14),
-                drop("Plant_Crop_Mushroom_Block_Brown", 8),
-                drop("Plant_Crop_Mushroom_Cap_Red", 6),
-                drop("Plant_Crop_Mushroom_Flatcap_Green", 5),
-                drop("Plant_Crop_Mushroom_Shelve_Brown", 5),
-                drop(OneBlockDropId.entityDropId("Spider"), 3)
-        ), List.of(
-                reward("ExpeditionPoint", 1)
-        ));
-
-        register(expeditions, "Darkwood_Thicket", 50, List.of(
-                drop("Wood_Ash_Trunk", 12),
-                drop("Wood_Poisoned_Trunk", 8),
-                drop("Plant_Vine", 8),
-                drop("Plant_Leaves_Poisoned_Floor", 6),
-                drop("Ingredient_Sac_Venom", 3),
-                drop(OneBlockDropId.entityDropId("Spider"), 4)
-        ), List.of(
-                crystalReward("Swamp_Trail", 1)
-        ));
-
-        register(expeditions, "Swamp_Trail", 45, List.of(
-                drop("Plant_Reeds_Marsh", 14),
-                drop("Rock_Stone_Mossy", 12),
-                drop("Plant_Vine_Rug", 8),
-                drop("Plant_Roots_Leafy", 6),
-                drop("Plant_Crop_Mushroom_Cap_Poison", 4),
-                drop(OneBlockDropId.entityDropId("Frog"), 4)
-        ), List.of(
-                crystalReward("Sunken_Swamp", 1),
-                crystalReward("Swamp_Ruins", 1)
-        ));
-
-        register(expeditions, "Sunken_Swamp", 55, List.of(
-                drop("Wood_Sallow_Trunk", 12),
-                drop("Plant_Reeds_Marsh", 12),
-                drop("Plant_Roots_Leafy", 8),
-                drop("Plant_Crop_Mushroom_Cap_Poison", 5),
-                drop("Ingredient_Sac_Venom", 3),
-                drop(OneBlockDropId.entityDropId("Crocodile"), 2)
-        ), List.of(
-                crystalReward("Forgotten_Marsh", 1)
-        ));
-
-        register(expeditions, "Forgotten_Marsh", 60, List.of(
-                drop("Wood_Poisoned_Trunk", 12),
-                drop("Plant_Crop_Mushroom_Cap_Poison", 8),
-                drop("Plant_Reeds_Marsh", 8),
-                drop("Ingredient_Bone_Fragment", 5),
-                drop("Ingredient_Void_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Fen_Stalker"), 3)
-        ), List.of(
-                crystalReward("Desert_Fringe", 1)
-        ));
-
-        register(expeditions, "Time_Locked_Glade", 55, List.of(
-                drop("Wood_Crystal_Trunk", 8),
-                drop("Wood_Spiral_Trunk", 6),
-                drop("Plant_Fruit_Spiral", 6),
-                drop("Ingredient_Crystal_Green", 4),
-                drop("Ingredient_Motes_Light", 3),
-                drop(OneBlockDropId.entityDropId("Archaeopteryx"), 2)
-        ), List.of(
-                crystalReward("Primeval_Forest", 1)
-        ));
-
-        register(expeditions, "Primeval_Forest", 65, List.of(
-                drop("Block_Primal_Stone", 12),
-                drop("Plant_Primal_Fern", 10),
-                drop("Plant_Giant_Jungle_Leaf", 8),
-                drop("Rock_Dinosaur_Fossil", 4),
-                drop("Ingredient_Primal_Meat", 3),
-                drop(OneBlockDropId.entityDropId("Cave_Raptor"), 3)
-        ), List.of(
-                crystalReward("Dinosaur_Nest", 1)
-        ));
-
-        register(expeditions, "Dinosaur_Nest", 70, List.of(
-                drop("Ingredient_Dinosaur_Bone", 10),
-                drop("Rock_Dinosaur_Fossil", 8),
-                drop("Ingredient_Claw_CaveRaptor", 5),
-                drop("Ingredient_Tooth_CaveRex", 3),
-                drop("Ingredient_Primal_Core", 1),
-                drop(OneBlockDropId.entityDropId("Cave_Raptor"), 3),
-                drop(OneBlockDropId.entityDropId("Cave_Rex"), 1)
-        ), List.of(
-                reward("ExpeditionPoint", 2)
-        ));
-
-        register(expeditions, "Cave_Entry", 25, List.of(
-                drop("Rubble_Stone", 20),
-                drop("Rock_Stone", 12),
-                drop("Rock_Shale", 5),
-                drop("Rock_Slate", 5),
-                drop(OneBlockDropId.entityDropId("Bat"), 4),
-                drop(OneBlockDropId.entityDropId("Rat"), 3)
-        ), List.of(
-                crystalReward("Shallow_Cave", 1),
-                crystalReward("Stone_Gallery", 1)
-        ));
-
-        register(expeditions, "Shallow_Cave", 35, List.of(
-                drop("Rock_Stone", 18),
-                drop("Rubble_Stone", 12),
-                drop("Rock_Shale", 8),
-                drop("Rock_Slate", 6),
-                drop("Plant_Roots_Cave", 4),
-                drop(OneBlockDropId.entityDropId("Bat"), 3)
-        ), List.of(
-                crystalReward("Copper_Cave", 1),
-                crystalReward("Mossy_Cave", 1)
-        ));
-
-        register(expeditions, "Stone_Gallery", 35, List.of(
-                drop("Rubble_Stone", 16),
-                drop("Rock_Stone", 14),
-                drop("Rock_Shale", 10),
-                drop("Rock_Slate", 10),
-                drop("Rock_Stone_Mossy", 5)
-        ), List.of(
-                reward("ExpeditionPoint", 1)
-        ));
-
-        register(expeditions, "Mossy_Cave", 40, List.of(
-                drop("Rock_Stone_Mossy", 12),
-                drop("Plant_Roots_Cave", 10),
-                drop("Plant_Roots_Cave_Small", 8),
-                drop("Plant_Crop_Mushroom_Glowing_Green", 5),
-                drop("Plant_Crop_Mushroom_Common_Brown", 5),
-                drop(OneBlockDropId.entityDropId("Cave_Spider"), 3)
-        ), List.of(
-                reward("ExpeditionPoint", 1)
-        ));
-
-        register(expeditions, "Copper_Cave", 45, List.of(
-                drop("Rock_Stone", 18),
-                drop("Ore_Copper", 14),
-                drop("Rubble_Stone", 8),
-                drop("Rock_Shale", 6),
+        register(expeditions, "Cave", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Rat"), 3),
                 drop(OneBlockDropId.entityDropId("Bat"), 3),
-                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2)
+                drop(OneBlockDropId.entityDropId("Spider"), 1),
+                drop("Rock_Stone", 35),
+                drop("Rubble_Stone", 30),
+                drop("Ore_Copper", 5)
         ), List.of(
-                crystalReward("Iron_Hollow", 1),
-                crystalReward("Gobelin_Camp", 1)
+                reward("ExpeditionPoint", 1),
+                crystalReward("RatCave", 1),
+                crystalReward("LowerCave", 1)
         ));
 
-        register(expeditions, "Iron_Hollow", 50, List.of(
-                drop("Rock_Stone", 16),
-                drop("Ore_Copper", 12),
-                drop("Ore_Iron", 5),
-                drop("Rock_Slate", 6),
-                drop("Ingredient_Stud_Iron", 2),
-                drop(OneBlockDropId.entityDropId("Cave_Spider"), 3)
+        register(expeditions, "LowerCave", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Rat"), 3),
+                drop(OneBlockDropId.entityDropId("Bat"), 3),
+                drop(OneBlockDropId.entityDropId("Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Cave_Spider"), 1),
+                drop("Rock_Stone", 35),
+                drop("Rubble_Stone", 35),
+                drop("Ore_Copper", 7)
         ), List.of(
-                crystalReward("Abandoned_Mine", 1),
-                crystalReward("Frozen_Cavern", 1),
-                crystalReward("Sandstone_Cavern", 1)
+                reward("ExpeditionPoint", 2),
+                crystalReward("CopperCave", 1)
         ));
 
-        register(expeditions, "Basalt_Gate", 55, List.of(
-                drop("Rock_Basalt", 18),
-                drop("Ore_Iron", 10),
-                drop("Rock_Volcanic", 6),
-                drop("Ingredient_Charcoal", 5),
-                drop("Ore_Thorium", 2),
-                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2)
+        register(expeditions, "CopperCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Rat"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 1),
+                drop("Rock_Stone", 30),
+                drop("Rubble_Stone", 25),
+                drop("Ore_Copper", 20),
+                drop("Ore_Iron", 3)
         ), List.of(
-                crystalReward("Basalt_Depths", 1)
+                reward("ExpeditionPoint", 2),
+                crystalReward("GobelinGank", 1)
         ));
 
-        register(expeditions, "Basalt_Depths", 60, List.of(
-                drop("Rock_Basalt", 16),
-                drop("Rock_Volcanic", 8),
-                drop("Ore_Iron", 8),
-                drop("Ore_Thorium", 6),
-                drop("Ingredient_Fire_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Earthen_Golem"), 2)
+        register(expeditions, "IronCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 3),
+                drop(OneBlockDropId.entityDropId("Goblin_Scavenger"), 1),
+                drop("Rock_Basalt", 24),
+                drop("Rubble_Basalt", 24),
+                drop("Ore_Iron", 22),
+                drop("Ore_Thorium", 3)
         ), List.of(
-                crystalReward("Thorium_Fissure", 1),
-                crystalReward("Crystal_Grotto", 1)
+                reward("ExpeditionPoint", 3),
+                crystalReward("GoldCave", 1),
+                crystalReward("ThoriumCave", 1)
         ));
 
-        register(expeditions, "Thorium_Fissure", 65, List.of(
-                drop("Rock_Basalt", 14),
-                drop("Ore_Thorium", 10),
-                drop("Rock_Volcanic", 8),
-                drop("Ore_Cobalt", 2),
-                drop("Ingredient_Fire_Essence", 3),
-                drop(OneBlockDropId.entityDropId("Ember_Golem"), 2)
+        register(expeditions, "SandCave", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Cactee"), 1),
+                drop("Block_Sand", 25),
+                drop("Rock_Sandstone", 28),
+                drop("Rubble_Sandstone", 24),
+                drop("Ore_Gold", 3)
         ), List.of(
-                crystalReward("Cobalt_Chasm", 1)
+                reward("ExpeditionPoint", 2),
+                crystalReward("SandCavern", 1)
         ));
 
-        register(expeditions, "Cobalt_Chasm", 70, List.of(
-                drop("Rock_Basalt", 12),
-                drop("Ore_Thorium", 8),
-                drop("Ore_Cobalt", 6),
-                drop("Rock_Gem_Sapphire", 3),
-                drop("Ingredient_Lightning_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Thunder_Golem"), 1)
+        register(expeditions, "GoldCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Thief"), 1),
+                drop("Rock_Basalt", 24),
+                drop("Rubble_Basalt", 24),
+                drop("Ore_Gold", 16),
+                drop("Rock_Gem_Topaz", 3)
         ), List.of(
-                crystalReward("Mithril_Vein", 1)
+                reward("ExpeditionPoint", 3)
         ));
 
-        register(expeditions, "Mithril_Vein", 75, List.of(
-                drop("Ore_Mithril", 7),
-                drop("Ore_Cobalt", 6),
-                drop("Rock_Gem_Emerald", 3),
-                drop("Rock_Gem_Sapphire", 3),
-                drop("Ingredient_Crystal_Cyan", 3),
-                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2)
+        register(expeditions, "ThoriumCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Lobber"), 1),
+                drop("Rock_Basalt", 24),
+                drop("Rubble_Basalt", 24),
+                drop("Ore_Thorium", 18),
+                drop("Ore_Cobalt", 3)
         ), List.of(
-                crystalReward("Onyxium_Pocket", 1)
+                reward("ExpeditionPoint", 4),
+                crystalReward("GobelinInvasion", 1),
+                crystalReward("SilverCave", 1)
         ));
 
-        register(expeditions, "Onyxium_Pocket", 80, List.of(
-                drop("Ore_Onyxium", 6),
-                drop("Ore_Mithril", 6),
-                drop("Rock_Gem_Diamond", 2),
-                drop("Ingredient_Void_Essence", 3),
-                drop("Ingredient_Voidheart", 1),
-                drop(OneBlockDropId.entityDropId("Void_Crawler"), 2)
-        ), List.of(
-                crystalReward("Adamantite_Core", 1)
-        ));
-
-        register(expeditions, "Adamantite_Core", 90, List.of(
-                drop("Ore_Adamantite", 6),
-                drop("Ore_Onyxium", 5),
-                drop("Rock_Gem_Diamond", 3),
-                drop("Rock_Gem_Zephyr", 2),
-                drop("Ingredient_Voidheart", 1),
-                drop(OneBlockDropId.entityDropId("Void_Spectre"), 1)
-        ), List.of(
-                crystalReward("Prisma_Crystal_Mine", 1)
-        ));
-
-        register(expeditions, "Prisma_Crystal_Mine", 100, List.of(
-                drop("Ore_Prisma", 5),
-                drop("Ore_Adamantite", 5),
-                drop("Rock_Gem_Zephyr", 3),
-                drop("Ingredient_Crystal_White", 4),
-                drop("Ingredient_Bar_Prisma", 1),
-                drop(OneBlockDropId.entityDropId("Void_Eye"), 1)
+        register(expeditions, "SilverCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Cave_Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Thief"), 1),
+                drop("Rock_Shale", 26),
+                drop("Rubble_Shale", 24),
+                drop("Ore_Silver", 18),
+                drop("Rock_Gem_Sapphire", 3)
         ), List.of(
                 reward("ExpeditionPoint", 4)
         ));
 
-        register(expeditions, "Crystal_Grotto", 60, List.of(
-                drop("Ingredient_Crystal_Blue", 8),
-                drop("Ingredient_Crystal_Cyan", 8),
-                drop("Rock_Gem_Sapphire", 4),
-                drop("Rock_Gem_Emerald", 4),
-                drop("Rock_Gem_Topaz", 3),
-                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2)
+        register(expeditions, "CobaltCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Lobber"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Ogre"), 1),
+                drop("Rock_Shale", 24),
+                drop("Rubble_Shale", 22),
+                drop("Ore_Cobalt", 18),
+                drop("Ore_Adamantite", 3)
         ), List.of(
-                crystalReward("Frozen_Ruins", 1)
+                reward("ExpeditionPoint", 5),
+                crystalReward("AdamantiteCave", 1),
+                crystalReward("GemCave", 1),
+                crystalReward("FireCave", 1)
         ));
 
-        register(expeditions, "Frozen_Cavern", 55, List.of(
-                drop("Rock_Ice", 14),
-                drop("Rock_Ice_Permafrost", 8),
-                drop("Block_Ice_Blue", 6),
-                drop("Block_Snow", 6),
-                drop("Ore_Iron", 4),
-                drop(OneBlockDropId.entityDropId("Frost_Zombie"), 2)
+        register(expeditions, "AdamantiteCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Lobber"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Ogre"), 1),
+                drop("Rubble_Shale", 22),
+                drop("Rock_Shale", 22),
+                drop("Ore_Adamantite", 18),
+                drop("Ore_Mithril", 3)
         ), List.of(
-                crystalReward("Snowy_Pass", 1)
+                reward("ExpeditionPoint", 6),
+                crystalReward("GemDeepCave", 1),
+                crystalReward("MithrilCave", 1)
         ));
 
-        register(expeditions, "Snowy_Pass", 60, List.of(
-                drop("Block_Snow", 12),
-                drop("Block_Snow_Packed", 8),
-                drop("Block_Ice_Clear", 6),
-                drop("Plant_Snow_Shrub", 5),
-                drop("Ingredient_Ice_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Wolf"), 3)
+        register(expeditions, "GemCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Cave_Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Thief"), 1),
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 1),
+                drop("Rubble_Shale", 22),
+                drop("Rock_Shale", 22),
+                drop("Rock_Gem_Emerald", 12),
+                drop("Rock_Gem_Topaz", 10),
+                drop("Rock_Gem_Sapphire", 4)
         ), List.of(
-                crystalReward("Snowy_Plains", 1)
+                reward("ExpeditionPoint", 5)
         ));
 
-        register(expeditions, "Snowy_Plains", 65, List.of(
-                drop("Block_Snow_Packed", 12),
-                drop("Plant_Frozen_Grass", 8),
-                drop("Plant_Frost_Fern", 6),
-                drop("Ingredient_Hide_Heavy", 4),
-                drop("Ingredient_Ice_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Bison"), 2)
+        register(expeditions, "FireCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie_Burnt"), 2),
+                drop(OneBlockDropId.entityDropId("Emberwulf"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Soldier"), 1),
+                drop("Rock_Volcanic", 26),
+                drop("Rubble_Volcanic", 24),
+                drop("Rubble_Volcanic_Medium", 14),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Ore_Thorium", 10),
+                drop("Ore_Cobalt", 3)
         ), List.of(
-                crystalReward("Frostpine_Forest", 1),
-                crystalReward("Ice_Lake", 1),
-                crystalReward("Whitefang_Den", 1)
+                reward("ExpeditionPoint", 6),
+                crystalReward("HellGate", 1)
         ));
 
-        register(expeditions, "Frostpine_Forest", 65, List.of(
-                drop("Wood_Fir_Trunk", 12),
-                drop("Wood_Ice_Trunk", 8),
-                drop("Plant_Frost_Fern", 8),
-                drop("Ingredient_Tree_Bark", 5),
-                drop("Ingredient_Ice_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Wolf"), 3)
+        register(expeditions, "GemDeepCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Cave_Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2),
+                drop(OneBlockDropId.entityDropId("Earthen_Golem"), 1),
+                drop("Rock_Shale", 20),
+                drop("Rubble_Shale", 20),
+                drop("Rock_Gem_Emerald", 12),
+                drop("Rock_Gem_Topaz", 10),
+                drop("Rock_Gem_Sapphire", 8),
+                drop("Rock_Gem_Diamond", 3)
         ), List.of(
-                crystalReward("Frozen_Ruins", 1)
+                reward("ExpeditionPoint", 7)
         ));
 
-        register(expeditions, "Ice_Lake", 60, List.of(
-                drop("Block_Ice_Clear", 12),
-                drop("Block_Frozen_Water", 8),
-                drop("Block_Ice_Blue", 6),
-                drop("Ingredient_Water_Essence", 2),
-                drop("Ingredient_Ice_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Bluegill"), 3)
+        register(expeditions, "MithrilCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Ogre"), 1),
+                drop("Rock_Ledge_Brick", 28),
+                drop("Ore_Mithril", 18),
+                drop("Ore_Onyxium", 3)
         ), List.of(
-                reward("ExpeditionPoint", 1)
+                reward("ExpeditionPoint", 7),
+                crystalReward("OnyxiumCave", 1)
         ));
 
-        register(expeditions, "Whitefang_Den", 65, List.of(
-                drop("Ingredient_Hide_Heavy", 8),
-                drop("Ingredient_Leather_Heavy", 4),
-                drop("Ingredient_Bone_Fragment", 6),
-                drop("Block_Permafrost", 6),
-                drop("Ingredient_Ice_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Wolf"), 5)
+        register(expeditions, "OnyxiumCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Void_Crawler"), 1),
+                drop("Rock_Ledge_Brick", 26),
+                drop("Ore_Onyxium", 18),
+                drop("Ore_Prisma", 3)
         ), List.of(
-                reward("ExpeditionPoint", 1)
+                reward("ExpeditionPoint", 8),
+                crystalReward("PrismaCave", 1)
         ));
 
-        register(expeditions, "Polar_Necropolis", 80, List.of(
-                drop("Ore_Cobalt_Ice", 8),
-                drop("Rock_Glacial_Crystal", 6),
-                drop("Rock_Frozen_Stone", 6),
+        register(expeditions, "PrismaCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Scrapper"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Void_Crawler"), 2),
+                drop(OneBlockDropId.entityDropId("Void_Eye"), 1),
+                drop("Rock_Volcanic", 20),
+                drop("Rubble_Volcanic", 20),
+                drop("Ore_Prisma", 16),
+                drop("Rock_Gem_Zephyr", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 10)
+        ));
+
+        register(expeditions, "SandCavern", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Cactee"), 2),
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 1),
+                drop("Rubble_Stone", 22),
+                drop("Rock_Stone", 22),
+                drop("Rock_Sandstone", 26),
+                drop("Rubble_Sandstone", 24),
+                drop("Ore_Gold", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("Desert", 1)
+        ));
+
+        register(expeditions, "Desert", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Cactee"), 2),
+                drop(OneBlockDropId.entityDropId("Camel"), 3),
+                drop(OneBlockDropId.entityDropId("Camel_Calf"), 2),
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 1),
+                drop("Block_Sand", 32),
+                drop("Rock_Sandstone", 24),
+                drop("Rubble_Sandstone", 22),
+                drop("Plant_Cactus_1", 16),
+                drop("Plant_Cactus_Ball_1", 10),
+                drop("Plant_Cactus_Flat_1", 10),
+                drop("Ore_Gold", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("DryJunglePass", 1),
+                crystalReward("DesertTempleEntrace", 1),
+                crystalReward("InnerDesert", 1),
+                crystalReward("DryTrorkCamp", 1)
+        ));
+
+        register(expeditions, "ForestEntry", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Boar"), 3),
+                drop(OneBlockDropId.entityDropId("Boar_Piglet"), 4),
+                drop(OneBlockDropId.entityDropId("Pigeon"), 4),
+                drop(OneBlockDropId.entityDropId("Fox"), 2),
+                drop(OneBlockDropId.entityDropId("Wolf"), 1),
+                drop("Ingredient_Stick", 28),
+                drop("Wood_Oak_Trunk", 24),
+                drop("Wood_Beech_Trunk", 16),
+                drop("Wood_Ash_Trunk", 10),
+                drop("Plant_Sapling_Oak", 8),
+                drop("Plant_Sapling_Beech", 6),
+                drop("Plant_Sapling_Ash", 5),
+                drop("Plant_Crop_Mushroom_Cap_Brown", 8),
+                drop("Plant_Crop_Mushroom_Common_Brown", 8),
+                drop("Plant_Crop_Mushroom_Shelve_Brown", 5)
+        ), List.of(
+                reward("ExpeditionPoint", 1),
+                crystalReward("Pond", 1),
+                crystalReward("Forest", 1)
+        ));
+
+        register(expeditions, "Pond", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frog"), 4),
+                drop(OneBlockDropId.entityDropId("Duck"), 4),
+                drop(OneBlockDropId.entityDropId("Bluegill"), 4),
+                drop("Fish_Bluegill_Item", 20),
+                drop("Plant_Moss_Block_Green", 18),
+                drop("Plant_Moss_Rug_Green", 18),
+                drop("Soil_Clay_Blue", 14),
+                drop("Soil_Dirt", 18)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("River", 1)
+        ));
+
+        register(expeditions, "River", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frog"), 3),
+                drop(OneBlockDropId.entityDropId("Duck"), 3),
+                drop(OneBlockDropId.entityDropId("Bluegill"), 4),
+                drop(OneBlockDropId.entityDropId("Crab"), 1),
+                drop("Fish_Bluegill_Item", 20),
+                drop("Rubble_Stone", 18),
+                drop("Rock_Stone", 18),
+                drop("Soil_Clay_Blue", 14),
+                drop("Plant_Moss_Green", 16)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("Lake", 1),
+                crystalReward("Sea", 1),
+                crystalReward("Costline", 1)
+        ));
+
+        register(expeditions, "Lake", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Frog"), 3),
+                drop(OneBlockDropId.entityDropId("Duck"), 3),
+                drop(OneBlockDropId.entityDropId("Bluegill"), 4),
+                drop(OneBlockDropId.entityDropId("Crocodile"), 1),
+                drop("Fish_Bluegill_Item", 22),
+                drop("Plant_Moss_Block_Green", 18),
+                drop("Plant_Moss_Rug_Green", 18),
+                drop("Soil_Clay_Blue", 16),
+                drop("Rock_Gem_Sapphire", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 2)
+        ));
+
+        register(expeditions, "Sea", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Crab"), 4),
+                drop(OneBlockDropId.entityDropId("Bluegill"), 3),
+                drop(OneBlockDropId.entityDropId("Skeleton_Pirate_Striker"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Pirate_Gunner"), 1),
+                drop("Fish_Whale_Humpback_Item", 2),
+                drop("Rock_Aqua_Brick", 20),
+                drop("Rock_Aqua_Brick_Smooth", 18),
+                drop("Plant_Coral_Block_Yellow", 14),
+                drop("Plant_Coral_Bush_Yellow", 14),
+                drop("Plant_Coral_Model_Yellow", 10),
+                drop("Rock_Gem_Sapphire", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("PirateShipwreck", 1)
+        ));
+
+        register(expeditions, "Costline", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Crab"), 4),
+                drop(OneBlockDropId.entityDropId("Duck"), 3),
+                drop(OneBlockDropId.entityDropId("Cactee"), 1),
+                drop("Block_Sand", 26),
+                drop("Rock_Sandstone", 24),
+                drop("Rubble_Sandstone", 22),
+                drop("Plant_Coral_Bush_Yellow", 12),
+                drop("Plant_Coral_Model_Yellow", 10),
+                drop("Rock_Gem_Sapphire", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("SeaCavern", 1)
+        ));
+
+        register(expeditions, "SeaCavern", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Crab"), 3),
+                drop(OneBlockDropId.entityDropId("Cave_Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Scarak_Louse"), 1),
+                drop("Rock_Aqua_Brick", 22),
+                drop("Rock_Aqua_Brick_Smooth", 20),
+                drop("Rock_Aqua_Brick_Ornate", 10),
+                drop("Rock_Gem_Sapphire", 8),
+                drop("Rock_Gem_Diamond", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("SeaInfestedNest", 1)
+        ));
+
+        register(expeditions, "SeaInfestedNest", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Scarak_Louse"), 3),
+                drop(OneBlockDropId.entityDropId("Scarak_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Scarak_Seeker"), 1),
+                drop("Soil_Hive", 24),
+                drop("Soil_Hive_Brick", 22),
+                drop("Soil_Hive_Brick_Smooth", 16),
+                drop("Ingredient_Hide_Scaled", 10),
+                drop("Ingredient_Leather_Scaled", 6),
+                drop("Rock_Gem_Sapphire", 6),
+                drop("Rock_Gem_Diamond", 2)
+        ), List.of(
+                reward("ExpeditionPoint", 6),
+                crystalReward("SeaMonster", 1)
+        ));
+
+        register(expeditions, "Forest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Boar"), 3),
+                drop(OneBlockDropId.entityDropId("Boar_Piglet"), 4),
+                drop(OneBlockDropId.entityDropId("Fox"), 2),
+                drop(OneBlockDropId.entityDropId("Pigeon"), 4),
+                drop(OneBlockDropId.entityDropId("Deer"), 2),
+                drop(OneBlockDropId.entityDropId("Wolf"), 1),
+                drop("Ingredient_Stick", 26),
+                drop("Wood_Oak_Trunk", 22),
+                drop("Wood_Beech_Trunk", 18),
+                drop("Wood_Ash_Trunk", 12),
+                drop("Plant_Sapling_Oak", 8),
+                drop("Plant_Sapling_Beech", 6),
+                drop("Plant_Sapling_Ash", 5),
+                drop("Plant_Fruit_Apple", 5)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("AridForest", 1),
+                crystalReward("Swamp", 1),
+                crystalReward("DeepForest", 1),
+                crystalReward("JungleEdge", 1)
+        ));
+
+        register(expeditions, "AridForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Fox"), 2),
+                drop(OneBlockDropId.entityDropId("Armadillo"), 3),
+                drop(OneBlockDropId.entityDropId("Cactee"), 1),
+                drop("Wood_Ash_Trunk", 24),
+                drop("Wood_Bottletree_Trunk", 14),
+                drop("Wood_Bottletree_Roots", 10),
+                drop("Plant_Leaves_Bottle", 12),
+                drop("Plant_Seeds_Bottletree", 8),
+                drop("Rock_Sandstone", 22),
+                drop("Rubble_Sandstone", 20)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("Desert", 1)
+        ));
+
+        register(expeditions, "Swamp", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frog"), 4),
+                drop(OneBlockDropId.entityDropId("Crocodile"), 2),
+                drop(OneBlockDropId.entityDropId("Fen_Stalker"), 1),
+                drop("Soil_Dirt", 22),
+                drop("Soil_Clay_Blue", 20),
+                drop("Plant_Moss_Block_Green", 18),
+                drop("Plant_Moss_Rug_Green", 18),
+                drop("Plant_Crop_Mushroom_Common_Brown", 12),
+                drop("Plant_Crop_Mushroom_Shelve_Brown", 8),
+                drop("Plant_Crop_Mushroom_Block_Yellow", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("EnchantedForest", 1)
+        ));
+
+        register(expeditions, "EnchantedForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Deer"), 3),
+                drop(OneBlockDropId.entityDropId("Bluebird"), 4),
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 1),
+                drop("Wood_Amber_Trunk", 18),
+                drop("Wood_Amber_Roots", 12),
+                drop("Plant_Leaves_Amber", 14),
+                drop("Plant_Leaves_Goldentree", 12),
+                drop("Plant_Flower_Common_Yellow", 14),
+                drop("Plant_Flower_Orchid_Yellow", 8),
+                drop("Rock_Gem_Emerald", 8),
+                drop("Rock_Gem_Topaz", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("FairyPond", 1)
+        ));
+
+        register(expeditions, "FairyPond", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frog"), 3),
+                drop(OneBlockDropId.entityDropId("Duck"), 3),
+                drop(OneBlockDropId.entityDropId("Bluebird"), 4),
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 1),
+                drop("Plant_Flower_Common_Pink2", 14),
+                drop("Plant_Flower_Common_Yellow", 14),
+                drop("Plant_Flower_Orchid_Yellow", 8),
+                drop("Plant_Petals_Yellow", 12),
+                drop("Plant_Moss_Yellow", 16),
+                drop("Plant_Moss_Block_Yellow", 14),
+                drop("Rock_Gem_Topaz", 6)
+        ), List.of(
+                reward("ExpeditionPoint", 5)
+        ));
+
+        register(expeditions, "DeepForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Boar"), 3),
+                drop(OneBlockDropId.entityDropId("Fox"), 2),
+                drop(OneBlockDropId.entityDropId("Wolf"), 2),
+                drop(OneBlockDropId.entityDropId("Crawler"), 1),
+                drop("Wood_Beech_Trunk", 22),
+                drop("Wood_Ash_Trunk", 18),
+                drop("Wood_Maple_Trunk", 14),
+                drop("Plant_Sapling_Beech", 8),
+                drop("Plant_Sapling_Ash", 7),
+                drop("Plant_Crop_Mushroom_Block_Yellow", 8),
+                drop("Plant_Crop_Mushroom_Block_Yellow_Trunk", 5),
+                drop("Rock_Gem_Emerald", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("DarkForest", 1),
+                crystalReward("JungleEdge", 1),
+                crystalReward("TrorkHuntingGround", 1)
+        ));
+
+        register(expeditions, "DarkForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Wolf"), 2),
+                drop(OneBlockDropId.entityDropId("Crawler"), 2),
+                drop(OneBlockDropId.entityDropId("Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Aberrant_Zombie"), 1),
+                drop("Plant_Leaves_Bramble", 20),
+                drop("Plant_Crop_Mushroom_Block_Yellow", 14),
+                drop("Plant_Crop_Mushroom_Block_Yellow_Mycelium", 10),
+                drop("Plant_Crop_Mushroom_Shelve_Yellow", 8),
+                drop("Ingredient_Bone_Fragment", 10),
+                drop("Rock_Gem_Ruby", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("BurnedForest", 1),
+                crystalReward("CursedForest", 1)
+        ));
+
+        register(expeditions, "BurnedForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie_Burnt"), 2),
+                drop(OneBlockDropId.entityDropId("Emberwulf"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Archer"), 1),
+                drop("Wood_Ash_Trunk", 20),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Rock_Volcanic", 22),
+                drop("Rubble_Volcanic", 20),
+                drop("Ingredient_Powder_Boom", 6),
+                drop("Ore_Thorium", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("FireLand", 1)
+        ));
+
+        register(expeditions, "CursedForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie"), 3),
+                drop(OneBlockDropId.entityDropId("Aberrant_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Scout"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archer"), 1),
+                drop("Ingredient_Bone_Fragment", 20),
+                drop("Deco_Bone_Full", 10),
+                drop("Deco_Bone_Spike", 10),
+                drop("Deco_Bone_Spine", 6),
+                drop("Plant_Leaves_Bramble", 16),
+                drop("Rock_Runic_Brick", 10),
+                drop("Rock_Gem_Zephyr", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 6),
+                crystalReward("OutlanderForest", 1),
+                crystalReward("Graveyard", 1)
+        ));
+
+        register(expeditions, "Graveyard", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie"), 3),
+                drop(OneBlockDropId.entityDropId("Skeleton_Scout"), 3),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Soldier"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Mage"), 1),
+                drop("Ingredient_Bone_Fragment", 24),
+                drop("Deco_Bone_Full", 12),
+                drop("Deco_Bone_Spike", 10),
+                drop("Furniture_Village_Tombstone", 8),
+                drop("Furniture_Ancient_Coffin", 4),
+                drop("Weapon_Club_Zombie_Arm", 2),
+                drop("Weapon_Club_Zombie_Leg", 2)
+        ), List.of(
+                reward("ExpeditionPoint", 7),
+                crystalReward("UndeadTemple", 1)
+        ));
+
+        register(expeditions, "VoidPortal", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Void_Larva"), 3),
+                drop(OneBlockDropId.entityDropId("Void_Crawler"), 2),
+                drop(OneBlockDropId.entityDropId("Void_Eye"), 1),
+                drop("Portal_Device", 5),
+                drop("Instance_Gateway", 4),
+                drop("Rock_Runic_Brick", 20),
+                drop("Rock_Runic_Brick_Ornate", 12),
+                drop("Rock_Gem_Zephyr", 8),
+                drop("Ore_Onyxium", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("VoidTemple", 1),
+                crystalReward("SpiritThreshold", 1)
+        ));
+
+        register(expeditions, "OutlanderForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Outlander_Initiate"), 3),
+                drop(OneBlockDropId.entityDropId("Outlander_Hunter"), 2),
+                drop(OneBlockDropId.entityDropId("Outlander_Marauder"), 1),
+                drop("Wood_Amber_Trunk", 18),
+                drop("Wood_Amber_Roots", 12),
+                drop("Plant_Leaves_Amber", 14),
+                drop("Plant_Leaves_Bramble", 12),
+                drop("Ingredient_Hide_Prismic", 4),
+                drop("Rock_Gem_Zephyr", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 7),
+                crystalReward("OutlanderGank", 1),
+                crystalReward("OutlanderPlain", 1)
+        ));
+
+        register(expeditions, "OutlanderPlain", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Outlander_Initiate"), 3),
+                drop(OneBlockDropId.entityDropId("Outlander_Hunter"), 3),
+                drop(OneBlockDropId.entityDropId("Outlander_Berserker"), 2),
+                drop(OneBlockDropId.entityDropId("Outlander_Marauder"), 2),
+                drop(OneBlockDropId.entityDropId("Outlander_Priest"), 1),
+                drop(OneBlockDropId.entityDropId("Outlander_Brute"), 1),
+                drop("Plant_Crop_Wheat_Item", 20),
+                drop("Plant_Crop_Corn_Item", 18),
+                drop("Plant_Crop_Carrot_Item", 16),
+                drop("Ingredient_Hide_Prismic", 8),
+                drop("Ingredient_Leather_Prismic", 6),
+                drop("Ore_Adamantite", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 7),
+                crystalReward("OutlanderCity", 1),
+                crystalReward("Toundra", 1)
+        ));
+
+        register(expeditions, "Toundra", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Wolf"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Scout"), 1),
+                drop("Rock_Ice", 24),
+                drop("Rubble_Ice", 24),
+                drop("Rubble_Ice_Medium", 14),
+                drop("Wood_Ice_Trunk", 14),
+                drop("Plant_Seeds_Ice", 8),
+                drop("Ingredient_Ice_Essence", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("FrozenForest", 1),
+                crystalReward("IceLand", 1)
+        ));
+
+        register(expeditions, "FrozenForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Wolf"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Ranger"), 1),
+                drop("Wood_Birch_Trunk", 18),
+                drop("Plant_Sapling_Birch", 8),
+                drop("Plant_Leaves_Birch", 14),
+                drop("Wood_Ice_Trunk", 16),
+                drop("Rock_Ice", 20),
+                drop("Rubble_Ice", 18),
+                drop("Ingredient_Ice_Essence", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("IcyForest", 1)
+        ));
+
+        register(expeditions, "IceLand", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frost_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Scout"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Golem"), 1),
+                drop("Rock_Ice", 26),
+                drop("Rubble_Ice", 24),
+                drop("Rubble_Ice_Medium", 16),
+                drop("Rock_Ice_Icicles", 10),
+                drop("Wood_Ice_Trunk", 10),
+                drop("Ingredient_Ice_Essence", 5)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("IcyCavern", 1)
+        ));
+
+        register(expeditions, "IcyCavern", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Frost_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Mage"), 1),
+                drop("Rock_Ice", 22),
+                drop("Rubble_Ice", 22),
+                drop("Rock_Ice_Icicles", 12),
+                drop("Ore_Silver", 12),
+                drop("Rock_Gem_Sapphire", 6),
+                drop("Ingredient_Ice_Essence", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 9),
+                crystalReward("YetiCavern", 1),
+                crystalReward("FrozenGraveyard", 1)
+        ));
+
+        register(expeditions, "YetiCavern", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Frost_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Knight"), 2),
+                drop(OneBlockDropId.entityDropId("Ice_Dragon"), 1),
+                drop("Rock_Ice", 22),
+                drop("Rubble_Ice_Medium", 18),
+                drop("Rock_Ice_Icicles", 12),
+                drop("Ingredient_Ice_Essence", 8),
+                drop("Rock_Gem_Diamond", 3),
+                drop("Weapon_Staff_Crystal_Ice", 1)
+        ), List.of(
+                reward("ExpeditionPoint", 10),
+                crystalReward("IceTemple", 1)
+        ));
+
+        register(expeditions, "IcyForest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Wolf"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Ranger"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Golem"), 1),
+                drop("Wood_Ice_Trunk", 18),
+                drop("Plant_Seeds_Ice", 8),
+                drop("Plant_Leaves_Birch", 12),
+                drop("Wood_Birch_Trunk", 16),
+                drop("Rock_Ice", 20),
+                drop("Ingredient_Ice_Essence", 6)
+        ), List.of(
+                reward("ExpeditionPoint", 9),
+                crystalReward("SpiritThreshold", 1)
+        ));
+
+        register(expeditions, "FireLand", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie_Burnt"), 2),
+                drop(OneBlockDropId.entityDropId("Emberwulf"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Soldier"), 1),
+                drop("Rock_Volcanic", 26),
+                drop("Rubble_Volcanic", 24),
+                drop("Rubble_Volcanic_Medium", 16),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Ore_Thorium", 8),
+                drop("Ore_Cobalt", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 7),
+                crystalReward("Volcano", 1),
+                crystalReward("FieryGraveward", 1)
+        ));
+
+        register(expeditions, "FieryGraveward", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie_Burnt"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Soldier"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Knight"), 1),
+                drop("Ingredient_Bone_Fragment", 18),
+                drop("Deco_Bone_Full", 10),
+                drop("Deco_Bone_Spike", 10),
+                drop("Rock_Volcanic", 22),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Rock_Gem_Ruby", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("FireCave", 1),
+                crystalReward("BurntBattlefield", 1)
+        ));
+
+        register(expeditions, "HellGate", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Mage"), 1),
+                drop(OneBlockDropId.entityDropId("Ember_Golem"), 1),
+                drop("Portal_Device", 5),
+                drop("Rock_Volcanic_Cracked_Incandescent", 18),
+                drop("Rock_Volcanic_Cracked_Lava_Incandescent", 16),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Ore_Mithril", 3),
+                drop("Ore_Onyxium", 2)
+        ), List.of(
+                reward("ExpeditionPoint", 9),
+                crystalReward("HellPlain", 1),
+                crystalReward("HellSwamp", 1)
+        ));
+
+        register(expeditions, "HellPlain", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Footman"), 2),
+                drop(OneBlockDropId.entityDropId("Emberwulf"), 2),
+                drop(OneBlockDropId.entityDropId("Firesteel_Golem"), 1),
+                drop("Rock_Volcanic", 22),
+                drop("Rubble_Volcanic", 22),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Ingredient_Bolt_Cindercloth", 6),
+                drop("Ore_Mithril", 8),
+                drop("Ore_Onyxium", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 10),
+                crystalReward("FireGemCave", 1)
+        ));
+
+        register(expeditions, "HellSwamp", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Fen_Stalker"), 2),
+                drop(OneBlockDropId.entityDropId("Zombie_Burnt"), 2),
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Mage"), 1),
+                drop(OneBlockDropId.entityDropId("Ember_Golem"), 1),
+                drop("Soil_Clay_Black", 18),
+                drop("Plant_Moss_Yellow", 16),
+                drop("Plant_Moss_Block_Yellow", 14),
+                drop("Plant_Crop_Mushroom_Block_Yellow", 10),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Rock_Gem_Ruby", 6),
+                drop("Ore_Onyxium", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 10)
+        ));
+
+        register(expeditions, "FireGemCave", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Incandescent_Skeleton_Mage"), 1),
+                drop(OneBlockDropId.entityDropId("Firesteel_Golem"), 1),
+                drop(OneBlockDropId.entityDropId("Thunder_Golem"), 1),
+                drop("Rock_Volcanic", 20),
+                drop("Rock_Volcanic_Cracked_Incandescent", 14),
+                drop("Rock_Gem_Ruby", 10),
+                drop("Rock_Gem_Diamond", 5),
+                drop("Ore_Onyxium", 8),
+                drop("Ore_Prisma", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 11),
+                crystalReward("ElementalConfluence", 1)
+        ));
+
+        register(expeditions, "DesertTempleEntrace", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Scout"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archer"), 1),
+                drop("Rock_Sandstone", 24),
+                drop("Rubble_Sandstone", 22),
+                drop("Furniture_Ancient_Pot", 10),
+                drop("Furniture_Ancient_Crate", 8),
+                drop("Deco_Pot_Clay_Broken", 10),
+                drop("Ore_Gold", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("DeeperDesertTemple", 1)
+        ));
+
+        register(expeditions, "DeeperDesertTemple", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Soldier"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Mage"), 1),
+                drop("Rock_Sandstone", 22),
+                drop("Rock_Sandstone_Brick", 18),
+                drop("Furniture_Ancient_Pot", 8),
+                drop("Furniture_Ancient_Statue", 6),
+                drop("Furniture_Ancient_Candle", 8),
+                drop("Rock_Gem_Topaz", 5),
+                drop("Ore_Gold", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("DesertTemple", 1)
+        ));
+
+        register(expeditions, "PharaonRoom", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Knight"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Mage"), 1),
+                drop(OneBlockDropId.entityDropId("Skeleton_Sand_Archmage"), 1),
+                drop("Deco_Treasure", 6),
+                drop("Furniture_Ancient_Coffin", 8),
+                drop("Furniture_Ancient_Statue", 8),
+                drop("Furniture_Ancient_Chest_Large_Treasure", 4),
+                drop("Ore_Gold", 12),
+                drop("Rock_Gem_Diamond", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 7)
+        ));
+
+        register(expeditions, "InnerDesert", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Cactee"), 2),
+                drop(OneBlockDropId.entityDropId("Camel"), 3),
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 1),
+                drop(OneBlockDropId.entityDropId("Scarak_Louse"), 1),
+                drop("Block_Sand", 30),
+                drop("Rock_Sandstone", 24),
+                drop("Rubble_Sandstone", 20),
+                drop("Plant_Cactus_1", 14),
+                drop("Plant_Cactus_Ball_1", 10),
+                drop("Plant_Cactus_Flat_1", 10),
+                drop("Ore_Gold", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("DryJunglePass", 1),
+                crystalReward("InsectInvasion", 1)
+        ));
+
+        register(expeditions, "MuddyDesert", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Cactee"), 2),
+                drop(OneBlockDropId.entityDropId("Crocodile"), 2),
+                drop(OneBlockDropId.entityDropId("Scarak_Louse"), 1),
+                drop("Block_Sand", 22),
+                drop("Soil_Dirt", 22),
+                drop("Soil_Clay_Black", 18),
+                drop("Soil_Gravel_Sand_Half", 16),
+                drop("Plant_Cactus_1", 12),
+                drop("Plant_Crop_Tomato_Item", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("InfestedDesert", 1)
+        ));
+
+        register(expeditions, "InfestedDesert", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Scarak_Louse"), 3),
+                drop(OneBlockDropId.entityDropId("Scarak_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Scarak_Seeker"), 1),
+                drop("Soil_Hive", 24),
+                drop("Soil_Hive_Brick", 20),
+                drop("Soil_Hive_Brick_Smooth", 16),
+                drop("Soil_Hive_Brick_Stairs", 10),
+                drop("Plant_Cactus_Ball_1", 8),
+                drop("Ingredient_Hide_Scaled", 6)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("InsectNest", 1)
+        ));
+
+        register(expeditions, "InsideInsectNest", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Scarak_Louse"), 3),
+                drop(OneBlockDropId.entityDropId("Scarak_Fighter"), 2),
+                drop(OneBlockDropId.entityDropId("Scarak_Defender"), 1),
+                drop(OneBlockDropId.entityDropId("Scarak_Seeker"), 1),
+                drop("Soil_Hive", 22),
+                drop("Soil_Hive_Brick", 20),
+                drop("Soil_Hive_Brick_Smooth", 16),
+                drop("Soil_Hive_Brick_Beam", 10),
+                drop("Soil_Hive_Brick_Stairs", 10),
+                drop("Rock_Gem_Ruby", 5)
+        ), List.of(
+                reward("ExpeditionPoint", 6),
+                crystalReward("InsectCore", 1)
+        ));
+
+        register(expeditions, "Quarry", 50, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 1),
+                drop("Rubble_Stone", 45),
+                drop("Rock_Stone", 45),
+                drop("Rock_Slate", 22),
+                drop("Rock_Shale", 20),
+                drop("Rock_Basalt", 14),
+                drop("Ore_Copper", 8),
+                drop("Ore_Iron", 2)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("MysteriousCavern", 1)
+        ));
+
+        register(expeditions, "Hallow", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Rabbit"), 4),
+                drop(OneBlockDropId.entityDropId("Sheep"), 4),
+                drop(OneBlockDropId.entityDropId("Chicken"), 4),
+                drop(OneBlockDropId.entityDropId("Deer"), 1),
+                drop("Plant_Crop_Wheat_Item", 30),
+                drop("Plant_Crop_Corn_Item", 20),
+                drop("Plant_Crop_Carrot_Item", 20),
+                drop("Food_Bread", 8),
+                drop("Plant_Fruit_Apple", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 2),
+                crystalReward("CowHallow", 1),
+                crystalReward("HorseHallow", 1),
+                crystalReward("River", 1)
+        ));
+
+        register(expeditions, "CowHallow", 35, List.of(
+                drop(OneBlockDropId.entityDropId("Cow"), 5),
+                drop(OneBlockDropId.entityDropId("Cow_Calf"), 4),
+                drop(OneBlockDropId.entityDropId("Wolf"), 1),
+                drop("Plant_Crop_Wheat_Item", 30),
+                drop("Plant_Crop_Corn_Item", 24),
+                drop("Ingredient_Bolt_Wool", 8),
+                drop("Food_Bread", 8),
+                drop("Plant_Fruit_Apple", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 2)
+        ));
+
+        register(expeditions, "HorseHallow", 35, List.of(
+                drop(OneBlockDropId.entityDropId("Horse"), 5),
+                drop(OneBlockDropId.entityDropId("Wolf"), 1),
+                drop("Plant_Crop_Carrot_Item", 30),
+                drop("Plant_Crop_Wheat_Item", 24),
+                drop("Ingredient_Bolt_Wool", 8),
+                drop("Food_Bread", 8),
+                drop("Plant_Fruit_Apple", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 2)
+        ));
+
+        register(expeditions, "MysteriousCavern", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 3),
+                drop(OneBlockDropId.entityDropId("Cave_Spider"), 2),
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 1),
+                drop("Rubble_Stone", 24),
+                drop("Rock_Stone", 24),
+                drop("Rock_Slate", 18),
+                drop("Rock_Shale", 18),
+                drop("Rock_Gem_Sapphire", 3),
+                drop("Ore_Iron", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("MysticCave", 1)
+        ));
+
+        register(expeditions, "MysticCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2),
+                drop(OneBlockDropId.entityDropId("Earthen_Golem"), 1),
+                drop("Rock_Runic_Brick", 22),
+                drop("Rock_Runic_Brick_Ornate", 12),
+                drop("Rock_Gem_Sapphire", 8),
+                drop("Rock_Gem_Emerald", 6),
+                drop("Ingredient_Crystal_Yellow", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("LuxirousCave", 1)
+        ));
+
+        register(expeditions, "LuxirousCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Earth_Elemental"), 2),
+                drop(OneBlockDropId.entityDropId("Earthen_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Goblin_Thief"), 1),
+                drop("Rock_Gem_Emerald", 10),
+                drop("Rock_Gem_Topaz", 8),
+                drop("Rock_Gem_Diamond", 3),
+                drop("Ore_Gold", 12),
+                drop("Ore_Adamantite", 3),
+                drop("Deco_Treasure", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 6),
+                crystalReward("JurassicCave", 1)
+        ));
+
+        register(expeditions, "JurassicCave", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Archaeopteryx"), 3),
+                drop(OneBlockDropId.entityDropId("Crocodile"), 2),
+                drop(OneBlockDropId.entityDropId("Cave_Raptor"), 2),
+                drop(OneBlockDropId.entityDropId("Cave_Rex"), 1),
+                drop("Ingredient_Bone_Fragment", 20),
+                drop("Deco_Bone_Full", 10),
+                drop("Deco_Bone_Spike_Large", 8),
+                drop("Ingredient_Hide_Scaled", 10),
+                drop("Ingredient_Leather_Scaled", 6),
+                drop("Rock_Gem_Diamond", 4),
+                drop("Ore_Adamantite", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("DinoCrisis", 1)
+        ));
+
+        register(expeditions, "DryTrorkCamp", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Trork_Sentry"), 3),
+                drop(OneBlockDropId.entityDropId("Trork_Hunter"), 2),
+                drop(OneBlockDropId.entityDropId("Hunting_Wolf"), 2),
+                drop(OneBlockDropId.entityDropId("Trork_Brawler"), 1),
+                drop("Wood_Ash_Trunk", 18),
+                drop("Rock_Sandstone", 22),
+                drop("Rubble_Sandstone", 20),
+                drop("Ingredient_Bone_Fragment", 8),
+                drop("Ingredient_Hide_Scaled", 6),
+                drop("Ore_Gold", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("TrorkWarband", 1)
+        ));
+
+        register(expeditions, "TrorkHuntingGround", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Hunting_Wolf"), 4),
+                drop(OneBlockDropId.entityDropId("Trork_Hunter"), 3),
+                drop(OneBlockDropId.entityDropId("Trork_Sentry"), 2),
+                drop(OneBlockDropId.entityDropId("Trork_Brawler"), 1),
+                drop("Wood_Beech_Trunk", 20),
+                drop("Wood_Ash_Trunk", 18),
+                drop("Plant_Leaves_Bramble", 14),
+                drop("Ingredient_Bone_Fragment", 8),
+                drop("Ingredient_Hide_Scaled", 6),
+                drop("Rock_Gem_Emerald", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("TrorkWarband", 1)
+        ));
+
+        register(expeditions, "TrorkStrongholdApproach", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Trork_Sentry"), 3),
+                drop(OneBlockDropId.entityDropId("Trork_Warrior"), 3),
+                drop(OneBlockDropId.entityDropId("Trork_Guard"), 2),
+                drop(OneBlockDropId.entityDropId("Trork_Mauler"), 1),
+                drop("Rock_Sandstone", 18),
+                drop("Rock_Runic_Brick", 14),
+                drop("Ingredient_Bone_Fragment", 10),
+                drop("Ingredient_Hide_Scaled", 8),
+                drop("Ingredient_Leather_Scaled", 5),
+                drop("Ore_Thorium", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 6),
+                crystalReward("TrorkElderGrove", 1)
+        ));
+
+        register(expeditions, "TrorkElderGrove", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Trork_Elder"), 2),
+                drop(OneBlockDropId.entityDropId("Trork_Hunter"), 2),
+                drop(OneBlockDropId.entityDropId("Trork_Guard"), 2),
+                drop(OneBlockDropId.entityDropId("Hunting_Wolf"), 2),
+                drop("Wood_Amber_Trunk", 14),
+                drop("Wood_Amber_Roots", 10),
+                drop("Plant_Leaves_Amber", 12),
+                drop("Plant_Leaves_Bramble", 12),
+                drop("Rock_Gem_Emerald", 5),
+                drop("Rock_Gem_Zephyr", 2)
+        ), List.of(
+                reward("ExpeditionPoint", 7),
+                crystalReward("TrorkChieftainCamp", 1)
+        ));
+
+        register(expeditions, "FrozenGraveyard", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Scout"), 4),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Ranger"), 3),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Fighter"), 3),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Soldier"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Mage"), 1),
+                drop("Ingredient_Bone_Fragment", 24),
+                drop("Deco_Bone_Full", 12),
+                drop("Deco_Bone_Spike", 10),
+                drop("Deco_Bone_Spine", 8),
+                drop("Rock_Ice", 18),
+                drop("Rubble_Ice", 16),
+                drop("Rock_Ice_Icicles", 8),
                 drop("Ingredient_Ice_Essence", 4),
-                drop("Ingredient_Scale_IceDragon", 1),
-                drop(OneBlockDropId.entityDropId("Ice_Dragon"), 1)
+                drop("Rock_Gem_Sapphire", 3)
         ), List.of(
-                reward("ExpeditionPoint", 3)
+                reward("ExpeditionPoint", 9),
+                crystalReward("IcyNecropolis", 1)
         ));
 
-        register(expeditions, "Sandstone_Cavern", 55, List.of(
-                drop("Rock_Sandstone", 14),
-                drop("Block_Sandstone_Rough", 8),
-                drop("Block_Sand", 6),
-                drop("Ore_Copper", 5),
-                drop("Ore_Iron", 2),
-                drop(OneBlockDropId.entityDropId("Crawler"), 2)
+        register(expeditions, "IcyNecropolis", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Ranger"), 3),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Fighter"), 3),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Archer"), 3),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Mage"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Soldier"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Knight"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Skeleton_Archmage"), 1),
+                drop("Ingredient_Bone_Fragment", 20),
+                drop("Deco_Bone_Full", 12),
+                drop("Deco_Bone_Spike", 10),
+                drop("Deco_Bone_Spine", 10),
+                drop("Rock_Ice", 16),
+                drop("Rubble_Ice", 14),
+                drop("Rock_Ice_Icicles", 10),
+                drop("Ingredient_Ice_Essence", 6),
+                drop("Rock_Gem_Sapphire", 5),
+                drop("Rock_Gem_Diamond", 2)
         ), List.of(
-                crystalReward("Desert_Fringe", 1)
+                reward("ExpeditionPoint", 10),
+                crystalReward("FrostboneCrypt", 1)
         ));
 
-        register(expeditions, "Desert_Fringe", 60, List.of(
-                drop("Block_Sand", 12),
-                drop("Block_Desert_Hardened_Earth", 8),
-                drop("Plant_Desert_Dry_Shrub", 8),
-                drop("Plant_Cactus_1", 5),
-                drop("Ingredient_Hide_Camel", 2),
-                drop(OneBlockDropId.entityDropId("Camel"), 2)
+        register(expeditions, "BurntBattlefield", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Skeleton_Scout"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Soldier"), 3),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Lancer"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Knight"), 1),
+                drop("Ingredient_Bone_Fragment", 22),
+                drop("Deco_Bone_Full", 10),
+                drop("Deco_Bone_Spike", 10),
+                drop("Rock_Volcanic", 20),
+                drop("Rubble_Volcanic", 18),
+                drop("Ingredient_Fire_Essence", 6),
+                drop("Ore_Thorium", 4),
+                drop("Rock_Gem_Ruby", 3)
         ), List.of(
-                crystalReward("Oasis", 1),
-                crystalReward("Scorpion_Dunes", 1),
-                crystalReward("Cactus_Flats", 1)
+                reward("ExpeditionPoint", 8),
+                crystalReward("AshenCatacombs", 1)
         ));
 
-        register(expeditions, "Oasis", 55, List.of(
-                drop("Wood_Palm_Trunk", 10),
-                drop("Plant_Fruit_Coconut", 8),
-                drop("Plant_Reeds_Marsh", 8),
-                drop("Plant_Desert_Blue_Aloe", 6),
-                drop("Ingredient_Water_Essence", 2),
-                drop(OneBlockDropId.entityDropId("Duck"), 3)
+        register(expeditions, "AshenCatacombs", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Soldier"), 3),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Lancer"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Gunner"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Wizard"), 2),
+                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Knight"), 1),
+                drop("Ingredient_Bone_Fragment", 20),
+                drop("Deco_Bone_Full", 12),
+                drop("Deco_Bone_Spike", 10),
+                drop("Deco_Bone_Spine", 8),
+                drop("Rock_Volcanic", 18),
+                drop("Rubble_Volcanic", 16),
+                drop("Rock_Volcanic_Cracked_Incandescent", 8),
+                drop("Ingredient_Fire_Essence", 8),
+                drop("Rock_Gem_Ruby", 5),
+                drop("Ore_Mithril", 3)
         ), List.of(
-                reward("ExpeditionPoint", 1)
+                reward("ExpeditionPoint", 9),
+                crystalReward("BurntSkeletonCitadel", 1)
         ));
 
-        register(expeditions, "Scorpion_Dunes", 65, List.of(
-                drop("Block_Sand", 12),
-                drop("Block_Sand_Red", 8),
-                drop("Plant_Desert_Saltbush", 6),
-                drop("Ingredient_Shell_Scorpion", 5),
-                drop("Ingredient_Claw_Scorpion", 3),
-                drop(OneBlockDropId.entityDropId("Cactee"), 3)
+        register(expeditions, "JungleEdge", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Parrot"), 4),
+                drop(OneBlockDropId.entityDropId("Gecko"), 4),
+                drop(OneBlockDropId.entityDropId("Frog"), 3),
+                drop(OneBlockDropId.entityDropId("Marsh_Snake"), 2),
+                drop(OneBlockDropId.entityDropId("Zombie"), 1),
+                drop("Wood_Beech_Trunk", 18),
+                drop("Wood_Maple_Trunk", 16),
+                drop("Plant_Leaves_Bramble", 14),
+                drop("Plant_Moss_Block_Green", 14),
+                drop("Plant_Moss_Rug_Green", 12),
+                drop("Plant_Crop_Mushroom_Common_Brown", 8),
+                drop("Rock_Gem_Emerald", 3)
         ), List.of(
-                crystalReward("Desert_Temple", 1)
+                reward("ExpeditionPoint", 4),
+                crystalReward("OvergrownRuins", 1)
         ));
 
-        register(expeditions, "Cactus_Flats", 60, List.of(
+        register(expeditions, "DryJunglePass", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Cactee"), 2),
+                drop(OneBlockDropId.entityDropId("Gecko"), 4),
+                drop(OneBlockDropId.entityDropId("Marsh_Snake"), 2),
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Scout"), 1),
+                drop("Block_Sand", 20),
+                drop("Rock_Sandstone", 20),
+                drop("Rubble_Sandstone", 18),
                 drop("Plant_Cactus_1", 10),
-                drop("Plant_Cactus_2", 8),
-                drop("Plant_Cactus_3", 6),
-                drop("Plant_Cactus_Ball_1", 6),
-                drop("Plant_Cactus_Flower", 4),
-                drop(OneBlockDropId.entityDropId("Armadillo"), 3)
+                drop("Plant_Moss_Block_Green", 10),
+                drop("Plant_Leaves_Bramble", 10),
+                drop("Rock_Gem_Topaz", 3)
         ), List.of(
-                reward("ExpeditionPoint", 1)
+                reward("ExpeditionPoint", 4),
+                crystalReward("SunkenJungleRuins", 1)
         ));
 
-        register(expeditions, "Sunfire_Tomb", 85, List.of(
-                drop("Ore_Thorium_Desert", 8),
-                drop("Rock_Gem_Ruby", 4),
-                drop("Ingredient_Fire_Essence", 4),
-                drop("Block_Sandstone_Red", 6),
-                drop("Rock_Desert_Fossil", 3),
-                drop(OneBlockDropId.entityDropId("Burnt_Skeleton_Wizard"), 2)
+        register(expeditions, "OvergrownRuins", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Scout"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archer"), 1),
+                drop(OneBlockDropId.entityDropId("Crocodile"), 1),
+                drop(OneBlockDropId.entityDropId("Rhino_Toad"), 1),
+                drop("Wood_Maple_Trunk", 14),
+                drop("Plant_Leaves_Bramble", 16),
+                drop("Plant_Moss_Block_Green", 14),
+                drop("Plant_Moss_Rug_Green", 12),
+                drop("Rock_Runic_Brick", 14),
+                drop("Rock_Runic_Brick_Ornate", 8),
+                drop("Ingredient_Bone_Fragment", 8),
+                drop("Rock_Gem_Emerald", 4)
         ), List.of(
-                reward("ExpeditionPoint", 3)
+                reward("ExpeditionPoint", 5),
+                crystalReward("JungleCrypt", 1)
+        ));
+
+        register(expeditions, "SunkenJungleRuins", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Sandswept_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Soldier"), 1),
+                drop(OneBlockDropId.entityDropId("Crocodile"), 2),
+                drop(OneBlockDropId.entityDropId("Marsh_Snake"), 2),
+                drop("Soil_Clay_Blue", 16),
+                drop("Soil_Dirt", 14),
+                drop("Plant_Moss_Block_Green", 16),
+                drop("Plant_Moss_Rug_Green", 14),
+                drop("Rock_Runic_Brick", 12),
+                drop("Rock_Sandstone_Brick", 10),
+                drop("Ingredient_Bone_Fragment", 8),
+                drop("Rock_Gem_Sapphire", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("JungleCrypt", 1)
+        ));
+
+        register(expeditions, "LostNecropolis", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Skeleton_Soldier"), 3),
+                drop(OneBlockDropId.entityDropId("Skeleton_Fighter"), 3),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archer"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Ranger"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Mage"), 2),
+                drop(OneBlockDropId.entityDropId("Aberrant_Zombie"), 2),
+                drop(OneBlockDropId.entityDropId("Large_Aberrant_Zombie"), 1),
+                drop("Ingredient_Bone_Fragment", 20),
+                drop("Deco_Bone_Full", 12),
+                drop("Deco_Bone_Spike", 10),
+                drop("Rock_Runic_Brick", 16),
+                drop("Rock_Runic_Brick_Ornate", 10),
+                drop("Rock_Gem_Emerald", 5),
+                drop("Rock_Gem_Ruby", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 7),
+                crystalReward("AncientUndeadSanctum", 1),
+                crystalReward("ShadowedJungleRoad", 1)
+        ));
+
+        register(expeditions, "ShadowedJungleRoad", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Wraith"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Horse"), 2),
+                drop(OneBlockDropId.entityDropId("Armored_Skeleton_Horse"), 1),
+                drop(OneBlockDropId.entityDropId("Skeleton_Knight"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archmage"), 1),
+                drop(OneBlockDropId.entityDropId("Undead_Pig"), 2),
+                drop(OneBlockDropId.entityDropId("Undead_Chicken"), 2),
+                drop("Plant_Leaves_Bramble", 16),
+                drop("Rock_Runic_Brick", 16),
+                drop("Rock_Runic_Brick_Ornate", 10),
+                drop("Ingredient_Bone_Fragment", 16),
+                drop("Deco_Bone_Spine", 8),
+                drop("Rock_Gem_Zephyr", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 8),
+                crystalReward("ArmoredDeadGrove", 1)
+        ));
+
+        register(expeditions, "ArmoredDeadGrove", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Armored_Skeleton_Horse"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Horse"), 2),
+                drop(OneBlockDropId.entityDropId("Shadow_Knight"), 1),
+                drop(OneBlockDropId.entityDropId("Wraith"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Knight"), 3),
+                drop(OneBlockDropId.entityDropId("Skeleton_Archmage"), 2),
+                drop(OneBlockDropId.entityDropId("Ghoul"), 2),
+                drop("Wood_Amber_Trunk", 12),
+                drop("Plant_Leaves_Bramble", 16),
+                drop("Rock_Runic_Brick", 16),
+                drop("Ingredient_Bone_Fragment", 14),
+                drop("Deco_Bone_Full", 8),
+                drop("Deco_Bone_Spine", 8),
+                drop("Rock_Gem_Zephyr", 4)
+        ), List.of(
+                reward("ExpeditionPoint", 9),
+                crystalReward("ShadowKnightCitadel", 1)
+        ));
+
+        register(expeditions, "SpiritThreshold", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Root_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Thunder_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Ember_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Earthen_Golem"), 1),
+                drop("Ingredient_Life_Essence", 16),
+                drop("Ingredient_Ice_Essence", 14),
+                drop("Ingredient_Lightning_Essence", 14),
+                drop("Ingredient_Fire_Essence", 14),
+                drop("Ingredient_Water_Essence", 10),
+                drop("Ingredient_Motes_Light", 8),
+                drop("Ingredient_Void_Essence", 4),
+                drop("Ingredient_Voidheart", 1)
+        ), List.of(
+                reward("ExpeditionPoint", 9),
+                crystalReward("ElementalConfluence", 1)
+        ));
+
+        register(expeditions, "ElementalConfluence", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Earthen_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Firesteel_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Ember_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Sandswept_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Thunder_Golem"), 2),
+                drop(OneBlockDropId.entityDropId("Frost_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Thunder_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Root_Spirit"), 2),
+                drop(OneBlockDropId.entityDropId("Ember_Spirit"), 2),
+                drop("Ingredient_Fire_Essence", 16),
+                drop("Ingredient_Ice_Essence", 16),
+                drop("Ingredient_Life_Essence", 16),
+                drop("Ingredient_Lightning_Essence", 16),
+                drop("Ingredient_Water_Essence", 12),
+                drop("Ingredient_Motes_Light", 10),
+                drop("Ingredient_Void_Essence", 6),
+                drop("Ingredient_Voidheart", 2)
+        ), List.of(
+                reward("ExpeditionPoint", 11),
+                crystalReward("SpiritRealmTrial", 1)
         ));
 
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);

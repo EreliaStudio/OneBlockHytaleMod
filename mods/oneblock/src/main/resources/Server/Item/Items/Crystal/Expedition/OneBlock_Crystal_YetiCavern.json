@@ -1,0 +1,62 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_YetiCavern.name",
+    "Description": "server.items.OneBlock_Crystal_YetiCavern.description"
+  },
+  "Id": "OneBlock_Crystal_YetiCavern",
+  "ItemLevel": 22,
+  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 22
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Cold"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "YetiCavern"
+    ],
+    "OneBlockCrystalTicks": [
+      "28"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic"
+}

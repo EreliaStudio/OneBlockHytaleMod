@@ -27,12 +27,7 @@
     }
   },
   "Recipe": {
-    "Input": [
-      {
-        "ItemId": "Ingredient_Fibre",
-        "Quantity": 4
-      }
-    ],
+    "Input": [],
     "OutputQuantity": 1,
     "BenchRequirement": [
       {

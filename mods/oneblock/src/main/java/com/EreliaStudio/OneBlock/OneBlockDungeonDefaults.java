@@ -55,70 +55,240 @@ public final class OneBlockDungeonDefaults
     {
         Map<String, DungeonDefinition> dungeons = new HashMap<>();
 
-        register(dungeons, "Swamp_Ruins", List.of(
-                        List.of("entity:Fen_Stalker", "entity:Spider"),
-                        List.of("entity:Fen_Stalker", "entity:Zombie"),
-                        List.of("entity:Fen_Stalker", "entity:Crawler", "entity:Spider"),
-                        List.of("entity:Large_Aberrant_Zombie")
+        register(dungeons, "RatCave", List.of(
+                        List.of("entity:Rat", "entity:Rat", "entity:Rat"),
+                        List.of("entity:Rat", "entity:Rat", "entity:Spider"),
+                        List.of("entity:Spider", "entity:Spider", "entity:Cave_Spider")
                 ), List.of(
-                reward("SwampRuinsToken", 1),
-                reward("ExpeditionPoint", 2),
-                crystalReward("Forgotten_Marsh", 1)
+                reward("ExpeditionPoint", 8)
         ));
 
-        register(dungeons, "Abandoned_Mine", List.of(
-                        List.of("entity:Goblin_Miner", "entity:Goblin_Miner"),
-                        List.of("entity:Goblin_Miner_Patrol", "entity:Goblin_Scavenger"),
-                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Lobber"),
-                        List.of("entity:Goblin_Ogre")
+        register(dungeons, "GobelinGank", List.of(
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner", "entity:Goblin_Miner")
                 ), List.of(
-                reward("AbandonedMineToken", 1),
-                reward("ExpeditionPoint", 2),
-                crystalReward("Basalt_Gate", 1)
+                reward("ExpeditionPoint", 12),
+                crystalReward("IronCave", 1),
+                crystalReward("SandCave", 1)
         ));
 
-        register(dungeons, "Frozen_Ruins", List.of(
-                        List.of("entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Scout"),
-                        List.of("entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Ranger"),
-                        List.of("entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Mage"),
-                        List.of("entity:Frost_Golem")
+        register(dungeons, "GobelinInvasion", List.of(
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner", "entity:Goblin_Miner"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner", "entity:Goblin_Miner", "entity:Goblin_Miner"),
+                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner", "entity:Goblin_Miner", "entity:Goblin_Miner")
                 ), List.of(
-                reward("FrozenRuinsToken", 1),
-                reward("ExpeditionPoint", 2),
-                crystalReward("Polar_Necropolis", 1)
+                reward("ExpeditionPoint", 24),
+                crystalReward("CobaltCave", 1)
         ));
 
-        register(dungeons, "Desert_Temple", List.of(
-                        List.of("entity:Sandswept_Zombie", "entity:Sandswept_Zombie"),
-                        List.of("entity:Skeleton_Scout", "entity:Skeleton_Archer"),
-                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Mage"),
-                        List.of("entity:Sand_Empress")
+        register(dungeons, "PirateShipwreck", List.of(
+                        List.of("entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker"),
+                        List.of("entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Gunner"),
+                        List.of("entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker"),
+                        List.of("entity:Skeleton_Pirate_Captain", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Gunner", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker", "entity:Skeleton_Pirate_Striker")
                 ), List.of(
-                reward("DesertTempleToken", 1),
-                reward("ExpeditionPoint", 2),
-                crystalReward("Pharaoh_Catacombs", 1)
+                reward("ExpeditionPoint", 30)
         ));
 
-        register(dungeons, "Pharaoh_Catacombs", List.of(
-                        List.of("entity:Skeleton_Soldier", "entity:Skeleton_Archer"),
-                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Ranger"),
-                        List.of("entity:Skeleton_Mage", "entity:Skeleton_Fighter", "entity:Sandswept_Zombie"),
-                        List.of("entity:Skeleton_Archmage", "entity:Skeleton_Knight"),
-                        List.of("entity:Sand_Empress")
+        register(dungeons, "SeaMonster", List.of(
+                        List.of("entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Spider", "entity:Spider", "entity:Spider"),
+                        List.of("entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider"),
+                        List.of("entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider"),
+                        List.of("entity:Scarak_Broodmother", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Scarak_Seeker")
                 ), List.of(
-                reward("PharaohCatacombsToken", 1),
-                reward("ExpeditionPoint", 3),
-                crystalReward("Sunfire_Tomb", 1)
+                reward("ExpeditionPoint", 40)
         ));
 
-        register(dungeons, "Gobelin_Camp", List.of(
-                        List.of("entity:Goblin_Scavenger", "entity:Goblin_Thief"),
-                        List.of("entity:Goblin_Scrapper", "entity:Goblin_Lobber"),
-                        List.of("entity:Goblin_Miner", "entity:Goblin_Scavenger_Battleaxe"),
-                        List.of("entity:Goblin_Ogre")
+        register(dungeons, "UndeadTemple", List.of(
+                        List.of("entity:Skeleton_Scout", "entity:Skeleton_Scout", "entity:Skeleton_Scout", "entity:Zombie", "entity:Zombie"),
+                        List.of("entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Archer", "entity:Skeleton_Archer"),
+                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger"),
+                        List.of("entity:Skeleton_Mage", "entity:Skeleton_Mage", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Zombie", "entity:Zombie", "entity:Zombie", "entity:Zombie")
                 ), List.of(
-                reward("GobelinCampToken", 1),
-                reward("ExpeditionPoint", 2)
+                reward("ExpeditionPoint", 45),
+                crystalReward("VoidPortal", 1)
+        ));
+
+        register(dungeons, "VoidTemple", List.of(
+                        List.of("entity:Void_Larva", "entity:Void_Larva", "entity:Void_Larva", "entity:Void_Larva", "entity:Void_Larva", "entity:Void_Larva", "entity:Void_Crawler", "entity:Void_Crawler"),
+                        List.of("entity:Void_Crawler", "entity:Void_Crawler", "entity:Void_Crawler", "entity:Void_Crawler", "entity:Void_Crawler", "entity:Void_Eye", "entity:Void_Eye"),
+                        List.of("entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spectre", "entity:Void_Spectre"),
+                        List.of("entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spawn", "entity:Void_Spectre", "entity:Void_Spectre", "entity:Void_Spectre", "entity:Void_Spectre", "entity:Void_Eye", "entity:Void_Eye", "entity:Void_Eye")
+                ), List.of(
+                reward("ExpeditionPoint", 75)
+        ));
+
+        register(dungeons, "OutlanderGank", List.of(
+                        List.of("entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Hunter"),
+                        List.of("entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Marauder"),
+                        List.of("entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder"),
+                        List.of("entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Marauder", "entity:Outlander_Marauder")
+                ), List.of(
+                reward("ExpeditionPoint", 42)
+        ));
+
+        register(dungeons, "OutlanderCity", List.of(
+                        List.of("entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Initiate", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Hunter"),
+                        List.of("entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Berserker"),
+                        List.of("entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Hunter", "entity:Outlander_Priest"),
+                        List.of("entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Berserker", "entity:Outlander_Brute", "entity:Outlander_Priest"),
+                        List.of("entity:Outlander_Brute", "entity:Outlander_Brute", "entity:Outlander_Priest", "entity:Outlander_Priest", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder", "entity:Outlander_Marauder")
+                ), List.of(
+                reward("ExpeditionPoint", 60)
+        ));
+
+        register(dungeons, "IceTemple", List.of(
+                        List.of("entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Scout"),
+                        List.of("entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Ranger", "entity:Frost_Skeleton_Ranger"),
+                        List.of("entity:Frost_Golem", "entity:Frost_Golem", "entity:Frost_Skeleton_Mage", "entity:Frost_Skeleton_Mage", "entity:Frost_Skeleton_Mage"),
+                        List.of("entity:Ice_Dragon", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Zombie", "entity:Frost_Zombie")
+                ), List.of(
+                reward("ExpeditionPoint", 75)
+        ));
+
+        register(dungeons, "Volcano", List.of(
+                        List.of("entity:Zombie_Burnt", "entity:Zombie_Burnt", "entity:Zombie_Burnt", "entity:Zombie_Burnt", "entity:Zombie_Burnt", "entity:Emberwulf", "entity:Emberwulf"),
+                        List.of("entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Archer", "entity:Burnt_Skeleton_Archer", "entity:Burnt_Skeleton_Archer"),
+                        List.of("entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Wizard", "entity:Burnt_Skeleton_Wizard"),
+                        List.of("entity:Ember_Golem", "entity:Ember_Golem", "entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Praetorian", "entity:Emberwulf", "entity:Emberwulf", "entity:Emberwulf", "entity:Emberwulf")
+                ), List.of(
+                reward("ExpeditionPoint", 55)
+        ));
+
+        register(dungeons, "DesertTemple", List.of(
+                        List.of("entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Skeleton_Scout", "entity:Skeleton_Scout"),
+                        List.of("entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Archer"),
+                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Mage", "entity:Skeleton_Mage", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie"),
+                        List.of("entity:Skeleton_Sand_Archmage", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Archer")
+                ), List.of(
+                reward("ExpeditionPoint", 35),
+                crystalReward("PharaonRoom", 1)
+        ));
+
+        register(dungeons, "InsectInvasion", List.of(
+                        List.of("entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Spider", "entity:Spider", "entity:Spider"),
+                        List.of("entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse"),
+                        List.of("entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter")
+                ), List.of(
+                reward("ExpeditionPoint", 26),
+                crystalReward("MuddyDesert", 1)
+        ));
+
+        register(dungeons, "InsectNest", List.of(
+                        List.of("entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Spider", "entity:Spider", "entity:Spider", "entity:Spider"),
+                        List.of("entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider"),
+                        List.of("entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Seeker", "entity:Scarak_Seeker"),
+                        List.of("entity:Sand_Empress", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter")
+                ), List.of(
+                reward("ExpeditionPoint", 36),
+                crystalReward("InsideInsectNest", 1)
+        ));
+
+        register(dungeons, "InsectCore", List.of(
+                        List.of("entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Louse", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter"),
+                        List.of("entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Scarak_Seeker"),
+                        List.of("entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Fighter", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider", "entity:Cave_Spider"),
+                        List.of("entity:Scarak_Broodmother", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Defender", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Scarak_Seeker", "entity:Scarak_Seeker")
+                ), List.of(
+                reward("ExpeditionPoint", 50)
+        ));
+
+        register(dungeons, "DinoCrisis", List.of(
+                        List.of("entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Crocodile", "entity:Crocodile"),
+                        List.of("entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx"),
+                        List.of("entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Crawler", "entity:Crawler"),
+                        List.of("entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Rex"),
+                        List.of("entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Raptor", "entity:Cave_Rex", "entity:Cave_Rex"),
+                        List.of("entity:Cave_Rex", "entity:Cave_Rex", "entity:Cave_Rex", "entity:Earth_Elemental")
+                ), List.of(
+                reward("ExpeditionPoint", 65)
+        ));
+
+        register(dungeons, "TrorkWarband", List.of(
+                        List.of("entity:Hunting_Wolf", "entity:Hunting_Wolf", "entity:Hunting_Wolf", "entity:Trork_Sentry", "entity:Trork_Sentry"),
+                        List.of("entity:Trork_Hunter", "entity:Trork_Hunter", "entity:Trork_Hunter", "entity:Trork_Brawler", "entity:Trork_Brawler"),
+                        List.of("entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Mauler"),
+                        List.of("entity:Trork_Guard", "entity:Trork_Guard", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Hunting_Wolf", "entity:Hunting_Wolf")
+                ), List.of(
+                reward("ExpeditionPoint", 32),
+                crystalReward("TrorkStrongholdApproach", 1)
+        ));
+
+        register(dungeons, "TrorkChieftainCamp", List.of(
+                        List.of("entity:Trork_Sentry", "entity:Trork_Sentry", "entity:Trork_Sentry", "entity:Trork_Sentry", "entity:Hunting_Wolf", "entity:Hunting_Wolf", "entity:Hunting_Wolf"),
+                        List.of("entity:Trork_Brawler", "entity:Trork_Brawler", "entity:Trork_Brawler", "entity:Trork_Hunter", "entity:Trork_Hunter", "entity:Trork_Hunter"),
+                        List.of("entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Mauler", "entity:Trork_Mauler"),
+                        List.of("entity:Trork_Guard", "entity:Trork_Guard", "entity:Trork_Guard", "entity:Trork_Guard", "entity:Trork_Elder", "entity:Trork_Elder"),
+                        List.of("entity:Trork_Chieftain", "entity:Trork_Guard", "entity:Trork_Guard", "entity:Trork_Guard", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Warrior", "entity:Trork_Warrior")
+                ), List.of(
+                reward("ExpeditionPoint", 55)
+        ));
+
+        register(dungeons, "FrostboneCrypt", List.of(
+                        List.of("entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Scout", "entity:Frost_Skeleton_Ranger", "entity:Frost_Skeleton_Ranger"),
+                        List.of("entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Fighter", "entity:Frost_Skeleton_Archer", "entity:Frost_Skeleton_Archer", "entity:Frost_Skeleton_Archer"),
+                        List.of("entity:Frost_Skeleton_Soldier", "entity:Frost_Skeleton_Soldier", "entity:Frost_Skeleton_Soldier", "entity:Frost_Skeleton_Soldier", "entity:Frost_Skeleton_Mage", "entity:Frost_Skeleton_Mage", "entity:Frost_Skeleton_Mage"),
+                        List.of("entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Archmage", "entity:Frost_Skeleton_Archmage"),
+                        List.of("entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Knight", "entity:Frost_Skeleton_Archmage", "entity:Frost_Skeleton_Archmage", "entity:Frost_Skeleton_Archmage", "entity:Frost_Golem")
+                ), List.of(
+                reward("ExpeditionPoint", 80),
+                crystalReward("IceTemple", 1)
+        ));
+
+        register(dungeons, "BurntSkeletonCitadel", List.of(
+                        List.of("entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Soldier", "entity:Burnt_Skeleton_Archer", "entity:Burnt_Skeleton_Archer", "entity:Burnt_Skeleton_Archer"),
+                        List.of("entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Gunner", "entity:Burnt_Skeleton_Gunner", "entity:Burnt_Skeleton_Gunner"),
+                        List.of("entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Wizard", "entity:Burnt_Skeleton_Wizard", "entity:Burnt_Skeleton_Wizard"),
+                        List.of("entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Knight", "entity:Burnt_Skeleton_Gunner", "entity:Burnt_Skeleton_Gunner", "entity:Burnt_Skeleton_Gunner"),
+                        List.of("entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Praetorian", "entity:Burnt_Skeleton_Wizard", "entity:Burnt_Skeleton_Wizard", "entity:Burnt_Skeleton_Wizard", "entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Lancer", "entity:Burnt_Skeleton_Lancer")
+                ), List.of(
+                reward("ExpeditionPoint", 70),
+                crystalReward("HellGate", 1)
+        ));
+
+        register(dungeons, "JungleCrypt", List.of(
+                        List.of("entity:Zombie", "entity:Zombie", "entity:Zombie", "entity:Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie", "entity:Sandswept_Zombie"),
+                        List.of("entity:Skeleton_Scout", "entity:Skeleton_Scout", "entity:Skeleton_Scout", "entity:Skeleton_Scout", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Archer"),
+                        List.of("entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Fighter", "entity:Skeleton_Fighter", "entity:Skeleton_Fighter"),
+                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Skeleton_Mage", "entity:Skeleton_Mage")
+                ), List.of(
+                reward("ExpeditionPoint", 36),
+                crystalReward("LostNecropolis", 1)
+        ));
+
+        register(dungeons, "AncientUndeadSanctum", List.of(
+                        List.of("entity:Zombie", "entity:Zombie", "entity:Zombie", "entity:Zombie", "entity:Aberrant_Zombie", "entity:Aberrant_Zombie", "entity:Aberrant_Zombie", "entity:Small_Aberrant_Zombie", "entity:Small_Aberrant_Zombie", "entity:Small_Aberrant_Zombie", "entity:Small_Aberrant_Zombie"),
+                        List.of("entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Soldier", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Archer", "entity:Skeleton_Fighter", "entity:Skeleton_Fighter", "entity:Skeleton_Fighter"),
+                        List.of("entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Mage", "entity:Skeleton_Mage", "entity:Skeleton_Mage", "entity:Large_Aberrant_Zombie", "entity:Large_Aberrant_Zombie"),
+                        List.of("entity:Skeleton_Archmage", "entity:Skeleton_Archmage", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Skeleton_Ranger", "entity:Ghoul", "entity:Ghoul", "entity:Ghoul", "entity:Ghoul"),
+                        List.of("entity:Skeleton_Archmage", "entity:Skeleton_Archmage", "entity:Skeleton_Archmage", "entity:Large_Aberrant_Zombie", "entity:Large_Aberrant_Zombie", "entity:Large_Aberrant_Zombie", "entity:Wraith", "entity:Wraith")
+                ), List.of(
+                reward("ExpeditionPoint", 58)
+        ));
+
+        register(dungeons, "ShadowKnightCitadel", List.of(
+                        List.of("entity:Skeleton_Horse", "entity:Skeleton_Horse", "entity:Skeleton_Horse", "entity:Undead_Pig", "entity:Undead_Pig", "entity:Undead_Pig", "entity:Undead_Pig", "entity:Undead_Chicken", "entity:Undead_Chicken", "entity:Undead_Chicken", "entity:Undead_Chicken", "entity:Undead_Chicken"),
+                        List.of("entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Knight", "entity:Skeleton_Knight"),
+                        List.of("entity:Wraith", "entity:Wraith", "entity:Wraith", "entity:Wraith", "entity:Skeleton_Archmage", "entity:Skeleton_Archmage", "entity:Skeleton_Archmage"),
+                        List.of("entity:Shadow_Knight", "entity:Shadow_Knight", "entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse", "entity:Wraith", "entity:Wraith", "entity:Wraith"),
+                        List.of("entity:Shadow_Knight", "entity:Shadow_Knight", "entity:Shadow_Knight", "entity:Skeleton_Archmage", "entity:Skeleton_Archmage", "entity:Skeleton_Archmage", "entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse", "entity:Armored_Skeleton_Horse")
+                ), List.of(
+                reward("ExpeditionPoint", 72)
+        ));
+
+        register(dungeons, "SpiritRealmTrial", List.of(
+                        List.of("entity:Root_Spirit", "entity:Root_Spirit", "entity:Root_Spirit", "entity:Root_Spirit", "entity:Ember_Spirit", "entity:Ember_Spirit", "entity:Ember_Spirit", "entity:Ember_Spirit"),
+                        List.of("entity:Frost_Spirit", "entity:Frost_Spirit", "entity:Frost_Spirit", "entity:Frost_Spirit", "entity:Thunder_Spirit", "entity:Thunder_Spirit", "entity:Thunder_Spirit", "entity:Thunder_Spirit"),
+                        List.of("entity:Earthen_Golem", "entity:Earthen_Golem", "entity:Sandswept_Golem", "entity:Sandswept_Golem", "entity:Root_Spirit", "entity:Root_Spirit", "entity:Root_Spirit"),
+                        List.of("entity:Ember_Golem", "entity:Ember_Golem", "entity:Firesteel_Golem", "entity:Firesteel_Golem", "entity:Ember_Spirit", "entity:Ember_Spirit", "entity:Ember_Spirit"),
+                        List.of("entity:Frost_Golem", "entity:Frost_Golem", "entity:Frost_Golem", "entity:Frost_Spirit", "entity:Frost_Spirit", "entity:Frost_Spirit", "entity:Frost_Spirit"),
+                        List.of("entity:Thunder_Golem", "entity:Thunder_Golem", "entity:Thunder_Golem", "entity:Thunder_Spirit", "entity:Thunder_Spirit", "entity:Thunder_Spirit", "entity:Thunder_Spirit"),
+                        List.of("entity:Firesteel_Golem", "entity:Firesteel_Golem", "entity:Frost_Golem", "entity:Frost_Golem", "entity:Thunder_Golem", "entity:Thunder_Golem", "entity:Ember_Golem", "entity:Ember_Golem"),
+                        List.of("entity:Earthen_Golem", "entity:Earthen_Golem", "entity:Sandswept_Golem", "entity:Sandswept_Golem", "entity:Firesteel_Golem", "entity:Firesteel_Golem", "entity:Thunder_Golem", "entity:Thunder_Golem")
+                ), List.of(
+                reward("ExpeditionPoint", 95)
         ));
 
         DUNGEONS = Collections.unmodifiableMap(dungeons);
