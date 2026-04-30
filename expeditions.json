@@ -47,11 +47,17 @@
 			},
 			{
 				"ID": "Rock_Stone",
-				"Weight": 20
+				"Weight": 40
 			},
 			{
 				"ID": "entity:Rat",
-				"Weight": 3
+				"Weight": 1
+			}
+		],
+		"CompletionRewards":[
+			{
+				"CustomID":"ExpeditionPoint",
+				"Quantity":4
 			}
 		]
 	},
@@ -74,7 +80,7 @@
 			},
 			{
 				"ID": "Wood_Oak_Trunk",
-				"Weight": 10
+				"Weight": 30
 			},
 			{
 				"ID": "Plant_Sapling_Oak",
@@ -82,7 +88,17 @@
 			},
 			{
 				"ID": "entity:Rabbit",
-				"Weight": 2
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Chicken",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards":[
+			{
+				"CustomID":"ExpeditionPoint",
+				"Quantity":4
 			}
 		]
 	},
@@ -123,6 +139,12 @@
 				"ID": "entity:Goblin_Miner",
 				"Weight": 2
 			}
+		],
+		"CompletionRewards":[
+			{
+				"CustomID":"ExpeditionPoint",
+				"Quantity":8
+			}
 		]
 	},
 	"Quarry": {
@@ -132,8 +154,8 @@
 		"Crystal": {
 			"Input": [
 				{
-					"ItemId": "Tool_Pickaxe_Crude",
-					"Quantity": 1
+					"CustomID":"ExpeditionPoint",
+					"Quantity": 8
 				}
 			]
 		},
@@ -163,8 +185,16 @@
 		"Crystal": {
 			"Input": [
 				{
-					"ItemId": "Tool_Pickaxe_Copper",
-					"Quantity": 1
+					"ItemId": "Rock_Stone",
+					"Quantity": 8
+				},
+				{
+					"ItemId": "Wood_Oak_Trunk",
+					"Quantity": 6
+				},
+				{
+					"CustomID":"Ingredient_Charcoal",
+					"Quantity": 3
 				}
 			]
 		},
@@ -189,6 +219,12 @@
 				"ID": "entity:Goblin_Miner",
 				"Weight": 5
 			}
+		],
+		"CompletionRewards":[
+			{
+				"CustomID":"ExpeditionPoint",
+				"Quantity":8
+			}
 		]
 	},
 	"Gobelin_Dungeon": {
@@ -197,12 +233,8 @@
 		"Crystal": {
 			"Input": [
 				{
-					"ItemId": "Weapon_Sword_Iron",
-					"Quantity": 1
-				},
-				{
-					"ItemId": "Weapon_Shield_Iron",
-					"Quantity": 1
+					"CustomID":"ExpeditionPoint",
+					"Quantity": 25
 				}
 			]
 		},
@@ -236,8 +268,16 @@
 		"Crystal": {
 			"Input": [
 				{
-					"ItemId": "Tool_Hatchet_Copper",
-					"Quantity": 1
+					"ItemId": "Ingredient_Stick",
+					"Quantity": 4
+				},
+				{
+					"ItemId": "Ingredient_Fibre",
+					"Quantity": 4
+				},
+				{
+					"CustomID":"ExpeditionPoint",
+					"Quantity": 4
 				}
 			]
 		},
@@ -280,11 +320,17 @@
 			},
 			{
 				"ID": "entity:Chicken",
-				"Weight": 2
+				"Weight": 3
 			},
 			{
 				"ID": "entity:Boar",
-				"Weight": 2
+				"Weight": 3
+			}
+		],
+		"CompletionRewards":[
+			{
+				"CustomID":"ExpeditionPoint",
+				"Quantity":8
 			}
 		]
 	},
@@ -328,6 +374,16 @@
 			{
 				"ID": "*Container_Bucket_State_Filled_Water",
 				"Weight": 1
+			}
+		],
+		"CompletionRewards":[
+			{
+				"ID":"*Container_Bucket_State_Filled_Water",
+				"Quantity":1
+			},
+			{
+				"CustomID":"ExpeditionPoint",
+				"Quantity":4
 			}
 		]
 	}

@@ -29,8 +29,16 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Tool_Hatchet_Copper",
-        "Quantity": 1
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 4
+      },
+      {
+        "CustomID": "ExpeditionPoint",
+        "Quantity": 4
       }
     ],
     "OutputQuantity": 1,

@@ -82,15 +82,20 @@ public final class OneBlockExpeditionDefaults
 
         register(expeditions, "Meadow_Cave", 25, List.of(
                 drop("Rubble_Stone", 20),
-                drop("Rock_Stone", 20),
-                drop(OneBlockDropId.entityDropId("Rat"), 3)
+                drop("Rock_Stone", 40),
+                drop(OneBlockDropId.entityDropId("Rat"), 1)
+        ), List.of(
+                reward("ExpeditionPoint", 4)
         ));
 
         register(expeditions, "Meadow_Forest", 25, List.of(
                 drop("Ingredient_Stick", 20),
-                drop("Wood_Oak_Trunk", 10),
+                drop("Wood_Oak_Trunk", 30),
                 drop("Plant_Sapling_Oak", 1),
-                drop(OneBlockDropId.entityDropId("Rabbit"), 2)
+                drop(OneBlockDropId.entityDropId("Rabbit"), 1),
+                drop(OneBlockDropId.entityDropId("Chicken"), 1)
+        ), List.of(
+                reward("ExpeditionPoint", 4)
         ));
 
         register(expeditions, "Cave_Entry", 25, List.of(
@@ -99,6 +104,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Copper", 6),
                 drop(OneBlockDropId.entityDropId("Rat"), 3),
                 drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2)
+        ), List.of(
+                reward("ExpeditionPoint", 8)
         ));
 
         register(expeditions, "Quarry", 50, List.of(
@@ -114,6 +121,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Iron", 6),
                 drop(OneBlockDropId.entityDropId("Rat"), 3),
                 drop(OneBlockDropId.entityDropId("Goblin_Miner"), 5)
+        ), List.of(
+                reward("ExpeditionPoint", 8)
         ));
 
         register(expeditions, "Forest", 25, List.of(
@@ -126,8 +135,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Crop_Mushroom_Common_Brown", 5),
                 drop("Plant_Crop_Mushroom_Cap_Brown", 5),
                 drop("Ingredient_Life_Essence", 5),
-                drop(OneBlockDropId.entityDropId("Chicken"), 2),
-                drop(OneBlockDropId.entityDropId("Boar"), 2)
+                drop(OneBlockDropId.entityDropId("Chicken"), 3),
+                drop(OneBlockDropId.entityDropId("Boar"), 3)
+        ), List.of(
+                reward("ExpeditionPoint", 8)
         ));
 
         register(expeditions, "Fairy_pond", 50, List.of(
@@ -138,6 +149,9 @@ public final class OneBlockExpeditionDefaults
                 drop("Wood_Azure_Trunk", 15),
                 drop("Plant_Sapling_Azure", 4),
                 drop("*Container_Bucket_State_Filled_Water", 1)
+        ), List.of(
+                reward("*Container_Bucket_State_Filled_Water", 1),
+                reward("ExpeditionPoint", 4)
         ));
 
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);

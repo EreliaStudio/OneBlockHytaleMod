@@ -29,12 +29,8 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Weapon_Sword_Iron",
-        "Quantity": 1
-      },
-      {
-        "ItemId": "Weapon_Shield_Iron",
-        "Quantity": 1
+        "CustomID": "ExpeditionPoint",
+        "Quantity": 25
       }
     ],
     "OutputQuantity": 1,

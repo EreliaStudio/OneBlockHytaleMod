@@ -29,8 +29,16 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Tool_Pickaxe_Copper",
-        "Quantity": 1
+        "ItemId": "Rock_Stone",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Wood_Oak_Trunk",
+        "Quantity": 6
+      },
+      {
+        "CustomID": "Ingredient_Charcoal",
+        "Quantity": 3
       }
     ],
     "OutputQuantity": 1,
