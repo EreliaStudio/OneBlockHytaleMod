@@ -8,51 +8,56 @@ hide empty members
 title OneBlock Expedition Progression Tree\n(arrows = expedition unlock cost)
 
 class Default <<Cost : 0 / Reward : 1>> {
-	entity:Rabbit
-	entity:Chicken
-	Ingredient_Fibre
-	Ingredient_Stick
-	Rubble_Stone
-	Soil_Dirt
+	Ticks : 25
+	ID: entity:Rabbit / Weight : 3
+	ID: entity:Chicken / Weight : 3
+	ID: Ingredient_Fibre / Weight : 35
+	ID: Ingredient_Stick / Weight : 30
+	ID: Rubble_Stone / Weight : 25
+	ID: Soil_Dirt / Weight : 25
 }
 
 class CaveEntry <<Cost : 1 / Reward : 1>> {
-	entity:Bat
-	entity:Rat
-	Rubble_Stone
-	Rock_Stone
-	Ore_Copper - Rare
+	Ticks : 25
+	ID: entity:Bat / Weight : 2
+	ID: entity:Rat / Weight : 2
+	ID: Rubble_Stone / Weight : 35
+	ID: Rock_Stone / Weight : 30
+	ID: Ore_Copper / Weight : 4
 }
 
 class ForestEdge <<Cost : 1 / Reward : 1>> {
-	entity:Rabbit
-	entity:Boar
-	entity:Boar_Piglet
-	entity:Fox - Rare
-	Ingredient_Stick
-	Wood_Oak_Trunk
-	Plant_Sapling_Oak
-	Plant_Fruit_Apple - Rare
+	Ticks : 25
+	ID: entity:Rabbit / Weight : 4
+	ID: entity:Boar / Weight : 2
+	ID: entity:Boar_Piglet / Weight : 3
+	ID: entity:Fox / Weight : 1
+	ID: Ingredient_Stick / Weight : 35
+	ID: Wood_Oak_Trunk / Weight : 28
+	ID: Plant_Sapling_Oak / Weight : 8
+	ID: Plant_Fruit_Apple / Weight : 3
 }
 
 class Plain <<Cost : 1 / Reward : 1>> {
-	entity:Rabbit
-	entity:Sheep
-	entity:Chicken
-	entity:Antelope - Rare
-	Plant_Crop_Carrot_Item
-	Plant_Crop_Corn_Item
-	Plant_Crop_Wheat_Item
-	Ingredient_Fibre
+	Ticks : 25
+	ID: entity:Rabbit / Weight : 4
+	ID: entity:Sheep / Weight : 3
+	ID: entity:Chicken / Weight : 4
+	ID: entity:Antelope / Weight : 1
+	ID: Plant_Crop_Carrot_Item / Weight : 16
+	ID: Plant_Crop_Corn_Item / Weight : 16
+	ID: Plant_Crop_Wheat_Item / Weight : 24
+	ID: Ingredient_Fibre / Weight : 30
 }
 
 class Cave <<Cost : 2 / Reward : 1>> {
-	entity:Rat
-	entity:Bat
-	entity:Spider - Rare
-	Rock_Stone
-	Rubble_Stone
-	Ore_Copper - Rare
+	Ticks : 25
+	ID: entity:Rat / Weight : 3
+	ID: entity:Bat / Weight : 3
+	ID: entity:Spider / Weight : 1
+	ID: Rock_Stone / Weight : 35
+	ID: Rubble_Stone / Weight : 30
+	ID: Ore_Copper / Weight : 5
 }
 
 enum RatCave <<Dungeon / Cost : 3 / Reward : 8>> {
@@ -62,23 +67,25 @@ enum RatCave <<Dungeon / Cost : 3 / Reward : 8>> {
 }
 
 class LowerCave <<Cost : 3 / Reward : 2>> {
-	entity:Rat
-	entity:Bat
-	entity:Spider
-	entity:Cave_Spider - Rare
-	Rock_Stone
-	Rubble_Stone
-	Ore_Copper - Rare
+	Ticks : 28
+	ID: entity:Rat / Weight : 3
+	ID: entity:Bat / Weight : 3
+	ID: entity:Spider / Weight : 2
+	ID: entity:Cave_Spider / Weight : 1
+	ID: Rock_Stone / Weight : 35
+	ID: Rubble_Stone / Weight : 35
+	ID: Ore_Copper / Weight : 7
 }
 
 class CopperCave <<Cost : 4 / Reward : 2>> {
-	entity:Bat
-	entity:Rat
-	entity:Goblin_Miner - Rare
-	Rock_Stone
-	Rubble_Stone
-	Ore_Copper
-	Ore_Iron - Rare
+	Ticks : 30
+	ID: entity:Bat / Weight : 2
+	ID: entity:Rat / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 1
+	ID: Rock_Stone / Weight : 30
+	ID: Rubble_Stone / Weight : 25
+	ID: Ore_Copper / Weight : 20
+	ID: Ore_Iron / Weight : 3
 }
 
 enum GobelinGank <<Dungeon / Cost : 5 / Reward : 12>> {
@@ -88,43 +95,47 @@ enum GobelinGank <<Dungeon / Cost : 5 / Reward : 12>> {
 }
 
 class IronCave <<Cost : 6 / Reward : 3>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Goblin_Scavenger - Rare
-	Rock_Basalt
-	Rubble_Basalt
-	Ore_Iron
-	Ore_Thorium - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 3
+	ID: entity:Goblin_Scavenger / Weight : 1
+	ID: Rock_Basalt / Weight : 24
+	ID: Rubble_Basalt / Weight : 24
+	ID: Ore_Iron / Weight : 22
+	ID: Ore_Thorium / Weight : 3
 }
 
 class SandCave <<Cost : 5 / Reward : 2>> {
-	entity:Bat
-	entity:Spider
-	entity:Cactee - Rare
-	Block_Sand
-	Rock_Sandstone
-	Rubble_Sandstone
-	Ore_Gold - Rare
+	Ticks : 28
+	ID: entity:Bat / Weight : 2
+	ID: entity:Spider / Weight : 2
+	ID: entity:Cactee / Weight : 1
+	ID: Block_Sand / Weight : 25
+	ID: Rock_Sandstone / Weight : 28
+	ID: Rubble_Sandstone / Weight : 24
+	ID: Ore_Gold / Weight : 3
 }
 
 class GoldCave <<Cost : 7 / Reward : 3>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Goblin_Thief - Rare
-	Rock_Basalt
-	Rubble_Basalt
-	Ore_Gold
-	Rock_Gem_Topaz - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Goblin_Thief / Weight : 1
+	ID: Rock_Basalt / Weight : 24
+	ID: Rubble_Basalt / Weight : 24
+	ID: Ore_Gold / Weight : 16
+	ID: Rock_Gem_Topaz / Weight : 3
 }
 
 class ThoriumCave <<Cost : 8 / Reward : 4>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Goblin_Lobber - Rare
-	Rock_Basalt
-	Rubble_Basalt
-	Ore_Thorium
-	Ore_Cobalt - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Goblin_Lobber / Weight : 1
+	ID: Rock_Basalt / Weight : 24
+	ID: Rubble_Basalt / Weight : 24
+	ID: Ore_Thorium / Weight : 18
+	ID: Ore_Cobalt / Weight : 3
 }
 
 enum GobelinInvasion <<Dungeon / Cost : 9 / Reward : 24>> {
@@ -135,226 +146,253 @@ enum GobelinInvasion <<Dungeon / Cost : 9 / Reward : 24>> {
 }
 
 class SilverCave <<Cost : 9 / Reward : 4>> {
-	entity:Goblin_Miner
-	entity:Cave_Spider
-	entity:Goblin_Thief - Rare
-	Rock_Shale
-	Rubble_Shale
-	Ore_Silver
-	Rock_Gem_Sapphire - Rare
+	Ticks : 30
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Cave_Spider / Weight : 2
+	ID: entity:Goblin_Thief / Weight : 1
+	ID: Rock_Shale / Weight : 26
+	ID: Rubble_Shale / Weight : 24
+	ID: Ore_Silver / Weight : 18
+	ID: Rock_Gem_Sapphire / Weight : 3
 }
 
 class CobaltCave <<Cost : 10 / Reward : 5>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Goblin_Lobber
-	entity:Goblin_Ogre - Rare
-	Rock_Shale
-	Rubble_Shale
-	Ore_Cobalt
-	Ore_Adamantite - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Goblin_Lobber / Weight : 2
+	ID: entity:Goblin_Ogre / Weight : 1
+	ID: Rock_Shale / Weight : 24
+	ID: Rubble_Shale / Weight : 22
+	ID: Ore_Cobalt / Weight : 18
+	ID: Ore_Adamantite / Weight : 3
 }
 
 class AdamantiteCave <<Cost : 13 / Reward : 6>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Goblin_Lobber
-	entity:Goblin_Ogre - Rare
-	Rubble_Shale
-	Rock_Shale
-	Ore_Adamantite
-	Ore_Mithril - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Goblin_Lobber / Weight : 2
+	ID: entity:Goblin_Ogre / Weight : 1
+	ID: Rubble_Shale / Weight : 22
+	ID: Rock_Shale / Weight : 22
+	ID: Ore_Adamantite / Weight : 18
+	ID: Ore_Mithril / Weight : 3
 }
 
 class GemCave <<Cost : 11 / Reward : 5>> {
-	entity:Cave_Spider
-	entity:Goblin_Thief
-	entity:Earth_Elemental - Rare
-	Rubble_Shale
-	Rock_Shale
-	Rock_Gem_Emerald
-	Rock_Gem_Topaz
-	Rock_Gem_Sapphire - Rare
+	Ticks : 30
+	ID: entity:Cave_Spider / Weight : 2
+	ID: entity:Goblin_Thief / Weight : 1
+	ID: entity:Earth_Elemental / Weight : 1
+	ID: Rubble_Shale / Weight : 22
+	ID: Rock_Shale / Weight : 22
+	ID: Rock_Gem_Emerald / Weight : 12
+	ID: Rock_Gem_Topaz / Weight : 10
+	ID: Rock_Gem_Sapphire / Weight : 4
 }
 
 class FireCave <<Cost : 14 / Reward : 6>> {
-	entity:Zombie_Burnt
-	entity:Emberwulf
-	entity:Burnt_Skeleton_Soldier - Rare
-	Rock_Volcanic
-	Rubble_Volcanic
-	Rubble_Volcanic_Medium
-	Ingredient_Fire_Essence
-	Ore_Thorium
-	Ore_Cobalt - Rare
+	Ticks : 30
+	ID: entity:Zombie_Burnt / Weight : 2
+	ID: entity:Emberwulf / Weight : 2
+	ID: entity:Burnt_Skeleton_Soldier / Weight : 1
+	ID: Rock_Volcanic / Weight : 26
+	ID: Rubble_Volcanic / Weight : 24
+	ID: Rubble_Volcanic_Medium / Weight : 14
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Ore_Thorium / Weight : 10
+	ID: Ore_Cobalt / Weight : 3
 }
 
 class GemDeepCave <<Cost : 15 / Reward : 7>> {
-	entity:Cave_Spider
-	entity:Earth_Elemental
-	entity:Earthen_Golem - Rare
-	Rock_Shale
-	Rubble_Shale
-	Rock_Gem_Emerald
-	Rock_Gem_Topaz
-	Rock_Gem_Sapphire
-	Rock_Gem_Diamond - Rare
+	Ticks : 30
+	ID: entity:Cave_Spider / Weight : 2
+	ID: entity:Earth_Elemental / Weight : 2
+	ID: entity:Earthen_Golem / Weight : 1
+	ID: Rock_Shale / Weight : 20
+	ID: Rubble_Shale / Weight : 20
+	ID: Rock_Gem_Emerald / Weight : 12
+	ID: Rock_Gem_Topaz / Weight : 10
+	ID: Rock_Gem_Sapphire / Weight : 8
+	ID: Rock_Gem_Diamond / Weight : 3
 }
 
 class MithrilCave <<Cost : 16 / Reward : 7>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Goblin_Ogre - Rare
-	Rock_Ledge_Brick
-	Ore_Mithril
-	Ore_Onyxium - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Goblin_Ogre / Weight : 1
+	ID: Rock_Ledge_Brick / Weight : 28
+	ID: Ore_Mithril / Weight : 18
+	ID: Ore_Onyxium / Weight : 3
 }
 
 class OnyxiumCave <<Cost : 19 / Reward : 8>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Void_Crawler - Rare
-	Rock_Ledge_Brick
-	Ore_Onyxium
-	Ore_Prisma - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Void_Crawler / Weight : 1
+	ID: Rock_Ledge_Brick / Weight : 26
+	ID: Ore_Onyxium / Weight : 18
+	ID: Ore_Prisma / Weight : 3
 }
 
 class PrismaCave <<Cost : 23 / Reward : 10>> {
-	entity:Goblin_Scrapper
-	entity:Goblin_Miner
-	entity:Void_Crawler
-	entity:Void_Eye - Rare
-	Rock_Volcanic
-	Rubble_Volcanic
-	Ore_Prisma
-	Rock_Gem_Zephyr - Rare
+	Ticks : 30
+	ID: entity:Goblin_Scrapper / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 2
+	ID: entity:Void_Crawler / Weight : 2
+	ID: entity:Void_Eye / Weight : 1
+	ID: Rock_Volcanic / Weight : 20
+	ID: Rubble_Volcanic / Weight : 20
+	ID: Ore_Prisma / Weight : 16
+	ID: Rock_Gem_Zephyr / Weight : 4
 }
 
 class SandCavern <<Cost : 6 / Reward : 3>> {
-	entity:Bat
-	entity:Cactee
-	entity:Sandswept_Zombie - Rare
-	Rubble_Stone
-	Rock_Stone
-	Rock_Sandstone
-	Rubble_Sandstone
-	Ore_Gold - Rare
+	Ticks : 30
+	ID: entity:Bat / Weight : 2
+	ID: entity:Cactee / Weight : 2
+	ID: entity:Sandswept_Zombie / Weight : 1
+	ID: Rubble_Stone / Weight : 22
+	ID: Rock_Stone / Weight : 22
+	ID: Rock_Sandstone / Weight : 26
+	ID: Rubble_Sandstone / Weight : 24
+	ID: Ore_Gold / Weight : 3
 }
 
 class Desert <<Cost : 7 / Reward : 3>> {
-	entity:Cactee
-	entity:Camel
-	entity:Camel_Calf
-	entity:Sandswept_Zombie - Rare
-	Block_Sand
-	Rock_Sandstone
-	Rubble_Sandstone
-	Plant_Cactus_1
-	Plant_Cactus_Ball_1
-	Plant_Cactus_Flat_1
-	Ore_Gold - Rare
+	Ticks : 25
+	ID: entity:Cactee / Weight : 2
+	ID: entity:Camel / Weight : 3
+	ID: entity:Camel_Calf / Weight : 2
+	ID: entity:Sandswept_Zombie / Weight : 1
+	ID: Block_Sand / Weight : 32
+	ID: Rock_Sandstone / Weight : 24
+	ID: Rubble_Sandstone / Weight : 22
+	ID: Plant_Cactus_1 / Weight : 16
+	ID: Plant_Cactus_Ball_1 / Weight : 10
+	ID: Plant_Cactus_Flat_1 / Weight : 10
+	ID: Ore_Gold / Weight : 3
 }
 
 class ForestEntry <<Cost : 2 / Reward : 1>> {
-	entity:Boar
-	entity:Boar_Piglet
-	entity:Pigeon
-	entity:Fox
-	entity:Wolf - Rare
-	Ingredient_Stick
-	Wood_Oak_Trunk
-	Wood_Beech_Trunk
-	Wood_Ash_Trunk
-	Plant_Sapling_Oak
-	Plant_Sapling_Beech
-	Plant_Sapling_Ash
-	Plant_Crop_Mushroom_Cap_Brown
-	Plant_Crop_Mushroom_Common_Brown
-	Plant_Crop_Mushroom_Shelve_Brown
+	Ticks : 25
+	ID: entity:Boar / Weight : 3
+	ID: entity:Boar_Piglet / Weight : 4
+	ID: entity:Pigeon / Weight : 4
+	ID: entity:Fox / Weight : 2
+	ID: entity:Wolf / Weight : 1
+	ID: Ingredient_Stick / Weight : 28
+	ID: Wood_Oak_Trunk / Weight : 24
+	ID: Wood_Beech_Trunk / Weight : 16
+	ID: Wood_Ash_Trunk / Weight : 10
+	ID: Plant_Sapling_Oak / Weight : 8
+	ID: Plant_Sapling_Beech / Weight : 6
+	ID: Plant_Sapling_Ash / Weight : 5
+	ID: Plant_Crop_Mushroom_Cap_Brown / Weight : 8
+	ID: Plant_Crop_Mushroom_Common_Brown / Weight : 8
+	ID: Plant_Crop_Mushroom_Shelve_Brown / Weight : 5
 }
 
 class Pond <<Cost : 3 / Reward : 2>> {
-	entity:Frog
-	entity:Duck
-	entity:Bluegill
-	Fish_Bluegill_Item
-	Plant_Moss_Block_Green
-	Plant_Moss_Rug_Green
-	Soil_Clay_Blue
-	Soil_Dirt
+	Ticks : 25
+	ID: entity:Frog / Weight : 4
+	ID: entity:Duck / Weight : 4
+	ID: entity:Bluegill / Weight : 4
+	ID: Fish_Bluegill_Item / Weight : 20
+	ID: Plant_Moss_Block_Green / Weight : 18
+	ID: Plant_Moss_Rug_Green / Weight : 18
+	ID: Soil_Clay_Blue / Weight : 14
+	ID: Soil_Dirt / Weight : 18
 }
 
 class River <<Cost : 4 / Reward : 2>> {
-	entity:Frog
-	entity:Duck
-	entity:Bluegill
-	entity:Crab - Rare
-	Fish_Bluegill_Item
-	Rubble_Stone
-	Rock_Stone
-	Soil_Clay_Blue
-	Plant_Moss_Green
+	Ticks : 25
+	ID: entity:Frog / Weight : 3
+	ID: entity:Duck / Weight : 3
+	ID: entity:Bluegill / Weight : 4
+	ID: entity:Crab / Weight : 1
+	ID: Fish_Bluegill_Item / Weight : 20
+	ID: Rubble_Stone / Weight : 18
+	ID: Rock_Stone / Weight : 18
+	ID: Soil_Clay_Blue / Weight : 14
+	ID: Plant_Moss_Green / Weight : 16
 }
 
 class Lake <<Cost : 5 / Reward : 2>> {
-	entity:Frog
-	entity:Duck
-	entity:Bluegill
-	entity:Crocodile - Rare
-	Fish_Bluegill_Item
-	Plant_Moss_Block_Green
-	Plant_Moss_Rug_Green
-	Soil_Clay_Blue
-	Rock_Gem_Sapphire - Rare
+	Ticks : 28
+	ID: entity:Frog / Weight : 3
+	ID: entity:Duck / Weight : 3
+	ID: entity:Bluegill / Weight : 4
+	ID: entity:Crocodile / Weight : 1
+	ID: Fish_Bluegill_Item / Weight : 22
+	ID: Plant_Moss_Block_Green / Weight : 18
+	ID: Plant_Moss_Rug_Green / Weight : 18
+	ID: Soil_Clay_Blue / Weight : 16
+	ID: Rock_Gem_Sapphire / Weight : 3
 }
 
 class Sea <<Cost : 7 / Reward : 3>> {
-	entity:Crab
-	entity:Bluegill
-	entity:Fish_Whale_Humpback_Item - Rare
-	Fish_Whale_Humpback_Item - Rare
-	Rock_Aqua_Brick
-	Rock_Aqua_Brick_Smooth
-	Plant_Coral_Block_Yellow
-	Plant_Coral_Bush_Yellow
-	Plant_Coral_Model_Yellow
-	Rock_Gem_Sapphire - Rare
+	Ticks : 30
+	ID: entity:Crab / Weight : 4
+	ID: entity:Bluegill / Weight : 3
+	ID: entity:Skeleton_Pirate_Striker / Weight : 2
+	ID: entity:Skeleton_Pirate_Gunner / Weight : 1
+	ID: Fish_Whale_Humpback_Item / Weight : 2
+	ID: Rock_Aqua_Brick / Weight : 20
+	ID: Rock_Aqua_Brick_Smooth / Weight : 18
+	ID: Plant_Coral_Block_Yellow / Weight : 14
+	ID: Plant_Coral_Bush_Yellow / Weight : 14
+	ID: Plant_Coral_Model_Yellow / Weight : 10
+	ID: Rock_Gem_Sapphire / Weight : 3
+}
+
+enum PirateShipwreck <<Dungeon / Cost : 10 / Reward : 30>> {
+	Wave 1 - entity:Skeleton_Pirate_Striker x 4
+	Wave 2 - entity:Skeleton_Pirate_Striker x 3 + entity:Skeleton_Pirate_Gunner x 2
+	Wave 3 - entity:Skeleton_Pirate_Gunner x 4 + entity:Skeleton_Pirate_Striker x 3
+	Wave 4 - entity:Skeleton_Pirate_Captain x 1 + entity:Skeleton_Pirate_Gunner x 3 + entity:Skeleton_Pirate_Striker x 4
 }
 
 class Costline <<Cost : 6 / Reward : 3>> {
-	entity:Crab
-	entity:Duck
-	entity:Cactee - Rare
-	Block_Sand
-	Rock_Sandstone
-	Rubble_Sandstone
-	Plant_Coral_Bush_Yellow
-	Plant_Coral_Model_Yellow
-	Rock_Gem_Sapphire - Rare
+	Ticks : 25
+	ID: entity:Crab / Weight : 4
+	ID: entity:Duck / Weight : 3
+	ID: entity:Cactee / Weight : 1
+	ID: Block_Sand / Weight : 26
+	ID: Rock_Sandstone / Weight : 24
+	ID: Rubble_Sandstone / Weight : 22
+	ID: Plant_Coral_Bush_Yellow / Weight : 12
+	ID: Plant_Coral_Model_Yellow / Weight : 10
+	ID: Rock_Gem_Sapphire / Weight : 3
 }
 
 class SeaCavern <<Cost : 9 / Reward : 4>> {
-	entity:Crab
-	entity:Cave_Spider
-	entity:Scarak_Louse - Rare
-	Rock_Aqua_Brick
-	Rock_Aqua_Brick_Smooth
-	Rock_Aqua_Brick_Ornate
-	Rock_Gem_Sapphire
-	Rock_Gem_Diamond - Rare
+	Ticks : 28
+	ID: entity:Crab / Weight : 3
+	ID: entity:Cave_Spider / Weight : 2
+	ID: entity:Scarak_Louse / Weight : 1
+	ID: Rock_Aqua_Brick / Weight : 22
+	ID: Rock_Aqua_Brick_Smooth / Weight : 20
+	ID: Rock_Aqua_Brick_Ornate / Weight : 10
+	ID: Rock_Gem_Sapphire / Weight : 8
+	ID: Rock_Gem_Diamond / Weight : 3
 }
 
 class SeaInfestedNest <<Cost : 13 / Reward : 6>> {
-	entity:Scarak_Louse
-	entity:Scarak_Fighter
-	entity:Scarak_Seeker - Rare
-	Soil_Hive
-	Soil_Hive_Brick
-	Soil_Hive_Brick_Smooth
-	Ingredient_Hide_Scaled
-	Ingredient_Leather_Scaled
-	Rock_Gem_Sapphire
-	Rock_Gem_Diamond - Rare
+	Ticks : 28
+	ID: entity:Scarak_Louse / Weight : 3
+	ID: entity:Scarak_Fighter / Weight : 2
+	ID: entity:Scarak_Seeker / Weight : 1
+	ID: Soil_Hive / Weight : 24
+	ID: Soil_Hive_Brick / Weight : 22
+	ID: Soil_Hive_Brick_Smooth / Weight : 16
+	ID: Ingredient_Hide_Scaled / Weight : 10
+	ID: Ingredient_Leather_Scaled / Weight : 6
+	ID: Rock_Gem_Sapphire / Weight : 6
+	ID: Rock_Gem_Diamond / Weight : 2
 }
 
 enum SeaMonster <<Dungeon / Cost : 15 / Reward : 40>> {
@@ -365,143 +403,153 @@ enum SeaMonster <<Dungeon / Cost : 15 / Reward : 40>> {
 }
 
 class Forest <<Cost : 3 / Reward : 2>> {
-	entity:Boar
-	entity:Boar_Piglet
-	entity:Fox
-	entity:Pigeon
-	entity:Deer
-	entity:Wolf - Rare
-	Ingredient_Stick
-	Wood_Oak_Trunk
-	Wood_Beech_Trunk
-	Wood_Ash_Trunk
-	Plant_Sapling_Oak
-	Plant_Sapling_Beech
-	Plant_Sapling_Ash
-	Plant_Fruit_Apple
+	Ticks : 25
+	ID: entity:Boar / Weight : 3
+	ID: entity:Boar_Piglet / Weight : 4
+	ID: entity:Fox / Weight : 2
+	ID: entity:Pigeon / Weight : 4
+	ID: entity:Deer / Weight : 2
+	ID: entity:Wolf / Weight : 1
+	ID: Ingredient_Stick / Weight : 26
+	ID: Wood_Oak_Trunk / Weight : 22
+	ID: Wood_Beech_Trunk / Weight : 18
+	ID: Wood_Ash_Trunk / Weight : 12
+	ID: Plant_Sapling_Oak / Weight : 8
+	ID: Plant_Sapling_Beech / Weight : 6
+	ID: Plant_Sapling_Ash / Weight : 5
+	ID: Plant_Fruit_Apple / Weight : 5
 }
 
 class AridForest <<Cost : 5 / Reward : 2>> {
-	entity:Fox
-	entity:Armadillo
-	entity:Cactee - Rare
-	Wood_Ash_Trunk
-	Wood_Bottletree_Trunk
-	Wood_Bottletree_Roots
-	Plant_Leaves_Bottle
-	Plant_Seeds_Bottletree
-	Rock_Sandstone
-	Rubble_Sandstone
+	Ticks : 25
+	ID: entity:Fox / Weight : 2
+	ID: entity:Armadillo / Weight : 3
+	ID: entity:Cactee / Weight : 1
+	ID: Wood_Ash_Trunk / Weight : 24
+	ID: Wood_Bottletree_Trunk / Weight : 14
+	ID: Wood_Bottletree_Roots / Weight : 10
+	ID: Plant_Leaves_Bottle / Weight : 12
+	ID: Plant_Seeds_Bottletree / Weight : 8
+	ID: Rock_Sandstone / Weight : 22
+	ID: Rubble_Sandstone / Weight : 20
 }
 
 class Swamp <<Cost : 5 / Reward : 2>> {
-	entity:Frog
-	entity:Crocodile
-	entity:Fen_Stalker - Rare
-	Soil_Dirt
-	Soil_Clay_Blue
-	Plant_Moss_Block_Green
-	Plant_Moss_Rug_Green
-	Plant_Crop_Mushroom_Common_Brown
-	Plant_Crop_Mushroom_Shelve_Brown
-	Plant_Crop_Mushroom_Block_Yellow
+	Ticks : 25
+	ID: entity:Frog / Weight : 4
+	ID: entity:Crocodile / Weight : 2
+	ID: entity:Fen_Stalker / Weight : 1
+	ID: Soil_Dirt / Weight : 22
+	ID: Soil_Clay_Blue / Weight : 20
+	ID: Plant_Moss_Block_Green / Weight : 18
+	ID: Plant_Moss_Rug_Green / Weight : 18
+	ID: Plant_Crop_Mushroom_Common_Brown / Weight : 12
+	ID: Plant_Crop_Mushroom_Shelve_Brown / Weight : 8
+	ID: Plant_Crop_Mushroom_Block_Yellow / Weight : 4
 }
 
 class EnchantedForest <<Cost : 8 / Reward : 4>> {
-	entity:Deer
-	entity:Bluebird
-	entity:Earth_Elemental - Rare
-	Wood_Amber_Trunk
-	Wood_Amber_Roots
-	Plant_Leaves_Amber
-	Plant_Leaves_Goldentree
-	Plant_Flower_Common_Yellow
-	Plant_Flower_Orchid_Yellow
-	Rock_Gem_Emerald
-	Rock_Gem_Topaz - Rare
+	Ticks : 25
+	ID: entity:Deer / Weight : 3
+	ID: entity:Bluebird / Weight : 4
+	ID: entity:Earth_Elemental / Weight : 1
+	ID: Wood_Amber_Trunk / Weight : 18
+	ID: Wood_Amber_Roots / Weight : 12
+	ID: Plant_Leaves_Amber / Weight : 14
+	ID: Plant_Leaves_Goldentree / Weight : 12
+	ID: Plant_Flower_Common_Yellow / Weight : 14
+	ID: Plant_Flower_Orchid_Yellow / Weight : 8
+	ID: Rock_Gem_Emerald / Weight : 8
+	ID: Rock_Gem_Topaz / Weight : 3
 }
 
 class FairyPond <<Cost : 10 / Reward : 5>> {
-	entity:Frog
-	entity:Duck
-	entity:Bluebird
-	entity:Earth_Elemental - Rare
-	Plant_Flower_Common_Pink2
-	Plant_Flower_Common_Yellow
-	Plant_Flower_Orchid_Yellow
-	Plant_Petals_Yellow
-	Plant_Moss_Yellow
-	Plant_Moss_Block_Yellow
-	Rock_Gem_Topaz
+	Ticks : 25
+	ID: entity:Frog / Weight : 3
+	ID: entity:Duck / Weight : 3
+	ID: entity:Bluebird / Weight : 4
+	ID: entity:Earth_Elemental / Weight : 1
+	ID: Plant_Flower_Common_Pink2 / Weight : 14
+	ID: Plant_Flower_Common_Yellow / Weight : 14
+	ID: Plant_Flower_Orchid_Yellow / Weight : 8
+	ID: Plant_Petals_Yellow / Weight : 12
+	ID: Plant_Moss_Yellow / Weight : 16
+	ID: Plant_Moss_Block_Yellow / Weight : 14
+	ID: Rock_Gem_Topaz / Weight : 6
 }
 
 class DeepForest <<Cost : 7 / Reward : 3>> {
-	entity:Boar
-	entity:Fox
-	entity:Wolf
-	entity:Crawler - Rare
-	Wood_Beech_Trunk
-	Wood_Ash_Trunk
-	Wood_Maple_Trunk
-	Plant_Sapling_Beech
-	Plant_Sapling_Ash
-	Plant_Crop_Mushroom_Block_Yellow
-	Plant_Crop_Mushroom_Block_Yellow_Trunk
-	Rock_Gem_Emerald - Rare
+	Ticks : 25
+	ID: entity:Boar / Weight : 3
+	ID: entity:Fox / Weight : 2
+	ID: entity:Wolf / Weight : 2
+	ID: entity:Crawler / Weight : 1
+	ID: Wood_Beech_Trunk / Weight : 22
+	ID: Wood_Ash_Trunk / Weight : 18
+	ID: Wood_Maple_Trunk / Weight : 14
+	ID: Plant_Sapling_Beech / Weight : 8
+	ID: Plant_Sapling_Ash / Weight : 7
+	ID: Plant_Crop_Mushroom_Block_Yellow / Weight : 8
+	ID: Plant_Crop_Mushroom_Block_Yellow_Trunk / Weight : 5
+	ID: Rock_Gem_Emerald / Weight : 3
 }
 
 class DarkForest <<Cost : 10 / Reward : 5>> {
-	entity:Wolf
-	entity:Crawler
-	entity:Zombie
-	entity:Aberrant_Zombie - Rare
-	Plant_Leaves_Bramble
-	Plant_Crop_Mushroom_Block_Yellow
-	Plant_Crop_Mushroom_Block_Yellow_Mycelium
-	Plant_Crop_Mushroom_Shelve_Yellow
-	Ingredient_Bone_Fragment
-	Rock_Gem_Ruby - Rare
+	Ticks : 25
+	ID: entity:Wolf / Weight : 2
+	ID: entity:Crawler / Weight : 2
+	ID: entity:Zombie / Weight : 2
+	ID: entity:Aberrant_Zombie / Weight : 1
+	ID: Plant_Leaves_Bramble / Weight : 20
+	ID: Plant_Crop_Mushroom_Block_Yellow / Weight : 14
+	ID: Plant_Crop_Mushroom_Block_Yellow_Mycelium / Weight : 10
+	ID: Plant_Crop_Mushroom_Shelve_Yellow / Weight : 8
+	ID: Ingredient_Bone_Fragment / Weight : 10
+	ID: Rock_Gem_Ruby / Weight : 3
 }
 
 class BurnedForest <<Cost : 12 / Reward : 5>> {
-	entity:Zombie_Burnt
-	entity:Emberwulf
-	entity:Burnt_Skeleton_Archer - Rare
-	Wood_Ash_Trunk
-	Ingredient_Fire_Essence
-	Rock_Volcanic
-	Rubble_Volcanic
-	Ingredient_Powder_Boom
-	Ore_Thorium - Rare
+	Ticks : 25
+	ID: entity:Zombie_Burnt / Weight : 2
+	ID: entity:Emberwulf / Weight : 2
+	ID: entity:Burnt_Skeleton_Archer / Weight : 1
+	ID: Wood_Ash_Trunk / Weight : 20
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Rock_Volcanic / Weight : 22
+	ID: Rubble_Volcanic / Weight : 20
+	ID: Ingredient_Powder_Boom / Weight : 6
+	ID: Ore_Thorium / Weight : 3
 }
 
 class CursedForest <<Cost : 13 / Reward : 6>> {
-	entity:Zombie
-	entity:Aberrant_Zombie
-	entity:Skeleton_Scout
-	entity:Skeleton_Archer - Rare
-	Ingredient_Bone_Fragment
-	Deco_Bone_Full
-	Deco_Bone_Spike
-	Deco_Bone_Spine
-	Plant_Leaves_Bramble
-	Rock_Runic_Brick
-	Rock_Gem_Zephyr - Rare
+	Ticks : 25
+	ID: entity:Zombie / Weight : 3
+	ID: entity:Aberrant_Zombie / Weight : 2
+	ID: entity:Skeleton_Scout / Weight : 2
+	ID: entity:Skeleton_Archer / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 20
+	ID: Deco_Bone_Full / Weight : 10
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Deco_Bone_Spine / Weight : 6
+	ID: Plant_Leaves_Bramble / Weight : 16
+	ID: Rock_Runic_Brick / Weight : 10
+	ID: Rock_Gem_Zephyr / Weight : 3
 }
 
 class Graveyard <<Cost : 15 / Reward : 7>> {
-	entity:Zombie
-	entity:Skeleton_Scout
-	entity:Skeleton_Archer
-	entity:Skeleton_Soldier
-	entity:Skeleton_Mage - Rare
-	Ingredient_Bone_Fragment
-	Deco_Bone_Full
-	Deco_Bone_Spike
-	Furniture_Village_Tombstone
-	Furniture_Ancient_Coffin
-	Weapon_Club_Zombie_Arm - Rare
-	Weapon_Club_Zombie_Leg - Rare
+	Ticks : 25
+	ID: entity:Zombie / Weight : 3
+	ID: entity:Skeleton_Scout / Weight : 3
+	ID: entity:Skeleton_Archer / Weight : 2
+	ID: entity:Skeleton_Soldier / Weight : 2
+	ID: entity:Skeleton_Mage / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 24
+	ID: Deco_Bone_Full / Weight : 12
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Furniture_Village_Tombstone / Weight : 8
+	ID: Furniture_Ancient_Coffin / Weight : 4
+	ID: Weapon_Club_Zombie_Arm / Weight : 2
+	ID: Weapon_Club_Zombie_Leg / Weight : 2
 }
 
 enum UndeadTemple <<Dungeon / Cost : 17 / Reward : 45>> {
@@ -512,15 +560,16 @@ enum UndeadTemple <<Dungeon / Cost : 17 / Reward : 45>> {
 }
 
 class VoidPortal <<Cost : 20 / Reward : 8>> {
-	entity:Void_Larva
-	entity:Void_Crawler
-	entity:Void_Eye - Rare
-	Portal_Device
-	Instance_Gateway
-	Rock_Runic_Brick
-	Rock_Runic_Brick_Ornate
-	Rock_Gem_Zephyr
-	Ore_Onyxium - Rare
+	Ticks : 25
+	ID: entity:Void_Larva / Weight : 3
+	ID: entity:Void_Crawler / Weight : 2
+	ID: entity:Void_Eye / Weight : 1
+	ID: Portal_Device / Weight : 5
+	ID: Instance_Gateway / Weight : 4
+	ID: Rock_Runic_Brick / Weight : 20
+	ID: Rock_Runic_Brick_Ornate / Weight : 12
+	ID: Rock_Gem_Zephyr / Weight : 8
+	ID: Ore_Onyxium / Weight : 3
 }
 
 enum VoidTemple <<Dungeon / Cost : 24 / Reward : 75>> {
@@ -531,30 +580,32 @@ enum VoidTemple <<Dungeon / Cost : 24 / Reward : 75>> {
 }
 
 class OutlanderForest <<Cost : 15 / Reward : 7>> {
-	entity:Outlander_Initiate
-	entity:Outlander_Hunter
-	entity:Outlander_Marauder - Rare
-	Wood_Amber_Trunk
-	Wood_Amber_Roots
-	Plant_Leaves_Amber
-	Plant_Leaves_Bramble
-	Ingredient_Hide_Prismic - Rare
-	Rock_Gem_Zephyr - Rare
+	Ticks : 25
+	ID: entity:Outlander_Initiate / Weight : 3
+	ID: entity:Outlander_Hunter / Weight : 2
+	ID: entity:Outlander_Marauder / Weight : 1
+	ID: Wood_Amber_Trunk / Weight : 18
+	ID: Wood_Amber_Roots / Weight : 12
+	ID: Plant_Leaves_Amber / Weight : 14
+	ID: Plant_Leaves_Bramble / Weight : 12
+	ID: Ingredient_Hide_Prismic / Weight : 4
+	ID: Rock_Gem_Zephyr / Weight : 3
 }
 
 class OutlanderPlain <<Cost : 16 / Reward : 7>> {
-	entity:Outlander_Initiate
-	entity:Outlander_Hunter
-	entity:Outlander_Berserker
-	entity:Outlander_Marauder
-	entity:Outlander_Priest - Rare
-	entity:Outlander_Brute - Rare
-	Plant_Crop_Wheat_Item
-	Plant_Crop_Corn_Item
-	Plant_Crop_Carrot_Item
-	Ingredient_Hide_Prismic
-	Ingredient_Leather_Prismic
-	Ore_Adamantite - Rare
+	Ticks : 25
+	ID: entity:Outlander_Initiate / Weight : 3
+	ID: entity:Outlander_Hunter / Weight : 3
+	ID: entity:Outlander_Berserker / Weight : 2
+	ID: entity:Outlander_Marauder / Weight : 2
+	ID: entity:Outlander_Priest / Weight : 1
+	ID: entity:Outlander_Brute / Weight : 1
+	ID: Plant_Crop_Wheat_Item / Weight : 20
+	ID: Plant_Crop_Corn_Item / Weight : 18
+	ID: Plant_Crop_Carrot_Item / Weight : 16
+	ID: Ingredient_Hide_Prismic / Weight : 8
+	ID: Ingredient_Leather_Prismic / Weight : 6
+	ID: Ore_Adamantite / Weight : 3
 }
 
 enum OutlanderGank <<Dungeon / Cost : 17 / Reward : 42>> {
@@ -573,64 +624,69 @@ enum OutlanderCity <<Dungeon / Cost : 20 / Reward : 60>> {
 }
 
 class Toundra <<Cost : 17 / Reward : 8>> {
-	entity:Wolf
-	entity:Frost_Zombie
-	entity:Frost_Skeleton_Scout - Rare
-	Rock_Ice
-	Rubble_Ice
-	Rubble_Ice_Medium
-	Wood_Ice_Trunk
-	Plant_Seeds_Ice
-	Ingredient_Ice_Essence - Rare
+	Ticks : 25
+	ID: entity:Wolf / Weight : 2
+	ID: entity:Frost_Zombie / Weight : 2
+	ID: entity:Frost_Skeleton_Scout / Weight : 1
+	ID: Rock_Ice / Weight : 24
+	ID: Rubble_Ice / Weight : 24
+	ID: Rubble_Ice_Medium / Weight : 14
+	ID: Wood_Ice_Trunk / Weight : 14
+	ID: Plant_Seeds_Ice / Weight : 8
+	ID: Ingredient_Ice_Essence / Weight : 3
 }
 
 class FrozenForest <<Cost : 18 / Reward : 8>> {
-	entity:Wolf
-	entity:Frost_Zombie
-	entity:Frost_Skeleton_Ranger - Rare
-	Wood_Birch_Trunk
-	Plant_Sapling_Birch
-	Plant_Leaves_Birch
-	Wood_Ice_Trunk
-	Rock_Ice
-	Rubble_Ice
-	Ingredient_Ice_Essence - Rare
+	Ticks : 25
+	ID: entity:Wolf / Weight : 2
+	ID: entity:Frost_Zombie / Weight : 2
+	ID: entity:Frost_Skeleton_Ranger / Weight : 1
+	ID: Wood_Birch_Trunk / Weight : 18
+	ID: Plant_Sapling_Birch / Weight : 8
+	ID: Plant_Leaves_Birch / Weight : 14
+	ID: Wood_Ice_Trunk / Weight : 16
+	ID: Rock_Ice / Weight : 20
+	ID: Rubble_Ice / Weight : 18
+	ID: Ingredient_Ice_Essence / Weight : 3
 }
 
 class IceLand <<Cost : 18 / Reward : 8>> {
-	entity:Frost_Zombie
-	entity:Frost_Skeleton_Scout
-	entity:Frost_Golem - Rare
-	Rock_Ice
-	Rubble_Ice
-	Rubble_Ice_Medium
-	Rock_Ice_Icicles
-	Wood_Ice_Trunk
-	Ingredient_Ice_Essence
+	Ticks : 25
+	ID: entity:Frost_Zombie / Weight : 2
+	ID: entity:Frost_Skeleton_Scout / Weight : 2
+	ID: entity:Frost_Golem / Weight : 1
+	ID: Rock_Ice / Weight : 26
+	ID: Rubble_Ice / Weight : 24
+	ID: Rubble_Ice_Medium / Weight : 16
+	ID: Rock_Ice_Icicles / Weight : 10
+	ID: Wood_Ice_Trunk / Weight : 10
+	ID: Ingredient_Ice_Essence / Weight : 5
 }
 
 class IcyCavern <<Cost : 20 / Reward : 9>> {
-	entity:Frost_Zombie
-	entity:Frost_Skeleton_Fighter
-	entity:Frost_Skeleton_Mage - Rare
-	Rock_Ice
-	Rubble_Ice
-	Rock_Ice_Icicles
-	Ore_Silver
-	Rock_Gem_Sapphire
-	Ingredient_Ice_Essence - Rare
+	Ticks : 28
+	ID: entity:Frost_Zombie / Weight : 2
+	ID: entity:Frost_Skeleton_Fighter / Weight : 2
+	ID: entity:Frost_Skeleton_Mage / Weight : 1
+	ID: Rock_Ice / Weight : 22
+	ID: Rubble_Ice / Weight : 22
+	ID: Rock_Ice_Icicles / Weight : 12
+	ID: Ore_Silver / Weight : 12
+	ID: Rock_Gem_Sapphire / Weight : 6
+	ID: Ingredient_Ice_Essence / Weight : 4
 }
 
 class YetiCavern <<Cost : 22 / Reward : 10>> {
-	entity:Frost_Golem
-	entity:Frost_Skeleton_Knight
-	entity:Ice_Dragon - Rare
-	Rock_Ice
-	Rubble_Ice_Medium
-	Rock_Ice_Icicles
-	Ingredient_Ice_Essence
-	Rock_Gem_Diamond - Rare
-	Weapon_Staff_Crystal_Ice - Rare
+	Ticks : 28
+	ID: entity:Frost_Golem / Weight : 2
+	ID: entity:Frost_Skeleton_Knight / Weight : 2
+	ID: entity:Ice_Dragon / Weight : 1
+	ID: Rock_Ice / Weight : 22
+	ID: Rubble_Ice_Medium / Weight : 18
+	ID: Rock_Ice_Icicles / Weight : 12
+	ID: Ingredient_Ice_Essence / Weight : 8
+	ID: Rock_Gem_Diamond / Weight : 3
+	ID: Weapon_Staff_Crystal_Ice / Weight : 1
 }
 
 enum IceTemple <<Dungeon / Cost : 24 / Reward : 75>> {
@@ -641,28 +697,30 @@ enum IceTemple <<Dungeon / Cost : 24 / Reward : 75>> {
 }
 
 class IcyForest <<Cost : 20 / Reward : 9>> {
-	entity:Wolf
-	entity:Frost_Zombie
-	entity:Frost_Skeleton_Ranger
-	entity:Frost_Golem - Rare
-	Wood_Ice_Trunk
-	Plant_Seeds_Ice
-	Plant_Leaves_Birch
-	Wood_Birch_Trunk
-	Rock_Ice
-	Ingredient_Ice_Essence
+	Ticks : 25
+	ID: entity:Wolf / Weight : 2
+	ID: entity:Frost_Zombie / Weight : 2
+	ID: entity:Frost_Skeleton_Ranger / Weight : 2
+	ID: entity:Frost_Golem / Weight : 1
+	ID: Wood_Ice_Trunk / Weight : 18
+	ID: Plant_Seeds_Ice / Weight : 8
+	ID: Plant_Leaves_Birch / Weight : 12
+	ID: Wood_Birch_Trunk / Weight : 16
+	ID: Rock_Ice / Weight : 20
+	ID: Ingredient_Ice_Essence / Weight : 6
 }
 
 class FireLand <<Cost : 16 / Reward : 7>> {
-	entity:Zombie_Burnt
-	entity:Emberwulf
-	entity:Burnt_Skeleton_Soldier - Rare
-	Rock_Volcanic
-	Rubble_Volcanic
-	Rubble_Volcanic_Medium
-	Ingredient_Fire_Essence
-	Ore_Thorium
-	Ore_Cobalt - Rare
+	Ticks : 25
+	ID: entity:Zombie_Burnt / Weight : 2
+	ID: entity:Emberwulf / Weight : 2
+	ID: entity:Burnt_Skeleton_Soldier / Weight : 1
+	ID: Rock_Volcanic / Weight : 26
+	ID: Rubble_Volcanic / Weight : 24
+	ID: Rubble_Volcanic_Medium / Weight : 16
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Ore_Thorium / Weight : 8
+	ID: Ore_Cobalt / Weight : 3
 }
 
 enum Volcano <<Dungeon / Cost : 19 / Reward : 55>> {
@@ -673,140 +731,150 @@ enum Volcano <<Dungeon / Cost : 19 / Reward : 55>> {
 }
 
 class FieryGraveward <<Cost : 17 / Reward : 8>> {
-	entity:Zombie_Burnt
-	entity:Burnt_Skeleton_Soldier
-	entity:Burnt_Skeleton_Archer
-	entity:Burnt_Skeleton_Knight - Rare
-	Ingredient_Bone_Fragment
-	Deco_Bone_Full
-	Deco_Bone_Spike
-	Rock_Volcanic
-	Ingredient_Fire_Essence
-	Rock_Gem_Ruby - Rare
+	Ticks : 25
+	ID: entity:Zombie_Burnt / Weight : 2
+	ID: entity:Burnt_Skeleton_Soldier / Weight : 2
+	ID: entity:Burnt_Skeleton_Archer / Weight : 2
+	ID: entity:Burnt_Skeleton_Knight / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 18
+	ID: Deco_Bone_Full / Weight : 10
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Rock_Volcanic / Weight : 22
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Rock_Gem_Ruby / Weight : 3
 }
 
 class HellGate <<Cost : 20 / Reward : 9>> {
-	entity:Incandescent_Skeleton_Fighter
-	entity:Incandescent_Skeleton_Mage
-	entity:Ember_Golem - Rare
-	Portal_Device
-	Rock_Volcanic_Cracked_Incandescent
-	Rock_Volcanic_Cracked_Lava_Incandescent
-	Ingredient_Fire_Essence
-	Ore_Mithril - Rare
-	Ore_Onyxium - Rare
+	Ticks : 25
+	ID: entity:Incandescent_Skeleton_Fighter / Weight : 2
+	ID: entity:Incandescent_Skeleton_Mage / Weight : 1
+	ID: entity:Ember_Golem / Weight : 1
+	ID: Portal_Device / Weight : 5
+	ID: Rock_Volcanic_Cracked_Incandescent / Weight : 18
+	ID: Rock_Volcanic_Cracked_Lava_Incandescent / Weight : 16
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Ore_Mithril / Weight : 3
+	ID: Ore_Onyxium / Weight : 2
 }
 
 class HellPlain <<Cost : 22 / Reward : 10>> {
-	entity:Incandescent_Skeleton_Fighter
-	entity:Incandescent_Skeleton_Footman
-	entity:Emberwulf
-	entity:Firesteel_Golem - Rare
-	Rock_Volcanic
-	Rubble_Volcanic
-	Ingredient_Fire_Essence
-	Ingredient_Bolt_Cindercloth
-	Ore_Mithril
-	Ore_Onyxium - Rare
+	Ticks : 25
+	ID: entity:Incandescent_Skeleton_Fighter / Weight : 2
+	ID: entity:Incandescent_Skeleton_Footman / Weight : 2
+	ID: entity:Emberwulf / Weight : 2
+	ID: entity:Firesteel_Golem / Weight : 1
+	ID: Rock_Volcanic / Weight : 22
+	ID: Rubble_Volcanic / Weight : 22
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Ingredient_Bolt_Cindercloth / Weight : 6
+	ID: Ore_Mithril / Weight : 8
+	ID: Ore_Onyxium / Weight : 3
 }
 
 class HellSwamp <<Cost : 22 / Reward : 10>> {
-	entity:Fen_Stalker
-	entity:Zombie_Burnt
-	entity:Incandescent_Skeleton_Mage
-	entity:Ember_Golem - Rare
-	Soil_Clay_Black
-	Plant_Moss_Yellow
-	Plant_Moss_Block_Yellow
-	Plant_Crop_Mushroom_Block_Yellow
-	Ingredient_Fire_Essence
-	Rock_Gem_Ruby
-	Ore_Onyxium - Rare
+	Ticks : 25
+	ID: entity:Fen_Stalker / Weight : 2
+	ID: entity:Zombie_Burnt / Weight : 2
+	ID: entity:Incandescent_Skeleton_Mage / Weight : 1
+	ID: entity:Ember_Golem / Weight : 1
+	ID: Soil_Clay_Black / Weight : 18
+	ID: Plant_Moss_Yellow / Weight : 16
+	ID: Plant_Moss_Block_Yellow / Weight : 14
+	ID: Plant_Crop_Mushroom_Block_Yellow / Weight : 10
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Rock_Gem_Ruby / Weight : 6
+	ID: Ore_Onyxium / Weight : 3
 }
 
 class FireGemCave <<Cost : 24 / Reward : 11>> {
-	entity:Incandescent_Skeleton_Fighter
-	entity:Incandescent_Skeleton_Mage
-	entity:Firesteel_Golem
-	entity:Thunder_Golem - Rare
-	Rock_Volcanic
-	Rock_Volcanic_Cracked_Incandescent
-	Rock_Gem_Ruby
-	Rock_Gem_Diamond
-	Ore_Onyxium
-	Ore_Prisma - Rare
+	Ticks : 28
+	ID: entity:Incandescent_Skeleton_Fighter / Weight : 2
+	ID: entity:Incandescent_Skeleton_Mage / Weight : 1
+	ID: entity:Firesteel_Golem / Weight : 1
+	ID: entity:Thunder_Golem / Weight : 1
+	ID: Rock_Volcanic / Weight : 20
+	ID: Rock_Volcanic_Cracked_Incandescent / Weight : 14
+	ID: Rock_Gem_Ruby / Weight : 10
+	ID: Rock_Gem_Diamond / Weight : 5
+	ID: Ore_Onyxium / Weight : 8
+	ID: Ore_Prisma / Weight : 3
 }
 
 class DesertTempleEntrace <<Cost : 9 / Reward : 4>> {
-	entity:Sandswept_Zombie
-	entity:Skeleton_Scout
-	entity:Skeleton_Archer - Rare
-	Rock_Sandstone
-	Rubble_Sandstone
-	Furniture_Ancient_Pot
-	Furniture_Ancient_Crate
-	Deco_Pot_Clay_Broken
-	Ore_Gold - Rare
+	Ticks : 25
+	ID: entity:Sandswept_Zombie / Weight : 2
+	ID: entity:Skeleton_Scout / Weight : 2
+	ID: entity:Skeleton_Archer / Weight : 1
+	ID: Rock_Sandstone / Weight : 24
+	ID: Rubble_Sandstone / Weight : 22
+	ID: Furniture_Ancient_Pot / Weight : 10
+	ID: Furniture_Ancient_Crate / Weight : 8
+	ID: Deco_Pot_Clay_Broken / Weight : 10
+	ID: Ore_Gold / Weight : 3
 }
 
 class DeeperDesertTemple <<Cost : 11 / Reward : 5>> {
-	entity:Sandswept_Zombie
-	entity:Skeleton_Soldier
-	entity:Skeleton_Archer
-	entity:Skeleton_Mage - Rare
-	Rock_Sandstone
-	Rock_Sandstone_Brick
-	Furniture_Ancient_Pot
-	Furniture_Ancient_Statue
-	Furniture_Ancient_Candle
-	Rock_Gem_Topaz
-	Ore_Gold
+	Ticks : 25
+	ID: entity:Sandswept_Zombie / Weight : 2
+	ID: entity:Skeleton_Soldier / Weight : 2
+	ID: entity:Skeleton_Archer / Weight : 2
+	ID: entity:Skeleton_Mage / Weight : 1
+	ID: Rock_Sandstone / Weight : 22
+	ID: Rock_Sandstone_Brick / Weight : 18
+	ID: Furniture_Ancient_Pot / Weight : 8
+	ID: Furniture_Ancient_Statue / Weight : 6
+	ID: Furniture_Ancient_Candle / Weight : 8
+	ID: Rock_Gem_Topaz / Weight : 5
+	ID: Ore_Gold / Weight : 8
 }
 
 enum DesertTemple <<Dungeon / Cost : 13 / Reward : 35>> {
 	Wave 1 - entity:Sandswept_Zombie x 4 + entity:Skeleton_Scout x 2
 	Wave 2 - entity:Sandswept_Zombie x 5 + entity:Skeleton_Archer x 3
 	Wave 3 - entity:Skeleton_Knight x 3 + entity:Skeleton_Mage x 2 + entity:Sandswept_Zombie x 4
-	Wave 4 - entity:Sand_Empress x 1 + entity:Skeleton_Soldier x 6 + entity:Skeleton_Archer x 4
+	Wave 4 - entity:Skeleton_Sand_Archmage x 1 + entity:Skeleton_Soldier x 6 + entity:Skeleton_Archer x 4
 }
 
 class PharaonRoom <<Cost : 15 / Reward : 7>> {
-	entity:Sandswept_Zombie
-	entity:Skeleton_Knight
-	entity:Skeleton_Mage
-	entity:Sand_Empress - Rare
-	Deco_Treasure
-	Furniture_Ancient_Coffin
-	Furniture_Ancient_Statue
-	Furniture_Ancient_Chest_Large_Treasure
-	Ore_Gold
-	Rock_Gem_Diamond
+	Ticks : 25
+	ID: entity:Sandswept_Zombie / Weight : 2
+	ID: entity:Skeleton_Knight / Weight : 2
+	ID: entity:Skeleton_Mage / Weight : 1
+	ID: entity:Skeleton_Sand_Archmage / Weight : 1
+	ID: Deco_Treasure / Weight : 6
+	ID: Furniture_Ancient_Coffin / Weight : 8
+	ID: Furniture_Ancient_Statue / Weight : 8
+	ID: Furniture_Ancient_Chest_Large_Treasure / Weight : 4
+	ID: Ore_Gold / Weight : 12
+	ID: Rock_Gem_Diamond / Weight : 3
 }
 
 class InnerDesert <<Cost : 8 / Reward : 4>> {
-	entity:Cactee
-	entity:Camel
-	entity:Sandswept_Zombie
-	entity:Scarak_Louse - Rare
-	Block_Sand
-	Rock_Sandstone
-	Rubble_Sandstone
-	Plant_Cactus_1
-	Plant_Cactus_Ball_1
-	Plant_Cactus_Flat_1
-	Ore_Gold - Rare
+	Ticks : 25
+	ID: entity:Cactee / Weight : 2
+	ID: entity:Camel / Weight : 3
+	ID: entity:Sandswept_Zombie / Weight : 1
+	ID: entity:Scarak_Louse / Weight : 1
+	ID: Block_Sand / Weight : 30
+	ID: Rock_Sandstone / Weight : 24
+	ID: Rubble_Sandstone / Weight : 20
+	ID: Plant_Cactus_1 / Weight : 14
+	ID: Plant_Cactus_Ball_1 / Weight : 10
+	ID: Plant_Cactus_Flat_1 / Weight : 10
+	ID: Ore_Gold / Weight : 3
 }
 
 class MuddyDesert <<Cost : 9 / Reward : 4>> {
-	entity:Cactee
-	entity:Crocodile
-	entity:Scarak_Louse - Rare
-	Block_Sand
-	Soil_Dirt
-	Soil_Clay_Black
-	Soil_Gravel_Sand_Half
-	Plant_Cactus_1
-	Plant_Crop_Tomato_Item
+	Ticks : 25
+	ID: entity:Cactee / Weight : 2
+	ID: entity:Crocodile / Weight : 2
+	ID: entity:Scarak_Louse / Weight : 1
+	ID: Block_Sand / Weight : 22
+	ID: Soil_Dirt / Weight : 22
+	ID: Soil_Clay_Black / Weight : 18
+	ID: Soil_Gravel_Sand_Half / Weight : 16
+	ID: Plant_Cactus_1 / Weight : 12
+	ID: Plant_Crop_Tomato_Item / Weight : 8
 }
 
 enum InsectInvasion <<Dungeon / Cost : 10 / Reward : 26>> {
@@ -816,34 +884,37 @@ enum InsectInvasion <<Dungeon / Cost : 10 / Reward : 26>> {
 }
 
 class InfestedDesert <<Cost : 11 / Reward : 5>> {
-	entity:Scarak_Louse
-	entity:Scarak_Fighter
-	entity:Scarak_Seeker - Rare
-	Soil_Hive
-	Soil_Hive_Brick
-	Soil_Hive_Brick_Smooth
-	Soil_Hive_Brick_Stairs
-	Plant_Cactus_Ball_1
-	Ingredient_Hide_Scaled
+	Ticks : 25
+	ID: entity:Scarak_Louse / Weight : 3
+	ID: entity:Scarak_Fighter / Weight : 2
+	ID: entity:Scarak_Seeker / Weight : 1
+	ID: Soil_Hive / Weight : 24
+	ID: Soil_Hive_Brick / Weight : 20
+	ID: Soil_Hive_Brick_Smooth / Weight : 16
+	ID: Soil_Hive_Brick_Stairs / Weight : 10
+	ID: Plant_Cactus_Ball_1 / Weight : 8
+	ID: Ingredient_Hide_Scaled / Weight : 6
 }
 
 enum InsectNest <<Dungeon / Cost : 13 / Reward : 36>> {
 	Wave 1 - entity:Scarak_Louse x 6 + entity:Spider x 4
 	Wave 2 - entity:Scarak_Fighter x 5 + entity:Cave_Spider x 4
 	Wave 3 - entity:Scarak_Defender x 2 + entity:Scarak_Fighter x 5 + entity:Scarak_Seeker x 2
+	Wave 3 - entity:Sand_Empress x 1 + entity:Scarak_Fighter x 2 + entity:Scarak_Fighter x 1
 }
 
 class InsideInsectNest <<Cost : 14 / Reward : 6>> {
-	entity:Scarak_Louse
-	entity:Scarak_Fighter
-	entity:Scarak_Defender
-	entity:Scarak_Seeker - Rare
-	Soil_Hive
-	Soil_Hive_Brick
-	Soil_Hive_Brick_Smooth
-	Soil_Hive_Brick_Beam
-	Soil_Hive_Brick_Stairs
-	Rock_Gem_Ruby
+	Ticks : 25
+	ID: entity:Scarak_Louse / Weight : 3
+	ID: entity:Scarak_Fighter / Weight : 2
+	ID: entity:Scarak_Defender / Weight : 1
+	ID: entity:Scarak_Seeker / Weight : 1
+	ID: Soil_Hive / Weight : 22
+	ID: Soil_Hive_Brick / Weight : 20
+	ID: Soil_Hive_Brick_Smooth / Weight : 16
+	ID: Soil_Hive_Brick_Beam / Weight : 10
+	ID: Soil_Hive_Brick_Stairs / Weight : 10
+	ID: Rock_Gem_Ruby / Weight : 5
 }
 
 enum InsectCore <<Dungeon / Cost : 17 / Reward : 50>> {
@@ -854,96 +925,104 @@ enum InsectCore <<Dungeon / Cost : 17 / Reward : 50>> {
 }
 
 class Quarry <<Cost : 3 / Reward : 2>> {
-	entity:Bat
-	entity:Goblin_Miner - Rare
-	Rubble_Stone
-	Rock_Stone
-	Rock_Slate
-	Rock_Shale
-	Rock_Basalt
-	Ore_Copper
-	Ore_Iron - Rare
+	Ticks : 50
+	ID: entity:Bat / Weight : 2
+	ID: entity:Goblin_Miner / Weight : 1
+	ID: Rubble_Stone / Weight : 45
+	ID: Rock_Stone / Weight : 45
+	ID: Rock_Slate / Weight : 22
+	ID: Rock_Shale / Weight : 20
+	ID: Rock_Basalt / Weight : 14
+	ID: Ore_Copper / Weight : 8
+	ID: Ore_Iron / Weight : 2
 }
 
 class Hallow <<Cost : 3 / Reward : 2>> {
-	entity:Rabbit
-	entity:Sheep
-	entity:Chicken
-	entity:Deer - Rare
-	Plant_Crop_Wheat_Item
-	Plant_Crop_Corn_Item
-	Plant_Crop_Carrot_Item
-	Food_Bread
-	Plant_Fruit_Apple
+	Ticks : 30
+	ID: entity:Rabbit / Weight : 4
+	ID: entity:Sheep / Weight : 4
+	ID: entity:Chicken / Weight : 4
+	ID: entity:Deer / Weight : 1
+	ID: Plant_Crop_Wheat_Item / Weight : 30
+	ID: Plant_Crop_Corn_Item / Weight : 20
+	ID: Plant_Crop_Carrot_Item / Weight : 20
+	ID: Food_Bread / Weight : 8
+	ID: Plant_Fruit_Apple / Weight : 8
 }
 
 class CowHallow <<Cost : 5 / Reward : 2>> {
-	entity:Cow
-	entity:Cow_Calf
-	entity:Wolf - Rare
-	Plant_Crop_Wheat_Item
-	Plant_Crop_Corn_Item
-	Ingredient_Bolt_Wool
-	Food_Bread
-	Plant_Fruit_Apple
+	Ticks : 35
+	ID: entity:Cow / Weight : 5
+	ID: entity:Cow_Calf / Weight : 4
+	ID: entity:Wolf / Weight : 1
+	ID: Plant_Crop_Wheat_Item / Weight : 30
+	ID: Plant_Crop_Corn_Item / Weight : 24
+	ID: Ingredient_Bolt_Wool / Weight : 8
+	ID: Food_Bread / Weight : 8
+	ID: Plant_Fruit_Apple / Weight : 8
 }
 
 class HorseHallow <<Cost : 5 / Reward : 2>> {
-	entity:Horse
-	entity:Wolf - Rare
-	Plant_Crop_Carrot_Item
-	Plant_Crop_Wheat_Item
-	Ingredient_Bolt_Wool
-	Food_Bread
-	Plant_Fruit_Apple
+	Ticks : 35
+	ID: entity:Horse / Weight : 5
+	ID: entity:Wolf / Weight : 1
+	ID: Plant_Crop_Carrot_Item / Weight : 30
+	ID: Plant_Crop_Wheat_Item / Weight : 24
+	ID: Ingredient_Bolt_Wool / Weight : 8
+	ID: Food_Bread / Weight : 8
+	ID: Plant_Fruit_Apple / Weight : 8
 }
 
 class MysteriousCavern <<Cost : 6 / Reward : 3>> {
-	entity:Bat
-	entity:Cave_Spider
-	entity:Earth_Elemental - Rare
-	Rubble_Stone
-	Rock_Stone
-	Rock_Slate
-	Rock_Shale
-	Rock_Gem_Sapphire - Rare
-	Ore_Iron
+	Ticks : 30
+	ID: entity:Bat / Weight : 3
+	ID: entity:Cave_Spider / Weight : 2
+	ID: entity:Earth_Elemental / Weight : 1
+	ID: Rubble_Stone / Weight : 24
+	ID: Rock_Stone / Weight : 24
+	ID: Rock_Slate / Weight : 18
+	ID: Rock_Shale / Weight : 18
+	ID: Rock_Gem_Sapphire / Weight : 3
+	ID: Ore_Iron / Weight : 8
 }
 
 class MysticCave <<Cost : 9 / Reward : 4>> {
-	entity:Earth_Elemental
-	entity:Earthen_Golem - Rare
-	Rock_Runic_Brick
-	Rock_Runic_Brick_Ornate
-	Rock_Gem_Sapphire
-	Rock_Gem_Emerald
-	Ingredient_Crystal_Yellow - Rare
+	Ticks : 30
+	ID: entity:Earth_Elemental / Weight : 2
+	ID: entity:Earthen_Golem / Weight : 1
+	ID: Rock_Runic_Brick / Weight : 22
+	ID: Rock_Runic_Brick_Ornate / Weight : 12
+	ID: Rock_Gem_Sapphire / Weight : 8
+	ID: Rock_Gem_Emerald / Weight : 6
+	ID: Ingredient_Crystal_Yellow / Weight : 3
 }
 
 class LuxirousCave <<Cost : 13 / Reward : 6>> {
-	entity:Earth_Elemental
-	entity:Earthen_Golem
-	entity:Goblin_Thief - Rare
-	Rock_Gem_Emerald
-	Rock_Gem_Topaz
-	Rock_Gem_Diamond - Rare
-	Ore_Gold
-	Ore_Adamantite - Rare
-	Deco_Treasure
+	Ticks : 30
+	ID: entity:Earth_Elemental / Weight : 2
+	ID: entity:Earthen_Golem / Weight : 2
+	ID: entity:Goblin_Thief / Weight : 1
+	ID: Rock_Gem_Emerald / Weight : 10
+	ID: Rock_Gem_Topaz / Weight : 8
+	ID: Rock_Gem_Diamond / Weight : 3
+	ID: Ore_Gold / Weight : 12
+	ID: Ore_Adamantite / Weight : 3
+	ID: Deco_Treasure / Weight : 4
 }
 
 class JurassicCave <<Cost : 17 / Reward : 8>> {
-	entity:Archaeopteryx
-	entity:Crocodile
-	entity:Cave_Raptor
-	entity:Cave_Rex - Rare
-	Ingredient_Bone_Fragment
-	Deco_Bone_Full
-	Deco_Bone_Spike_Large
-	Ingredient_Hide_Scaled
-	Ingredient_Leather_Scaled
-	Rock_Gem_Diamond
-	Ore_Adamantite
+	Ticks : 30
+	ID: entity:Archaeopteryx / Weight : 3
+	ID: entity:Crocodile / Weight : 2
+	ID: entity:Cave_Raptor / Weight : 2
+	ID: entity:Cave_Rex / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 20
+	ID: Deco_Bone_Full / Weight : 10
+	ID: Deco_Bone_Spike_Large / Weight : 8
+	ID: Ingredient_Hide_Scaled / Weight : 10
+	ID: Ingredient_Leather_Scaled / Weight : 6
+	ID: Rock_Gem_Diamond / Weight : 4
+	ID: Ore_Adamantite / Weight : 8
 }
 
 enum DinoCrisis <<Dungeon / Cost : 21 / Reward : 65>> {
@@ -955,6 +1034,361 @@ enum DinoCrisis <<Dungeon / Cost : 21 / Reward : 65>> {
 	Wave 6 - entity:Cave_Rex x 3 + entity:Earth_Elemental x 1
 }
 
+class DryTrorkCamp <<Cost : 10 / Reward : 5>> {
+	Ticks : 25
+	ID: entity:Trork_Sentry / Weight : 3
+	ID: entity:Trork_Hunter / Weight : 2
+	ID: entity:Hunting_Wolf / Weight : 2
+	ID: entity:Trork_Brawler / Weight : 1
+	ID: Wood_Ash_Trunk / Weight : 18
+	ID: Rock_Sandstone / Weight : 22
+	ID: Rubble_Sandstone / Weight : 20
+	ID: Ingredient_Bone_Fragment / Weight : 8
+	ID: Ingredient_Hide_Scaled / Weight : 6
+	ID: Ore_Gold / Weight : 3
+}
+
+class TrorkHuntingGround <<Cost : 10 / Reward : 5>> {
+	Ticks : 25
+	ID: entity:Hunting_Wolf / Weight : 4
+	ID: entity:Trork_Hunter / Weight : 3
+	ID: entity:Trork_Sentry / Weight : 2
+	ID: entity:Trork_Brawler / Weight : 1
+	ID: Wood_Beech_Trunk / Weight : 20
+	ID: Wood_Ash_Trunk / Weight : 18
+	ID: Plant_Leaves_Bramble / Weight : 14
+	ID: Ingredient_Bone_Fragment / Weight : 8
+	ID: Ingredient_Hide_Scaled / Weight : 6
+	ID: Rock_Gem_Emerald / Weight : 3
+}
+
+enum TrorkWarband <<Dungeon / Cost : 12 / Reward : 32>> {
+	Wave 1 - entity:Hunting_Wolf x 3 + entity:Trork_Sentry x 2
+	Wave 2 - entity:Trork_Hunter x 3 + entity:Trork_Brawler x 2
+	Wave 3 - entity:Trork_Warrior x 3 + entity:Trork_Mauler x 1
+	Wave 4 - entity:Trork_Guard x 2 + entity:Trork_Warrior x 3 + entity:Hunting_Wolf x 2
+}
+
+class TrorkStrongholdApproach <<Cost : 14 / Reward : 6>> {
+	Ticks : 25
+	ID: entity:Trork_Sentry / Weight : 3
+	ID: entity:Trork_Warrior / Weight : 3
+	ID: entity:Trork_Guard / Weight : 2
+	ID: entity:Trork_Mauler / Weight : 1
+	ID: Rock_Sandstone / Weight : 18
+	ID: Rock_Runic_Brick / Weight : 14
+	ID: Ingredient_Bone_Fragment / Weight : 10
+	ID: Ingredient_Hide_Scaled / Weight : 8
+	ID: Ingredient_Leather_Scaled / Weight : 5
+	ID: Ore_Thorium / Weight : 4
+}
+
+class TrorkElderGrove <<Cost : 15 / Reward : 7>> {
+	Ticks : 25
+	ID: entity:Trork_Elder / Weight : 2
+	ID: entity:Trork_Hunter / Weight : 2
+	ID: entity:Trork_Guard / Weight : 2
+	ID: entity:Hunting_Wolf / Weight : 2
+	ID: Wood_Amber_Trunk / Weight : 14
+	ID: Wood_Amber_Roots / Weight : 10
+	ID: Plant_Leaves_Amber / Weight : 12
+	ID: Plant_Leaves_Bramble / Weight : 12
+	ID: Rock_Gem_Emerald / Weight : 5
+	ID: Rock_Gem_Zephyr / Weight : 2
+}
+
+enum TrorkChieftainCamp <<Dungeon / Cost : 18 / Reward : 55>> {
+	Wave 1 - entity:Trork_Sentry x 4 + entity:Hunting_Wolf x 3
+	Wave 2 - entity:Trork_Brawler x 3 + entity:Trork_Hunter x 3
+	Wave 3 - entity:Trork_Warrior x 4 + entity:Trork_Mauler x 2
+	Wave 4 - entity:Trork_Guard x 4 + entity:Trork_Elder x 2
+	Wave 5 - entity:Trork_Chieftain x 1 + entity:Trork_Guard x 3 + entity:Trork_Warrior x 4
+}
+
+class FrozenGraveyard <<Cost : 21 / Reward : 9>> {
+	Ticks : 25
+	ID: entity:Frost_Skeleton_Scout / Weight : 4
+	ID: entity:Frost_Skeleton_Ranger / Weight : 3
+	ID: entity:Frost_Skeleton_Fighter / Weight : 3
+	ID: entity:Frost_Skeleton_Archer / Weight : 2
+	ID: entity:Frost_Skeleton_Soldier / Weight : 2
+	ID: entity:Frost_Skeleton_Mage / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 24
+	ID: Deco_Bone_Full / Weight : 12
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Deco_Bone_Spine / Weight : 8
+	ID: Rock_Ice / Weight : 18
+	ID: Rubble_Ice / Weight : 16
+	ID: Rock_Ice_Icicles / Weight : 8
+	ID: Ingredient_Ice_Essence / Weight : 4
+	ID: Rock_Gem_Sapphire / Weight : 3
+}
+
+class IcyNecropolis <<Cost : 23 / Reward : 10>> {
+	Ticks : 25
+	ID: entity:Frost_Skeleton_Ranger / Weight : 3
+	ID: entity:Frost_Skeleton_Fighter / Weight : 3
+	ID: entity:Frost_Skeleton_Archer / Weight : 3
+	ID: entity:Frost_Skeleton_Mage / Weight : 2
+	ID: entity:Frost_Skeleton_Soldier / Weight : 2
+	ID: entity:Frost_Skeleton_Knight / Weight : 2
+	ID: entity:Frost_Skeleton_Archmage / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 20
+	ID: Deco_Bone_Full / Weight : 12
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Deco_Bone_Spine / Weight : 10
+	ID: Rock_Ice / Weight : 16
+	ID: Rubble_Ice / Weight : 14
+	ID: Rock_Ice_Icicles / Weight : 10
+	ID: Ingredient_Ice_Essence / Weight : 6
+	ID: Rock_Gem_Sapphire / Weight : 5
+	ID: Rock_Gem_Diamond / Weight : 2
+}
+
+enum FrostboneCrypt <<Dungeon / Cost : 25 / Reward : 80>> {
+	Wave 1 - entity:Frost_Skeleton_Scout x 4 + entity:Frost_Skeleton_Ranger x 2
+	Wave 2 - entity:Frost_Skeleton_Fighter x 4 + entity:Frost_Skeleton_Archer x 3
+	Wave 3 - entity:Frost_Skeleton_Soldier x 4 + entity:Frost_Skeleton_Mage x 3
+	Wave 4 - entity:Frost_Skeleton_Knight x 3 + entity:Frost_Skeleton_Archmage x 2
+	Wave 5 - entity:Frost_Skeleton_Knight x 4 + entity:Frost_Skeleton_Archmage x 3 + entity:Frost_Golem x 1
+}
+
+class BurntBattlefield <<Cost : 18 / Reward : 8>> {
+	Ticks : 25
+	ID: entity:Skeleton_Scout / Weight : 2
+	ID: entity:Burnt_Skeleton_Soldier / Weight : 3
+	ID: entity:Burnt_Skeleton_Archer / Weight : 2
+	ID: entity:Burnt_Skeleton_Lancer / Weight : 2
+	ID: entity:Burnt_Skeleton_Knight / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 22
+	ID: Deco_Bone_Full / Weight : 10
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Rock_Volcanic / Weight : 20
+	ID: Rubble_Volcanic / Weight : 18
+	ID: Ingredient_Fire_Essence / Weight : 6
+	ID: Ore_Thorium / Weight : 4
+	ID: Rock_Gem_Ruby / Weight : 3
+}
+
+class AshenCatacombs <<Cost : 20 / Reward : 9>> {
+	Ticks : 25
+	ID: entity:Burnt_Skeleton_Soldier / Weight : 3
+	ID: entity:Burnt_Skeleton_Archer / Weight : 2
+	ID: entity:Burnt_Skeleton_Lancer / Weight : 2
+	ID: entity:Burnt_Skeleton_Gunner / Weight : 2
+	ID: entity:Burnt_Skeleton_Wizard / Weight : 2
+	ID: entity:Burnt_Skeleton_Knight / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 20
+	ID: Deco_Bone_Full / Weight : 12
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Deco_Bone_Spine / Weight : 8
+	ID: Rock_Volcanic / Weight : 18
+	ID: Rubble_Volcanic / Weight : 16
+	ID: Rock_Volcanic_Cracked_Incandescent / Weight : 8
+	ID: Ingredient_Fire_Essence / Weight : 8
+	ID: Rock_Gem_Ruby / Weight : 5
+	ID: Ore_Mithril / Weight : 3
+}
+
+enum BurntSkeletonCitadel <<Dungeon / Cost : 22 / Reward : 70>> {
+	Wave 1 - entity:Burnt_Skeleton_Soldier x 4 + entity:Burnt_Skeleton_Archer x 3
+	Wave 2 - entity:Burnt_Skeleton_Lancer x 4 + entity:Burnt_Skeleton_Gunner x 3
+	Wave 3 - entity:Burnt_Skeleton_Knight x 4 + entity:Burnt_Skeleton_Wizard x 3
+	Wave 4 - entity:Burnt_Skeleton_Praetorian x 2 + entity:Burnt_Skeleton_Knight x 4 + entity:Burnt_Skeleton_Gunner x 3
+	Wave 5 - entity:Burnt_Skeleton_Praetorian x 3 + entity:Burnt_Skeleton_Wizard x 3 + entity:Burnt_Skeleton_Lancer x 4
+}
+
+class JungleEdge <<Cost : 9 / Reward : 4>> {
+	Ticks : 25
+	ID: entity:Parrot / Weight : 4
+	ID: entity:Gecko / Weight : 4
+	ID: entity:Frog / Weight : 3
+	ID: entity:Marsh_Snake / Weight : 2
+	ID: entity:Zombie / Weight : 1
+	ID: Wood_Beech_Trunk / Weight : 18
+	ID: Wood_Maple_Trunk / Weight : 16
+	ID: Plant_Leaves_Bramble / Weight : 14
+	ID: Plant_Moss_Block_Green / Weight : 14
+	ID: Plant_Moss_Rug_Green / Weight : 12
+	ID: Plant_Crop_Mushroom_Common_Brown / Weight : 8
+	ID: Rock_Gem_Emerald / Weight : 3
+}
+
+class DryJunglePass <<Cost : 9 / Reward : 4>> {
+	Ticks : 25
+	ID: entity:Cactee / Weight : 2
+	ID: entity:Gecko / Weight : 4
+	ID: entity:Marsh_Snake / Weight : 2
+	ID: entity:Sandswept_Zombie / Weight : 2
+	ID: entity:Skeleton_Scout / Weight : 1
+	ID: Block_Sand / Weight : 20
+	ID: Rock_Sandstone / Weight : 20
+	ID: Rubble_Sandstone / Weight : 18
+	ID: Plant_Cactus_1 / Weight : 10
+	ID: Plant_Moss_Block_Green / Weight : 10
+	ID: Plant_Leaves_Bramble / Weight : 10
+	ID: Rock_Gem_Topaz / Weight : 3
+}
+
+class OvergrownRuins <<Cost : 11 / Reward : 5>> {
+	Ticks : 25
+	ID: entity:Zombie / Weight : 2
+	ID: entity:Skeleton_Scout / Weight : 2
+	ID: entity:Skeleton_Archer / Weight : 1
+	ID: entity:Crocodile / Weight : 1
+	ID: entity:Rhino_Toad / Weight : 1
+	ID: Wood_Maple_Trunk / Weight : 14
+	ID: Plant_Leaves_Bramble / Weight : 16
+	ID: Plant_Moss_Block_Green / Weight : 14
+	ID: Plant_Moss_Rug_Green / Weight : 12
+	ID: Rock_Runic_Brick / Weight : 14
+	ID: Rock_Runic_Brick_Ornate / Weight : 8
+	ID: Ingredient_Bone_Fragment / Weight : 8
+	ID: Rock_Gem_Emerald / Weight : 4
+}
+
+class SunkenJungleRuins <<Cost : 11 / Reward : 5>> {
+	Ticks : 25
+	ID: entity:Sandswept_Zombie / Weight : 2
+	ID: entity:Zombie / Weight : 2
+	ID: entity:Skeleton_Soldier / Weight : 1
+	ID: entity:Crocodile / Weight : 2
+	ID: entity:Marsh_Snake / Weight : 2
+	ID: Soil_Clay_Blue / Weight : 16
+	ID: Soil_Dirt / Weight : 14
+	ID: Plant_Moss_Block_Green / Weight : 16
+	ID: Plant_Moss_Rug_Green / Weight : 14
+	ID: Rock_Runic_Brick / Weight : 12
+	ID: Rock_Sandstone_Brick / Weight : 10
+	ID: Ingredient_Bone_Fragment / Weight : 8
+	ID: Rock_Gem_Sapphire / Weight : 4
+}
+
+class LostNecropolis <<Cost : 15 / Reward : 7>> {
+	Ticks : 25
+	ID: entity:Skeleton_Soldier / Weight : 3
+	ID: entity:Skeleton_Fighter / Weight : 3
+	ID: entity:Skeleton_Archer / Weight : 2
+	ID: entity:Skeleton_Ranger / Weight : 2
+	ID: entity:Skeleton_Mage / Weight : 2
+	ID: entity:Aberrant_Zombie / Weight : 2
+	ID: entity:Large_Aberrant_Zombie / Weight : 1
+	ID: Ingredient_Bone_Fragment / Weight : 20
+	ID: Deco_Bone_Full / Weight : 12
+	ID: Deco_Bone_Spike / Weight : 10
+	ID: Rock_Runic_Brick / Weight : 16
+	ID: Rock_Runic_Brick_Ornate / Weight : 10
+	ID: Rock_Gem_Emerald / Weight : 5
+	ID: Rock_Gem_Ruby / Weight : 3
+}
+
+class ShadowedJungleRoad <<Cost : 17 / Reward : 8>> {
+	Ticks : 25
+	ID: entity:Wraith / Weight : 2
+	ID: entity:Skeleton_Horse / Weight : 2
+	ID: entity:Armored_Skeleton_Horse / Weight : 1
+	ID: entity:Skeleton_Knight / Weight : 2
+	ID: entity:Skeleton_Archmage / Weight : 1
+	ID: entity:Undead_Pig / Weight : 2
+	ID: entity:Undead_Chicken / Weight : 2
+	ID: Plant_Leaves_Bramble / Weight : 16
+	ID: Rock_Runic_Brick / Weight : 16
+	ID: Rock_Runic_Brick_Ornate / Weight : 10
+	ID: Ingredient_Bone_Fragment / Weight : 16
+	ID: Deco_Bone_Spine / Weight : 8
+	ID: Rock_Gem_Zephyr / Weight : 3
+}
+
+class ArmoredDeadGrove <<Cost : 19 / Reward : 9>> {
+	Ticks : 25
+	ID: entity:Armored_Skeleton_Horse / Weight : 2
+	ID: entity:Skeleton_Horse / Weight : 2
+	ID: entity:Shadow_Knight / Weight : 1
+	ID: entity:Wraith / Weight : 2
+	ID: entity:Skeleton_Knight / Weight : 3
+	ID: entity:Skeleton_Archmage / Weight : 2
+	ID: entity:Ghoul / Weight : 2
+	ID: Wood_Amber_Trunk / Weight : 12
+	ID: Plant_Leaves_Bramble / Weight : 16
+	ID: Rock_Runic_Brick / Weight : 16
+	ID: Ingredient_Bone_Fragment / Weight : 14
+	ID: Deco_Bone_Full / Weight : 8
+	ID: Deco_Bone_Spine / Weight : 8
+	ID: Rock_Gem_Zephyr / Weight : 4
+}
+
+enum JungleCrypt <<Dungeon / Cost : 13 / Reward : 36>> {
+	Wave 1 - entity:Zombie x 4 + entity:Sandswept_Zombie x 3
+	Wave 2 - entity:Skeleton_Scout x 4 + entity:Skeleton_Archer x 3
+	Wave 3 - entity:Skeleton_Soldier x 4 + entity:Skeleton_Fighter x 3
+	Wave 4 - entity:Skeleton_Knight x 2 + entity:Skeleton_Ranger x 4 + entity:Skeleton_Mage x 2
+}
+
+enum AncientUndeadSanctum <<Dungeon / Cost : 18 / Reward : 58>> {
+	Wave 1 - entity:Zombie x 4 + entity:Aberrant_Zombie x 3 + entity:Small_Aberrant_Zombie x 4
+	Wave 2 - entity:Skeleton_Soldier x 4 + entity:Skeleton_Archer x 4 + entity:Skeleton_Fighter x 3
+	Wave 3 - entity:Skeleton_Knight x 4 + entity:Skeleton_Mage x 3 + entity:Large_Aberrant_Zombie x 2
+	Wave 4 - entity:Skeleton_Archmage x 2 + entity:Skeleton_Ranger x 4 + entity:Ghoul x 4
+	Wave 5 - entity:Skeleton_Archmage x 3 + entity:Large_Aberrant_Zombie x 3 + entity:Wraith x 2
+}
+
+enum ShadowKnightCitadel <<Dungeon / Cost : 22 / Reward : 72>> {
+	Wave 1 - entity:Skeleton_Horse x 3 + entity:Undead_Pig x 4 + entity:Undead_Chicken x 5
+	Wave 2 - entity:Armored_Skeleton_Horse x 3 + entity:Skeleton_Knight x 4
+	Wave 3 - entity:Wraith x 4 + entity:Skeleton_Archmage x 3
+	Wave 4 - entity:Shadow_Knight x 2 + entity:Armored_Skeleton_Horse x 3 + entity:Wraith x 3
+	Wave 5 - entity:Shadow_Knight x 3 + entity:Skeleton_Archmage x 3 + entity:Armored_Skeleton_Horse x 4
+}
+
+class SpiritThreshold <<Cost : 21 / Reward : 9>> {
+	Ticks : 25
+	ID: entity:Root_Spirit / Weight : 2
+	ID: entity:Frost_Spirit / Weight : 2
+	ID: entity:Thunder_Spirit / Weight : 2
+	ID: entity:Ember_Spirit / Weight : 2
+	ID: entity:Earthen_Golem / Weight : 1
+	ID: Ingredient_Life_Essence / Weight : 16
+	ID: Ingredient_Ice_Essence / Weight : 14
+	ID: Ingredient_Lightning_Essence / Weight : 14
+	ID: Ingredient_Fire_Essence / Weight : 14
+	ID: Ingredient_Water_Essence / Weight : 10
+	ID: Ingredient_Motes_Light / Weight : 8
+	ID: Ingredient_Void_Essence / Weight : 4
+	ID: Ingredient_Voidheart / Weight : 1
+}
+
+class ElementalConfluence <<Cost : 24 / Reward : 11>> {
+	Ticks : 25
+	ID: entity:Earthen_Golem / Weight : 2
+	ID: entity:Firesteel_Golem / Weight : 2
+	ID: entity:Frost_Golem / Weight : 2
+	ID: entity:Ember_Golem / Weight : 2
+	ID: entity:Sandswept_Golem / Weight : 2
+	ID: entity:Thunder_Golem / Weight : 2
+	ID: entity:Frost_Spirit / Weight : 2
+	ID: entity:Thunder_Spirit / Weight : 2
+	ID: entity:Root_Spirit / Weight : 2
+	ID: entity:Ember_Spirit / Weight : 2
+	ID: Ingredient_Fire_Essence / Weight : 16
+	ID: Ingredient_Ice_Essence / Weight : 16
+	ID: Ingredient_Life_Essence / Weight : 16
+	ID: Ingredient_Lightning_Essence / Weight : 16
+	ID: Ingredient_Water_Essence / Weight : 12
+	ID: Ingredient_Motes_Light / Weight : 10
+	ID: Ingredient_Void_Essence / Weight : 6
+	ID: Ingredient_Voidheart / Weight : 2
+}
+
+enum SpiritRealmTrial <<Dungeon / Cost : 27 / Reward : 95>> {
+	Wave 1 - entity:Root_Spirit x 4 + entity:Ember_Spirit x 4
+	Wave 2 - entity:Frost_Spirit x 4 + entity:Thunder_Spirit x 4
+	Wave 3 - entity:Earthen_Golem x 2 + entity:Sandswept_Golem x 2 + entity:Root_Spirit x 3
+	Wave 4 - entity:Ember_Golem x 2 + entity:Firesteel_Golem x 2 + entity:Ember_Spirit x 3
+	Wave 5 - entity:Frost_Golem x 3 + entity:Frost_Spirit x 4
+	Wave 6 - entity:Thunder_Golem x 3 + entity:Thunder_Spirit x 4
+	Wave 7 - entity:Firesteel_Golem x 2 + entity:Frost_Golem x 2 + entity:Thunder_Golem x 2 + entity:Ember_Golem x 2
+	Wave 8 - entity:Earthen_Golem x 2 + entity:Sandswept_Golem x 2 + entity:Firesteel_Golem x 2 + entity:Thunder_Golem x 2
+}
 
 ' ─────────────────────────────────────────────
 ' ROOT
@@ -1012,6 +1446,7 @@ Pond --> River : Wood_Oak_Trunk * 4 + Soil_Dirt * 12
 
 River --> Lake : Plant_Crop_Corn_Item * 8 + Wood_Oak_Trunk * 4
 River --> Sea : Wood_Beech_Trunk * 6 + Rock_Stone * 8
+Sea --> PirateShipwreck : Rock_Aqua_Brick * 12 + Rock_Gem_Sapphire * 2
 River --> Costline : Block_Sand * 8 + Wood_Oak_Trunk * 4
 
 Costline --> SeaCavern : Rock_Sandstone * 8 + Ore_Copper * 2
@@ -1044,12 +1479,21 @@ OutlanderPlain --> Toundra : Ore_Silver * 6 + Rock_Gem_Sapphire * 2
 Toundra --> FrozenForest : Rock_Ice * 8 + Wood_Ice_Trunk * 4
 Toundra --> IceLand : Rock_Ice * 12 + Rubble_Ice * 8
 
+
+' ─────────────────────────────────────────────
+' FROZEN BRANCH
+' ─────────────────────────────────────────────
+
 IceLand --> IcyCavern : Rubble_Ice * 12 + Ore_Silver * 4
 IcyCavern --> YetiCavern : Ingredient_Ice_Essence * 4 + Ore_Cobalt * 4
 YetiCavern --> IceTemple : Ore_Adamantite * 4 + Rock_Gem_Diamond * 2
 
 FrozenForest --> IcyForest : Wood_Ice_Trunk * 8 + Rock_Ice * 8
 
+IcyCavern --> FrozenGraveyard : Ingredient_Bone_Fragment * 16 + Rock_Ice * 12
+FrozenGraveyard --> IcyNecropolis : Ingredient_Ice_Essence * 4 + Deco_Bone_Full * 8
+IcyNecropolis --> FrostboneCrypt : Rock_Gem_Sapphire * 4 + Ingredient_Ice_Essence * 8
+FrostboneCrypt --> IceTemple : Rock_Gem_Diamond * 2 + Ingredient_Ice_Essence * 10
 
 ' ─────────────────────────────────────────────
 ' FIRE / HELL BRANCH
@@ -1067,6 +1511,33 @@ HellGate --> HellPlain : Ore_Mithril * 6 + Ore_Onyxium * 1
 HellGate --> HellSwamp : Ore_Mithril * 4 + Rock_Gem_Ruby * 4
 
 HellPlain --> FireGemCave : Ore_Onyxium * 4 + Ore_Prisma * 1
+
+FieryGraveward --> BurntBattlefield : Ingredient_Bone_Fragment * 18 + Rock_Volcanic * 12
+BurntBattlefield --> AshenCatacombs : Ingredient_Fire_Essence * 6 + Deco_Bone_Full * 8
+AshenCatacombs --> BurntSkeletonCitadel : Rock_Gem_Ruby * 4 + Ingredient_Fire_Essence * 10
+BurntSkeletonCitadel --> HellGate : Ore_Mithril * 4 + Rock_Volcanic_Cracked_Incandescent * 12
+
+
+' ─────────────────────────────────────────────
+' JUNGLE BRANCH
+' ─────────────────────────────────────────────
+Forest --> JungleEdge : Wood_Beech_Trunk * 12 + Plant_Moss_Block_Green * 8
+DeepForest --> JungleEdge : Wood_Maple_Trunk * 8 + Plant_Leaves_Bramble * 8
+JungleEdge --> OvergrownRuins : Plant_Moss_Block_Green * 12 + Rock_Gem_Emerald * 2
+
+Desert --> DryJunglePass : Rock_Sandstone * 16 + Plant_Cactus_1 * 6
+InnerDesert --> DryJunglePass : Block_Sand * 20 + Plant_Cactus_Flat_1 * 6
+DryJunglePass --> SunkenJungleRuins : Rock_Sandstone_Brick * 8 + Soil_Clay_Blue * 12
+
+OvergrownRuins --> JungleCrypt : Ingredient_Bone_Fragment * 12 + Rock_Runic_Brick * 8
+SunkenJungleRuins --> JungleCrypt : Ingredient_Bone_Fragment * 12 + Rock_Sandstone_Brick * 12
+
+JungleCrypt --> LostNecropolis : Deco_Bone_Full * 8 + Rock_Gem_Emerald * 3
+LostNecropolis --> AncientUndeadSanctum : Rock_Gem_Ruby * 3 + Rock_Runic_Brick_Ornate * 10
+
+LostNecropolis --> ShadowedJungleRoad : Rock_Gem_Zephyr * 2 + Deco_Bone_Spine * 8
+ShadowedJungleRoad --> ArmoredDeadGrove : Rock_Runic_Brick_Ornate * 10 + Ingredient_Bone_Fragment * 20
+ArmoredDeadGrove --> ShadowKnightCitadel : Rock_Gem_Zephyr * 4 + Deco_Bone_Spine * 12
 
 
 ' ─────────────────────────────────────────────
@@ -1088,7 +1559,6 @@ MuddyDesert --> InfestedDesert : Plant_Cactus_1 * 8 + Plant_Crop_Carrot_Item * 1
 InfestedDesert --> InsectNest : Ore_Iron * 8 + Plant_Cactus_Ball_1 * 8
 InsectNest --> InsideInsectNest : Ore_Cobalt * 6 + Rock_Gem_Ruby * 2
 InsideInsectNest --> InsectCore : Ore_Adamantite * 6 + Rock_Gem_Emerald * 4
-
 
 ' ─────────────────────────────────────────────
 ' PLAINS / HALLOW / QUARRY BRANCH
@@ -1113,6 +1583,14 @@ UndeadTemple --> VoidPortal : Ore_Onyxium * 4 + Rock_Gem_Zephyr * 2
 VoidPortal --> VoidTemple : Ore_Prisma * 4 + Rock_Gem_Zephyr * 4
 
 
+FireGemCave --> ElementalConfluence
+IcyForest --> SpiritThreshold
+
+VoidPortal --> SpiritThreshold : Rock_Gem_Zephyr * 3 + Ingredient_Fire_Essence * 4 + Ingredient_Ice_Essence * 4
+SpiritThreshold --> ElementalConfluence : Ingredient_Life_Essence * 6 + Ingredient_Lightning_Essence * 6
+ElementalConfluence --> SpiritRealmTrial : Ingredient_Void_Essence * 6 + Ingredient_Motes_Light * 12
+
+
 ' ─────────────────────────────────────────────
 ' MYSTERY / DINOSAUR BRANCH
 ' ─────────────────────────────────────────────
@@ -1123,5 +1601,19 @@ MysteriousCavern --> MysticCave : Rock_Gem_Sapphire * 2 + Ore_Iron * 8
 MysticCave --> LuxirousCave : Rock_Gem_Emerald * 4 + Ore_Gold * 8
 LuxirousCave --> JurassicCave : Rock_Gem_Diamond * 2 + Ore_Adamantite * 8
 JurassicCave --> DinoCrisis : Ingredient_Hide_Scaled * 12 + Rock_Gem_Diamond * 2 + Ore_Adamantite * 8
+
+' ─────────────────────────────────────────────
+' TRORK BRANCH
+' ─────────────────────────────────────────────
+
+DeepForest --> TrorkHuntingGround : Wood_Beech_Trunk * 12 + Plant_Leaves_Bramble * 8
+TrorkHuntingGround --> TrorkWarband : Ingredient_Hide_Scaled * 6 + Wood_Ash_Trunk * 16
+
+Desert --> DryTrorkCamp : Rock_Sandstone * 16 + Plant_Cactus_1 * 6
+DryTrorkCamp --> TrorkWarband : Ingredient_Hide_Scaled * 6 + Rock_Sandstone * 24
+
+TrorkWarband --> TrorkStrongholdApproach : Ingredient_Leather_Scaled * 6 + Ore_Thorium * 4
+TrorkStrongholdApproach --> TrorkElderGrove : Rock_Gem_Emerald * 4 + Wood_Amber_Trunk * 8
+TrorkElderGrove --> TrorkChieftainCamp : Rock_Gem_Zephyr * 2 + Ingredient_Leather_Scaled * 10 + Ore_Cobalt * 4
 
 @enduml
