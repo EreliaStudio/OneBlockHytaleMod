@@ -240,13 +240,23 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         }
     }
 
-    private void giveReward(OneBlockExpeditionDefaults.CompletionRewardDefinition reward, DropableContext context)
-    {
-        if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) return;
-        dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
-        if (reward.isCrystalReward())
-            CraftingPlugin.learnRecipe(context.getPlayerEntity(), reward.dropId, context.getStore());
-    }
+	private void giveReward(OneBlockExpeditionDefaults.CompletionRewardDefinition reward, DropableContext context)
+	{
+		if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) return;
+
+		dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+
+		if (reward.isCrystalReward())
+		{
+			CraftingPlugin.learnRecipe(context.getPlayerEntity(), reward.dropId, context.getStore());
+
+			OneBlockNotifier.notifyExpeditionUnlocked(
+					context.getStore(),
+					context.getPlayerEntity(),
+					reward.unlockExpeditionId
+			);
+		}
+	}
 
     private static boolean isValidOneBlockBreak(Player player, BreakBlockEvent event)
     {

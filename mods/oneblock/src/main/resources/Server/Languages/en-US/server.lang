@@ -12,24 +12,49 @@ items.ExpeditionPoint.name=ExpeditionPoint
 items.OneBlock_Block_Default.name=OneBlock Default
 items.OneBlock_Crystal_Default.name=Default Crystal
 items.OneBlock_Crystal_Default.description=Consume to begin a Default expedition.\n25 ticks.\nLoot :\n- Fibre\n- Rubble Stone\n- Soil Dirt
+oneblock.expeditions.Default.name=Default
+oneblock.announcements.expedition_started.Default=Default expedition started.
+oneblock.announcements.expedition_completed.Default=Default expedition complete. The OneBlock has returned to default.
+oneblock.announcements.expedition_unlocked.Default=New expedition unlocked: Default
+oneblock.progress.expedition.Default=Default: {0}/{1} ticks remaining
 benchCategories.OneBlockEnchanter_Surface=Surface Crystals
 
 # GENERATED ─── Cave ─────────────────────────────────────────────
 items.OneBlock_Block_Cave_Entry.name=OneBlock Cave
 items.OneBlock_Crystal_Cave_Entry.name=Cave Crystal
 items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\nCompletion rewards :\n- 1x Cave Crystal (unlocks Cave)
+oneblock.expeditions.Cave_Entry.name=Cave
+oneblock.announcements.expedition_started.Cave_Entry=Cave expedition started.
+oneblock.announcements.expedition_completed.Cave_Entry=Cave expedition complete. The OneBlock has returned to default.
+oneblock.announcements.expedition_unlocked.Cave_Entry=New expedition unlocked: Cave
+oneblock.progress.expedition.Cave_Entry=Cave: {0}/{1} ticks remaining
 
 # GENERATED ─── Forest ────────────────────────────────────────────
 items.OneBlock_Block_Forest_Edge.name=OneBlock Forest
 items.OneBlock_Crystal_Forest_Edge.name=Forest Crystal
 items.OneBlock_Crystal_Forest_Edge.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Oak Trunk\nCompletion rewards :\n- 1x Forest Crystal (unlocks Forest)
+oneblock.expeditions.Forest_Edge.name=Forest
+oneblock.announcements.expedition_started.Forest_Edge=Forest expedition started.
+oneblock.announcements.expedition_completed.Forest_Edge=Forest expedition complete. The OneBlock has returned to default.
+oneblock.announcements.expedition_unlocked.Forest_Edge=New expedition unlocked: Forest
+oneblock.progress.expedition.Forest_Edge=Forest: {0}/{1} ticks remaining
 
 # GENERATED ─── Cave ───────────────────────────────────────────────────
 items.OneBlock_Block_Cave.name=OneBlock Cave
 items.OneBlock_Crystal_Cave.name=Cave Crystal
 items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Stone\n- Copper Ore
+oneblock.expeditions.Cave.name=Cave
+oneblock.announcements.expedition_started.Cave=Cave expedition started.
+oneblock.announcements.expedition_completed.Cave=Cave expedition complete. The OneBlock has returned to default.
+oneblock.announcements.expedition_unlocked.Cave=New expedition unlocked: Cave
+oneblock.progress.expedition.Cave=Cave: {0}/{1} ticks remaining
 
 # GENERATED ─── Forest ─────────────────────────────────────────────────
 items.OneBlock_Block_Forest.name=OneBlock Forest
 items.OneBlock_Crystal_Forest.name=Forest Crystal
 items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Boar\n- Oak Trunk
+oneblock.expeditions.Forest.name=Forest
+oneblock.announcements.expedition_started.Forest=Forest expedition started.
+oneblock.announcements.expedition_completed.Forest=Forest expedition complete. The OneBlock has returned to default.
+oneblock.announcements.expedition_unlocked.Forest=New expedition unlocked: Forest
+oneblock.progress.expedition.Forest=Forest: {0}/{1} ticks remaining
