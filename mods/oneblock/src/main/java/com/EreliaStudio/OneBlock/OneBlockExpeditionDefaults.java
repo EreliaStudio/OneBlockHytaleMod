@@ -115,17 +115,16 @@ public final class OneBlockExpeditionDefaults
         Map<String, ExpeditionDefinition> expeditions = new HashMap<>();
 
         register(expeditions, "Default", 25, List.of(
-                drop(OneBlockDropId.entityDropId("Rabbit"), 3),
-                drop(OneBlockDropId.entityDropId("Chicken"), 3),
-                drop("Ingredient_Fibre", 35),
+                drop("Ingredient_Fibre", 30),
                 drop("Ingredient_Stick", 30),
-                drop("Rubble_Stone", 25),
+                drop("Rubble_Stone", 30),
                 drop("Soil_Dirt", 25)
         ), List.of(
-                reward("ExpeditionPoint", 1),
-                crystalReward("CaveEntry", 1),
-                crystalReward("ForestEdge", 1),
-                crystalReward("Plain", 1)
+                reward("ExpeditionPoint", 1)
+        ), List.of(
+                bundle(List.of(crystalReward("CaveEntry", 1)), 1),
+                bundle(List.of(crystalReward("ForestEdge", 1)), 1),
+                bundle(List.of(crystalReward("Plain", 1)), 1)
         ));
 
         register(expeditions, "CaveEntry", 25, List.of(
@@ -163,9 +162,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Crop_Wheat_Item", 24),
                 drop("Ingredient_Fibre", 30)
         ), List.of(
-                reward("ExpeditionPoint", 1),
-                crystalReward("Quarry", 1),
-                crystalReward("Hallow", 1)
+                reward("ExpeditionPoint", 1)
+        ), List.of(
+                bundle(List.of(crystalReward("Quarry", 1)), 1),
+                bundle(List.of(crystalReward("Hallow", 1)), 1)
         ));
 
         register(expeditions, "Cave", 25, List.of(
@@ -176,9 +176,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Rubble_Stone", 30),
                 drop("Ore_Copper", 5)
         ), List.of(
-                reward("ExpeditionPoint", 1),
-                crystalReward("RatCave", 1),
-                crystalReward("LowerCave", 1)
+                reward("ExpeditionPoint", 1)
+        ), List.of(
+                bundle(List.of(crystalReward("RatCave", 1)), 1),
+                bundle(List.of(crystalReward("LowerCave", 1)), 1)
         ));
 
         register(expeditions, "LowerCave", 28, List.of(
@@ -216,9 +217,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Iron", 22),
                 drop("Ore_Thorium", 3)
         ), List.of(
-                reward("ExpeditionPoint", 3),
-                crystalReward("GoldCave", 1),
-                crystalReward("ThoriumCave", 1)
+                reward("ExpeditionPoint", 3)
+        ), List.of(
+                bundle(List.of(crystalReward("GoldCave", 1)), 1),
+                bundle(List.of(crystalReward("ThoriumCave", 1)), 1)
         ));
 
         register(expeditions, "SandCave", 28, List.of(
@@ -255,9 +257,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Thorium", 18),
                 drop("Ore_Cobalt", 3)
         ), List.of(
-                reward("ExpeditionPoint", 4),
-                crystalReward("GobelinInvasion", 1),
-                crystalReward("SilverCave", 1)
+                reward("ExpeditionPoint", 4)
+        ), List.of(
+                bundle(List.of(crystalReward("GobelinInvasion", 1)), 1),
+                bundle(List.of(crystalReward("SilverCave", 1)), 1)
         ));
 
         register(expeditions, "SilverCave", 30, List.of(
@@ -282,10 +285,11 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Cobalt", 18),
                 drop("Ore_Adamantite", 3)
         ), List.of(
-                reward("ExpeditionPoint", 5),
-                crystalReward("AdamantiteCave", 1),
-                crystalReward("GemCave", 1),
-                crystalReward("FireCave", 1)
+                reward("ExpeditionPoint", 5)
+        ), List.of(
+                bundle(List.of(crystalReward("AdamantiteCave", 1)), 1),
+                bundle(List.of(crystalReward("GemCave", 1)), 1),
+                bundle(List.of(crystalReward("FireCave", 1)), 1)
         ));
 
         register(expeditions, "AdamantiteCave", 30, List.of(
@@ -298,9 +302,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Adamantite", 18),
                 drop("Ore_Mithril", 3)
         ), List.of(
-                reward("ExpeditionPoint", 6),
-                crystalReward("GemDeepCave", 1),
-                crystalReward("MithrilCave", 1)
+                reward("ExpeditionPoint", 6)
+        ), List.of(
+                bundle(List.of(crystalReward("GemDeepCave", 1)), 1),
+                bundle(List.of(crystalReward("MithrilCave", 1)), 1)
         ));
 
         register(expeditions, "GemCave", 30, List.of(
@@ -409,11 +414,12 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Cactus_Flat_1", 10),
                 drop("Ore_Gold", 3)
         ), List.of(
-                reward("ExpeditionPoint", 3),
-                crystalReward("DryJunglePass", 1),
-                crystalReward("DesertTempleEntrace", 1),
-                crystalReward("InnerDesert", 1),
-                crystalReward("DryTrorkCamp", 1)
+                reward("ExpeditionPoint", 3)
+        ), List.of(
+                bundle(List.of(crystalReward("DryJunglePass", 1)), 1),
+                bundle(List.of(crystalReward("DesertTempleEntrace", 1)), 1),
+                bundle(List.of(crystalReward("InnerDesert", 1)), 1),
+                bundle(List.of(crystalReward("DryTrorkCamp", 1)), 1)
         ));
 
         register(expeditions, "ForestEntry", 25, List.of(
@@ -433,9 +439,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Crop_Mushroom_Common_Brown", 8),
                 drop("Plant_Crop_Mushroom_Shelve_Brown", 5)
         ), List.of(
-                reward("ExpeditionPoint", 1),
-                crystalReward("Pond", 1),
-                crystalReward("Forest", 1)
+                reward("ExpeditionPoint", 1)
+        ), List.of(
+                bundle(List.of(crystalReward("Pond", 1)), 1),
+                bundle(List.of(crystalReward("Forest", 1)), 1)
         ));
 
         register(expeditions, "Pond", 25, List.of(
@@ -463,10 +470,11 @@ public final class OneBlockExpeditionDefaults
                 drop("Soil_Clay_Blue", 14),
                 drop("Plant_Moss_Green", 16)
         ), List.of(
-                reward("ExpeditionPoint", 2),
-                crystalReward("Lake", 1),
-                crystalReward("Sea", 1),
-                crystalReward("Costline", 1)
+                reward("ExpeditionPoint", 2)
+        ), List.of(
+                bundle(List.of(crystalReward("Lake", 1)), 1),
+                bundle(List.of(crystalReward("Sea", 1)), 1),
+                bundle(List.of(crystalReward("Costline", 1)), 1)
         ));
 
         register(expeditions, "Lake", 28, List.of(
@@ -561,11 +569,12 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Sapling_Ash", 5),
                 drop("Plant_Fruit_Apple", 5)
         ), List.of(
-                reward("ExpeditionPoint", 2),
-                crystalReward("AridForest", 1),
-                crystalReward("Swamp", 1),
-                crystalReward("DeepForest", 1),
-                crystalReward("JungleEdge", 1)
+                reward("ExpeditionPoint", 2)
+        ), List.of(
+                bundle(List.of(crystalReward("AridForest", 1)), 1),
+                bundle(List.of(crystalReward("Swamp", 1)), 1),
+                bundle(List.of(crystalReward("DeepForest", 1)), 1),
+                bundle(List.of(crystalReward("JungleEdge", 1)), 1)
         ));
 
         register(expeditions, "AridForest", 25, List.of(
@@ -647,10 +656,11 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Crop_Mushroom_Block_Yellow_Trunk", 5),
                 drop("Rock_Gem_Emerald", 3)
         ), List.of(
-                reward("ExpeditionPoint", 3),
-                crystalReward("DarkForest", 1),
-                crystalReward("JungleEdge", 1),
-                crystalReward("TrorkHuntingGround", 1)
+                reward("ExpeditionPoint", 3)
+        ), List.of(
+                bundle(List.of(crystalReward("DarkForest", 1)), 1),
+                bundle(List.of(crystalReward("JungleEdge", 1)), 1),
+                bundle(List.of(crystalReward("TrorkHuntingGround", 1)), 1)
         ));
 
         register(expeditions, "DarkForest", 25, List.of(
@@ -665,9 +675,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Bone_Fragment", 10),
                 drop("Rock_Gem_Ruby", 3)
         ), List.of(
-                reward("ExpeditionPoint", 5),
-                crystalReward("BurnedForest", 1),
-                crystalReward("CursedForest", 1)
+                reward("ExpeditionPoint", 5)
+        ), List.of(
+                bundle(List.of(crystalReward("BurnedForest", 1)), 1),
+                bundle(List.of(crystalReward("CursedForest", 1)), 1)
         ));
 
         register(expeditions, "BurnedForest", 25, List.of(
@@ -698,9 +709,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Rock_Runic_Brick", 10),
                 drop("Rock_Gem_Zephyr", 3)
         ), List.of(
-                reward("ExpeditionPoint", 6),
-                crystalReward("OutlanderForest", 1),
-                crystalReward("Graveyard", 1)
+                reward("ExpeditionPoint", 6)
+        ), List.of(
+                bundle(List.of(crystalReward("OutlanderForest", 1)), 1),
+                bundle(List.of(crystalReward("Graveyard", 1)), 1)
         ));
 
         register(expeditions, "Graveyard", 25, List.of(
@@ -732,9 +744,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Rock_Gem_Zephyr", 8),
                 drop("Ore_Onyxium", 3)
         ), List.of(
-                reward("ExpeditionPoint", 8),
-                crystalReward("VoidTemple", 1),
-                crystalReward("SpiritThreshold", 1)
+                reward("ExpeditionPoint", 8)
+        ), List.of(
+                bundle(List.of(crystalReward("VoidTemple", 1)), 1),
+                bundle(List.of(crystalReward("SpiritThreshold", 1)), 1)
         ));
 
         register(expeditions, "OutlanderForest", 25, List.of(
@@ -748,9 +761,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Hide_Prismic", 4),
                 drop("Rock_Gem_Zephyr", 3)
         ), List.of(
-                reward("ExpeditionPoint", 7),
-                crystalReward("OutlanderGank", 1),
-                crystalReward("OutlanderPlain", 1)
+                reward("ExpeditionPoint", 7)
+        ), List.of(
+                bundle(List.of(crystalReward("OutlanderGank", 1)), 1),
+                bundle(List.of(crystalReward("OutlanderPlain", 1)), 1)
         ));
 
         register(expeditions, "OutlanderPlain", 25, List.of(
@@ -767,9 +781,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Leather_Prismic", 6),
                 drop("Ore_Adamantite", 3)
         ), List.of(
-                reward("ExpeditionPoint", 7),
-                crystalReward("OutlanderCity", 1),
-                crystalReward("Toundra", 1)
+                reward("ExpeditionPoint", 7)
+        ), List.of(
+                bundle(List.of(crystalReward("OutlanderCity", 1)), 1),
+                bundle(List.of(crystalReward("Toundra", 1)), 1)
         ));
 
         register(expeditions, "Toundra", 25, List.of(
@@ -783,9 +798,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Seeds_Ice", 8),
                 drop("Ingredient_Ice_Essence", 3)
         ), List.of(
-                reward("ExpeditionPoint", 8),
-                crystalReward("FrozenForest", 1),
-                crystalReward("IceLand", 1)
+                reward("ExpeditionPoint", 8)
+        ), List.of(
+                bundle(List.of(crystalReward("FrozenForest", 1)), 1),
+                bundle(List.of(crystalReward("IceLand", 1)), 1)
         ));
 
         register(expeditions, "FrozenForest", 25, List.of(
@@ -830,9 +846,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Rock_Gem_Sapphire", 6),
                 drop("Ingredient_Ice_Essence", 4)
         ), List.of(
-                reward("ExpeditionPoint", 9),
-                crystalReward("YetiCavern", 1),
-                crystalReward("FrozenGraveyard", 1)
+                reward("ExpeditionPoint", 9)
+        ), List.of(
+                bundle(List.of(crystalReward("YetiCavern", 1)), 1),
+                bundle(List.of(crystalReward("FrozenGraveyard", 1)), 1)
         ));
 
         register(expeditions, "YetiCavern", 28, List.of(
@@ -877,9 +894,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Thorium", 8),
                 drop("Ore_Cobalt", 3)
         ), List.of(
-                reward("ExpeditionPoint", 7),
-                crystalReward("Volcano", 1),
-                crystalReward("FieryGraveward", 1)
+                reward("ExpeditionPoint", 7)
+        ), List.of(
+                bundle(List.of(crystalReward("Volcano", 1)), 1),
+                bundle(List.of(crystalReward("FieryGraveward", 1)), 1)
         ));
 
         register(expeditions, "FieryGraveward", 25, List.of(
@@ -894,9 +912,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Fire_Essence", 8),
                 drop("Rock_Gem_Ruby", 3)
         ), List.of(
-                reward("ExpeditionPoint", 8),
-                crystalReward("FireCave", 1),
-                crystalReward("BurntBattlefield", 1)
+                reward("ExpeditionPoint", 8)
+        ), List.of(
+                bundle(List.of(crystalReward("FireCave", 1)), 1),
+                bundle(List.of(crystalReward("BurntBattlefield", 1)), 1)
         ));
 
         register(expeditions, "HellGate", 25, List.of(
@@ -910,9 +929,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Ore_Mithril", 3),
                 drop("Ore_Onyxium", 2)
         ), List.of(
-                reward("ExpeditionPoint", 9),
-                crystalReward("HellPlain", 1),
-                crystalReward("HellSwamp", 1)
+                reward("ExpeditionPoint", 9)
+        ), List.of(
+                bundle(List.of(crystalReward("HellPlain", 1)), 1),
+                bundle(List.of(crystalReward("HellSwamp", 1)), 1)
         ));
 
         register(expeditions, "HellPlain", 25, List.of(
@@ -1023,9 +1043,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Cactus_Flat_1", 10),
                 drop("Ore_Gold", 3)
         ), List.of(
-                reward("ExpeditionPoint", 4),
-                crystalReward("DryJunglePass", 1),
-                crystalReward("InsectInvasion", 1)
+                reward("ExpeditionPoint", 4)
+        ), List.of(
+                bundle(List.of(crystalReward("DryJunglePass", 1)), 1),
+                bundle(List.of(crystalReward("InsectInvasion", 1)), 1)
         ));
 
         register(expeditions, "MuddyDesert", 25, List.of(
@@ -1100,10 +1121,11 @@ public final class OneBlockExpeditionDefaults
                 drop("Food_Bread", 8),
                 drop("Plant_Fruit_Apple", 8)
         ), List.of(
-                reward("ExpeditionPoint", 2),
-                crystalReward("CowHallow", 1),
-                crystalReward("HorseHallow", 1),
-                crystalReward("River", 1)
+                reward("ExpeditionPoint", 2)
+        ), List.of(
+                bundle(List.of(crystalReward("CowHallow", 1)), 1),
+                bundle(List.of(crystalReward("HorseHallow", 1)), 1),
+                bundle(List.of(crystalReward("River", 1)), 1)
         ));
 
         register(expeditions, "CowHallow", 35, List.of(
@@ -1430,9 +1452,10 @@ public final class OneBlockExpeditionDefaults
                 drop("Rock_Gem_Emerald", 5),
                 drop("Rock_Gem_Ruby", 3)
         ), List.of(
-                reward("ExpeditionPoint", 7),
-                crystalReward("AncientUndeadSanctum", 1),
-                crystalReward("ShadowedJungleRoad", 1)
+                reward("ExpeditionPoint", 7)
+        ), List.of(
+                bundle(List.of(crystalReward("AncientUndeadSanctum", 1)), 1),
+                bundle(List.of(crystalReward("ShadowedJungleRoad", 1)), 1)
         ));
 
         register(expeditions, "ShadowedJungleRoad", 25, List.of(

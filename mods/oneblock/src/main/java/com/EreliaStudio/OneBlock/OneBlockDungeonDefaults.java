@@ -68,9 +68,7 @@ public final class OneBlockDungeonDefaults
                         List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner"),
                         List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner", "entity:Goblin_Miner")
                 ), List.of(
-                reward("ExpeditionPoint", 12),
-                crystalReward("IronCave", 1),
-                crystalReward("SandCave", 1)
+                reward("ExpeditionPoint", 12)
         ));
 
         register(dungeons, "GobelinInvasion", List.of(

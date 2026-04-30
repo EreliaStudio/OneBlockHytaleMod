@@ -90,20 +90,7 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(category)
     item_id = f"OneBlock_Crystal_{eid}"
-    recipe = {
-        "Input": inputs,
-        "OutputQuantity": 1,
-        "BenchRequirement": [
-            {
-                "Type": "Crafting",
-                "Categories": [f"OneBlock_{bench_id[len('OneBlock'):]}_{gid}"],
-                "Id": bench_id,
-            }
-        ],
-    }
-    if knowledge_required:
-        recipe["KnowledgeRequired"] = True
-    return {
+    data = {
         "TranslationProperties": {
             "Name": f"{PREFIX_ITEMS_JSON}.{item_id}.name",
             "Description": f"{PREFIX_ITEMS_JSON}.{item_id}.description",
@@ -121,7 +108,6 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
                 "Interactions": [{"Type": "oneblock_crystal_use"}]
             },
         },
-        "Recipe": recipe,
         "Consumable": True,
         "Tags": {
             "Type": ["OneBlock_ExpeditionCrystal"],
@@ -131,6 +117,22 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         "MaxStack": 4,
         "Quality": _quality(item_level),
     }
+    if inputs:
+        recipe = {
+            "Input": inputs,
+            "OutputQuantity": 1,
+            "BenchRequirement": [
+                {
+                    "Type": "Crafting",
+                    "Categories": [f"OneBlock_{bench_id[len('OneBlock'):]}_{gid}"],
+                    "Id": bench_id,
+                }
+            ],
+        }
+        if knowledge_required:
+            recipe["KnowledgeRequired"] = True
+        data["Recipe"] = recipe
+    return data
 
 
 def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
@@ -296,8 +298,8 @@ def build_lang_block(expedition_id: str,
         for entry in mandatory_rewards:
             crystal_id = entry.get("Crystal")
             if crystal_id is not None:
-                display = str(crystal_id).replace("_", " ")
-                reward_lines += f"\\n- {_entry_quantity(entry)}x {display} Crystal (unlocks {display})"
+                crystal_display = str(crystal_id).replace("_", " ")
+                reward_lines += f"\\n- {_entry_quantity(entry)}x {crystal_display} Crystal (unlocks {crystal_display})"
             else:
                 reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
 
@@ -407,7 +409,7 @@ def _parse_completion_rewards(raw) -> tuple[list, list]:
 
 def _java_bundle_expr(bundle: dict, base_indent: str) -> str:
     item_exprs = ", ".join(
-        f"reward({_java_drop_id_expr(_entry_drop_id(item))}, {_entry_quantity(item)})"
+        _java_reward_expr(item)
         for item in bundle.get("Items", [])
     )
     weight = max(1, int(bundle.get("Weight", 1)))
@@ -917,6 +919,10 @@ def _is_generated_lang_line(line: str) -> bool:
         or key.startswith(f"{PREFIX_ITEMS_JSON}.OneBlock_Crystal_")
         or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockEnchanter_")
         or key.startswith(f"{PREFIX_BENCH_JSON}.OneBlockDungeonEnchanter_")
+        or key.startswith("expeditions.")
+        or key.startswith("announcements.expedition_")
+        or key.startswith("announcements.dungeon_")
+        or key.startswith("progress.expedition.")
     )
 
 
@@ -1107,8 +1113,10 @@ def main():
                 stale,
             )
 
-            if dungeon_enchanter_path.exists():
+            if crystal_cfg["Input"] and dungeon_enchanter_path.exists():
                 patch_enchanter(dungeon_enchanter_path, expedition_id, group, args.dry_run, "OneBlockDungeonEnchanter")
+            elif not crystal_cfg["Input"]:
+                print(f"  [skip]   {eid} has no recipe input; not adding it to DungeonEnchanter")
             else:
                 print(f"  [warn]   DungeonEnchanter JSON not found: {dungeon_enchanter_path}")
 
@@ -1130,8 +1138,10 @@ def main():
                 stale,
             )
 
-            if enchanter_path.exists():
+            if crystal_cfg["Input"] and enchanter_path.exists():
                 patch_enchanter(enchanter_path, expedition_id, group, args.dry_run)
+            elif not crystal_cfg["Input"]:
+                print(f"  [skip]   {eid} has no recipe input; not adding it to Enchanter")
             else:
                 print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 

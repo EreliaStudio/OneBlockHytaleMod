@@ -4,7 +4,7 @@ import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 
 public final class OneBlockExpeditionResolver
 {
-    public static final String DEFAULT_EXPEDITION = "Meadow";
+    public static final String DEFAULT_EXPEDITION = "Default";
     public static final int DEFAULT_TICKS = 100;
 
     private static final String BLOCK_PREFIX   = "OneBlock_Block_";

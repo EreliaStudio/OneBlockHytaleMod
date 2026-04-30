@@ -218,12 +218,18 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                                        DropableContext context)
     {
         String poolId = OneBlockPools.resolvePoolId(event.getBlockType());
+        ensureExpeditionActiveForBreak(player, poolId);
+
         List<String> drops = dropRegistry.getKnownDrops(poolId);
         String rewardId = dropRegistry.pickReward(poolId, drops);
         if (rewardId == null || rewardId.isEmpty()) return;
 
         String activeExpeditionBeforeBreak = expeditionState.getActiveExpeditionId();
-        int totalTicks = OneBlockExpeditionDefaults.getTicks(activeExpeditionBeforeBreak);
+        int totalTicks = expeditionState.getTotalTicks();
+        if (totalTicks <= 0)
+        {
+            totalTicks = OneBlockExpeditionDefaults.getTicks(activeExpeditionBeforeBreak);
+        }
 
         String completedExpedition = expeditionState.onBreak();
 
@@ -255,6 +261,22 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                     expeditionState.getTicksRemaining(),
                     totalTicks
             );
+        }
+    }
+
+    private void ensureExpeditionActiveForBreak(Player player, String expeditionId)
+    {
+        if (expeditionState.hasActiveExpedition()) return;
+        if (expeditionId == null || expeditionId.isBlank()) return;
+        if (!OneBlockExpeditionDefaults.getExpeditionIds().contains(expeditionId)) return;
+
+        int ticks = OneBlockExpeditionDefaults.getTicks(expeditionId);
+        expeditionState.startExpedition(expeditionId, ticks);
+
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (player != null && plugin != null)
+        {
+            plugin.getHudService().showExpeditionStarted(player, expeditionId, ticks);
         }
     }
 

@@ -26,25 +26,6 @@
       ]
     }
   },
-  "Recipe": {
-    "Input": [
-      {
-        "ItemId": "ExpeditionPoint",
-        "Quantity": 12
-      }
-    ],
-    "OutputQuantity": 1,
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Categories": [
-          "OneBlock_Enchanter_Inferno"
-        ],
-        "Id": "OneBlockEnchanter"
-      }
-    ],
-    "KnowledgeRequired": true
-  },
   "Consumable": true,
   "Tags": {
     "Type": [
@@ -58,5 +39,24 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic"
+  "Quality": "Epic",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 12
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Fire"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  }
 }

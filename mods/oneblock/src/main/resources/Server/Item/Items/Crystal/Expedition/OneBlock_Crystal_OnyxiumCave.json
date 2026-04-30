@@ -26,6 +26,20 @@
       ]
     }
   },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "OnyxiumCave"
+    ],
+    "OneBlockCrystalTicks": [
+      "30"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Epic",
   "Recipe": {
     "Input": [
       {
@@ -44,19 +58,5 @@
       }
     ],
     "KnowledgeRequired": true
-  },
-  "Consumable": true,
-  "Tags": {
-    "Type": [
-      "OneBlock_ExpeditionCrystal"
-    ],
-    "OneBlockCrystalExpedition": [
-      "OnyxiumCave"
-    ],
-    "OneBlockCrystalTicks": [
-      "30"
-    ]
-  },
-  "MaxStack": 4,
-  "Quality": "Epic"
+  }
 }

@@ -52,22 +52,11 @@
           "Recipes": [
             "OneBlock_Crystal_Default",
             "OneBlock_Crystal_Plain",
-            "OneBlock_Crystal_Desert",
             "OneBlock_Crystal_River",
-            "OneBlock_Crystal_Lake",
-            "OneBlock_Crystal_Sea",
-            "OneBlock_Crystal_Costline",
-            "OneBlock_Crystal_SeaInfestedNest",
             "OneBlock_Crystal_OutlanderPlain",
-            "OneBlock_Crystal_PharaonRoom",
-            "OneBlock_Crystal_InnerDesert",
-            "OneBlock_Crystal_MuddyDesert",
-            "OneBlock_Crystal_InfestedDesert",
-            "OneBlock_Crystal_InsideInsectNest",
             "OneBlock_Crystal_Hallow",
             "OneBlock_Crystal_CowHallow",
-            "OneBlock_Crystal_HorseHallow",
-            "OneBlock_Crystal_ElementalConfluence"
+            "OneBlock_Crystal_HorseHallow"
           ]
         },
         {
@@ -81,19 +70,12 @@
             "OneBlock_Crystal_Forest",
             "OneBlock_Crystal_AridForest",
             "OneBlock_Crystal_Swamp",
-            "OneBlock_Crystal_EnchantedForest",
-            "OneBlock_Crystal_FairyPond",
             "OneBlock_Crystal_DeepForest",
             "OneBlock_Crystal_OutlanderForest",
             "OneBlock_Crystal_DryTrorkCamp",
             "OneBlock_Crystal_TrorkHuntingGround",
             "OneBlock_Crystal_TrorkStrongholdApproach",
-            "OneBlock_Crystal_TrorkElderGrove",
-            "OneBlock_Crystal_JungleEdge",
-            "OneBlock_Crystal_DryJunglePass",
-            "OneBlock_Crystal_OvergrownRuins",
-            "OneBlock_Crystal_SunkenJungleRuins",
-            "OneBlock_Crystal_ArmoredDeadGrove"
+            "OneBlock_Crystal_TrorkElderGrove"
           ]
         },
         {
@@ -118,33 +100,29 @@
             "OneBlock_Crystal_OnyxiumCave",
             "OneBlock_Crystal_PrismaCave",
             "OneBlock_Crystal_SandCavern",
-            "OneBlock_Crystal_SeaCavern",
             "OneBlock_Crystal_Quarry",
             "OneBlock_Crystal_MysteriousCavern",
-            "OneBlock_Crystal_MysticCave",
             "OneBlock_Crystal_LuxirousCave",
             "OneBlock_Crystal_JurassicCave"
           ]
         },
         {
-          "Id": "OneBlock_Enchanter_Cold",
+          "Id": "OneBlock_Enchanter_Desert",
           "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Cold",
+          "Name": "server.benchCategories.OneBlockEnchanter_Desert",
           "Recipes": [
-            "OneBlock_Crystal_Toundra",
-            "OneBlock_Crystal_FrozenForest",
-            "OneBlock_Crystal_IceLand",
-            "OneBlock_Crystal_IcyCavern",
-            "OneBlock_Crystal_YetiCavern",
-            "OneBlock_Crystal_IcyForest",
-            "OneBlock_Crystal_FrozenGraveyard",
-            "OneBlock_Crystal_IcyNecropolis"
+            "OneBlock_Crystal_Desert",
+            "OneBlock_Crystal_PharaonRoom",
+            "OneBlock_Crystal_InnerDesert",
+            "OneBlock_Crystal_MuddyDesert",
+            "OneBlock_Crystal_InfestedDesert",
+            "OneBlock_Crystal_InsideInsectNest"
           ]
         },
         {
-          "Id": "OneBlock_Enchanter_Inferno",
+          "Id": "OneBlock_Enchanter_Fire",
           "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Inferno",
+          "Name": "server.benchCategories.OneBlockEnchanter_Fire",
           "Recipes": [
             "OneBlock_Crystal_FireCave",
             "OneBlock_Crystal_BurnedForest",
@@ -159,19 +137,62 @@
           ]
         },
         {
-          "Id": "OneBlock_Enchanter_Dark",
+          "Id": "OneBlock_Enchanter_Ice",
           "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockEnchanter_Dark",
+          "Name": "server.benchCategories.OneBlockEnchanter_Ice",
           "Recipes": [
+            "OneBlock_Crystal_Toundra",
+            "OneBlock_Crystal_FrozenForest",
+            "OneBlock_Crystal_IceLand",
+            "OneBlock_Crystal_IcyCavern",
+            "OneBlock_Crystal_YetiCavern",
+            "OneBlock_Crystal_IcyForest",
+            "OneBlock_Crystal_FrozenGraveyard",
+            "OneBlock_Crystal_IcyNecropolis"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Jungle",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Jungle",
+          "Recipes": [
+            "OneBlock_Crystal_JungleEdge",
+            "OneBlock_Crystal_DryJunglePass",
+            "OneBlock_Crystal_OvergrownRuins",
+            "OneBlock_Crystal_SunkenJungleRuins",
+            "OneBlock_Crystal_ShadowedJungleRoad",
+            "OneBlock_Crystal_ArmoredDeadGrove"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Mystic",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Mystic",
+          "Recipes": [
+            "OneBlock_Crystal_EnchantedForest",
+            "OneBlock_Crystal_FairyPond",
             "OneBlock_Crystal_DarkForest",
             "OneBlock_Crystal_CursedForest",
             "OneBlock_Crystal_Graveyard",
             "OneBlock_Crystal_VoidPortal",
             "OneBlock_Crystal_DesertTempleEntrace",
             "OneBlock_Crystal_DeeperDesertTemple",
+            "OneBlock_Crystal_MysticCave",
             "OneBlock_Crystal_LostNecropolis",
-            "OneBlock_Crystal_ShadowedJungleRoad",
-            "OneBlock_Crystal_SpiritThreshold"
+            "OneBlock_Crystal_SpiritThreshold",
+            "OneBlock_Crystal_ElementalConfluence"
+          ]
+        },
+        {
+          "Id": "OneBlock_Enchanter_Ocean",
+          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+          "Name": "server.benchCategories.OneBlockEnchanter_Ocean",
+          "Recipes": [
+            "OneBlock_Crystal_Lake",
+            "OneBlock_Crystal_Sea",
+            "OneBlock_Crystal_Costline",
+            "OneBlock_Crystal_SeaCavern",
+            "OneBlock_Crystal_SeaInfestedNest"
           ]
         }
       ],

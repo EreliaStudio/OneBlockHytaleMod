@@ -26,19 +26,6 @@
       ]
     }
   },
-  "Recipe": {
-    "Input": [],
-    "OutputQuantity": 1,
-    "BenchRequirement": [
-      {
-        "Type": "Crafting",
-        "Categories": [
-          "OneBlock_Enchanter_Surface"
-        ],
-        "Id": "OneBlockEnchanter"
-      }
-    ]
-  },
   "Consumable": true,
   "Tags": {
     "Type": [
@@ -52,5 +39,23 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Uncommon"
+  "Quality": "Uncommon",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 1
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Surface"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ]
+  }
 }

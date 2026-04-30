@@ -4,7 +4,7 @@ import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 
 public final class OneBlockPools
 {
-    public static final String DEFAULT_POOL_ID = "Meadow";
+    public static final String DEFAULT_POOL_ID = OneBlockExpeditionResolver.DEFAULT_EXPEDITION;
 
     private static final OneBlockPoolResolver DEFAULT_RESOLVER = blockType -> DEFAULT_POOL_ID;
     private static volatile OneBlockPoolResolver resolver = DEFAULT_RESOLVER;
