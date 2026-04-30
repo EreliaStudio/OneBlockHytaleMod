@@ -4,24 +4,22 @@
 
 OneBlock is a survival game mode for Hytale. The player spawns in a completely void world — no terrain, no resources, nothing — with a single magical block floating at their feet. That block is the heart of everything: break it, and it drops a random resource or spawns a creature. It then regenerates, and the cycle repeats.
 
-The entire progression is built around that one block. By default it drops basic  resources — Fibre, Stone, Rubble. To access more dangerous and rewarding content, the player crafts **Expedition Crystals** and uses them on the block. The block then runs in that expedition's drop pool for a limited number of breaks (or a fixed real-time duration), then reverts to default. Completing an expedition unlocks the matching expedition bench, which the player can craft, place, and upgrade to access more powerful recipes.
+The entire progression is built around that one block. By default it drops basic resources — Fibre, Rubble Stone, Dirt. To access more rewarding content, the player crafts **Expedition Crystals** at the **Crystal Enchanter** and uses them on the block. The block then runs in that expedition's drop pool for a fixed number of breaks (ticks), then reverts to default. Completing certain expeditions drops a crystal that unlocks the recipe for the next expedition tier.
 
 ---
 
 ## Core Gameplay Loop
 
 ```
-Break the OneBlock (default  pool)
+Break the OneBlock (default pool)
         ↓
-Collect Fibre, Stone, Rubble
-        ↓
-Put Rubble in the Salvager → receive Blue / Red / Yellow Crystals
+Collect Fibre, Rubble Stone, Dirt
         ↓
 Craft a Crystal Enchanter (at Fieldcraft bench)
         ↓
-Craft crystals into an Expedition Crystal (Small = 100 ticks, Large = 300 ticks)
+Craft an Expedition Crystal (e.g., Cave Entry or Forest Edge)
         ↓
-Use the Expedition Crystal
+Use the Expedition Crystal on the OneBlock
         ↓
 The OneBlock switches to that expedition's drop pool
         ↓
@@ -29,9 +27,7 @@ Break the OneBlock — each break consumes one tick
         ↓
 Ticks reach zero → expedition complete, block reverts to default
         ↓
-Expedition completion unlocks the expedition's bench recipe in the OneBlock Workbench
-        ↓
-Craft and place the expedition bench → upgrade it with crystals for more powerful recipes
+Completion may drop a crystal that unlocks the next expedition
         ↓
 Repeat with higher-tier expedition crystals
 ```
@@ -43,58 +39,62 @@ Repeat with higher-tier expedition crystals
 - Located at world coordinates **(0, 100, 0)**.
 - Breaking it triggers the drop system and **immediately regenerates**.
 - It never disappears — the player always has something to break.
-- Its **visual appearance changes** when an expedition is active (e.g., stone texture for Cave, basalt for Deep Cave).
+- Its **visual appearance changes** when an expedition is active (e.g., cave stone for Cave Entry, oak forest for Forest).
 - When no expedition is active, the block sits in **default mode** and drops basic resources.
+- Creative-mode players cannot trigger drops.
 
 ---
 
 ## Expeditions
 
-Expeditions are the six themed worlds the player can temporarily activate. Each expedition has a unique drop pool, a visual block variant, and a matching expedition bench that is unlocked upon completion.
+Expeditions are the themed worlds the player can temporarily activate. Each expedition has a unique drop pool, a visual block variant, and a fixed tick count (how many breaks it lasts). Some expeditions drop a completion crystal that teaches the recipe for the next expedition.
 
-| # | Expedition | Theme | Key resources |
-|---|-----------|-------|---------------|
-| 1 | **Default** | Grassy surface (default) | Fibre, Stone, Rubble |
-| 2 | **FarmLand** | Agriculture, livestock | Life Essence, Pigs, Cows |
-| 3 | **Forest** | Dense woods | Ash Wood, Leather, Apples, Boars |
-| 4 | **Cave** | Underground tunnels | Stone, Rubble, Charcoal, Copper, Iron, Goblins |
-| 5 | **Deep Cave** | Deep darkness | Basalt, Iron, Thorium, Cobalt, Spiders, Void Crawlers |
-| 6 | **The Abyss** | Endgame void depths | Slate, Cobalt, Adamantite, Mithril, Zombies, Earth Elementals |
+| # | Expedition ID | Theme | Key resources | Ticks | Completion reward |
+|---|--------------|-------|---------------|-------|------------------|
+| 1 | **Default** | Grassy surface | Fibre, Rubble Stone, Dirt | — | — |
+| 2 | **Cave_Entry** | Underground entrance | Rubble Stone, Rock Stone | 25 | Crystal: Cave (unlocks Cave recipe) |
+| 3 | **Forest_Edge** | Forest border | Sticks, Oak Wood | 25 | Crystal: Forest (unlocks Forest recipe) |
+| 4 | **Cave** | Underground tunnels | Rock Stone, Copper Ore | 25 | — |
+| 5 | **Forest** | Dense woods | Oak Wood, Boars | 25 | — |
 
-Default is the **permanent default** — the player farms it between expeditions to gather basic materials and crystals. The other expeditions require crafting their matching crystals at the Crystal Enchanter.
+**Default** is always active between expeditions. **Cave_Entry** and **Forest_Edge** crystals are craftable at the Crystal Enchanter from the start. Cave and Forest crystals are earned by completing the respective entry expeditions.
 
 ---
 
 ## Crystal System
 
-### Base Crystals (from Salvager)
-
-The Salvager Bench processes Rubble and outputs tier-dependent base crystals:
-
-| Crystal | Tier availability | Use |
-|---------|-------------------|-----|
-| **Blue Crystal** | Tier 1+ | Most abundant, used in early expedition crystals |
-| **Red Crystal** | Tier 2+ | Mid-grade, required for stronger crystals |
-| **Yellow Crystal** | Tier 3+ | High-grade, required for deep-tier crystals |
-
 ### Expedition Crystals (from Crystal Enchanter)
 
-Expedition Crystals are crafted by fusing base crystals at the **Crystal Enchanter** bench. Each expedition has two sizes:
+Each expedition has one crystal item. Crystals are crafted at the **Crystal Enchanter** bench using basic materials.
 
-| Size | Tick count | Cost |
-|------|-----------|------|
-| **Small** | 100 ticks (OneBlock breaks) | Fewer Blue + Red crystals |
-| **Large** | 300 ticks (OneBlock breaks) | More Blue + Red + Yellow crystals |
+| Crystal | Expedition activated | Ticks | How to obtain |
+|---------|---------------------|-------|---------------|
+| `OneBlock_Crystal_Default` | Default | 25 | Crafted at Crystal Enchanter |
+| `OneBlock_Crystal_Cave_Entry` | Cave_Entry | 25 | Crafted at Crystal Enchanter (4× Rubble Stone) |
+| `OneBlock_Crystal_Forest_Edge` | Forest_Edge | 25 | Crafted at Crystal Enchanter |
+| `OneBlock_Crystal_Cave` | Cave | 25 | Dropped on completing Cave_Entry |
+| `OneBlock_Crystal_Forest` | Forest | 25 | Dropped on completing Forest_Edge |
 
 ### Using a Crystal
 
-The player right-clicks while holding an Expedition Crystal. The block:
+The player right-clicks while holding an Expedition Crystal on the OneBlock. The block:
 1. Switches to the expedition's visual variant.
 2. Starts counting down ticks on each break.
 3. Uses that expedition's drop pool until ticks reach zero.
-4. Reverts to default  mode automatically.
+4. Reverts to default mode automatically.
 
-A new crystal can be used while an expedition is already in progress, resetting the tick count.
+A new crystal can be used while an expedition is already in progress, replacing the current expedition.
+
+---
+
+## Expedition Completion Rewards
+
+When the tick counter reaches zero, the expedition completes and the block reverts to default. Some expeditions give mandatory completion rewards:
+
+- **Cave_Entry**: Drops 1× `OneBlock_Crystal_Cave` and teaches the recipe for it.
+- **Forest_Edge**: Drops 1× `OneBlock_Crystal_Forest` and teaches the recipe for it.
+
+The crystal item lands at the OneBlock position. Picking it up places the recipe in the player's crafting knowledge, making that expedition available at the Crystal Enchanter.
 
 ---
 
@@ -104,70 +104,42 @@ A new crystal can be used while an expedition is already in progress, resetting 
 Common drops are items that appear on the ground near the OneBlock. The player walks over them to collect.
 
 ### Entity Spawns
-Some drops spawn a creature instead of an item. The creature appears next to the block — it might be passive (Cow, Boar Piglet) or hostile (Goblin, Spider, Zombie). The player must deal with it.
+Some drops spawn a creature instead of an item. The creature appears next to the block — it might be passive (e.g., Boar) or hostile. The player must deal with it. Entity drops use the `entity:<EntityId>` format in code.
 
 ### Weighted Randomness
-Every entry in a drop pool has a **weight** value. Higher weight = more frequent. Common bulk materials have high weights (20–30), rare drops have low weights (1–2).
-
-### Recipe Drops
-Some rare drops in the pool are **recipe unlock items**. Consuming one teaches the player a crafting recipe (e.g., Mossy Stone, Cracked Basalt).
+Every entry in a drop pool has a **weight** value. Higher weight = more frequent. The system performs a single weighted draw per break.
 
 ---
 
-## Expedition Completion
+## Dungeon System
 
-When the tick counter (or timer) reaches zero:
+Dungeons are a wave-based variant of expeditions. Breaking the OneBlock during a dungeon spawns a wave of enemies around the block (within a 5-block radius on solid ground), rather than dropping items. Each break advances the dungeon by one wave.
 
-1. The OneBlock **automatically reverts** to default  mode.
-2. The **expedition bench recipe** for that expedition is unlocked in the OneBlock Workbench (`KnowledgeRequired` recipe becomes available).
-3. The player can now craft the expedition bench.
+- Dungeons are activated by a **Dungeon Crystal** used at the **Dungeon Enchanter** bench.
+- The dungeon tracks `currentWaveIndex` — which wave to spawn next.
+- When all waves are done, the dungeon completes, completion rewards are given, and the block reverts to default.
+- Dungeons and expeditions are mutually exclusive: if a dungeon is active, dungeon logic runs instead of expedition logic.
+
+The dungeon infrastructure is in place. No dungeon content is defined yet.
 
 ---
 
 ## Crystal Enchanter
 
-The **Crystal Enchanter** is the primary crafting station for expedition progression.
+The **Crystal Enchanter** is the primary crafting station for expedition crystals.
 
 - Crafted at the **Fieldcraft** bench (4× Fibre + 3× Rubble Stone — starter recipe).
-- Has one crafting category per expedition, containing Small and Large crystals.
-- Requires base crystals (Blue / Red / Yellow) as input.
-- Crystal cost scales with expedition tier — early expeditions need few Blue crystals; endgame expeditions need many Yellow crystals.
+- Has one crafting category (`OneBlock_Enchanter_Surface`) containing all available expedition crystals.
+- All currently available crystals (Default, Cave_Entry, Forest_Edge, Cave, Forest) appear here once their recipes are known.
 
 ---
 
-## OneBlock Workbench
+## Dungeon Enchanter
 
-A craftable bench (8× Fibre + 6× Stone, at Fieldcraft) that holds all expedition bench recipes.
+The **Dungeon Enchanter** is the crafting station for dungeon crystals.
 
-- Expedition bench recipes are **locked by default** (`KnowledgeRequired`).
-- Each recipe unlocks automatically when the matching expedition is completed for the first time.
-- Once unlocked, the player crafts the bench and places it in the world.
-
----
-
-## Expedition Benches
-
-Each of the non-default expeditions has a dedicated bench. These benches use Hytale's native **tier upgrade** system:
-
-- **Tier 1** (default): Basic recipes for that expedition.
-- **Tier 2**: Unlocked by consuming a set of crystals at the bench.
-- **Tier 3**: Unlocked by consuming higher-tier crystals and ores.
-
-Expedition bench recipes (what they produce) are defined per-bench and filled in as the game design evolves. The infrastructure (leveling, unlock gate) is in place.
-
----
-
-## Salvager Bench
-
-The Salvager converts **Rubble** into base crystals and ores. It is the primary crystal source.
-
-| Tier | Primary outputs |
-|------|----------------|
-| 1 | Blue Crystal (100%) |
-| 2 | Blue Crystal (65%), Red Crystal (25%), Copper (7%), Iron (3%) |
-| 3 | Blue Crystal (45%), Red Crystal (30%), Yellow Crystal (15%), Iron (5%), Thorium (5%) |
-
-The bench upgrades via Hytale's native tier system. Higher tiers produce more valuable outputs.
+- Crafted at the **Fieldcraft** bench (4× Fibre + 3× Rubble Stone — same cost as Crystal Enchanter).
+- No dungeon crystals are defined yet; the bench and infrastructure are ready.
 
 ---
 
@@ -181,30 +153,41 @@ The bench upgrades via Hytale's native tier system. Higher tiers produce more va
 
 ---
 
+## HUD
+
+While an expedition or dungeon is active, players see a **progress bar HUD** showing:
+- The expedition or dungeon name as the title.
+- A fill bar representing remaining ticks (expeditions) or completed waves (dungeons).
+
+The HUD is restored if the player disconnects and reconnects while an expedition is active. It hides automatically on completion.
+
+---
+
 ## Player Goals
 
 There is no explicit win condition — OneBlock is an **open-ended progression game**. Suggested milestones:
 
-1. Survive the early game with  drops alone.
-2. Build a Salvager and Crystal Enchanter.
-3. Complete all five non-default expeditions at least once.
-4. Unlock and max-upgrade all expedition benches.
-5. Use a Large Abyss Crystal and clear 300 breaks in the endgame pool.
+1. Survive the early game with default drops alone.
+2. Build a Crystal Enchanter.
+3. Complete Cave_Entry and Forest_Edge to unlock Cave and Forest crystals.
+4. Complete Cave and Forest expeditions.
+5. Clear dungeon content (when added).
 6. Build an impressive base in the void using accumulated materials.
 
 ---
 
-## Summary of Added Gameplay Elements
+## Summary of Implemented Systems
 
-| Element | Description |
-|---------|-------------|
-| OneBlock | The central magical block, always regenerates after being broken |
-| Default Pool |  drops (Fibre, Stone, Rubble) — always active between expeditions |
-| Expeditions | 5 timed themed tiers (FarmLand → The Abyss), each with unique drops |
-| Crystal System | Salvager → base crystals → Enchanter → expedition crystals → temporary expeditions |
-| Crystal Enchanter | Bench for fusing base crystals into expedition crystals |
-| OneBlock Workbench | Holds expedition bench recipes; gates them behind expedition completion |
-| Expedition Benches | One per expedition, upgradable via Hytale's native tier system |
-| Salvager Bench | Converts Rubble to crystals/ores; output improves with tier |
-| Void World | Empty world — everything the player has comes from the OneBlock |
-| Fall Protection | Players who fall into the void are teleported back to spawn |
+| System | Status | Description |
+|--------|--------|-------------|
+| OneBlock | Done | Central magical block at (0,100,0), always regenerates |
+| Default pool | Done | Fibre, Rubble Stone, Dirt — always active between expeditions |
+| Expeditions | Done | 5 tiers (Default, Cave_Entry, Forest_Edge, Cave, Forest), 25 ticks each |
+| Expedition crystals | Done | One crystal per expedition; crafted at Crystal Enchanter or earned via completion |
+| Crystal Enchanter | Done | Crafted at Fieldcraft; holds all expedition crystal recipes |
+| Completion reward chain | Done | Cave_Entry → Cave crystal; Forest_Edge → Forest crystal |
+| Dungeon system | Framework | Wave-based combat; infrastructure done, no content defined yet |
+| Dungeon Enchanter | Framework | Bench exists; no dungeon crystals defined yet |
+| Expedition HUD | Done | Per-player progress bar with name and tick/wave fill |
+| Void World | Done | Empty world with fall-back protection (teleport below Y=85) |
+| Save/load | Done | Expedition and dungeon state persisted to JSON; restored on server restart |

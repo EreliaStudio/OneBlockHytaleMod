@@ -2,13 +2,7 @@
 
 ## Project Overview
 
-The OneBlock mod is split into **4 independent Gradle sub-projects** (modules), each compiled into its own shaded JAR and deployed as a separate Hytale plugin. They are coordinated by a single root Gradle build.
-
-The split follows one principle: **engine vs. content vs. independent systems**.
-
-- `oneblock-core` is the pure drop engine — no game content, no expedition names, no item IDs hardcoded beyond the default fallback.
-- `oneblock-progression` is all player-facing game content — expeditions, crystals, benches.
-- `oneblock-salvager` and `oneblock-world` are completely standalone systems with no cross-dependencies.
+The OneBlock mod is a **single Gradle project** (`oneblock`) compiled into one shaded JAR and deployed as a single Hytale plugin. All game systems — the drop engine, expedition progression, dungeon system, HUD, world setup, and fall-back protection — live in this one module.
 
 ---
 
@@ -17,17 +11,14 @@ The split follows one principle: **engine vs. content vs. independent systems**.
 ```
 OneBlockHytaleMod/
 │
-├── build.gradle.kts              # Root Gradle config (shared rules for all sub-projects)
-├── settings.gradle.kts           # Lists the 4 sub-projects and their paths
+├── build.gradle.kts              # Root Gradle config
+├── settings.gradle.kts           # Lists the oneblock sub-project
 │
 ├── libs/
 │   └── HytaleServer.jar          # Hytale server API (compile-only, not shipped)
 │
-├── mods/                         # One folder per plugin module
-│   ├── oneblock-core/
-│   ├── oneblock-progression/
-│   ├── oneblock-salvager/
-│   └── oneblock-world/
+├── mods/
+│   └── oneblock/                 # The single plugin module
 │
 ├── hytale-server/                # Local development server
 │   ├── HytaleServer.jar          # The server executable
@@ -43,190 +34,222 @@ OneBlockHytaleMod/
 └── tools/                        # Build utilities
 ```
 
-### Module internal layout (same for all modules)
+### Module internal layout
 
 ```
-mods/<module-name>/
-├── build.gradle.kts              # Module-specific overrides (archive name, optional dependencies)
+mods/oneblock/
+├── build.gradle.kts
 └── src/
     └── main/
         ├── java/
         │   └── com/EreliaStudio/OneBlock/
         │       └── *.java
         └── resources/
-            ├── manifest.json     # Plugin metadata (name, version, main class)
-            ├── Server/           # Asset pack files (items, blocks, textures, lang)
-            └── *.json            # Runtime config files loaded by the plugin
+            ├── manifest.json
+            ├── oneblock-world-config-template.json
+            └── Server/
+                └── Item/Items/
+                    ├── OneBlock/              # Block variants (Default, Cave_Entry, …)
+                    ├── Crystal/Expedition/    # Crystal items
+                    ├── OneBlockEnchanter/     # Crystal Enchanter bench
+                    ├── OneBlockDungeonEnchanter/ # Dungeon Enchanter bench
+                    └── CustomItems/           # Misc items (Locket_GobelinDungeon, ExpeditionPoint)
 ```
 
 ---
 
-## The 4 Modules
+## Java Classes
 
-### 1. `oneblock-core` — Drop Engine
+### Plugin entry point
 
-**JAR name:** `OneBlock-Core.jar`
-**Main class:** `OneBlockPlugin`
-**Depends on:** nothing (only HytaleServer.jar)
+| Class | Role |
+|-------|------|
+| `OneBlockPlugin` | Plugin entry point. Wires all services (HUD, drop registry, state providers), registers event handlers, registers the `oneblock_crystal_use` interaction codec, and sets up the void world. |
 
-The foundation. It owns everything needed to pick and execute a drop when the OneBlock is broken, manage the active expedition tick state, and nothing else. No game content is hardcoded here.
+---
 
-**Java classes:**
+### Drop engine
 
 | Class | Role |
 |-------|------|
 | `Dropable` | Interface: `getId()` + `execute(DropableContext)` |
-| `DropableContext` | Data passed to a dropable on execution (world, position, player) |
-| `ItemDropable` | Implements `Dropable` — spawns an item entity on the ground |
+| `DropableContext` | Data passed to a dropable: store, world, source block position, reward spawn position, player entity ref |
+| `ItemDropable` | Implements `Dropable` — spawns an item entity on the ground with optional quantity |
 | `EntitySpawnDropable` | Implements `Dropable` — spawns an NPC via reflection |
 | `OneBlockEntitySpawner` | Reflection-based wrapper around `SpawnNPCInteraction` |
 | `OneBlockDropId` | Parses drop ID prefixes (`entity:`, `npc:`, `item:`, bare) |
-| `OneBlockDropRegistry` | Central registry: weighted selection + dropable handler map |
-| `OneBlockExpeditionStateProvider` | Global expedition state: active expedition ID + ticks remaining (or end time). Persisted to `oneblock-expedition.json`. Returns completed expedition ID from `onBreak()`. |
-| `OneBlockBreakSystem` | ECS event handler: on block break → pick reward → execute dropable → consume tick → on completion, reset block and call `OneBlockPlugin.fireExpeditionComplete` |
-| `OneBlockPools` | Holds the active `OneBlockPoolResolver`; defaults to always returning "Meadow" |
-| `OneBlockPoolResolver` | Interface for custom pool resolution logic |
-| `OneBlockBlockUtil` | Detects whether a broken block is a OneBlock (checks `Blocks.OneBlock` category) |
-| `OneBlockBlockIds` | Constant: `DEFAULT_BLOCK_ID = "OneBlock_Block_Meadow"` |
-| `OneBlockCommand` | `/oneblock status|start|stop|list` admin command |
-| `OneBlockPlugin` | Plugin entry point — wires everything together; exposes `setExpeditionCompleteCallback(BiConsumer<String, DropableContext>)` and `fireExpeditionComplete` |
-
-**Resources:** 6 OneBlock variant block JSONs (one per expedition), language file.
+| `OneBlockDropRegistry` | Central registry: weighted selection, dropable handler map, `executeDropable(id, ctx, qty)` |
 
 ---
 
-### 2. `oneblock-progression` — Expedition Content & Crystal System
-
-**JAR name:** `OneBlock-Progression.jar`
-**Main class:** `OneBlockProgressionPlugin`
-**Depends on:** `oneblock-core` (compile-only)
-
-All player-facing game content lives here. This module tells core *what* drops exist and *what* their weights are, registers the expedition pool resolver, and wires the crystal use interaction that starts expeditions.
-
-**Java classes:**
+### Block & pool resolution
 
 | Class | Role |
 |-------|------|
-| `OneBlockExpeditionResolver` | Parses expedition name from block IDs and crystal item IDs; returns tick counts for Small/Large crystals |
-| `OneBlockExpeditionPoolResolver` | Implements `OneBlockPoolResolver` — reads expedition from block type via `OneBlockExpeditionResolver` |
-| `OneBlockExpeditionDefaults` | Hardcoded base drop pools and weights for all 6 expeditions |
-| `OneBlockCrystalInteraction` | SimpleInstantInteraction — right-clicking the OneBlock with an expedition crystal starts (or resets) the expedition |
-| `OneBlockInteractionUtil` | Shared helpers (consumeHeldItem, notifyPlayer, finish/skip/fail) |
-| `OneBlockProgressionPlugin` | Plugin entry point — installs resolver, loads defaults, registers crystal interaction, wires expedition-complete callback |
-
-**Resources:**
-- Base crystal items (`OneBlock_Crystal_Blue/Red/Yellow`)
-- 10 expedition crystal items (Small + Large for FarmLand, Forest, Cave, Deep Cave, The Abyss)
-- 5 bench recipe items (`OneBlock_Bench_Recipe_<ExpeditionId>`) — dropped at the OneBlock on expedition completion; consuming one teaches the matching bench recipe
-- `Bench_OneBlockEnchanter.json` — Crystal Enchanter bench (crafts expedition crystals)
-- `Bench_OneBlockWorkbench.json` — OneBlock Workbench (holds `KnowledgeRequired` expedition bench recipes)
-- 5 expedition bench JSONs (`Bench_OneBlock_FarmLand/Forest/Cave/Deep Cave/The Abyss`)
-- Language file
+| `OneBlockBlockIds` | Constants: `DEFAULT_BLOCK_ID = "OneBlock_Block_Default"`, `ONEBLOCK_POSITION = (0, 100, 0)` |
+| `OneBlockBlockUtil` | Returns true if a broken block has the `Blocks.OneBlock` category |
+| `OneBlockPools` | Holds the active `OneBlockPoolResolver`; defaults to returning "Meadow" if none set |
+| `OneBlockPoolResolver` | Interface: `resolvePoolId(BlockType)` |
+| `OneBlockExpeditionPoolResolver` | Implements `OneBlockPoolResolver` — delegates to `OneBlockExpeditionResolver.expeditionFromBlockType()` |
+| `OneBlockExpeditionResolver` | Extracts expedition ID from block IDs (`OneBlock_Block_<X>` → `X`) and crystal item IDs (`OneBlock_Crystal_<X>` → `X`); resolves block ID for a given expedition ID via `OneBlockExpeditionDefaults` |
 
 ---
 
-### 3. `oneblock-salvager` — Salvager Bench
-
-**JAR name:** `OneBlock-Salvager.jar`
-**Main class:** `OneBlockSalvagerPlugin`
-**Depends on:** nothing
-
-Completely standalone. Manages the Salvager Bench which converts Rubble into tier-appropriate base crystals (Blue/Red/Yellow) or ores.
-
-**Java classes:**
+### Expedition system
 
 | Class | Role |
 |-------|------|
-| `OneBlockSalvageChanceSystem` | ArchetypeTickingSystem — scans all benches, patches the crystal output slot with a tier-based random item from `oneblock-salvager-drops.json` |
-| `OneBlockSalvagerPlugin` | Plugin entry point |
-
-**Resources:** Salvager bench JSON, `oneblock-salvager-drops.json`, language file.
+| `OneBlockExpeditionDefaults` | Hardcoded definitions for all expeditions. Each `ExpeditionDefinition` holds: `expeditionId`, `blockId`, `ticks`, `drops` (weighted), `mandatoryRewards` (always on completion), `randomBundles` (one picked by weight on completion). Provides `crystalReward()` helper which creates a `CompletionRewardDefinition` that also calls `CraftingPlugin.learnRecipe()`. |
+| `OneBlockExpeditionStateProvider` | Expedition state: active expedition ID, ticks remaining, total ticks. `onBreak()` decrements ticks and returns the completed expedition ID when reaching zero. Persists to `oneblock-expedition.json`. |
+| `OneBlockCrystalInteraction` | `SimpleInstantInteraction` — right-clicking the OneBlock with a crystal starts (or resets) the expedition/dungeon, shows the HUD, and consumes the crystal. Differentiates dungeon vs. expedition via `OneBlockDungeonDefaults.isDungeon()`. |
+| `OneBlockInteractionUtil` | Shared helpers: `consumeHeldItem`, `finish`, `skip`, `fail` |
 
 ---
 
-### 4. `oneblock-world` — Void World Setup
-
-**JAR name:** `OneBlock-World.jar`
-**Main class:** `OneBlockWorldPlugin`
-**Depends on:** nothing
-
-Completely standalone. Handles everything about the world environment.
-
-**Java classes:**
+### Dungeon system
 
 | Class | Role |
 |-------|------|
-| `OneBlockWorldBootstrap` | On startup, creates/updates the void world config if missing or wrong |
-| `OneBlockWorldInitializer` | On world load, places the starting OneBlock and sets the spawn point |
-| `OneBlockFallBackSystem` | ArchetypeTickingSystem — teleports players below Y=85 back to spawn |
-| `OneBlockWorldPlugin` | Plugin entry point — calls bootstrap, registers fall-back system, registers AddWorldEvent listener |
+| `OneBlockDungeonDefaults` | Hardcoded definitions for all dungeons. Each `DungeonDefinition` holds: `dungeonId`, `blockId`, `waves` (list of entity ID lists per wave), `completionRewards`. Currently empty — no dungeons are defined. |
+| `OneBlockDungeonStateProvider` | Dungeon state: active dungeon ID and current wave index. `onWaveCompleted()` advances the wave and returns the completed dungeon ID when all waves are done. Persists to `oneblock-dungeon.json`. |
 
-**Resources:** `oneblock-world-config-template.json`.
+---
+
+### Break handling
+
+| Class | Role |
+|-------|------|
+| `OneBlockBreakSystem` | `EntityEventSystem<BreakBlockEvent>`. On each valid OneBlock break: if a dungeon is active → `handleDungeonBreak`; otherwise → `handleExpeditionBreak`. Updates the HUD and block state after each break. Ignores creative-mode players. |
+
+`handleExpeditionBreak` flow:
+1. Resolve pool ID from block type.
+2. Pick a reward from the drop registry.
+3. Decrement expedition ticks via `expeditionState.onBreak()`.
+4. Replace the block (same block if expedition ongoing; default block if completed).
+5. Execute the dropable.
+6. If expedition completed: execute mandatory rewards + one random bundle; hide HUD.
+7. If expedition ongoing: update HUD tick bar.
+
+`handleDungeonBreak` flow:
+1. Get the current wave entity list.
+2. Find solid-ground spawn positions within 5 blocks.
+3. Spawn each entity in the wave at a shuffled spawn position.
+4. Advance wave via `dungeonState.onWaveCompleted()`.
+5. If dungeon completed: set block to default; execute completion rewards; show dungeon-complete HUD.
+6. If waves remain: restore dungeon block; update HUD wave bar.
+
+---
+
+### HUD system
+
+| Class | Role |
+|-------|------|
+| `OneBlockHudService` | Per-player HUD manager (keyed by `PlayerRef`). Exposes `showExpeditionStarted`, `updateExpeditionTicks`, `showExpeditionCompleted`, `showExpeditionUnlocked`, `showDungeonStarted`, `updateDungeonWave`, `showDungeonCompleted`, `restoreExpeditionHud`. Hides HUD on completion. |
+| `OneBlockProgressHud` | Custom HUD element: a named progress bar. Exposes `setTitle`, `setProgress`, `setTitleAndProgress`. |
+
+---
+
+### Notifications
+
+| Class | Role |
+|-------|------|
+| `OneBlockNotifier` | Chat + HUD notification helpers: `notifyExpeditionUnlocked`, `notifyExpeditionStarted`, `notifyExpeditionCompleted`, `notifyDungeonStarted`, `notifyDungeonCompleted`. Used by `OneBlockBreakSystem` and `OneBlockCrystalInteraction`. |
+
+---
+
+### World setup
+
+| Class | Role |
+|-------|------|
+| `OneBlockWorldBootstrap` | Ensures the default world config is set to void (no terrain). Runs on startup and on world load. |
+| `OneBlockWorldInitializer` | On world load: installs the void world-gen provider, places the starting OneBlock (at the appropriate block ID based on active expedition/dungeon), and sets the spawn point to (0.5, 102, 0.5). |
+| `OneBlockFallBackSystem` | `ArchetypeTickingSystem` — teleports any entity below Y=85 back to spawn. |
+
+---
+
+### Admin commands
+
+| Class | Role |
+|-------|------|
+| `OneBlockCommand` | `/oneblock status|start <id>|stop|list` admin command for manually controlling expedition/dungeon state. |
 
 ---
 
 ## Dependency Graph
 
 ```
-                HytaleServer.jar  (compile-only, not shipped)
-                       │
-          ┌────────────┴────────────────────┐
-          │                                 │
-   oneblock-core                  (standalone modules)
-   [Drop engine]                  oneblock-salvager
-          │                       oneblock-world
-          │ compileOnly
-          │
-   oneblock-progression
-   [All game content]
+HytaleServer.jar  (compile-only, not shipped)
+        │
+   oneblock
+   (all systems in one JAR)
 ```
-
-Arrow direction = "depends on". `oneblock-salvager` and `oneblock-world` have zero dependencies on the other OneBlock modules.
 
 ---
 
-## Key Runtime Data Flow
+## Key Runtime Data Flows
 
-### Block Break → Drop → Tick
+### Block Break → Drop → Tick (Expedition)
 
 ```
 Player breaks block
-  → BreakBlockEvent  (oneblock-core: OneBlockBreakSystem)
-  → Verify block category == "Blocks.OneBlock"
-  → OneBlockPools.resolvePoolId(blockType)         ← uses OneBlockExpeditionPoolResolver (set by progression)
-  → OneBlockDropRegistry.getKnownDrops(poolId)
-  → OneBlockDropRegistry.pickReward(poolId, drops)
-  → Dropable.execute(context)                      ← ItemDropable or EntitySpawnDropable
-  → OneBlockExpeditionStateProvider.onBreak()
-      ├─ Ticks remaining > 0 → replaceBlock with same block type
-      └─ Ticks reached zero  → replaceBlock with DEFAULT_BLOCK_ID
-                             → fire completeCallback(expeditionId)  ← wired by progression
+  → BreakBlockEvent  (OneBlockBreakSystem)
+  → Verify block category == "Blocks.OneBlock"  (OneBlockBlockUtil)
+  → Verify player not in creative mode
+  → dungeonState.isDungeonActive()?
+      ├─ yes → handleDungeonBreak (see below)
+      └─ no  → handleExpeditionBreak:
+                  OneBlockPools.resolvePoolId(blockType)
+                      → OneBlockExpeditionPoolResolver
+                      → OneBlockExpeditionResolver.expeditionFromBlockType()
+                  → OneBlockDropRegistry.pickReward(poolId, drops)
+                  → expeditionState.onBreak()
+                      ├─ ticks > 0  → replace block with same block type
+                      └─ ticks == 0 → replace block with DEFAULT_BLOCK_ID
+                                    → executeExpeditionCompletionRewards()
+                                        → mandatory rewards (items + crystalReward → learnRecipe)
+                                        → one random bundle (if any)
+                                    → HudService.showExpeditionCompleted()
+                  → dropRegistry.executeDropable(rewardId)  ← ItemDropable or EntitySpawnDropable
+                  → HudService.updateExpeditionTicks()  (if expedition still ongoing)
 ```
 
-### Crystal Use → Expedition Start (or Reset)
+### Crystal Use → Expedition Start
 
 ```
 Player right-clicks OneBlock with expedition crystal
-  → OneBlockCrystalInteraction.firstRun()  (oneblock-progression)
-  → Verify target block is a OneBlock
-  → OneBlockExpeditionResolver.expeditionFromCrystalItemId(itemId)  →  expeditionId
-  → OneBlockExpeditionResolver.ticksFromCrystalItemId(itemId)       →  ticks (100 or 300)
-  → OneBlockExpeditionResolver.blockIdForExpedition(expeditionId)   →  new block type ID
-  → world.setBlock(...)                             ← block switches visually (resets if already active)
-  → OneBlockExpeditionStateProvider.startExpedition(expeditionId, ticks)
-  → consumeHeldItem + notify player
+  → OneBlockCrystalInteraction.firstRun()
+  → Resolve expeditionId from item ID (strip "OneBlock_Crystal_" prefix)
+  → OneBlockDungeonDefaults.isDungeon(expeditionId)?
+      ├─ yes → dungeonStateProvider.startDungeon(expeditionId)
+             → HudService.showDungeonStarted(player, dungeonId, waveCount)
+      └─ no  → OneBlockExpeditionResolver.blockIdForExpedition(expeditionId)
+             → world.setBlock(ONEBLOCK_POSITION, newBlockId)
+             → expeditionStateProvider.startExpedition(expeditionId, ticks)
+             → HudService.showExpeditionStarted(player, expeditionId, ticks)
+  → consumeHeldItem
 ```
 
-### Expedition Complete → Bench Recipe Drop
+### Dungeon Break → Wave Spawn
 
 ```
-OneBlockExpeditionStateProvider.onBreak() → ticks = 0 → returns completedExpeditionId
-  → OneBlockBreakSystem calls OneBlockPlugin.fireExpeditionComplete(expeditionId, context)
-  → OneBlockProgressionPlugin.onExpeditionComplete(expeditionId, ctx)
-  → dropRegistry.executeDropable("OneBlock_Bench_Recipe_<expeditionId>", ctx)
-        ← spawns recipe item at the OneBlock position
-  → Player picks up item → consumes it → game engine unlocks KnowledgeRequired recipe
-        for Bench_OneBlock_<expeditionId> in the OneBlock Workbench
+Player breaks OneBlock during a dungeon
+  → dungeonState.getActiveDungeonId() + getCurrentWaveIndex()
+  → OneBlockDungeonDefaults.getWave(dungeonId, waveIndex)  → entity ID list
+  → findDungeonSpawnBlocks(world, pos)  → solid-ground positions within radius 5
+  → for each entity: dropRegistry.executeDropable(entityId, spawnContext)
+  → dungeonState.onWaveCompleted()
+      ├─ waves remain → restore dungeon block; HudService.updateDungeonWave()
+      └─ all done     → set block to DEFAULT_BLOCK_ID
+                      → executeDungeonCompletionRewards()
+                      → HudService.showDungeonCompleted()
+```
+
+### Player Reconnect → HUD Restore
+
+```
+PlayerReadyEvent fires
+  → expeditionStateProvider.hasActiveExpedition()?
+      └─ yes → HudService.restoreExpeditionHud(player, expeditionId, ticksRemaining, totalTicks)
 ```
 
 ---
@@ -234,85 +257,73 @@ OneBlockExpeditionStateProvider.onBreak() → ticks = 0 → returns completedExp
 ## Persistent Data
 
 ```
-hytale-server/mods/com.EreliaStudio_OneBlock-Core/
-└── oneblock-expedition.json
+hytale-server/mods/com.EreliaStudio_OneBlock/
+├── oneblock-expedition.json
+└── oneblock-dungeon.json
 ```
 
-Format:
+**`oneblock-expedition.json`**
 ```json
 {
   "expeditionId": "Forest",
-  "ticksRemaining": 47
+  "ticksRemaining": 12,
+  "totalTicks": 25
 }
 ```
-
-- `expeditionId`: the currently active expedition, or `null` if in default mode.
+- `expeditionId`: active expedition ID, or `null` if in default mode.
 - `ticksRemaining`: breaks left before the expedition ends.
+- `totalTicks`: the total ticks when the expedition was started (used for HUD fill calculation).
 
-Written immediately after every OneBlock break. Safe to hand-edit.
+**`oneblock-dungeon.json`**
+```json
+{
+  "dungeonId": "GoblinCave",
+  "currentWaveIndex": 2
+}
+```
+- `dungeonId`: active dungeon ID, or `null` if no dungeon is running.
+- `currentWaveIndex`: which wave spawns on the next OneBlock break.
+
+Both files are written immediately after every state change. Safe to hand-edit.
 
 ---
 
-## Configuration Files
+## Resources
 
-| File | Module | Purpose |
-|------|--------|---------|
-| `oneblock-salvager-drops.json` | oneblock-salvager | Salvager bench outputs per tier level (now outputs Blue/Red/Yellow crystals) |
-| `oneblock-world-config-template.json` | oneblock-world | Template for void world creation |
-| `manifest.json` (per module) | all | Plugin metadata, main class, version |
-| `hytale-server/config.json` | server | Server name, player limit, default world |
+All assets are in `mods/oneblock/src/main/resources/Server/Item/Items/`.
+
+| Asset | Location | Notes |
+|-------|----------|-------|
+| Block variant JSONs | `OneBlock/` | One per expedition; must have `"Categories": ["Blocks.OneBlock"]` |
+| Crystal item JSONs | `Crystal/Expedition/` | One per expedition; must use `oneblock_crystal_use` interaction |
+| Crystal Enchanter | `OneBlockEnchanter/Bench_OneBlockEnchanter.json` | `OneBlock_Enchanter_Surface` category holds all expedition crystals |
+| Dungeon Enchanter | `OneBlockDungeonEnchanter/Bench_OneBlockDungeonEnchanter.json` | No categories yet |
+| Custom items | `CustomItems/` | `Locket_GobelinDungeon`, `ExpeditionPoint` |
+| World config template | `oneblock-world-config-template.json` | Template for void world creation |
 
 ---
 
 ## Build & Deploy Reference
 
-All commands run from the **repository root** (`OneBlockHytaleMod/`). Java 25 must be on your PATH. Gradle is included via the wrapper — no separate Gradle install needed.
+All commands run from the **repository root** (`OneBlockHytaleMod/`). Java 25 must be on your PATH. Gradle is included via the wrapper.
 
-### Build and deploy everything (standard workflow)
+### Build and deploy (standard workflow)
 
 ```bash
 ./gradlew buildAndDeployAll
 ```
 
-Compiles all 4 modules, produces shaded JARs, and copies them to `hytale-server/mods/`. **Use this after any code or JSON change.**
+Compiles the module, produces a shaded JAR, copies it to `hytale-server/mods/`. Use after any code or JSON change.
 
-### Build only (no deploy)
-
-```bash
-./gradlew buildAll
-```
-
-Produces JARs in each module's `build/libs/` folder. Does not copy them to the server.
-
-### Deploy only (assumes already built)
+### Other commands
 
 ```bash
-./gradlew deployAll
+./gradlew buildAll              # compile only, no deploy
+./gradlew deployAll             # deploy only (assumes already built)
+./gradlew :oneblock:build       # compile the oneblock module only
+./gradlew :oneblock:buildAndDeploy  # build + deploy the module
+./gradlew clean                 # delete all build/ folders
 ```
-
-### Single-module commands
-
-Replace `<moduleName>` with `oneblock-core`, `oneblock-progression`, `oneblock-salvager`, or `oneblock-world`.
-
-```bash
-./gradlew :<moduleName>:build             # compile only
-./gradlew :<moduleName>:deploy            # deploy (triggers build if stale)
-./gradlew :<moduleName>:buildAndDeploy    # build + deploy
-```
-
-Example — rebuild only progression after editing `OneBlockExpeditionDefaults.java`:
-
-```bash
-./gradlew :oneblock-progression:buildAndDeploy
-```
-
-### Clean all build artifacts
-
-```bash
-./gradlew clean
-```
-
-Deletes all `build/` folders. Use this if you see stale class files or unexplained compilation errors.
 
 ### Run the local development server
 
@@ -320,38 +331,22 @@ Deletes all `build/` folders. Use this if you see stale class files or unexplain
 java -jar hytale-server/HytaleServer.jar --workdir hytale-server
 ```
 
-The server reads `hytale-server/config.json`, loads all JARs from `hytale-server/mods/`, and starts. Logs go to `hytale-server/logs/`. Stop with `Ctrl+C`.
+Logs go to `hytale-server/logs/`. Stop with `Ctrl+C`.
 
 ### Typical development cycle
 
-1. Edit Java or JSON files in the relevant `mods/<module>/` folder.
-2. `./gradlew buildAndDeployAll` (or single-module variant for faster iteration).
-3. Start the server: `java -jar hytale-server/HytaleServer.jar --workdir hytale-server`.
+1. Edit Java or JSON files in `mods/oneblock/`.
+2. `./gradlew buildAndDeployAll`.
+3. Start the server.
 4. Connect and test.
 5. Repeat.
-
-### Adding a new module
-
-1. Create `mods/my-new-mod/` with `build.gradle.kts` and source under `src/main/java/` + `manifest.json` under `src/main/resources/`.
-2. Register in `settings.gradle.kts`:
-   ```kotlin
-   include(":my-new-mod")
-   project(":my-new-mod").projectDir = file("mods/my-new-mod")
-   ```
-3. If it depends on core, add to `build.gradle.kts`:
-   ```kotlin
-   dependencies {
-       compileOnly(project(":oneblock-core"))
-   }
-   ```
-4. `./gradlew buildAndDeployAll`.
 
 ---
 
 ## Notes on the Build System
 
-- **Gradle wrapper** (`gradlew` / `gradlew.bat`) is committed to the repo. No global Gradle installation needed.
-- Every module produces a **shaded (fat) JAR** — GSON and Guava are bundled and relocated under `com.EreliaStudio.OneBlock.libs.gson` to avoid conflicts with server dependencies.
+- **Gradle wrapper** (`gradlew` / `gradlew.bat`) is committed. No global Gradle install needed.
+- The module produces a **shaded (fat) JAR** — GSON and Guava are bundled and relocated under `com.EreliaStudio.OneBlock.libs.gson` to avoid conflicts.
 - The plain JAR is disabled; only the shaded JAR is produced.
-- `HytaleServer.jar` in `libs/` is a **compile-only** dependency — it is never bundled into output JARs.
+- `HytaleServer.jar` in `libs/` is compile-only — never bundled.
 - Resource expansion injects `${version}` and `${name}` into `manifest.json` at build time.
