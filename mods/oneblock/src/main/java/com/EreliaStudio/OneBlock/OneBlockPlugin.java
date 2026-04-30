@@ -9,7 +9,6 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.WorldConfig;
 import com.hypixel.hytale.server.core.universe.world.WorldConfigProvider;
 import com.hypixel.hytale.server.core.universe.world.events.AddWorldEvent;
-import com.hypixel.hytale.server.core.universe.world.worldgen.provider.VoidWorldGenProvider;
 
 import javax.annotation.Nonnull;
 import java.nio.file.Path;
@@ -26,6 +25,7 @@ public final class OneBlockPlugin extends JavaPlugin
     private OneBlockDropRegistry dropRegistry;
     private OneBlockExpeditionStateProvider expeditionStateProvider;
     private OneBlockDungeonStateProvider dungeonStateProvider;
+    private OneBlockHudService hudService;
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -43,25 +43,48 @@ public final class OneBlockPlugin extends JavaPlugin
     {
         LOGGER.at(Level.INFO).log("Setting up OneBlock...");
 
+        // ── Services ─────────────────────────────────────────────────────────
+        hudService = new OneBlockHudService();
+
         // ── Drop engine ──────────────────────────────────────────────────────
         dropRegistry = new OneBlockDropRegistry();
+
         expeditionStateProvider = new OneBlockExpeditionStateProvider(
-                getDataDirectory().resolve("oneblock-expedition.json"));
+                getDataDirectory().resolve("oneblock-expedition.json")
+        );
+
         dungeonStateProvider = new OneBlockDungeonStateProvider(
-                getDataDirectory().resolve("oneblock-dungeon.json"));
+                getDataDirectory().resolve("oneblock-dungeon.json")
+        );
+
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
-        getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, expeditionStateProvider, dungeonStateProvider));
+
+        getEntityStoreRegistry().registerSystem(
+                new OneBlockBreakSystem(
+                        dropRegistry,
+                        expeditionStateProvider,
+                        dungeonStateProvider
+                )
+        );
+
         getCommandRegistry().registerCommand(new OneBlockCommand());
 
         // ── Expedition progression ───────────────────────────────────────────
         OneBlockPools.setResolver(new OneBlockExpeditionPoolResolver());
 
-        Map<String, Map<String, Integer>> defaultWeights = OneBlockExpeditionDefaults.getDefaultWeights();
+        Map<String, Map<String, Integer>> defaultWeights =
+                OneBlockExpeditionDefaults.getDefaultWeights();
+
         dropRegistry.registerDefaultWeights(defaultWeights);
 
-        Map<String, Set<String>> dropsByExpedition = OneBlockExpeditionDefaults.getDefaultDropIdsByExpedition();
+        Map<String, Set<String>> dropsByExpedition =
+                OneBlockExpeditionDefaults.getDefaultDropIdsByExpedition();
+
         for (Map.Entry<String, Set<String>> entry : dropsByExpedition.entrySet())
+        {
             registerDropables(dropRegistry, entry.getValue());
+        }
+
         registerDropables(dropRegistry, OneBlockExpeditionDefaults.getCompletionRewardDropIds());
         registerDropables(dropRegistry, OneBlockDungeonDefaults.getAllEntityIds());
         registerDropables(dropRegistry, OneBlockDungeonDefaults.getCompletionRewardDropIds());
@@ -74,19 +97,25 @@ public final class OneBlockPlugin extends JavaPlugin
 
         // ── World ────────────────────────────────────────────────────────────
         OneBlockWorldBootstrap.ensureVoidDefaultWorldConfig(getDataDirectory());
+
         getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem());
 
         getEventRegistry().registerGlobal(PrepareUniverseEvent.class, event ->
         {
             WorldConfigProvider original = event.getWorldConfigProvider();
+
             event.setWorldConfigProvider(new WorldConfigProvider()
             {
                 @Override
                 public CompletableFuture<WorldConfig> load(Path path, String worldName)
                 {
                     CompletableFuture<WorldConfig> future = original.load(path, worldName);
+
                     if (!World.DEFAULT.equals(worldName))
+                    {
                         return future;
+                    }
+
                     return future.thenApply(config ->
                     {
                         if (config != null)
@@ -94,6 +123,7 @@ public final class OneBlockPlugin extends JavaPlugin
                             config.setWorldGenProvider(OneBlockWorldInitializer.voidWorldGenProvider());
                             config.markChanged();
                         }
+
                         return config;
                     });
                 }
@@ -108,7 +138,8 @@ public final class OneBlockPlugin extends JavaPlugin
 
         getEventRegistry().registerGlobal(AddWorldEvent.class, event ->
         {
-            var world = event.getWorld();
+            World world = event.getWorld();
+
             if (OneBlockWorldInitializer.isDefaultWorld(world))
             {
                 OneBlockWorldBootstrap.ensureVoidWorldAtSavePath(world.getSavePath());
@@ -129,7 +160,12 @@ public final class OneBlockPlugin extends JavaPlugin
     protected void shutdown()
     {
         LOGGER.at(Level.INFO).log("Shutting down...");
+
         instance = null;
+        hudService = null;
+        dropRegistry = null;
+        expeditionStateProvider = null;
+        dungeonStateProvider = null;
     }
 
     public OneBlockExpeditionStateProvider getExpeditionStateProvider()
@@ -147,16 +183,31 @@ public final class OneBlockPlugin extends JavaPlugin
         return dropRegistry;
     }
 
+    public OneBlockHudService getHudService()
+    {
+        return hudService;
+    }
+
     private static void registerDropables(OneBlockDropRegistry registry, Iterable<String> dropableIds)
     {
-        if (registry == null || dropableIds == null) return;
+        if (registry == null || dropableIds == null)
+        {
+            return;
+        }
+
         for (String dropableId : dropableIds)
         {
-            if (dropableId == null || dropableId.isEmpty()) continue;
+            if (dropableId == null || dropableId.isEmpty())
+            {
+                continue;
+            }
+
             OneBlockDropId parsed = OneBlockDropId.parse(dropableId);
+
             Dropable dropable = parsed.isEntity()
                     ? new EntitySpawnDropable(dropableId)
                     : new ItemDropable(dropableId);
+
             registry.registerDropable(dropable);
         }
     }

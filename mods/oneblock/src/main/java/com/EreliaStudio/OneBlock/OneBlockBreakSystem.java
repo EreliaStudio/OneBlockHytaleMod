@@ -88,6 +88,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     {
         String dungeonId = dungeonState.getActiveDungeonId();
         int waveIndex = dungeonState.getCurrentWaveIndex();
+
         List<String> wave = OneBlockDungeonDefaults.getWave(dungeonId, waveIndex);
         List<Vector3i> spawnBlocks = findDungeonSpawnBlocks(world, pos);
         if (!spawnBlocks.isEmpty()) Collections.shuffle(spawnBlocks);
@@ -101,28 +102,53 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                 spawnContext = withSpawnBlock(context, spawnBlocks.get(spawnIndex % spawnBlocks.size()));
                 spawnIndex++;
             }
+
             dropRegistry.executeDropable(entityId, spawnContext);
         }
 
         String completedDungeon = dungeonState.onWaveCompleted();
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
 
         if (completedDungeon != null)
         {
             world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
             executeDungeonCompletionRewards(completedDungeon, context);
+
             if (player != null)
+            {
+                if (plugin != null)
+                {
+                    plugin.getHudService().showDungeonCompleted(player, completedDungeon);
+                }
+
                 player.sendMessage(Message.raw("Dungeon complete: " + completedDungeon + ". The OneBlock has returned to default."));
+            }
         }
         else
         {
             String dungeonBlockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
             if (dungeonBlockId == null) dungeonBlockId = OneBlockBlockIds.DEFAULT_BLOCK_ID;
+
             String finalBlockId = dungeonBlockId;
             world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), finalBlockId));
-            int nextWave = dungeonState.getCurrentWaveIndex() + 1;
+
+            int completedWaves = dungeonState.getCurrentWaveIndex();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
+
             if (player != null)
-                player.sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + nextWave + "/" + totalWaves + " waves completed."));
+            {
+                if (plugin != null)
+                {
+                    plugin.getHudService().updateDungeonWave(
+                            player,
+                            dungeonId,
+                            completedWaves,
+                            totalWaves
+                    );
+                }
+
+                player.sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + completedWaves + "/" + totalWaves + " waves completed."));
+            }
         }
     }
 
@@ -185,15 +211,22 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         );
     }
 
-    private void handleExpeditionBreak(World world, Vector3i pos, Player player,
-                                       BreakBlockEvent event, DropableContext context)
+    private void handleExpeditionBreak(World world,
+                                       Vector3i pos,
+                                       Player player,
+                                       BreakBlockEvent event,
+                                       DropableContext context)
     {
         String poolId = OneBlockPools.resolvePoolId(event.getBlockType());
         List<String> drops = dropRegistry.getKnownDrops(poolId);
         String rewardId = dropRegistry.pickReward(poolId, drops);
         if (rewardId == null || rewardId.isEmpty()) return;
 
+        String activeExpeditionBeforeBreak = expeditionState.getActiveExpeditionId();
+        int totalTicks = OneBlockExpeditionDefaults.getTicks(activeExpeditionBeforeBreak);
+
         String completedExpedition = expeditionState.onBreak();
+
         String nextBlockId = (completedExpedition != null)
                 ? OneBlockBlockIds.DEFAULT_BLOCK_ID
                 : event.getBlockType().getId();
@@ -203,10 +236,25 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         dropRegistry.executeDropable(rewardId, context);
 
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+
         if (completedExpedition != null && player != null)
         {
             executeExpeditionCompletionRewards(completedExpedition, context);
-            player.sendMessage(Message.raw("Expedition complete: " + completedExpedition + ". The OneBlock has returned to default."));
+
+            if (plugin != null)
+            {
+                plugin.getHudService().showExpeditionCompleted(player, completedExpedition);
+            }
+        }
+        else if (player != null && plugin != null && activeExpeditionBeforeBreak != null && !activeExpeditionBeforeBreak.isBlank())
+        {
+            plugin.getHudService().updateExpeditionTicks(
+                    player,
+                    activeExpeditionBeforeBreak,
+                    expeditionState.getTicksRemaining(),
+                    totalTicks
+            );
         }
     }
 
@@ -214,6 +262,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     {
         List<OneBlockDungeonDefaults.CompletionRewardDefinition> rewards =
                 OneBlockDungeonDefaults.getCompletionRewards(dungeonId);
+
         for (OneBlockDungeonDefaults.CompletionRewardDefinition reward : rewards)
         {
             if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
@@ -231,6 +280,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         OneBlockExpeditionDefaults.RandomRewardBundle bundle =
                 OneBlockExpeditionDefaults.pickRandomBundle(expeditionId);
+
         if (bundle != null)
         {
             for (OneBlockExpeditionDefaults.CompletionRewardDefinition reward : bundle.items)
@@ -240,29 +290,31 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         }
     }
 
-	private void giveReward(OneBlockExpeditionDefaults.CompletionRewardDefinition reward, DropableContext context)
-	{
-		if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) return;
+    private void giveReward(OneBlockExpeditionDefaults.CompletionRewardDefinition reward, DropableContext context)
+    {
+        if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) return;
 
-		dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+        dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
 
-		if (reward.isCrystalReward())
-		{
-			CraftingPlugin.learnRecipe(context.getPlayerEntity(), reward.dropId, context.getStore());
+        if (reward.isCrystalReward())
+        {
+            CraftingPlugin.learnRecipe(context.getPlayerEntity(), reward.dropId, context.getStore());
 
-			OneBlockNotifier.notifyExpeditionUnlocked(
-					context.getStore(),
-					context.getPlayerEntity(),
-					reward.unlockExpeditionId
-			);
-		}
-	}
+            OneBlockNotifier.notifyExpeditionUnlocked(
+                    context.getStore(),
+                    context.getPlayerEntity(),
+                    reward.unlockExpeditionId
+            );
+        }
+    }
 
     private static boolean isValidOneBlockBreak(Player player, BreakBlockEvent event)
     {
         if (player == null || event == null) return false;
+
         Object gameMode = player.getGameMode();
         if (gameMode != null && "Creative".equalsIgnoreCase(gameMode.toString())) return false;
+
         return OneBlockBlockUtil.isOneBlock(event.getBlockType());
     }
 }

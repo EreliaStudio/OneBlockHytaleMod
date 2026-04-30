@@ -313,11 +313,11 @@ def build_lang_block(expedition_id: str,
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.{loot_lines}{reward_lines}",
 
 		# New gameplay/UI keys
-		f"oneblock.expeditions.{eid}.name={display}",
-		f"oneblock.announcements.expedition_started.{eid}={display} expedition started.",
-		f"oneblock.announcements.expedition_completed.{eid}={display} expedition complete. The OneBlock has returned to default.",
-		f"oneblock.announcements.expedition_unlocked.{eid}=New expedition unlocked: {display}",
-		f"oneblock.progress.expedition.{eid}={display}: {{0}}/{{1}} ticks remaining",
+		f"expeditions.{eid}.name={display}",
+		f"announcements.expedition_started.{eid}={display} expedition started.",
+		f"announcements.expedition_completed.{eid}={display} expedition complete. The OneBlock has returned to default.",
+		f"announcements.expedition_unlocked.{eid}=New expedition unlocked: {display}",
+		f"progress.expedition.{eid}={display}: {{0}}/{{1}} ticks remaining",
 	]
 
     return "\n".join(lines)
@@ -480,9 +480,9 @@ def build_lang_dungeon_block(expedition_id: str,
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin the {display} dungeon.{wave_lines}{reward_lines}",
 
-		f"oneblock.expeditions.{eid}.name={display}",
-		f"oneblock.announcements.dungeon_started.{eid}={display} dungeon started.",
-		f"oneblock.announcements.dungeon_completed.{eid}={display} dungeon complete. The OneBlock has returned to default.",
+		f"expeditions.{eid}.name={display}",
+		f"announcements.dungeon_started.{eid}={display} dungeon started.",
+		f"announcements.dungeon_completed.{eid}={display} dungeon complete. The OneBlock has returned to default.",
 	]
 
     return "\n".join(lines)

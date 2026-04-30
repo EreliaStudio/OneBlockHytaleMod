@@ -17,14 +17,16 @@ public final class OneBlockNotifier
         Player player = getPlayer(store, playerRef);
         if (player == null || expeditionId == null || expeditionId.isBlank()) return;
 
-        String key = "oneblock.announcements.expedition_unlocked." + expeditionId;
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null)
+        {
+            plugin.getHudService().showExpeditionUnlocked(player, expeditionId);
+        }
 
-        // TODO: replace with the real translated-message constructor/method
-        // when confirmed in the Hytale API.
         player.sendMessage(Message.raw("[Unlocked] " + readableExpeditionName(expeditionId)));
 
         // Intended later:
-        // player.sendMessage(Message.translated(key));
+        // player.sendMessage(Message.translated("server.announcements.expedition_unlocked." + expeditionId));
     }
 
     public static void notifyExpeditionStarted(Store<EntityStore> store,
@@ -34,11 +36,17 @@ public final class OneBlockNotifier
         Player player = getPlayer(store, playerRef);
         if (player == null || expeditionId == null || expeditionId.isBlank()) return;
 
-        String key = "oneblock.announcements.expedition_started." + expeditionId;
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null)
+        {
+            int ticks = OneBlockExpeditionDefaults.getTicks(expeditionId);
+            plugin.getHudService().showExpeditionStarted(player, expeditionId, ticks);
+        }
+
         player.sendMessage(Message.raw(readableExpeditionName(expeditionId) + " expedition started."));
 
         // Intended later:
-        // player.sendMessage(Message.translated(key));
+        // player.sendMessage(Message.translated("server.announcements.expedition_started." + expeditionId));
     }
 
     public static void notifyExpeditionCompleted(Store<EntityStore> store,
@@ -48,11 +56,49 @@ public final class OneBlockNotifier
         Player player = getPlayer(store, playerRef);
         if (player == null || expeditionId == null || expeditionId.isBlank()) return;
 
-        String key = "oneblock.announcements.expedition_completed." + expeditionId;
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null)
+        {
+            plugin.getHudService().showExpeditionCompleted(player, expeditionId);
+        }
+
         player.sendMessage(Message.raw(readableExpeditionName(expeditionId) + " expedition complete. The OneBlock has returned to default."));
 
         // Intended later:
-        // player.sendMessage(Message.translated(key));
+        // player.sendMessage(Message.translated("server.announcements.expedition_completed." + expeditionId));
+    }
+
+    public static void notifyDungeonStarted(Store<EntityStore> store,
+                                            Ref<EntityStore> playerRef,
+                                            String dungeonId)
+    {
+        Player player = getPlayer(store, playerRef);
+        if (player == null || dungeonId == null || dungeonId.isBlank()) return;
+
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null)
+        {
+            int waves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
+            plugin.getHudService().showDungeonStarted(player, dungeonId, waves);
+        }
+
+        player.sendMessage(Message.raw(readableExpeditionName(dungeonId) + " dungeon started."));
+    }
+
+    public static void notifyDungeonCompleted(Store<EntityStore> store,
+                                              Ref<EntityStore> playerRef,
+                                              String dungeonId)
+    {
+        Player player = getPlayer(store, playerRef);
+        if (player == null || dungeonId == null || dungeonId.isBlank()) return;
+
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null)
+        {
+            plugin.getHudService().showDungeonCompleted(player, dungeonId);
+        }
+
+        player.sendMessage(Message.raw(readableExpeditionName(dungeonId) + " dungeon complete. The OneBlock has returned to default."));
     }
 
     private static Player getPlayer(Store<EntityStore> store, Ref<EntityStore> playerRef)
