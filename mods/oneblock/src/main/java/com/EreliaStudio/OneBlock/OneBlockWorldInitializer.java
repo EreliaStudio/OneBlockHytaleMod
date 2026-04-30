@@ -37,9 +37,11 @@ final class OneBlockWorldInitializer
         return world != null && World.DEFAULT.equals(world.getName());
     }
 
-    static void initializeWorld(World world)
+    static void initializeWorld(World world, String blockId)
     {
         if (world == null) return;
+
+        String resolvedBlockId = (blockId != null && !blockId.isBlank()) ? blockId : START_BLOCK_ID;
 
         world.execute(() ->
         {
@@ -54,8 +56,8 @@ final class OneBlockWorldInitializer
 
             if (ORIGIN_PLACED.compareAndSet(false, true))
             {
-                world.setBlock(ORIGIN_BLOCK.getX(), ORIGIN_BLOCK.getY(), ORIGIN_BLOCK.getZ(), START_BLOCK_ID);
-                LOGGER.at(Level.INFO).log("Placed OneBlock at " + ORIGIN_BLOCK);
+                world.setBlock(ORIGIN_BLOCK.getX(), ORIGIN_BLOCK.getY(), ORIGIN_BLOCK.getZ(), resolvedBlockId);
+                LOGGER.at(Level.INFO).log("Placed OneBlock at " + ORIGIN_BLOCK + " with block " + resolvedBlockId);
             }
         });
     }

@@ -105,6 +105,18 @@ public final class OneBlockHudService
         hud.setProgress(progress);
     }
 
+    public void restoreExpeditionHud(Player player, String expeditionId, int ticksRemaining, int totalTicks)
+    {
+        OneBlockProgressHud hud = getOrShow(player);
+        if (hud == null)
+        {
+            return;
+        }
+
+        float progress = totalTicks > 0 ? (float) ticksRemaining / (float) totalTicks : 0.0f;
+        hud.setTitleAndProgress(readableName(expeditionId), progress);
+    }
+
     public void showExpeditionCompleted(Player player, String expeditionId)
     {
         hide(player);

@@ -41,6 +41,7 @@ public final class OneBlockExpeditionStateProvider
     {
         state.expeditionId = expeditionId;
         state.ticksRemaining = ticks;
+        state.totalTicks = ticks;
         save();
     }
 
@@ -95,9 +96,15 @@ public final class OneBlockExpeditionStateProvider
         catch (Exception ignored) { return new SaveData(); }
     }
 
+    public synchronized int getTotalTicks()
+    {
+        return state.totalTicks;
+    }
+
     private static final class SaveData
     {
         private String expeditionId;
         private int ticksRemaining;
+        private int totalTicks;
     }
 }

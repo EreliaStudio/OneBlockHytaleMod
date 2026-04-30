@@ -2,6 +2,8 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.event.events.PrepareUniverseEvent;
+import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
+import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
@@ -143,8 +145,23 @@ public final class OneBlockPlugin extends JavaPlugin
             if (OneBlockWorldInitializer.isDefaultWorld(world))
             {
                 OneBlockWorldBootstrap.ensureVoidWorldAtSavePath(world.getSavePath());
-                OneBlockWorldInitializer.initializeWorld(world);
+                OneBlockWorldInitializer.initializeWorld(world, resolveActiveBlockId());
             }
+        });
+
+        getEventRegistry().registerGlobal(PlayerReadyEvent.class, event ->
+        {
+            if (!expeditionStateProvider.hasActiveExpedition())
+            {
+                return;
+            }
+
+            Player player = event.getPlayer();
+            String expeditionId = expeditionStateProvider.getActiveExpeditionId();
+            int ticksRemaining = expeditionStateProvider.getTicksRemaining();
+            int totalTicks = expeditionStateProvider.getTotalTicks();
+
+            hudService.restoreExpeditionHud(player, expeditionId, ticksRemaining, totalTicks);
         });
 
         LOGGER.at(Level.INFO).log("Setup complete.");
@@ -186,6 +203,24 @@ public final class OneBlockPlugin extends JavaPlugin
     public OneBlockHudService getHudService()
     {
         return hudService;
+    }
+
+    private String resolveActiveBlockId()
+    {
+        if (dungeonStateProvider != null && dungeonStateProvider.isDungeonActive())
+        {
+            String dungeonId = dungeonStateProvider.getActiveDungeonId();
+            String blockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
+            return blockId != null ? blockId : OneBlockBlockIds.DEFAULT_BLOCK_ID;
+        }
+
+        if (expeditionStateProvider != null && expeditionStateProvider.hasActiveExpedition())
+        {
+            String expeditionId = expeditionStateProvider.getActiveExpeditionId();
+            return OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
+        }
+
+        return OneBlockBlockIds.DEFAULT_BLOCK_ID;
     }
 
     private static void registerDropables(OneBlockDropRegistry registry, Iterable<String> dropableIds)
