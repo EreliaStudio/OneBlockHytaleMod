@@ -7,141 +7,169 @@ hide empty members
 
 title OneBlock Expedition Progression Tree\n(arrows = expedition unlock cost)
 
-class Default {
+class Default <<Cost : 0 / Reward : 1>> {
+	entity:Rabbit
+	entity:Chicken
 	Ingredient_Fibre
 	Ingredient_Stick
 	Rubble_Stone
 	Soil_Dirt
 }
 
-class CaveEntry {
+class CaveEntry <<Cost : 1 / Reward : 1>> {
+	entity:Bat
+	entity:Rat
 	Rubble_Stone
 	Rock_Stone
 	Ore_Copper - Rare
 }
 
-class ForestEdge {
+class ForestEdge <<Cost : 1 / Reward : 1>> {
 	entity:Rabbit
 	entity:Boar
+	entity:Boar_Piglet
+	entity:Fox - Rare
 	Ingredient_Stick
 	Wood_Oak_Trunk
 	Plant_Sapling_Oak
 	Plant_Fruit_Apple - Rare
 }
 
-class Plain {
+class Plain <<Cost : 1 / Reward : 1>> {
 	entity:Rabbit
 	entity:Sheep
 	entity:Chicken
+	entity:Antelope - Rare
 	Plant_Crop_Carrot_Item
 	Plant_Crop_Corn_Item
 	Plant_Crop_Wheat_Item
 	Ingredient_Fibre
 }
 
-class Cave {
+class Cave <<Cost : 2 / Reward : 1>> {
 	entity:Rat
 	entity:Bat
+	entity:Spider - Rare
 	Rock_Stone
 	Rubble_Stone
 	Ore_Copper - Rare
 }
 
-enum RatCave <<Dungeon>> {
+enum RatCave <<Dungeon / Cost : 3 / Reward : 8>> {
 	Wave 1 - entity:Rat x 3
 	Wave 2 - entity:Rat x 2 + entity:Spider x 1
 	Wave 3 - entity:Spider x 2 + entity:Cave_Spider x 1
 }
 
-class LowerCave {
+class LowerCave <<Cost : 3 / Reward : 2>> {
 	entity:Rat
 	entity:Bat
+	entity:Spider
+	entity:Cave_Spider - Rare
 	Rock_Stone
 	Rubble_Stone
 	Ore_Copper - Rare
 }
 
-class CopperCave {
+class CopperCave <<Cost : 4 / Reward : 2>> {
 	entity:Bat
+	entity:Rat
+	entity:Goblin_Miner - Rare
 	Rock_Stone
 	Rubble_Stone
 	Ore_Copper
 	Ore_Iron - Rare
 }
 
-enum GobelinGank <<Dungeon>> {
+enum GobelinGank <<Dungeon / Cost : 5 / Reward : 12>> {
 	Wave 1 - entity:Goblin_Scrapper x 2
 	Wave 2 - entity:Goblin_Scrapper x 2 + entity:Goblin_Miner x 1
 	Wave 3 - entity:Goblin_Scrapper x 3 + entity:Goblin_Miner x 2
 }
 
-class IronCave {
+class IronCave <<Cost : 6 / Reward : 3>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Goblin_Scavenger - Rare
 	Rock_Basalt
 	Rubble_Basalt
 	Ore_Iron
 	Ore_Thorium - Rare
 }
 
-class SandCave {
+class SandCave <<Cost : 5 / Reward : 2>> {
+	entity:Bat
+	entity:Spider
+	entity:Cactee - Rare
 	Block_Sand
 	Rock_Sandstone
 	Rubble_Sandstone
 	Ore_Gold - Rare
 }
 
-class GoldCave {
+class GoldCave <<Cost : 7 / Reward : 3>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Goblin_Thief - Rare
 	Rock_Basalt
 	Rubble_Basalt
 	Ore_Gold
 	Rock_Gem_Topaz - Rare
 }
 
-class ThoriumCave {
+class ThoriumCave <<Cost : 8 / Reward : 4>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Goblin_Lobber - Rare
 	Rock_Basalt
 	Rubble_Basalt
 	Ore_Thorium
 	Ore_Cobalt - Rare
 }
 
-enum GobelinInvasion <<Dungeon>> {
+enum GobelinInvasion <<Dungeon / Cost : 9 / Reward : 24>> {
 	Wave 1 - entity:Goblin_Scrapper x 3 + entity:Goblin_Miner x 1
 	Wave 2 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 2
 	Wave 3 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 3
 	Wave 4 - entity:Goblin_Scrapper x 6 + entity:Goblin_Miner x 3
 }
 
-class SilverCave {
+class SilverCave <<Cost : 9 / Reward : 4>> {
+	entity:Goblin_Miner
+	entity:Cave_Spider
+	entity:Goblin_Thief - Rare
 	Rock_Shale
 	Rubble_Shale
 	Ore_Silver
 	Rock_Gem_Sapphire - Rare
 }
 
-class CobaltCave {
+class CobaltCave <<Cost : 10 / Reward : 5>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Goblin_Lobber
+	entity:Goblin_Ogre - Rare
 	Rock_Shale
 	Rubble_Shale
 	Ore_Cobalt
 	Ore_Adamantite - Rare
 }
 
-class AdamantiteCave {
+class AdamantiteCave <<Cost : 13 / Reward : 6>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Goblin_Lobber
+	entity:Goblin_Ogre - Rare
 	Rubble_Shale
 	Rock_Shale
 	Ore_Adamantite
 	Ore_Mithril - Rare
 }
 
-class GemCave {
+class GemCave <<Cost : 11 / Reward : 5>> {
+	entity:Cave_Spider
+	entity:Goblin_Thief
+	entity:Earth_Elemental - Rare
 	Rubble_Shale
 	Rock_Shale
 	Rock_Gem_Emerald
@@ -149,7 +177,10 @@ class GemCave {
 	Rock_Gem_Sapphire - Rare
 }
 
-class FireCave {
+class FireCave <<Cost : 14 / Reward : 6>> {
+	entity:Zombie_Burnt
+	entity:Emberwulf
+	entity:Burnt_Skeleton_Soldier - Rare
 	Rock_Volcanic
 	Rubble_Volcanic
 	Rubble_Volcanic_Medium
@@ -158,7 +189,10 @@ class FireCave {
 	Ore_Cobalt - Rare
 }
 
-class GemDeepCave {
+class GemDeepCave <<Cost : 15 / Reward : 7>> {
+	entity:Cave_Spider
+	entity:Earth_Elemental
+	entity:Earthen_Golem - Rare
 	Rock_Shale
 	Rubble_Shale
 	Rock_Gem_Emerald
@@ -167,32 +201,39 @@ class GemDeepCave {
 	Rock_Gem_Diamond - Rare
 }
 
-class MithrilCave {
+class MithrilCave <<Cost : 16 / Reward : 7>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Goblin_Ogre - Rare
 	Rock_Ledge_Brick
 	Ore_Mithril
 	Ore_Onyxium - Rare
 }
 
-class OnyxiumCave {
+class OnyxiumCave <<Cost : 19 / Reward : 8>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Void_Crawler - Rare
 	Rock_Ledge_Brick
 	Ore_Onyxium
 	Ore_Prisma - Rare
 }
 
-class PrismaCave {
+class PrismaCave <<Cost : 23 / Reward : 10>> {
 	entity:Goblin_Scrapper
 	entity:Goblin_Miner
+	entity:Void_Crawler
+	entity:Void_Eye - Rare
 	Rock_Volcanic
 	Rubble_Volcanic
 	Ore_Prisma
 	Rock_Gem_Zephyr - Rare
 }
 
-class SandCavern {
+class SandCavern <<Cost : 6 / Reward : 3>> {
+	entity:Bat
+	entity:Cactee
+	entity:Sandswept_Zombie - Rare
 	Rubble_Stone
 	Rock_Stone
 	Rock_Sandstone
@@ -200,7 +241,11 @@ class SandCavern {
 	Ore_Gold - Rare
 }
 
-class Desert {
+class Desert <<Cost : 7 / Reward : 3>> {
+	entity:Cactee
+	entity:Camel
+	entity:Camel_Calf
+	entity:Sandswept_Zombie - Rare
 	Block_Sand
 	Rock_Sandstone
 	Rubble_Sandstone
@@ -210,11 +255,12 @@ class Desert {
 	Ore_Gold - Rare
 }
 
-class ForestEntry {
+class ForestEntry <<Cost : 2 / Reward : 1>> {
 	entity:Boar
 	entity:Boar_Piglet
 	entity:Pigeon
 	entity:Fox
+	entity:Wolf - Rare
 	Ingredient_Stick
 	Wood_Oak_Trunk
 	Wood_Beech_Trunk
@@ -227,7 +273,10 @@ class ForestEntry {
 	Plant_Crop_Mushroom_Shelve_Brown
 }
 
-class Pond {
+class Pond <<Cost : 3 / Reward : 2>> {
+	entity:Frog
+	entity:Duck
+	entity:Bluegill
 	Fish_Bluegill_Item
 	Plant_Moss_Block_Green
 	Plant_Moss_Rug_Green
@@ -235,7 +284,11 @@ class Pond {
 	Soil_Dirt
 }
 
-class River {
+class River <<Cost : 4 / Reward : 2>> {
+	entity:Frog
+	entity:Duck
+	entity:Bluegill
+	entity:Crab - Rare
 	Fish_Bluegill_Item
 	Rubble_Stone
 	Rock_Stone
@@ -243,7 +296,11 @@ class River {
 	Plant_Moss_Green
 }
 
-class Lake {
+class Lake <<Cost : 5 / Reward : 2>> {
+	entity:Frog
+	entity:Duck
+	entity:Bluegill
+	entity:Crocodile - Rare
 	Fish_Bluegill_Item
 	Plant_Moss_Block_Green
 	Plant_Moss_Rug_Green
@@ -251,7 +308,10 @@ class Lake {
 	Rock_Gem_Sapphire - Rare
 }
 
-class Sea {
+class Sea <<Cost : 7 / Reward : 3>> {
+	entity:Crab
+	entity:Bluegill
+	entity:Fish_Whale_Humpback_Item - Rare
 	Fish_Whale_Humpback_Item - Rare
 	Rock_Aqua_Brick
 	Rock_Aqua_Brick_Smooth
@@ -261,7 +321,10 @@ class Sea {
 	Rock_Gem_Sapphire - Rare
 }
 
-class Costline {
+class Costline <<Cost : 6 / Reward : 3>> {
+	entity:Crab
+	entity:Duck
+	entity:Cactee - Rare
 	Block_Sand
 	Rock_Sandstone
 	Rubble_Sandstone
@@ -270,7 +333,10 @@ class Costline {
 	Rock_Gem_Sapphire - Rare
 }
 
-class SeaCavern {
+class SeaCavern <<Cost : 9 / Reward : 4>> {
+	entity:Crab
+	entity:Cave_Spider
+	entity:Scarak_Louse - Rare
 	Rock_Aqua_Brick
 	Rock_Aqua_Brick_Smooth
 	Rock_Aqua_Brick_Ornate
@@ -278,7 +344,10 @@ class SeaCavern {
 	Rock_Gem_Diamond - Rare
 }
 
-class SeaInfestedNest {
+class SeaInfestedNest <<Cost : 13 / Reward : 6>> {
+	entity:Scarak_Louse
+	entity:Scarak_Fighter
+	entity:Scarak_Seeker - Rare
 	Soil_Hive
 	Soil_Hive_Brick
 	Soil_Hive_Brick_Smooth
@@ -288,18 +357,20 @@ class SeaInfestedNest {
 	Rock_Gem_Diamond - Rare
 }
 
-enum SeaMonster <<Dungeon>> {
-	Wave 1 - entity:Spider x 3
-	Wave 2 - entity:Cave_Spider x 3 + entity:Spider x 2
-	Wave 3 - entity:Cave_Spider x 4 + entity:Rat x 3
-	Wave 4 - entity:Cave_Spider x 6
+enum SeaMonster <<Dungeon / Cost : 15 / Reward : 40>> {
+	Wave 1 - entity:Scarak_Louse x 5 + entity:Spider x 3
+	Wave 2 - entity:Scarak_Fighter x 4 + entity:Cave_Spider x 3
+	Wave 3 - entity:Scarak_Defender x 3 + entity:Scarak_Seeker x 3 + entity:Cave_Spider x 4
+	Wave 4 - entity:Scarak_Broodmother x 1 + entity:Scarak_Fighter x 6 + entity:Scarak_Seeker x 4
 }
 
-class Forest {
+class Forest <<Cost : 3 / Reward : 2>> {
 	entity:Boar
 	entity:Boar_Piglet
 	entity:Fox
 	entity:Pigeon
+	entity:Deer
+	entity:Wolf - Rare
 	Ingredient_Stick
 	Wood_Oak_Trunk
 	Wood_Beech_Trunk
@@ -310,7 +381,10 @@ class Forest {
 	Plant_Fruit_Apple
 }
 
-class AridForest {
+class AridForest <<Cost : 5 / Reward : 2>> {
+	entity:Fox
+	entity:Armadillo
+	entity:Cactee - Rare
 	Wood_Ash_Trunk
 	Wood_Bottletree_Trunk
 	Wood_Bottletree_Roots
@@ -320,7 +394,10 @@ class AridForest {
 	Rubble_Sandstone
 }
 
-class Swamp {
+class Swamp <<Cost : 5 / Reward : 2>> {
+	entity:Frog
+	entity:Crocodile
+	entity:Fen_Stalker - Rare
 	Soil_Dirt
 	Soil_Clay_Blue
 	Plant_Moss_Block_Green
@@ -330,7 +407,10 @@ class Swamp {
 	Plant_Crop_Mushroom_Block_Yellow
 }
 
-class EnchantedForest {
+class EnchantedForest <<Cost : 8 / Reward : 4>> {
+	entity:Deer
+	entity:Bluebird
+	entity:Earth_Elemental - Rare
 	Wood_Amber_Trunk
 	Wood_Amber_Roots
 	Plant_Leaves_Amber
@@ -341,7 +421,11 @@ class EnchantedForest {
 	Rock_Gem_Topaz - Rare
 }
 
-class FairyPond {
+class FairyPond <<Cost : 10 / Reward : 5>> {
+	entity:Frog
+	entity:Duck
+	entity:Bluebird
+	entity:Earth_Elemental - Rare
 	Plant_Flower_Common_Pink2
 	Plant_Flower_Common_Yellow
 	Plant_Flower_Orchid_Yellow
@@ -351,9 +435,11 @@ class FairyPond {
 	Rock_Gem_Topaz
 }
 
-class DeepForest {
+class DeepForest <<Cost : 7 / Reward : 3>> {
 	entity:Boar
 	entity:Fox
+	entity:Wolf
+	entity:Crawler - Rare
 	Wood_Beech_Trunk
 	Wood_Ash_Trunk
 	Wood_Maple_Trunk
@@ -364,7 +450,11 @@ class DeepForest {
 	Rock_Gem_Emerald - Rare
 }
 
-class DarkForest {
+class DarkForest <<Cost : 10 / Reward : 5>> {
+	entity:Wolf
+	entity:Crawler
+	entity:Zombie
+	entity:Aberrant_Zombie - Rare
 	Plant_Leaves_Bramble
 	Plant_Crop_Mushroom_Block_Yellow
 	Plant_Crop_Mushroom_Block_Yellow_Mycelium
@@ -373,7 +463,10 @@ class DarkForest {
 	Rock_Gem_Ruby - Rare
 }
 
-class BurnedForest {
+class BurnedForest <<Cost : 12 / Reward : 5>> {
+	entity:Zombie_Burnt
+	entity:Emberwulf
+	entity:Burnt_Skeleton_Archer - Rare
 	Wood_Ash_Trunk
 	Ingredient_Fire_Essence
 	Rock_Volcanic
@@ -382,7 +475,11 @@ class BurnedForest {
 	Ore_Thorium - Rare
 }
 
-class CursedForest {
+class CursedForest <<Cost : 13 / Reward : 6>> {
+	entity:Zombie
+	entity:Aberrant_Zombie
+	entity:Skeleton_Scout
+	entity:Skeleton_Archer - Rare
 	Ingredient_Bone_Fragment
 	Deco_Bone_Full
 	Deco_Bone_Spike
@@ -392,7 +489,12 @@ class CursedForest {
 	Rock_Gem_Zephyr - Rare
 }
 
-class Graveyard {
+class Graveyard <<Cost : 15 / Reward : 7>> {
+	entity:Zombie
+	entity:Skeleton_Scout
+	entity:Skeleton_Archer
+	entity:Skeleton_Soldier
+	entity:Skeleton_Mage - Rare
 	Ingredient_Bone_Fragment
 	Deco_Bone_Full
 	Deco_Bone_Spike
@@ -402,14 +504,17 @@ class Graveyard {
 	Weapon_Club_Zombie_Leg - Rare
 }
 
-enum UndeadTemple <<Dungeon>> {
-	Wave 1 - entity:Rat x 4
-	Wave 2 - entity:Spider x 3 + entity:Rat x 2
-	Wave 3 - entity:Cave_Spider x 3 + entity:Spider x 3
-	Wave 4 - entity:Cave_Spider x 5 + entity:Bat x 3
+enum UndeadTemple <<Dungeon / Cost : 17 / Reward : 45>> {
+	Wave 1 - entity:Skeleton_Scout x 3 + entity:Zombie x 2
+	Wave 2 - entity:Skeleton_Soldier x 3 + entity:Skeleton_Archer x 2
+	Wave 3 - entity:Skeleton_Knight x 2 + entity:Skeleton_Ranger x 3
+	Wave 4 - entity:Skeleton_Mage x 2 + entity:Skeleton_Knight x 3 + entity:Zombie x 4
 }
 
-class VoidPortal {
+class VoidPortal <<Cost : 20 / Reward : 8>> {
+	entity:Void_Larva
+	entity:Void_Crawler
+	entity:Void_Eye - Rare
 	Portal_Device
 	Instance_Gateway
 	Rock_Runic_Brick
@@ -418,14 +523,17 @@ class VoidPortal {
 	Ore_Onyxium - Rare
 }
 
-enum VoidTemple <<Dungeon>> {
-	Wave 1 - entity:Cave_Spider x 4 + entity:Bat x 2
-	Wave 2 - entity:Goblin_Scrapper x 3 + entity:Goblin_Miner x 3
-	Wave 3 - entity:Cave_Spider x 6 + entity:Goblin_Scrapper x 3
-	Wave 4 - entity:Goblin_Scrapper x 6 + entity:Goblin_Miner x 4
+enum VoidTemple <<Dungeon / Cost : 24 / Reward : 75>> {
+	Wave 1 - entity:Void_Larva x 6 + entity:Void_Crawler x 2
+	Wave 2 - entity:Void_Crawler x 5 + entity:Void_Eye x 2
+	Wave 3 - entity:Void_Spawn x 4 + entity:Void_Spectre x 2
+	Wave 4 - entity:Void_Spawn x 6 + entity:Void_Spectre x 4 + entity:Void_Eye x 3
 }
 
-class OutlanderForest {
+class OutlanderForest <<Cost : 15 / Reward : 7>> {
+	entity:Outlander_Initiate
+	entity:Outlander_Hunter
+	entity:Outlander_Marauder - Rare
 	Wood_Amber_Trunk
 	Wood_Amber_Roots
 	Plant_Leaves_Amber
@@ -434,7 +542,13 @@ class OutlanderForest {
 	Rock_Gem_Zephyr - Rare
 }
 
-class OutlanderPlain {
+class OutlanderPlain <<Cost : 16 / Reward : 7>> {
+	entity:Outlander_Initiate
+	entity:Outlander_Hunter
+	entity:Outlander_Berserker
+	entity:Outlander_Marauder
+	entity:Outlander_Priest - Rare
+	entity:Outlander_Brute - Rare
 	Plant_Crop_Wheat_Item
 	Plant_Crop_Corn_Item
 	Plant_Crop_Carrot_Item
@@ -443,13 +557,25 @@ class OutlanderPlain {
 	Ore_Adamantite - Rare
 }
 
-enum OutlanderGank <<Dungeon>> {
-	Wave 1 - entity:Goblin_Scrapper x 3
-	Wave 2 - entity:Goblin_Miner x 2 + entity:Goblin_Scrapper x 3
-	Wave 3 - entity:Goblin_Miner x 4 + entity:Goblin_Scrapper x 4
+enum OutlanderGank <<Dungeon / Cost : 17 / Reward : 42>> {
+	Wave 1 - entity:Outlander_Initiate x 4 + entity:Outlander_Hunter x 1
+	Wave 2 - entity:Outlander_Initiate x 3 + entity:Outlander_Hunter x 2 + entity:Outlander_Marauder x 1
+	Wave 3 - entity:Outlander_Berserker x 2 + entity:Outlander_Marauder x 3
+	Wave 4 - entity:Outlander_Berserker x 3 + entity:Outlander_Hunter x 3 + entity:Outlander_Marauder x 2
 }
 
-class Toundra {
+enum OutlanderCity <<Dungeon / Cost : 20 / Reward : 60>> {
+	Wave 1 - entity:Outlander_Initiate x 5 + entity:Outlander_Hunter x 3
+	Wave 2 - entity:Outlander_Marauder x 4 + entity:Outlander_Berserker x 3
+	Wave 3 - entity:Outlander_Marauder x 5 + entity:Outlander_Hunter x 4 + entity:Outlander_Priest x 1
+	Wave 4 - entity:Outlander_Berserker x 4 + entity:Outlander_Brute x 1 + entity:Outlander_Priest x 1
+	Wave 5 - entity:Outlander_Brute x 2 + entity:Outlander_Priest x 2 + entity:Outlander_Marauder x 4
+}
+
+class Toundra <<Cost : 17 / Reward : 8>> {
+	entity:Wolf
+	entity:Frost_Zombie
+	entity:Frost_Skeleton_Scout - Rare
 	Rock_Ice
 	Rubble_Ice
 	Rubble_Ice_Medium
@@ -458,14 +584,10 @@ class Toundra {
 	Ingredient_Ice_Essence - Rare
 }
 
-enum OutlanderCity <<Dungeon>> {
-	Wave 1 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 2
-	Wave 2 - entity:Goblin_Scrapper x 5 + entity:Goblin_Miner x 4
-	Wave 3 - entity:Goblin_Scrapper x 6 + entity:Goblin_Miner x 5
-	Wave 4 - entity:Goblin_Scrapper x 8 + entity:Goblin_Miner x 6
-}
-
-class FrozenForest {
+class FrozenForest <<Cost : 18 / Reward : 8>> {
+	entity:Wolf
+	entity:Frost_Zombie
+	entity:Frost_Skeleton_Ranger - Rare
 	Wood_Birch_Trunk
 	Plant_Sapling_Birch
 	Plant_Leaves_Birch
@@ -475,7 +597,10 @@ class FrozenForest {
 	Ingredient_Ice_Essence - Rare
 }
 
-class IceLand {
+class IceLand <<Cost : 18 / Reward : 8>> {
+	entity:Frost_Zombie
+	entity:Frost_Skeleton_Scout
+	entity:Frost_Golem - Rare
 	Rock_Ice
 	Rubble_Ice
 	Rubble_Ice_Medium
@@ -484,7 +609,10 @@ class IceLand {
 	Ingredient_Ice_Essence
 }
 
-class IcyCavern {
+class IcyCavern <<Cost : 20 / Reward : 9>> {
+	entity:Frost_Zombie
+	entity:Frost_Skeleton_Fighter
+	entity:Frost_Skeleton_Mage - Rare
 	Rock_Ice
 	Rubble_Ice
 	Rock_Ice_Icicles
@@ -493,7 +621,10 @@ class IcyCavern {
 	Ingredient_Ice_Essence - Rare
 }
 
-class YetiCavern {
+class YetiCavern <<Cost : 22 / Reward : 10>> {
+	entity:Frost_Golem
+	entity:Frost_Skeleton_Knight
+	entity:Ice_Dragon - Rare
 	Rock_Ice
 	Rubble_Ice_Medium
 	Rock_Ice_Icicles
@@ -502,14 +633,18 @@ class YetiCavern {
 	Weapon_Staff_Crystal_Ice - Rare
 }
 
-enum IceTemple <<Dungeon>> {
-	Wave 1 - entity:Bat x 4
-	Wave 2 - entity:Cave_Spider x 4 + entity:Bat x 3
-	Wave 3 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 2
-	Wave 4 - entity:Goblin_Scrapper x 6 + entity:Cave_Spider x 4
+enum IceTemple <<Dungeon / Cost : 24 / Reward : 75>> {
+	Wave 1 - entity:Frost_Zombie x 4 + entity:Frost_Skeleton_Scout x 2
+	Wave 2 - entity:Frost_Skeleton_Fighter x 4 + entity:Frost_Skeleton_Ranger x 2
+	Wave 3 - entity:Frost_Golem x 2 + entity:Frost_Skeleton_Mage x 3
+	Wave 4 - entity:Ice_Dragon x 1 + entity:Frost_Skeleton_Knight x 4 + entity:Frost_Zombie x 6
 }
 
-class IcyForest {
+class IcyForest <<Cost : 20 / Reward : 9>> {
+	entity:Wolf
+	entity:Frost_Zombie
+	entity:Frost_Skeleton_Ranger
+	entity:Frost_Golem - Rare
 	Wood_Ice_Trunk
 	Plant_Seeds_Ice
 	Plant_Leaves_Birch
@@ -518,7 +653,10 @@ class IcyForest {
 	Ingredient_Ice_Essence
 }
 
-class FireLand {
+class FireLand <<Cost : 16 / Reward : 7>> {
+	entity:Zombie_Burnt
+	entity:Emberwulf
+	entity:Burnt_Skeleton_Soldier - Rare
 	Rock_Volcanic
 	Rubble_Volcanic
 	Rubble_Volcanic_Medium
@@ -527,14 +665,18 @@ class FireLand {
 	Ore_Cobalt - Rare
 }
 
-enum Volcano <<Dungeon>> {
-	Wave 1 - entity:Bat x 4 + entity:Goblin_Miner x 2
-	Wave 2 - entity:Goblin_Scrapper x 4 + entity:Goblin_Miner x 3
-	Wave 3 - entity:Goblin_Scrapper x 6 + entity:Cave_Spider x 3
-	Wave 4 - entity:Goblin_Scrapper x 8 + entity:Goblin_Miner x 4
+enum Volcano <<Dungeon / Cost : 19 / Reward : 55>> {
+	Wave 1 - entity:Zombie_Burnt x 5 + entity:Emberwulf x 2
+	Wave 2 - entity:Burnt_Skeleton_Soldier x 4 + entity:Burnt_Skeleton_Archer x 3
+	Wave 3 - entity:Burnt_Skeleton_Knight x 3 + entity:Burnt_Skeleton_Wizard x 2
+	Wave 4 - entity:Ember_Golem x 2 + entity:Burnt_Skeleton_Praetorian x 3 + entity:Emberwulf x 4
 }
 
-class FieryGraveward {
+class FieryGraveward <<Cost : 17 / Reward : 8>> {
+	entity:Zombie_Burnt
+	entity:Burnt_Skeleton_Soldier
+	entity:Burnt_Skeleton_Archer
+	entity:Burnt_Skeleton_Knight - Rare
 	Ingredient_Bone_Fragment
 	Deco_Bone_Full
 	Deco_Bone_Spike
@@ -543,7 +685,10 @@ class FieryGraveward {
 	Rock_Gem_Ruby - Rare
 }
 
-class HellGate {
+class HellGate <<Cost : 20 / Reward : 9>> {
+	entity:Incandescent_Skeleton_Fighter
+	entity:Incandescent_Skeleton_Mage
+	entity:Ember_Golem - Rare
 	Portal_Device
 	Rock_Volcanic_Cracked_Incandescent
 	Rock_Volcanic_Cracked_Lava_Incandescent
@@ -552,7 +697,11 @@ class HellGate {
 	Ore_Onyxium - Rare
 }
 
-class HellPlain {
+class HellPlain <<Cost : 22 / Reward : 10>> {
+	entity:Incandescent_Skeleton_Fighter
+	entity:Incandescent_Skeleton_Footman
+	entity:Emberwulf
+	entity:Firesteel_Golem - Rare
 	Rock_Volcanic
 	Rubble_Volcanic
 	Ingredient_Fire_Essence
@@ -561,7 +710,11 @@ class HellPlain {
 	Ore_Onyxium - Rare
 }
 
-class HellSwamp {
+class HellSwamp <<Cost : 22 / Reward : 10>> {
+	entity:Fen_Stalker
+	entity:Zombie_Burnt
+	entity:Incandescent_Skeleton_Mage
+	entity:Ember_Golem - Rare
 	Soil_Clay_Black
 	Plant_Moss_Yellow
 	Plant_Moss_Block_Yellow
@@ -571,7 +724,11 @@ class HellSwamp {
 	Ore_Onyxium - Rare
 }
 
-class FireGemCave {
+class FireGemCave <<Cost : 24 / Reward : 11>> {
+	entity:Incandescent_Skeleton_Fighter
+	entity:Incandescent_Skeleton_Mage
+	entity:Firesteel_Golem
+	entity:Thunder_Golem - Rare
 	Rock_Volcanic
 	Rock_Volcanic_Cracked_Incandescent
 	Rock_Gem_Ruby
@@ -580,7 +737,10 @@ class FireGemCave {
 	Ore_Prisma - Rare
 }
 
-class DesertTempleEntrace {
+class DesertTempleEntrace <<Cost : 9 / Reward : 4>> {
+	entity:Sandswept_Zombie
+	entity:Skeleton_Scout
+	entity:Skeleton_Archer - Rare
 	Rock_Sandstone
 	Rubble_Sandstone
 	Furniture_Ancient_Pot
@@ -589,7 +749,11 @@ class DesertTempleEntrace {
 	Ore_Gold - Rare
 }
 
-class DeeperDesertTemple {
+class DeeperDesertTemple <<Cost : 11 / Reward : 5>> {
+	entity:Sandswept_Zombie
+	entity:Skeleton_Soldier
+	entity:Skeleton_Archer
+	entity:Skeleton_Mage - Rare
 	Rock_Sandstone
 	Rock_Sandstone_Brick
 	Furniture_Ancient_Pot
@@ -599,14 +763,18 @@ class DeeperDesertTemple {
 	Ore_Gold
 }
 
-enum DesertTemple <<Dungeon>> {
-	Wave 1 - entity:Spider x 4
-	Wave 2 - entity:Cave_Spider x 3 + entity:Spider x 3
-	Wave 3 - entity:Goblin_Scrapper x 4 + entity:Cave_Spider x 3
-	Wave 4 - entity:Goblin_Miner x 4 + entity:Goblin_Scrapper x 5
+enum DesertTemple <<Dungeon / Cost : 13 / Reward : 35>> {
+	Wave 1 - entity:Sandswept_Zombie x 4 + entity:Skeleton_Scout x 2
+	Wave 2 - entity:Sandswept_Zombie x 5 + entity:Skeleton_Archer x 3
+	Wave 3 - entity:Skeleton_Knight x 3 + entity:Skeleton_Mage x 2 + entity:Sandswept_Zombie x 4
+	Wave 4 - entity:Sand_Empress x 1 + entity:Skeleton_Soldier x 6 + entity:Skeleton_Archer x 4
 }
 
-class PharaonRoom {
+class PharaonRoom <<Cost : 15 / Reward : 7>> {
+	entity:Sandswept_Zombie
+	entity:Skeleton_Knight
+	entity:Skeleton_Mage
+	entity:Sand_Empress - Rare
 	Deco_Treasure
 	Furniture_Ancient_Coffin
 	Furniture_Ancient_Statue
@@ -615,7 +783,11 @@ class PharaonRoom {
 	Rock_Gem_Diamond
 }
 
-class InnerDesert {
+class InnerDesert <<Cost : 8 / Reward : 4>> {
+	entity:Cactee
+	entity:Camel
+	entity:Sandswept_Zombie
+	entity:Scarak_Louse - Rare
 	Block_Sand
 	Rock_Sandstone
 	Rubble_Sandstone
@@ -625,7 +797,10 @@ class InnerDesert {
 	Ore_Gold - Rare
 }
 
-class MuddyDesert {
+class MuddyDesert <<Cost : 9 / Reward : 4>> {
+	entity:Cactee
+	entity:Crocodile
+	entity:Scarak_Louse - Rare
 	Block_Sand
 	Soil_Dirt
 	Soil_Clay_Black
@@ -634,13 +809,16 @@ class MuddyDesert {
 	Plant_Crop_Tomato_Item
 }
 
-enum InsectInvasion <<Dungeon>> {
-	Wave 1 - entity:Spider x 5
-	Wave 2 - entity:Cave_Spider x 4 + entity:Spider x 3
-	Wave 3 - entity:Cave_Spider x 6 + entity:Spider x 4
+enum InsectInvasion <<Dungeon / Cost : 10 / Reward : 26>> {
+	Wave 1 - entity:Scarak_Louse x 4 + entity:Spider x 3
+	Wave 2 - entity:Scarak_Fighter x 3 + entity:Scarak_Louse x 4
+	Wave 3 - entity:Scarak_Seeker x 2 + entity:Cave_Spider x 4 + entity:Scarak_Fighter x 3
 }
 
-class InfestedDesert {
+class InfestedDesert <<Cost : 11 / Reward : 5>> {
+	entity:Scarak_Louse
+	entity:Scarak_Fighter
+	entity:Scarak_Seeker - Rare
 	Soil_Hive
 	Soil_Hive_Brick
 	Soil_Hive_Brick_Smooth
@@ -649,13 +827,17 @@ class InfestedDesert {
 	Ingredient_Hide_Scaled
 }
 
-enum InsectNest <<Dungeon>> {
-	Wave 1 - entity:Spider x 6
-	Wave 2 - entity:Cave_Spider x 6
-	Wave 3 - entity:Cave_Spider x 8 + entity:Spider x 4
+enum InsectNest <<Dungeon / Cost : 13 / Reward : 36>> {
+	Wave 1 - entity:Scarak_Louse x 6 + entity:Spider x 4
+	Wave 2 - entity:Scarak_Fighter x 5 + entity:Cave_Spider x 4
+	Wave 3 - entity:Scarak_Defender x 2 + entity:Scarak_Fighter x 5 + entity:Scarak_Seeker x 2
 }
 
-class InsideInsectNest {
+class InsideInsectNest <<Cost : 14 / Reward : 6>> {
+	entity:Scarak_Louse
+	entity:Scarak_Fighter
+	entity:Scarak_Defender
+	entity:Scarak_Seeker - Rare
 	Soil_Hive
 	Soil_Hive_Brick
 	Soil_Hive_Brick_Smooth
@@ -664,14 +846,16 @@ class InsideInsectNest {
 	Rock_Gem_Ruby
 }
 
-enum InsectCore <<Dungeon>> {
-	Wave 1 - entity:Cave_Spider x 6 + entity:Spider x 4
-	Wave 2 - entity:Cave_Spider x 8
-	Wave 3 - entity:Cave_Spider x 10 + entity:Spider x 6
-	Wave 4 - entity:Cave_Spider x 12
+enum InsectCore <<Dungeon / Cost : 17 / Reward : 50>> {
+	Wave 1 - entity:Scarak_Louse x 8 + entity:Scarak_Fighter x 4
+	Wave 2 - entity:Scarak_Defender x 3 + entity:Scarak_Seeker x 3
+	Wave 3 - entity:Scarak_Fighter x 6 + entity:Scarak_Defender x 4 + entity:Cave_Spider x 4
+	Wave 4 - entity:Scarak_Broodmother x 1 + entity:Scarak_Defender x 4 + entity:Scarak_Seeker x 4
 }
 
-class Quarry {
+class Quarry <<Cost : 3 / Reward : 2>> {
+	entity:Bat
+	entity:Goblin_Miner - Rare
 	Rubble_Stone
 	Rock_Stone
 	Rock_Slate
@@ -681,10 +865,11 @@ class Quarry {
 	Ore_Iron - Rare
 }
 
-class Hallow {
+class Hallow <<Cost : 3 / Reward : 2>> {
 	entity:Rabbit
 	entity:Sheep
 	entity:Chicken
+	entity:Deer - Rare
 	Plant_Crop_Wheat_Item
 	Plant_Crop_Corn_Item
 	Plant_Crop_Carrot_Item
@@ -692,8 +877,10 @@ class Hallow {
 	Plant_Fruit_Apple
 }
 
-class CowHallow {
+class CowHallow <<Cost : 5 / Reward : 2>> {
 	entity:Cow
+	entity:Cow_Calf
+	entity:Wolf - Rare
 	Plant_Crop_Wheat_Item
 	Plant_Crop_Corn_Item
 	Ingredient_Bolt_Wool
@@ -701,8 +888,9 @@ class CowHallow {
 	Plant_Fruit_Apple
 }
 
-class HorseHallow {
+class HorseHallow <<Cost : 5 / Reward : 2>> {
 	entity:Horse
+	entity:Wolf - Rare
 	Plant_Crop_Carrot_Item
 	Plant_Crop_Wheat_Item
 	Ingredient_Bolt_Wool
@@ -710,7 +898,10 @@ class HorseHallow {
 	Plant_Fruit_Apple
 }
 
-class MysteriousCavern {
+class MysteriousCavern <<Cost : 6 / Reward : 3>> {
+	entity:Bat
+	entity:Cave_Spider
+	entity:Earth_Elemental - Rare
 	Rubble_Stone
 	Rock_Stone
 	Rock_Slate
@@ -719,7 +910,9 @@ class MysteriousCavern {
 	Ore_Iron
 }
 
-class MysticCave {
+class MysticCave <<Cost : 9 / Reward : 4>> {
+	entity:Earth_Elemental
+	entity:Earthen_Golem - Rare
 	Rock_Runic_Brick
 	Rock_Runic_Brick_Ornate
 	Rock_Gem_Sapphire
@@ -727,7 +920,10 @@ class MysticCave {
 	Ingredient_Crystal_Yellow - Rare
 }
 
-class LuxirousCave {
+class LuxirousCave <<Cost : 13 / Reward : 6>> {
+	entity:Earth_Elemental
+	entity:Earthen_Golem
+	entity:Goblin_Thief - Rare
 	Rock_Gem_Emerald
 	Rock_Gem_Topaz
 	Rock_Gem_Diamond - Rare
@@ -736,10 +932,11 @@ class LuxirousCave {
 	Deco_Treasure
 }
 
-class JurassicCave {
+class JurassicCave <<Cost : 17 / Reward : 8>> {
 	entity:Archaeopteryx
 	entity:Crocodile
 	entity:Cave_Raptor
+	entity:Cave_Rex - Rare
 	Ingredient_Bone_Fragment
 	Deco_Bone_Full
 	Deco_Bone_Spike_Large
@@ -749,7 +946,7 @@ class JurassicCave {
 	Ore_Adamantite
 }
 
-enum DinoCrisis <<Dungeon>> {
+enum DinoCrisis <<Dungeon / Cost : 21 / Reward : 65>> {
 	Wave 1 - entity:Archaeopteryx x 5 + entity:Crocodile x 2
 	Wave 2 - entity:Cave_Raptor x 4 + entity:Archaeopteryx x 3
 	Wave 3 - entity:Cave_Raptor x 6 + entity:Crawler x 2
@@ -925,6 +1122,6 @@ MysteriousCavern --> MysticCave : Rock_Gem_Sapphire * 2 + Ore_Iron * 8
 
 MysticCave --> LuxirousCave : Rock_Gem_Emerald * 4 + Ore_Gold * 8
 LuxirousCave --> JurassicCave : Rock_Gem_Diamond * 2 + Ore_Adamantite * 8
-JurassicCave --> DinoCrisis : Ore_Mithril * 6 + Ore_Onyxium * 2
+JurassicCave --> DinoCrisis : Ingredient_Hide_Scaled * 12 + Rock_Gem_Diamond * 2 + Ore_Adamantite * 8
 
 @enduml
