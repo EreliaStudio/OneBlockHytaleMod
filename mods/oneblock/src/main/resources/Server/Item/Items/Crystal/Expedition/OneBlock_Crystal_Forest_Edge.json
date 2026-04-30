@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Meadow_Cave.name",
-    "Description": "server.items.OneBlock_Crystal_Meadow_Cave.description"
+    "Name": "server.items.OneBlock_Crystal_Forest_Edge.name",
+    "Description": "server.items.OneBlock_Crystal_Forest_Edge.description"
   },
-  "Id": "OneBlock_Crystal_Meadow_Cave",
+  "Id": "OneBlock_Crystal_Forest_Edge",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
@@ -29,7 +29,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rubble_Stone",
+        "ItemId": "Ingredient_Fibre",
         "Quantity": 4
       }
     ],
@@ -50,7 +50,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "Meadow_Cave"
+      "Forest_Edge"
     ],
     "OneBlockCrystalTicks": [
       "25"

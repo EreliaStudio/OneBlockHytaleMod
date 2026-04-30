@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_Cave.description"
   },
   "Id": "OneBlock_Crystal_Cave",
-  "ItemLevel": 1,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -33,12 +33,8 @@
         "Quantity": 8
       },
       {
-        "ItemId": "Wood_Oak_Trunk",
-        "Quantity": 6
-      },
-      {
-        "CustomID": "Ingredient_Charcoal",
-        "Quantity": 3
+        "ItemId": "Ore_Copper",
+        "Quantity": 4
       }
     ],
     "OutputQuantity": 1,
@@ -46,11 +42,12 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Cavern"
+          "OneBlock_Enchanter_Surface"
         ],
         "Id": "OneBlockEnchanter"
       }
-    ]
+    ],
+    "KnowledgeRequired": true
   },
   "Consumable": true,
   "Tags": {

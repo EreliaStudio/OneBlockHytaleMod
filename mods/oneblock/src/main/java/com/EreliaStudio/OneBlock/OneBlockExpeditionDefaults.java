@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 
 public final class OneBlockExpeditionDefaults
@@ -26,11 +27,35 @@ public final class OneBlockExpeditionDefaults
     {
         public final String dropId;
         public final int quantity;
+        /** Non-null when this reward is a crystal: the expedition ID whose knowledge is unlocked. */
+        public final String unlockExpeditionId;
 
         public CompletionRewardDefinition(String dropId, int quantity)
         {
+            this(dropId, quantity, null);
+        }
+
+        public CompletionRewardDefinition(String dropId, int quantity, String unlockExpeditionId)
+        {
             this.dropId = dropId;
             this.quantity = Math.max(1, quantity);
+            this.unlockExpeditionId = unlockExpeditionId;
+        }
+
+        public boolean isCrystalReward() { return unlockExpeditionId != null; }
+    }
+
+    public static final class RandomRewardBundle
+    {
+        public final List<CompletionRewardDefinition> items;
+        public final int weight;
+
+        public RandomRewardBundle(List<CompletionRewardDefinition> items, int weight)
+        {
+            this.items = items == null || items.isEmpty()
+                    ? List.of()
+                    : Collections.unmodifiableList(new ArrayList<>(items));
+            this.weight = Math.max(1, weight);
         }
     }
 
@@ -40,18 +65,29 @@ public final class OneBlockExpeditionDefaults
         public final String blockId;
         public final int ticks;
         public final List<DropDefinition> drops;
-        public final List<CompletionRewardDefinition> completionRewards;
+        public final List<CompletionRewardDefinition> mandatoryRewards;
+        public final List<RandomRewardBundle> randomBundles;
 
         public ExpeditionDefinition(String expeditionId, String blockId, int ticks, List<DropDefinition> drops)
         {
-            this(expeditionId, blockId, ticks, drops, List.of());
+            this(expeditionId, blockId, ticks, drops, List.of(), List.of());
         }
 
         public ExpeditionDefinition(String expeditionId,
                                     String blockId,
                                     int ticks,
                                     List<DropDefinition> drops,
-                                    List<CompletionRewardDefinition> completionRewards)
+                                    List<CompletionRewardDefinition> mandatoryRewards)
+        {
+            this(expeditionId, blockId, ticks, drops, mandatoryRewards, List.of());
+        }
+
+        public ExpeditionDefinition(String expeditionId,
+                                    String blockId,
+                                    int ticks,
+                                    List<DropDefinition> drops,
+                                    List<CompletionRewardDefinition> mandatoryRewards,
+                                    List<RandomRewardBundle> randomBundles)
         {
             this.expeditionId = expeditionId;
             this.blockId = blockId;
@@ -59,9 +95,12 @@ public final class OneBlockExpeditionDefaults
             this.drops = drops == null || drops.isEmpty()
                     ? List.of()
                     : Collections.unmodifiableList(new ArrayList<>(drops));
-            this.completionRewards = completionRewards == null || completionRewards.isEmpty()
+            this.mandatoryRewards = mandatoryRewards == null || mandatoryRewards.isEmpty()
                     ? List.of()
-                    : Collections.unmodifiableList(new ArrayList<>(completionRewards));
+                    : Collections.unmodifiableList(new ArrayList<>(mandatoryRewards));
+            this.randomBundles = randomBundles == null || randomBundles.isEmpty()
+                    ? List.of()
+                    : Collections.unmodifiableList(new ArrayList<>(randomBundles));
         }
     }
 
@@ -69,89 +108,40 @@ public final class OneBlockExpeditionDefaults
     private static final Map<String, List<String>> DEFAULT_IDS;
     private static final Map<String, Map<String, Integer>> DEFAULT_WEIGHTS;
     private static final Set<String> COMPLETION_REWARD_DROP_IDS;
+    private static final Random RANDOM = new Random();
 
     static
     {
         Map<String, ExpeditionDefinition> expeditions = new HashMap<>();
 
-        register(expeditions, "Meadow", 25, List.of(
+        register(expeditions, "Default", 25, List.of(
                 drop("Ingredient_Fibre", 20),
                 drop("Rubble_Stone", 20),
                 drop("Soil_Dirt", 10)
         ));
 
-        register(expeditions, "Meadow_Cave", 25, List.of(
-                drop("Rubble_Stone", 20),
-                drop("Rock_Stone", 40),
-                drop(OneBlockDropId.entityDropId("Rat"), 1)
-        ), List.of(
-                reward("ExpeditionPoint", 4)
-        ));
-
-        register(expeditions, "Meadow_Forest", 25, List.of(
-                drop("Ingredient_Stick", 20),
-                drop("Wood_Oak_Trunk", 30),
-                drop("Plant_Sapling_Oak", 1),
-                drop(OneBlockDropId.entityDropId("Rabbit"), 1),
-                drop(OneBlockDropId.entityDropId("Chicken"), 1)
-        ), List.of(
-                reward("ExpeditionPoint", 4)
-        ));
-
         register(expeditions, "Cave_Entry", 25, List.of(
                 drop("Rubble_Stone", 20),
-                drop("Rock_Stone", 10),
-                drop("Ore_Copper", 6),
-                drop(OneBlockDropId.entityDropId("Rat"), 3),
-                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2)
+                drop("Rock_Stone", 20)
         ), List.of(
-                reward("ExpeditionPoint", 8)
+                crystalReward("Cave", 1)
         ));
 
-        register(expeditions, "Quarry", 50, List.of(
-                drop("Rock_Stone", 10),
-                drop("Soil_Dirt", 6),
-                drop("Rock_Stone_Mossy", 1),
-                drop(OneBlockDropId.entityDropId("Rat"), 3)
+        register(expeditions, "Forest_Edge", 25, List.of(
+                drop("Ingredient_Stick", 20),
+                drop("Wood_Oak_Trunk", 20)
+        ), List.of(
+                crystalReward("Forest", 1)
         ));
 
         register(expeditions, "Cave", 25, List.of(
-                drop("Rock_Stone", 15),
-                drop("Ore_Copper", 10),
-                drop("Ore_Iron", 6),
-                drop(OneBlockDropId.entityDropId("Rat"), 3),
-                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 5)
-        ), List.of(
-                reward("ExpeditionPoint", 8)
+                drop("Rock_Stone", 20),
+                drop("Ore_Copper", 20)
         ));
 
         register(expeditions, "Forest", 25, List.of(
-                drop("Wood_Oak_Trunk", 10),
-                drop("Plant_Sapling_Oak", 2),
-                drop("Wood_Beech_Trunk", 10),
-                drop("Plant_Sapling_Beech", 2),
-                drop("Wood_Birch_Trunk", 10),
-                drop("Plant_Sapling_Birch", 2),
-                drop("Plant_Crop_Mushroom_Common_Brown", 5),
-                drop("Plant_Crop_Mushroom_Cap_Brown", 5),
-                drop("Ingredient_Life_Essence", 5),
-                drop(OneBlockDropId.entityDropId("Chicken"), 3),
-                drop(OneBlockDropId.entityDropId("Boar"), 3)
-        ), List.of(
-                reward("ExpeditionPoint", 8)
-        ));
-
-        register(expeditions, "Fairy_pond", 50, List.of(
-                drop("Plant_Crop_Mushroom_Glowing_Blue", 10),
-                drop("Plant_Crop_Mushroom_Glowing_Purple", 10),
-                drop("Plant_Fruit_Azure", 3),
-                drop("Ingredient_Life_Essence", 3),
-                drop("Wood_Azure_Trunk", 15),
-                drop("Plant_Sapling_Azure", 4),
-                drop("*Container_Bucket_State_Filled_Water", 1)
-        ), List.of(
-                reward("*Container_Bucket_State_Filled_Water", 1),
-                reward("ExpeditionPoint", 4)
+                drop(OneBlockDropId.entityDropId("Boar"), 10),
+                drop("Wood_Oak_Trunk", 20)
         ));
 
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);
@@ -189,10 +179,33 @@ public final class OneBlockExpeditionDefaults
         return EXPEDITIONS.keySet();
     }
 
-    public static List<CompletionRewardDefinition> getCompletionRewards(String expeditionId)
+    public static List<CompletionRewardDefinition> getMandatoryRewards(String expeditionId)
     {
         ExpeditionDefinition def = EXPEDITIONS.get(expeditionId);
-        return def == null ? List.of() : def.completionRewards;
+        return def == null ? List.of() : def.mandatoryRewards;
+    }
+
+    public static List<RandomRewardBundle> getRandomBundles(String expeditionId)
+    {
+        ExpeditionDefinition def = EXPEDITIONS.get(expeditionId);
+        return def == null ? List.of() : def.randomBundles;
+    }
+
+    public static RandomRewardBundle pickRandomBundle(String expeditionId)
+    {
+        List<RandomRewardBundle> bundles = getRandomBundles(expeditionId);
+        if (bundles.isEmpty()) return null;
+
+        int totalWeight = 0;
+        for (RandomRewardBundle bundle : bundles) totalWeight += bundle.weight;
+        int roll = RANDOM.nextInt(totalWeight);
+        int cursor = 0;
+        for (RandomRewardBundle bundle : bundles)
+        {
+            cursor += bundle.weight;
+            if (roll < cursor) return bundle;
+        }
+        return bundles.get(bundles.size() - 1);
     }
 
     public static Set<String> getCompletionRewardDropIds()
@@ -222,19 +235,39 @@ public final class OneBlockExpeditionDefaults
         return new CompletionRewardDefinition(dropId, quantity);
     }
 
+    private static CompletionRewardDefinition crystalReward(String expeditionId, int quantity)
+    {
+        return new CompletionRewardDefinition("OneBlock_Crystal_" + expeditionId, quantity, expeditionId);
+    }
+
+    private static RandomRewardBundle bundle(List<CompletionRewardDefinition> items, int weight)
+    {
+        return new RandomRewardBundle(items, weight);
+    }
+
     private static void register(Map<String, ExpeditionDefinition> map, String expeditionId, int ticks, List<DropDefinition> drops)
     {
-        register(map, expeditionId, ticks, drops, List.of());
+        register(map, expeditionId, ticks, drops, List.of(), List.of());
     }
 
     private static void register(Map<String, ExpeditionDefinition> map,
                                  String expeditionId,
                                  int ticks,
                                  List<DropDefinition> drops,
-                                 List<CompletionRewardDefinition> completionRewards)
+                                 List<CompletionRewardDefinition> mandatoryRewards)
+    {
+        register(map, expeditionId, ticks, drops, mandatoryRewards, List.of());
+    }
+
+    private static void register(Map<String, ExpeditionDefinition> map,
+                                 String expeditionId,
+                                 int ticks,
+                                 List<DropDefinition> drops,
+                                 List<CompletionRewardDefinition> mandatoryRewards,
+                                 List<RandomRewardBundle> randomBundles)
     {
         String blockId = "OneBlock_Block_" + expeditionId;
-        map.put(expeditionId, new ExpeditionDefinition(expeditionId, blockId, ticks, drops, completionRewards));
+        map.put(expeditionId, new ExpeditionDefinition(expeditionId, blockId, ticks, drops, mandatoryRewards, randomBundles));
     }
 
     private static Map<String, List<String>> buildDefaultIds(Map<String, ExpeditionDefinition> expeditions)
@@ -273,12 +306,22 @@ public final class OneBlockExpeditionDefaults
         Set<String> out = new HashSet<>();
         for (ExpeditionDefinition expedition : expeditions.values())
         {
-            for (CompletionRewardDefinition reward : expedition.completionRewards)
+            for (CompletionRewardDefinition reward : expedition.mandatoryRewards)
             {
                 if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
                 out.add(reward.dropId);
             }
+            for (RandomRewardBundle bundle : expedition.randomBundles)
+            {
+                if (bundle == null) continue;
+                for (CompletionRewardDefinition reward : bundle.items)
+                {
+                    if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
+                    out.add(reward.dropId);
+                }
+            }
         }
         return Collections.unmodifiableSet(out);
     }
+
 }

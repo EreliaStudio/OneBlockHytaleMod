@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Meadow_Forest.name",
-    "Description": "server.items.OneBlock_Crystal_Meadow_Forest.description"
+    "Name": "server.items.OneBlock_Crystal_Default.name",
+    "Description": "server.items.OneBlock_Crystal_Default.description"
   },
-  "Id": "OneBlock_Crystal_Meadow_Forest",
+  "Id": "OneBlock_Crystal_Default",
   "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
@@ -50,7 +50,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "Meadow_Forest"
+      "Default"
     ],
     "OneBlockCrystalTicks": [
       "25"

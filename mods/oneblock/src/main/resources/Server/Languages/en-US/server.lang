@@ -8,51 +8,28 @@ items.Locket_GobelinDungeon.name=Locket GobelinDungeon
 
 items.ExpeditionPoint.name=ExpeditionPoint
 
-# GENERATED ─── Meadow ─────────────────────────────────────────────────
-items.OneBlock_Block_Meadow.name=OneBlock Meadow
-items.OneBlock_Crystal_Meadow.name=Meadow Crystal
-items.OneBlock_Crystal_Meadow.description=Consume to begin a Meadow expedition.\n25 ticks.\nLoot :\n- Fibre\n- Rubble Stone\n- Soil Dirt
+# GENERATED ─── Default ────────────────────────────────────────────────
+items.OneBlock_Block_Default.name=OneBlock Default
+items.OneBlock_Crystal_Default.name=Default Crystal
+items.OneBlock_Crystal_Default.description=Consume to begin a Default expedition.\n25 ticks.\nLoot :\n- Fibre\n- Rubble Stone\n- Soil Dirt
 benchCategories.OneBlockEnchanter_Surface=Surface Crystals
 
-# GENERATED ─── Meadow Cave ────────────────────────────────────────────
-items.OneBlock_Block_Meadow_Cave.name=OneBlock Meadow Cave
-items.OneBlock_Crystal_Meadow_Cave.name=Meadow Cave Crystal
-items.OneBlock_Crystal_Meadow_Cave.description=Consume to begin a Meadow Cave expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\n- Rat\nCompletion rewards :\n- 4x ExpeditionPoint
+# GENERATED ─── Cave ─────────────────────────────────────────────
+items.OneBlock_Block_Cave_Entry.name=OneBlock Cave
+items.OneBlock_Crystal_Cave_Entry.name=Cave Crystal
+items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\nCompletion rewards :\n- 1x Cave Crystal (unlocks Cave)
 
-# GENERATED ─── Meadow Forest ──────────────────────────────────────────
-items.OneBlock_Block_Meadow_Forest.name=OneBlock Meadow Forest
-items.OneBlock_Crystal_Meadow_Forest.name=Meadow Forest Crystal
-items.OneBlock_Crystal_Meadow_Forest.description=Consume to begin a Meadow Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Oak Trunk\n- Oak Sapling\n- Rabbit\n- Chicken\nCompletion rewards :\n- 4x ExpeditionPoint
-
-# GENERATED ─── Cave Entry ─────────────────────────────────────────────
-items.OneBlock_Block_Cave_Entry.name=OneBlock Cave Entry
-items.OneBlock_Crystal_Cave_Entry.name=Cave Entry Crystal
-items.OneBlock_Crystal_Cave_Entry.description=Consume to begin a Cave Entry expedition.\n25 ticks.\nLoot :\n- Rubble Stone\n- Stone\n- Copper Ore\n- Rat\n- Goblin Miner\nCompletion rewards :\n- 8x ExpeditionPoint
-benchCategories.OneBlockEnchanter_Cavern=Cavern Crystals
-
-# GENERATED ─── Quarry ─────────────────────────────────────────────────
-items.OneBlock_Block_Quarry.name=OneBlock Quarry
-items.OneBlock_Crystal_Quarry.name=Quarry Crystal
-items.OneBlock_Crystal_Quarry.description=Consume to begin a Quarry expedition.\n50 ticks.\nLoot :\n- Stone\n- Soil Dirt\n- Mossy Stone\n- Rat
+# GENERATED ─── Forest ────────────────────────────────────────────
+items.OneBlock_Block_Forest_Edge.name=OneBlock Forest
+items.OneBlock_Crystal_Forest_Edge.name=Forest Crystal
+items.OneBlock_Crystal_Forest_Edge.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Stick\n- Oak Trunk\nCompletion rewards :\n- 1x Forest Crystal (unlocks Forest)
 
 # GENERATED ─── Cave ───────────────────────────────────────────────────
 items.OneBlock_Block_Cave.name=OneBlock Cave
 items.OneBlock_Crystal_Cave.name=Cave Crystal
-items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Stone\n- Copper Ore\n- Iron Ore\n- Rat\n- Goblin Miner\nCompletion rewards :\n- 8x ExpeditionPoint
-
-# GENERATED ─── Gobelin Dungeon ────────────────────────────────────────
-items.OneBlock_Block_Gobelin_Dungeon.name=OneBlock Gobelin Dungeon
-items.OneBlock_Crystal_Gobelin_Dungeon.name=Gobelin Dungeon Crystal
-items.OneBlock_Crystal_Gobelin_Dungeon.description=Consume to begin the Gobelin Dungeon dungeon.\n2 waves :\n  Wave 1: Goblin Miner, Goblin Miner, Goblin Scrapper\n  Wave 2: Goblin Miner, Goblin Thief, Goblin Scrapper\nCompletion rewards :\n- 10x Life Essence\n- 12x Iron Ore\n- 20x Charcoal\n- 1x Locket GobelinDungeon
-benchCategories.OneBlockDungeonEnchanter_Dungeon=Dungeon Crystals
+items.OneBlock_Crystal_Cave.description=Consume to begin a Cave expedition.\n25 ticks.\nLoot :\n- Stone\n- Copper Ore
 
 # GENERATED ─── Forest ─────────────────────────────────────────────────
 items.OneBlock_Block_Forest.name=OneBlock Forest
 items.OneBlock_Crystal_Forest.name=Forest Crystal
-items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Oak Trunk\n- Oak Sapling\n- Beech Trunk\n- Beech Sapling\n- Birch Trunk\n- Birch Sapling\n- Brown Common Mushroom\n- Brown Cap Mushroom\n- Life Essence\n- Chicken\n- Boar\nCompletion rewards :\n- 8x ExpeditionPoint
-benchCategories.OneBlockEnchanter_Forest=Forest Crystals
-
-# GENERATED ─── Fairy pond ─────────────────────────────────────────────
-items.OneBlock_Block_Fairy_pond.name=OneBlock Fairy pond
-items.OneBlock_Crystal_Fairy_pond.name=Fairy pond Crystal
-items.OneBlock_Crystal_Fairy_pond.description=Consume to begin a Fairy pond expedition.\n50 ticks.\nLoot :\n- Blue Glowing Mushroom\n- Purple Glowing Mushroom\n- Azure Fruit\n- Life Essence\n- Azure Trunk\n- Azure Sapling\n- Water Bucket\nCompletion rewards :\n- 1x Water Bucket\n- 4x ExpeditionPoint
+items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Boar\n- Oak Trunk

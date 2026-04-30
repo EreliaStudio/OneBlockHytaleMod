@@ -55,16 +55,6 @@ public final class OneBlockDungeonDefaults
     {
         Map<String, DungeonDefinition> dungeons = new HashMap<>();
 
-        register(dungeons, "Gobelin_Dungeon", List.of(
-                        List.of("entity:Goblin_Miner", "entity:Goblin_Miner", "entity:Goblin_Scrapper"),
-                        List.of("entity:Goblin_Miner", "entity:Goblin_Thief", "entity:Goblin_Scrapper")
-                ), List.of(
-                reward("Ingredient_Life_Essence", 10),
-                reward("Ore_Iron", 12),
-                reward("Ingredient_Charcoal", 20),
-                reward("Locket_GobelinDungeon", 1)
-        ));
-
         DUNGEONS = Collections.unmodifiableMap(dungeons);
         ALL_ENTITY_IDS = buildAllEntityIds(DUNGEONS);
         COMPLETION_REWARD_DROP_IDS = buildCompletionRewardDropIds(DUNGEONS);

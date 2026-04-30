@@ -1,7 +1,7 @@
 {
 	"_comment": "Generated place-progression expedition definitions. Crop items, seed items, seed recipes, animals, and monsters are intentionally excluded.",
 	"_usage": "python tools/generate_expeditions.py expeditions.json --repo-root . [--render-names item_render_names.json] [--dry-run]",
-	"Meadow": {
+	"Default": {
 		"ItemLevel": 1,
 		"Category": "Surface",
 		"Ticks": 25,
@@ -28,7 +28,7 @@
 			}
 		]
 	},
-	"Meadow_Cave": {
+	"Cave_Entry": {
 		"ItemLevel": 1,
 		"Category": "Surface",
 		"Ticks": 25,
@@ -47,21 +47,20 @@
 			},
 			{
 				"ID": "Rock_Stone",
-				"Weight": 40
-			},
-			{
-				"ID": "entity:Rat",
-				"Weight": 1
+				"Weight": 20
 			}
 		],
-		"CompletionRewards":[
-			{
-				"CustomID":"ExpeditionPoint",
-				"Quantity":4
-			}
-		]
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Cave",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
 	},
-	"Meadow_Forest": {
+	"Forest_Edge": {
 		"ItemLevel": 1,
 		"Category": "Surface",
 		"Ticks": 25,
@@ -80,310 +79,70 @@
 			},
 			{
 				"ID": "Wood_Oak_Trunk",
-				"Weight": 30
-			},
-			{
-				"ID": "Plant_Sapling_Oak",
-				"Weight": 1
-			},
-			{
-				"ID": "entity:Rabbit",
-				"Weight": 1
-			},
-			{
-				"ID": "entity:Chicken",
-				"Weight": 1
+				"Weight": 20
 			}
 		],
-		"CompletionRewards":[
-			{
-				"CustomID":"ExpeditionPoint",
-				"Quantity":4
-			}
-		]
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"Crystal": "Forest",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		}
 	},
-	"Cave_Entry": {
-		"ItemLevel": 1,
-		"Category": "Cavern",
+	"Cave": {
+		"ItemLevel": 2,
+		"Category": "Surface",
 		"Ticks": 25,
 		"Crystal": {
 			"Input": [
 				{
 					"ItemId": "Rock_Stone",
-					"Quantity": 4
+					"Quantity": 8
 				},
 				{
-					"ItemId": "Wood_Oak_Trunk",
+					"ItemId": "Ore_Copper",
 					"Quantity": 4
 				}
 			]
 		},
 		"BaseDropPool": [
 			{
-				"ID": "Rubble_Stone",
+				"ID": "Rock_Stone",
 				"Weight": 20
 			},
 			{
-				"ID": "Rock_Stone",
-				"Weight": 10
-			},
-			{
 				"ID": "Ore_Copper",
-				"Weight": 6
-			},
-			{
-				"ID": "entity:Rat",
-				"Weight": 3
-			},
-			{
-				"ID": "entity:Goblin_Miner",
-				"Weight": 2
-			}
-		],
-		"CompletionRewards":[
-			{
-				"CustomID":"ExpeditionPoint",
-				"Quantity":8
-			}
-		]
-	},
-	"Quarry": {
-		"ItemLevel": 2,
-		"Category": "Surface",
-		"Ticks": 50,
-		"Crystal": {
-			"Input": [
-				{
-					"CustomID":"ExpeditionPoint",
-					"Quantity": 8
-				}
-			]
-		},
-		"BaseDropPool": [
-			{
-				"ID": "Rock_Stone",
-				"Weight": 10
-			},
-			{
-				"ID": "Soil_Dirt",
-				"Weight": 6
-			},
-			{
-				"ID": "Rock_Stone_Mossy",
-				"Weight": 1
-			},
-			{
-				"ID": "entity:Rat",
-				"Weight": 3
-			}
-		]
-	},
-	"Cave": {
-		"ItemLevel": 1,
-		"Category": "Cavern",
-		"Ticks": 25,
-		"Crystal": {
-			"Input": [
-				{
-					"ItemId": "Rock_Stone",
-					"Quantity": 8
-				},
-				{
-					"ItemId": "Wood_Oak_Trunk",
-					"Quantity": 6
-				},
-				{
-					"CustomID":"Ingredient_Charcoal",
-					"Quantity": 3
-				}
-			]
-		},
-		"BaseDropPool": [
-			{
-				"ID": "Rock_Stone",
-				"Weight": 15
-			},
-			{
-				"ID": "Ore_Copper",
-				"Weight": 10
-			},
-			{
-				"ID": "Ore_Iron",
-				"Weight": 6
-			},
-			{
-				"ID": "entity:Rat",
-				"Weight": 3
-			},
-			{
-				"ID": "entity:Goblin_Miner",
-				"Weight": 5
-			}
-		],
-		"CompletionRewards":[
-			{
-				"CustomID":"ExpeditionPoint",
-				"Quantity":8
-			}
-		]
-	},
-	"Gobelin_Dungeon": {
-		"ItemLevel": 1,
-		"Category": "Dungeon",
-		"Crystal": {
-			"Input": [
-				{
-					"CustomID":"ExpeditionPoint",
-					"Quantity": 25
-				}
-			]
-		},
-		"Waves": [
-				["Goblin_Miner", "Goblin_Miner", "Goblin_Scrapper"],
-				["Goblin_Miner", "Goblin_Thief", "Goblin_Scrapper"]
-		],
-		"CompletionRewards": [
-			{
-				"ID": "Ingredient_Life_Essence",
-				"Quantity": 10
-			},
-			{
-				"ID": "Ore_Iron",
-				"Quantity": 12
-			},
-			{
-				"ID": "Ingredient_Charcoal",
-				"Quantity": 20
-			},
-			{
-				"CustomID":"Locket_GobelinDungeon",
-				"Quantity":1
+				"Weight": 20
 			}
 		]
 	},
 	"Forest": {
-		"ItemLevel": 1,
-		"Category": "Forest",
+		"ItemLevel": 2,
+		"Category": "Surface",
 		"Ticks": 25,
 		"Crystal": {
 			"Input": [
 				{
+					"ItemId": "Wood_Oak_Trunk",
+					"Quantity": 4
+				},
+				{
 					"ItemId": "Ingredient_Stick",
 					"Quantity": 4
-				},
-				{
-					"ItemId": "Ingredient_Fibre",
-					"Quantity": 4
-				},
-				{
-					"CustomID":"ExpeditionPoint",
-					"Quantity": 4
 				}
 			]
 		},
 		"BaseDropPool": [
-			{
-				"ID": "Wood_Oak_Trunk",
-				"Weight": 10
-			},
-			{
-				"ID": "Plant_Sapling_Oak",
-				"Weight": 2
-			},
-			{
-				"ID": "Wood_Beech_Trunk",
-				"Weight": 10
-			},
-			{
-				"ID": "Plant_Sapling_Beech",
-				"Weight": 2
-			},
-			{
-				"ID": "Wood_Birch_Trunk",
-				"Weight": 10
-			},
-			{
-				"ID": "Plant_Sapling_Birch",
-				"Weight": 2
-			},
-			{
-				"ID": "Plant_Crop_Mushroom_Common_Brown",
-				"Weight": 5
-			},
-			{
-				"ID": "Plant_Crop_Mushroom_Cap_Brown",
-				"Weight": 5
-			},
-			{
-				"ID": "Ingredient_Life_Essence",
-				"Weight": 5
-			},
-			{
-				"ID": "entity:Chicken",
-				"Weight": 3
-			},
 			{
 				"ID": "entity:Boar",
-				"Weight": 3
-			}
-		],
-		"CompletionRewards":[
-			{
-				"CustomID":"ExpeditionPoint",
-				"Quantity":8
-			}
-		]
-	},
-	"Fairy_pond": {
-		"ItemLevel": 3,
-		"Category": "Forest",
-		"Ticks": 50,
-		"Crystal": {
-			"Input": [
-				{
-					"ItemId": "Ingredient_Life_Essence",
-					"Quantity": 4
-				}
-			]
-		},
-		"BaseDropPool": [
-			{
-				"ID": "Plant_Crop_Mushroom_Glowing_Blue",
 				"Weight": 10
 			},
 			{
-				"ID": "Plant_Crop_Mushroom_Glowing_Purple",
-				"Weight": 10
-			},
-			{
-				"ID": "Plant_Fruit_Azure",
-				"Weight": 3
-			},
-			{
-				"ID": "Ingredient_Life_Essence",
-				"Weight": 3
-			},
-			{
-				"ID": "Wood_Azure_Trunk",
-				"Weight": 15
-			},
-			{
-				"ID": "Plant_Sapling_Azure",
-				"Weight": 4
-			},
-			{
-				"ID": "*Container_Bucket_State_Filled_Water",
-				"Weight": 1
-			}
-		],
-		"CompletionRewards":[
-			{
-				"ID":"*Container_Bucket_State_Filled_Water",
-				"Quantity":1
-			},
-			{
-				"CustomID":"ExpeditionPoint",
-				"Quantity":4
+				"ID": "Wood_Oak_Trunk",
+				"Weight": 20
 			}
 		]
 	}

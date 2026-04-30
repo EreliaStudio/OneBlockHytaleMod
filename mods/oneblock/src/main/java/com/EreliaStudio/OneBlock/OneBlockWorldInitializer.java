@@ -16,7 +16,7 @@ import java.util.logging.Level;
 
 final class OneBlockWorldInitializer
 {
-    private static final String START_BLOCK_ID = "OneBlock_Block_Meadow";
+    private static final String START_BLOCK_ID = "OneBlock_Block_Default";
     private static final Vector3i ORIGIN_BLOCK = new Vector3i(0, 100, 0);
     private static final Vector3d SPAWN_POS = new Vector3d(0.5, 102.0, 0.5);
     private static final Color VOID_TINT = new Color((byte) 0x5a, (byte) 0x99, (byte) 0x2b);

@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_Meadow_Forest.name"
+    "Name": "server.items.OneBlock_Block_Default.name"
   },
-  "Id": "OneBlock_Block_Meadow_Forest",
+  "Id": "OneBlock_Block_Default",
   "ItemLevel": 1,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Meadow_Forest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock_Default.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_Meadow_Forest.png",
-        "Sides": "BlockTextures/OneBlock_Block_Meadow_Forest.png",
-        "Up": "BlockTextures/OneBlock_Block_Meadow_Forest.png",
+        "Down": "BlockTextures/OneBlock_Block_Default.png",
+        "Sides": "BlockTextures/OneBlock_Block_Default.png",
+        "Up": "BlockTextures/OneBlock_Block_Default.png",
         "Weight": 1
       }
     ],

@@ -29,11 +29,7 @@
   "Recipe": {
     "Input": [
       {
-        "ItemId": "Rock_Stone",
-        "Quantity": 4
-      },
-      {
-        "ItemId": "Wood_Oak_Trunk",
+        "ItemId": "Rubble_Stone",
         "Quantity": 4
       }
     ],
@@ -42,7 +38,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Cavern"
+          "OneBlock_Enchanter_Surface"
         ],
         "Id": "OneBlockEnchanter"
       }

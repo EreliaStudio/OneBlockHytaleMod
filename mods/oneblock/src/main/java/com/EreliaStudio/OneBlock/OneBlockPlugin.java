@@ -49,7 +49,6 @@ public final class OneBlockPlugin extends JavaPlugin
                 getDataDirectory().resolve("oneblock-expedition.json"));
         dungeonStateProvider = new OneBlockDungeonStateProvider(
                 getDataDirectory().resolve("oneblock-dungeon.json"));
-
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
         getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, expeditionStateProvider, dungeonStateProvider));
         getCommandRegistry().registerCommand(new OneBlockCommand());

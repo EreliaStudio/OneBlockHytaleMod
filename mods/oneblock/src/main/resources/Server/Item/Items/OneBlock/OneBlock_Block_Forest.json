@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Forest.name"
   },
   "Id": "OneBlock_Block_Forest",
-  "ItemLevel": 1,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock_Forest.png",
   "Categories": [
     "Blocks.OneBlock"

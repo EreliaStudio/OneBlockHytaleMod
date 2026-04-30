@@ -44,16 +44,7 @@
     "Bench": {
       "Id": "OneBlockDungeonEnchanter",
       "Type": "Crafting",
-      "Categories": [
-        {
-          "Id": "OneBlock_DungeonEnchanter_Dungeon",
-          "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
-          "Name": "server.benchCategories.OneBlockDungeonEnchanter_Dungeon",
-          "Recipes": [
-            "OneBlock_Crystal_Gobelin_Dungeon"
-          ]
-        }
-      ],
+      "Categories": [],
       "LocalOpenSoundEventId": "SFX_Arcane_Workbench_Open_Local",
       "LocalCloseSoundEventId": "SFX_Arcane_Workbench_Close_Local"
     },

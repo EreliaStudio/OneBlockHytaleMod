@@ -79,10 +79,23 @@ def _category_sort_key(category: dict) -> tuple[int, str]:
     return (len(ENCHANTER_CATEGORY_ORDER), category_id)
 
 
-def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list, ticks: int, bench_id: str = "OneBlockEnchanter") -> dict:
+def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list, ticks: int, bench_id: str = "OneBlockEnchanter", knowledge_required: bool = False) -> dict:
     eid = _safe_eid(expedition_id)
     gid = _safe_eid(category)
     item_id = f"OneBlock_Crystal_{eid}"
+    recipe = {
+        "Input": inputs,
+        "OutputQuantity": 1,
+        "BenchRequirement": [
+            {
+                "Type": "Crafting",
+                "Categories": [f"OneBlock_{bench_id[len('OneBlock'):]}_{gid}"],
+                "Id": bench_id,
+            }
+        ],
+    }
+    if knowledge_required:
+        recipe["KnowledgeRequired"] = True
     return {
         "TranslationProperties": {
             "Name": f"{PREFIX_ITEMS_JSON}.{item_id}.name",
@@ -101,17 +114,7 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
                 "Interactions": [{"Type": "oneblock_crystal_use"}]
             },
         },
-        "Recipe": {
-            "Input": inputs,
-            "OutputQuantity": 1,
-            "BenchRequirement": [
-                {
-                    "Type": "Crafting",
-                    "Categories": [f"OneBlock_{bench_id[len('OneBlock'):]}_{gid}"],
-                    "Id": bench_id,
-                }
-            ],
-        },
+        "Recipe": recipe,
         "Consumable": True,
         "Tags": {
             "Type": ["OneBlock_ExpeditionCrystal"],
@@ -268,7 +271,8 @@ def build_custom_item_model() -> dict:
 
 def build_lang_block(expedition_id: str,
                      drop_pool: list,
-                     completion_rewards: list,
+                     mandatory_rewards: list,
+                     random_bundles: list,
                      ticks: int,
                      render_names: dict[str, str]) -> str:
     eid = _safe_eid(expedition_id)
@@ -280,10 +284,25 @@ def build_lang_block(expedition_id: str,
         loot_lines += f"\\n- {_display_drop_name(entry, render_names)}"
 
     reward_lines = ""
-    if completion_rewards:
+    if mandatory_rewards:
         reward_lines = "\\nCompletion rewards :"
-        for entry in completion_rewards:
-            reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
+        for entry in mandatory_rewards:
+            crystal_id = entry.get("Crystal")
+            if crystal_id is not None:
+                display = str(crystal_id).replace("_", " ")
+                reward_lines += f"\\n- {_entry_quantity(entry)}x {display} Crystal (unlocks {display})"
+            else:
+                reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
+
+    if random_bundles:
+        reward_lines += "\\nRandom reward (one bundle) :"
+        for i, bundle in enumerate(random_bundles, 1):
+            items_str = ", ".join(
+                f"{_entry_quantity(item)}x {_display_drop_name(item, render_names)}"
+                for item in bundle.get("Items", [])
+            )
+            weight = max(1, int(bundle.get("Weight", 1)))
+            reward_lines += f"\\n  [{weight}] {items_str}"
 
     lines = [
         f"\n# GENERATED ─── {display} {sep}",
@@ -299,11 +318,14 @@ JAVA_ENTITY_PREFIX = "entity:"
 
 
 def _entry_drop_id(entry: dict) -> str:
+    crystal_id = entry.get("Crystal")
+    if crystal_id is not None:
+        return f"OneBlock_Crystal_{_safe_eid(str(crystal_id).strip())}"
     if CUSTOM_ID_KEY in entry:
         return str(entry[CUSTOM_ID_KEY]).strip()
     if "ID" in entry:
         return str(entry["ID"]).strip()
-    raise ValueError(f"Drop entry must contain either ID or {CUSTOM_ID_KEY}: {entry}")
+    raise ValueError(f"Drop entry must contain Crystal, ID, or {CUSTOM_ID_KEY}: {entry}")
 
 
 def _entry_weight(entry: dict) -> int:
@@ -345,6 +367,10 @@ def _java_drop_expr(drop_id: str, weight: int) -> str:
 
 
 def _java_reward_expr(entry: dict) -> str:
+    crystal_id = entry.get("Crystal")
+    if crystal_id is not None:
+        eid = _safe_eid(str(crystal_id).strip())
+        return f'crystalReward("{eid}", {_entry_quantity(entry)})'
     return f"reward({_java_drop_id_expr(_entry_drop_id(entry))}, {_entry_quantity(entry)})"
 
 
@@ -354,14 +380,32 @@ def _java_list_expr(entries: list[str], closing_indent: str) -> str:
     return "List.of(\n" + ",\n".join(entries) + "\n" + closing_indent + ")"
 
 
-def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list]]) -> str:
+def _parse_completion_rewards(raw) -> tuple[list, list]:
+    """Returns (mandatory_entries, random_bundles). Supports both old list format and new {Mandatory, Random} format."""
+    if isinstance(raw, list):
+        return raw, []
+    if isinstance(raw, dict):
+        return raw.get("Mandatory") or [], raw.get("Random") or []
+    return [], []
+
+
+def _java_bundle_expr(bundle: dict, base_indent: str) -> str:
+    item_exprs = ", ".join(
+        f"reward({_java_drop_id_expr(_entry_drop_id(item))}, {_entry_quantity(item)})"
+        for item in bundle.get("Items", [])
+    )
+    weight = max(1, int(bundle.get("Weight", 1)))
+    return f"bundle(List.of({item_exprs}), {weight})"
+
+
+def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list, list]]) -> str:
     lines = [
         "    static",
         "    {",
         "        Map<String, ExpeditionDefinition> expeditions = new HashMap<>();",
     ]
 
-    for expedition_id, ticks, drop_pool, completion_rewards in all_expeditions:
+    for expedition_id, ticks, drop_pool, mandatory_rewards, random_bundles in all_expeditions:
         lines.append("")
 
         entries = [
@@ -370,13 +414,22 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list]]
         ]
         drop_list = _java_list_expr(entries, "        ")
 
-        reward_entries = [
+        mandatory_entries = [
             f"                {_java_reward_expr(entry)}"
-            for entry in completion_rewards
+            for entry in mandatory_rewards
         ]
-        if reward_entries:
-            reward_list = _java_list_expr(reward_entries, "        ")
-            lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, {drop_list}, {reward_list});')
+        bundle_entries = [
+            f"                {_java_bundle_expr(b, '                ')}"
+            for b in random_bundles
+        ]
+
+        if mandatory_entries or bundle_entries:
+            mandatory_list = _java_list_expr(mandatory_entries, "        ")
+            if bundle_entries:
+                random_list = _java_list_expr(bundle_entries, "        ")
+                lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, {drop_list}, {mandatory_list}, {random_list});')
+            else:
+                lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, {drop_list}, {mandatory_list});')
         else:
             lines.append(f'        register(expeditions, "{expedition_id}", {ticks}, {drop_list});')
 
@@ -526,11 +579,19 @@ def _custom_item_ids_from_entries(entries: list) -> set[str]:
         if not isinstance(entry, dict):
             continue
         custom_id = entry.get(CUSTOM_ID_KEY)
-        if custom_id is None:
-            continue
-        custom_id = str(custom_id).strip()
-        if custom_id:
-            out.add(custom_id)
+        if custom_id is not None:
+            custom_id = str(custom_id).strip()
+            if custom_id:
+                out.add(custom_id)
+        # Handle random bundle items list
+        for item in entry.get("Items", []):
+            if not isinstance(item, dict):
+                continue
+            cid = item.get(CUSTOM_ID_KEY)
+            if cid is not None:
+                cid = str(cid).strip()
+                if cid:
+                    out.add(cid)
     return out
 
 
@@ -681,7 +742,8 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool, b
 def patch_lang(path: Path,
                expedition_id: str,
                drop_pool: list,
-               completion_rewards: list,
+               mandatory_rewards: list,
+               random_bundles: list,
                ticks: int,
                render_names: dict[str, str],
                dry_run: bool):
@@ -693,7 +755,7 @@ def patch_lang(path: Path,
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
 
-    block = build_lang_block(expedition_id, drop_pool, completion_rewards, ticks, render_names)
+    block = build_lang_block(expedition_id, drop_pool, mandatory_rewards, random_bundles, ticks, render_names)
 
     if dry_run:
         print(f"  [dry-run] Would append lang entries for {expedition_id}")
@@ -911,6 +973,20 @@ def main():
     raw = json.loads(input_path.read_text(encoding="utf-8-sig"))
     expeditions = {k: v for k, v in raw.items() if not k.startswith("_")}
 
+    knowledge_gated_ids: set[str] = set()
+    for cfg in expeditions.values():
+        raw_rewards = cfg.get("CompletionRewards", cfg.get("Rewards")) or []
+        mandatory, rand_bundles = _parse_completion_rewards(raw_rewards)
+        for entry in mandatory:
+            crystal_id = entry.get("Crystal")
+            if crystal_id:
+                knowledge_gated_ids.add(_safe_eid(str(crystal_id).strip()))
+        for bundle in rand_bundles:
+            for entry in bundle.get("Items", []):
+                crystal_id = entry.get("Crystal")
+                if crystal_id:
+                    knowledge_gated_ids.add(_safe_eid(str(crystal_id).strip()))
+
     render_names_path = Path(args.render_names)
     if not render_names_path.is_absolute():
         render_names_path = repo_root / render_names_path
@@ -945,7 +1021,10 @@ def main():
         eid = _safe_eid(expedition_id)
         is_dungeon = group == "Dungeon"
 
-        custom_item_ids = _custom_item_ids_from_entries(completion_rewards)
+        mandatory_rewards, random_bundles = _parse_completion_rewards(completion_rewards)
+
+        custom_item_ids = _custom_item_ids_from_entries(mandatory_rewards)
+        custom_item_ids.update(_custom_item_ids_from_entries(random_bundles))
         if not is_dungeon:
             custom_item_ids.update(_custom_item_ids_from_entries(cfg.get("BaseDropPool", [])))
         for custom_id in sorted(custom_item_ids - seen_custom_item_ids):
@@ -968,7 +1047,7 @@ def main():
 
             write_json(
                 repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
-                build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks, "OneBlockDungeonEnchanter"),
+                build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks, "OneBlockDungeonEnchanter", knowledge_required=(eid in knowledge_gated_ids)),
                 args.dry_run,
             )
 
@@ -978,19 +1057,19 @@ def main():
                 print(f"  [warn]   DungeonEnchanter JSON not found: {dungeon_enchanter_path}")
 
             if lang_path.exists():
-                _patch_dungeon_lang(lang_path, expedition_id, waves, completion_rewards, render_names, args.dry_run)
+                _patch_dungeon_lang(lang_path, expedition_id, waves, mandatory_rewards, render_names, args.dry_run)
                 patch_group_lang(lang_path, group, args.dry_run, "OneBlockDungeonEnchanter")
             else:
                 print(f"  [warn]   Lang file not found: {lang_path}")
 
-            all_dungeon_waves.append((expedition_id, waves, completion_rewards))
+            all_dungeon_waves.append((expedition_id, waves, mandatory_rewards))
         else:
             ticks = cfg.get("Ticks", 100)
             drop_pool = cfg["BaseDropPool"]
 
             write_json(
                 repo_root / CRYSTAL_DIR / f"OneBlock_Crystal_{eid}.json",
-                build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks),
+                build_crystal(expedition_id, group, item_level, crystal_cfg["Input"], ticks, knowledge_required=(eid in knowledge_gated_ids)),
                 args.dry_run,
             )
 
@@ -1000,12 +1079,12 @@ def main():
                 print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
             if lang_path.exists():
-                patch_lang(lang_path, expedition_id, drop_pool, completion_rewards, ticks, render_names, args.dry_run)
+                patch_lang(lang_path, expedition_id, drop_pool, mandatory_rewards, random_bundles, ticks, render_names, args.dry_run)
                 patch_group_lang(lang_path, group, args.dry_run)
             else:
                 print(f"  [warn]   Lang file not found: {lang_path}")
 
-            all_expedition_drops.append((expedition_id, ticks, drop_pool, completion_rewards))
+            all_expedition_drops.append((expedition_id, ticks, drop_pool, mandatory_rewards, random_bundles))
 
     _patch_java_static(java_defaults_path, build_java_defaults_block(all_expedition_drops),
                        "OneBlockExpeditionDefaults.java", len(all_expedition_drops), args.dry_run)

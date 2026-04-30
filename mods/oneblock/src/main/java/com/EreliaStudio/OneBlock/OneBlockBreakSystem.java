@@ -1,5 +1,6 @@
 package com.EreliaStudio.OneBlock;
 
+import com.hypixel.hytale.builtin.crafting.CraftingPlugin;
 import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 import com.hypixel.hytale.server.core.entity.entities.Player;
@@ -222,15 +223,29 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
     private void executeExpeditionCompletionRewards(String expeditionId, DropableContext context)
     {
-        List<OneBlockExpeditionDefaults.CompletionRewardDefinition> rewards =
-                OneBlockExpeditionDefaults.getCompletionRewards(expeditionId);
-        if (rewards.isEmpty()) return;
-
-        for (OneBlockExpeditionDefaults.CompletionRewardDefinition reward : rewards)
+        for (OneBlockExpeditionDefaults.CompletionRewardDefinition reward :
+                OneBlockExpeditionDefaults.getMandatoryRewards(expeditionId))
         {
-            if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
-            dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+            giveReward(reward, context);
         }
+
+        OneBlockExpeditionDefaults.RandomRewardBundle bundle =
+                OneBlockExpeditionDefaults.pickRandomBundle(expeditionId);
+        if (bundle != null)
+        {
+            for (OneBlockExpeditionDefaults.CompletionRewardDefinition reward : bundle.items)
+            {
+                giveReward(reward, context);
+            }
+        }
+    }
+
+    private void giveReward(OneBlockExpeditionDefaults.CompletionRewardDefinition reward, DropableContext context)
+    {
+        if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) return;
+        dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+        if (reward.isCrystalReward())
+            CraftingPlugin.learnRecipe(context.getPlayerEntity(), reward.dropId, context.getStore());
     }
 
     private static boolean isValidOneBlockBreak(Player player, BreakBlockEvent event)
