@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Costline.name",
-    "Description": "server.items.OneBlock_Crystal_Costline.description"
+    "Name": "server.items.OneBlock_Crystal_DesertTempleEntrance.name",
+    "Description": "server.items.OneBlock_Crystal_DesertTempleEntrance.description"
   },
-  "Id": "OneBlock_Crystal_Costline",
-  "ItemLevel": 6,
+  "Id": "OneBlock_Crystal_DesertTempleEntrance",
+  "ItemLevel": 9,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,19 +32,19 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "Costline"
+      "DesertTempleEntrance"
     ],
     "OneBlockCrystalTicks": [
       "25"
     ]
   },
   "MaxStack": 4,
-  "Quality": "Rare",
+  "Quality": "Epic",
   "Recipe": {
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 6
+        "Quantity": 9
       }
     ],
     "OutputQuantity": 1,
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Ocean"
+          "OneBlock_Enchanter_Mystic"
         ],
         "Id": "OneBlockEnchanter"
       }

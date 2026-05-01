@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_HellSwamp.name",
-    "Description": "server.items.OneBlock_Crystal_HellSwamp.description"
+    "Name": "server.items.OneBlock_Crystal_GoblinInvasion.name",
+    "Description": "server.items.OneBlock_Crystal_GoblinInvasion.description"
   },
-  "Id": "OneBlock_Crystal_HellSwamp",
-  "ItemLevel": 22,
+  "Id": "OneBlock_Crystal_GoblinInvasion",
+  "ItemLevel": 9,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,10 +32,10 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "HellSwamp"
+      "GoblinInvasion"
     ],
     "OneBlockCrystalTicks": [
-      "25"
+      "4"
     ]
   },
   "MaxStack": 4,
@@ -44,7 +44,7 @@
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 22
+        "Quantity": 9
       }
     ],
     "OutputQuantity": 1,
@@ -52,9 +52,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Fire"
+          "OneBlock_DungeonEnchanter_Dungeon"
         ],
-        "Id": "OneBlockEnchanter"
+        "Id": "OneBlockDungeonEnchanter"
       }
     ],
     "KnowledgeRequired": true

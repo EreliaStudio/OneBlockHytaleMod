@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_HellPlain.name",
-    "Description": "server.items.OneBlock_Crystal_HellPlain.description"
+    "Name": "server.items.OneBlock_Crystal_PharaohRoom.name",
+    "Description": "server.items.OneBlock_Crystal_PharaohRoom.description"
   },
-  "Id": "OneBlock_Crystal_HellPlain",
-  "ItemLevel": 22,
+  "Id": "OneBlock_Crystal_PharaohRoom",
+  "ItemLevel": 15,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,7 +32,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "HellPlain"
+      "PharaohRoom"
     ],
     "OneBlockCrystalTicks": [
       "25"
@@ -44,7 +44,7 @@
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 22
+        "Quantity": 15
       }
     ],
     "OutputQuantity": 1,
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Fire"
+          "OneBlock_Enchanter_Desert"
         ],
         "Id": "OneBlockEnchanter"
       }

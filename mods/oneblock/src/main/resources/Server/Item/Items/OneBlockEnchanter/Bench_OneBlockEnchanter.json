@@ -102,7 +102,7 @@
             "OneBlock_Crystal_SandCavern",
             "OneBlock_Crystal_Quarry",
             "OneBlock_Crystal_MysteriousCavern",
-            "OneBlock_Crystal_LuxirousCave",
+            "OneBlock_Crystal_LuxuriousCave",
             "OneBlock_Crystal_JurassicCave"
           ]
         },
@@ -112,7 +112,7 @@
           "Name": "server.benchCategories.OneBlockEnchanter_Desert",
           "Recipes": [
             "OneBlock_Crystal_Desert",
-            "OneBlock_Crystal_PharaonRoom",
+            "OneBlock_Crystal_PharaohRoom",
             "OneBlock_Crystal_InnerDesert",
             "OneBlock_Crystal_MuddyDesert",
             "OneBlock_Crystal_InfestedDesert",
@@ -127,10 +127,10 @@
             "OneBlock_Crystal_FireCave",
             "OneBlock_Crystal_BurnedForest",
             "OneBlock_Crystal_FireLand",
-            "OneBlock_Crystal_FieryGraveward",
-            "OneBlock_Crystal_HellGate",
-            "OneBlock_Crystal_HellPlain",
-            "OneBlock_Crystal_HellSwamp",
+            "OneBlock_Crystal_FieryGraveyard",
+            "OneBlock_Crystal_InfernalGate",
+            "OneBlock_Crystal_InfernalPlain",
+            "OneBlock_Crystal_InfernalSwamp",
             "OneBlock_Crystal_FireGemCave",
             "OneBlock_Crystal_BurntBattlefield",
             "OneBlock_Crystal_AshenCatacombs"
@@ -141,7 +141,7 @@
           "Icon": "Icons/CraftingCategories/OneBlock_ExpeditionCrystal_DefaultIcon.png",
           "Name": "server.benchCategories.OneBlockEnchanter_Ice",
           "Recipes": [
-            "OneBlock_Crystal_Toundra",
+            "OneBlock_Crystal_Tundra",
             "OneBlock_Crystal_FrozenForest",
             "OneBlock_Crystal_IceLand",
             "OneBlock_Crystal_IcyCavern",
@@ -175,7 +175,7 @@
             "OneBlock_Crystal_CursedForest",
             "OneBlock_Crystal_Graveyard",
             "OneBlock_Crystal_VoidPortal",
-            "OneBlock_Crystal_DesertTempleEntrace",
+            "OneBlock_Crystal_DesertTempleEntrance",
             "OneBlock_Crystal_DeeperDesertTemple",
             "OneBlock_Crystal_MysticCave",
             "OneBlock_Crystal_LostNecropolis",
@@ -190,7 +190,7 @@
           "Recipes": [
             "OneBlock_Crystal_Lake",
             "OneBlock_Crystal_Sea",
-            "OneBlock_Crystal_Costline",
+            "OneBlock_Crystal_Coastline",
             "OneBlock_Crystal_SeaCavern",
             "OneBlock_Crystal_SeaInfestedNest"
           ]

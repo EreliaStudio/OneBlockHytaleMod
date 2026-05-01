@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_PharaonRoom.name",
-    "Description": "server.items.OneBlock_Crystal_PharaonRoom.description"
+    "Name": "server.items.OneBlock_Crystal_GoblinGank.name",
+    "Description": "server.items.OneBlock_Crystal_GoblinGank.description"
   },
-  "Id": "OneBlock_Crystal_PharaonRoom",
-  "ItemLevel": 15,
+  "Id": "OneBlock_Crystal_GoblinGank",
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,19 +32,19 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "PharaonRoom"
+      "GoblinGank"
     ],
     "OneBlockCrystalTicks": [
-      "25"
+      "3"
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Rare",
   "Recipe": {
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 15
+        "Quantity": 5
       }
     ],
     "OutputQuantity": 1,
@@ -52,9 +52,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Desert"
+          "OneBlock_DungeonEnchanter_Dungeon"
         ],
-        "Id": "OneBlockEnchanter"
+        "Id": "OneBlockDungeonEnchanter"
       }
     ],
     "KnowledgeRequired": true

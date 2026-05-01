@@ -51,8 +51,8 @@
           "Name": "server.benchCategories.OneBlockDungeonEnchanter_Dungeon",
           "Recipes": [
             "OneBlock_Crystal_RatCave",
-            "OneBlock_Crystal_GobelinGank",
-            "OneBlock_Crystal_GobelinInvasion",
+            "OneBlock_Crystal_GoblinGank",
+            "OneBlock_Crystal_GoblinInvasion",
             "OneBlock_Crystal_PirateShipwreck",
             "OneBlock_Crystal_SeaMonster",
             "OneBlock_Crystal_UndeadTemple",

@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_FieryGraveward.name",
-    "Description": "server.items.OneBlock_Crystal_FieryGraveward.description"
+    "Name": "server.items.OneBlock_Crystal_Tundra.name",
+    "Description": "server.items.OneBlock_Crystal_Tundra.description"
   },
-  "Id": "OneBlock_Crystal_FieryGraveward",
+  "Id": "OneBlock_Crystal_Tundra",
   "ItemLevel": 17,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
@@ -32,7 +32,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "FieryGraveward"
+      "Tundra"
     ],
     "OneBlockCrystalTicks": [
       "25"
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Fire"
+          "OneBlock_Enchanter_Ice"
         ],
         "Id": "OneBlockEnchanter"
       }

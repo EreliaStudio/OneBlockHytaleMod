@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_GobelinInvasion.name"
+    "Name": "server.items.OneBlock_Block_GoblinInvasion.name"
   },
-  "Id": "OneBlock_Block_GobelinInvasion",
+  "Id": "OneBlock_Block_GoblinInvasion",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GobelinInvasion.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock_GoblinInvasion.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_GobelinInvasion.png",
-        "Sides": "BlockTextures/OneBlock_Block_GobelinInvasion.png",
-        "Up": "BlockTextures/OneBlock_Block_GobelinInvasion.png",
+        "Down": "BlockTextures/OneBlock_Block_GoblinInvasion.png",
+        "Sides": "BlockTextures/OneBlock_Block_GoblinInvasion.png",
+        "Up": "BlockTextures/OneBlock_Block_GoblinInvasion.png",
         "Weight": 1
       }
     ],

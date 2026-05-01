@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_GobelinGank.name",
-    "Description": "server.items.OneBlock_Crystal_GobelinGank.description"
+    "Name": "server.items.OneBlock_Crystal_InfernalSwamp.name",
+    "Description": "server.items.OneBlock_Crystal_InfernalSwamp.description"
   },
-  "Id": "OneBlock_Crystal_GobelinGank",
-  "ItemLevel": 5,
+  "Id": "OneBlock_Crystal_InfernalSwamp",
+  "ItemLevel": 22,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,19 +32,19 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "GobelinGank"
+      "InfernalSwamp"
     ],
     "OneBlockCrystalTicks": [
-      "3"
+      "25"
     ]
   },
   "MaxStack": 4,
-  "Quality": "Rare",
+  "Quality": "Epic",
   "Recipe": {
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 5
+        "Quantity": 22
       }
     ],
     "OutputQuantity": 1,
@@ -52,9 +52,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_DungeonEnchanter_Dungeon"
+          "OneBlock_Enchanter_Fire"
         ],
-        "Id": "OneBlockDungeonEnchanter"
+        "Id": "OneBlockEnchanter"
       }
     ],
     "KnowledgeRequired": true

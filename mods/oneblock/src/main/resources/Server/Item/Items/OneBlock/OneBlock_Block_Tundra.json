@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_HellSwamp.name"
+    "Name": "server.items.OneBlock_Block_Tundra.name"
   },
-  "Id": "OneBlock_Block_HellSwamp",
-  "ItemLevel": 22,
-  "Icon": "Icons/ItemsGenerated/OneBlock_HellSwamp.png",
+  "Id": "OneBlock_Block_Tundra",
+  "ItemLevel": 17,
+  "Icon": "Icons/ItemsGenerated/OneBlock_Tundra.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_HellSwamp.png",
-        "Sides": "BlockTextures/OneBlock_Block_HellSwamp.png",
-        "Up": "BlockTextures/OneBlock_Block_HellSwamp.png",
+        "Down": "BlockTextures/OneBlock_Block_Tundra.png",
+        "Sides": "BlockTextures/OneBlock_Block_Tundra.png",
+        "Up": "BlockTextures/OneBlock_Block_Tundra.png",
         "Weight": 1
       }
     ],

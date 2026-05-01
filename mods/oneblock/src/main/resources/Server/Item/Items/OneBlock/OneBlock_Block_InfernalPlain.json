@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_DesertTempleEntrace.name"
+    "Name": "server.items.OneBlock_Block_InfernalPlain.name"
   },
-  "Id": "OneBlock_Block_DesertTempleEntrace",
-  "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_DesertTempleEntrace.png",
+  "Id": "OneBlock_Block_InfernalPlain",
+  "ItemLevel": 22,
+  "Icon": "Icons/ItemsGenerated/OneBlock_InfernalPlain.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_DesertTempleEntrace.png",
-        "Sides": "BlockTextures/OneBlock_Block_DesertTempleEntrace.png",
-        "Up": "BlockTextures/OneBlock_Block_DesertTempleEntrace.png",
+        "Down": "BlockTextures/OneBlock_Block_InfernalPlain.png",
+        "Sides": "BlockTextures/OneBlock_Block_InfernalPlain.png",
+        "Up": "BlockTextures/OneBlock_Block_InfernalPlain.png",
         "Weight": 1
       }
     ],

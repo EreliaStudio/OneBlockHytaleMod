@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_Toundra.name",
-    "Description": "server.items.OneBlock_Crystal_Toundra.description"
+    "Name": "server.items.OneBlock_Crystal_FieryGraveyard.name",
+    "Description": "server.items.OneBlock_Crystal_FieryGraveyard.description"
   },
-  "Id": "OneBlock_Crystal_Toundra",
+  "Id": "OneBlock_Crystal_FieryGraveyard",
   "ItemLevel": 17,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
@@ -32,7 +32,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "Toundra"
+      "FieryGraveyard"
     ],
     "OneBlockCrystalTicks": [
       "25"
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Ice"
+          "OneBlock_Enchanter_Fire"
         ],
         "Id": "OneBlockEnchanter"
       }

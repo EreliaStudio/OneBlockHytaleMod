@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_HellGate.name"
+    "Name": "server.items.OneBlock_Block_GoblinGank.name"
   },
-  "Id": "OneBlock_Block_HellGate",
-  "ItemLevel": 20,
-  "Icon": "Icons/ItemsGenerated/OneBlock_HellGate.png",
+  "Id": "OneBlock_Block_GoblinGank",
+  "ItemLevel": 5,
+  "Icon": "Icons/ItemsGenerated/OneBlock_GoblinGank.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_HellGate.png",
-        "Sides": "BlockTextures/OneBlock_Block_HellGate.png",
-        "Up": "BlockTextures/OneBlock_Block_HellGate.png",
+        "Down": "BlockTextures/OneBlock_Block_GoblinGank.png",
+        "Sides": "BlockTextures/OneBlock_Block_GoblinGank.png",
+        "Up": "BlockTextures/OneBlock_Block_GoblinGank.png",
         "Weight": 1
       }
     ],

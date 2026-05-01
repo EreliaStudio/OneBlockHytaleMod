@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_DesertTempleEntrace.name",
-    "Description": "server.items.OneBlock_Crystal_DesertTempleEntrace.description"
+    "Name": "server.items.OneBlock_Crystal_InfernalPlain.name",
+    "Description": "server.items.OneBlock_Crystal_InfernalPlain.description"
   },
-  "Id": "OneBlock_Crystal_DesertTempleEntrace",
-  "ItemLevel": 9,
+  "Id": "OneBlock_Crystal_InfernalPlain",
+  "ItemLevel": 22,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,7 +32,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "DesertTempleEntrace"
+      "InfernalPlain"
     ],
     "OneBlockCrystalTicks": [
       "25"
@@ -44,7 +44,7 @@
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 9
+        "Quantity": 22
       }
     ],
     "OutputQuantity": 1,
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Mystic"
+          "OneBlock_Enchanter_Fire"
         ],
         "Id": "OneBlockEnchanter"
       }

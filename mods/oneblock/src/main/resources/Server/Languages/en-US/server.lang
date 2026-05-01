@@ -56,7 +56,7 @@ benchCategories.OneBlockEnchanter_Forest=Forest Crystals
 # GENERATED ─── Plain ──────────────────────────────────────────────────
 items.OneBlock_Block_Plain.name=OneBlock Plain
 items.OneBlock_Crystal_Plain.name=Plain Crystal
-items.OneBlock_Crystal_Plain.description=Consume to begin a Plain expedition.\n25 ticks.\nLoot :\n- Rabbit\n- Sheep\n- Chicken\n- Antelope\n- Carrot\n- Corn\n- Wheat\n- Fibre\nCompletion rewards :\n- 1x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Quarry\n  [1] 1x OneBlock Crystal Hallow
+items.OneBlock_Crystal_Plain.description=Consume to begin a Plain expedition.\n25 ticks.\nLoot :\n- Rabbit\n- Sheep\n- Chicken\n- Antelope\n- Fibre\n- Soil Grass\n- Soil Dirt\n- Plant Grass Sharp\n- Hay Bundle\n- Wheat\n- Carrot\n- Corn\nCompletion rewards :\n- 1x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Quarry\n  [1] 1x OneBlock Crystal Hallow
 expeditions.Plain.name=Plain
 announcements.expedition_started.Plain=Plain expedition started.
 announcements.expedition_completed.Plain=Plain expedition complete. The OneBlock has returned to default.
@@ -76,7 +76,7 @@ progress.expedition.Cave=Cave: {0}/{1} ticks remaining
 # GENERATED ─── RatCave ────────────────────────────────────────────────
 items.OneBlock_Block_RatCave.name=OneBlock RatCave
 items.OneBlock_Crystal_RatCave.name=RatCave Crystal
-items.OneBlock_Crystal_RatCave.description=Consume to begin the RatCave dungeon.\n3 waves :\n  Wave 1: Rat, Rat, Rat\n  Wave 2: Rat, Rat, Spider\n  Wave 3: Spider, Spider, Cave Spider\nCompletion rewards :\n- 8x ExpeditionPoint
+items.OneBlock_Crystal_RatCave.description=Consume to begin the RatCave dungeon.\n3 waves :\n  Wave 1: Rat, Rat, Rat\n  Wave 2: Rat, Rat, Spider\n  Wave 3: Spider, Spider, Spider Cave\nCompletion rewards :\n- 8x ExpeditionPoint
 expeditions.RatCave.name=RatCave
 announcements.dungeon_started.RatCave=RatCave dungeon started.
 announcements.dungeon_completed.RatCave=RatCave dungeon complete. The OneBlock has returned to default.
@@ -85,7 +85,7 @@ benchCategories.OneBlockDungeonEnchanter_Dungeon=Dungeon Crystals
 # GENERATED ─── LowerCave ──────────────────────────────────────────────
 items.OneBlock_Block_LowerCave.name=OneBlock LowerCave
 items.OneBlock_Crystal_LowerCave.name=LowerCave Crystal
-items.OneBlock_Crystal_LowerCave.description=Consume to begin a LowerCave expedition.\n28 ticks.\nLoot :\n- Rat\n- Bat\n- Spider\n- Cave Spider\n- Stone\n- Rubble Stone\n- Copper Ore\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x CopperCave Crystal (unlocks CopperCave)
+items.OneBlock_Crystal_LowerCave.description=Consume to begin a LowerCave expedition.\n28 ticks.\nLoot :\n- Rat\n- Bat\n- Spider\n- Spider Cave\n- Stone\n- Rubble Stone\n- Copper Ore\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x CopperCave Crystal (unlocks CopperCave)
 expeditions.LowerCave.name=LowerCave
 announcements.expedition_started.LowerCave=LowerCave expedition started.
 announcements.expedition_completed.LowerCave=LowerCave expedition complete. The OneBlock has returned to default.
@@ -95,20 +95,20 @@ progress.expedition.LowerCave=LowerCave: {0}/{1} ticks remaining
 # GENERATED ─── CopperCave ─────────────────────────────────────────────
 items.OneBlock_Block_CopperCave.name=OneBlock CopperCave
 items.OneBlock_Crystal_CopperCave.name=CopperCave Crystal
-items.OneBlock_Crystal_CopperCave.description=Consume to begin a CopperCave expedition.\n30 ticks.\nLoot :\n- Bat\n- Rat\n- Goblin Miner\n- Stone\n- Rubble Stone\n- Copper Ore\n- Iron Ore\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x GobelinGank Crystal (unlocks GobelinGank)
+items.OneBlock_Crystal_CopperCave.description=Consume to begin a CopperCave expedition.\n30 ticks.\nLoot :\n- Bat\n- Rat\n- Goblin Miner\n- Stone\n- Rubble Stone\n- Copper Ore\n- Iron Ore\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x GoblinGank Crystal (unlocks GoblinGank)
 expeditions.CopperCave.name=CopperCave
 announcements.expedition_started.CopperCave=CopperCave expedition started.
 announcements.expedition_completed.CopperCave=CopperCave expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.CopperCave=New expedition unlocked: CopperCave
 progress.expedition.CopperCave=CopperCave: {0}/{1} ticks remaining
 
-# GENERATED ─── GobelinGank ────────────────────────────────────────────
-items.OneBlock_Block_GobelinGank.name=OneBlock GobelinGank
-items.OneBlock_Crystal_GobelinGank.name=GobelinGank Crystal
-items.OneBlock_Crystal_GobelinGank.description=Consume to begin the GobelinGank dungeon.\n3 waves :\n  Wave 1: Goblin Scrapper, Goblin Scrapper\n  Wave 2: Goblin Scrapper, Goblin Scrapper, Goblin Miner\n  Wave 3: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner\nCompletion rewards :\n- 12x ExpeditionPoint
-expeditions.GobelinGank.name=GobelinGank
-announcements.dungeon_started.GobelinGank=GobelinGank dungeon started.
-announcements.dungeon_completed.GobelinGank=GobelinGank dungeon complete. The OneBlock has returned to default.
+# GENERATED ─── GoblinGank ─────────────────────────────────────────────
+items.OneBlock_Block_GoblinGank.name=OneBlock GoblinGank
+items.OneBlock_Crystal_GoblinGank.name=GoblinGank Crystal
+items.OneBlock_Crystal_GoblinGank.description=Consume to begin the GoblinGank dungeon.\n3 waves :\n  Wave 1: Goblin Scrapper, Goblin Scrapper\n  Wave 2: Goblin Scrapper, Goblin Scrapper, Goblin Miner\n  Wave 3: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner\nCompletion rewards :\n- 12x ExpeditionPoint
+expeditions.GoblinGank.name=GoblinGank
+announcements.dungeon_started.GoblinGank=GoblinGank dungeon started.
+announcements.dungeon_completed.GoblinGank=GoblinGank dungeon complete. The OneBlock has returned to default.
 
 # GENERATED ─── IronCave ───────────────────────────────────────────────
 items.OneBlock_Block_IronCave.name=OneBlock IronCave
@@ -123,7 +123,7 @@ progress.expedition.IronCave=IronCave: {0}/{1} ticks remaining
 # GENERATED ─── SandCave ───────────────────────────────────────────────
 items.OneBlock_Block_SandCave.name=OneBlock SandCave
 items.OneBlock_Crystal_SandCave.name=SandCave Crystal
-items.OneBlock_Crystal_SandCave.description=Consume to begin a SandCave expedition.\n28 ticks.\nLoot :\n- Bat\n- Spider\n- Cactee\n- Sand\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x SandCavern Crystal (unlocks SandCavern)
+items.OneBlock_Crystal_SandCave.description=Consume to begin a SandCave expedition.\n28 ticks.\nLoot :\n- Bat\n- Spider\n- Cactee\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x SandCavern Crystal (unlocks SandCavern)
 expeditions.SandCave.name=SandCave
 announcements.expedition_started.SandCave=SandCave expedition started.
 announcements.expedition_completed.SandCave=SandCave expedition complete. The OneBlock has returned to default.
@@ -143,25 +143,25 @@ progress.expedition.GoldCave=GoldCave: {0}/{1} ticks remaining
 # GENERATED ─── ThoriumCave ────────────────────────────────────────────
 items.OneBlock_Block_ThoriumCave.name=OneBlock ThoriumCave
 items.OneBlock_Crystal_ThoriumCave.name=ThoriumCave Crystal
-items.OneBlock_Crystal_ThoriumCave.description=Consume to begin a ThoriumCave expedition.\n30 ticks.\nLoot :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Basalt\n- Rubble Basalt\n- Thorium Ore\n- Cobalt Ore\nCompletion rewards :\n- 4x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal GobelinInvasion\n  [1] 1x OneBlock Crystal SilverCave
+items.OneBlock_Crystal_ThoriumCave.description=Consume to begin a ThoriumCave expedition.\n30 ticks.\nLoot :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Basalt\n- Rubble Basalt\n- Thorium Ore\n- Cobalt Ore\nCompletion rewards :\n- 4x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal GoblinInvasion\n  [1] 1x OneBlock Crystal SilverCave
 expeditions.ThoriumCave.name=ThoriumCave
 announcements.expedition_started.ThoriumCave=ThoriumCave expedition started.
 announcements.expedition_completed.ThoriumCave=ThoriumCave expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.ThoriumCave=New expedition unlocked: ThoriumCave
 progress.expedition.ThoriumCave=ThoriumCave: {0}/{1} ticks remaining
 
-# GENERATED ─── GobelinInvasion ────────────────────────────────────────
-items.OneBlock_Block_GobelinInvasion.name=OneBlock GobelinInvasion
-items.OneBlock_Crystal_GobelinInvasion.name=GobelinInvasion Crystal
-items.OneBlock_Crystal_GobelinInvasion.description=Consume to begin the GobelinInvasion dungeon.\n4 waves :\n  Wave 1: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner\n  Wave 2: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner\n  Wave 3: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner, Goblin Miner\n  Wave 4: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner, Goblin Miner\nCompletion rewards :\n- 24x ExpeditionPoint\n- 1x OneBlock Crystal CobaltCave
-expeditions.GobelinInvasion.name=GobelinInvasion
-announcements.dungeon_started.GobelinInvasion=GobelinInvasion dungeon started.
-announcements.dungeon_completed.GobelinInvasion=GobelinInvasion dungeon complete. The OneBlock has returned to default.
+# GENERATED ─── GoblinInvasion ─────────────────────────────────────────
+items.OneBlock_Block_GoblinInvasion.name=OneBlock GoblinInvasion
+items.OneBlock_Crystal_GoblinInvasion.name=GoblinInvasion Crystal
+items.OneBlock_Crystal_GoblinInvasion.description=Consume to begin the GoblinInvasion dungeon.\n4 waves :\n  Wave 1: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner\n  Wave 2: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner\n  Wave 3: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner, Goblin Miner\n  Wave 4: Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Scrapper, Goblin Miner, Goblin Miner, Goblin Miner\nCompletion rewards :\n- 24x ExpeditionPoint\n- 1x OneBlock Crystal CobaltCave
+expeditions.GoblinInvasion.name=GoblinInvasion
+announcements.dungeon_started.GoblinInvasion=GoblinInvasion dungeon started.
+announcements.dungeon_completed.GoblinInvasion=GoblinInvasion dungeon complete. The OneBlock has returned to default.
 
 # GENERATED ─── SilverCave ─────────────────────────────────────────────
 items.OneBlock_Block_SilverCave.name=OneBlock SilverCave
 items.OneBlock_Crystal_SilverCave.name=SilverCave Crystal
-items.OneBlock_Crystal_SilverCave.description=Consume to begin a SilverCave expedition.\n30 ticks.\nLoot :\n- Goblin Miner\n- Cave Spider\n- Goblin Thief\n- Shale\n- Rubble Shale\n- Silver Ore\n- Sapphire Gem\nCompletion rewards :\n- 4x ExpeditionPoint
+items.OneBlock_Crystal_SilverCave.description=Consume to begin a SilverCave expedition.\n30 ticks.\nLoot :\n- Goblin Miner\n- Spider Cave\n- Goblin Thief\n- Shale\n- Rubble Shale\n- Silver Ore\n- Sapphire Gem\nCompletion rewards :\n- 4x ExpeditionPoint
 expeditions.SilverCave.name=SilverCave
 announcements.expedition_started.SilverCave=SilverCave expedition started.
 announcements.expedition_completed.SilverCave=SilverCave expedition complete. The OneBlock has returned to default.
@@ -191,7 +191,7 @@ progress.expedition.AdamantiteCave=AdamantiteCave: {0}/{1} ticks remaining
 # GENERATED ─── GemCave ────────────────────────────────────────────────
 items.OneBlock_Block_GemCave.name=OneBlock GemCave
 items.OneBlock_Crystal_GemCave.name=GemCave Crystal
-items.OneBlock_Crystal_GemCave.description=Consume to begin a GemCave expedition.\n30 ticks.\nLoot :\n- Cave Spider\n- Goblin Thief\n- Earth Elemental\n- Rubble Shale\n- Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\nCompletion rewards :\n- 5x ExpeditionPoint
+items.OneBlock_Crystal_GemCave.description=Consume to begin a GemCave expedition.\n30 ticks.\nLoot :\n- Spider Cave\n- Goblin Thief\n- Golem Crystal Earth\n- Rubble Shale\n- Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\nCompletion rewards :\n- 5x ExpeditionPoint
 expeditions.GemCave.name=GemCave
 announcements.expedition_started.GemCave=GemCave expedition started.
 announcements.expedition_completed.GemCave=GemCave expedition complete. The OneBlock has returned to default.
@@ -201,7 +201,7 @@ progress.expedition.GemCave=GemCave: {0}/{1} ticks remaining
 # GENERATED ─── FireCave ───────────────────────────────────────────────
 items.OneBlock_Block_FireCave.name=OneBlock FireCave
 items.OneBlock_Crystal_FireCave.name=FireCave Crystal
-items.OneBlock_Crystal_FireCave.description=Consume to begin a FireCave expedition.\n30 ticks.\nLoot :\n- Zombie Burnt\n- Emberwulf\n- Burnt Skeleton Soldier\n- Volcanic\n- Rubble Volcanic\n- Rubble Volcanic Medium\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x HellGate Crystal (unlocks HellGate)
+items.OneBlock_Crystal_FireCave.description=Consume to begin a FireCave expedition.\n30 ticks.\nLoot :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\n- Volcanic\n- Rubble Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x InfernalGate Crystal (unlocks InfernalGate)
 expeditions.FireCave.name=FireCave
 announcements.expedition_started.FireCave=FireCave expedition started.
 announcements.expedition_completed.FireCave=FireCave expedition complete. The OneBlock has returned to default.
@@ -212,7 +212,7 @@ benchCategories.OneBlockEnchanter_Fire=Fire Crystals
 # GENERATED ─── GemDeepCave ────────────────────────────────────────────
 items.OneBlock_Block_GemDeepCave.name=OneBlock GemDeepCave
 items.OneBlock_Crystal_GemDeepCave.name=GemDeepCave Crystal
-items.OneBlock_Crystal_GemDeepCave.description=Consume to begin a GemDeepCave expedition.\n30 ticks.\nLoot :\n- Cave Spider\n- Earth Elemental\n- Earthen Golem\n- Shale\n- Rubble Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 7x ExpeditionPoint
+items.OneBlock_Crystal_GemDeepCave.description=Consume to begin a GemDeepCave expedition.\n30 ticks.\nLoot :\n- Spider Cave\n- Golem Crystal Earth\n- Golem Crystal Earth\n- Shale\n- Rubble Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 7x ExpeditionPoint
 expeditions.GemDeepCave.name=GemDeepCave
 announcements.expedition_started.GemDeepCave=GemDeepCave expedition started.
 announcements.expedition_completed.GemDeepCave=GemDeepCave expedition complete. The OneBlock has returned to default.
@@ -232,7 +232,7 @@ progress.expedition.MithrilCave=MithrilCave: {0}/{1} ticks remaining
 # GENERATED ─── OnyxiumCave ────────────────────────────────────────────
 items.OneBlock_Block_OnyxiumCave.name=OneBlock OnyxiumCave
 items.OneBlock_Crystal_OnyxiumCave.name=OnyxiumCave Crystal
-items.OneBlock_Crystal_OnyxiumCave.description=Consume to begin a OnyxiumCave expedition.\n30 ticks.\nLoot :\n- Goblin Scrapper\n- Goblin Miner\n- Void Crawler\n- Rock Ledge Brick\n- Onyxium Ore\n- Prisma Ore\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x PrismaCave Crystal (unlocks PrismaCave)
+items.OneBlock_Crystal_OnyxiumCave.description=Consume to begin a OnyxiumCave expedition.\n30 ticks.\nLoot :\n- Goblin Scrapper\n- Goblin Miner\n- Crawler Void\n- Rock Ledge Brick\n- Onyxium Ore\n- Prisma Ore\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x PrismaCave Crystal (unlocks PrismaCave)
 expeditions.OnyxiumCave.name=OnyxiumCave
 announcements.expedition_started.OnyxiumCave=OnyxiumCave expedition started.
 announcements.expedition_completed.OnyxiumCave=OnyxiumCave expedition complete. The OneBlock has returned to default.
@@ -242,7 +242,7 @@ progress.expedition.OnyxiumCave=OnyxiumCave: {0}/{1} ticks remaining
 # GENERATED ─── PrismaCave ─────────────────────────────────────────────
 items.OneBlock_Block_PrismaCave.name=OneBlock PrismaCave
 items.OneBlock_Crystal_PrismaCave.name=PrismaCave Crystal
-items.OneBlock_Crystal_PrismaCave.description=Consume to begin a PrismaCave expedition.\n30 ticks.\nLoot :\n- Goblin Scrapper\n- Goblin Miner\n- Void Crawler\n- Void Eye\n- Volcanic\n- Rubble Volcanic\n- Prisma Ore\n- Zephyr Gem\nCompletion rewards :\n- 10x ExpeditionPoint
+items.OneBlock_Crystal_PrismaCave.description=Consume to begin a PrismaCave expedition.\n30 ticks.\nLoot :\n- Goblin Scrapper\n- Goblin Miner\n- Crawler Void\n- Eye Void\n- Volcanic\n- Rubble Volcanic\n- Prisma Ore\n- Zephyr Gem\nCompletion rewards :\n- 10x ExpeditionPoint
 expeditions.PrismaCave.name=PrismaCave
 announcements.expedition_started.PrismaCave=PrismaCave expedition started.
 announcements.expedition_completed.PrismaCave=PrismaCave expedition complete. The OneBlock has returned to default.
@@ -252,7 +252,7 @@ progress.expedition.PrismaCave=PrismaCave: {0}/{1} ticks remaining
 # GENERATED ─── SandCavern ─────────────────────────────────────────────
 items.OneBlock_Block_SandCavern.name=OneBlock SandCavern
 items.OneBlock_Crystal_SandCavern.name=SandCavern Crystal
-items.OneBlock_Crystal_SandCavern.description=Consume to begin a SandCavern expedition.\n30 ticks.\nLoot :\n- Bat\n- Cactee\n- Sandswept Zombie\n- Rubble Stone\n- Stone\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x Desert Crystal (unlocks Desert)
+items.OneBlock_Crystal_SandCavern.description=Consume to begin a SandCavern expedition.\n30 ticks.\nLoot :\n- Bat\n- Cactee\n- Zombie Sand\n- Rubble Stone\n- Stone\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x Desert Crystal (unlocks Desert)
 expeditions.SandCavern.name=SandCavern
 announcements.expedition_started.SandCavern=SandCavern expedition started.
 announcements.expedition_completed.SandCavern=SandCavern expedition complete. The OneBlock has returned to default.
@@ -262,7 +262,7 @@ progress.expedition.SandCavern=SandCavern: {0}/{1} ticks remaining
 # GENERATED ─── Desert ─────────────────────────────────────────────────
 items.OneBlock_Block_Desert.name=OneBlock Desert
 items.OneBlock_Crystal_Desert.name=Desert Crystal
-items.OneBlock_Crystal_Desert.description=Consume to begin a Desert expedition.\n25 ticks.\nLoot :\n- Cactee\n- Camel\n- Camel Calf\n- Sandswept Zombie\n- Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nCompletion rewards :\n- 3x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal DryJunglePass\n  [1] 1x OneBlock Crystal DesertTempleEntrace\n  [1] 1x OneBlock Crystal InnerDesert\n  [1] 1x OneBlock Crystal DryTrorkCamp
+items.OneBlock_Crystal_Desert.description=Consume to begin a Desert expedition.\n25 ticks.\nLoot :\n- Cactee\n- Camel\n- Camel Calf\n- Zombie Sand\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nCompletion rewards :\n- 3x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal DryJunglePass\n  [1] 1x OneBlock Crystal DesertTempleEntrance\n  [1] 1x OneBlock Crystal InnerDesert\n  [1] 1x OneBlock Crystal DryTrorkCamp
 expeditions.Desert.name=Desert
 announcements.expedition_started.Desert=Desert expedition started.
 announcements.expedition_completed.Desert=Desert expedition complete. The OneBlock has returned to default.
@@ -273,7 +273,7 @@ benchCategories.OneBlockEnchanter_Desert=Desert Crystals
 # GENERATED ─── ForestEntry ────────────────────────────────────────────
 items.OneBlock_Block_ForestEntry.name=OneBlock ForestEntry
 items.OneBlock_Crystal_ForestEntry.name=ForestEntry Crystal
-items.OneBlock_Crystal_ForestEntry.description=Consume to begin a ForestEntry expedition.\n25 ticks.\nLoot :\n- Boar\n- Boar Piglet\n- Pigeon\n- Fox\n- Wolf\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Brown Cap Mushroom\n- Brown Common Mushroom\n- Brown Shelve Mushroom\nCompletion rewards :\n- 1x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Pond\n  [1] 1x OneBlock Crystal Forest
+items.OneBlock_Crystal_ForestEntry.description=Consume to begin a ForestEntry expedition.\n25 ticks.\nLoot :\n- Boar\n- Boar Piglet\n- Pigeon\n- Fox\n- Wolf Black\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Brown Cap Mushroom\n- Brown Common Mushroom\n- Brown Shelve Mushroom\nCompletion rewards :\n- 1x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Pond\n  [1] 1x OneBlock Crystal Forest
 expeditions.ForestEntry.name=ForestEntry
 announcements.expedition_started.ForestEntry=ForestEntry expedition started.
 announcements.expedition_completed.ForestEntry=ForestEntry expedition complete. The OneBlock has returned to default.
@@ -283,7 +283,7 @@ progress.expedition.ForestEntry=ForestEntry: {0}/{1} ticks remaining
 # GENERATED ─── Pond ───────────────────────────────────────────────────
 items.OneBlock_Block_Pond.name=OneBlock Pond
 items.OneBlock_Crystal_Pond.name=Pond Crystal
-items.OneBlock_Crystal_Pond.description=Consume to begin a Pond expedition.\n25 ticks.\nLoot :\n- Frog\n- Duck\n- Bluegill\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay Blue\n- Soil Dirt\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x River Crystal (unlocks River)
+items.OneBlock_Crystal_Pond.description=Consume to begin a Pond expedition.\n25 ticks.\nLoot :\n- Frog Green\n- Duck\n- Bluegill\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Soil Dirt\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x River Crystal (unlocks River)
 expeditions.Pond.name=Pond
 announcements.expedition_started.Pond=Pond expedition started.
 announcements.expedition_completed.Pond=Pond expedition complete. The OneBlock has returned to default.
@@ -293,7 +293,7 @@ progress.expedition.Pond=Pond: {0}/{1} ticks remaining
 # GENERATED ─── River ──────────────────────────────────────────────────
 items.OneBlock_Block_River.name=OneBlock River
 items.OneBlock_Crystal_River.name=River Crystal
-items.OneBlock_Crystal_River.description=Consume to begin a River expedition.\n25 ticks.\nLoot :\n- Frog\n- Duck\n- Bluegill\n- Crab\n- Fish Bluegill Item\n- Rubble Stone\n- Stone\n- Soil Clay Blue\n- Plant Moss Green\nCompletion rewards :\n- 2x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Lake\n  [1] 1x OneBlock Crystal Sea\n  [1] 1x OneBlock Crystal Costline
+items.OneBlock_Crystal_River.description=Consume to begin a River expedition.\n25 ticks.\nLoot :\n- Frog Green\n- Duck\n- Bluegill\n- Crab\n- Fish Bluegill Item\n- Rubble Stone\n- Stone\n- Soil Clay\n- Plant Moss Green\nCompletion rewards :\n- 2x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Lake\n  [1] 1x OneBlock Crystal Sea\n  [1] 1x OneBlock Crystal Coastline
 expeditions.River.name=River
 announcements.expedition_started.River=River expedition started.
 announcements.expedition_completed.River=River expedition complete. The OneBlock has returned to default.
@@ -303,7 +303,7 @@ progress.expedition.River=River: {0}/{1} ticks remaining
 # GENERATED ─── Lake ───────────────────────────────────────────────────
 items.OneBlock_Block_Lake.name=OneBlock Lake
 items.OneBlock_Crystal_Lake.name=Lake Crystal
-items.OneBlock_Crystal_Lake.description=Consume to begin a Lake expedition.\n28 ticks.\nLoot :\n- Frog\n- Duck\n- Bluegill\n- Crocodile\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay Blue\n- Sapphire Gem\nCompletion rewards :\n- 2x ExpeditionPoint
+items.OneBlock_Crystal_Lake.description=Consume to begin a Lake expedition.\n28 ticks.\nLoot :\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\nCompletion rewards :\n- 2x ExpeditionPoint
 expeditions.Lake.name=Lake
 announcements.expedition_started.Lake=Lake expedition started.
 announcements.expedition_completed.Lake=Lake expedition complete. The OneBlock has returned to default.
@@ -314,7 +314,7 @@ benchCategories.OneBlockEnchanter_Ocean=Ocean Crystals
 # GENERATED ─── Sea ────────────────────────────────────────────────────
 items.OneBlock_Block_Sea.name=OneBlock Sea
 items.OneBlock_Crystal_Sea.name=Sea Crystal
-items.OneBlock_Crystal_Sea.description=Consume to begin a Sea expedition.\n30 ticks.\nLoot :\n- Crab\n- Bluegill\n- Skeleton Pirate Striker\n- Skeleton Pirate Gunner\n- Fish Whale Humpback Item\n- Rock Aqua Brick\n- Rock Aqua Brick Smooth\n- Plant Coral Block Yellow\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x PirateShipwreck Crystal (unlocks PirateShipwreck)
+items.OneBlock_Crystal_Sea.description=Consume to begin a Sea expedition.\n30 ticks.\nLoot :\n- Crab\n- Bluegill\n- Skeleton Pirate Striker\n- Skeleton Pirate Gunner\n- Rock Aqua Brick\n- Rock Aqua Brick\n- Plant Coral Block Yellow\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\n- Fish Salmon Item\n- Fish Crab Item\n- Fish Lobster Item\n- Fish Shark Hammerhead Item\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x PirateShipwreck Crystal (unlocks PirateShipwreck)
 expeditions.Sea.name=Sea
 announcements.expedition_started.Sea=Sea expedition started.
 announcements.expedition_completed.Sea=Sea expedition complete. The OneBlock has returned to default.
@@ -329,20 +329,20 @@ expeditions.PirateShipwreck.name=PirateShipwreck
 announcements.dungeon_started.PirateShipwreck=PirateShipwreck dungeon started.
 announcements.dungeon_completed.PirateShipwreck=PirateShipwreck dungeon complete. The OneBlock has returned to default.
 
-# GENERATED ─── Costline ───────────────────────────────────────────────
-items.OneBlock_Block_Costline.name=OneBlock Costline
-items.OneBlock_Crystal_Costline.name=Costline Crystal
-items.OneBlock_Crystal_Costline.description=Consume to begin a Costline expedition.\n25 ticks.\nLoot :\n- Crab\n- Duck\n- Cactee\n- Sand\n- Sandstone\n- Rubble Sandstone\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x SeaCavern Crystal (unlocks SeaCavern)
-expeditions.Costline.name=Costline
-announcements.expedition_started.Costline=Costline expedition started.
-announcements.expedition_completed.Costline=Costline expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.Costline=New expedition unlocked: Costline
-progress.expedition.Costline=Costline: {0}/{1} ticks remaining
+# GENERATED ─── Coastline ──────────────────────────────────────────────
+items.OneBlock_Block_Coastline.name=OneBlock Coastline
+items.OneBlock_Crystal_Coastline.name=Coastline Crystal
+items.OneBlock_Crystal_Coastline.description=Consume to begin a Coastline expedition.\n25 ticks.\nLoot :\n- Crab\n- Duck\n- Cactee\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x SeaCavern Crystal (unlocks SeaCavern)
+expeditions.Coastline.name=Coastline
+announcements.expedition_started.Coastline=Coastline expedition started.
+announcements.expedition_completed.Coastline=Coastline expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Coastline=New expedition unlocked: Coastline
+progress.expedition.Coastline=Coastline: {0}/{1} ticks remaining
 
 # GENERATED ─── SeaCavern ──────────────────────────────────────────────
 items.OneBlock_Block_SeaCavern.name=OneBlock SeaCavern
 items.OneBlock_Crystal_SeaCavern.name=SeaCavern Crystal
-items.OneBlock_Crystal_SeaCavern.description=Consume to begin a SeaCavern expedition.\n28 ticks.\nLoot :\n- Crab\n- Cave Spider\n- Scarak Louse\n- Rock Aqua Brick\n- Rock Aqua Brick Smooth\n- Rock Aqua Brick Ornate\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x SeaInfestedNest Crystal (unlocks SeaInfestedNest)
+items.OneBlock_Crystal_SeaCavern.description=Consume to begin a SeaCavern expedition.\n28 ticks.\nLoot :\n- Crab\n- Spider Cave\n- Scarak Louse\n- Rock Aqua Brick\n- Rock Aqua Brick\n- Rock Aqua Brick\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x SeaInfestedNest Crystal (unlocks SeaInfestedNest)
 expeditions.SeaCavern.name=SeaCavern
 announcements.expedition_started.SeaCavern=SeaCavern expedition started.
 announcements.expedition_completed.SeaCavern=SeaCavern expedition complete. The OneBlock has returned to default.
@@ -352,7 +352,7 @@ progress.expedition.SeaCavern=SeaCavern: {0}/{1} ticks remaining
 # GENERATED ─── SeaInfestedNest ────────────────────────────────────────
 items.OneBlock_Block_SeaInfestedNest.name=OneBlock SeaInfestedNest
 items.OneBlock_Crystal_SeaInfestedNest.name=SeaInfestedNest Crystal
-items.OneBlock_Crystal_SeaInfestedNest.description=Consume to begin a SeaInfestedNest expedition.\n28 ticks.\nLoot :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\n- Soil Hive\n- Soil Hive Brick\n- Soil Hive Brick Smooth\n- Scaled Hide\n- Scaled Leather\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x SeaMonster Crystal (unlocks SeaMonster)
+items.OneBlock_Crystal_SeaInfestedNest.description=Consume to begin a SeaInfestedNest expedition.\n28 ticks.\nLoot :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\n- Soil Hive\n- Soil Hive Brick\n- Soil Hive Brick\n- Scaled Hide\n- Scaled Leather\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x SeaMonster Crystal (unlocks SeaMonster)
 expeditions.SeaInfestedNest.name=SeaInfestedNest
 announcements.expedition_started.SeaInfestedNest=SeaInfestedNest expedition started.
 announcements.expedition_completed.SeaInfestedNest=SeaInfestedNest expedition complete. The OneBlock has returned to default.
@@ -362,7 +362,7 @@ progress.expedition.SeaInfestedNest=SeaInfestedNest: {0}/{1} ticks remaining
 # GENERATED ─── SeaMonster ─────────────────────────────────────────────
 items.OneBlock_Block_SeaMonster.name=OneBlock SeaMonster
 items.OneBlock_Crystal_SeaMonster.name=SeaMonster Crystal
-items.OneBlock_Crystal_SeaMonster.description=Consume to begin the SeaMonster dungeon.\n4 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Spider, Spider, Spider\n  Wave 2: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Cave Spider, Cave Spider, Cave Spider\n  Wave 3: Scarak Defender, Scarak Defender, Scarak Defender, Scarak Seeker, Scarak Seeker, Scarak Seeker, Cave Spider, Cave Spider, Cave Spider, Cave Spider\n  Wave 4: Scarak Broodmother, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Seeker, Scarak Seeker, Scarak Seeker, Scarak Seeker\nCompletion rewards :\n- 40x ExpeditionPoint
+items.OneBlock_Crystal_SeaMonster.description=Consume to begin the SeaMonster dungeon.\n4 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Spider, Spider, Spider\n  Wave 2: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Spider Cave, Spider Cave, Spider Cave\n  Wave 3: Scarak Defender, Scarak Defender, Scarak Defender, Scarak Seeker, Scarak Seeker, Scarak Seeker, Spider Cave, Spider Cave, Spider Cave, Spider Cave\n  Wave 4: Scarak Broodmother, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Seeker, Scarak Seeker, Scarak Seeker, Scarak Seeker\nCompletion rewards :\n- 40x ExpeditionPoint
 expeditions.SeaMonster.name=SeaMonster
 announcements.dungeon_started.SeaMonster=SeaMonster dungeon started.
 announcements.dungeon_completed.SeaMonster=SeaMonster dungeon complete. The OneBlock has returned to default.
@@ -370,7 +370,7 @@ announcements.dungeon_completed.SeaMonster=SeaMonster dungeon complete. The OneB
 # GENERATED ─── Forest ─────────────────────────────────────────────────
 items.OneBlock_Block_Forest.name=OneBlock Forest
 items.OneBlock_Crystal_Forest.name=Forest Crystal
-items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Boar\n- Boar Piglet\n- Fox\n- Pigeon\n- Deer\n- Wolf\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal AridForest\n  [1] 1x OneBlock Crystal Swamp\n  [1] 1x OneBlock Crystal DeepForest\n  [1] 1x OneBlock Crystal JungleEdge
+items.OneBlock_Crystal_Forest.description=Consume to begin a Forest expedition.\n25 ticks.\nLoot :\n- Boar\n- Boar Piglet\n- Fox\n- Pigeon\n- Deer Doe\n- Wolf Black\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal AridForest\n  [1] 1x OneBlock Crystal Swamp\n  [1] 1x OneBlock Crystal DeepForest\n  [1] 1x OneBlock Crystal JungleEdge
 expeditions.Forest.name=Forest
 announcements.expedition_started.Forest=Forest expedition started.
 announcements.expedition_completed.Forest=Forest expedition complete. The OneBlock has returned to default.
@@ -380,7 +380,7 @@ progress.expedition.Forest=Forest: {0}/{1} ticks remaining
 # GENERATED ─── AridForest ─────────────────────────────────────────────
 items.OneBlock_Block_AridForest.name=OneBlock AridForest
 items.OneBlock_Crystal_AridForest.name=AridForest Crystal
-items.OneBlock_Crystal_AridForest.description=Consume to begin a AridForest expedition.\n25 ticks.\nLoot :\n- Fox\n- Armadillo\n- Cactee\n- Ash Trunk\n- Bottletree Trunk\n- Wood Bottletree Roots\n- Plant Leaves Bottle\n- Plant Seeds Bottletree\n- Sandstone\n- Rubble Sandstone\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x Desert Crystal (unlocks Desert)
+items.OneBlock_Crystal_AridForest.description=Consume to begin a AridForest expedition.\n25 ticks.\nLoot :\n- Fox\n- Armadillo\n- Cactee\n- Ash Trunk\n- Bottletree Trunk\n- Plant Sapling Bottletree\n- Plant Leaves Bottle\n- Plant Seeds Bottletree\n- Sandstone\n- Rubble Sandstone\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x Desert Crystal (unlocks Desert)
 expeditions.AridForest.name=AridForest
 announcements.expedition_started.AridForest=AridForest expedition started.
 announcements.expedition_completed.AridForest=AridForest expedition complete. The OneBlock has returned to default.
@@ -390,7 +390,7 @@ progress.expedition.AridForest=AridForest: {0}/{1} ticks remaining
 # GENERATED ─── Swamp ──────────────────────────────────────────────────
 items.OneBlock_Block_Swamp.name=OneBlock Swamp
 items.OneBlock_Crystal_Swamp.name=Swamp Crystal
-items.OneBlock_Crystal_Swamp.description=Consume to begin a Swamp expedition.\n25 ticks.\nLoot :\n- Frog\n- Crocodile\n- Fen Stalker\n- Soil Dirt\n- Soil Clay Blue\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Yellow Mushroom Block\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x EnchantedForest Crystal (unlocks EnchantedForest)
+items.OneBlock_Crystal_Swamp.description=Consume to begin a Swamp expedition.\n25 ticks.\nLoot :\n- Frog Green\n- Crocodile\n- Fen Stalker\n- Soil Dirt\n- Soil Clay\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Yellow Mushroom Block\nCompletion rewards :\n- 2x ExpeditionPoint\n- 1x EnchantedForest Crystal (unlocks EnchantedForest)
 expeditions.Swamp.name=Swamp
 announcements.expedition_started.Swamp=Swamp expedition started.
 announcements.expedition_completed.Swamp=Swamp expedition complete. The OneBlock has returned to default.
@@ -400,7 +400,7 @@ progress.expedition.Swamp=Swamp: {0}/{1} ticks remaining
 # GENERATED ─── EnchantedForest ────────────────────────────────────────
 items.OneBlock_Block_EnchantedForest.name=OneBlock EnchantedForest
 items.OneBlock_Crystal_EnchantedForest.name=EnchantedForest Crystal
-items.OneBlock_Crystal_EnchantedForest.description=Consume to begin a EnchantedForest expedition.\n25 ticks.\nLoot :\n- Deer\n- Bluebird\n- Earth Elemental\n- Wood Amber Trunk\n- Wood Amber Roots\n- Plant Leaves Amber\n- Plant Leaves Goldentree\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Emerald Gem\n- Topaz Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x FairyPond Crystal (unlocks FairyPond)
+items.OneBlock_Crystal_EnchantedForest.description=Consume to begin a EnchantedForest expedition.\n25 ticks.\nLoot :\n- Deer Doe\n- Bluebird\n- Golem Crystal Earth\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Goldentree\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Emerald Gem\n- Topaz Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x FairyPond Crystal (unlocks FairyPond)
 expeditions.EnchantedForest.name=EnchantedForest
 announcements.expedition_started.EnchantedForest=EnchantedForest expedition started.
 announcements.expedition_completed.EnchantedForest=EnchantedForest expedition complete. The OneBlock has returned to default.
@@ -411,7 +411,7 @@ benchCategories.OneBlockEnchanter_Mystic=Mystic Crystals
 # GENERATED ─── FairyPond ──────────────────────────────────────────────
 items.OneBlock_Block_FairyPond.name=OneBlock FairyPond
 items.OneBlock_Crystal_FairyPond.name=FairyPond Crystal
-items.OneBlock_Crystal_FairyPond.description=Consume to begin a FairyPond expedition.\n25 ticks.\nLoot :\n- Frog\n- Duck\n- Bluebird\n- Earth Elemental\n- Plant Flower Common Pink2\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Plant Petals Yellow\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Topaz Gem\nCompletion rewards :\n- 5x ExpeditionPoint
+items.OneBlock_Crystal_FairyPond.description=Consume to begin a FairyPond expedition.\n25 ticks.\nLoot :\n- Frog Green\n- Duck\n- Bluebird\n- Golem Crystal Earth\n- Plant Flower Common Pink2\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Plant Petals Yellow\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Topaz Gem\nCompletion rewards :\n- 5x ExpeditionPoint
 expeditions.FairyPond.name=FairyPond
 announcements.expedition_started.FairyPond=FairyPond expedition started.
 announcements.expedition_completed.FairyPond=FairyPond expedition complete. The OneBlock has returned to default.
@@ -421,7 +421,7 @@ progress.expedition.FairyPond=FairyPond: {0}/{1} ticks remaining
 # GENERATED ─── DeepForest ─────────────────────────────────────────────
 items.OneBlock_Block_DeepForest.name=OneBlock DeepForest
 items.OneBlock_Crystal_DeepForest.name=DeepForest Crystal
-items.OneBlock_Crystal_DeepForest.description=Consume to begin a DeepForest expedition.\n25 ticks.\nLoot :\n- Boar\n- Fox\n- Wolf\n- Crawler\n- Beech Trunk\n- Ash Trunk\n- Maple Trunk\n- Beech Sapling\n- Plant Sapling Ash\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Trunk\n- Emerald Gem\nCompletion rewards :\n- 3x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal DarkForest\n  [1] 1x OneBlock Crystal JungleEdge\n  [1] 1x OneBlock Crystal TrorkHuntingGround
+items.OneBlock_Crystal_DeepForest.description=Consume to begin a DeepForest expedition.\n25 ticks.\nLoot :\n- Boar\n- Fox\n- Wolf Black\n- Crawler\n- Beech Trunk\n- Ash Trunk\n- Maple Trunk\n- Beech Sapling\n- Plant Sapling Ash\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Trunk\n- Emerald Gem\nCompletion rewards :\n- 3x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal DarkForest\n  [1] 1x OneBlock Crystal JungleEdge\n  [1] 1x OneBlock Crystal TrorkHuntingGround
 expeditions.DeepForest.name=DeepForest
 announcements.expedition_started.DeepForest=DeepForest expedition started.
 announcements.expedition_completed.DeepForest=DeepForest expedition complete. The OneBlock has returned to default.
@@ -431,7 +431,7 @@ progress.expedition.DeepForest=DeepForest: {0}/{1} ticks remaining
 # GENERATED ─── DarkForest ─────────────────────────────────────────────
 items.OneBlock_Block_DarkForest.name=OneBlock DarkForest
 items.OneBlock_Crystal_DarkForest.name=DarkForest Crystal
-items.OneBlock_Crystal_DarkForest.description=Consume to begin a DarkForest expedition.\n25 ticks.\nLoot :\n- Wolf\n- Crawler\n- Zombie\n- Aberrant Zombie\n- Plant Leaves Bramble\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Mycelium\n- Plant Crop Mushroom Shelve Yellow\n- Bone Fragment\n- Ruby Gem\nCompletion rewards :\n- 5x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal BurnedForest\n  [1] 1x OneBlock Crystal CursedForest
+items.OneBlock_Crystal_DarkForest.description=Consume to begin a DarkForest expedition.\n25 ticks.\nLoot :\n- Wolf Black\n- Crawler\n- Zombie\n- Zombie Aberrant\n- Plant Leaves Bramble\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Mycelium\n- Plant Crop Mushroom Shelve Yellow\n- Bone Fragment\n- Ruby Gem\nCompletion rewards :\n- 5x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal BurnedForest\n  [1] 1x OneBlock Crystal CursedForest
 expeditions.DarkForest.name=DarkForest
 announcements.expedition_started.DarkForest=DarkForest expedition started.
 announcements.expedition_completed.DarkForest=DarkForest expedition complete. The OneBlock has returned to default.
@@ -441,7 +441,7 @@ progress.expedition.DarkForest=DarkForest: {0}/{1} ticks remaining
 # GENERATED ─── BurnedForest ───────────────────────────────────────────
 items.OneBlock_Block_BurnedForest.name=OneBlock BurnedForest
 items.OneBlock_Crystal_BurnedForest.name=BurnedForest Crystal
-items.OneBlock_Crystal_BurnedForest.description=Consume to begin a BurnedForest expedition.\n25 ticks.\nLoot :\n- Zombie Burnt\n- Emberwulf\n- Burnt Skeleton Archer\n- Ash Trunk\n- Fire Essence\n- Volcanic\n- Rubble Volcanic\n- Powder Boom\n- Thorium Ore\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x FireLand Crystal (unlocks FireLand)
+items.OneBlock_Crystal_BurnedForest.description=Consume to begin a BurnedForest expedition.\n25 ticks.\nLoot :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Archer\n- Ash Trunk\n- Fire Essence\n- Volcanic\n- Rubble Volcanic\n- Powder Boom\n- Thorium Ore\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x FireLand Crystal (unlocks FireLand)
 expeditions.BurnedForest.name=BurnedForest
 announcements.expedition_started.BurnedForest=BurnedForest expedition started.
 announcements.expedition_completed.BurnedForest=BurnedForest expedition complete. The OneBlock has returned to default.
@@ -451,7 +451,7 @@ progress.expedition.BurnedForest=BurnedForest: {0}/{1} ticks remaining
 # GENERATED ─── CursedForest ───────────────────────────────────────────
 items.OneBlock_Block_CursedForest.name=OneBlock CursedForest
 items.OneBlock_Crystal_CursedForest.name=CursedForest Crystal
-items.OneBlock_Crystal_CursedForest.description=Consume to begin a CursedForest expedition.\n25 ticks.\nLoot :\n- Zombie\n- Aberrant Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Zephyr Gem\nCompletion rewards :\n- 6x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal OutlanderForest\n  [1] 1x OneBlock Crystal Graveyard
+items.OneBlock_Crystal_CursedForest.description=Consume to begin a CursedForest expedition.\n25 ticks.\nLoot :\n- Zombie\n- Zombie Aberrant\n- Skeleton Scout\n- Skeleton Archer\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Zephyr Gem\nCompletion rewards :\n- 6x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal OutlanderForest\n  [1] 1x OneBlock Crystal Graveyard
 expeditions.CursedForest.name=CursedForest
 announcements.expedition_started.CursedForest=CursedForest expedition started.
 announcements.expedition_completed.CursedForest=CursedForest expedition complete. The OneBlock has returned to default.
@@ -479,7 +479,7 @@ announcements.dungeon_completed.UndeadTemple=UndeadTemple dungeon complete. The 
 # GENERATED ─── VoidPortal ─────────────────────────────────────────────
 items.OneBlock_Block_VoidPortal.name=OneBlock VoidPortal
 items.OneBlock_Crystal_VoidPortal.name=VoidPortal Crystal
-items.OneBlock_Crystal_VoidPortal.description=Consume to begin a VoidPortal expedition.\n25 ticks.\nLoot :\n- Void Larva\n- Void Crawler\n- Void Eye\n- Portal Device\n- Instance Gateway\n- Rock Runic Brick\n- Rock Runic Brick Ornate\n- Zephyr Gem\n- Onyxium Ore\nCompletion rewards :\n- 8x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal VoidTemple\n  [1] 1x OneBlock Crystal SpiritThreshold
+items.OneBlock_Crystal_VoidPortal.description=Consume to begin a VoidPortal expedition.\n25 ticks.\nLoot :\n- Larva Void\n- Crawler Void\n- Eye Void\n- Rock Runic Brick\n- Rock Runic Cobble\n- Rock Runic Dark Brick\n- Rock Gem Voidstone\n- Void Essence\n- Voidheart\n- Onyxium Ore\nCompletion rewards :\n- 8x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal VoidTemple\n  [1] 1x OneBlock Crystal SpiritThreshold
 expeditions.VoidPortal.name=VoidPortal
 announcements.expedition_started.VoidPortal=VoidPortal expedition started.
 announcements.expedition_completed.VoidPortal=VoidPortal expedition complete. The OneBlock has returned to default.
@@ -489,7 +489,7 @@ progress.expedition.VoidPortal=VoidPortal: {0}/{1} ticks remaining
 # GENERATED ─── VoidTemple ─────────────────────────────────────────────
 items.OneBlock_Block_VoidTemple.name=OneBlock VoidTemple
 items.OneBlock_Crystal_VoidTemple.name=VoidTemple Crystal
-items.OneBlock_Crystal_VoidTemple.description=Consume to begin the VoidTemple dungeon.\n4 waves :\n  Wave 1: Void Larva, Void Larva, Void Larva, Void Larva, Void Larva, Void Larva, Void Crawler, Void Crawler\n  Wave 2: Void Crawler, Void Crawler, Void Crawler, Void Crawler, Void Crawler, Void Eye, Void Eye\n  Wave 3: Void Spawn, Void Spawn, Void Spawn, Void Spawn, Void Spectre, Void Spectre\n  Wave 4: Void Spawn, Void Spawn, Void Spawn, Void Spawn, Void Spawn, Void Spawn, Void Spectre, Void Spectre, Void Spectre, Void Spectre, Void Eye, Void Eye, Void Eye\nCompletion rewards :\n- 75x ExpeditionPoint
+items.OneBlock_Crystal_VoidTemple.description=Consume to begin the VoidTemple dungeon.\n4 waves :\n  Wave 1: Larva Void, Larva Void, Larva Void, Larva Void, Larva Void, Larva Void, Crawler Void, Crawler Void\n  Wave 2: Crawler Void, Crawler Void, Crawler Void, Crawler Void, Crawler Void, Eye Void, Eye Void\n  Wave 3: Spawn Void, Spawn Void, Spawn Void, Spawn Void, Wraith, Wraith\n  Wave 4: Spawn Void, Spawn Void, Spawn Void, Spawn Void, Spawn Void, Spawn Void, Wraith, Wraith, Wraith, Wraith, Eye Void, Eye Void, Eye Void\nCompletion rewards :\n- 75x ExpeditionPoint
 expeditions.VoidTemple.name=VoidTemple
 announcements.dungeon_started.VoidTemple=VoidTemple dungeon started.
 announcements.dungeon_completed.VoidTemple=VoidTemple dungeon complete. The OneBlock has returned to default.
@@ -497,7 +497,7 @@ announcements.dungeon_completed.VoidTemple=VoidTemple dungeon complete. The OneB
 # GENERATED ─── OutlanderForest ────────────────────────────────────────
 items.OneBlock_Block_OutlanderForest.name=OneBlock OutlanderForest
 items.OneBlock_Crystal_OutlanderForest.name=OutlanderForest Crystal
-items.OneBlock_Crystal_OutlanderForest.description=Consume to begin a OutlanderForest expedition.\n25 ticks.\nLoot :\n- Outlander Initiate\n- Outlander Hunter\n- Outlander Marauder\n- Wood Amber Trunk\n- Wood Amber Roots\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Prismic Hide\n- Zephyr Gem\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal OutlanderGank\n  [1] 1x OneBlock Crystal OutlanderPlain
+items.OneBlock_Crystal_OutlanderForest.description=Consume to begin a OutlanderForest expedition.\n25 ticks.\nLoot :\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Prismic Hide\n- Zephyr Gem\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal OutlanderGank\n  [1] 1x OneBlock Crystal OutlanderPlain
 expeditions.OutlanderForest.name=OutlanderForest
 announcements.expedition_started.OutlanderForest=OutlanderForest expedition started.
 announcements.expedition_completed.OutlanderForest=OutlanderForest expedition complete. The OneBlock has returned to default.
@@ -507,7 +507,7 @@ progress.expedition.OutlanderForest=OutlanderForest: {0}/{1} ticks remaining
 # GENERATED ─── OutlanderPlain ─────────────────────────────────────────
 items.OneBlock_Block_OutlanderPlain.name=OneBlock OutlanderPlain
 items.OneBlock_Crystal_OutlanderPlain.name=OutlanderPlain Crystal
-items.OneBlock_Crystal_OutlanderPlain.description=Consume to begin a OutlanderPlain expedition.\n25 ticks.\nLoot :\n- Outlander Initiate\n- Outlander Hunter\n- Outlander Berserker\n- Outlander Marauder\n- Outlander Priest\n- Outlander Brute\n- Wheat\n- Corn\n- Carrot\n- Prismic Hide\n- Prismic Leather\n- Adamantite Ore\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal OutlanderCity\n  [1] 1x OneBlock Crystal Toundra
+items.OneBlock_Crystal_OutlanderPlain.description=Consume to begin a OutlanderPlain expedition.\n25 ticks.\nLoot :\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Berserker\n- Outlander Marauder\n- Outlander Priest\n- Outlander Brute\n- Wheat\n- Corn\n- Carrot\n- Prismic Hide\n- Prismic Leather\n- Adamantite Ore\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal OutlanderCity\n  [1] 1x OneBlock Crystal Tundra
 expeditions.OutlanderPlain.name=OutlanderPlain
 announcements.expedition_started.OutlanderPlain=OutlanderPlain expedition started.
 announcements.expedition_completed.OutlanderPlain=OutlanderPlain expedition complete. The OneBlock has returned to default.
@@ -517,7 +517,7 @@ progress.expedition.OutlanderPlain=OutlanderPlain: {0}/{1} ticks remaining
 # GENERATED ─── OutlanderGank ──────────────────────────────────────────
 items.OneBlock_Block_OutlanderGank.name=OneBlock OutlanderGank
 items.OneBlock_Crystal_OutlanderGank.name=OutlanderGank Crystal
-items.OneBlock_Crystal_OutlanderGank.description=Consume to begin the OutlanderGank dungeon.\n4 waves :\n  Wave 1: Outlander Initiate, Outlander Initiate, Outlander Initiate, Outlander Initiate, Outlander Hunter\n  Wave 2: Outlander Initiate, Outlander Initiate, Outlander Initiate, Outlander Hunter, Outlander Hunter, Outlander Marauder\n  Wave 3: Outlander Berserker, Outlander Berserker, Outlander Marauder, Outlander Marauder, Outlander Marauder\n  Wave 4: Outlander Berserker, Outlander Berserker, Outlander Berserker, Outlander Hunter, Outlander Hunter, Outlander Hunter, Outlander Marauder, Outlander Marauder\nCompletion rewards :\n- 42x ExpeditionPoint
+items.OneBlock_Crystal_OutlanderGank.description=Consume to begin the OutlanderGank dungeon.\n4 waves :\n  Wave 1: Outlander Cultist, Outlander Cultist, Outlander Cultist, Outlander Cultist, Outlander Hunter\n  Wave 2: Outlander Cultist, Outlander Cultist, Outlander Cultist, Outlander Hunter, Outlander Hunter, Outlander Marauder\n  Wave 3: Outlander Berserker, Outlander Berserker, Outlander Marauder, Outlander Marauder, Outlander Marauder\n  Wave 4: Outlander Berserker, Outlander Berserker, Outlander Berserker, Outlander Hunter, Outlander Hunter, Outlander Hunter, Outlander Marauder, Outlander Marauder\nCompletion rewards :\n- 42x ExpeditionPoint
 expeditions.OutlanderGank.name=OutlanderGank
 announcements.dungeon_started.OutlanderGank=OutlanderGank dungeon started.
 announcements.dungeon_completed.OutlanderGank=OutlanderGank dungeon complete. The OneBlock has returned to default.
@@ -525,26 +525,26 @@ announcements.dungeon_completed.OutlanderGank=OutlanderGank dungeon complete. Th
 # GENERATED ─── OutlanderCity ──────────────────────────────────────────
 items.OneBlock_Block_OutlanderCity.name=OneBlock OutlanderCity
 items.OneBlock_Crystal_OutlanderCity.name=OutlanderCity Crystal
-items.OneBlock_Crystal_OutlanderCity.description=Consume to begin the OutlanderCity dungeon.\n5 waves :\n  Wave 1: Outlander Initiate, Outlander Initiate, Outlander Initiate, Outlander Initiate, Outlander Initiate, Outlander Hunter, Outlander Hunter, Outlander Hunter\n  Wave 2: Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Berserker, Outlander Berserker, Outlander Berserker\n  Wave 3: Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Hunter, Outlander Hunter, Outlander Hunter, Outlander Hunter, Outlander Priest\n  Wave 4: Outlander Berserker, Outlander Berserker, Outlander Berserker, Outlander Berserker, Outlander Brute, Outlander Priest\n  Wave 5: Outlander Brute, Outlander Brute, Outlander Priest, Outlander Priest, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder\nCompletion rewards :\n- 60x ExpeditionPoint
+items.OneBlock_Crystal_OutlanderCity.description=Consume to begin the OutlanderCity dungeon.\n5 waves :\n  Wave 1: Outlander Cultist, Outlander Cultist, Outlander Cultist, Outlander Cultist, Outlander Cultist, Outlander Hunter, Outlander Hunter, Outlander Hunter\n  Wave 2: Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Berserker, Outlander Berserker, Outlander Berserker\n  Wave 3: Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Hunter, Outlander Hunter, Outlander Hunter, Outlander Hunter, Outlander Priest\n  Wave 4: Outlander Berserker, Outlander Berserker, Outlander Berserker, Outlander Berserker, Outlander Brute, Outlander Priest\n  Wave 5: Outlander Brute, Outlander Brute, Outlander Priest, Outlander Priest, Outlander Marauder, Outlander Marauder, Outlander Marauder, Outlander Marauder\nCompletion rewards :\n- 60x ExpeditionPoint
 expeditions.OutlanderCity.name=OutlanderCity
 announcements.dungeon_started.OutlanderCity=OutlanderCity dungeon started.
 announcements.dungeon_completed.OutlanderCity=OutlanderCity dungeon complete. The OneBlock has returned to default.
 
-# GENERATED ─── Toundra ────────────────────────────────────────────────
-items.OneBlock_Block_Toundra.name=OneBlock Toundra
-items.OneBlock_Crystal_Toundra.name=Toundra Crystal
-items.OneBlock_Crystal_Toundra.description=Consume to begin a Toundra expedition.\n25 ticks.\nLoot :\n- Wolf\n- Frost Zombie\n- Frost Skeleton Scout\n- Ice\n- Rubble Ice\n- Rubble Ice Medium\n- Ice Trunk\n- Plant Seeds Ice\n- Ice Essence\nCompletion rewards :\n- 8x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal FrozenForest\n  [1] 1x OneBlock Crystal IceLand
-expeditions.Toundra.name=Toundra
-announcements.expedition_started.Toundra=Toundra expedition started.
-announcements.expedition_completed.Toundra=Toundra expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.Toundra=New expedition unlocked: Toundra
-progress.expedition.Toundra=Toundra: {0}/{1} ticks remaining
+# GENERATED ─── Tundra ─────────────────────────────────────────────────
+items.OneBlock_Block_Tundra.name=OneBlock Tundra
+items.OneBlock_Crystal_Tundra.name=Tundra Crystal
+items.OneBlock_Crystal_Tundra.description=Consume to begin a Tundra expedition.\n25 ticks.\nLoot :\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Scout\n- Ice\n- Rubble Ice\n- Rubble Ice\n- Ice Trunk\n- Plant Seeds Ice\n- Ice Essence\nCompletion rewards :\n- 8x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal FrozenForest\n  [1] 1x OneBlock Crystal IceLand
+expeditions.Tundra.name=Tundra
+announcements.expedition_started.Tundra=Tundra expedition started.
+announcements.expedition_completed.Tundra=Tundra expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Tundra=New expedition unlocked: Tundra
+progress.expedition.Tundra=Tundra: {0}/{1} ticks remaining
 benchCategories.OneBlockEnchanter_Ice=Ice Crystals
 
 # GENERATED ─── FrozenForest ───────────────────────────────────────────
 items.OneBlock_Block_FrozenForest.name=OneBlock FrozenForest
 items.OneBlock_Crystal_FrozenForest.name=FrozenForest Crystal
-items.OneBlock_Crystal_FrozenForest.description=Consume to begin a FrozenForest expedition.\n25 ticks.\nLoot :\n- Wolf\n- Frost Zombie\n- Frost Skeleton Ranger\n- Birch Trunk\n- Birch Sapling\n- Plant Leaves Birch\n- Ice Trunk\n- Ice\n- Rubble Ice\n- Ice Essence\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x IcyForest Crystal (unlocks IcyForest)
+items.OneBlock_Crystal_FrozenForest.description=Consume to begin a FrozenForest expedition.\n25 ticks.\nLoot :\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Ranger\n- Birch Trunk\n- Birch Sapling\n- Plant Leaves Birch\n- Ice Trunk\n- Ice\n- Rubble Ice\n- Ice Essence\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x IcyForest Crystal (unlocks IcyForest)
 expeditions.FrozenForest.name=FrozenForest
 announcements.expedition_started.FrozenForest=FrozenForest expedition started.
 announcements.expedition_completed.FrozenForest=FrozenForest expedition complete. The OneBlock has returned to default.
@@ -554,7 +554,7 @@ progress.expedition.FrozenForest=FrozenForest: {0}/{1} ticks remaining
 # GENERATED ─── IceLand ────────────────────────────────────────────────
 items.OneBlock_Block_IceLand.name=OneBlock IceLand
 items.OneBlock_Crystal_IceLand.name=IceLand Crystal
-items.OneBlock_Crystal_IceLand.description=Consume to begin a IceLand expedition.\n25 ticks.\nLoot :\n- Frost Zombie\n- Frost Skeleton Scout\n- Frost Golem\n- Ice\n- Rubble Ice\n- Rubble Ice Medium\n- Rock Ice Icicles\n- Ice Trunk\n- Ice Essence\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x IcyCavern Crystal (unlocks IcyCavern)
+items.OneBlock_Crystal_IceLand.description=Consume to begin a IceLand expedition.\n25 ticks.\nLoot :\n- Zombie Frost\n- Skeleton Frost Scout\n- Golem Crystal Frost\n- Ice\n- Rubble Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Trunk\n- Ice Essence\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x IcyCavern Crystal (unlocks IcyCavern)
 expeditions.IceLand.name=IceLand
 announcements.expedition_started.IceLand=IceLand expedition started.
 announcements.expedition_completed.IceLand=IceLand expedition complete. The OneBlock has returned to default.
@@ -564,7 +564,7 @@ progress.expedition.IceLand=IceLand: {0}/{1} ticks remaining
 # GENERATED ─── IcyCavern ──────────────────────────────────────────────
 items.OneBlock_Block_IcyCavern.name=OneBlock IcyCavern
 items.OneBlock_Crystal_IcyCavern.name=IcyCavern Crystal
-items.OneBlock_Crystal_IcyCavern.description=Consume to begin a IcyCavern expedition.\n28 ticks.\nLoot :\n- Frost Zombie\n- Frost Skeleton Fighter\n- Frost Skeleton Mage\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Silver Ore\n- Sapphire Gem\n- Ice Essence\nCompletion rewards :\n- 9x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal YetiCavern\n  [1] 1x OneBlock Crystal FrozenGraveyard
+items.OneBlock_Crystal_IcyCavern.description=Consume to begin a IcyCavern expedition.\n28 ticks.\nLoot :\n- Zombie Frost\n- Skeleton Frost Fighter\n- Skeleton Frost Mage\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Silver Ore\n- Sapphire Gem\n- Ice Essence\nCompletion rewards :\n- 9x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal YetiCavern\n  [1] 1x OneBlock Crystal FrozenGraveyard
 expeditions.IcyCavern.name=IcyCavern
 announcements.expedition_started.IcyCavern=IcyCavern expedition started.
 announcements.expedition_completed.IcyCavern=IcyCavern expedition complete. The OneBlock has returned to default.
@@ -574,7 +574,7 @@ progress.expedition.IcyCavern=IcyCavern: {0}/{1} ticks remaining
 # GENERATED ─── YetiCavern ─────────────────────────────────────────────
 items.OneBlock_Block_YetiCavern.name=OneBlock YetiCavern
 items.OneBlock_Crystal_YetiCavern.name=YetiCavern Crystal
-items.OneBlock_Crystal_YetiCavern.description=Consume to begin a YetiCavern expedition.\n28 ticks.\nLoot :\n- Frost Golem\n- Frost Skeleton Knight\n- Ice Dragon\n- Ice\n- Rubble Ice Medium\n- Rock Ice Icicles\n- Ice Essence\n- Diamond Gem\n- Weapon Staff Crystal Ice\nCompletion rewards :\n- 10x ExpeditionPoint\n- 1x IceTemple Crystal (unlocks IceTemple)
+items.OneBlock_Crystal_YetiCavern.description=Consume to begin a YetiCavern expedition.\n28 ticks.\nLoot :\n- Golem Crystal Frost\n- Skeleton Frost Knight\n- Dragon Frost\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Diamond Gem\n- Weapon Staff Crystal Ice\nCompletion rewards :\n- 10x ExpeditionPoint\n- 1x IceTemple Crystal (unlocks IceTemple)
 expeditions.YetiCavern.name=YetiCavern
 announcements.expedition_started.YetiCavern=YetiCavern expedition started.
 announcements.expedition_completed.YetiCavern=YetiCavern expedition complete. The OneBlock has returned to default.
@@ -584,7 +584,7 @@ progress.expedition.YetiCavern=YetiCavern: {0}/{1} ticks remaining
 # GENERATED ─── IceTemple ──────────────────────────────────────────────
 items.OneBlock_Block_IceTemple.name=OneBlock IceTemple
 items.OneBlock_Crystal_IceTemple.name=IceTemple Crystal
-items.OneBlock_Crystal_IceTemple.description=Consume to begin the IceTemple dungeon.\n4 waves :\n  Wave 1: Frost Zombie, Frost Zombie, Frost Zombie, Frost Zombie, Frost Skeleton Scout, Frost Skeleton Scout\n  Wave 2: Frost Skeleton Fighter, Frost Skeleton Fighter, Frost Skeleton Fighter, Frost Skeleton Fighter, Frost Skeleton Ranger, Frost Skeleton Ranger\n  Wave 3: Frost Golem, Frost Golem, Frost Skeleton Mage, Frost Skeleton Mage, Frost Skeleton Mage\n  Wave 4: Ice Dragon, Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Knight, Frost Zombie, Frost Zombie, Frost Zombie, Frost Zombie, Frost Zombie, Frost Zombie\nCompletion rewards :\n- 75x ExpeditionPoint
+items.OneBlock_Crystal_IceTemple.description=Consume to begin the IceTemple dungeon.\n4 waves :\n  Wave 1: Zombie Frost, Zombie Frost, Zombie Frost, Zombie Frost, Skeleton Frost Scout, Skeleton Frost Scout\n  Wave 2: Skeleton Frost Fighter, Skeleton Frost Fighter, Skeleton Frost Fighter, Skeleton Frost Fighter, Skeleton Frost Ranger, Skeleton Frost Ranger\n  Wave 3: Golem Crystal Frost, Golem Crystal Frost, Skeleton Frost Mage, Skeleton Frost Mage, Skeleton Frost Mage\n  Wave 4: Dragon Frost, Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Knight, Zombie Frost, Zombie Frost, Zombie Frost, Zombie Frost, Zombie Frost, Zombie Frost\nCompletion rewards :\n- 75x ExpeditionPoint
 expeditions.IceTemple.name=IceTemple
 announcements.dungeon_started.IceTemple=IceTemple dungeon started.
 announcements.dungeon_completed.IceTemple=IceTemple dungeon complete. The OneBlock has returned to default.
@@ -592,7 +592,7 @@ announcements.dungeon_completed.IceTemple=IceTemple dungeon complete. The OneBlo
 # GENERATED ─── IcyForest ──────────────────────────────────────────────
 items.OneBlock_Block_IcyForest.name=OneBlock IcyForest
 items.OneBlock_Crystal_IcyForest.name=IcyForest Crystal
-items.OneBlock_Crystal_IcyForest.description=Consume to begin a IcyForest expedition.\n25 ticks.\nLoot :\n- Wolf\n- Frost Zombie\n- Frost Skeleton Ranger\n- Frost Golem\n- Ice Trunk\n- Plant Seeds Ice\n- Plant Leaves Birch\n- Birch Trunk\n- Ice\n- Ice Essence\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x SpiritThreshold Crystal (unlocks SpiritThreshold)
+items.OneBlock_Crystal_IcyForest.description=Consume to begin a IcyForest expedition.\n25 ticks.\nLoot :\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Ranger\n- Golem Crystal Frost\n- Ice Trunk\n- Plant Seeds Ice\n- Plant Leaves Birch\n- Birch Trunk\n- Ice\n- Ice Essence\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x SpiritThreshold Crystal (unlocks SpiritThreshold)
 expeditions.IcyForest.name=IcyForest
 announcements.expedition_started.IcyForest=IcyForest expedition started.
 announcements.expedition_completed.IcyForest=IcyForest expedition complete. The OneBlock has returned to default.
@@ -602,7 +602,7 @@ progress.expedition.IcyForest=IcyForest: {0}/{1} ticks remaining
 # GENERATED ─── FireLand ───────────────────────────────────────────────
 items.OneBlock_Block_FireLand.name=OneBlock FireLand
 items.OneBlock_Crystal_FireLand.name=FireLand Crystal
-items.OneBlock_Crystal_FireLand.description=Consume to begin a FireLand expedition.\n25 ticks.\nLoot :\n- Zombie Burnt\n- Emberwulf\n- Burnt Skeleton Soldier\n- Volcanic\n- Rubble Volcanic\n- Rubble Volcanic Medium\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Volcano\n  [1] 1x OneBlock Crystal FieryGraveward
+items.OneBlock_Crystal_FireLand.description=Consume to begin a FireLand expedition.\n25 ticks.\nLoot :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\n- Volcanic\n- Rubble Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal Volcano\n  [1] 1x OneBlock Crystal FieryGraveyard
 expeditions.FireLand.name=FireLand
 announcements.expedition_started.FireLand=FireLand expedition started.
 announcements.expedition_completed.FireLand=FireLand expedition complete. The OneBlock has returned to default.
@@ -612,75 +612,75 @@ progress.expedition.FireLand=FireLand: {0}/{1} ticks remaining
 # GENERATED ─── Volcano ────────────────────────────────────────────────
 items.OneBlock_Block_Volcano.name=OneBlock Volcano
 items.OneBlock_Crystal_Volcano.name=Volcano Crystal
-items.OneBlock_Crystal_Volcano.description=Consume to begin the Volcano dungeon.\n4 waves :\n  Wave 1: Zombie Burnt, Zombie Burnt, Zombie Burnt, Zombie Burnt, Zombie Burnt, Emberwulf, Emberwulf\n  Wave 2: Burnt Skeleton Soldier, Burnt Skeleton Soldier, Burnt Skeleton Soldier, Burnt Skeleton Soldier, Burnt Skeleton Archer, Burnt Skeleton Archer, Burnt Skeleton Archer\n  Wave 3: Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Wizard, Burnt Skeleton Wizard\n  Wave 4: Ember Golem, Ember Golem, Burnt Skeleton Praetorian, Burnt Skeleton Praetorian, Burnt Skeleton Praetorian, Emberwulf, Emberwulf, Emberwulf, Emberwulf\nCompletion rewards :\n- 55x ExpeditionPoint
+items.OneBlock_Crystal_Volcano.description=Consume to begin the Volcano dungeon.\n4 waves :\n  Wave 1: Zombie Burnt, Zombie Burnt, Zombie Burnt, Zombie Burnt, Zombie Burnt, Emberwulf, Emberwulf\n  Wave 2: Skeleton Burnt Soldier, Skeleton Burnt Soldier, Skeleton Burnt Soldier, Skeleton Burnt Soldier, Skeleton Burnt Archer, Skeleton Burnt Archer, Skeleton Burnt Archer\n  Wave 3: Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Wizard, Skeleton Burnt Wizard\n  Wave 4: Golem Crystal Flame, Golem Crystal Flame, Skeleton Burnt Praetorian, Skeleton Burnt Praetorian, Skeleton Burnt Praetorian, Emberwulf, Emberwulf, Emberwulf, Emberwulf\nCompletion rewards :\n- 55x ExpeditionPoint
 expeditions.Volcano.name=Volcano
 announcements.dungeon_started.Volcano=Volcano dungeon started.
 announcements.dungeon_completed.Volcano=Volcano dungeon complete. The OneBlock has returned to default.
 
-# GENERATED ─── FieryGraveward ─────────────────────────────────────────
-items.OneBlock_Block_FieryGraveward.name=OneBlock FieryGraveward
-items.OneBlock_Crystal_FieryGraveward.name=FieryGraveward Crystal
-items.OneBlock_Crystal_FieryGraveward.description=Consume to begin a FieryGraveward expedition.\n25 ticks.\nLoot :\n- Zombie Burnt\n- Burnt Skeleton Soldier\n- Burnt Skeleton Archer\n- Burnt Skeleton Knight\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Fire Essence\n- Ruby Gem\nCompletion rewards :\n- 8x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal FireCave\n  [1] 1x OneBlock Crystal BurntBattlefield
-expeditions.FieryGraveward.name=FieryGraveward
-announcements.expedition_started.FieryGraveward=FieryGraveward expedition started.
-announcements.expedition_completed.FieryGraveward=FieryGraveward expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.FieryGraveward=New expedition unlocked: FieryGraveward
-progress.expedition.FieryGraveward=FieryGraveward: {0}/{1} ticks remaining
+# GENERATED ─── FieryGraveyard ─────────────────────────────────────────
+items.OneBlock_Block_FieryGraveyard.name=OneBlock FieryGraveyard
+items.OneBlock_Crystal_FieryGraveyard.name=FieryGraveyard Crystal
+items.OneBlock_Crystal_FieryGraveyard.description=Consume to begin a FieryGraveyard expedition.\n25 ticks.\nLoot :\n- Zombie Burnt\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Knight\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Fire Essence\n- Ruby Gem\nCompletion rewards :\n- 8x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal FireCave\n  [1] 1x OneBlock Crystal BurntBattlefield
+expeditions.FieryGraveyard.name=FieryGraveyard
+announcements.expedition_started.FieryGraveyard=FieryGraveyard expedition started.
+announcements.expedition_completed.FieryGraveyard=FieryGraveyard expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.FieryGraveyard=New expedition unlocked: FieryGraveyard
+progress.expedition.FieryGraveyard=FieryGraveyard: {0}/{1} ticks remaining
 
-# GENERATED ─── HellGate ───────────────────────────────────────────────
-items.OneBlock_Block_HellGate.name=OneBlock HellGate
-items.OneBlock_Crystal_HellGate.name=HellGate Crystal
-items.OneBlock_Crystal_HellGate.description=Consume to begin a HellGate expedition.\n25 ticks.\nLoot :\n- Incandescent Skeleton Fighter\n- Incandescent Skeleton Mage\n- Ember Golem\n- Portal Device\n- Rock Volcanic Cracked Incandescent\n- Rock Volcanic Cracked Lava Incandescent\n- Fire Essence\n- Mithril Ore\n- Onyxium Ore\nCompletion rewards :\n- 9x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal HellPlain\n  [1] 1x OneBlock Crystal HellSwamp
-expeditions.HellGate.name=HellGate
-announcements.expedition_started.HellGate=HellGate expedition started.
-announcements.expedition_completed.HellGate=HellGate expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.HellGate=New expedition unlocked: HellGate
-progress.expedition.HellGate=HellGate: {0}/{1} ticks remaining
+# GENERATED ─── InfernalGate ───────────────────────────────────────────
+items.OneBlock_Block_InfernalGate.name=OneBlock InfernalGate
+items.OneBlock_Crystal_InfernalGate.name=InfernalGate Crystal
+items.OneBlock_Crystal_InfernalGate.description=Consume to begin a InfernalGate expedition.\n25 ticks.\nLoot :\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Mage\n- Golem Crystal Flame\n- Rock Runic Brick\n- Rock Volcanic Cracked Incandescent\n- Rock Volcanic Cracked Lava Incandescent\n- Fire Essence\n- Mithril Ore\n- Onyxium Ore\nCompletion rewards :\n- 9x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal InfernalPlain\n  [1] 1x OneBlock Crystal InfernalSwamp
+expeditions.InfernalGate.name=InfernalGate
+announcements.expedition_started.InfernalGate=InfernalGate expedition started.
+announcements.expedition_completed.InfernalGate=InfernalGate expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.InfernalGate=New expedition unlocked: InfernalGate
+progress.expedition.InfernalGate=InfernalGate: {0}/{1} ticks remaining
 
-# GENERATED ─── HellPlain ──────────────────────────────────────────────
-items.OneBlock_Block_HellPlain.name=OneBlock HellPlain
-items.OneBlock_Crystal_HellPlain.name=HellPlain Crystal
-items.OneBlock_Crystal_HellPlain.description=Consume to begin a HellPlain expedition.\n25 ticks.\nLoot :\n- Incandescent Skeleton Fighter\n- Incandescent Skeleton Footman\n- Emberwulf\n- Firesteel Golem\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Cindercloth Bolt\n- Mithril Ore\n- Onyxium Ore\nCompletion rewards :\n- 10x ExpeditionPoint\n- 1x FireGemCave Crystal (unlocks FireGemCave)
-expeditions.HellPlain.name=HellPlain
-announcements.expedition_started.HellPlain=HellPlain expedition started.
-announcements.expedition_completed.HellPlain=HellPlain expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.HellPlain=New expedition unlocked: HellPlain
-progress.expedition.HellPlain=HellPlain: {0}/{1} ticks remaining
+# GENERATED ─── InfernalPlain ──────────────────────────────────────────
+items.OneBlock_Block_InfernalPlain.name=OneBlock InfernalPlain
+items.OneBlock_Crystal_InfernalPlain.name=InfernalPlain Crystal
+items.OneBlock_Crystal_InfernalPlain.description=Consume to begin a InfernalPlain expedition.\n25 ticks.\nLoot :\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Footman\n- Emberwulf\n- Golem Firesteel\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Cindercloth Bolt\n- Mithril Ore\n- Onyxium Ore\nCompletion rewards :\n- 10x ExpeditionPoint\n- 1x FireGemCave Crystal (unlocks FireGemCave)
+expeditions.InfernalPlain.name=InfernalPlain
+announcements.expedition_started.InfernalPlain=InfernalPlain expedition started.
+announcements.expedition_completed.InfernalPlain=InfernalPlain expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.InfernalPlain=New expedition unlocked: InfernalPlain
+progress.expedition.InfernalPlain=InfernalPlain: {0}/{1} ticks remaining
 
-# GENERATED ─── HellSwamp ──────────────────────────────────────────────
-items.OneBlock_Block_HellSwamp.name=OneBlock HellSwamp
-items.OneBlock_Crystal_HellSwamp.name=HellSwamp Crystal
-items.OneBlock_Crystal_HellSwamp.description=Consume to begin a HellSwamp expedition.\n25 ticks.\nLoot :\n- Fen Stalker\n- Zombie Burnt\n- Incandescent Skeleton Mage\n- Ember Golem\n- Soil Clay Black\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Yellow Mushroom Block\n- Fire Essence\n- Ruby Gem\n- Onyxium Ore\nCompletion rewards :\n- 10x ExpeditionPoint
-expeditions.HellSwamp.name=HellSwamp
-announcements.expedition_started.HellSwamp=HellSwamp expedition started.
-announcements.expedition_completed.HellSwamp=HellSwamp expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.HellSwamp=New expedition unlocked: HellSwamp
-progress.expedition.HellSwamp=HellSwamp: {0}/{1} ticks remaining
+# GENERATED ─── InfernalSwamp ──────────────────────────────────────────
+items.OneBlock_Block_InfernalSwamp.name=OneBlock InfernalSwamp
+items.OneBlock_Crystal_InfernalSwamp.name=InfernalSwamp Crystal
+items.OneBlock_Crystal_InfernalSwamp.description=Consume to begin a InfernalSwamp expedition.\n25 ticks.\nLoot :\n- Fen Stalker\n- Zombie Burnt\n- Skeleton Incandescent Mage\n- Golem Crystal Flame\n- Soil Mud\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Yellow Mushroom Block\n- Fire Essence\n- Ruby Gem\n- Onyxium Ore\nCompletion rewards :\n- 10x ExpeditionPoint
+expeditions.InfernalSwamp.name=InfernalSwamp
+announcements.expedition_started.InfernalSwamp=InfernalSwamp expedition started.
+announcements.expedition_completed.InfernalSwamp=InfernalSwamp expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.InfernalSwamp=New expedition unlocked: InfernalSwamp
+progress.expedition.InfernalSwamp=InfernalSwamp: {0}/{1} ticks remaining
 
 # GENERATED ─── FireGemCave ────────────────────────────────────────────
 items.OneBlock_Block_FireGemCave.name=OneBlock FireGemCave
 items.OneBlock_Crystal_FireGemCave.name=FireGemCave Crystal
-items.OneBlock_Crystal_FireGemCave.description=Consume to begin a FireGemCave expedition.\n28 ticks.\nLoot :\n- Incandescent Skeleton Fighter\n- Incandescent Skeleton Mage\n- Firesteel Golem\n- Thunder Golem\n- Volcanic\n- Rock Volcanic Cracked Incandescent\n- Ruby Gem\n- Diamond Gem\n- Onyxium Ore\n- Prisma Ore\nCompletion rewards :\n- 11x ExpeditionPoint\n- 1x ElementalConfluence Crystal (unlocks ElementalConfluence)
+items.OneBlock_Crystal_FireGemCave.description=Consume to begin a FireGemCave expedition.\n28 ticks.\nLoot :\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Mage\n- Golem Firesteel\n- Golem Crystal Thunder\n- Volcanic\n- Rock Volcanic Cracked Incandescent\n- Ruby Gem\n- Diamond Gem\n- Onyxium Ore\n- Prisma Ore\nCompletion rewards :\n- 11x ExpeditionPoint\n- 1x ElementalConfluence Crystal (unlocks ElementalConfluence)
 expeditions.FireGemCave.name=FireGemCave
 announcements.expedition_started.FireGemCave=FireGemCave expedition started.
 announcements.expedition_completed.FireGemCave=FireGemCave expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.FireGemCave=New expedition unlocked: FireGemCave
 progress.expedition.FireGemCave=FireGemCave: {0}/{1} ticks remaining
 
-# GENERATED ─── DesertTempleEntrace ────────────────────────────────────
-items.OneBlock_Block_DesertTempleEntrace.name=OneBlock DesertTempleEntrace
-items.OneBlock_Crystal_DesertTempleEntrace.name=DesertTempleEntrace Crystal
-items.OneBlock_Crystal_DesertTempleEntrace.description=Consume to begin a DesertTempleEntrace expedition.\n25 ticks.\nLoot :\n- Sandswept Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Sandstone\n- Rubble Sandstone\n- Furniture Ancient Pot\n- Furniture Ancient Crate\n- Deco Pot Clay Broken\n- Gold Ore\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x DeeperDesertTemple Crystal (unlocks DeeperDesertTemple)
-expeditions.DesertTempleEntrace.name=DesertTempleEntrace
-announcements.expedition_started.DesertTempleEntrace=DesertTempleEntrace expedition started.
-announcements.expedition_completed.DesertTempleEntrace=DesertTempleEntrace expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.DesertTempleEntrace=New expedition unlocked: DesertTempleEntrace
-progress.expedition.DesertTempleEntrace=DesertTempleEntrace: {0}/{1} ticks remaining
+# GENERATED ─── DesertTempleEntrance ───────────────────────────────────
+items.OneBlock_Block_DesertTempleEntrance.name=OneBlock DesertTempleEntrance
+items.OneBlock_Crystal_DesertTempleEntrance.name=DesertTempleEntrance Crystal
+items.OneBlock_Crystal_DesertTempleEntrance.description=Consume to begin a DesertTempleEntrance expedition.\n25 ticks.\nLoot :\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\n- Sandstone\n- Rubble Sandstone\n- Furniture Ancient Pot\n- Furniture Ancient Crate\n- Deco Pot Clay Broken\n- Gold Ore\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x DeeperDesertTemple Crystal (unlocks DeeperDesertTemple)
+expeditions.DesertTempleEntrance.name=DesertTempleEntrance
+announcements.expedition_started.DesertTempleEntrance=DesertTempleEntrance expedition started.
+announcements.expedition_completed.DesertTempleEntrance=DesertTempleEntrance expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.DesertTempleEntrance=New expedition unlocked: DesertTempleEntrance
+progress.expedition.DesertTempleEntrance=DesertTempleEntrance: {0}/{1} ticks remaining
 
 # GENERATED ─── DeeperDesertTemple ─────────────────────────────────────
 items.OneBlock_Block_DeeperDesertTemple.name=OneBlock DeeperDesertTemple
 items.OneBlock_Crystal_DeeperDesertTemple.name=DeeperDesertTemple Crystal
-items.OneBlock_Crystal_DeeperDesertTemple.description=Consume to begin a DeeperDesertTemple expedition.\n25 ticks.\nLoot :\n- Sandswept Zombie\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Mage\n- Sandstone\n- Rock Sandstone Brick\n- Furniture Ancient Pot\n- Furniture Ancient Statue\n- Furniture Ancient Candle\n- Topaz Gem\n- Gold Ore\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x DesertTemple Crystal (unlocks DesertTemple)
+items.OneBlock_Crystal_DeeperDesertTemple.description=Consume to begin a DeeperDesertTemple expedition.\n25 ticks.\nLoot :\n- Zombie Sand\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Mage\n- Sandstone\n- Rock Sandstone Brick\n- Furniture Ancient Pot\n- Furniture Ancient Statue\n- Furniture Ancient Candle\n- Topaz Gem\n- Gold Ore\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x DesertTemple Crystal (unlocks DesertTemple)
 expeditions.DeeperDesertTemple.name=DeeperDesertTemple
 announcements.expedition_started.DeeperDesertTemple=DeeperDesertTemple expedition started.
 announcements.expedition_completed.DeeperDesertTemple=DeeperDesertTemple expedition complete. The OneBlock has returned to default.
@@ -690,25 +690,25 @@ progress.expedition.DeeperDesertTemple=DeeperDesertTemple: {0}/{1} ticks remaini
 # GENERATED ─── DesertTemple ───────────────────────────────────────────
 items.OneBlock_Block_DesertTemple.name=OneBlock DesertTemple
 items.OneBlock_Crystal_DesertTemple.name=DesertTemple Crystal
-items.OneBlock_Crystal_DesertTemple.description=Consume to begin the DesertTemple dungeon.\n4 waves :\n  Wave 1: Sandswept Zombie, Sandswept Zombie, Sandswept Zombie, Sandswept Zombie, Skeleton Scout, Skeleton Scout\n  Wave 2: Sandswept Zombie, Sandswept Zombie, Sandswept Zombie, Sandswept Zombie, Sandswept Zombie, Skeleton Archer, Skeleton Archer, Skeleton Archer\n  Wave 3: Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Mage, Skeleton Mage, Sandswept Zombie, Sandswept Zombie, Sandswept Zombie, Sandswept Zombie\n  Wave 4: Skeleton Sand Archmage, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Archer, Skeleton Archer, Skeleton Archer, Skeleton Archer\nCompletion rewards :\n- 35x ExpeditionPoint\n- 1x OneBlock Crystal PharaonRoom
+items.OneBlock_Crystal_DesertTemple.description=Consume to begin the DesertTemple dungeon.\n4 waves :\n  Wave 1: Zombie Sand, Zombie Sand, Zombie Sand, Zombie Sand, Skeleton Scout, Skeleton Scout\n  Wave 2: Zombie Sand, Zombie Sand, Zombie Sand, Zombie Sand, Zombie Sand, Skeleton Archer, Skeleton Archer, Skeleton Archer\n  Wave 3: Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Mage, Skeleton Mage, Zombie Sand, Zombie Sand, Zombie Sand, Zombie Sand\n  Wave 4: Skeleton Sand Archmage, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Archer, Skeleton Archer, Skeleton Archer, Skeleton Archer\nCompletion rewards :\n- 35x ExpeditionPoint\n- 1x OneBlock Crystal PharaohRoom
 expeditions.DesertTemple.name=DesertTemple
 announcements.dungeon_started.DesertTemple=DesertTemple dungeon started.
 announcements.dungeon_completed.DesertTemple=DesertTemple dungeon complete. The OneBlock has returned to default.
 
-# GENERATED ─── PharaonRoom ────────────────────────────────────────────
-items.OneBlock_Block_PharaonRoom.name=OneBlock PharaonRoom
-items.OneBlock_Crystal_PharaonRoom.name=PharaonRoom Crystal
-items.OneBlock_Crystal_PharaonRoom.description=Consume to begin a PharaonRoom expedition.\n25 ticks.\nLoot :\n- Sandswept Zombie\n- Skeleton Knight\n- Skeleton Mage\n- Skeleton Sand Archmage\n- Deco Treasure\n- Furniture Ancient Coffin\n- Furniture Ancient Statue\n- Furniture Ancient Chest Large Treasure\n- Gold Ore\n- Diamond Gem\nCompletion rewards :\n- 7x ExpeditionPoint
-expeditions.PharaonRoom.name=PharaonRoom
-announcements.expedition_started.PharaonRoom=PharaonRoom expedition started.
-announcements.expedition_completed.PharaonRoom=PharaonRoom expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.PharaonRoom=New expedition unlocked: PharaonRoom
-progress.expedition.PharaonRoom=PharaonRoom: {0}/{1} ticks remaining
+# GENERATED ─── PharaohRoom ────────────────────────────────────────────
+items.OneBlock_Block_PharaohRoom.name=OneBlock PharaohRoom
+items.OneBlock_Crystal_PharaohRoom.name=PharaohRoom Crystal
+items.OneBlock_Crystal_PharaohRoom.description=Consume to begin a PharaohRoom expedition.\n25 ticks.\nLoot :\n- Zombie Sand\n- Skeleton Knight\n- Skeleton Mage\n- Skeleton Sand Archmage\n- Deco Treasure\n- Furniture Ancient Coffin\n- Furniture Ancient Statue\n- Furniture Ancient Chest Large Treasure\n- Gold Ore\n- Diamond Gem\nCompletion rewards :\n- 7x ExpeditionPoint
+expeditions.PharaohRoom.name=PharaohRoom
+announcements.expedition_started.PharaohRoom=PharaohRoom expedition started.
+announcements.expedition_completed.PharaohRoom=PharaohRoom expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.PharaohRoom=New expedition unlocked: PharaohRoom
+progress.expedition.PharaohRoom=PharaohRoom: {0}/{1} ticks remaining
 
 # GENERATED ─── InnerDesert ────────────────────────────────────────────
 items.OneBlock_Block_InnerDesert.name=OneBlock InnerDesert
 items.OneBlock_Crystal_InnerDesert.name=InnerDesert Crystal
-items.OneBlock_Crystal_InnerDesert.description=Consume to begin a InnerDesert expedition.\n25 ticks.\nLoot :\n- Cactee\n- Camel\n- Sandswept Zombie\n- Scarak Louse\n- Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nCompletion rewards :\n- 4x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal DryJunglePass\n  [1] 1x OneBlock Crystal InsectInvasion
+items.OneBlock_Crystal_InnerDesert.description=Consume to begin a InnerDesert expedition.\n25 ticks.\nLoot :\n- Cactee\n- Camel\n- Zombie Sand\n- Scarak Louse\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nCompletion rewards :\n- 4x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal DryJunglePass\n  [1] 1x OneBlock Crystal InsectInvasion
 expeditions.InnerDesert.name=InnerDesert
 announcements.expedition_started.InnerDesert=InnerDesert expedition started.
 announcements.expedition_completed.InnerDesert=InnerDesert expedition complete. The OneBlock has returned to default.
@@ -718,7 +718,7 @@ progress.expedition.InnerDesert=InnerDesert: {0}/{1} ticks remaining
 # GENERATED ─── MuddyDesert ────────────────────────────────────────────
 items.OneBlock_Block_MuddyDesert.name=OneBlock MuddyDesert
 items.OneBlock_Crystal_MuddyDesert.name=MuddyDesert Crystal
-items.OneBlock_Crystal_MuddyDesert.description=Consume to begin a MuddyDesert expedition.\n25 ticks.\nLoot :\n- Cactee\n- Crocodile\n- Scarak Louse\n- Sand\n- Soil Dirt\n- Soil Clay Black\n- Soil Gravel Sand Half\n- Cactus 1\n- Tomato\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x InfestedDesert Crystal (unlocks InfestedDesert)
+items.OneBlock_Crystal_MuddyDesert.description=Consume to begin a MuddyDesert expedition.\n25 ticks.\nLoot :\n- Cactee\n- Crocodile\n- Scarak Louse\n- Soil Sand\n- Soil Dirt\n- Soil Mud\n- Soil Gravel\n- Cactus 1\n- Tomato\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x InfestedDesert Crystal (unlocks InfestedDesert)
 expeditions.MuddyDesert.name=MuddyDesert
 announcements.expedition_started.MuddyDesert=MuddyDesert expedition started.
 announcements.expedition_completed.MuddyDesert=MuddyDesert expedition complete. The OneBlock has returned to default.
@@ -728,7 +728,7 @@ progress.expedition.MuddyDesert=MuddyDesert: {0}/{1} ticks remaining
 # GENERATED ─── InsectInvasion ─────────────────────────────────────────
 items.OneBlock_Block_InsectInvasion.name=OneBlock InsectInvasion
 items.OneBlock_Crystal_InsectInvasion.name=InsectInvasion Crystal
-items.OneBlock_Crystal_InsectInvasion.description=Consume to begin the InsectInvasion dungeon.\n3 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Spider, Spider, Spider\n  Wave 2: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse\n  Wave 3: Scarak Seeker, Scarak Seeker, Cave Spider, Cave Spider, Cave Spider, Cave Spider, Scarak Fighter, Scarak Fighter, Scarak Fighter\nCompletion rewards :\n- 26x ExpeditionPoint\n- 1x OneBlock Crystal MuddyDesert
+items.OneBlock_Crystal_InsectInvasion.description=Consume to begin the InsectInvasion dungeon.\n3 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Spider, Spider, Spider\n  Wave 2: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse\n  Wave 3: Scarak Seeker, Scarak Seeker, Spider Cave, Spider Cave, Spider Cave, Spider Cave, Scarak Fighter, Scarak Fighter, Scarak Fighter\nCompletion rewards :\n- 26x ExpeditionPoint\n- 1x OneBlock Crystal MuddyDesert
 expeditions.InsectInvasion.name=InsectInvasion
 announcements.dungeon_started.InsectInvasion=InsectInvasion dungeon started.
 announcements.dungeon_completed.InsectInvasion=InsectInvasion dungeon complete. The OneBlock has returned to default.
@@ -736,7 +736,7 @@ announcements.dungeon_completed.InsectInvasion=InsectInvasion dungeon complete. 
 # GENERATED ─── InfestedDesert ─────────────────────────────────────────
 items.OneBlock_Block_InfestedDesert.name=OneBlock InfestedDesert
 items.OneBlock_Crystal_InfestedDesert.name=InfestedDesert Crystal
-items.OneBlock_Crystal_InfestedDesert.description=Consume to begin a InfestedDesert expedition.\n25 ticks.\nLoot :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\n- Soil Hive\n- Soil Hive Brick\n- Soil Hive Brick Smooth\n- Soil Hive Brick Stairs\n- Cactus Ball 1\n- Scaled Hide\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x InsectNest Crystal (unlocks InsectNest)
+items.OneBlock_Crystal_InfestedDesert.description=Consume to begin a InfestedDesert expedition.\n25 ticks.\nLoot :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\n- Soil Hive\n- Soil Hive Brick\n- Soil Hive Brick\n- Soil Hive Brick\n- Cactus Ball 1\n- Scaled Hide\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x InsectNest Crystal (unlocks InsectNest)
 expeditions.InfestedDesert.name=InfestedDesert
 announcements.expedition_started.InfestedDesert=InfestedDesert expedition started.
 announcements.expedition_completed.InfestedDesert=InfestedDesert expedition complete. The OneBlock has returned to default.
@@ -746,7 +746,7 @@ progress.expedition.InfestedDesert=InfestedDesert: {0}/{1} ticks remaining
 # GENERATED ─── InsectNest ─────────────────────────────────────────────
 items.OneBlock_Block_InsectNest.name=OneBlock InsectNest
 items.OneBlock_Crystal_InsectNest.name=InsectNest Crystal
-items.OneBlock_Crystal_InsectNest.description=Consume to begin the InsectNest dungeon.\n4 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Spider, Spider, Spider, Spider\n  Wave 2: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Cave Spider, Cave Spider, Cave Spider, Cave Spider\n  Wave 3: Scarak Defender, Scarak Defender, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Seeker, Scarak Seeker\n  Wave 4: Sand Empress, Scarak Fighter, Scarak Fighter, Scarak Fighter\nCompletion rewards :\n- 36x ExpeditionPoint\n- 1x OneBlock Crystal InsideInsectNest
+items.OneBlock_Crystal_InsectNest.description=Consume to begin the InsectNest dungeon.\n4 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Spider, Spider, Spider, Spider\n  Wave 2: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Spider Cave, Spider Cave, Spider Cave, Spider Cave\n  Wave 3: Scarak Defender, Scarak Defender, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Seeker, Scarak Seeker\n  Wave 4: Scarak Broodmother, Scarak Fighter, Scarak Fighter, Scarak Fighter\nCompletion rewards :\n- 36x ExpeditionPoint\n- 1x OneBlock Crystal InsideInsectNest
 expeditions.InsectNest.name=InsectNest
 announcements.dungeon_started.InsectNest=InsectNest dungeon started.
 announcements.dungeon_completed.InsectNest=InsectNest dungeon complete. The OneBlock has returned to default.
@@ -754,7 +754,7 @@ announcements.dungeon_completed.InsectNest=InsectNest dungeon complete. The OneB
 # GENERATED ─── InsideInsectNest ───────────────────────────────────────
 items.OneBlock_Block_InsideInsectNest.name=OneBlock InsideInsectNest
 items.OneBlock_Crystal_InsideInsectNest.name=InsideInsectNest Crystal
-items.OneBlock_Crystal_InsideInsectNest.description=Consume to begin a InsideInsectNest expedition.\n25 ticks.\nLoot :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\n- Soil Hive\n- Soil Hive Brick\n- Soil Hive Brick Smooth\n- Soil Hive Brick Beam\n- Soil Hive Brick Stairs\n- Ruby Gem\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x InsectCore Crystal (unlocks InsectCore)
+items.OneBlock_Crystal_InsideInsectNest.description=Consume to begin a InsideInsectNest expedition.\n25 ticks.\nLoot :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\n- Soil Hive\n- Soil Hive Brick\n- Soil Hive Brick\n- Soil Hive Brick\n- Soil Hive Brick\n- Ruby Gem\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x InsectCore Crystal (unlocks InsectCore)
 expeditions.InsideInsectNest.name=InsideInsectNest
 announcements.expedition_started.InsideInsectNest=InsideInsectNest expedition started.
 announcements.expedition_completed.InsideInsectNest=InsideInsectNest expedition complete. The OneBlock has returned to default.
@@ -764,7 +764,7 @@ progress.expedition.InsideInsectNest=InsideInsectNest: {0}/{1} ticks remaining
 # GENERATED ─── InsectCore ─────────────────────────────────────────────
 items.OneBlock_Block_InsectCore.name=OneBlock InsectCore
 items.OneBlock_Crystal_InsectCore.name=InsectCore Crystal
-items.OneBlock_Crystal_InsectCore.description=Consume to begin the InsectCore dungeon.\n4 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter\n  Wave 2: Scarak Defender, Scarak Defender, Scarak Defender, Scarak Seeker, Scarak Seeker, Scarak Seeker\n  Wave 3: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Defender, Scarak Defender, Scarak Defender, Scarak Defender, Cave Spider, Cave Spider, Cave Spider, Cave Spider\n  Wave 4: Scarak Broodmother, Scarak Defender, Scarak Defender, Scarak Defender, Scarak Defender, Scarak Seeker, Scarak Seeker, Scarak Seeker, Scarak Seeker\nCompletion rewards :\n- 50x ExpeditionPoint
+items.OneBlock_Crystal_InsectCore.description=Consume to begin the InsectCore dungeon.\n4 waves :\n  Wave 1: Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Louse, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter\n  Wave 2: Scarak Defender, Scarak Defender, Scarak Defender, Scarak Seeker, Scarak Seeker, Scarak Seeker\n  Wave 3: Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Fighter, Scarak Defender, Scarak Defender, Scarak Defender, Scarak Defender, Spider Cave, Spider Cave, Spider Cave, Spider Cave\n  Wave 4: Scarak Broodmother, Scarak Defender, Scarak Defender, Scarak Defender, Scarak Defender, Scarak Seeker, Scarak Seeker, Scarak Seeker, Scarak Seeker\nCompletion rewards :\n- 50x ExpeditionPoint
 expeditions.InsectCore.name=InsectCore
 announcements.dungeon_started.InsectCore=InsectCore dungeon started.
 announcements.dungeon_completed.InsectCore=InsectCore dungeon complete. The OneBlock has returned to default.
@@ -782,7 +782,7 @@ progress.expedition.Quarry=Quarry: {0}/{1} ticks remaining
 # GENERATED ─── Hallow ─────────────────────────────────────────────────
 items.OneBlock_Block_Hallow.name=OneBlock Hallow
 items.OneBlock_Crystal_Hallow.name=Hallow Crystal
-items.OneBlock_Crystal_Hallow.description=Consume to begin a Hallow expedition.\n30 ticks.\nLoot :\n- Rabbit\n- Sheep\n- Chicken\n- Deer\n- Wheat\n- Corn\n- Carrot\n- Food Bread\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal CowHallow\n  [1] 1x OneBlock Crystal HorseHallow\n  [1] 1x OneBlock Crystal River
+items.OneBlock_Crystal_Hallow.description=Consume to begin a Hallow expedition.\n30 ticks.\nLoot :\n- Rabbit\n- Sheep\n- Chicken\n- Deer Doe\n- Wheat\n- Corn\n- Carrot\n- Food Bread\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal CowHallow\n  [1] 1x OneBlock Crystal HorseHallow\n  [1] 1x OneBlock Crystal River
 expeditions.Hallow.name=Hallow
 announcements.expedition_started.Hallow=Hallow expedition started.
 announcements.expedition_completed.Hallow=Hallow expedition complete. The OneBlock has returned to default.
@@ -792,7 +792,7 @@ progress.expedition.Hallow=Hallow: {0}/{1} ticks remaining
 # GENERATED ─── CowHallow ──────────────────────────────────────────────
 items.OneBlock_Block_CowHallow.name=OneBlock CowHallow
 items.OneBlock_Crystal_CowHallow.name=CowHallow Crystal
-items.OneBlock_Crystal_CowHallow.description=Consume to begin a CowHallow expedition.\n35 ticks.\nLoot :\n- Cow\n- Cow Calf\n- Wolf\n- Wheat\n- Corn\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint
+items.OneBlock_Crystal_CowHallow.description=Consume to begin a CowHallow expedition.\n35 ticks.\nLoot :\n- Cow\n- Cow Calf\n- Wolf Black\n- Wheat\n- Corn\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint
 expeditions.CowHallow.name=CowHallow
 announcements.expedition_started.CowHallow=CowHallow expedition started.
 announcements.expedition_completed.CowHallow=CowHallow expedition complete. The OneBlock has returned to default.
@@ -802,7 +802,7 @@ progress.expedition.CowHallow=CowHallow: {0}/{1} ticks remaining
 # GENERATED ─── HorseHallow ────────────────────────────────────────────
 items.OneBlock_Block_HorseHallow.name=OneBlock HorseHallow
 items.OneBlock_Crystal_HorseHallow.name=HorseHallow Crystal
-items.OneBlock_Crystal_HorseHallow.description=Consume to begin a HorseHallow expedition.\n35 ticks.\nLoot :\n- Horse\n- Wolf\n- Carrot\n- Wheat\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint
+items.OneBlock_Crystal_HorseHallow.description=Consume to begin a HorseHallow expedition.\n35 ticks.\nLoot :\n- Horse\n- Wolf Black\n- Carrot\n- Wheat\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nCompletion rewards :\n- 2x ExpeditionPoint
 expeditions.HorseHallow.name=HorseHallow
 announcements.expedition_started.HorseHallow=HorseHallow expedition started.
 announcements.expedition_completed.HorseHallow=HorseHallow expedition complete. The OneBlock has returned to default.
@@ -812,7 +812,7 @@ progress.expedition.HorseHallow=HorseHallow: {0}/{1} ticks remaining
 # GENERATED ─── MysteriousCavern ───────────────────────────────────────
 items.OneBlock_Block_MysteriousCavern.name=OneBlock MysteriousCavern
 items.OneBlock_Crystal_MysteriousCavern.name=MysteriousCavern Crystal
-items.OneBlock_Crystal_MysteriousCavern.description=Consume to begin a MysteriousCavern expedition.\n30 ticks.\nLoot :\n- Bat\n- Cave Spider\n- Earth Elemental\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Sapphire Gem\n- Iron Ore\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x MysticCave Crystal (unlocks MysticCave)
+items.OneBlock_Crystal_MysteriousCavern.description=Consume to begin a MysteriousCavern expedition.\n30 ticks.\nLoot :\n- Bat\n- Spider Cave\n- Golem Crystal Earth\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Sapphire Gem\n- Iron Ore\nCompletion rewards :\n- 3x ExpeditionPoint\n- 1x MysticCave Crystal (unlocks MysticCave)
 expeditions.MysteriousCavern.name=MysteriousCavern
 announcements.expedition_started.MysteriousCavern=MysteriousCavern expedition started.
 announcements.expedition_completed.MysteriousCavern=MysteriousCavern expedition complete. The OneBlock has returned to default.
@@ -822,27 +822,27 @@ progress.expedition.MysteriousCavern=MysteriousCavern: {0}/{1} ticks remaining
 # GENERATED ─── MysticCave ─────────────────────────────────────────────
 items.OneBlock_Block_MysticCave.name=OneBlock MysticCave
 items.OneBlock_Crystal_MysticCave.name=MysticCave Crystal
-items.OneBlock_Crystal_MysticCave.description=Consume to begin a MysticCave expedition.\n30 ticks.\nLoot :\n- Earth Elemental\n- Earthen Golem\n- Rock Runic Brick\n- Rock Runic Brick Ornate\n- Sapphire Gem\n- Emerald Gem\n- Yellow Crystal\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x LuxirousCave Crystal (unlocks LuxirousCave)
+items.OneBlock_Crystal_MysticCave.description=Consume to begin a MysticCave expedition.\n30 ticks.\nLoot :\n- Golem Crystal Earth\n- Golem Crystal Earth\n- Rock Runic Brick\n- Rock Runic Brick\n- Sapphire Gem\n- Emerald Gem\n- Yellow Crystal\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x LuxuriousCave Crystal (unlocks LuxuriousCave)
 expeditions.MysticCave.name=MysticCave
 announcements.expedition_started.MysticCave=MysticCave expedition started.
 announcements.expedition_completed.MysticCave=MysticCave expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.MysticCave=New expedition unlocked: MysticCave
 progress.expedition.MysticCave=MysticCave: {0}/{1} ticks remaining
 
-# GENERATED ─── LuxirousCave ───────────────────────────────────────────
-items.OneBlock_Block_LuxirousCave.name=OneBlock LuxirousCave
-items.OneBlock_Crystal_LuxirousCave.name=LuxirousCave Crystal
-items.OneBlock_Crystal_LuxirousCave.description=Consume to begin a LuxirousCave expedition.\n30 ticks.\nLoot :\n- Earth Elemental\n- Earthen Golem\n- Goblin Thief\n- Emerald Gem\n- Topaz Gem\n- Diamond Gem\n- Gold Ore\n- Adamantite Ore\n- Deco Treasure\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x JurassicCave Crystal (unlocks JurassicCave)
-expeditions.LuxirousCave.name=LuxirousCave
-announcements.expedition_started.LuxirousCave=LuxirousCave expedition started.
-announcements.expedition_completed.LuxirousCave=LuxirousCave expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.LuxirousCave=New expedition unlocked: LuxirousCave
-progress.expedition.LuxirousCave=LuxirousCave: {0}/{1} ticks remaining
+# GENERATED ─── LuxuriousCave ──────────────────────────────────────────
+items.OneBlock_Block_LuxuriousCave.name=OneBlock LuxuriousCave
+items.OneBlock_Crystal_LuxuriousCave.name=LuxuriousCave Crystal
+items.OneBlock_Crystal_LuxuriousCave.description=Consume to begin a LuxuriousCave expedition.\n30 ticks.\nLoot :\n- Golem Crystal Earth\n- Golem Crystal Earth\n- Goblin Thief\n- Emerald Gem\n- Topaz Gem\n- Diamond Gem\n- Gold Ore\n- Adamantite Ore\n- Deco Treasure\nCompletion rewards :\n- 6x ExpeditionPoint\n- 1x JurassicCave Crystal (unlocks JurassicCave)
+expeditions.LuxuriousCave.name=LuxuriousCave
+announcements.expedition_started.LuxuriousCave=LuxuriousCave expedition started.
+announcements.expedition_completed.LuxuriousCave=LuxuriousCave expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.LuxuriousCave=New expedition unlocked: LuxuriousCave
+progress.expedition.LuxuriousCave=LuxuriousCave: {0}/{1} ticks remaining
 
 # GENERATED ─── JurassicCave ───────────────────────────────────────────
 items.OneBlock_Block_JurassicCave.name=OneBlock JurassicCave
 items.OneBlock_Crystal_JurassicCave.name=JurassicCave Crystal
-items.OneBlock_Crystal_JurassicCave.description=Consume to begin a JurassicCave expedition.\n30 ticks.\nLoot :\n- Archaeopteryx\n- Crocodile\n- Cave Raptor\n- Cave Rex\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike Large\n- Scaled Hide\n- Scaled Leather\n- Diamond Gem\n- Adamantite Ore\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x DinoCrisis Crystal (unlocks DinoCrisis)
+items.OneBlock_Crystal_JurassicCave.description=Consume to begin a JurassicCave expedition.\n30 ticks.\nLoot :\n- Archaeopteryx\n- Crocodile\n- Raptor Cave\n- Rex Cave\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike Large\n- Scaled Hide\n- Scaled Leather\n- Diamond Gem\n- Adamantite Ore\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x DinoCrisis Crystal (unlocks DinoCrisis)
 expeditions.JurassicCave.name=JurassicCave
 announcements.expedition_started.JurassicCave=JurassicCave expedition started.
 announcements.expedition_completed.JurassicCave=JurassicCave expedition complete. The OneBlock has returned to default.
@@ -852,7 +852,7 @@ progress.expedition.JurassicCave=JurassicCave: {0}/{1} ticks remaining
 # GENERATED ─── DinoCrisis ─────────────────────────────────────────────
 items.OneBlock_Block_DinoCrisis.name=OneBlock DinoCrisis
 items.OneBlock_Crystal_DinoCrisis.name=DinoCrisis Crystal
-items.OneBlock_Crystal_DinoCrisis.description=Consume to begin the DinoCrisis dungeon.\n6 waves :\n  Wave 1: Archaeopteryx, Archaeopteryx, Archaeopteryx, Archaeopteryx, Archaeopteryx, Crocodile, Crocodile\n  Wave 2: Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Archaeopteryx, Archaeopteryx, Archaeopteryx\n  Wave 3: Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Crawler, Crawler\n  Wave 4: Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Cave Rex\n  Wave 5: Cave Raptor, Cave Raptor, Cave Raptor, Cave Raptor, Cave Rex, Cave Rex\n  Wave 6: Cave Rex, Cave Rex, Cave Rex, Earth Elemental\nCompletion rewards :\n- 65x ExpeditionPoint
+items.OneBlock_Crystal_DinoCrisis.description=Consume to begin the DinoCrisis dungeon.\n6 waves :\n  Wave 1: Archaeopteryx, Archaeopteryx, Archaeopteryx, Archaeopteryx, Archaeopteryx, Crocodile, Crocodile\n  Wave 2: Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Archaeopteryx, Archaeopteryx, Archaeopteryx\n  Wave 3: Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Crawler, Crawler\n  Wave 4: Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Rex Cave\n  Wave 5: Raptor Cave, Raptor Cave, Raptor Cave, Raptor Cave, Rex Cave, Rex Cave\n  Wave 6: Rex Cave, Rex Cave, Rex Cave, Golem Crystal Earth\nCompletion rewards :\n- 65x ExpeditionPoint
 expeditions.DinoCrisis.name=DinoCrisis
 announcements.dungeon_started.DinoCrisis=DinoCrisis dungeon started.
 announcements.dungeon_completed.DinoCrisis=DinoCrisis dungeon complete. The OneBlock has returned to default.
@@ -860,7 +860,7 @@ announcements.dungeon_completed.DinoCrisis=DinoCrisis dungeon complete. The OneB
 # GENERATED ─── DryTrorkCamp ───────────────────────────────────────────
 items.OneBlock_Block_DryTrorkCamp.name=OneBlock DryTrorkCamp
 items.OneBlock_Crystal_DryTrorkCamp.name=DryTrorkCamp Crystal
-items.OneBlock_Crystal_DryTrorkCamp.description=Consume to begin a DryTrorkCamp expedition.\n25 ticks.\nLoot :\n- Trork Sentry\n- Trork Hunter\n- Hunting Wolf\n- Trork Brawler\n- Ash Trunk\n- Sandstone\n- Rubble Sandstone\n- Bone Fragment\n- Scaled Hide\n- Gold Ore\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x TrorkWarband Crystal (unlocks TrorkWarband)
+items.OneBlock_Crystal_DryTrorkCamp.description=Consume to begin a DryTrorkCamp expedition.\n25 ticks.\nLoot :\n- Trork Sentry\n- Trork Hunter\n- Wolf Trork Shaman\n- Trork Brawler\n- Ash Trunk\n- Sandstone\n- Rubble Sandstone\n- Bone Fragment\n- Scaled Hide\n- Gold Ore\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x TrorkWarband Crystal (unlocks TrorkWarband)
 expeditions.DryTrorkCamp.name=DryTrorkCamp
 announcements.expedition_started.DryTrorkCamp=DryTrorkCamp expedition started.
 announcements.expedition_completed.DryTrorkCamp=DryTrorkCamp expedition complete. The OneBlock has returned to default.
@@ -870,7 +870,7 @@ progress.expedition.DryTrorkCamp=DryTrorkCamp: {0}/{1} ticks remaining
 # GENERATED ─── TrorkHuntingGround ─────────────────────────────────────
 items.OneBlock_Block_TrorkHuntingGround.name=OneBlock TrorkHuntingGround
 items.OneBlock_Crystal_TrorkHuntingGround.name=TrorkHuntingGround Crystal
-items.OneBlock_Crystal_TrorkHuntingGround.description=Consume to begin a TrorkHuntingGround expedition.\n25 ticks.\nLoot :\n- Hunting Wolf\n- Trork Hunter\n- Trork Sentry\n- Trork Brawler\n- Beech Trunk\n- Ash Trunk\n- Plant Leaves Bramble\n- Bone Fragment\n- Scaled Hide\n- Emerald Gem\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x TrorkWarband Crystal (unlocks TrorkWarband)
+items.OneBlock_Crystal_TrorkHuntingGround.description=Consume to begin a TrorkHuntingGround expedition.\n25 ticks.\nLoot :\n- Wolf Trork Shaman\n- Trork Hunter\n- Trork Sentry\n- Trork Brawler\n- Beech Trunk\n- Ash Trunk\n- Plant Leaves Bramble\n- Bone Fragment\n- Scaled Hide\n- Emerald Gem\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x TrorkWarband Crystal (unlocks TrorkWarband)
 expeditions.TrorkHuntingGround.name=TrorkHuntingGround
 announcements.expedition_started.TrorkHuntingGround=TrorkHuntingGround expedition started.
 announcements.expedition_completed.TrorkHuntingGround=TrorkHuntingGround expedition complete. The OneBlock has returned to default.
@@ -880,7 +880,7 @@ progress.expedition.TrorkHuntingGround=TrorkHuntingGround: {0}/{1} ticks remaini
 # GENERATED ─── TrorkWarband ───────────────────────────────────────────
 items.OneBlock_Block_TrorkWarband.name=OneBlock TrorkWarband
 items.OneBlock_Crystal_TrorkWarband.name=TrorkWarband Crystal
-items.OneBlock_Crystal_TrorkWarband.description=Consume to begin the TrorkWarband dungeon.\n4 waves :\n  Wave 1: Hunting Wolf, Hunting Wolf, Hunting Wolf, Trork Sentry, Trork Sentry\n  Wave 2: Trork Hunter, Trork Hunter, Trork Hunter, Trork Brawler, Trork Brawler\n  Wave 3: Trork Warrior, Trork Warrior, Trork Warrior, Trork Mauler\n  Wave 4: Trork Guard, Trork Guard, Trork Warrior, Trork Warrior, Trork Warrior, Hunting Wolf, Hunting Wolf\nCompletion rewards :\n- 32x ExpeditionPoint\n- 1x OneBlock Crystal TrorkStrongholdApproach
+items.OneBlock_Crystal_TrorkWarband.description=Consume to begin the TrorkWarband dungeon.\n4 waves :\n  Wave 1: Wolf Trork Shaman, Wolf Trork Shaman, Wolf Trork Shaman, Trork Sentry, Trork Sentry\n  Wave 2: Trork Hunter, Trork Hunter, Trork Hunter, Trork Brawler, Trork Brawler\n  Wave 3: Trork Warrior, Trork Warrior, Trork Warrior, Trork Mauler\n  Wave 4: Trork Guard, Trork Guard, Trork Warrior, Trork Warrior, Trork Warrior, Wolf Trork Shaman, Wolf Trork Shaman\nCompletion rewards :\n- 32x ExpeditionPoint\n- 1x OneBlock Crystal TrorkStrongholdApproach
 expeditions.TrorkWarband.name=TrorkWarband
 announcements.dungeon_started.TrorkWarband=TrorkWarband dungeon started.
 announcements.dungeon_completed.TrorkWarband=TrorkWarband dungeon complete. The OneBlock has returned to default.
@@ -898,7 +898,7 @@ progress.expedition.TrorkStrongholdApproach=TrorkStrongholdApproach: {0}/{1} tic
 # GENERATED ─── TrorkElderGrove ────────────────────────────────────────
 items.OneBlock_Block_TrorkElderGrove.name=OneBlock TrorkElderGrove
 items.OneBlock_Crystal_TrorkElderGrove.name=TrorkElderGrove Crystal
-items.OneBlock_Crystal_TrorkElderGrove.description=Consume to begin a TrorkElderGrove expedition.\n25 ticks.\nLoot :\n- Trork Elder\n- Trork Hunter\n- Trork Guard\n- Hunting Wolf\n- Wood Amber Trunk\n- Wood Amber Roots\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Emerald Gem\n- Zephyr Gem\nCompletion rewards :\n- 7x ExpeditionPoint\n- 1x TrorkChieftainCamp Crystal (unlocks TrorkChieftainCamp)
+items.OneBlock_Crystal_TrorkElderGrove.description=Consume to begin a TrorkElderGrove expedition.\n25 ticks.\nLoot :\n- Trork Doctor Witch\n- Trork Hunter\n- Trork Guard\n- Wolf Trork Shaman\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Emerald Gem\n- Zephyr Gem\nCompletion rewards :\n- 7x ExpeditionPoint\n- 1x TrorkChieftainCamp Crystal (unlocks TrorkChieftainCamp)
 expeditions.TrorkElderGrove.name=TrorkElderGrove
 announcements.expedition_started.TrorkElderGrove=TrorkElderGrove expedition started.
 announcements.expedition_completed.TrorkElderGrove=TrorkElderGrove expedition complete. The OneBlock has returned to default.
@@ -908,7 +908,7 @@ progress.expedition.TrorkElderGrove=TrorkElderGrove: {0}/{1} ticks remaining
 # GENERATED ─── TrorkChieftainCamp ─────────────────────────────────────
 items.OneBlock_Block_TrorkChieftainCamp.name=OneBlock TrorkChieftainCamp
 items.OneBlock_Crystal_TrorkChieftainCamp.name=TrorkChieftainCamp Crystal
-items.OneBlock_Crystal_TrorkChieftainCamp.description=Consume to begin the TrorkChieftainCamp dungeon.\n5 waves :\n  Wave 1: Trork Sentry, Trork Sentry, Trork Sentry, Trork Sentry, Hunting Wolf, Hunting Wolf, Hunting Wolf\n  Wave 2: Trork Brawler, Trork Brawler, Trork Brawler, Trork Hunter, Trork Hunter, Trork Hunter\n  Wave 3: Trork Warrior, Trork Warrior, Trork Warrior, Trork Warrior, Trork Mauler, Trork Mauler\n  Wave 4: Trork Guard, Trork Guard, Trork Guard, Trork Guard, Trork Elder, Trork Elder\n  Wave 5: Trork Chieftain, Trork Guard, Trork Guard, Trork Guard, Trork Warrior, Trork Warrior, Trork Warrior, Trork Warrior\nCompletion rewards :\n- 55x ExpeditionPoint
+items.OneBlock_Crystal_TrorkChieftainCamp.description=Consume to begin the TrorkChieftainCamp dungeon.\n5 waves :\n  Wave 1: Trork Sentry, Trork Sentry, Trork Sentry, Trork Sentry, Wolf Trork Shaman, Wolf Trork Shaman, Wolf Trork Shaman\n  Wave 2: Trork Brawler, Trork Brawler, Trork Brawler, Trork Hunter, Trork Hunter, Trork Hunter\n  Wave 3: Trork Warrior, Trork Warrior, Trork Warrior, Trork Warrior, Trork Mauler, Trork Mauler\n  Wave 4: Trork Guard, Trork Guard, Trork Guard, Trork Guard, Trork Doctor Witch, Trork Doctor Witch\n  Wave 5: Trork Chieftain, Trork Guard, Trork Guard, Trork Guard, Trork Warrior, Trork Warrior, Trork Warrior, Trork Warrior\nCompletion rewards :\n- 55x ExpeditionPoint
 expeditions.TrorkChieftainCamp.name=TrorkChieftainCamp
 announcements.dungeon_started.TrorkChieftainCamp=TrorkChieftainCamp dungeon started.
 announcements.dungeon_completed.TrorkChieftainCamp=TrorkChieftainCamp dungeon complete. The OneBlock has returned to default.
@@ -916,7 +916,7 @@ announcements.dungeon_completed.TrorkChieftainCamp=TrorkChieftainCamp dungeon co
 # GENERATED ─── FrozenGraveyard ────────────────────────────────────────
 items.OneBlock_Block_FrozenGraveyard.name=OneBlock FrozenGraveyard
 items.OneBlock_Crystal_FrozenGraveyard.name=FrozenGraveyard Crystal
-items.OneBlock_Crystal_FrozenGraveyard.description=Consume to begin a FrozenGraveyard expedition.\n25 ticks.\nLoot :\n- Frost Skeleton Scout\n- Frost Skeleton Ranger\n- Frost Skeleton Fighter\n- Frost Skeleton Archer\n- Frost Skeleton Soldier\n- Frost Skeleton Mage\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x IcyNecropolis Crystal (unlocks IcyNecropolis)
+items.OneBlock_Crystal_FrozenGraveyard.description=Consume to begin a FrozenGraveyard expedition.\n25 ticks.\nLoot :\n- Skeleton Frost Scout\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Soldier\n- Skeleton Frost Mage\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x IcyNecropolis Crystal (unlocks IcyNecropolis)
 expeditions.FrozenGraveyard.name=FrozenGraveyard
 announcements.expedition_started.FrozenGraveyard=FrozenGraveyard expedition started.
 announcements.expedition_completed.FrozenGraveyard=FrozenGraveyard expedition complete. The OneBlock has returned to default.
@@ -926,7 +926,7 @@ progress.expedition.FrozenGraveyard=FrozenGraveyard: {0}/{1} ticks remaining
 # GENERATED ─── IcyNecropolis ──────────────────────────────────────────
 items.OneBlock_Block_IcyNecropolis.name=OneBlock IcyNecropolis
 items.OneBlock_Crystal_IcyNecropolis.name=IcyNecropolis Crystal
-items.OneBlock_Crystal_IcyNecropolis.description=Consume to begin a IcyNecropolis expedition.\n25 ticks.\nLoot :\n- Frost Skeleton Ranger\n- Frost Skeleton Fighter\n- Frost Skeleton Archer\n- Frost Skeleton Mage\n- Frost Skeleton Soldier\n- Frost Skeleton Knight\n- Frost Skeleton Archmage\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 10x ExpeditionPoint\n- 1x FrostboneCrypt Crystal (unlocks FrostboneCrypt)
+items.OneBlock_Crystal_IcyNecropolis.description=Consume to begin a IcyNecropolis expedition.\n25 ticks.\nLoot :\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Mage\n- Skeleton Frost Soldier\n- Skeleton Frost Knight\n- Skeleton Frost Archmage\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\n- Diamond Gem\nCompletion rewards :\n- 10x ExpeditionPoint\n- 1x FrostboneCrypt Crystal (unlocks FrostboneCrypt)
 expeditions.IcyNecropolis.name=IcyNecropolis
 announcements.expedition_started.IcyNecropolis=IcyNecropolis expedition started.
 announcements.expedition_completed.IcyNecropolis=IcyNecropolis expedition complete. The OneBlock has returned to default.
@@ -936,7 +936,7 @@ progress.expedition.IcyNecropolis=IcyNecropolis: {0}/{1} ticks remaining
 # GENERATED ─── FrostboneCrypt ─────────────────────────────────────────
 items.OneBlock_Block_FrostboneCrypt.name=OneBlock FrostboneCrypt
 items.OneBlock_Crystal_FrostboneCrypt.name=FrostboneCrypt Crystal
-items.OneBlock_Crystal_FrostboneCrypt.description=Consume to begin the FrostboneCrypt dungeon.\n5 waves :\n  Wave 1: Frost Skeleton Scout, Frost Skeleton Scout, Frost Skeleton Scout, Frost Skeleton Scout, Frost Skeleton Ranger, Frost Skeleton Ranger\n  Wave 2: Frost Skeleton Fighter, Frost Skeleton Fighter, Frost Skeleton Fighter, Frost Skeleton Fighter, Frost Skeleton Archer, Frost Skeleton Archer, Frost Skeleton Archer\n  Wave 3: Frost Skeleton Soldier, Frost Skeleton Soldier, Frost Skeleton Soldier, Frost Skeleton Soldier, Frost Skeleton Mage, Frost Skeleton Mage, Frost Skeleton Mage\n  Wave 4: Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Archmage, Frost Skeleton Archmage\n  Wave 5: Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Knight, Frost Skeleton Archmage, Frost Skeleton Archmage, Frost Skeleton Archmage, Frost Golem\nCompletion rewards :\n- 80x ExpeditionPoint\n- 1x OneBlock Crystal IceTemple
+items.OneBlock_Crystal_FrostboneCrypt.description=Consume to begin the FrostboneCrypt dungeon.\n5 waves :\n  Wave 1: Skeleton Frost Scout, Skeleton Frost Scout, Skeleton Frost Scout, Skeleton Frost Scout, Skeleton Frost Ranger, Skeleton Frost Ranger\n  Wave 2: Skeleton Frost Fighter, Skeleton Frost Fighter, Skeleton Frost Fighter, Skeleton Frost Fighter, Skeleton Frost Archer, Skeleton Frost Archer, Skeleton Frost Archer\n  Wave 3: Skeleton Frost Soldier, Skeleton Frost Soldier, Skeleton Frost Soldier, Skeleton Frost Soldier, Skeleton Frost Mage, Skeleton Frost Mage, Skeleton Frost Mage\n  Wave 4: Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Archmage, Skeleton Frost Archmage\n  Wave 5: Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Knight, Skeleton Frost Archmage, Skeleton Frost Archmage, Skeleton Frost Archmage, Golem Crystal Frost\nCompletion rewards :\n- 80x ExpeditionPoint\n- 1x OneBlock Crystal IceTemple
 expeditions.FrostboneCrypt.name=FrostboneCrypt
 announcements.dungeon_started.FrostboneCrypt=FrostboneCrypt dungeon started.
 announcements.dungeon_completed.FrostboneCrypt=FrostboneCrypt dungeon complete. The OneBlock has returned to default.
@@ -944,7 +944,7 @@ announcements.dungeon_completed.FrostboneCrypt=FrostboneCrypt dungeon complete. 
 # GENERATED ─── BurntBattlefield ───────────────────────────────────────
 items.OneBlock_Block_BurntBattlefield.name=OneBlock BurntBattlefield
 items.OneBlock_Crystal_BurntBattlefield.name=BurntBattlefield Crystal
-items.OneBlock_Crystal_BurntBattlefield.description=Consume to begin a BurntBattlefield expedition.\n25 ticks.\nLoot :\n- Skeleton Scout\n- Burnt Skeleton Soldier\n- Burnt Skeleton Archer\n- Burnt Skeleton Lancer\n- Burnt Skeleton Knight\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Ruby Gem\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x AshenCatacombs Crystal (unlocks AshenCatacombs)
+items.OneBlock_Crystal_BurntBattlefield.description=Consume to begin a BurntBattlefield expedition.\n25 ticks.\nLoot :\n- Skeleton Scout\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Knight\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Ruby Gem\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x AshenCatacombs Crystal (unlocks AshenCatacombs)
 expeditions.BurntBattlefield.name=BurntBattlefield
 announcements.expedition_started.BurntBattlefield=BurntBattlefield expedition started.
 announcements.expedition_completed.BurntBattlefield=BurntBattlefield expedition complete. The OneBlock has returned to default.
@@ -954,7 +954,7 @@ progress.expedition.BurntBattlefield=BurntBattlefield: {0}/{1} ticks remaining
 # GENERATED ─── AshenCatacombs ─────────────────────────────────────────
 items.OneBlock_Block_AshenCatacombs.name=OneBlock AshenCatacombs
 items.OneBlock_Crystal_AshenCatacombs.name=AshenCatacombs Crystal
-items.OneBlock_Crystal_AshenCatacombs.description=Consume to begin a AshenCatacombs expedition.\n25 ticks.\nLoot :\n- Burnt Skeleton Soldier\n- Burnt Skeleton Archer\n- Burnt Skeleton Lancer\n- Burnt Skeleton Gunner\n- Burnt Skeleton Wizard\n- Burnt Skeleton Knight\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Volcanic\n- Rubble Volcanic\n- Rock Volcanic Cracked Incandescent\n- Fire Essence\n- Ruby Gem\n- Mithril Ore\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x BurntSkeletonCitadel Crystal (unlocks BurntSkeletonCitadel)
+items.OneBlock_Crystal_AshenCatacombs.description=Consume to begin a AshenCatacombs expedition.\n25 ticks.\nLoot :\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Gunner\n- Skeleton Burnt Wizard\n- Skeleton Burnt Knight\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Volcanic\n- Rubble Volcanic\n- Rock Volcanic Cracked Incandescent\n- Fire Essence\n- Ruby Gem\n- Mithril Ore\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x BurntSkeletonCitadel Crystal (unlocks BurntSkeletonCitadel)
 expeditions.AshenCatacombs.name=AshenCatacombs
 announcements.expedition_started.AshenCatacombs=AshenCatacombs expedition started.
 announcements.expedition_completed.AshenCatacombs=AshenCatacombs expedition complete. The OneBlock has returned to default.
@@ -964,7 +964,7 @@ progress.expedition.AshenCatacombs=AshenCatacombs: {0}/{1} ticks remaining
 # GENERATED ─── BurntSkeletonCitadel ───────────────────────────────────
 items.OneBlock_Block_BurntSkeletonCitadel.name=OneBlock BurntSkeletonCitadel
 items.OneBlock_Crystal_BurntSkeletonCitadel.name=BurntSkeletonCitadel Crystal
-items.OneBlock_Crystal_BurntSkeletonCitadel.description=Consume to begin the BurntSkeletonCitadel dungeon.\n5 waves :\n  Wave 1: Burnt Skeleton Soldier, Burnt Skeleton Soldier, Burnt Skeleton Soldier, Burnt Skeleton Soldier, Burnt Skeleton Archer, Burnt Skeleton Archer, Burnt Skeleton Archer\n  Wave 2: Burnt Skeleton Lancer, Burnt Skeleton Lancer, Burnt Skeleton Lancer, Burnt Skeleton Lancer, Burnt Skeleton Gunner, Burnt Skeleton Gunner, Burnt Skeleton Gunner\n  Wave 3: Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Wizard, Burnt Skeleton Wizard, Burnt Skeleton Wizard\n  Wave 4: Burnt Skeleton Praetorian, Burnt Skeleton Praetorian, Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Knight, Burnt Skeleton Gunner, Burnt Skeleton Gunner, Burnt Skeleton Gunner\n  Wave 5: Burnt Skeleton Praetorian, Burnt Skeleton Praetorian, Burnt Skeleton Praetorian, Burnt Skeleton Wizard, Burnt Skeleton Wizard, Burnt Skeleton Wizard, Burnt Skeleton Lancer, Burnt Skeleton Lancer, Burnt Skeleton Lancer, Burnt Skeleton Lancer\nCompletion rewards :\n- 70x ExpeditionPoint\n- 1x OneBlock Crystal HellGate
+items.OneBlock_Crystal_BurntSkeletonCitadel.description=Consume to begin the BurntSkeletonCitadel dungeon.\n5 waves :\n  Wave 1: Skeleton Burnt Soldier, Skeleton Burnt Soldier, Skeleton Burnt Soldier, Skeleton Burnt Soldier, Skeleton Burnt Archer, Skeleton Burnt Archer, Skeleton Burnt Archer\n  Wave 2: Skeleton Burnt Lancer, Skeleton Burnt Lancer, Skeleton Burnt Lancer, Skeleton Burnt Lancer, Skeleton Burnt Gunner, Skeleton Burnt Gunner, Skeleton Burnt Gunner\n  Wave 3: Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Wizard, Skeleton Burnt Wizard, Skeleton Burnt Wizard\n  Wave 4: Skeleton Burnt Praetorian, Skeleton Burnt Praetorian, Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Knight, Skeleton Burnt Gunner, Skeleton Burnt Gunner, Skeleton Burnt Gunner\n  Wave 5: Skeleton Burnt Praetorian, Skeleton Burnt Praetorian, Skeleton Burnt Praetorian, Skeleton Burnt Wizard, Skeleton Burnt Wizard, Skeleton Burnt Wizard, Skeleton Burnt Lancer, Skeleton Burnt Lancer, Skeleton Burnt Lancer, Skeleton Burnt Lancer\nCompletion rewards :\n- 70x ExpeditionPoint\n- 1x OneBlock Crystal InfernalGate
 expeditions.BurntSkeletonCitadel.name=BurntSkeletonCitadel
 announcements.dungeon_started.BurntSkeletonCitadel=BurntSkeletonCitadel dungeon started.
 announcements.dungeon_completed.BurntSkeletonCitadel=BurntSkeletonCitadel dungeon complete. The OneBlock has returned to default.
@@ -972,7 +972,7 @@ announcements.dungeon_completed.BurntSkeletonCitadel=BurntSkeletonCitadel dungeo
 # GENERATED ─── JungleEdge ─────────────────────────────────────────────
 items.OneBlock_Block_JungleEdge.name=OneBlock JungleEdge
 items.OneBlock_Crystal_JungleEdge.name=JungleEdge Crystal
-items.OneBlock_Crystal_JungleEdge.description=Consume to begin a JungleEdge expedition.\n25 ticks.\nLoot :\n- Parrot\n- Gecko\n- Frog\n- Marsh Snake\n- Zombie\n- Beech Trunk\n- Maple Trunk\n- Plant Leaves Bramble\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Emerald Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x OvergrownRuins Crystal (unlocks OvergrownRuins)
+items.OneBlock_Crystal_JungleEdge.description=Consume to begin a JungleEdge expedition.\n25 ticks.\nLoot :\n- Parrot\n- Gecko\n- Frog Green\n- Snake Marsh\n- Zombie\n- Bamboo Trunk\n- Jungle Trunk\n- Stick\n- Fibre\n- Mango Fruit\n- Coconut Fruit\n- Plant Sapling Bamboo\n- Plant Sapling Jungle\n- Emerald Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x OvergrownRuins Crystal (unlocks OvergrownRuins)
 expeditions.JungleEdge.name=JungleEdge
 announcements.expedition_started.JungleEdge=JungleEdge expedition started.
 announcements.expedition_completed.JungleEdge=JungleEdge expedition complete. The OneBlock has returned to default.
@@ -983,7 +983,7 @@ benchCategories.OneBlockEnchanter_Jungle=Jungle Crystals
 # GENERATED ─── DryJunglePass ──────────────────────────────────────────
 items.OneBlock_Block_DryJunglePass.name=OneBlock DryJunglePass
 items.OneBlock_Crystal_DryJunglePass.name=DryJunglePass Crystal
-items.OneBlock_Crystal_DryJunglePass.description=Consume to begin a DryJunglePass expedition.\n25 ticks.\nLoot :\n- Cactee\n- Gecko\n- Marsh Snake\n- Sandswept Zombie\n- Skeleton Scout\n- Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Plant Moss Block Green\n- Plant Leaves Bramble\n- Topaz Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x SunkenJungleRuins Crystal (unlocks SunkenJungleRuins)
+items.OneBlock_Crystal_DryJunglePass.description=Consume to begin a DryJunglePass expedition.\n25 ticks.\nLoot :\n- Cactee\n- Gecko\n- Snake Marsh\n- Zombie Sand\n- Skeleton Scout\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Bamboo Trunk\n- Jungle Trunk\n- Stick\n- Fibre\n- Coconut Fruit\n- Plant Sapling Bamboo\n- Plant Sapling Jungle\n- Topaz Gem\nCompletion rewards :\n- 4x ExpeditionPoint\n- 1x SunkenJungleRuins Crystal (unlocks SunkenJungleRuins)
 expeditions.DryJunglePass.name=DryJunglePass
 announcements.expedition_started.DryJunglePass=DryJunglePass expedition started.
 announcements.expedition_completed.DryJunglePass=DryJunglePass expedition complete. The OneBlock has returned to default.
@@ -993,7 +993,7 @@ progress.expedition.DryJunglePass=DryJunglePass: {0}/{1} ticks remaining
 # GENERATED ─── OvergrownRuins ─────────────────────────────────────────
 items.OneBlock_Block_OvergrownRuins.name=OneBlock OvergrownRuins
 items.OneBlock_Crystal_OvergrownRuins.name=OvergrownRuins Crystal
-items.OneBlock_Crystal_OvergrownRuins.description=Consume to begin a OvergrownRuins expedition.\n25 ticks.\nLoot :\n- Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Crocodile\n- Rhino Toad\n- Maple Trunk\n- Plant Leaves Bramble\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Rock Runic Brick Ornate\n- Bone Fragment\n- Emerald Gem\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x JungleCrypt Crystal (unlocks JungleCrypt)
+items.OneBlock_Crystal_OvergrownRuins.description=Consume to begin a OvergrownRuins expedition.\n25 ticks.\nLoot :\n- Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Crocodile\n- Toad Rhino\n- Maple Trunk\n- Plant Leaves Bramble\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Rock Runic Brick\n- Bone Fragment\n- Emerald Gem\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x JungleCrypt Crystal (unlocks JungleCrypt)
 expeditions.OvergrownRuins.name=OvergrownRuins
 announcements.expedition_started.OvergrownRuins=OvergrownRuins expedition started.
 announcements.expedition_completed.OvergrownRuins=OvergrownRuins expedition complete. The OneBlock has returned to default.
@@ -1003,7 +1003,7 @@ progress.expedition.OvergrownRuins=OvergrownRuins: {0}/{1} ticks remaining
 # GENERATED ─── SunkenJungleRuins ──────────────────────────────────────
 items.OneBlock_Block_SunkenJungleRuins.name=OneBlock SunkenJungleRuins
 items.OneBlock_Crystal_SunkenJungleRuins.name=SunkenJungleRuins Crystal
-items.OneBlock_Crystal_SunkenJungleRuins.description=Consume to begin a SunkenJungleRuins expedition.\n25 ticks.\nLoot :\n- Sandswept Zombie\n- Zombie\n- Skeleton Soldier\n- Crocodile\n- Marsh Snake\n- Soil Clay Blue\n- Soil Dirt\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Rock Sandstone Brick\n- Bone Fragment\n- Sapphire Gem\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x JungleCrypt Crystal (unlocks JungleCrypt)
+items.OneBlock_Crystal_SunkenJungleRuins.description=Consume to begin a SunkenJungleRuins expedition.\n25 ticks.\nLoot :\n- Zombie Sand\n- Zombie\n- Skeleton Soldier\n- Crocodile\n- Snake Marsh\n- Soil Clay\n- Soil Dirt\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Rock Sandstone Brick\n- Bone Fragment\n- Sapphire Gem\nCompletion rewards :\n- 5x ExpeditionPoint\n- 1x JungleCrypt Crystal (unlocks JungleCrypt)
 expeditions.SunkenJungleRuins.name=SunkenJungleRuins
 announcements.expedition_started.SunkenJungleRuins=SunkenJungleRuins expedition started.
 announcements.expedition_completed.SunkenJungleRuins=SunkenJungleRuins expedition complete. The OneBlock has returned to default.
@@ -1013,7 +1013,7 @@ progress.expedition.SunkenJungleRuins=SunkenJungleRuins: {0}/{1} ticks remaining
 # GENERATED ─── LostNecropolis ─────────────────────────────────────────
 items.OneBlock_Block_LostNecropolis.name=OneBlock LostNecropolis
 items.OneBlock_Crystal_LostNecropolis.name=LostNecropolis Crystal
-items.OneBlock_Crystal_LostNecropolis.description=Consume to begin a LostNecropolis expedition.\n25 ticks.\nLoot :\n- Skeleton Soldier\n- Skeleton Fighter\n- Skeleton Archer\n- Skeleton Ranger\n- Skeleton Mage\n- Aberrant Zombie\n- Large Aberrant Zombie\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Rock Runic Brick\n- Rock Runic Brick Ornate\n- Emerald Gem\n- Ruby Gem\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal AncientUndeadSanctum\n  [1] 1x OneBlock Crystal ShadowedJungleRoad
+items.OneBlock_Crystal_LostNecropolis.description=Consume to begin a LostNecropolis expedition.\n25 ticks.\nLoot :\n- Skeleton Soldier\n- Skeleton Fighter\n- Skeleton Archer\n- Skeleton Ranger\n- Skeleton Mage\n- Zombie Aberrant\n- Zombie Aberrant Big\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Rock Runic Brick\n- Rock Runic Brick\n- Emerald Gem\n- Ruby Gem\nCompletion rewards :\n- 7x ExpeditionPoint\nRandom reward (one bundle) :\n  [1] 1x OneBlock Crystal AncientUndeadSanctum\n  [1] 1x OneBlock Crystal ShadowedJungleRoad
 expeditions.LostNecropolis.name=LostNecropolis
 announcements.expedition_started.LostNecropolis=LostNecropolis expedition started.
 announcements.expedition_completed.LostNecropolis=LostNecropolis expedition complete. The OneBlock has returned to default.
@@ -1023,7 +1023,7 @@ progress.expedition.LostNecropolis=LostNecropolis: {0}/{1} ticks remaining
 # GENERATED ─── ShadowedJungleRoad ─────────────────────────────────────
 items.OneBlock_Block_ShadowedJungleRoad.name=OneBlock ShadowedJungleRoad
 items.OneBlock_Crystal_ShadowedJungleRoad.name=ShadowedJungleRoad Crystal
-items.OneBlock_Crystal_ShadowedJungleRoad.description=Consume to begin a ShadowedJungleRoad expedition.\n25 ticks.\nLoot :\n- Wraith\n- Skeleton Horse\n- Armored Skeleton Horse\n- Skeleton Knight\n- Skeleton Archmage\n- Undead Pig\n- Undead Chicken\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Rock Runic Brick Ornate\n- Bone Fragment\n- Deco Bone Spine\n- Zephyr Gem\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x ArmoredDeadGrove Crystal (unlocks ArmoredDeadGrove)
+items.OneBlock_Crystal_ShadowedJungleRoad.description=Consume to begin a ShadowedJungleRoad expedition.\n25 ticks.\nLoot :\n- Wraith\n- Horse Skeleton\n- Horse Skeleton Armored\n- Skeleton Knight\n- Skeleton Archmage\n- Pig Undead\n- Chicken Undead\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Spine\n- Zephyr Gem\nCompletion rewards :\n- 8x ExpeditionPoint\n- 1x ArmoredDeadGrove Crystal (unlocks ArmoredDeadGrove)
 expeditions.ShadowedJungleRoad.name=ShadowedJungleRoad
 announcements.expedition_started.ShadowedJungleRoad=ShadowedJungleRoad expedition started.
 announcements.expedition_completed.ShadowedJungleRoad=ShadowedJungleRoad expedition complete. The OneBlock has returned to default.
@@ -1033,7 +1033,7 @@ progress.expedition.ShadowedJungleRoad=ShadowedJungleRoad: {0}/{1} ticks remaini
 # GENERATED ─── ArmoredDeadGrove ───────────────────────────────────────
 items.OneBlock_Block_ArmoredDeadGrove.name=OneBlock ArmoredDeadGrove
 items.OneBlock_Crystal_ArmoredDeadGrove.name=ArmoredDeadGrove Crystal
-items.OneBlock_Crystal_ArmoredDeadGrove.description=Consume to begin a ArmoredDeadGrove expedition.\n25 ticks.\nLoot :\n- Armored Skeleton Horse\n- Skeleton Horse\n- Shadow Knight\n- Wraith\n- Skeleton Knight\n- Skeleton Archmage\n- Ghoul\n- Wood Amber Trunk\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spine\n- Zephyr Gem\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x ShadowKnightCitadel Crystal (unlocks ShadowKnightCitadel)
+items.OneBlock_Crystal_ArmoredDeadGrove.description=Consume to begin a ArmoredDeadGrove expedition.\n25 ticks.\nLoot :\n- Horse Skeleton Armored\n- Horse Skeleton\n- Shadow Knight\n- Wraith\n- Skeleton Knight\n- Skeleton Archmage\n- Ghoul\n- Wood Amber Trunk\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spine\n- Zephyr Gem\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x ShadowKnightCitadel Crystal (unlocks ShadowKnightCitadel)
 expeditions.ArmoredDeadGrove.name=ArmoredDeadGrove
 announcements.expedition_started.ArmoredDeadGrove=ArmoredDeadGrove expedition started.
 announcements.expedition_completed.ArmoredDeadGrove=ArmoredDeadGrove expedition complete. The OneBlock has returned to default.
@@ -1043,7 +1043,7 @@ progress.expedition.ArmoredDeadGrove=ArmoredDeadGrove: {0}/{1} ticks remaining
 # GENERATED ─── JungleCrypt ────────────────────────────────────────────
 items.OneBlock_Block_JungleCrypt.name=OneBlock JungleCrypt
 items.OneBlock_Crystal_JungleCrypt.name=JungleCrypt Crystal
-items.OneBlock_Crystal_JungleCrypt.description=Consume to begin the JungleCrypt dungeon.\n4 waves :\n  Wave 1: Zombie, Zombie, Zombie, Zombie, Sandswept Zombie, Sandswept Zombie, Sandswept Zombie\n  Wave 2: Skeleton Scout, Skeleton Scout, Skeleton Scout, Skeleton Scout, Skeleton Archer, Skeleton Archer, Skeleton Archer\n  Wave 3: Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Fighter, Skeleton Fighter, Skeleton Fighter\n  Wave 4: Skeleton Knight, Skeleton Knight, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Skeleton Mage, Skeleton Mage\nCompletion rewards :\n- 36x ExpeditionPoint\n- 1x OneBlock Crystal LostNecropolis
+items.OneBlock_Crystal_JungleCrypt.description=Consume to begin the JungleCrypt dungeon.\n4 waves :\n  Wave 1: Zombie, Zombie, Zombie, Zombie, Zombie Sand, Zombie Sand, Zombie Sand\n  Wave 2: Skeleton Scout, Skeleton Scout, Skeleton Scout, Skeleton Scout, Skeleton Archer, Skeleton Archer, Skeleton Archer\n  Wave 3: Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Fighter, Skeleton Fighter, Skeleton Fighter\n  Wave 4: Skeleton Knight, Skeleton Knight, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Skeleton Mage, Skeleton Mage\nCompletion rewards :\n- 36x ExpeditionPoint\n- 1x OneBlock Crystal LostNecropolis
 expeditions.JungleCrypt.name=JungleCrypt
 announcements.dungeon_started.JungleCrypt=JungleCrypt dungeon started.
 announcements.dungeon_completed.JungleCrypt=JungleCrypt dungeon complete. The OneBlock has returned to default.
@@ -1051,7 +1051,7 @@ announcements.dungeon_completed.JungleCrypt=JungleCrypt dungeon complete. The On
 # GENERATED ─── AncientUndeadSanctum ───────────────────────────────────
 items.OneBlock_Block_AncientUndeadSanctum.name=OneBlock AncientUndeadSanctum
 items.OneBlock_Crystal_AncientUndeadSanctum.name=AncientUndeadSanctum Crystal
-items.OneBlock_Crystal_AncientUndeadSanctum.description=Consume to begin the AncientUndeadSanctum dungeon.\n5 waves :\n  Wave 1: Zombie, Zombie, Zombie, Zombie, Aberrant Zombie, Aberrant Zombie, Aberrant Zombie, Small Aberrant Zombie, Small Aberrant Zombie, Small Aberrant Zombie, Small Aberrant Zombie\n  Wave 2: Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Archer, Skeleton Archer, Skeleton Archer, Skeleton Archer, Skeleton Fighter, Skeleton Fighter, Skeleton Fighter\n  Wave 3: Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Mage, Skeleton Mage, Skeleton Mage, Large Aberrant Zombie, Large Aberrant Zombie\n  Wave 4: Skeleton Archmage, Skeleton Archmage, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Ghoul, Ghoul, Ghoul, Ghoul\n  Wave 5: Skeleton Archmage, Skeleton Archmage, Skeleton Archmage, Large Aberrant Zombie, Large Aberrant Zombie, Large Aberrant Zombie, Wraith, Wraith\nCompletion rewards :\n- 58x ExpeditionPoint
+items.OneBlock_Crystal_AncientUndeadSanctum.description=Consume to begin the AncientUndeadSanctum dungeon.\n5 waves :\n  Wave 1: Zombie, Zombie, Zombie, Zombie, Zombie Aberrant, Zombie Aberrant, Zombie Aberrant, Zombie Aberrant Small, Zombie Aberrant Small, Zombie Aberrant Small, Zombie Aberrant Small\n  Wave 2: Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Soldier, Skeleton Archer, Skeleton Archer, Skeleton Archer, Skeleton Archer, Skeleton Fighter, Skeleton Fighter, Skeleton Fighter\n  Wave 3: Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Mage, Skeleton Mage, Skeleton Mage, Zombie Aberrant Big, Zombie Aberrant Big\n  Wave 4: Skeleton Archmage, Skeleton Archmage, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Skeleton Ranger, Ghoul, Ghoul, Ghoul, Ghoul\n  Wave 5: Skeleton Archmage, Skeleton Archmage, Skeleton Archmage, Zombie Aberrant Big, Zombie Aberrant Big, Zombie Aberrant Big, Wraith, Wraith\nCompletion rewards :\n- 58x ExpeditionPoint
 expeditions.AncientUndeadSanctum.name=AncientUndeadSanctum
 announcements.dungeon_started.AncientUndeadSanctum=AncientUndeadSanctum dungeon started.
 announcements.dungeon_completed.AncientUndeadSanctum=AncientUndeadSanctum dungeon complete. The OneBlock has returned to default.
@@ -1059,7 +1059,7 @@ announcements.dungeon_completed.AncientUndeadSanctum=AncientUndeadSanctum dungeo
 # GENERATED ─── ShadowKnightCitadel ────────────────────────────────────
 items.OneBlock_Block_ShadowKnightCitadel.name=OneBlock ShadowKnightCitadel
 items.OneBlock_Crystal_ShadowKnightCitadel.name=ShadowKnightCitadel Crystal
-items.OneBlock_Crystal_ShadowKnightCitadel.description=Consume to begin the ShadowKnightCitadel dungeon.\n5 waves :\n  Wave 1: Skeleton Horse, Skeleton Horse, Skeleton Horse, Undead Pig, Undead Pig, Undead Pig, Undead Pig, Undead Chicken, Undead Chicken, Undead Chicken, Undead Chicken, Undead Chicken\n  Wave 2: Armored Skeleton Horse, Armored Skeleton Horse, Armored Skeleton Horse, Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Knight\n  Wave 3: Wraith, Wraith, Wraith, Wraith, Skeleton Archmage, Skeleton Archmage, Skeleton Archmage\n  Wave 4: Shadow Knight, Shadow Knight, Armored Skeleton Horse, Armored Skeleton Horse, Armored Skeleton Horse, Wraith, Wraith, Wraith\n  Wave 5: Shadow Knight, Shadow Knight, Shadow Knight, Skeleton Archmage, Skeleton Archmage, Skeleton Archmage, Armored Skeleton Horse, Armored Skeleton Horse, Armored Skeleton Horse, Armored Skeleton Horse\nCompletion rewards :\n- 72x ExpeditionPoint
+items.OneBlock_Crystal_ShadowKnightCitadel.description=Consume to begin the ShadowKnightCitadel dungeon.\n5 waves :\n  Wave 1: Horse Skeleton, Horse Skeleton, Horse Skeleton, Pig Undead, Pig Undead, Pig Undead, Pig Undead, Chicken Undead, Chicken Undead, Chicken Undead, Chicken Undead, Chicken Undead\n  Wave 2: Horse Skeleton Armored, Horse Skeleton Armored, Horse Skeleton Armored, Skeleton Knight, Skeleton Knight, Skeleton Knight, Skeleton Knight\n  Wave 3: Wraith, Wraith, Wraith, Wraith, Skeleton Archmage, Skeleton Archmage, Skeleton Archmage\n  Wave 4: Shadow Knight, Shadow Knight, Horse Skeleton Armored, Horse Skeleton Armored, Horse Skeleton Armored, Wraith, Wraith, Wraith\n  Wave 5: Shadow Knight, Shadow Knight, Shadow Knight, Skeleton Archmage, Skeleton Archmage, Skeleton Archmage, Horse Skeleton Armored, Horse Skeleton Armored, Horse Skeleton Armored, Horse Skeleton Armored\nCompletion rewards :\n- 72x ExpeditionPoint
 expeditions.ShadowKnightCitadel.name=ShadowKnightCitadel
 announcements.dungeon_started.ShadowKnightCitadel=ShadowKnightCitadel dungeon started.
 announcements.dungeon_completed.ShadowKnightCitadel=ShadowKnightCitadel dungeon complete. The OneBlock has returned to default.
@@ -1067,7 +1067,7 @@ announcements.dungeon_completed.ShadowKnightCitadel=ShadowKnightCitadel dungeon 
 # GENERATED ─── SpiritThreshold ────────────────────────────────────────
 items.OneBlock_Block_SpiritThreshold.name=OneBlock SpiritThreshold
 items.OneBlock_Crystal_SpiritThreshold.name=SpiritThreshold Crystal
-items.OneBlock_Crystal_SpiritThreshold.description=Consume to begin a SpiritThreshold expedition.\n25 ticks.\nLoot :\n- Root Spirit\n- Frost Spirit\n- Thunder Spirit\n- Ember Spirit\n- Earthen Golem\n- Life Essence\n- Ice Essence\n- Lightning Essence\n- Fire Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x ElementalConfluence Crystal (unlocks ElementalConfluence)
+items.OneBlock_Crystal_SpiritThreshold.description=Consume to begin a SpiritThreshold expedition.\n25 ticks.\nLoot :\n- Spirit Root\n- Spirit Frost\n- Spirit Thunder\n- Spirit Ember\n- Golem Crystal Earth\n- Life Essence\n- Ice Essence\n- Lightning Essence\n- Fire Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nCompletion rewards :\n- 9x ExpeditionPoint\n- 1x ElementalConfluence Crystal (unlocks ElementalConfluence)
 expeditions.SpiritThreshold.name=SpiritThreshold
 announcements.expedition_started.SpiritThreshold=SpiritThreshold expedition started.
 announcements.expedition_completed.SpiritThreshold=SpiritThreshold expedition complete. The OneBlock has returned to default.
@@ -1077,7 +1077,7 @@ progress.expedition.SpiritThreshold=SpiritThreshold: {0}/{1} ticks remaining
 # GENERATED ─── ElementalConfluence ────────────────────────────────────
 items.OneBlock_Block_ElementalConfluence.name=OneBlock ElementalConfluence
 items.OneBlock_Crystal_ElementalConfluence.name=ElementalConfluence Crystal
-items.OneBlock_Crystal_ElementalConfluence.description=Consume to begin a ElementalConfluence expedition.\n25 ticks.\nLoot :\n- Earthen Golem\n- Firesteel Golem\n- Frost Golem\n- Ember Golem\n- Sandswept Golem\n- Thunder Golem\n- Frost Spirit\n- Thunder Spirit\n- Root Spirit\n- Ember Spirit\n- Fire Essence\n- Ice Essence\n- Life Essence\n- Lightning Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nCompletion rewards :\n- 11x ExpeditionPoint\n- 1x SpiritRealmTrial Crystal (unlocks SpiritRealmTrial)
+items.OneBlock_Crystal_ElementalConfluence.description=Consume to begin a ElementalConfluence expedition.\n25 ticks.\nLoot :\n- Golem Crystal Earth\n- Golem Firesteel\n- Golem Crystal Frost\n- Golem Crystal Flame\n- Golem Crystal Sand\n- Golem Crystal Thunder\n- Spirit Frost\n- Spirit Thunder\n- Spirit Root\n- Spirit Ember\n- Fire Essence\n- Ice Essence\n- Life Essence\n- Lightning Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nCompletion rewards :\n- 11x ExpeditionPoint\n- 1x SpiritRealmTrial Crystal (unlocks SpiritRealmTrial)
 expeditions.ElementalConfluence.name=ElementalConfluence
 announcements.expedition_started.ElementalConfluence=ElementalConfluence expedition started.
 announcements.expedition_completed.ElementalConfluence=ElementalConfluence expedition complete. The OneBlock has returned to default.
@@ -1087,7 +1087,7 @@ progress.expedition.ElementalConfluence=ElementalConfluence: {0}/{1} ticks remai
 # GENERATED ─── SpiritRealmTrial ───────────────────────────────────────
 items.OneBlock_Block_SpiritRealmTrial.name=OneBlock SpiritRealmTrial
 items.OneBlock_Crystal_SpiritRealmTrial.name=SpiritRealmTrial Crystal
-items.OneBlock_Crystal_SpiritRealmTrial.description=Consume to begin the SpiritRealmTrial dungeon.\n8 waves :\n  Wave 1: Root Spirit, Root Spirit, Root Spirit, Root Spirit, Ember Spirit, Ember Spirit, Ember Spirit, Ember Spirit\n  Wave 2: Frost Spirit, Frost Spirit, Frost Spirit, Frost Spirit, Thunder Spirit, Thunder Spirit, Thunder Spirit, Thunder Spirit\n  Wave 3: Earthen Golem, Earthen Golem, Sandswept Golem, Sandswept Golem, Root Spirit, Root Spirit, Root Spirit\n  Wave 4: Ember Golem, Ember Golem, Firesteel Golem, Firesteel Golem, Ember Spirit, Ember Spirit, Ember Spirit\n  Wave 5: Frost Golem, Frost Golem, Frost Golem, Frost Spirit, Frost Spirit, Frost Spirit, Frost Spirit\n  Wave 6: Thunder Golem, Thunder Golem, Thunder Golem, Thunder Spirit, Thunder Spirit, Thunder Spirit, Thunder Spirit\n  Wave 7: Firesteel Golem, Firesteel Golem, Frost Golem, Frost Golem, Thunder Golem, Thunder Golem, Ember Golem, Ember Golem\n  Wave 8: Earthen Golem, Earthen Golem, Sandswept Golem, Sandswept Golem, Firesteel Golem, Firesteel Golem, Thunder Golem, Thunder Golem\nCompletion rewards :\n- 95x ExpeditionPoint
+items.OneBlock_Crystal_SpiritRealmTrial.description=Consume to begin the SpiritRealmTrial dungeon.\n8 waves :\n  Wave 1: Spirit Root, Spirit Root, Spirit Root, Spirit Root, Spirit Ember, Spirit Ember, Spirit Ember, Spirit Ember\n  Wave 2: Spirit Frost, Spirit Frost, Spirit Frost, Spirit Frost, Spirit Thunder, Spirit Thunder, Spirit Thunder, Spirit Thunder\n  Wave 3: Golem Crystal Earth, Golem Crystal Earth, Golem Crystal Sand, Golem Crystal Sand, Spirit Root, Spirit Root, Spirit Root\n  Wave 4: Golem Crystal Flame, Golem Crystal Flame, Golem Firesteel, Golem Firesteel, Spirit Ember, Spirit Ember, Spirit Ember\n  Wave 5: Golem Crystal Frost, Golem Crystal Frost, Golem Crystal Frost, Spirit Frost, Spirit Frost, Spirit Frost, Spirit Frost\n  Wave 6: Golem Crystal Thunder, Golem Crystal Thunder, Golem Crystal Thunder, Spirit Thunder, Spirit Thunder, Spirit Thunder, Spirit Thunder\n  Wave 7: Golem Firesteel, Golem Firesteel, Golem Crystal Frost, Golem Crystal Frost, Golem Crystal Thunder, Golem Crystal Thunder, Golem Crystal Flame, Golem Crystal Flame\n  Wave 8: Golem Crystal Earth, Golem Crystal Earth, Golem Crystal Sand, Golem Crystal Sand, Golem Firesteel, Golem Firesteel, Golem Crystal Thunder, Golem Crystal Thunder\nCompletion rewards :\n- 95x ExpeditionPoint
 expeditions.SpiritRealmTrial.name=SpiritRealmTrial
 announcements.dungeon_started.SpiritRealmTrial=SpiritRealmTrial dungeon started.
 announcements.dungeon_completed.SpiritRealmTrial=SpiritRealmTrial dungeon complete. The OneBlock has returned to default.

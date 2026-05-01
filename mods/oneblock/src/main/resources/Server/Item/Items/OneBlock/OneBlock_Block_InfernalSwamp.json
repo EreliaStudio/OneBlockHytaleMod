@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_Costline.name"
+    "Name": "server.items.OneBlock_Block_InfernalSwamp.name"
   },
-  "Id": "OneBlock_Block_Costline",
-  "ItemLevel": 6,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Costline.png",
+  "Id": "OneBlock_Block_InfernalSwamp",
+  "ItemLevel": 22,
+  "Icon": "Icons/ItemsGenerated/OneBlock_InfernalSwamp.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_Costline.png",
-        "Sides": "BlockTextures/OneBlock_Block_Costline.png",
-        "Up": "BlockTextures/OneBlock_Block_Costline.png",
+        "Down": "BlockTextures/OneBlock_Block_InfernalSwamp.png",
+        "Sides": "BlockTextures/OneBlock_Block_InfernalSwamp.png",
+        "Up": "BlockTextures/OneBlock_Block_InfernalSwamp.png",
         "Weight": 1
       }
     ],

@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_LuxirousCave.name",
-    "Description": "server.items.OneBlock_Crystal_LuxirousCave.description"
+    "Name": "server.items.OneBlock_Crystal_Coastline.name",
+    "Description": "server.items.OneBlock_Crystal_Coastline.description"
   },
-  "Id": "OneBlock_Crystal_LuxirousCave",
-  "ItemLevel": 13,
+  "Id": "OneBlock_Crystal_Coastline",
+  "ItemLevel": 6,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,19 +32,19 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "LuxirousCave"
+      "Coastline"
     ],
     "OneBlockCrystalTicks": [
-      "30"
+      "25"
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Rare",
   "Recipe": {
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 13
+        "Quantity": 6
       }
     ],
     "OutputQuantity": 1,
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Underground"
+          "OneBlock_Enchanter_Ocean"
         ],
         "Id": "OneBlockEnchanter"
       }

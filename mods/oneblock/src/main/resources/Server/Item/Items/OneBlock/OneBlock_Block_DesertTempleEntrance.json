@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_GobelinGank.name"
+    "Name": "server.items.OneBlock_Block_DesertTempleEntrance.name"
   },
-  "Id": "OneBlock_Block_GobelinGank",
-  "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GobelinGank.png",
+  "Id": "OneBlock_Block_DesertTempleEntrance",
+  "ItemLevel": 9,
+  "Icon": "Icons/ItemsGenerated/OneBlock_DesertTempleEntrance.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_GobelinGank.png",
-        "Sides": "BlockTextures/OneBlock_Block_GobelinGank.png",
-        "Up": "BlockTextures/OneBlock_Block_GobelinGank.png",
+        "Down": "BlockTextures/OneBlock_Block_DesertTempleEntrance.png",
+        "Sides": "BlockTextures/OneBlock_Block_DesertTempleEntrance.png",
+        "Up": "BlockTextures/OneBlock_Block_DesertTempleEntrance.png",
         "Weight": 1
       }
     ],

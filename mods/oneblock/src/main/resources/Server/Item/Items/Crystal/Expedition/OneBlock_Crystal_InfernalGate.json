@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_HellGate.name",
-    "Description": "server.items.OneBlock_Crystal_HellGate.description"
+    "Name": "server.items.OneBlock_Crystal_InfernalGate.name",
+    "Description": "server.items.OneBlock_Crystal_InfernalGate.description"
   },
-  "Id": "OneBlock_Crystal_HellGate",
+  "Id": "OneBlock_Crystal_InfernalGate",
   "ItemLevel": 20,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
@@ -32,7 +32,7 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "HellGate"
+      "InfernalGate"
     ],
     "OneBlockCrystalTicks": [
       "25"

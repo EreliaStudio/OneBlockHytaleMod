@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Crystal_GobelinInvasion.name",
-    "Description": "server.items.OneBlock_Crystal_GobelinInvasion.description"
+    "Name": "server.items.OneBlock_Crystal_LuxuriousCave.name",
+    "Description": "server.items.OneBlock_Crystal_LuxuriousCave.description"
   },
-  "Id": "OneBlock_Crystal_GobelinInvasion",
-  "ItemLevel": 9,
+  "Id": "OneBlock_Crystal_LuxuriousCave",
+  "ItemLevel": 13,
   "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -32,10 +32,10 @@
       "OneBlock_ExpeditionCrystal"
     ],
     "OneBlockCrystalExpedition": [
-      "GobelinInvasion"
+      "LuxuriousCave"
     ],
     "OneBlockCrystalTicks": [
-      "4"
+      "30"
     ]
   },
   "MaxStack": 4,
@@ -44,7 +44,7 @@
     "Input": [
       {
         "ItemId": "ExpeditionPoint",
-        "Quantity": 9
+        "Quantity": 13
       }
     ],
     "OutputQuantity": 1,
@@ -52,9 +52,9 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_DungeonEnchanter_Dungeon"
+          "OneBlock_Enchanter_Underground"
         ],
-        "Id": "OneBlockDungeonEnchanter"
+        "Id": "OneBlockEnchanter"
       }
     ],
     "KnowledgeRequired": true

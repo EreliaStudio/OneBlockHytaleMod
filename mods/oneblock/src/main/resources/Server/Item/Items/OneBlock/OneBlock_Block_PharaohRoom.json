@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_FieryGraveward.name"
+    "Name": "server.items.OneBlock_Block_PharaohRoom.name"
   },
-  "Id": "OneBlock_Block_FieryGraveward",
-  "ItemLevel": 17,
-  "Icon": "Icons/ItemsGenerated/OneBlock_FieryGraveward.png",
+  "Id": "OneBlock_Block_PharaohRoom",
+  "ItemLevel": 15,
+  "Icon": "Icons/ItemsGenerated/OneBlock_PharaohRoom.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     },
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_FieryGraveward.png",
-        "Sides": "BlockTextures/OneBlock_Block_FieryGraveward.png",
-        "Up": "BlockTextures/OneBlock_Block_FieryGraveward.png",
+        "Down": "BlockTextures/OneBlock_Block_PharaohRoom.png",
+        "Sides": "BlockTextures/OneBlock_Block_PharaohRoom.png",
+        "Up": "BlockTextures/OneBlock_Block_PharaohRoom.png",
         "Weight": 1
       }
     ],
