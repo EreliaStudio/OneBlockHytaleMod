@@ -1,5 +1,5 @@
 {
-  "_comment": "Generated from mainDiagram.puml. Crystal recipe costs use only ExpeditionPoint. Completion rewards grant the PUML Reward value as ExpeditionPoint plus one crystal for every outgoing progression arrow. Branching unlocks were moved to CompletionRewards.Random so only one next crystal is awarded per completion when an expedition has multiple outgoing paths.",
+  "_comment": "Generated from mainDiagram.puml, then normalized by fix_oneblock_expeditions.py. Known typo expedition IDs, invalid item IDs, and display-style mob names were corrected. Crystal recipe costs still use ExpeditionPoint. Branching unlocks remain in CompletionRewards.Random.",
   "Default": {
     "ItemLevel": 1,
     "Category": "Surface",
@@ -9,7 +9,7 @@
           "ItemId": "Ingredient_Fibre",
           "Quantity": 1
         }
-	]
+      ]
     },
     "Ticks": 25,
     "BaseDropPool": [
@@ -195,31 +195,47 @@
       },
       {
         "ID": "entity:Sheep",
-        "Weight": 3
+        "Weight": 2
       },
       {
         "ID": "entity:Chicken",
-        "Weight": 4
+        "Weight": 3
       },
       {
         "ID": "entity:Antelope",
         "Weight": 1
       },
       {
-        "ID": "Plant_Crop_Carrot_Item",
+        "ID": "Ingredient_Fibre",
+        "Weight": 30
+      },
+      {
+        "ID": "Soil_Grass",
+        "Weight": 20
+      },
+      {
+        "ID": "Soil_Dirt",
+        "Weight": 20
+      },
+      {
+        "ID": "Plant_Grass_Sharp",
         "Weight": 16
       },
       {
-        "ID": "Plant_Crop_Corn_Item",
-        "Weight": 16
+        "ID": "Plant_Hay_Bundle",
+        "Weight": 10
       },
       {
         "ID": "Plant_Crop_Wheat_Item",
-        "Weight": 24
+        "Weight": 8
       },
       {
-        "ID": "Ingredient_Fibre",
-        "Weight": 30
+        "ID": "Plant_Crop_Carrot_Item",
+        "Weight": 5
+      },
+      {
+        "ID": "Plant_Crop_Corn_Item",
+        "Weight": 5
       }
     ],
     "CompletionRewards": {
@@ -343,7 +359,7 @@
       [
         "Spider",
         "Spider",
-        "Cave_Spider"
+        "Spider_Cave"
       ]
     ],
     "CompletionRewards": {
@@ -382,7 +398,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Cave_Spider",
+        "ID": "entity:Spider_Cave",
         "Weight": 1
       },
       {
@@ -461,14 +477,14 @@
           "Quantity": 2
         },
         {
-          "Crystal": "GobelinGank",
+          "Crystal": "GoblinGank",
           "Quantity": 1
         }
       ],
       "Random": []
     }
   },
-  "GobelinGank": {
+  "GoblinGank": {
     "ItemLevel": 5,
     "Category": "Dungeon",
     "Crystal": {
@@ -623,7 +639,7 @@
         "Weight": 1
       },
       {
-        "ID": "Block_Sand",
+        "ID": "Soil_Sand",
         "Weight": 25
       },
       {
@@ -759,7 +775,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "GobelinInvasion",
+              "Crystal": "GoblinInvasion",
               "Quantity": 1
             }
           ]
@@ -776,7 +792,7 @@
       ]
     }
   },
-  "GobelinInvasion": {
+  "GoblinInvasion": {
     "ItemLevel": 9,
     "Category": "Dungeon",
     "Crystal": {
@@ -855,7 +871,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Cave_Spider",
+        "ID": "entity:Spider_Cave",
         "Weight": 2
       },
       {
@@ -1062,7 +1078,7 @@
     "Ticks": 30,
     "BaseDropPool": [
       {
-        "ID": "entity:Cave_Spider",
+        "ID": "entity:Spider_Cave",
         "Weight": 2
       },
       {
@@ -1070,7 +1086,7 @@
         "Weight": 1
       },
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -1126,7 +1142,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Burnt_Soldier",
         "Weight": 1
       },
       {
@@ -1138,7 +1154,7 @@
         "Weight": 24
       },
       {
-        "ID": "Rubble_Volcanic_Medium",
+        "ID": "Rubble_Volcanic",
         "Weight": 14
       },
       {
@@ -1161,7 +1177,7 @@
           "Quantity": 6
         },
         {
-          "Crystal": "HellGate",
+          "Crystal": "InfernalGate",
           "Quantity": 1
         }
       ],
@@ -1182,15 +1198,15 @@
     "Ticks": 30,
     "BaseDropPool": [
       {
-        "ID": "entity:Cave_Spider",
+        "ID": "entity:Spider_Cave",
         "Weight": 2
       },
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 2
       },
       {
-        "ID": "entity:Earthen_Golem",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -1302,7 +1318,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Void_Crawler",
+        "ID": "entity:Crawler_Void",
         "Weight": 1
       },
       {
@@ -1354,11 +1370,11 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Void_Crawler",
+        "ID": "entity:Crawler_Void",
         "Weight": 2
       },
       {
-        "ID": "entity:Void_Eye",
+        "ID": "entity:Eye_Void",
         "Weight": 1
       },
       {
@@ -1410,7 +1426,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 1
       },
       {
@@ -1474,11 +1490,11 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 1
       },
       {
-        "ID": "Block_Sand",
+        "ID": "Soil_Sand",
         "Weight": 32
       },
       {
@@ -1527,7 +1543,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "DesertTempleEntrace",
+              "Crystal": "DesertTempleEntrance",
               "Quantity": 1
             }
           ]
@@ -1583,7 +1599,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 1
       },
       {
@@ -1670,7 +1686,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frog",
+        "ID": "entity:Frog_Green",
         "Weight": 4
       },
       {
@@ -1694,7 +1710,7 @@
         "Weight": 18
       },
       {
-        "ID": "Soil_Clay_Blue",
+        "ID": "Soil_Clay",
         "Weight": 14
       },
       {
@@ -1730,7 +1746,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frog",
+        "ID": "entity:Frog_Green",
         "Weight": 3
       },
       {
@@ -1758,7 +1774,7 @@
         "Weight": 18
       },
       {
-        "ID": "Soil_Clay_Blue",
+        "ID": "Soil_Clay",
         "Weight": 14
       },
       {
@@ -1796,7 +1812,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "Costline",
+              "Crystal": "Coastline",
               "Quantity": 1
             }
           ]
@@ -1818,7 +1834,7 @@
     "Ticks": 28,
     "BaseDropPool": [
       {
-        "ID": "entity:Frog",
+        "ID": "entity:Frog_Green",
         "Weight": 3
       },
       {
@@ -1846,7 +1862,7 @@
         "Weight": 18
       },
       {
-        "ID": "Soil_Clay_Blue",
+        "ID": "Soil_Clay",
         "Weight": 16
       },
       {
@@ -1894,15 +1910,11 @@
         "Weight": 1
       },
       {
-        "ID": "Fish_Whale_Humpback_Item",
-        "Weight": 2
-      },
-      {
         "ID": "Rock_Aqua_Brick",
         "Weight": 20
       },
       {
-        "ID": "Rock_Aqua_Brick_Smooth",
+        "ID": "Rock_Aqua_Brick",
         "Weight": 18
       },
       {
@@ -1920,6 +1932,22 @@
       {
         "ID": "Rock_Gem_Sapphire",
         "Weight": 3
+      },
+      {
+        "ID": "Fish_Salmon_Item",
+        "Weight": 8
+      },
+      {
+        "ID": "Fish_Crab_Item",
+        "Weight": 8
+      },
+      {
+        "ID": "Fish_Lobster_Item",
+        "Weight": 5
+      },
+      {
+        "ID": "Fish_Shark_Hammerhead_Item",
+        "Weight": 1
       }
     ],
     "CompletionRewards": {
@@ -1991,7 +2019,7 @@
       "Random": []
     }
   },
-  "Costline": {
+  "Coastline": {
     "ItemLevel": 6,
     "Category": "Ocean",
     "Crystal": {
@@ -2017,7 +2045,7 @@
         "Weight": 1
       },
       {
-        "ID": "Block_Sand",
+        "ID": "Soil_Sand",
         "Weight": 26
       },
       {
@@ -2073,7 +2101,7 @@
         "Weight": 3
       },
       {
-        "ID": "entity:Cave_Spider",
+        "ID": "entity:Spider_Cave",
         "Weight": 2
       },
       {
@@ -2085,11 +2113,11 @@
         "Weight": 22
       },
       {
-        "ID": "Rock_Aqua_Brick_Smooth",
+        "ID": "Rock_Aqua_Brick",
         "Weight": 20
       },
       {
-        "ID": "Rock_Aqua_Brick_Ornate",
+        "ID": "Rock_Aqua_Brick",
         "Weight": 10
       },
       {
@@ -2149,7 +2177,7 @@
         "Weight": 22
       },
       {
-        "ID": "Soil_Hive_Brick_Smooth",
+        "ID": "Soil_Hive_Brick",
         "Weight": 16
       },
       {
@@ -2210,9 +2238,9 @@
         "Scarak_Fighter",
         "Scarak_Fighter",
         "Scarak_Fighter",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider"
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave"
       ],
       [
         "Scarak_Defender",
@@ -2221,10 +2249,10 @@
         "Scarak_Seeker",
         "Scarak_Seeker",
         "Scarak_Seeker",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider"
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave"
       ],
       [
         "Scarak_Broodmother",
@@ -2280,11 +2308,11 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Deer",
+        "ID": "entity:Deer_Doe",
         "Weight": 2
       },
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 1
       },
       {
@@ -2401,7 +2429,7 @@
         "Weight": 14
       },
       {
-        "ID": "Wood_Bottletree_Roots",
+        "ID": "Plant_Sapling_Bottletree",
         "Weight": 10
       },
       {
@@ -2449,7 +2477,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frog",
+        "ID": "entity:Frog_Green",
         "Weight": 4
       },
       {
@@ -2465,7 +2493,7 @@
         "Weight": 22
       },
       {
-        "ID": "Soil_Clay_Blue",
+        "ID": "Soil_Clay",
         "Weight": 20
       },
       {
@@ -2517,7 +2545,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Deer",
+        "ID": "entity:Deer_Doe",
         "Weight": 3
       },
       {
@@ -2525,7 +2553,7 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -2533,7 +2561,7 @@
         "Weight": 18
       },
       {
-        "ID": "Wood_Amber_Roots",
+        "ID": "Plant_Sapling_Amber",
         "Weight": 12
       },
       {
@@ -2589,7 +2617,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frog",
+        "ID": "entity:Frog_Green",
         "Weight": 3
       },
       {
@@ -2601,7 +2629,7 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -2665,7 +2693,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 2
       },
       {
@@ -2757,7 +2785,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 2
       },
       {
@@ -2769,7 +2797,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Aberrant_Zombie",
+        "ID": "entity:Zombie_Aberrant",
         "Weight": 1
       },
       {
@@ -2848,7 +2876,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Archer",
+        "ID": "entity:Skeleton_Burnt_Archer",
         "Weight": 1
       },
       {
@@ -2908,7 +2936,7 @@
         "Weight": 3
       },
       {
-        "ID": "entity:Aberrant_Zombie",
+        "ID": "entity:Zombie_Aberrant",
         "Weight": 2
       },
       {
@@ -3126,36 +3154,40 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Void_Larva",
+        "ID": "entity:Larva_Void",
         "Weight": 3
       },
       {
-        "ID": "entity:Void_Crawler",
+        "ID": "entity:Crawler_Void",
         "Weight": 2
       },
       {
-        "ID": "entity:Void_Eye",
+        "ID": "entity:Eye_Void",
         "Weight": 1
-      },
-      {
-        "ID": "Portal_Device",
-        "Weight": 5
-      },
-      {
-        "ID": "Instance_Gateway",
-        "Weight": 4
       },
       {
         "ID": "Rock_Runic_Brick",
         "Weight": 20
       },
       {
-        "ID": "Rock_Runic_Brick_Ornate",
+        "ID": "Rock_Runic_Cobble",
+        "Weight": 16
+      },
+      {
+        "ID": "Rock_Runic_Dark_Brick",
         "Weight": 12
       },
       {
-        "ID": "Rock_Gem_Zephyr",
+        "ID": "Rock_Gem_Voidstone",
         "Weight": 8
+      },
+      {
+        "ID": "Ingredient_Void_Essence",
+        "Weight": 8
+      },
+      {
+        "ID": "Ingredient_Voidheart",
+        "Weight": 2
       },
       {
         "ID": "Ore_Onyxium",
@@ -3204,46 +3236,46 @@
     },
     "Waves": [
       [
-        "Void_Larva",
-        "Void_Larva",
-        "Void_Larva",
-        "Void_Larva",
-        "Void_Larva",
-        "Void_Larva",
-        "Void_Crawler",
-        "Void_Crawler"
+        "Larva_Void",
+        "Larva_Void",
+        "Larva_Void",
+        "Larva_Void",
+        "Larva_Void",
+        "Larva_Void",
+        "Crawler_Void",
+        "Crawler_Void"
       ],
       [
-        "Void_Crawler",
-        "Void_Crawler",
-        "Void_Crawler",
-        "Void_Crawler",
-        "Void_Crawler",
-        "Void_Eye",
-        "Void_Eye"
+        "Crawler_Void",
+        "Crawler_Void",
+        "Crawler_Void",
+        "Crawler_Void",
+        "Crawler_Void",
+        "Eye_Void",
+        "Eye_Void"
       ],
       [
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spectre",
-        "Void_Spectre"
+        "Spawn_Void",
+        "Spawn_Void",
+        "Spawn_Void",
+        "Spawn_Void",
+        "Wraith",
+        "Wraith"
       ],
       [
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spawn",
-        "Void_Spectre",
-        "Void_Spectre",
-        "Void_Spectre",
-        "Void_Spectre",
-        "Void_Eye",
-        "Void_Eye",
-        "Void_Eye"
+        "Spawn_Void",
+        "Spawn_Void",
+        "Spawn_Void",
+        "Spawn_Void",
+        "Spawn_Void",
+        "Spawn_Void",
+        "Wraith",
+        "Wraith",
+        "Wraith",
+        "Wraith",
+        "Eye_Void",
+        "Eye_Void",
+        "Eye_Void"
       ]
     ],
     "CompletionRewards": {
@@ -3270,7 +3302,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Outlander_Initiate",
+        "ID": "entity:Outlander_Cultist",
         "Weight": 3
       },
       {
@@ -3286,7 +3318,7 @@
         "Weight": 18
       },
       {
-        "ID": "Wood_Amber_Roots",
+        "ID": "Plant_Sapling_Amber",
         "Weight": 12
       },
       {
@@ -3349,7 +3381,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Outlander_Initiate",
+        "ID": "entity:Outlander_Cultist",
         "Weight": 3
       },
       {
@@ -3418,7 +3450,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "Toundra",
+              "Crystal": "Tundra",
               "Quantity": 1
             }
           ]
@@ -3439,16 +3471,16 @@
     },
     "Waves": [
       [
-        "Outlander_Initiate",
-        "Outlander_Initiate",
-        "Outlander_Initiate",
-        "Outlander_Initiate",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
         "Outlander_Hunter"
       ],
       [
-        "Outlander_Initiate",
-        "Outlander_Initiate",
-        "Outlander_Initiate",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
         "Outlander_Hunter",
         "Outlander_Hunter",
         "Outlander_Marauder"
@@ -3494,11 +3526,11 @@
     },
     "Waves": [
       [
-        "Outlander_Initiate",
-        "Outlander_Initiate",
-        "Outlander_Initiate",
-        "Outlander_Initiate",
-        "Outlander_Initiate",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
+        "Outlander_Cultist",
         "Outlander_Hunter",
         "Outlander_Hunter",
         "Outlander_Hunter"
@@ -3553,7 +3585,7 @@
       "Random": []
     }
   },
-  "Toundra": {
+  "Tundra": {
     "ItemLevel": 17,
     "Category": "Ice",
     "Crystal": {
@@ -3567,15 +3599,15 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Zombie",
+        "ID": "entity:Zombie_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Scout",
+        "ID": "entity:Skeleton_Frost_Scout",
         "Weight": 1
       },
       {
@@ -3587,7 +3619,7 @@
         "Weight": 24
       },
       {
-        "ID": "Rubble_Ice_Medium",
+        "ID": "Rubble_Ice",
         "Weight": 14
       },
       {
@@ -3646,15 +3678,15 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Zombie",
+        "ID": "entity:Zombie_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Ranger",
+        "ID": "entity:Skeleton_Frost_Ranger",
         "Weight": 1
       },
       {
@@ -3714,15 +3746,15 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frost_Zombie",
+        "ID": "entity:Zombie_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Scout",
+        "ID": "entity:Skeleton_Frost_Scout",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Golem",
+        "ID": "entity:Golem_Crystal_Frost",
         "Weight": 1
       },
       {
@@ -3734,7 +3766,7 @@
         "Weight": 24
       },
       {
-        "ID": "Rubble_Ice_Medium",
+        "ID": "Rubble_Ice",
         "Weight": 16
       },
       {
@@ -3778,15 +3810,15 @@
     "Ticks": 28,
     "BaseDropPool": [
       {
-        "ID": "entity:Frost_Zombie",
+        "ID": "entity:Zombie_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Fighter",
+        "ID": "entity:Skeleton_Frost_Fighter",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Mage",
+        "ID": "entity:Skeleton_Frost_Mage",
         "Weight": 1
       },
       {
@@ -3857,15 +3889,15 @@
     "Ticks": 28,
     "BaseDropPool": [
       {
-        "ID": "entity:Frost_Golem",
+        "ID": "entity:Golem_Crystal_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Knight",
+        "ID": "entity:Skeleton_Frost_Knight",
         "Weight": 2
       },
       {
-        "ID": "entity:Ice_Dragon",
+        "ID": "entity:Dragon_Frost",
         "Weight": 1
       },
       {
@@ -3873,7 +3905,7 @@
         "Weight": 22
       },
       {
-        "ID": "Rubble_Ice_Medium",
+        "ID": "Rubble_Ice",
         "Weight": 18
       },
       {
@@ -3920,40 +3952,40 @@
     },
     "Waves": [
       [
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Skeleton_Scout",
-        "Frost_Skeleton_Scout"
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Skeleton_Frost_Scout",
+        "Skeleton_Frost_Scout"
       ],
       [
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Ranger",
-        "Frost_Skeleton_Ranger"
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Ranger",
+        "Skeleton_Frost_Ranger"
       ],
       [
-        "Frost_Golem",
-        "Frost_Golem",
-        "Frost_Skeleton_Mage",
-        "Frost_Skeleton_Mage",
-        "Frost_Skeleton_Mage"
+        "Golem_Crystal_Frost",
+        "Golem_Crystal_Frost",
+        "Skeleton_Frost_Mage",
+        "Skeleton_Frost_Mage",
+        "Skeleton_Frost_Mage"
       ],
       [
-        "Ice_Dragon",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Zombie",
-        "Frost_Zombie"
+        "Dragon_Frost",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Zombie_Frost",
+        "Zombie_Frost"
       ]
     ],
     "CompletionRewards": {
@@ -3980,19 +4012,19 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Zombie",
+        "ID": "entity:Zombie_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Ranger",
+        "ID": "entity:Skeleton_Frost_Ranger",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Golem",
+        "ID": "entity:Golem_Crystal_Frost",
         "Weight": 1
       },
       {
@@ -4056,7 +4088,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Burnt_Soldier",
         "Weight": 1
       },
       {
@@ -4068,7 +4100,7 @@
         "Weight": 24
       },
       {
-        "ID": "Rubble_Volcanic_Medium",
+        "ID": "Rubble_Volcanic",
         "Weight": 16
       },
       {
@@ -4105,7 +4137,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "FieryGraveward",
+              "Crystal": "FieryGraveyard",
               "Quantity": 1
             }
           ]
@@ -4135,27 +4167,27 @@
         "Emberwulf"
       ],
       [
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Archer",
-        "Burnt_Skeleton_Archer",
-        "Burnt_Skeleton_Archer"
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Archer",
+        "Skeleton_Burnt_Archer",
+        "Skeleton_Burnt_Archer"
       ],
       [
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Wizard",
-        "Burnt_Skeleton_Wizard"
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Wizard",
+        "Skeleton_Burnt_Wizard"
       ],
       [
-        "Ember_Golem",
-        "Ember_Golem",
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Praetorian",
+        "Golem_Crystal_Flame",
+        "Golem_Crystal_Flame",
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Praetorian",
         "Emberwulf",
         "Emberwulf",
         "Emberwulf",
@@ -4172,7 +4204,7 @@
       "Random": []
     }
   },
-  "FieryGraveward": {
+  "FieryGraveyard": {
     "ItemLevel": 17,
     "Category": "Fire",
     "Crystal": {
@@ -4190,15 +4222,15 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Burnt_Soldier",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Archer",
+        "ID": "entity:Skeleton_Burnt_Archer",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Knight",
+        "ID": "entity:Skeleton_Burnt_Knight",
         "Weight": 1
       },
       {
@@ -4255,7 +4287,7 @@
       ]
     }
   },
-  "HellGate": {
+  "InfernalGate": {
     "ItemLevel": 20,
     "Category": "Fire",
     "Crystal": {
@@ -4269,19 +4301,19 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Incandescent_Skeleton_Fighter",
+        "ID": "entity:Skeleton_Incandescent_Fighter",
         "Weight": 2
       },
       {
-        "ID": "entity:Incandescent_Skeleton_Mage",
+        "ID": "entity:Skeleton_Incandescent_Mage",
         "Weight": 1
       },
       {
-        "ID": "entity:Ember_Golem",
+        "ID": "entity:Golem_Crystal_Flame",
         "Weight": 1
       },
       {
-        "ID": "Portal_Device",
+        "ID": "Rock_Runic_Brick",
         "Weight": 5
       },
       {
@@ -4317,7 +4349,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "HellPlain",
+              "Crystal": "InfernalPlain",
               "Quantity": 1
             }
           ]
@@ -4326,7 +4358,7 @@
           "Weight": 1,
           "Items": [
             {
-              "Crystal": "HellSwamp",
+              "Crystal": "InfernalSwamp",
               "Quantity": 1
             }
           ]
@@ -4334,7 +4366,7 @@
       ]
     }
   },
-  "HellPlain": {
+  "InfernalPlain": {
     "ItemLevel": 22,
     "Category": "Fire",
     "Crystal": {
@@ -4348,11 +4380,11 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Incandescent_Skeleton_Fighter",
+        "ID": "entity:Skeleton_Incandescent_Fighter",
         "Weight": 2
       },
       {
-        "ID": "entity:Incandescent_Skeleton_Footman",
+        "ID": "entity:Skeleton_Incandescent_Footman",
         "Weight": 2
       },
       {
@@ -4360,7 +4392,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Firesteel_Golem",
+        "ID": "entity:Golem_Firesteel",
         "Weight": 1
       },
       {
@@ -4402,7 +4434,7 @@
       "Random": []
     }
   },
-  "HellSwamp": {
+  "InfernalSwamp": {
     "ItemLevel": 22,
     "Category": "Fire",
     "Crystal": {
@@ -4424,15 +4456,15 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Incandescent_Skeleton_Mage",
+        "ID": "entity:Skeleton_Incandescent_Mage",
         "Weight": 1
       },
       {
-        "ID": "entity:Ember_Golem",
+        "ID": "entity:Golem_Crystal_Flame",
         "Weight": 1
       },
       {
-        "ID": "Soil_Clay_Black",
+        "ID": "Soil_Mud",
         "Weight": 18
       },
       {
@@ -4484,19 +4516,19 @@
     "Ticks": 28,
     "BaseDropPool": [
       {
-        "ID": "entity:Incandescent_Skeleton_Fighter",
+        "ID": "entity:Skeleton_Incandescent_Fighter",
         "Weight": 2
       },
       {
-        "ID": "entity:Incandescent_Skeleton_Mage",
+        "ID": "entity:Skeleton_Incandescent_Mage",
         "Weight": 1
       },
       {
-        "ID": "entity:Firesteel_Golem",
+        "ID": "entity:Golem_Firesteel",
         "Weight": 1
       },
       {
-        "ID": "entity:Thunder_Golem",
+        "ID": "entity:Golem_Crystal_Thunder",
         "Weight": 1
       },
       {
@@ -4538,7 +4570,7 @@
       "Random": []
     }
   },
-  "DesertTempleEntrace": {
+  "DesertTempleEntrance": {
     "ItemLevel": 9,
     "Category": "Mystic",
     "Crystal": {
@@ -4552,7 +4584,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 2
       },
       {
@@ -4616,7 +4648,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 2
       },
       {
@@ -4687,19 +4719,19 @@
     },
     "Waves": [
       [
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand",
         "Skeleton_Scout",
         "Skeleton_Scout"
       ],
       [
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand",
         "Skeleton_Archer",
         "Skeleton_Archer",
         "Skeleton_Archer"
@@ -4710,10 +4742,10 @@
         "Skeleton_Knight",
         "Skeleton_Mage",
         "Skeleton_Mage",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie"
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand"
       ],
       [
         "Skeleton_Sand_Archmage",
@@ -4736,14 +4768,14 @@
           "Quantity": 35
         },
         {
-          "Crystal": "PharaonRoom",
+          "Crystal": "PharaohRoom",
           "Quantity": 1
         }
       ],
       "Random": []
     }
   },
-  "PharaonRoom": {
+  "PharaohRoom": {
     "ItemLevel": 15,
     "Category": "Desert",
     "Crystal": {
@@ -4757,7 +4789,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 2
       },
       {
@@ -4829,7 +4861,7 @@
         "Weight": 3
       },
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 1
       },
       {
@@ -4837,7 +4869,7 @@
         "Weight": 1
       },
       {
-        "ID": "Block_Sand",
+        "ID": "Soil_Sand",
         "Weight": 30
       },
       {
@@ -4920,7 +4952,7 @@
         "Weight": 1
       },
       {
-        "ID": "Block_Sand",
+        "ID": "Soil_Sand",
         "Weight": 22
       },
       {
@@ -4928,11 +4960,11 @@
         "Weight": 22
       },
       {
-        "ID": "Soil_Clay_Black",
+        "ID": "Soil_Mud",
         "Weight": 18
       },
       {
-        "ID": "Soil_Gravel_Sand_Half",
+        "ID": "Soil_Gravel",
         "Weight": 16
       },
       {
@@ -4991,10 +5023,10 @@
       [
         "Scarak_Seeker",
         "Scarak_Seeker",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider",
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave",
         "Scarak_Fighter",
         "Scarak_Fighter",
         "Scarak_Fighter"
@@ -5048,11 +5080,11 @@
         "Weight": 20
       },
       {
-        "ID": "Soil_Hive_Brick_Smooth",
+        "ID": "Soil_Hive_Brick",
         "Weight": 16
       },
       {
-        "ID": "Soil_Hive_Brick_Stairs",
+        "ID": "Soil_Hive_Brick",
         "Weight": 10
       },
       {
@@ -5108,10 +5140,10 @@
         "Scarak_Fighter",
         "Scarak_Fighter",
         "Scarak_Fighter",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider"
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave"
       ],
       [
         "Scarak_Defender",
@@ -5125,7 +5157,7 @@
         "Scarak_Seeker"
       ],
       [
-        "Sand_Empress",
+        "Scarak_Broodmother",
         "Scarak_Fighter",
         "Scarak_Fighter",
         "Scarak_Fighter"
@@ -5183,15 +5215,15 @@
         "Weight": 20
       },
       {
-        "ID": "Soil_Hive_Brick_Smooth",
+        "ID": "Soil_Hive_Brick",
         "Weight": 16
       },
       {
-        "ID": "Soil_Hive_Brick_Beam",
+        "ID": "Soil_Hive_Brick",
         "Weight": 10
       },
       {
-        "ID": "Soil_Hive_Brick_Stairs",
+        "ID": "Soil_Hive_Brick",
         "Weight": 10
       },
       {
@@ -5258,10 +5290,10 @@
         "Scarak_Defender",
         "Scarak_Defender",
         "Scarak_Defender",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider",
-        "Cave_Spider"
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave",
+        "Spider_Cave"
       ],
       [
         "Scarak_Broodmother",
@@ -5375,7 +5407,7 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Deer",
+        "ID": "entity:Deer_Doe",
         "Weight": 1
       },
       {
@@ -5459,7 +5491,7 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 1
       },
       {
@@ -5511,7 +5543,7 @@
         "Weight": 5
       },
       {
-        "ID": "entity:Wolf",
+        "ID": "entity:Wolf_Black",
         "Weight": 1
       },
       {
@@ -5563,11 +5595,11 @@
         "Weight": 3
       },
       {
-        "ID": "entity:Cave_Spider",
+        "ID": "entity:Spider_Cave",
         "Weight": 2
       },
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -5623,11 +5655,11 @@
     "Ticks": 30,
     "BaseDropPool": [
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 2
       },
       {
-        "ID": "entity:Earthen_Golem",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -5635,7 +5667,7 @@
         "Weight": 22
       },
       {
-        "ID": "Rock_Runic_Brick_Ornate",
+        "ID": "Rock_Runic_Brick",
         "Weight": 12
       },
       {
@@ -5658,14 +5690,14 @@
           "Quantity": 4
         },
         {
-          "Crystal": "LuxirousCave",
+          "Crystal": "LuxuriousCave",
           "Quantity": 1
         }
       ],
       "Random": []
     }
   },
-  "LuxirousCave": {
+  "LuxuriousCave": {
     "ItemLevel": 13,
     "Category": "Underground",
     "Crystal": {
@@ -5679,11 +5711,11 @@
     "Ticks": 30,
     "BaseDropPool": [
       {
-        "ID": "entity:Earth_Elemental",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 2
       },
       {
-        "ID": "entity:Earthen_Golem",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 2
       },
       {
@@ -5751,11 +5783,11 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Cave_Raptor",
+        "ID": "entity:Raptor_Cave",
         "Weight": 2
       },
       {
-        "ID": "entity:Cave_Rex",
+        "ID": "entity:Rex_Cave",
         "Weight": 1
       },
       {
@@ -5823,45 +5855,45 @@
         "Crocodile"
       ],
       [
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
         "Archaeopteryx",
         "Archaeopteryx",
         "Archaeopteryx"
       ],
       [
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
         "Crawler",
         "Crawler"
       ],
       [
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Rex"
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Rex_Cave"
       ],
       [
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Raptor",
-        "Cave_Rex",
-        "Cave_Rex"
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Raptor_Cave",
+        "Rex_Cave",
+        "Rex_Cave"
       ],
       [
-        "Cave_Rex",
-        "Cave_Rex",
-        "Cave_Rex",
-        "Earth_Elemental"
+        "Rex_Cave",
+        "Rex_Cave",
+        "Rex_Cave",
+        "Golem_Crystal_Earth"
       ]
     ],
     "CompletionRewards": {
@@ -5896,7 +5928,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Hunting_Wolf",
+        "ID": "entity:Wolf_Trork_Shaman",
         "Weight": 2
       },
       {
@@ -5956,7 +5988,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Hunting_Wolf",
+        "ID": "entity:Wolf_Trork_Shaman",
         "Weight": 4
       },
       {
@@ -6023,9 +6055,9 @@
     },
     "Waves": [
       [
-        "Hunting_Wolf",
-        "Hunting_Wolf",
-        "Hunting_Wolf",
+        "Wolf_Trork_Shaman",
+        "Wolf_Trork_Shaman",
+        "Wolf_Trork_Shaman",
         "Trork_Sentry",
         "Trork_Sentry"
       ],
@@ -6048,8 +6080,8 @@
         "Trork_Warrior",
         "Trork_Warrior",
         "Trork_Warrior",
-        "Hunting_Wolf",
-        "Hunting_Wolf"
+        "Wolf_Trork_Shaman",
+        "Wolf_Trork_Shaman"
       ]
     ],
     "CompletionRewards": {
@@ -6148,7 +6180,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Trork_Elder",
+        "ID": "entity:Trork_Doctor_Witch",
         "Weight": 2
       },
       {
@@ -6160,7 +6192,7 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Hunting_Wolf",
+        "ID": "entity:Wolf_Trork_Shaman",
         "Weight": 2
       },
       {
@@ -6168,7 +6200,7 @@
         "Weight": 14
       },
       {
-        "ID": "Wood_Amber_Roots",
+        "ID": "Plant_Sapling_Amber",
         "Weight": 10
       },
       {
@@ -6219,9 +6251,9 @@
         "Trork_Sentry",
         "Trork_Sentry",
         "Trork_Sentry",
-        "Hunting_Wolf",
-        "Hunting_Wolf",
-        "Hunting_Wolf"
+        "Wolf_Trork_Shaman",
+        "Wolf_Trork_Shaman",
+        "Wolf_Trork_Shaman"
       ],
       [
         "Trork_Brawler",
@@ -6244,8 +6276,8 @@
         "Trork_Guard",
         "Trork_Guard",
         "Trork_Guard",
-        "Trork_Elder",
-        "Trork_Elder"
+        "Trork_Doctor_Witch",
+        "Trork_Doctor_Witch"
       ],
       [
         "Trork_Chieftain",
@@ -6282,27 +6314,27 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frost_Skeleton_Scout",
+        "ID": "entity:Skeleton_Frost_Scout",
         "Weight": 4
       },
       {
-        "ID": "entity:Frost_Skeleton_Ranger",
+        "ID": "entity:Skeleton_Frost_Ranger",
         "Weight": 3
       },
       {
-        "ID": "entity:Frost_Skeleton_Fighter",
+        "ID": "entity:Skeleton_Frost_Fighter",
         "Weight": 3
       },
       {
-        "ID": "entity:Frost_Skeleton_Archer",
+        "ID": "entity:Skeleton_Frost_Archer",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Frost_Soldier",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Mage",
+        "ID": "entity:Skeleton_Frost_Mage",
         "Weight": 1
       },
       {
@@ -6370,31 +6402,31 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Frost_Skeleton_Ranger",
+        "ID": "entity:Skeleton_Frost_Ranger",
         "Weight": 3
       },
       {
-        "ID": "entity:Frost_Skeleton_Fighter",
+        "ID": "entity:Skeleton_Frost_Fighter",
         "Weight": 3
       },
       {
-        "ID": "entity:Frost_Skeleton_Archer",
+        "ID": "entity:Skeleton_Frost_Archer",
         "Weight": 3
       },
       {
-        "ID": "entity:Frost_Skeleton_Mage",
+        "ID": "entity:Skeleton_Frost_Mage",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Frost_Soldier",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Knight",
+        "ID": "entity:Skeleton_Frost_Knight",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Skeleton_Archmage",
+        "ID": "entity:Skeleton_Frost_Archmage",
         "Weight": 1
       },
       {
@@ -6465,47 +6497,47 @@
     },
     "Waves": [
       [
-        "Frost_Skeleton_Scout",
-        "Frost_Skeleton_Scout",
-        "Frost_Skeleton_Scout",
-        "Frost_Skeleton_Scout",
-        "Frost_Skeleton_Ranger",
-        "Frost_Skeleton_Ranger"
+        "Skeleton_Frost_Scout",
+        "Skeleton_Frost_Scout",
+        "Skeleton_Frost_Scout",
+        "Skeleton_Frost_Scout",
+        "Skeleton_Frost_Ranger",
+        "Skeleton_Frost_Ranger"
       ],
       [
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Fighter",
-        "Frost_Skeleton_Archer",
-        "Frost_Skeleton_Archer",
-        "Frost_Skeleton_Archer"
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Fighter",
+        "Skeleton_Frost_Archer",
+        "Skeleton_Frost_Archer",
+        "Skeleton_Frost_Archer"
       ],
       [
-        "Frost_Skeleton_Soldier",
-        "Frost_Skeleton_Soldier",
-        "Frost_Skeleton_Soldier",
-        "Frost_Skeleton_Soldier",
-        "Frost_Skeleton_Mage",
-        "Frost_Skeleton_Mage",
-        "Frost_Skeleton_Mage"
+        "Skeleton_Frost_Soldier",
+        "Skeleton_Frost_Soldier",
+        "Skeleton_Frost_Soldier",
+        "Skeleton_Frost_Soldier",
+        "Skeleton_Frost_Mage",
+        "Skeleton_Frost_Mage",
+        "Skeleton_Frost_Mage"
       ],
       [
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Archmage",
-        "Frost_Skeleton_Archmage"
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Archmage",
+        "Skeleton_Frost_Archmage"
       ],
       [
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Knight",
-        "Frost_Skeleton_Archmage",
-        "Frost_Skeleton_Archmage",
-        "Frost_Skeleton_Archmage",
-        "Frost_Golem"
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Knight",
+        "Skeleton_Frost_Archmage",
+        "Skeleton_Frost_Archmage",
+        "Skeleton_Frost_Archmage",
+        "Golem_Crystal_Frost"
       ]
     ],
     "CompletionRewards": {
@@ -6540,19 +6572,19 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Burnt_Soldier",
         "Weight": 3
       },
       {
-        "ID": "entity:Burnt_Skeleton_Archer",
+        "ID": "entity:Skeleton_Burnt_Archer",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Lancer",
+        "ID": "entity:Skeleton_Burnt_Lancer",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Knight",
+        "ID": "entity:Skeleton_Burnt_Knight",
         "Weight": 1
       },
       {
@@ -6616,27 +6648,27 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Burnt_Skeleton_Soldier",
+        "ID": "entity:Skeleton_Burnt_Soldier",
         "Weight": 3
       },
       {
-        "ID": "entity:Burnt_Skeleton_Archer",
+        "ID": "entity:Skeleton_Burnt_Archer",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Lancer",
+        "ID": "entity:Skeleton_Burnt_Lancer",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Gunner",
+        "ID": "entity:Skeleton_Burnt_Gunner",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Wizard",
+        "ID": "entity:Skeleton_Burnt_Wizard",
         "Weight": 2
       },
       {
-        "ID": "entity:Burnt_Skeleton_Knight",
+        "ID": "entity:Skeleton_Burnt_Knight",
         "Weight": 1
       },
       {
@@ -6707,54 +6739,54 @@
     },
     "Waves": [
       [
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Soldier",
-        "Burnt_Skeleton_Archer",
-        "Burnt_Skeleton_Archer",
-        "Burnt_Skeleton_Archer"
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Soldier",
+        "Skeleton_Burnt_Archer",
+        "Skeleton_Burnt_Archer",
+        "Skeleton_Burnt_Archer"
       ],
       [
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Gunner",
-        "Burnt_Skeleton_Gunner",
-        "Burnt_Skeleton_Gunner"
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Gunner",
+        "Skeleton_Burnt_Gunner",
+        "Skeleton_Burnt_Gunner"
       ],
       [
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Wizard",
-        "Burnt_Skeleton_Wizard",
-        "Burnt_Skeleton_Wizard"
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Wizard",
+        "Skeleton_Burnt_Wizard",
+        "Skeleton_Burnt_Wizard"
       ],
       [
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Knight",
-        "Burnt_Skeleton_Gunner",
-        "Burnt_Skeleton_Gunner",
-        "Burnt_Skeleton_Gunner"
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Knight",
+        "Skeleton_Burnt_Gunner",
+        "Skeleton_Burnt_Gunner",
+        "Skeleton_Burnt_Gunner"
       ],
       [
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Praetorian",
-        "Burnt_Skeleton_Wizard",
-        "Burnt_Skeleton_Wizard",
-        "Burnt_Skeleton_Wizard",
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Lancer",
-        "Burnt_Skeleton_Lancer"
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Praetorian",
+        "Skeleton_Burnt_Wizard",
+        "Skeleton_Burnt_Wizard",
+        "Skeleton_Burnt_Wizard",
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Lancer",
+        "Skeleton_Burnt_Lancer"
       ]
     ],
     "CompletionRewards": {
@@ -6764,7 +6796,7 @@
           "Quantity": 70
         },
         {
-          "Crystal": "HellGate",
+          "Crystal": "InfernalGate",
           "Quantity": 1
         }
       ],
@@ -6793,11 +6825,11 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Frog",
+        "ID": "entity:Frog_Green",
         "Weight": 3
       },
       {
-        "ID": "entity:Marsh_Snake",
+        "ID": "entity:Snake_Marsh",
         "Weight": 2
       },
       {
@@ -6805,28 +6837,36 @@
         "Weight": 1
       },
       {
-        "ID": "Wood_Beech_Trunk",
+        "ID": "Wood_Bamboo_Trunk",
         "Weight": 18
       },
       {
-        "ID": "Wood_Maple_Trunk",
-        "Weight": 16
+        "ID": "Wood_Jungle_Trunk",
+        "Weight": 18
       },
       {
-        "ID": "Plant_Leaves_Bramble",
+        "ID": "Ingredient_Stick",
         "Weight": 14
       },
       {
-        "ID": "Plant_Moss_Block_Green",
-        "Weight": 14
-      },
-      {
-        "ID": "Plant_Moss_Rug_Green",
+        "ID": "Ingredient_Fibre",
         "Weight": 12
       },
       {
-        "ID": "Plant_Crop_Mushroom_Common_Brown",
-        "Weight": 8
+        "ID": "Plant_Fruit_Mango",
+        "Weight": 5
+      },
+      {
+        "ID": "Plant_Fruit_Coconut",
+        "Weight": 4
+      },
+      {
+        "ID": "Plant_Sapling_Bamboo",
+        "Weight": 2
+      },
+      {
+        "ID": "Plant_Sapling_Jungle",
+        "Weight": 2
       },
       {
         "ID": "Rock_Gem_Emerald",
@@ -6869,11 +6909,11 @@
         "Weight": 4
       },
       {
-        "ID": "entity:Marsh_Snake",
+        "ID": "entity:Snake_Marsh",
         "Weight": 2
       },
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 2
       },
       {
@@ -6881,28 +6921,48 @@
         "Weight": 1
       },
       {
-        "ID": "Block_Sand",
-        "Weight": 20
-      },
-      {
-        "ID": "Rock_Sandstone",
-        "Weight": 20
-      },
-      {
-        "ID": "Rubble_Sandstone",
+        "ID": "Soil_Sand",
         "Weight": 18
       },
       {
+        "ID": "Rock_Sandstone",
+        "Weight": 18
+      },
+      {
+        "ID": "Rubble_Sandstone",
+        "Weight": 16
+      },
+      {
         "ID": "Plant_Cactus_1",
+        "Weight": 8
+      },
+      {
+        "ID": "Wood_Bamboo_Trunk",
+        "Weight": 12
+      },
+      {
+        "ID": "Wood_Jungle_Trunk",
         "Weight": 10
       },
       {
-        "ID": "Plant_Moss_Block_Green",
+        "ID": "Ingredient_Stick",
         "Weight": 10
       },
       {
-        "ID": "Plant_Leaves_Bramble",
-        "Weight": 10
+        "ID": "Ingredient_Fibre",
+        "Weight": 8
+      },
+      {
+        "ID": "Plant_Fruit_Coconut",
+        "Weight": 4
+      },
+      {
+        "ID": "Plant_Sapling_Bamboo",
+        "Weight": 2
+      },
+      {
+        "ID": "Plant_Sapling_Jungle",
+        "Weight": 1
       },
       {
         "ID": "Rock_Gem_Topaz",
@@ -6953,7 +7013,7 @@
         "Weight": 1
       },
       {
-        "ID": "entity:Rhino_Toad",
+        "ID": "entity:Toad_Rhino",
         "Weight": 1
       },
       {
@@ -6977,7 +7037,7 @@
         "Weight": 14
       },
       {
-        "ID": "Rock_Runic_Brick_Ornate",
+        "ID": "Rock_Runic_Brick",
         "Weight": 8
       },
       {
@@ -7017,7 +7077,7 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Sandswept_Zombie",
+        "ID": "entity:Zombie_Sand",
         "Weight": 2
       },
       {
@@ -7033,11 +7093,11 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Marsh_Snake",
+        "ID": "entity:Snake_Marsh",
         "Weight": 2
       },
       {
-        "ID": "Soil_Clay_Blue",
+        "ID": "Soil_Clay",
         "Weight": 16
       },
       {
@@ -7117,11 +7177,11 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Aberrant_Zombie",
+        "ID": "entity:Zombie_Aberrant",
         "Weight": 2
       },
       {
-        "ID": "entity:Large_Aberrant_Zombie",
+        "ID": "entity:Zombie_Aberrant_Big",
         "Weight": 1
       },
       {
@@ -7141,7 +7201,7 @@
         "Weight": 16
       },
       {
-        "ID": "Rock_Runic_Brick_Ornate",
+        "ID": "Rock_Runic_Brick",
         "Weight": 10
       },
       {
@@ -7200,11 +7260,11 @@
         "Weight": 2
       },
       {
-        "ID": "entity:Skeleton_Horse",
+        "ID": "entity:Horse_Skeleton",
         "Weight": 2
       },
       {
-        "ID": "entity:Armored_Skeleton_Horse",
+        "ID": "entity:Horse_Skeleton_Armored",
         "Weight": 1
       },
       {
@@ -7216,11 +7276,11 @@
         "Weight": 1
       },
       {
-        "ID": "entity:Undead_Pig",
+        "ID": "entity:Pig_Undead",
         "Weight": 2
       },
       {
-        "ID": "entity:Undead_Chicken",
+        "ID": "entity:Chicken_Undead",
         "Weight": 2
       },
       {
@@ -7232,7 +7292,7 @@
         "Weight": 16
       },
       {
-        "ID": "Rock_Runic_Brick_Ornate",
+        "ID": "Rock_Runic_Brick",
         "Weight": 10
       },
       {
@@ -7276,11 +7336,11 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Armored_Skeleton_Horse",
+        "ID": "entity:Horse_Skeleton_Armored",
         "Weight": 2
       },
       {
-        "ID": "entity:Skeleton_Horse",
+        "ID": "entity:Horse_Skeleton",
         "Weight": 2
       },
       {
@@ -7363,9 +7423,9 @@
         "Zombie",
         "Zombie",
         "Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie",
-        "Sandswept_Zombie"
+        "Zombie_Sand",
+        "Zombie_Sand",
+        "Zombie_Sand"
       ],
       [
         "Skeleton_Scout",
@@ -7427,13 +7487,13 @@
         "Zombie",
         "Zombie",
         "Zombie",
-        "Aberrant_Zombie",
-        "Aberrant_Zombie",
-        "Aberrant_Zombie",
-        "Small_Aberrant_Zombie",
-        "Small_Aberrant_Zombie",
-        "Small_Aberrant_Zombie",
-        "Small_Aberrant_Zombie"
+        "Zombie_Aberrant",
+        "Zombie_Aberrant",
+        "Zombie_Aberrant",
+        "Zombie_Aberrant_Small",
+        "Zombie_Aberrant_Small",
+        "Zombie_Aberrant_Small",
+        "Zombie_Aberrant_Small"
       ],
       [
         "Skeleton_Soldier",
@@ -7456,8 +7516,8 @@
         "Skeleton_Mage",
         "Skeleton_Mage",
         "Skeleton_Mage",
-        "Large_Aberrant_Zombie",
-        "Large_Aberrant_Zombie"
+        "Zombie_Aberrant_Big",
+        "Zombie_Aberrant_Big"
       ],
       [
         "Skeleton_Archmage",
@@ -7475,9 +7535,9 @@
         "Skeleton_Archmage",
         "Skeleton_Archmage",
         "Skeleton_Archmage",
-        "Large_Aberrant_Zombie",
-        "Large_Aberrant_Zombie",
-        "Large_Aberrant_Zombie",
+        "Zombie_Aberrant_Big",
+        "Zombie_Aberrant_Big",
+        "Zombie_Aberrant_Big",
         "Wraith",
         "Wraith"
       ]
@@ -7505,23 +7565,23 @@
     },
     "Waves": [
       [
-        "Skeleton_Horse",
-        "Skeleton_Horse",
-        "Skeleton_Horse",
-        "Undead_Pig",
-        "Undead_Pig",
-        "Undead_Pig",
-        "Undead_Pig",
-        "Undead_Chicken",
-        "Undead_Chicken",
-        "Undead_Chicken",
-        "Undead_Chicken",
-        "Undead_Chicken"
+        "Horse_Skeleton",
+        "Horse_Skeleton",
+        "Horse_Skeleton",
+        "Pig_Undead",
+        "Pig_Undead",
+        "Pig_Undead",
+        "Pig_Undead",
+        "Chicken_Undead",
+        "Chicken_Undead",
+        "Chicken_Undead",
+        "Chicken_Undead",
+        "Chicken_Undead"
       ],
       [
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse",
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored",
         "Skeleton_Knight",
         "Skeleton_Knight",
         "Skeleton_Knight",
@@ -7539,9 +7599,9 @@
       [
         "Shadow_Knight",
         "Shadow_Knight",
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse",
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored",
         "Wraith",
         "Wraith",
         "Wraith"
@@ -7553,10 +7613,10 @@
         "Skeleton_Archmage",
         "Skeleton_Archmage",
         "Skeleton_Archmage",
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse",
-        "Armored_Skeleton_Horse"
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored",
+        "Horse_Skeleton_Armored"
       ]
     ],
     "CompletionRewards": {
@@ -7583,23 +7643,23 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Root_Spirit",
+        "ID": "entity:Spirit_Root",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Spirit",
+        "ID": "entity:Spirit_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Thunder_Spirit",
+        "ID": "entity:Spirit_Thunder",
         "Weight": 2
       },
       {
-        "ID": "entity:Ember_Spirit",
+        "ID": "entity:Spirit_Ember",
         "Weight": 2
       },
       {
-        "ID": "entity:Earthen_Golem",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 1
       },
       {
@@ -7663,43 +7723,43 @@
     "Ticks": 25,
     "BaseDropPool": [
       {
-        "ID": "entity:Earthen_Golem",
+        "ID": "entity:Golem_Crystal_Earth",
         "Weight": 2
       },
       {
-        "ID": "entity:Firesteel_Golem",
+        "ID": "entity:Golem_Firesteel",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Golem",
+        "ID": "entity:Golem_Crystal_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Ember_Golem",
+        "ID": "entity:Golem_Crystal_Flame",
         "Weight": 2
       },
       {
-        "ID": "entity:Sandswept_Golem",
+        "ID": "entity:Golem_Crystal_Sand",
         "Weight": 2
       },
       {
-        "ID": "entity:Thunder_Golem",
+        "ID": "entity:Golem_Crystal_Thunder",
         "Weight": 2
       },
       {
-        "ID": "entity:Frost_Spirit",
+        "ID": "entity:Spirit_Frost",
         "Weight": 2
       },
       {
-        "ID": "entity:Thunder_Spirit",
+        "ID": "entity:Spirit_Thunder",
         "Weight": 2
       },
       {
-        "ID": "entity:Root_Spirit",
+        "ID": "entity:Spirit_Root",
         "Weight": 2
       },
       {
-        "ID": "entity:Ember_Spirit",
+        "ID": "entity:Spirit_Ember",
         "Weight": 2
       },
       {
@@ -7762,80 +7822,80 @@
     },
     "Waves": [
       [
-        "Root_Spirit",
-        "Root_Spirit",
-        "Root_Spirit",
-        "Root_Spirit",
-        "Ember_Spirit",
-        "Ember_Spirit",
-        "Ember_Spirit",
-        "Ember_Spirit"
+        "Spirit_Root",
+        "Spirit_Root",
+        "Spirit_Root",
+        "Spirit_Root",
+        "Spirit_Ember",
+        "Spirit_Ember",
+        "Spirit_Ember",
+        "Spirit_Ember"
       ],
       [
-        "Frost_Spirit",
-        "Frost_Spirit",
-        "Frost_Spirit",
-        "Frost_Spirit",
-        "Thunder_Spirit",
-        "Thunder_Spirit",
-        "Thunder_Spirit",
-        "Thunder_Spirit"
+        "Spirit_Frost",
+        "Spirit_Frost",
+        "Spirit_Frost",
+        "Spirit_Frost",
+        "Spirit_Thunder",
+        "Spirit_Thunder",
+        "Spirit_Thunder",
+        "Spirit_Thunder"
       ],
       [
-        "Earthen_Golem",
-        "Earthen_Golem",
-        "Sandswept_Golem",
-        "Sandswept_Golem",
-        "Root_Spirit",
-        "Root_Spirit",
-        "Root_Spirit"
+        "Golem_Crystal_Earth",
+        "Golem_Crystal_Earth",
+        "Golem_Crystal_Sand",
+        "Golem_Crystal_Sand",
+        "Spirit_Root",
+        "Spirit_Root",
+        "Spirit_Root"
       ],
       [
-        "Ember_Golem",
-        "Ember_Golem",
-        "Firesteel_Golem",
-        "Firesteel_Golem",
-        "Ember_Spirit",
-        "Ember_Spirit",
-        "Ember_Spirit"
+        "Golem_Crystal_Flame",
+        "Golem_Crystal_Flame",
+        "Golem_Firesteel",
+        "Golem_Firesteel",
+        "Spirit_Ember",
+        "Spirit_Ember",
+        "Spirit_Ember"
       ],
       [
-        "Frost_Golem",
-        "Frost_Golem",
-        "Frost_Golem",
-        "Frost_Spirit",
-        "Frost_Spirit",
-        "Frost_Spirit",
-        "Frost_Spirit"
+        "Golem_Crystal_Frost",
+        "Golem_Crystal_Frost",
+        "Golem_Crystal_Frost",
+        "Spirit_Frost",
+        "Spirit_Frost",
+        "Spirit_Frost",
+        "Spirit_Frost"
       ],
       [
-        "Thunder_Golem",
-        "Thunder_Golem",
-        "Thunder_Golem",
-        "Thunder_Spirit",
-        "Thunder_Spirit",
-        "Thunder_Spirit",
-        "Thunder_Spirit"
+        "Golem_Crystal_Thunder",
+        "Golem_Crystal_Thunder",
+        "Golem_Crystal_Thunder",
+        "Spirit_Thunder",
+        "Spirit_Thunder",
+        "Spirit_Thunder",
+        "Spirit_Thunder"
       ],
       [
-        "Firesteel_Golem",
-        "Firesteel_Golem",
-        "Frost_Golem",
-        "Frost_Golem",
-        "Thunder_Golem",
-        "Thunder_Golem",
-        "Ember_Golem",
-        "Ember_Golem"
+        "Golem_Firesteel",
+        "Golem_Firesteel",
+        "Golem_Crystal_Frost",
+        "Golem_Crystal_Frost",
+        "Golem_Crystal_Thunder",
+        "Golem_Crystal_Thunder",
+        "Golem_Crystal_Flame",
+        "Golem_Crystal_Flame"
       ],
       [
-        "Earthen_Golem",
-        "Earthen_Golem",
-        "Sandswept_Golem",
-        "Sandswept_Golem",
-        "Firesteel_Golem",
-        "Firesteel_Golem",
-        "Thunder_Golem",
-        "Thunder_Golem"
+        "Golem_Crystal_Earth",
+        "Golem_Crystal_Earth",
+        "Golem_Crystal_Sand",
+        "Golem_Crystal_Sand",
+        "Golem_Firesteel",
+        "Golem_Firesteel",
+        "Golem_Crystal_Thunder",
+        "Golem_Crystal_Thunder"
       ]
     ],
     "CompletionRewards": {

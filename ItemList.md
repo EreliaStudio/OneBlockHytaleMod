@@ -1,589 +1,2823 @@
-# ORE
-Ore_Adamantite
-Ore_Cobalt
-Ore_Copper
-Ore_Gold
-Ore_Iron
-Ore_Mithril
-Ore_Onyxium
-Ore_Prisma
-Ore_Silver
-Ore_Thorium
-Rock_Gem_Emerald
-Rock_Gem_Ruby
-Rock_Gem_Sapphire
-Rock_Gem_Topaz
-Rock_Gem_Diamond
-Rock_Gem_Zephyr
+# Hytale Items - Grouped by Family
 
-# STONE
-Rock_Basalt
-Rock_Shale
-Rock_Slate
-Rock_Stone
-Rock_Stone_Mossy
-Rock_Sandstone
-Rock_Volcanic
-Rock_Ice
-Rock_Ice_Permafrost
-Rock_Sandstone
-Rock_Stone
+Total items: 2247
 
-# Rubble
-Rubble_Sandstone
-Rubble_Basalt
-Rubble_Quartzite
-Rubble_Sandstone_White
-Rubble_Stone_Mossy
-Rubble_Slate
-Rubble_Aqua
-Rubble_Calcite
-Rubble_Marble
-Rubble_Stone_Medium
-Rubble_Sandstone_Red
-Rubble_Stone
-Rubble_Shale
-Rubble_Volcanic
-Rubble_Lime
-Rubble_Chalk
-Rubble_Dawnstone
-Rubble_Magma_Cooled
+# Blocks
 
-# WOOD (TRUNKS)
-Wood_Oak_Trunk
-Wood_Beech_Trunk
-Wood_Birch_Trunk
-Wood_Maple_Trunk
-Wood_Ash_Trunk
-Wood_Aspen_Trunk
-Wood_Azure_Trunk
-Wood_Bamboo_Trunk
-Wood_Banyan_Trunk
-Wood_Bottletree_Trunk
-Wood_Burnt_Trunk
-Wood_Camphor_Trunk
-Wood_Cedar_Trunk
-Wood_Crystal_Trunk
-Wood_Dry_Trunk
-Wood_Fig_Blue_Trunk
-Wood_Fire_Trunk
-Wood_Fir_Trunk
-Wood_Gumboab_Trunk
-Wood_Ice_Trunk
-Wood_Jungle_Trunk
-Wood_Palm_Trunk
-Wood_Palo_Trunk
-Wood_Petrified_Trunk
-Wood_Poisoned_Trunk
-Wood_Redwood_Trunk
-Wood_Sallow_Trunk
-Wood_Spiral_Trunk
-Wood_Stormbark_Trunk
-Wood_Windwillow_Trunk
-Wood_Wisteria_Wild_Trunk
+## Barrier
 
-# PLANT (GENERAL)
-Plant_Bush
-Plant_Barnacles
-Plant_Bramble_Moss_Twisted
-Plant_Grass_Lush
-Plant_Hay_Bundle
-Plant_Vine
-Plant_Vine_Rug
-Plant_Reeds_Marsh
-Plant_Leaves_Oak
-Plant_Leaves_Autumn_Floor
-Plant_Leaves_Jungle_Floor
-Plant_Leaves_Poisoned_Floor
-Plant_Sapling_Apple
-Plant_Sapling_Oak
-Plant_Seaweed_Grass
-Plant_Seaweed_Grass_Stack
-Plant_Roots_Cave
-Plant_Roots_Cave_Small
-Plant_Roots_Leafy
+- [Barrier](https://hytaleguide.net/items/barrier-block)
 
-# FLOWER
-Plant_Flower_Common_White
-Plant_Lavender_Block
-Plant_Lavender_Stage_0
-Plant_Sunflower_Block
-Plant_Sunflower_Stage_0
-Plant_Petals_White
-Plant_Cactus_Flower
+## Build
 
-# FRUITS
-Plant_Fruit_Apple
-Plant_Fruit_Azure
-Plant_Fruit_Berries_Red
-Plant_Fruit_Coconut
-Plant_Fruit_Mango
-Plant_Fruit_Pinkberry
-Plant_Fruit_Poison
-Plant_Fruit_Spiral
-Plant_Fruit_Windwillow
+- [Build_Black_Cube](https://hytaleguide.net/items/black-build-cube)
+- [Build_Grey_Cube](https://hytaleguide.net/items/grey-build-cube)
+- [Build_GreyDark_Cube](https://hytaleguide.net/items/grey-dark-build-cube)
+- [Build_GreyLight_Cube](https://hytaleguide.net/items/grey-light-build-cube)
+- [Build_Lightsource_Blue](https://hytaleguide.net/items/blue-build-lightsource)
+- [Build_Lightsource_Cyan](https://hytaleguide.net/items/cyan-build-lightsource)
+- [Build_Lightsource_Orange](https://hytaleguide.net/items/orange-build-lightsource)
+- [Build_Lightsource_Pink](https://hytaleguide.net/items/pink-build-lightsource)
+- [Build_Lightsource_Red](https://hytaleguide.net/items/red-build-lightsource)
+- [Build_Lightsource_White](https://hytaleguide.net/items/white-build-lightsource)
+- [Build_Lightsource_Yellow](https://hytaleguide.net/items/yellow-build-lightsource)
+- [Build_Lightsource_YellowLight](https://hytaleguide.net/items/yellow-light-build-lightsource)
+- [Build_White_Cube](https://hytaleguide.net/items/white-build-cube)
 
-# CACTUS
-Plant_Cactus_1
-Plant_Cactus_2
-Plant_Cactus_3
-Plant_Cactus_Ball_1
-Plant_Cactus_Flat_1
-Plant_Cactus_Flat_2
-Plant_Cactus_Flat_3
+## Cloth
 
-# MUSHROOM
-Plant_Crop_Mushroom_Block
-Plant_Crop_Mushroom_Block_Blue
-Plant_Crop_Mushroom_Block_Brown
-Plant_Crop_Mushroom_Block_Green
-Plant_Crop_Mushroom_Block_Purple
-Plant_Crop_Mushroom_Block_Red
-Plant_Crop_Mushroom_Block_White
-Plant_Crop_Mushroom_Block_Yellow
-Plant_Crop_Mushroom_Common_Blue
-Plant_Crop_Mushroom_Common_Brown
-Plant_Crop_Mushroom_Common_Lime
-Plant_Crop_Mushroom_Cap_Brown
-Plant_Crop_Mushroom_Cap_Green
-Plant_Crop_Mushroom_Cap_Poison
-Plant_Crop_Mushroom_Cap_Red
-Plant_Crop_Mushroom_Cap_White
-Plant_Crop_Mushroom_Flatcap_Blue
-Plant_Crop_Mushroom_Flatcap_Green
-Plant_Crop_Mushroom_Glowing_Blue
-Plant_Crop_Mushroom_Glowing_Green
-Plant_Crop_Mushroom_Glowing_Orange
-Plant_Crop_Mushroom_Glowing_Purple
-Plant_Crop_Mushroom_Glowing_Red
-Plant_Crop_Mushroom_Glowing_Violet
-Plant_Crop_Mushroom_Shelve_Brown
+- [Cloth_Block_Wool_Black](https://hytaleguide.net/items/black-cloth)
+- [Cloth_Block_Wool_Blue](https://hytaleguide.net/items/blue-cloth)
+- [Cloth_Block_Wool_Blue_Light](https://hytaleguide.net/items/light-blue-cloth)
+- [Cloth_Block_Wool_Cyan](https://hytaleguide.net/items/cyan-cloth)
+- [Cloth_Block_Wool_Cyan_Light](https://hytaleguide.net/items/light-cyan-cloth)
+- [Cloth_Block_Wool_Gray](https://hytaleguide.net/items/gray-cloth)
+- [Cloth_Block_Wool_Gray_Light](https://hytaleguide.net/items/light-gray-cloth)
+- [Cloth_Block_Wool_Green](https://hytaleguide.net/items/green-cloth)
+- [Cloth_Block_Wool_Green_Light](https://hytaleguide.net/items/light-green-cloth)
+- [Cloth_Block_Wool_Orange](https://hytaleguide.net/items/orange-cloth)
+- [Cloth_Block_Wool_Orange_Light](https://hytaleguide.net/items/light-orange-cloth)
+- [Cloth_Block_Wool_Pink](https://hytaleguide.net/items/pink-cloth)
+- [Cloth_Block_Wool_Pink_Light](https://hytaleguide.net/items/light-pink-cloth)
+- [Cloth_Block_Wool_Purple](https://hytaleguide.net/items/purple-cloth)
+- [Cloth_Block_Wool_Purple_Light](https://hytaleguide.net/items/light-purple-cloth)
+- [Cloth_Block_Wool_Red](https://hytaleguide.net/items/red-cloth)
+- [Cloth_Block_Wool_Red_Light](https://hytaleguide.net/items/light-red-cloth)
+- [Cloth_Block_Wool_White](https://hytaleguide.net/items/white-cloth)
+- [Cloth_Block_Wool_Yellow](https://hytaleguide.net/items/yellow-cloth)
+- [Cloth_Block_Wool_Yellow_Light](https://hytaleguide.net/items/light-yellow-cloth)
+- [Cloth_Modern_Blue_Roof](https://hytaleguide.net/items/modern-blue-cloth-roof-sloped)
+- [Cloth_Modern_DarkGreen_Roof](https://hytaleguide.net/items/modern-dark-green-cloth-roof-sloped)
+- [Cloth_Modern_Orange_Roof](https://hytaleguide.net/items/modern-orange-cloth-roof-sloped)
+- [Cloth_Modern_Red_Roof](https://hytaleguide.net/items/modern-red-cloth-roof-sloped)
+- [Cloth_Modern_Yellow_Roof](https://hytaleguide.net/items/modern-yellow-cloth-roof-sloped)
+- [Cloth_Roof_Blue](https://hytaleguide.net/items/blue-cloth-roof-sloped)
+- [Cloth_Roof_Green](https://hytaleguide.net/items/green-cloth-roof-sloped)
+- [Cloth_Roof_Hide](https://hytaleguide.net/items/hide-tent-roof-sloped)
+- [Cloth_Roof_Leather](https://hytaleguide.net/items/leather-tent-roof-sloped)
+- [Cloth_Roof_Orange](https://hytaleguide.net/items/orange-cloth-roof-sloped)
+- [Cloth_Roof_Red](https://hytaleguide.net/items/red-cloth-roof-sloped)
+- [Cloth_Roof_White](https://hytaleguide.net/items/white-cloth-roof-sloped)
+- [Cloth_Roof_Yellow](https://hytaleguide.net/items/yellow-cloth-roof-sloped)
 
-# CROPS
-Plant_Crop_Wheat_Item
-Plant_Crop_Cabbage_Item
-Plant_Crop_Carrot_Item
-Plant_Crop_Corn_Item
-Plant_Crop_Cauliflower_Item
-Plant_Crop_Turnip_Item
-Plant_Crop_Aubergine_Item
-Plant_Crop_Lettuce_Item
-Plant_Crop_Pumpkin_Item
-Plant_Crop_Tomato_Item
-Plant_Crop_Chilli_Item
-Plant_Crop_Cotton_Item
-Plant_Crop_Rice_Item
-Plant_Crop_Onion_Item
-Plant_Crop_Potato_Item
+## Rail
 
-# SEEDS
-Plant_Seeds_Aubergine_Eternal
-Plant_Seeds_Carrot_Eternal
-Plant_Seeds_Cauliflower_Eternal
-Plant_Seeds_Chilli_Eternal
-Plant_Seeds_Corn_Eternal
-Plant_Seeds_Cotton_Eternal
-Plant_Seeds_Lettuce_Eternal
-Plant_Seeds_Onion_Eternal
-Plant_Seeds_Potato_Eternal
-Plant_Seeds_Pumpkin_Eternal
-Plant_Seeds_Rice_Eternal
-Plant_Seeds_Tomato_Eternal
-Plant_Seeds_Turnip_Eternal
-Plant_Seeds_Wheat_Eternal
-Plant_Seeds_Health1
-Plant_Seeds_Health2
-Plant_Seeds_Health3
-Plant_Seeds_Mana1
-Plant_Seeds_Mana2
-Plant_Seeds_Mana3
-Plant_Seeds_Stamina1
-Plant_Seeds_Stamina2
-Plant_Seeds_Stamina3
-Plant_Seeds_Mushroom
-Plant_Seeds_Wild
+- [Rail](https://hytaleguide.net/items/rail)
+- [Rail_Kart](https://hytaleguide.net/items/rail-cart)
 
-# INGREDIENT (CREATURE / ORGANIC)
-Ingredient_Bone_Fragment
-Ingredient_Chitin_Sturdy
-Ingredient_Sac_Venom
-Ingredient_Sinue_Cindersinue
-Ingredient_Feathers_Blue
-Ingredient_Feathers_Dark
-Ingredient_Feathers_Light
-Ingredient_Feathers_Red
-Ingredient_Hide_Dark
-Ingredient_Hide_Heavy
-Ingredient_Hide_Light
-Ingredient_Hide_Medium
-Ingredient_Hide_Prismic
-Ingredient_Hide_Scaled
-Ingredient_Hide_Soft
-Ingredient_Hide_Storm
-Ingredient_Leather_Dark
-Ingredient_Leather_Heavy
-Ingredient_Leather_Light
-Ingredient_Leather_Medium
-Ingredient_Leather_Prismic
-Ingredient_Leather_Scaled
-Ingredient_Leather_Soft
-Ingredient_Leather_Storm
+## Rock
 
-# INGREDIENT (ESSENCE / ARCANE)
-Ingredient_Fire_Essence
-Ingredient_Ice_Essence
-Ingredient_Life_Essence
-Ingredient_Lightning_Essence
-Ingredient_Void_Essence
-Ingredient_Voidheart
-Ingredient_Water_Essence
-Ingredient_Motes_Light
+- [Rock_Aqua](https://hytaleguide.net/items/aqua-stone)
+- [Rock_Aqua_Brick](https://hytaleguide.net/items/aqua-brick)
+- [Rock_Aqua_Cobble](https://hytaleguide.net/items/aqua-cobble)
+- [Rock_Basalt](https://hytaleguide.net/items/basalt)
+- [Rock_Basalt_Brick](https://hytaleguide.net/items/basalt-brick)
+- [Rock_Basalt_Cobble](https://hytaleguide.net/items/basalt-cobble)
+- [Rock_Bedrock](https://hytaleguide.net/items/bedrock)
+- [Rock_Calcite](https://hytaleguide.net/items/calcite)
+- [Rock_Calcite_Brick](https://hytaleguide.net/items/calcite-brick)
+- [Rock_Calcite_Cobble](https://hytaleguide.net/items/calcite-cobble)
+- [Rock_Chalk](https://hytaleguide.net/items/chalk)
+- [Rock_Chalk_Brick](https://hytaleguide.net/items/chalk-brick)
+- [Rock_Chalk_Cobble](https://hytaleguide.net/items/chalk-cobble)
+- [Rock_Dawnstone](https://hytaleguide.net/items/dawnstone)
+- [Rock_Dawnstone_Cobble](https://hytaleguide.net/items/dawnstone-cobble)
+- [Rock_Gold_Brick](https://hytaleguide.net/items/gold-brick)
+- [Rock_Ice](https://hytaleguide.net/items/ice)
+- [Rock_Ice_Icicles](https://hytaleguide.net/items/icicles)
+- [Rock_Ice_Permafrost](https://hytaleguide.net/items/blue-ice)
+- [Rock_Iridescent_Brick_Beam](https://hytaleguide.net/items/iridescent-brick-beam)
+- [Rock_Iridescent_Brick_Fence](https://hytaleguide.net/items/iridescent-brick-fence)
+- [Rock_Iridescent_Brick_Pillar_Base](https://hytaleguide.net/items/iridescent-brick-pillar-base)
+- [Rock_Iridescent_Brick_Pillar_Middle](https://hytaleguide.net/items/iridescent-brick-pillar-middle)
+- [Rock_Iridescent_Half](https://hytaleguide.net/items/iridescent-rock-half-slab)
+- [Rock_Iridescent_Processed_Brick_Half](https://hytaleguide.net/items/iridescent-processed-brick-half-slab)
+- [Rock_Iridescent_Processed_Brick_Smooth](https://hytaleguide.net/items/iridescent-processed-brick-smooth)
+- [Rock_Iridescent_Processed_Brick_Stairs](https://hytaleguide.net/items/iridescent-processed-brick-stairs)
+- [Rock_Iridescent_Processed_Decorative](https://hytaleguide.net/items/iridescent-processed-decorative)
+- [Rock_Iridescent_Processed_Ornate](https://hytaleguide.net/items/iridescent-processed-ornate)
+- [Rock_Iridescent_Processed_Ornate_Horizontal](https://hytaleguide.net/items/iridescent-processed-ornate-horizontal)
+- [Rock_Iridescent_Stairs](https://hytaleguide.net/items/iridescent-rock-stairs)
+- [Rock_Ledge_Brick](https://hytaleguide.net/items/ledgestone-brick)
+- [Rock_Ledge_Cobble](https://hytaleguide.net/items/ledgestone-cobble)
+- [Rock_Lime](https://hytaleguide.net/items/limestone)
+- [Rock_Lime_Brick](https://hytaleguide.net/items/limestone-brick)
+- [Rock_Lime_Cobble](https://hytaleguide.net/items/limestone-cobble)
+- [Rock_Magma_Cooled](https://hytaleguide.net/items/cooled-magma)
+- [Rock_Magma_Cooled_Brick](https://hytaleguide.net/items/cooled-magma-brick)
+- [Rock_Magma_Cooled_Cobble](https://hytaleguide.net/items/cooled-magma-cobble)
+- [Rock_Marble](https://hytaleguide.net/items/marble)
+- [Rock_Marble_Brick](https://hytaleguide.net/items/marble-brick)
+- [Rock_Marble_Cobble](https://hytaleguide.net/items/marble-cobble)
+- [Rock_Peach_Brick](https://hytaleguide.net/items/peachstone-brick)
+- [Rock_Peach_Cobble](https://hytaleguide.net/items/peachstone-cobble)
+- [Rock_Quartzite](https://hytaleguide.net/items/quartzite)
+- [Rock_Quartzite_Brick](https://hytaleguide.net/items/quartzite-brick)
+- [Rock_Quartzite_Cobble](https://hytaleguide.net/items/quartzite-cobble)
+- [Rock_Runic_Blue_Brick](https://hytaleguide.net/items/blue-runic-brick)
+- [Rock_Runic_Brick](https://hytaleguide.net/items/runic-brick)
+- [Rock_Runic_Cobble](https://hytaleguide.net/items/runic-cobble)
+- [Rock_Runic_Dark_Brick](https://hytaleguide.net/items/dark-runic-brick)
+- [Rock_Runic_Teal_Brick](https://hytaleguide.net/items/dark-blue-runic-brick)
+- [Rock_Salt](https://hytaleguide.net/items/salt-block)
+- [Rock_Sandstone](https://hytaleguide.net/items/sandstone)
+- [Rock_Sandstone_Brick](https://hytaleguide.net/items/sandstone-brick)
+- [Rock_Sandstone_Cobble](https://hytaleguide.net/items/sandstone-cobble)
+- [Rock_Sandstone_Red](https://hytaleguide.net/items/red-sandstone)
+- [Rock_Sandstone_Red_Brick](https://hytaleguide.net/items/red-sandstone-brick)
+- [Rock_Sandstone_Red_Cobble](https://hytaleguide.net/items/red-sandstone-cobble)
+- [Rock_Sandstone_White](https://hytaleguide.net/items/white-sandstone)
+- [Rock_Sandstone_White_Brick](https://hytaleguide.net/items/white-sandstone-brick)
+- [Rock_Sandstone_White_Cobble](https://hytaleguide.net/items/white-sandstone-cobble)
+- [Rock_Shale](https://hytaleguide.net/items/shale)
+- [Rock_Shale_Brick](https://hytaleguide.net/items/shale-brick)
+- [Rock_Shale_Cobble](https://hytaleguide.net/items/shale-cobble)
+- [Rock_Slate](https://hytaleguide.net/items/slate)
+- [Rock_Slate_Brick](https://hytaleguide.net/items/slate-brick)
+- [Rock_Slate_Cobble](https://hytaleguide.net/items/slate-cobble)
+- [Rock_Slate_Cracked](https://hytaleguide.net/items/cracked-slate)
+- [Rock_Stone](https://hytaleguide.net/items/stone)
+- [Rock_Volcanic](https://hytaleguide.net/items/volcanic-rock)
+- [Rock_Volcanic_Brick](https://hytaleguide.net/items/volcanic-brick)
+- [Rock_Volcanic_Cobble](https://hytaleguide.net/items/volcanic-cobble)
+- [Rock_Volcanic_Cracked_Incandescent](https://hytaleguide.net/items/incandescent-volcanic-rock)
+- [Rock_Volcanic_Cracked_Lava](https://hytaleguide.net/items/cracked-volcanic-rock)
+- [Rock_Volcanic_Cracked_Lava_Incandescent](https://hytaleguide.net/items/incandescent-cracked-volcanic-rock)
+- [Rock_Volcanic_Cracked_Poisoned](https://hytaleguide.net/items/poisoned-volcanic-rock)
 
-# INGREDIENT (CRAFTING / MATERIAL)
-Ingredient_Fibre
-Ingredient_Stick
-Ingredient_Tree_Bark
-Ingredient_Tree_Sap
-Ingredient_Powder_Boom
-Ingredient_Stud_Iron
-Ingredient_Strap_Leather
-Ingredient_Charcoal
+## Rubble
 
-# INGREDIENT (TEXTILE)
-Ingredient_Bolt_Cindercloth
-Ingredient_Bolt_Cotton
-Ingredient_Bolt_Linen
-Ingredient_Bolt_Prismaloom
-Ingredient_Bolt_Shadoweave
-Ingredient_Bolt_Silk
-Ingredient_Bolt_Stormsilk
-Ingredient_Bolt_Wool
-Ingredient_Fabric_Scrap_Cindercloth
-Ingredient_Fabric_Scrap_Cotton
-Ingredient_Fabric_Scrap_Linen
-Ingredient_Fabric_Scrap_Prismaloom
-Ingredient_Fabric_Scrap_Shadoweave
-Ingredient_Fabric_Scrap_Silk
-Ingredient_Fabric_Scrap_Stormsilk
-Ingredient_Fabric_Scrap_Wool
+- [Rubble_Aqua](https://hytaleguide.net/items/aqua-rubble)
+- [Rubble_Basalt](https://hytaleguide.net/items/basalt-rubble)
+- [Rubble_Calcite](https://hytaleguide.net/items/calcite-rubble)
+- [Rubble_Chalk](https://hytaleguide.net/items/chalk-rubble)
+- [Rubble_Dawnstone](https://hytaleguide.net/items/dawnstone-rubble)
+- [Rubble_Ice](https://hytaleguide.net/items/ice-chunks)
+- [Rubble_Lime](https://hytaleguide.net/items/limestone-rubble)
+- [Rubble_Magma_Cooled](https://hytaleguide.net/items/cooled-magma-rubble)
+- [Rubble_Marble](https://hytaleguide.net/items/marble-rubble)
+- [Rubble_Quartzite](https://hytaleguide.net/items/quartzite-rubble)
+- [Rubble_Sandstone](https://hytaleguide.net/items/sandstone-rubble)
+- [Rubble_Sandstone_Red](https://hytaleguide.net/items/red-sandstone-rubble)
+- [Rubble_Sandstone_White](https://hytaleguide.net/items/white-sandstone-rubble)
+- [Rubble_Shale](https://hytaleguide.net/items/shale-rubble)
+- [Rubble_Slate](https://hytaleguide.net/items/slate-rubble)
+- [Rubble_Stone](https://hytaleguide.net/items/stone-rubble)
+- [Rubble_Stone_Mossy](https://hytaleguide.net/items/mossy-stone-rubble)
+- [Rubble_Volcanic](https://hytaleguide.net/items/volcanic-rubble)
 
-# METAL_BAR
-Ingredient_Bar_Adamantite
-Ingredient_Bar_Bronze
-Ingredient_Bar_Cobalt
-Ingredient_Bar_Copper
-Ingredient_Bar_Gold
-Ingredient_Bar_Iron
-Ingredient_Bar_Mithril
-Ingredient_Bar_Onyxium
-Ingredient_Bar_Prisma
-Ingredient_Bar_Silver
-Ingredient_Bar_Thorium
+## Soil
 
-# CRYSTAL SHARDS
+- [Soil_Ash](https://hytaleguide.net/items/ashen-soil)
+- [Soil_Clay](https://hytaleguide.net/items/clay)
+- [Soil_Dirt](https://hytaleguide.net/items/dirt)
+- [Soil_Grass](https://hytaleguide.net/items/soil-grass)
+- [Soil_Gravel](https://hytaleguide.net/items/gravel)
+- [Soil_Hive](https://hytaleguide.net/items/hive-soil)
+- [Soil_Hive_Brick](https://hytaleguide.net/items/hive-brick)
+- [Soil_Hive_Corrupted_Brick](https://hytaleguide.net/items/corrupted-hive-brick)
+- [Soil_Leaves](https://hytaleguide.net/items/leafy-soil)
+- [Soil_Mud](https://hytaleguide.net/items/mud)
+- [Soil_Needles](https://hytaleguide.net/items/needled-soil)
+- [Soil_Pathway](https://hytaleguide.net/items/soil-pathway)
+- [Soil_Pebbles](https://hytaleguide.net/items/pebbles)
+- [Soil_Sand](https://hytaleguide.net/items/sand)
+- [Soil_Snow](https://hytaleguide.net/items/snow)
+- [Soil_Snow_Brick](https://hytaleguide.net/items/snow-brick)
 
-Ingredient_Crystal_Blue 
-Ingredient_Crystal_Cyan
-Ingredient_Crystal_Green 
-Ingredient_Crystal_Purple 
-Ingredient_Crystal_Red
-Ingredient_Crystal_White
-Ingredient_Crystal_Yellow
+## Wood
 
-# FARMING SEED RECIPES
+- [Wood_Amber_Trunk](https://hytaleguide.net/items/amber-log)
+- [Wood_Apple_Trunk](https://hytaleguide.net/items/apple-log)
+- [Wood_Ash_Trunk](https://hytaleguide.net/items/ash-log)
+- [Wood_Aspen_Trunk](https://hytaleguide.net/items/aspen-log)
+- [Wood_Azure_Trunk](https://hytaleguide.net/items/azure-log)
+- [Wood_Bamboo_Trunk](https://hytaleguide.net/items/wood-bamboo-trunk)
+- [Wood_Banyan_Trunk](https://hytaleguide.net/items/banyan-log)
+- [Wood_Beech_Trunk](https://hytaleguide.net/items/beech-log)
+- [Wood_Birch_Trunk](https://hytaleguide.net/items/birch-log)
+- [Wood_Blackwood_Planks](https://hytaleguide.net/items/blackwood-planks)
+- [Wood_Bottletree_Trunk](https://hytaleguide.net/items/bottletree-log)
+- [Wood_Burnt_Trunk](https://hytaleguide.net/items/burnt-log)
+- [Wood_Camphor_Trunk](https://hytaleguide.net/items/camphor-log)
+- [Wood_Cedar_Trunk](https://hytaleguide.net/items/cedar-log)
+- [Wood_Crystal_Trunk](https://hytaleguide.net/items/crystalwood-log)
+- [Wood_Darkwood_Planks](https://hytaleguide.net/items/darkwood-planks)
+- [Wood_Deadwood_Planks](https://hytaleguide.net/items/deadwood-planks)
+- [Wood_Dry_Trunk](https://hytaleguide.net/items/dry-log)
+- [Wood_Drywood_Planks](https://hytaleguide.net/items/drywood-planks)
+- [Wood_Fig_Blue_Trunk](https://hytaleguide.net/items/blue-fig-log)
+- [Wood_Fir_Trunk](https://hytaleguide.net/items/fir-log)
+- [Wood_Fire_Trunk](https://hytaleguide.net/items/fire-log)
+- [Wood_Goldenwood_Planks](https://hytaleguide.net/items/goldenwood-planks)
+- [Wood_Greenwood_Planks](https://hytaleguide.net/items/greenwood-planks)
+- [Wood_Gumboab_Trunk](https://hytaleguide.net/items/gumboab-log)
+- [Wood_Hardwood_Planks](https://hytaleguide.net/items/hardwood-planks)
+- [Wood_Ice_Trunk](https://hytaleguide.net/items/ice-log)
+- [Wood_Jungle_Trunk](https://hytaleguide.net/items/jungle-log)
+- [Wood_Lightwood_Planks](https://hytaleguide.net/items/lightwood-planks)
+- [Wood_Maple_Trunk](https://hytaleguide.net/items/maple-log)
+- [Wood_Oak_Trunk](https://hytaleguide.net/items/oak-log)
+- [Wood_Palm_Trunk](https://hytaleguide.net/items/palm-tree-log)
+- [Wood_Palo_Trunk](https://hytaleguide.net/items/palo-log)
+- [Wood_Petrified_Trunk](https://hytaleguide.net/items/petrified-log)
+- [Wood_Poisoned_Trunk](https://hytaleguide.net/items/poisoned-log)
+- [Wood_Redwood_Trunk](https://hytaleguide.net/items/redwood-log)
+- [Wood_Sallow_Trunk](https://hytaleguide.net/items/sallow-log)
+- [Wood_Softwood_Planks](https://hytaleguide.net/items/softwood-planks)
+- [Wood_Spiral_Trunk](https://hytaleguide.net/items/spiral-log)
+- [Wood_Sticks](https://hytaleguide.net/items/pile-of-sticks)
+- [Wood_Stormbark_Trunk](https://hytaleguide.net/items/stormbark-log)
+- [Wood_Stripped_Deco](https://hytaleguide.net/items/stripped-log)
+- [Wood_Torch_Wall](https://hytaleguide.net/items/wooden-torch)
+- [Wood_Tropicalwood_Planks](https://hytaleguide.net/items/tropical-wood-planks)
+- [Wood_Village_Wall_Black_Full](https://hytaleguide.net/items/wooden-wall-full-black)
+- [Wood_Village_Wall_Blue_Full](https://hytaleguide.net/items/wood-village-wall-blue-full)
+- [Wood_Village_Wall_Cyan_Full](https://hytaleguide.net/items/wood-village-wall-cyan-full)
+- [Wood_Village_Wall_Full](https://hytaleguide.net/items/wood-village-wall-full)
+- [Wood_Village_Wall_Green_Full](https://hytaleguide.net/items/wood-village-wall-green-full)
+- [Wood_Village_Wall_Grey_Full](https://hytaleguide.net/items/wood-village-wall-grey-full)
+- [Wood_Village_Wall_GreyDark_Full](https://hytaleguide.net/items/wooden-wall-full-dark-grey)
+- [Wood_Village_Wall_Lime_Full](https://hytaleguide.net/items/wood-village-wall-lime-full)
+- [Wood_Village_Wall_Ocean_Full](https://hytaleguide.net/items/wooden-wall-full-ocean)
+- [Wood_Village_Wall_Orange_Full](https://hytaleguide.net/items/wooden-wall-full-orange)
+- [Wood_Village_Wall_Pink_Full](https://hytaleguide.net/items/wooden-wall-full-pink)
+- [Wood_Village_Wall_Purple_Full](https://hytaleguide.net/items/wooden-wall-full-purple)
+- [Wood_Village_Wall_Red_Full](https://hytaleguide.net/items/wooden-wall-crossed-trestle)
+- [Wood_Village_Wall_RedDark_Full](https://hytaleguide.net/items/wooden-wall-full-dark-red)
+- [Wood_Village_Wall_White_Full](https://hytaleguide.net/items/wood-village-wall-white-full)
+- [Wood_Village_Wall_Yellow_Full](https://hytaleguide.net/items/wood-village-wall-yellow-full)
+- [Wood_Windwillow_Trunk](https://hytaleguide.net/items/windwillow-log)
+- [Wood_Wisteria_Wild_Trunk](https://hytaleguide.net/items/wild-wisteria-log)
 
-Recipe_Plant_Seeds_Health1   — Blood Rose Seed
-Recipe_Plant_Seeds_Health2   — Bloodcap Mushroom Seed
-Recipe_Plant_Seeds_Health3   — Blood Leaf Seed
+# Consumables
 
-Recipe_Plant_Seeds_Mana1     — Azure Fern Seed
-Recipe_Plant_Seeds_Mana2     — Azurecap Mushroom Seed
-Recipe_Plant_Seeds_Mana3     — Azure Kelp Seed
+## Bandage
 
-Recipe_Plant_Seeds_Stamina1  — Storm Thistle Seed
-Recipe_Plant_Seeds_Stamina2  — Stormcap Mushroom Seed
-Recipe_Plant_Seeds_Stamina3  — Storm Sapling Seed
+- [Bandage_Crude](https://hytaleguide.net/items/bandage)
+- [Bandage_Potion_Test](https://hytaleguide.net/items/bandage-potion-test)
 
-# Animals (Passive / Neutral Wildlife)
-Antelope
-Archaeopteryx
-Armadillo
-Bat
-Bluebird
-Bluegill
-Boar
-Boar_Piglet
-Bison
-Bison_Calf
-Cat
-Camel
-Camel_Calf
-Chicken
-Crab
-Crow
-Crocodile
-Deer
-Duck
-Fox
-Frog
-Pigeon
-Rabbit
-Rat
-Sheep
-Wolf
+## Food
 
-# Monsters & Hostile Creatures
-Cactee
-Cave_Rex
-Cave_Raptor
-Crawler
-Earth_Elemental
-Emberwulf
-Fen_Stalker
-Goblin_Duke
-Goblin_Duke_Phase2
-Goblin_Duke_Phase3_Fast
-Goblin_Duke_Phase3_Slow
-Goblin_Scavenger
-Goblin_Scavenger_Battleaxe
-Goblin_Scavenger_Sword
-Goblin_Scrapper
-Goblin_Scrapper_Patrol
-Goblin_Lobber
-Goblin_Lobber_Patrol
-Goblin_Miner
-Goblin_Miner_Patrol
-Goblin_Thief
-Goblin_Thief_Patrol
-Goblin_Ogre
-Ice_Dragon
-Outlander_Initiate
-Outlander_Hunter
-Outlander_Berserker
-Outlander_Marauder
-Outlander_Priest
-Outlander_Brute
-Pale_Danger
-Sand_Empress
-Skeleton_Scout
-Skeleton_Soldier
-Skeleton_Archer
-Skeleton_Knight
-Skeleton_Ranger
-Skeleton_Fighter
-Skeleton_Mage
-Skeleton_Archmage
-Burnt_Skeleton_Archer
-Burnt_Skeleton_Gunner
-Burnt_Skeleton_Knight
-Burnt_Skeleton_Lancer
-Burnt_Skeleton_Praetorian
-Burnt_Skeleton_Soldier
-Burnt_Skeleton_Wizard
-Burnt_Skeleton_Alchemist
-Frost_Skeleton_Scout
-Frost_Skeleton_Ranger
-Frost_Skeleton_Fighter
-Frost_Skeleton_Knight
-Frost_Skeleton_Mage
-Frost_Skeleton_Archmage
-Frost_Skeleton_Soldier
-Incandescent_Skeleton_Fighter
-Incandescent_Skeleton_Footman
-Incandescent_Skeleton_Head
-Incandescent_Skeleton_Mage
-Fen_Stalker
-Spider
-Trork_Hunter
-Void_Crawler
-Zombie
-Frost_Zombie
-Sandswept_Zombie
-Zombie_Burnt
-Aberrant_Zombie
-Large_Aberrant_Zombie
-Earth_Elemental
-Earthen_Golem
-Ember_Golem
-Firesteel_Golem
-Frost_Golem
-Thunder_Golem
-Emberwulf
-Void_Crawler
-Void_Spawn
-Void_Eye
-Void_Larva
-Void_Spectre
-Cave_Spider
-Spider
-Scarak_Broodmother
-Scarak_Defender
-Scarak_Fighter
-Scarak_Louse
-Scarak_Seeker
+- [Food_Beef_Raw](https://hytaleguide.net/items/raw-beef)
+- [Food_Bread](https://hytaleguide.net/items/bread)
+- [Food_Candy_Cane](https://hytaleguide.net/items/candy-cane)
+- [Food_Cheese](https://hytaleguide.net/items/cheese)
+- [Food_Chicken_Raw](https://hytaleguide.net/items/raw-chicken)
+- [Food_Egg](https://hytaleguide.net/items/egg)
+- [Food_Fish_Grilled](https://hytaleguide.net/items/grilled-fish)
+- [Food_Fish_Raw](https://hytaleguide.net/items/raw-fish)
+- [Food_Kebab_Fruit](https://hytaleguide.net/items/fruit-skewer)
+- [Food_Kebab_Meat](https://hytaleguide.net/items/meat-skewer)
+- [Food_Kebab_Mushroom](https://hytaleguide.net/items/mushroom-skewer)
+- [Food_Kebab_Vegetable](https://hytaleguide.net/items/vegetable-skewer)
+- [Food_Pie_Apple](https://hytaleguide.net/items/apple-pie)
+- [Food_Pie_Meat](https://hytaleguide.net/items/meat-pie)
+- [Food_Pie_Pumpkin](https://hytaleguide.net/items/pumpkin-pie)
+- [Food_Popcorn](https://hytaleguide.net/items/popcorn)
+- [Food_Pork_Raw](https://hytaleguide.net/items/raw-pork)
+- [Food_Salad_Berry](https://hytaleguide.net/items/wild-berry-salad)
+- [Food_Salad_Caesar](https://hytaleguide.net/items/caesar-salad)
+- [Food_Salad_Mushroom](https://hytaleguide.net/items/mushroom-salad)
+- [Food_Vegetable_Cooked](https://hytaleguide.net/items/roast-vegetable)
+- [Food_Wildmeat_Cooked](https://hytaleguide.net/items/cooked-wildmeat)
+- [Food_Wildmeat_Raw](https://hytaleguide.net/items/raw-wildmeat)
 
-# DESERT BIOME (Howling Sands – Zone 2)
-# BLOCKS
-Block_Sand
-Block_Sand_White
-Block_Sand_Red
-Block_Sandstone_Smooth
-Block_Sandstone_Rough
-Block_Sandstone_Red
-Block_Clay
-Block_Clay_Red
-Block_Desert_Hardened_Earth
-Block_Desert_Dried_Mud
+## Potion
 
-# PLANTS
-Plant_Desert_Red_Featherleaf
-Plant_Desert_Yellow_Arid_Flower
-Plant_Desert_Blue_Aloe
-Plant_Desert_Dry_Shrub
-Plant_Desert_Saltbush
+- [Potion_Antidote](https://hytaleguide.net/items/antidote)
+- [Potion_Empty](https://hytaleguide.net/items/empty-potion-bottle)
+- [Potion_Empty_Large](https://hytaleguide.net/items/large-potion-bottle)
+- [Potion_Empty_Small](https://hytaleguide.net/items/small-potion-bottle)
+- [Potion_Health](https://hytaleguide.net/items/potion-health)
+- [Potion_Health_Greater](https://hytaleguide.net/items/tmp-greater-health-potion)
+- [Potion_Health_Large](https://hytaleguide.net/items/large-potion-of-health)
+- [Potion_Health_Lesser](https://hytaleguide.net/items/tmp-lesser-health-potion)
+- [Potion_Health_Small](https://hytaleguide.net/items/small-potion-of-health)
+- [Potion_Mana](https://hytaleguide.net/items/potion-of-mana)
+- [Potion_Mana_Large](https://hytaleguide.net/items/large-potion-of-mana)
+- [Potion_Mana_Small](https://hytaleguide.net/items/small-potion-of-mana)
+- [Potion_Morph_Dog](https://hytaleguide.net/items/potion-of-dog-morphing)
+- [Potion_Morph_Frog](https://hytaleguide.net/items/potion-of-frog-morphing)
+- [Potion_Morph_Mouse](https://hytaleguide.net/items/potion-of-mouse-morphing)
+- [Potion_Morph_Pigeon](https://hytaleguide.net/items/potion-of-pigeon-morphing)
+- [Potion_Poison](https://hytaleguide.net/items/potion-of-poison)
+- [Potion_Poison_Large](https://hytaleguide.net/items/large-potion-of-poison)
+- [Potion_Poison_Minor](https://hytaleguide.net/items/small-potion-of-poison)
+- [Potion_Purify](https://hytaleguide.net/items/potion-of-purification)
+- [Potion_Regen_Health](https://hytaleguide.net/items/potion-of-health-regeneration)
+- [Potion_Regen_Health_Large](https://hytaleguide.net/items/large-potion-of-health-regeneration)
+- [Potion_Regen_Health_Small](https://hytaleguide.net/items/small-potion-of-health-regeneration)
+- [Potion_Regen_Mana](https://hytaleguide.net/items/potion-of-mana-regeneration)
+- [Potion_Regen_Mana_Large](https://hytaleguide.net/items/large-potion-of-mana-regeneration)
+- [Potion_Regen_Mana_Small](https://hytaleguide.net/items/small-potion-of-mana-regeneration)
+- [Potion_Regen_Stamina](https://hytaleguide.net/items/potion-of-stamina-regeneration)
+- [Potion_Regen_Stamina_Large](https://hytaleguide.net/items/large-potion-of-stamina-regeneration)
+- [Potion_Regen_Stamina_Small](https://hytaleguide.net/items/small-potion-of-stamina-regeneration)
+- [Potion_Signature](https://hytaleguide.net/items/energy-potion)
+- [Potion_Signature_Greater](https://hytaleguide.net/items/tmp-greater-energy-potion)
+- [Potion_Signature_Large](https://hytaleguide.net/items/large-energy-potion)
+- [Potion_Signature_Lesser](https://hytaleguide.net/items/tmp-lesser-energy-potion)
+- [Potion_Signature_Small](https://hytaleguide.net/items/small-energy-potion)
+- [Potion_Stamina](https://hytaleguide.net/items/potion-of-stamina)
+- [Potion_Stamina_Greater](https://hytaleguide.net/items/tmp-greater-stamina-potion)
+- [Potion_Stamina_Large](https://hytaleguide.net/items/large-potion-of-stamina)
+- [Potion_Stamina_Lesser](https://hytaleguide.net/items/tmp-lesser-stamina-potion)
+- [Potion_Stamina_Small](https://hytaleguide.net/items/small-potion-of-stamina)
+- [Potion_Template](https://hytaleguide.net/items/potion-of-health)
 
-# CREATURE DROPS
-Ingredient_Shell_Scorpion
-Ingredient_Claw_Scorpion
-Ingredient_Fang_SaberTooth
-Ingredient_Feather_Vulture
-Ingredient_Hide_Camel
-Ingredient_Hide_Scarak
+# Crafting
 
-# SPECIAL RESOURCES
-Ore_Thorium_Desert
-Rock_Desert_Cracked
-Rock_Desert_Fossil
+## Alchemy
 
+- [Alchemy_Cauldron](https://hytaleguide.net/items/cauldron)
+- [Alchemy_Cauldron_Big](https://hytaleguide.net/items/large-cauldron)
 
-# ICE BIOME (Whisperfrost Frontiers – Zone 3)
+## Bench
 
-# BLOCKS
-Block_Snow
-Block_Snow_Packed
-Block_Ice_Clear
-Block_Ice_Blue
-Block_Ice_Frosted
-Block_Permafrost
-Block_Frozen_Soil
-Block_Frozen_Water
+- [Bench_Alchemy](https://hytaleguide.net/items/alchemists-workbench)
+- [Bench_Arcane](https://hytaleguide.net/items/arcanists-workbench)
+- [Bench_Armory](https://hytaleguide.net/items/forge)
+- [Bench_Armour](https://hytaleguide.net/items/armorers-workbench)
+- [Bench_Builders](https://hytaleguide.net/items/builders-workbench)
+- [Bench_Campfire](https://hytaleguide.net/items/campfire)
+- [Bench_Cooking](https://hytaleguide.net/items/chefs-stove)
+- [Bench_Farming](https://hytaleguide.net/items/farmers-workbench)
+- [Bench_Furnace](https://hytaleguide.net/items/furnace)
+- [Bench_Furniture](https://hytaleguide.net/items/furniture-workbench)
+- [Bench_Loom](https://hytaleguide.net/items/loom)
+- [Bench_Lumbermill](https://hytaleguide.net/items/woodcutters-block)
+- [Bench_Memories](https://hytaleguide.net/items/the-heart-of-orbis)
+- [Bench_Salvage](https://hytaleguide.net/items/salvagers-workbench)
+- [Bench_Tannery](https://hytaleguide.net/items/tanning-rack)
+- [Bench_Trough](https://hytaleguide.net/items/trough-feeding-bench)
+- [Bench_Weapon](https://hytaleguide.net/items/blacksmiths-anvil)
+- [Bench_WorkBench](https://hytaleguide.net/items/workbench)
 
-# PLANTS
-Plant_Snow_Shrub
-Plant_Frost_Fern
-Plant_Ice_Flower_Blue
-Plant_Ice_Flower_White
-Plant_Frozen_Grass
+## Crystal
 
-# CREATURE DROPS
-Ingredient_Fur_PolarBear
-Ingredient_Fur_Yeti
-Ingredient_Horn_Ram
-Ingredient_Tusk_Moose
-Ingredient_Scale_IceDragon
+- [Rock_Crystal_Blue_Block](https://hytaleguide.net/items/blue-crystal)
+- [Rock_Crystal_Blue_Large](https://hytaleguide.net/items/blue-crystal-large)
+- [Rock_Crystal_Blue_Medium](https://hytaleguide.net/items/blue-crystal-medium)
+- [Rock_Crystal_Blue_Small](https://hytaleguide.net/items/blue-crystal-small)
+- [Rock_Crystal_Cyan_Block](https://hytaleguide.net/items/cyan-crystal)
+- [Rock_Crystal_Cyan_Large](https://hytaleguide.net/items/cyan-crystal-large)
+- [Rock_Crystal_Cyan_Medium](https://hytaleguide.net/items/cyan-crystal-medium)
+- [Rock_Crystal_Cyan_Small](https://hytaleguide.net/items/cyan-crystal-small)
+- [Rock_Crystal_Green_Block](https://hytaleguide.net/items/green-crystal)
+- [Rock_Crystal_Green_Large](https://hytaleguide.net/items/green-crystal-large)
+- [Rock_Crystal_Green_Medium](https://hytaleguide.net/items/green-crystal-medium)
+- [Rock_Crystal_Green_Small](https://hytaleguide.net/items/green-crystal-small)
+- [Rock_Crystal_Iridescent_Large](https://hytaleguide.net/items/iridescent-crystal-large)
+- [Rock_Crystal_Iridescent_Medium](https://hytaleguide.net/items/iridescent-crystal-medium)
+- [Rock_Crystal_Iridescent_Small](https://hytaleguide.net/items/iridescent-crystal-small)
+- [Rock_Crystal_Pink_Block](https://hytaleguide.net/items/pink-crystal)
+- [Rock_Crystal_Pink_Large](https://hytaleguide.net/items/pink-crystal-large)
+- [Rock_Crystal_Pink_Medium](https://hytaleguide.net/items/pink-crystal-medium)
+- [Rock_Crystal_Pink_Small](https://hytaleguide.net/items/pink-crystal-small)
+- [Rock_Crystal_Purple_Block](https://hytaleguide.net/items/purple-crystal)
+- [Rock_Crystal_Purple_Large](https://hytaleguide.net/items/purple-crystal-large)
+- [Rock_Crystal_Purple_Medium](https://hytaleguide.net/items/purple-crystal-medium)
+- [Rock_Crystal_Purple_Small](https://hytaleguide.net/items/purple-crystal-small)
+- [Rock_Crystal_Red_Block](https://hytaleguide.net/items/red-crystal)
+- [Rock_Crystal_Red_Large](https://hytaleguide.net/items/red-crystal-large)
+- [Rock_Crystal_Red_Medium](https://hytaleguide.net/items/red-crystal-medium)
+- [Rock_Crystal_Red_Small](https://hytaleguide.net/items/red-crystal-small)
+- [Rock_Crystal_White_Block](https://hytaleguide.net/items/white-crystal)
+- [Rock_Crystal_White_Large](https://hytaleguide.net/items/white-crystal-large)
+- [Rock_Crystal_White_Medium](https://hytaleguide.net/items/white-crystal-medium)
+- [Rock_Crystal_White_Small](https://hytaleguide.net/items/white-crystal-small)
+- [Rock_Crystal_Yellow_Block](https://hytaleguide.net/items/yellow-crystal)
+- [Rock_Crystal_Yellow_Large](https://hytaleguide.net/items/yellow-crystal-large)
+- [Rock_Crystal_Yellow_Medium](https://hytaleguide.net/items/yellow-crystal-medium)
+- [Rock_Crystal_Yellow_Small](https://hytaleguide.net/items/yellow-crystal-small)
 
-# SPECIAL RESOURCES
-Ore_Cobalt_Ice
-Rock_Glacial_Crystal
-Rock_Frozen_Stone
+## Gem
 
-# DINOSAUR AREA (Devastated Lands – Underground Jungle)
+- [Rock_Gem_Diamond](https://hytaleguide.net/items/diamond)
+- [Rock_Gem_Emerald](https://hytaleguide.net/items/emerald)
+- [Rock_Gem_Ruby](https://hytaleguide.net/items/ruby)
+- [Rock_Gem_Sapphire](https://hytaleguide.net/items/sapphire)
+- [Rock_Gem_Topaz](https://hytaleguide.net/items/topaz)
+- [Rock_Gem_Voidstone](https://hytaleguide.net/items/voidstone)
+- [Rock_Gem_Zephyr](https://hytaleguide.net/items/zephyr)
 
-# BLOCKS
-Block_Volcanic_Ash
-Block_Jungle_Fern_Giant
-Block_Glowing_Jungle_Plant
-Block_Lava_Rock_Cracked
-Block_Primal_Stone
-Block_Fossil_Stone
-Block_Amber
+## Ingredient
 
-# PLANTS
-Plant_Primal_Fern
-Plant_Glowcap_Jungle
-Plant_Toxic_Jungle_Vine
-Plant_Giant_Jungle_Leaf
+- [Ingredient_Bar_Adamantite](https://hytaleguide.net/items/adamantite-ingot)
+- [Ingredient_Bar_Bronze](https://hytaleguide.net/items/bronze-ingot)
+- [Ingredient_Bar_Cobalt](https://hytaleguide.net/items/cobalt-ingot)
+- [Ingredient_Bar_Copper](https://hytaleguide.net/items/copper-ingot)
+- [Ingredient_Bar_Gold](https://hytaleguide.net/items/gold-ingot)
+- [Ingredient_Bar_Iron](https://hytaleguide.net/items/iron-ingot)
+- [Ingredient_Bar_Mithril](https://hytaleguide.net/items/mithril-ingot)
+- [Ingredient_Bar_Onyxium](https://hytaleguide.net/items/onyxium-ingot)
+- [Ingredient_Bar_Prisma](https://hytaleguide.net/items/prisma-ingot)
+- [Ingredient_Bar_Silver](https://hytaleguide.net/items/silver-ingot)
+- [Ingredient_Bar_Thorium](https://hytaleguide.net/items/thorium-ingot)
+- [Ingredient_Bolt_Cindercloth](https://hytaleguide.net/items/bolt-of-cindercloth)
+- [Ingredient_Bolt_Cotton](https://hytaleguide.net/items/bolt-of-cotton)
+- [Ingredient_Bolt_Linen](https://hytaleguide.net/items/bolt-of-linen)
+- [Ingredient_Bolt_Prismaloom](https://hytaleguide.net/items/bolt-of-prismaloom)
+- [Ingredient_Bolt_Shadoweave](https://hytaleguide.net/items/bolt-of-shadoweave)
+- [Ingredient_Bolt_Silk](https://hytaleguide.net/items/bolt-of-silk)
+- [Ingredient_Bolt_Stormsilk](https://hytaleguide.net/items/bolt-of-stormsilk)
+- [Ingredient_Bolt_Wool](https://hytaleguide.net/items/bolt-of-wool)
+- [Ingredient_Bone_Fragment](https://hytaleguide.net/items/bone-fragments)
+- [Ingredient_Charcoal](https://hytaleguide.net/items/charcoal)
+- [Ingredient_Chitin_Sturdy](https://hytaleguide.net/items/sturdy-chitin)
+- [Ingredient_Crystal_Blue](https://hytaleguide.net/items/blue-crystal-shards)
+- [Ingredient_Crystal_Cyan](https://hytaleguide.net/items/cyan-crystal-shards)
+- [Ingredient_Crystal_Green](https://hytaleguide.net/items/green-crystal-shards)
+- [Ingredient_Crystal_Pink](https://hytaleguide.net/items/pink-crystal-shards)
+- [Ingredient_Crystal_Purple](https://hytaleguide.net/items/purple-crystal-shards)
+- [Ingredient_Crystal_Red](https://hytaleguide.net/items/red-crystal-shards)
+- [Ingredient_Crystal_White](https://hytaleguide.net/items/white-crystal-shards)
+- [Ingredient_Crystal_Yellow](https://hytaleguide.net/items/yellow-crystal-shards)
+- [Ingredient_Dough](https://hytaleguide.net/items/dough)
+- [Ingredient_Fabric_Scrap_Cindercloth](https://hytaleguide.net/items/cindercloth-scraps)
+- [Ingredient_Fabric_Scrap_Cotton](https://hytaleguide.net/items/cotton-scraps)
+- [Ingredient_Fabric_Scrap_Linen](https://hytaleguide.net/items/linen-scraps)
+- [Ingredient_Fabric_Scrap_Prismaloom](https://hytaleguide.net/items/prismaloom-scraps)
+- [Ingredient_Fabric_Scrap_Shadoweave](https://hytaleguide.net/items/shadoweave-scraps)
+- [Ingredient_Fabric_Scrap_Silk](https://hytaleguide.net/items/silk-scraps)
+- [Ingredient_Fabric_Scrap_Stormsilk](https://hytaleguide.net/items/stormsilk-scraps)
+- [Ingredient_Fabric_Scrap_Wool](https://hytaleguide.net/items/wool-scraps)
+- [Ingredient_Feathers_Blue](https://hytaleguide.net/items/blue-feathers)
+- [Ingredient_Feathers_Dark](https://hytaleguide.net/items/dark-feathers)
+- [Ingredient_Feathers_Light](https://hytaleguide.net/items/white-feathers)
+- [Ingredient_Feathers_Red](https://hytaleguide.net/items/red-feathers)
+- [Ingredient_Fibre](https://hytaleguide.net/items/plant-fiber)
+- [Ingredient_Fire_Essence](https://hytaleguide.net/items/essence-of-fire)
+- [Ingredient_Flour](https://hytaleguide.net/items/flour)
+- [Ingredient_Hay](https://hytaleguide.net/items/hay-bale)
+- [Ingredient_Hide_Dark](https://hytaleguide.net/items/dark-hide)
+- [Ingredient_Hide_Heavy](https://hytaleguide.net/items/heavy-hide)
+- [Ingredient_Hide_Light](https://hytaleguide.net/items/light-hide)
+- [Ingredient_Hide_Medium](https://hytaleguide.net/items/medium-hide)
+- [Ingredient_Hide_Prismic](https://hytaleguide.net/items/prismatic-hide)
+- [Ingredient_Hide_Scaled](https://hytaleguide.net/items/scaled-hide)
+- [Ingredient_Hide_Soft](https://hytaleguide.net/items/soft-hide)
+- [Ingredient_Hide_Storm](https://hytaleguide.net/items/storm-hide)
+- [Ingredient_Ice_Essence](https://hytaleguide.net/items/essence-of-ice)
+- [Ingredient_Leather_Dark](https://hytaleguide.net/items/dark-leather)
+- [Ingredient_Leather_Heavy](https://hytaleguide.net/items/heavy-leather)
+- [Ingredient_Leather_Light](https://hytaleguide.net/items/light-leather)
+- [Ingredient_Leather_Medium](https://hytaleguide.net/items/medium-leather)
+- [Ingredient_Leather_Prismic](https://hytaleguide.net/items/prismatic-leather)
+- [Ingredient_Leather_Scaled](https://hytaleguide.net/items/scaled-leather)
+- [Ingredient_Leather_Soft](https://hytaleguide.net/items/soft-leather)
+- [Ingredient_Leather_Storm](https://hytaleguide.net/items/storm-leather)
+- [Ingredient_Life_Essence](https://hytaleguide.net/items/essence-of-life)
+- [Ingredient_Life_Essence_100](https://hytaleguide.net/items/ingredient-life-essence-100)
+- [Ingredient_Lightning_Essence](https://hytaleguide.net/items/essence-of-lightning)
+- [Ingredient_Motes_Light](https://hytaleguide.net/items/motes-of-light)
+- [Ingredient_Poop](https://hytaleguide.net/items/poop)
+- [Ingredient_Powder_Boom](https://hytaleguide.net/items/boom-powder)
+- [Ingredient_Sac_Venom](https://hytaleguide.net/items/venom-sac)
+- [Ingredient_Salt](https://hytaleguide.net/items/salt)
+- [Ingredient_Sinue_Cindersinue](https://hytaleguide.net/items/cindersinue)
+- [Ingredient_Spices](https://hytaleguide.net/items/spices)
+- [Ingredient_Stick](https://hytaleguide.net/items/stick)
+- [Ingredient_Strap_Leather](https://hytaleguide.net/items/leather-strap)
+- [Ingredient_Stud_Iron](https://hytaleguide.net/items/iron-stud)
+- [Ingredient_Tree_Bark](https://hytaleguide.net/items/tree-bark)
+- [Ingredient_Tree_Sap](https://hytaleguide.net/items/tree-sap)
+- [Ingredient_Void_Essence](https://hytaleguide.net/items/essence-of-the-void)
+- [Ingredient_Voidheart](https://hytaleguide.net/items/voidheart)
+- [Ingredient_Water_Essence](https://hytaleguide.net/items/essence-of-water)
 
-# CREATURE DROPS
-Ingredient_Tooth_CaveRex
-Ingredient_Claw_CaveRaptor
-Ingredient_Scale_Dimetrodon
-Ingredient_Hide_Trillodon
-Ingredient_Feather_Pterodactyl
-Ingredient_Primal_Meat
+## Metal
 
-# SPECIAL RESOURCES
-Ore_Primal_Iron
-Rock_Amber_Encased
-Rock_Dinosaur_Fossil
-Ingredient_Dinosaur_Bone
-Ingredient_Primal_Core
+- [Metal_Bronze](https://hytaleguide.net/items/bronze)
+- [Metal_Copper](https://hytaleguide.net/items/copper)
+- [Metal_Gold_Pipe_Chimney](https://hytaleguide.net/items/gold-pipe-chimney)
+- [Metal_Gold_Pipe_Corner](https://hytaleguide.net/items/gold-pipe-corner)
+- [Metal_Gold_Pipe_Large](https://hytaleguide.net/items/gold-pipe-large)
+- [Metal_Gold_Pipe_Large_Mouthpiece](https://hytaleguide.net/items/gold-pipe-large-mouthpiece)
+- [Metal_Gold_Pipe_Long](https://hytaleguide.net/items/gold-pipe-long)
+- [Metal_Gold_Pipe_Short](https://hytaleguide.net/items/gold-pipe-short)
+- [Metal_Iron](https://hytaleguide.net/items/iron)
+- [Metal_Zinc](https://hytaleguide.net/items/zinc)
 
+## Ore
 
-# TOOLS
-Tool_Hoe_Crude
-Tool_Shears_Basic
-Tool_Repair_Kit_Crude
+- [Ore_Adamantite](https://hytaleguide.net/items/adamantite-ore)
+- [Ore_Cobalt](https://hytaleguide.net/items/cobalt-ore)
+- [Ore_Copper](https://hytaleguide.net/items/copper-ore)
+- [Ore_Gold](https://hytaleguide.net/items/gold-ore)
+- [Ore_Iron](https://hytaleguide.net/items/iron-ore)
+- [Ore_Mithril](https://hytaleguide.net/items/mithril-ore)
+- [Ore_Onyxium](https://hytaleguide.net/items/onyxium-ore)
+- [Ore_Prisma](https://hytaleguide.net/items/prisma-ore)
+- [Ore_Silver](https://hytaleguide.net/items/silver-ore)
+- [Ore_Thorium](https://hytaleguide.net/items/thorium-ore)
 
-Tool_Shovel_Cobalt
-Tool_Shovel_Thorium
-Tool_Shovel_Iron
-Tool_Shovel_Copper
-Tool_Shovel_Crude
+## Recipe
 
-Tool_Sickle_Crude
+- [Recipe_Book_Magic_Air](https://hytaleguide.net/items/air-grimoire)
+- [Recipe_Book_Magic_Void](https://hytaleguide.net/items/void-grimoire)
+- [Recipe_Food_Pie_Apple](https://hytaleguide.net/items/tmp-recipe-apple-pie)
+- [Recipe_Food_Pie_Meat](https://hytaleguide.net/items/tmp-recipe-meat-pie)
+- [Recipe_Food_Pie_Pumpkin](https://hytaleguide.net/items/tmp-recipe-pumpkin-pie)
+- [Recipe_Food_Salad_Caesar](https://hytaleguide.net/items/tmp-recipe-caesar-salad)
+- [Recipe_Page](https://hytaleguide.net/items/recipe-page)
+- [Recipe_Plant_Seeds_Health1](https://hytaleguide.net/items/recipe-blood-rose-seed)
+- [Recipe_Plant_Seeds_Health2](https://hytaleguide.net/items/recipe-bloodcap-mushroom-seed)
+- [Recipe_Plant_Seeds_Health3](https://hytaleguide.net/items/recipe-blood-leaf-seed)
+- [Recipe_Plant_Seeds_Mana1](https://hytaleguide.net/items/recipe-azure-fern-seed)
+- [Recipe_Plant_Seeds_Mana2](https://hytaleguide.net/items/recipe-azurecap-mushroom-seed)
+- [Recipe_Plant_Seeds_Mana3](https://hytaleguide.net/items/recipe-azure-kelp-seed)
+- [Recipe_Plant_Seeds_Stamina1](https://hytaleguide.net/items/recipe-storm-thistle-seed)
+- [Recipe_Plant_Seeds_Stamina2](https://hytaleguide.net/items/recipe-stormcap-mushroom-seed)
+- [Recipe_Plant_Seeds_Stamina3](https://hytaleguide.net/items/recipe-storm-sapling-seed)
 
-Tool_Pickaxe_Mithril
-Tool_Pickaxe_Onyxium
-Tool_Pickaxe_Adamantite
-Tool_Pickaxe_Cobalt
-Tool_Pickaxe_Iron
-Tool_Pickaxe_Scrap
-Tool_Pickaxe_Copper
-Tool_Pickaxe_Wood
+# Decoration
 
-Tool_Hatchet_Mithril
-Tool_Hatchet_Onyxium
-Tool_Hatchet_Adamantite
-Tool_Hatchet_Cobalt
-Tool_Hatchet_Thorium
-Tool_Hatchet_Iron
-Tool_Hatchet_Copper
-Tool_Hatchet_Crude
-Tool_Hatchet_Wood
+## Deco
 
-# Bucket
-*Container_Bucket_State_Filled_Water
+- [Deco_Bone_Full](https://hytaleguide.net/items/bone)
+- [Deco_Bone_Pile](https://hytaleguide.net/items/pile-of-bones)
+- [Deco_Bone_Ribs](https://hytaleguide.net/items/rib)
+- [Deco_Bone_Ribs_Feran](https://hytaleguide.net/items/feran-rib)
+- [Deco_Bone_Skulls](https://hytaleguide.net/items/pile-of-skulls)
+- [Deco_Bone_Skulls_Feran](https://hytaleguide.net/items/pile-of-feran-skulls)
+- [Deco_Bone_Skulls_Feran_Large](https://hytaleguide.net/items/large-pile-of-feran-skulls)
+- [Deco_Bone_Spike](https://hytaleguide.net/items/bone-spike)
+- [Deco_Bone_Spike_Large](https://hytaleguide.net/items/large-bone-spike)
+- [Deco_Bone_Spine](https://hytaleguide.net/items/bone-spine)
+- [Deco_Book_Pile_Large](https://hytaleguide.net/items/large-pile-of-books)
+- [Deco_Book_Pile_Small](https://hytaleguide.net/items/small-pile-of-books)
+- [Deco_Bucket](https://hytaleguide.net/items/ancient-bucket)
+- [Deco_Campfire_Off](https://hytaleguide.net/items/old-campfire)
+- [Deco_Chair_Scrap](https://hytaleguide.net/items/goblin-throne)
+- [Deco_Coral_Shell](https://hytaleguide.net/items/coral-seashell)
+- [Deco_Coral_Shell_Purple](https://hytaleguide.net/items/purple-coral-seashell)
+- [Deco_Coral_Shell_Sanddollar](https://hytaleguide.net/items/sand-dollar-shell)
+- [Deco_Coral_Shell_Swirly](https://hytaleguide.net/items/swirly-coral-shell)
+- [Deco_Coral_Shell_Urchin](https://hytaleguide.net/items/urchin-shell)
+- [Deco_Fire](https://hytaleguide.net/items/fire)
+- [Deco_Halloween_Lights](https://hytaleguide.net/items/halloween-lights)
+- [Deco_Halloween_Pumpkin_Cute](https://hytaleguide.net/items/deco-halloween-pumpkin-cute)
+- [Deco_Halloween_Pumpkin_Hypixel](https://hytaleguide.net/items/deco-halloween-pumpkin-hypixel)
+- [Deco_Halloween_Pumpkin_Scary](https://hytaleguide.net/items/halloween-pumpkin)
+- [Deco_Hive](https://hytaleguide.net/items/hive)
+- [Deco_Inkwell](https://hytaleguide.net/items/inkwell)
+- [Deco_Iron_Bars](https://hytaleguide.net/items/iron-bars)
+- [Deco_Iron_Bars_Platforms](https://hytaleguide.net/items/iron-bar-horizontal)
+- [Deco_Iron_Chain_Small](https://hytaleguide.net/items/iron-chain-small)
+- [Deco_Iron_Chains](https://hytaleguide.net/items/iron-chain-sloped)
+- [Deco_Iron_Stack](https://hytaleguide.net/items/stack-of-iron-bars)
+- [Deco_Kweebec_Plush](https://hytaleguide.net/items/kweebec-plushie)
+- [Deco_Lantern](https://hytaleguide.net/items/lantern)
+- [Deco_Lantern_Ceiling](https://hytaleguide.net/items/deco-lantern-ceiling)
+- [Deco_Lever](https://hytaleguide.net/items/lever)
+- [Deco_Map](https://hytaleguide.net/items/old-map)
+- [Deco_Moving_Box](https://hytaleguide.net/items/moving-box)
+- [Deco_Moving_Box1x2](https://hytaleguide.net/items/moving-box-large)
+- [Deco_Mug](https://hytaleguide.net/items/wooden-mug)
+- [Deco_Nest](https://hytaleguide.net/items/birds-nest)
+- [Deco_Plate](https://hytaleguide.net/items/plate)
+- [Deco_Pot_Clay_Broken](https://hytaleguide.net/items/broken-clay-pot)
+- [Deco_Potion](https://hytaleguide.net/items/old-potion)
+- [Deco_Rope](https://hytaleguide.net/items/rope)
+- [Deco_Rope_Diagonal](https://hytaleguide.net/items/rope-diagonal)
+- [Deco_Scarak_Cocoon](https://hytaleguide.net/items/scarak-cocoon)
+- [Deco_Scarak_Eggsacks](https://hytaleguide.net/items/medium-scarak-egg-sack)
+- [Deco_Scarak_Spit](https://hytaleguide.net/items/small-scarak-spit-clump)
+- [Deco_Scarak_Spit_Full](https://hytaleguide.net/items/scarak-spit-clump)
+- [Deco_Scarecrow](https://hytaleguide.net/items/scarecrow)
+- [Deco_Scroll](https://hytaleguide.net/items/old-scroll)
+- [Deco_Shutter](https://hytaleguide.net/items/wooden-shutter)
+- [Deco_Spider_Cocoon](https://hytaleguide.net/items/spider-cocoon)
+- [Deco_SpiderWeb](https://hytaleguide.net/items/small-spiderweb)
+- [Deco_SpiderWeb_Full](https://hytaleguide.net/items/spiderweb)
+- [Deco_Starfish](https://hytaleguide.net/items/starfish)
+- [Deco_Tankard](https://hytaleguide.net/items/tankard)
+- [Deco_Target](https://hytaleguide.net/items/hay-target)
+- [Deco_Trash](https://hytaleguide.net/items/trash)
+- [Deco_Trash_Pile_Large](https://hytaleguide.net/items/large-trash-pile)
+- [Deco_Trash_Pile_Small](https://hytaleguide.net/items/small-trash-pile)
+- [Deco_Treasure](https://hytaleguide.net/items/treasure)
+- [Deco_Treasure_Pile_Large](https://hytaleguide.net/items/large-treasure-pile)
+- [Deco_Treasure_Pile_Small](https://hytaleguide.net/items/small-treasure-pile)
+- [Deco_Trophy_Harvest](https://hytaleguide.net/items/harvest-trophy)
+- [Deco_Trork_Cage](https://hytaleguide.net/items/trork-cage)
+- [Deco_Wallchain](https://hytaleguide.net/items/wall-ring)
 
-# Soil
-Soil_Roots_Poisoned
-Soil_Pathway_ThreeQuarter
-Soil_Ash
-Soil_Pathway
-Soil_Pathway_Quarter
-Soil_Pathway_Half
-Soil_Needles
-Soil_Leaves
-Soil_Grass_Wet
-Soil_Grass_Dry
-Soil_Grass
-Soil_Hive_Corrupted
-Soil_Hive
-Soil_Snow_Half
-Filter_Soils
-Template_Soil
-Soil_Clay_Smooth_GreenDark
-Soil_Clay_Smooth_Grey2
-Soil_Clay_Smooth_Red2
-Soil_Clay_Smooth_Yellow2
-Soil_Dirt_Dry
-Soil_Dirt_Poisoned
-Soil_Dirt_Tilled
-Soil_Dirt
-Soil_Dirt_Cold
-Soil_Dirt_Burnt
-Soil_Dirt_Crystal
-Soil_Dirt_Half
-Soil_Dirt_Lush
-Soil_Dirt_Stairs
-Soil_Dirt_Wet
+## Furniture
+
+- [Furniture_Ancient_Barrel](https://hytaleguide.net/items/ancient-barrel)
+- [Furniture_Ancient_Bed](https://hytaleguide.net/items/ruined-wooden-bed)
+- [Furniture_Ancient_Bench](https://hytaleguide.net/items/ancient-bench)
+- [Furniture_Ancient_Bookshelf](https://hytaleguide.net/items/ancient-bookshelf)
+- [Furniture_Ancient_Candle](https://hytaleguide.net/items/ancient-candle)
+- [Furniture_Ancient_Chair](https://hytaleguide.net/items/ancient-chair)
+- [Furniture_Ancient_Chest_Large](https://hytaleguide.net/items/large-ancient-chest)
+- [Furniture_Ancient_Chest_Large_Treasure](https://hytaleguide.net/items/large-ancient-chest-treasure)
+- [Furniture_Ancient_Chest_Small](https://hytaleguide.net/items/small-ancient-chest)
+- [Furniture_Ancient_Coffin](https://hytaleguide.net/items/ancient-coffin)
+- [Furniture_Ancient_Crate](https://hytaleguide.net/items/broken-ancient-crate)
+- [Furniture_Ancient_Door](https://hytaleguide.net/items/ancient-wooden-door)
+- [Furniture_Ancient_Ladder](https://hytaleguide.net/items/ancient-ladder)
+- [Furniture_Ancient_Painting](https://hytaleguide.net/items/ancient-painting)
+- [Furniture_Ancient_Platform](https://hytaleguide.net/items/ancient-platform)
+- [Furniture_Ancient_Pot](https://hytaleguide.net/items/ancient-pot)
+- [Furniture_Ancient_Sack](https://hytaleguide.net/items/ancient-sack)
+- [Furniture_Ancient_Shelf](https://hytaleguide.net/items/ancient-shelf)
+- [Furniture_Ancient_Sign](https://hytaleguide.net/items/ancient-sign)
+- [Furniture_Ancient_Statue](https://hytaleguide.net/items/ancient-statue)
+- [Furniture_Ancient_Table](https://hytaleguide.net/items/ancient-table)
+- [Furniture_Ancient_Torch](https://hytaleguide.net/items/ancient-torch)
+- [Furniture_Ancient_Trapdoor](https://hytaleguide.net/items/ancient-trapdoor)
+- [Furniture_Ancient_Wardrobe](https://hytaleguide.net/items/ancient-wardrobe)
+- [Furniture_Ancient_Window](https://hytaleguide.net/items/ancient-window)
+- [Furniture_Bookshelf_Corner](https://hytaleguide.net/items/prototype-bookshelf-l-corner-single)
+- [Furniture_Bookshelf_Left](https://hytaleguide.net/items/prototype-bookshelf-bottom-left-corner)
+- [Furniture_Bookshelf_Middle](https://hytaleguide.net/items/prototype-bookshelf-bottom-edge)
+- [Furniture_Bookshelf_Right](https://hytaleguide.net/items/prototype-bookshelf-bottom-right-corner)
+- [Furniture_Bookshelf_Single](https://hytaleguide.net/items/prototype-bookshelf-single)
+- [Furniture_Castle_Bench](https://hytaleguide.net/items/stone-bench)
+- [Furniture_Christmas_Chest_Small](https://hytaleguide.net/items/small-christmas-packet)
+- [Furniture_Christmas_Chest_Small_Green](https://hytaleguide.net/items/small-green-christmas-packet)
+- [Furniture_Christmas_Chest_Small_Red](https://hytaleguide.net/items/small-red-christmas-packet)
+- [Furniture_Christmas_Chest_Small_RedDotted](https://hytaleguide.net/items/small-red-dotted-christmas-packet)
+- [Furniture_Christmas_Chest_Small_White](https://hytaleguide.net/items/small-white-christmas-packet)
+- [Furniture_Construction_Sign](https://hytaleguide.net/items/under-construction-sign)
+- [Furniture_Crude_Bed](https://hytaleguide.net/items/crude-bedroll)
+- [Furniture_Crude_Brazier](https://hytaleguide.net/items/furniture-crude-brazier)
+- [Furniture_Crude_Candle](https://hytaleguide.net/items/candle)
+- [Furniture_Crude_Chest_Large](https://hytaleguide.net/items/crude-double-chest)
+- [Furniture_Crude_Chest_Small](https://hytaleguide.net/items/wooden-chest)
+- [Furniture_Crude_Door](https://hytaleguide.net/items/crude-door)
+- [Furniture_Crude_Ladder](https://hytaleguide.net/items/crude-ladder)
+- [Furniture_Crude_Platform](https://hytaleguide.net/items/crude-platform)
+- [Furniture_Crude_Shelf](https://hytaleguide.net/items/large-crude-wooden-shelf)
+- [Furniture_Crude_Sign](https://hytaleguide.net/items/crude-sign)
+- [Furniture_Crude_Stool](https://hytaleguide.net/items/crude-stool)
+- [Furniture_Crude_Table](https://hytaleguide.net/items/crude-table)
+- [Furniture_Crude_Torch](https://hytaleguide.net/items/crude-torch)
+- [Furniture_Crude_Trapdoor](https://hytaleguide.net/items/crude-trapdoor)
+- [Furniture_Crude_Wardrobe](https://hytaleguide.net/items/crude-wardrobe)
+- [Furniture_Crude_Window](https://hytaleguide.net/items/crude-window)
+- [Furniture_Crude_Windows_1X2_Test](https://hytaleguide.net/items/prototype-crude-window-1x2)
+- [Furniture_Crude_Windows_2X2_Test](https://hytaleguide.net/items/prototype-crude-window-2x2)
+- [Furniture_Cybercity_Sign_Fruit](https://hytaleguide.net/items/neon-sign-fruit)
+- [Furniture_Cybercity_Sign_Tea](https://hytaleguide.net/items/neon-sign-tea)
+- [Furniture_Cybercity_Windows](https://hytaleguide.net/items/prototype-cybercity-window)
+- [Furniture_Cybercity_Windows_Bot](https://hytaleguide.net/items/prototype-cybercity-window-bottom)
+- [Furniture_Cybercity_Windows_Bottom_Right](https://hytaleguide.net/items/prototype-cybercity-window-bottom-right-corner)
+- [Furniture_Cybercity_Windows_C](https://hytaleguide.net/items/prototype-cybercity-window-c-shape)
+- [Furniture_Cybercity_Windows_Full](https://hytaleguide.net/items/prototype-cybercity-window-full)
+- [Furniture_Cybercity_Windows_LR](https://hytaleguide.net/items/prototype-cybercity-window-left-right)
+- [Furniture_Cybercity_Windows_Purple](https://hytaleguide.net/items/prototype-cybercity-window-top-bottom-purple)
+- [Furniture_Cybercity_Windows_Red](https://hytaleguide.net/items/prototype-cybercity-window-top-bottom-red)
+- [Furniture_Cybercity_Windows_Right](https://hytaleguide.net/items/prototype-cybercity-window-right)
+- [Furniture_Cybercity_Windows_TopBot](https://hytaleguide.net/items/prototype-cybercity-window-top-bottom)
+- [Furniture_Cybercity_Windows_U](https://hytaleguide.net/items/prototype-cybercity-window-u-shape)
+- [Furniture_Cybercity_Windows_Yellow](https://hytaleguide.net/items/prototype-cybercity-window-top-bottom-yellow)
+- [Furniture_Desert_Bed](https://hytaleguide.net/items/sandswept-bed)
+- [Furniture_Desert_Chair](https://hytaleguide.net/items/sandswept-chair)
+- [Furniture_Desert_Chest_Large](https://hytaleguide.net/items/sandswept-chest)
+- [Furniture_Desert_Chest_Small](https://hytaleguide.net/items/small-sandswept-chest)
+- [Furniture_Desert_Door](https://hytaleguide.net/items/sandswept-door)
+- [Furniture_Desert_Ladder](https://hytaleguide.net/items/sandswept-ladder)
+- [Furniture_Desert_Lantern](https://hytaleguide.net/items/sandswept-lantern)
+- [Furniture_Desert_Lantern_Ceiling](https://hytaleguide.net/items/furniture-desert-lantern-ceiling)
+- [Furniture_Desert_Lantern_Tall](https://hytaleguide.net/items/tall-sandswept-lantern)
+- [Furniture_Desert_Platform](https://hytaleguide.net/items/sandswept-platform)
+- [Furniture_Desert_Shelf](https://hytaleguide.net/items/sandswept-shelf)
+- [Furniture_Desert_Sign](https://hytaleguide.net/items/sandswept-sign)
+- [Furniture_Desert_Table](https://hytaleguide.net/items/sandswept-table)
+- [Furniture_Desert_Torch](https://hytaleguide.net/items/sandswept-torch)
+- [Furniture_Desert_Trapdoor](https://hytaleguide.net/items/sandswept-trapdoor)
+- [Furniture_Desert_Wardrobe](https://hytaleguide.net/items/sandswept-wardrobe)
+- [Furniture_Desert_Window](https://hytaleguide.net/items/sandswept-window)
+- [Furniture_Dungeon_Chest_Epic](https://hytaleguide.net/items/high-roll-chest)
+- [Furniture_Dungeon_Chest_Epic_Large](https://hytaleguide.net/items/large-high-roll-chest)
+- [Furniture_Dungeon_Chest_Legendary_Large](https://hytaleguide.net/items/legendary-chest)
+- [Furniture_Dungeon_Earth_Brazier](https://hytaleguide.net/items/stone-brazier)
+- [Furniture_Faun_Stool](https://hytaleguide.net/items/faun-stool)
+- [Furniture_Feran_Bed](https://hytaleguide.net/items/feran-bed)
+- [Furniture_Feran_Bench](https://hytaleguide.net/items/feran-bench)
+- [Furniture_Feran_Bookshelf](https://hytaleguide.net/items/feran-bookshelf)
+- [Furniture_Feran_Candle](https://hytaleguide.net/items/feran-candle)
+- [Furniture_Feran_Chandelier](https://hytaleguide.net/items/feran-chandelier)
+- [Furniture_Feran_Chest_Large](https://hytaleguide.net/items/large-feran-chest)
+- [Furniture_Feran_Chest_Small](https://hytaleguide.net/items/small-feran-chest)
+- [Furniture_Feran_Door](https://hytaleguide.net/items/feran-door)
+- [Furniture_Feran_Ladder](https://hytaleguide.net/items/feran-ladder)
+- [Furniture_Feran_Planter](https://hytaleguide.net/items/feran-planter)
+- [Furniture_Feran_Platform](https://hytaleguide.net/items/feran-platform)
+- [Furniture_Feran_Pot](https://hytaleguide.net/items/feran-pot)
+- [Furniture_Feran_Pot_Secondary](https://hytaleguide.net/items/furniture-feran-pot-secondary)
+- [Furniture_Feran_Shelf](https://hytaleguide.net/items/feran-shelf)
+- [Furniture_Feran_Sign](https://hytaleguide.net/items/feran-sign)
+- [Furniture_Feran_Stool](https://hytaleguide.net/items/feran-stool)
+- [Furniture_Feran_Table](https://hytaleguide.net/items/feran-table)
+- [Furniture_Feran_Torch](https://hytaleguide.net/items/feran-torch)
+- [Furniture_Feran_Torch_Tall](https://hytaleguide.net/items/tall-feran-torch)
+- [Furniture_Feran_Trapdoor](https://hytaleguide.net/items/feran-trapdoor)
+- [Furniture_Feran_Wardrobe](https://hytaleguide.net/items/feran-wardrobe)
+- [Furniture_Feran_Window](https://hytaleguide.net/items/feran-window)
+- [Furniture_Flag_Orange](https://hytaleguide.net/items/orange-flag)
+- [Furniture_Flag_Small_Red](https://hytaleguide.net/items/red-flag)
+- [Furniture_Frozen_Castle_Bed](https://hytaleguide.net/items/frozen-castle-bed)
+- [Furniture_Frozen_Castle_Bench](https://hytaleguide.net/items/frozen-castle-bench)
+- [Furniture_Frozen_Castle_Chair](https://hytaleguide.net/items/frozen-castle-chair)
+- [Furniture_Frozen_Castle_Chest_Large](https://hytaleguide.net/items/large-frozen-castle-chest)
+- [Furniture_Frozen_Castle_Chest_Small](https://hytaleguide.net/items/small-frozen-castle-chest)
+- [Furniture_Frozen_Castle_Door](https://hytaleguide.net/items/frozen-castle-door)
+- [Furniture_Frozen_Castle_Ladder](https://hytaleguide.net/items/frozen-castle-ladder)
+- [Furniture_Frozen_Castle_Lamp](https://hytaleguide.net/items/frozen-castle-lamp)
+- [Furniture_Frozen_Castle_Platform](https://hytaleguide.net/items/frozen-castle-platform)
+- [Furniture_Frozen_Castle_Pot](https://hytaleguide.net/items/furniture-frozen-castle-pot)
+- [Furniture_Frozen_Castle_Secondary_Lamp](https://hytaleguide.net/items/furniture-frozen-castle-secondary-lamp)
+- [Furniture_Frozen_Castle_Secondary_Pot](https://hytaleguide.net/items/frozen-castle-pot)
+- [Furniture_Frozen_Castle_Shelf](https://hytaleguide.net/items/frozen-castle-shelf)
+- [Furniture_Frozen_Castle_Sign](https://hytaleguide.net/items/frozen-castle-sign)
+- [Furniture_Frozen_Castle_Table](https://hytaleguide.net/items/frozen-castle-table)
+- [Furniture_Frozen_Castle_Trapdoor](https://hytaleguide.net/items/frozen-castle-trapdoor)
+- [Furniture_Frozen_Castle_Wardrobe](https://hytaleguide.net/items/frozen-castle-wardrobe)
+- [Furniture_Frozen_Castle_Window](https://hytaleguide.net/items/frozen-castle-window)
+- [Furniture_Goblin_Chest_Small](https://hytaleguide.net/items/goblin-chest)
+- [Furniture_Human_Ruins_Banner](https://hytaleguide.net/items/lost-civilization-banner)
+- [Furniture_Human_Ruins_Banner_Double](https://hytaleguide.net/items/prototype-lost-civilization-double-banner)
+- [Furniture_Human_Ruins_Banner_Triple](https://hytaleguide.net/items/prototype-lost-civilization-triple-banner)
+- [Furniture_Human_Ruins_Bed](https://hytaleguide.net/items/lost-civilization-bed)
+- [Furniture_Human_Ruins_Bench](https://hytaleguide.net/items/lost-civilization-bench)
+- [Furniture_Human_Ruins_Bookshelf](https://hytaleguide.net/items/lost-civilization-bookshelf)
+- [Furniture_Human_Ruins_Brazier](https://hytaleguide.net/items/lost-civilization-brazier)
+- [Furniture_Human_Ruins_Candle](https://hytaleguide.net/items/lost-civilization-candle)
+- [Furniture_Human_Ruins_Chair](https://hytaleguide.net/items/lost-civilization-chair)
+- [Furniture_Human_Ruins_Chest_Large](https://hytaleguide.net/items/large-lost-civilization-chest)
+- [Furniture_Human_Ruins_Chest_Small](https://hytaleguide.net/items/small-lost-civilization-chest)
+- [Furniture_Human_Ruins_Coffin](https://hytaleguide.net/items/lost-civilization-coffin)
+- [Furniture_Human_Ruins_Desk](https://hytaleguide.net/items/lost-civilization-counter)
+- [Furniture_Human_Ruins_Door](https://hytaleguide.net/items/lost-civilization-wooden-door)
+- [Furniture_Human_Ruins_Door_Large](https://hytaleguide.net/items/large-lost-civilization-door)
+- [Furniture_Human_Ruins_Door_Medium](https://hytaleguide.net/items/medium-lost-civilization-door)
+- [Furniture_Human_Ruins_Ladder](https://hytaleguide.net/items/lost-civilization-ladder)
+- [Furniture_Human_Ruins_Lantern](https://hytaleguide.net/items/lost-civilization-lantern)
+- [Furniture_Human_Ruins_Lantern_Ceiling](https://hytaleguide.net/items/furniture-human-ruins-lantern-ceiling)
+- [Furniture_Human_Ruins_Planter](https://hytaleguide.net/items/lost-civilization-planter)
+- [Furniture_Human_Ruins_Platform](https://hytaleguide.net/items/lost-civilization-platform)
+- [Furniture_Human_Ruins_Pot](https://hytaleguide.net/items/lost-civilization-pot)
+- [Furniture_Human_Ruins_Pot_Small](https://hytaleguide.net/items/small-lost-civilization-pot)
+- [Furniture_Human_Ruins_Shelf](https://hytaleguide.net/items/lost-civilization-shelf)
+- [Furniture_Human_Ruins_Sign](https://hytaleguide.net/items/lost-civilization-sign)
+- [Furniture_Human_Ruins_Statue_Broken](https://hytaleguide.net/items/ruined-statue)
+- [Furniture_Human_Ruins_Stool](https://hytaleguide.net/items/lost-civilization-stool)
+- [Furniture_Human_Ruins_Table](https://hytaleguide.net/items/lost-civilization-table)
+- [Furniture_Human_Ruins_Torch](https://hytaleguide.net/items/lost-civilization-torch)
+- [Furniture_Human_Ruins_Trapdoor](https://hytaleguide.net/items/lost-civilization-trapdoor)
+- [Furniture_Human_Ruins_Wardrobe](https://hytaleguide.net/items/lost-civilization-wardrobe)
+- [Furniture_Human_Ruins_Window](https://hytaleguide.net/items/lost-civilization-window)
+- [Furniture_Jungle_Bed](https://hytaleguide.net/items/bamboo-bed)
+- [Furniture_Jungle_Bench](https://hytaleguide.net/items/bamboo-bench)
+- [Furniture_Jungle_Bookshelf](https://hytaleguide.net/items/bamboo-bookshelf)
+- [Furniture_Jungle_Brazier](https://hytaleguide.net/items/bamboo-brazier)
+- [Furniture_Jungle_Candle](https://hytaleguide.net/items/bamboo-candle)
+- [Furniture_Jungle_Chair](https://hytaleguide.net/items/bamboo-chair)
+- [Furniture_Jungle_Chest_Large](https://hytaleguide.net/items/large-bamboo-chest)
+- [Furniture_Jungle_Chest_Small](https://hytaleguide.net/items/small-bamboo-chest)
+- [Furniture_Jungle_Door](https://hytaleguide.net/items/bamboo-door)
+- [Furniture_Jungle_Ladder](https://hytaleguide.net/items/bamboo-ladder)
+- [Furniture_Jungle_Painting](https://hytaleguide.net/items/bamboo-painting)
+- [Furniture_Jungle_Planter](https://hytaleguide.net/items/bamboo-planter)
+- [Furniture_Jungle_Platform](https://hytaleguide.net/items/bamboo-platform)
+- [Furniture_Jungle_Pot](https://hytaleguide.net/items/bamboo-pot)
+- [Furniture_Jungle_Pot_Secondary](https://hytaleguide.net/items/furniture-jungle-pot-secondary)
+- [Furniture_Jungle_Shelf](https://hytaleguide.net/items/bamboo-shelf)
+- [Furniture_Jungle_Table](https://hytaleguide.net/items/bamboo-table)
+- [Furniture_Jungle_Torch](https://hytaleguide.net/items/tall-bamboo-torch)
+- [Furniture_Jungle_Trapdoor](https://hytaleguide.net/items/bamboo-trapdoor)
+- [Furniture_Jungle_Wardrobe](https://hytaleguide.net/items/bamboo-wardrobe)
+- [Furniture_Jungle_Window](https://hytaleguide.net/items/bamboo-window)
+- [Furniture_Kweebec_Bed](https://hytaleguide.net/items/kweebec-bed)
+- [Furniture_Kweebec_Candle](https://hytaleguide.net/items/kweebec-candle)
+- [Furniture_Kweebec_Chest_Large](https://hytaleguide.net/items/large-kweebec-chest)
+- [Furniture_Kweebec_Chest_Small](https://hytaleguide.net/items/small-kweebec-chest)
+- [Furniture_Kweebec_Door](https://hytaleguide.net/items/kweebec-door)
+- [Furniture_Kweebec_Ladder](https://hytaleguide.net/items/kweebec-ladder)
+- [Furniture_Kweebec_Lantern](https://hytaleguide.net/items/kweebec-lantern)
+- [Furniture_Kweebec_Lantern_Ceiling](https://hytaleguide.net/items/furniture-kweebec-lantern-ceiling)
+- [Furniture_Kweebec_Painting](https://hytaleguide.net/items/kweebec-painting)
+- [Furniture_Kweebec_Platform](https://hytaleguide.net/items/kweebec-platform)
+- [Furniture_Kweebec_Shelf](https://hytaleguide.net/items/kweebec-shelf)
+- [Furniture_Kweebec_Sign](https://hytaleguide.net/items/kweebec-sign)
+- [Furniture_Kweebec_Statue](https://hytaleguide.net/items/carved-kweebec-figure)
+- [Furniture_Kweebec_Stool](https://hytaleguide.net/items/kweebec-stool)
+- [Furniture_Kweebec_Table](https://hytaleguide.net/items/kweebec-table)
+- [Furniture_Kweebec_Trapdoor](https://hytaleguide.net/items/kweebec-trapdoor)
+- [Furniture_Kweebec_Wardrobe](https://hytaleguide.net/items/kweebec-wardrobe)
+- [Furniture_Kweebec_Window](https://hytaleguide.net/items/kweebec-window)
+- [Furniture_Lumberjack_Bed](https://hytaleguide.net/items/lumberjack-bed)
+- [Furniture_Lumberjack_Chair](https://hytaleguide.net/items/lumberjack-chair)
+- [Furniture_Lumberjack_Chest_Large](https://hytaleguide.net/items/large-lumberjack-chest)
+- [Furniture_Lumberjack_Chest_Small](https://hytaleguide.net/items/small-lumberjack-chest)
+- [Furniture_Lumberjack_Door](https://hytaleguide.net/items/lumberjack-door)
+- [Furniture_Lumberjack_Ladder](https://hytaleguide.net/items/lumberjack-ladder)
+- [Furniture_Lumberjack_Lamp](https://hytaleguide.net/items/lumberjack-lamp)
+- [Furniture_Lumberjack_Lantern](https://hytaleguide.net/items/lumberjack-candle)
+- [Furniture_Lumberjack_Painting](https://hytaleguide.net/items/lumberjack-painting)
+- [Furniture_Lumberjack_Platform](https://hytaleguide.net/items/lumberjack-platform)
+- [Furniture_Lumberjack_Shelf](https://hytaleguide.net/items/lumberjack-shelf)
+- [Furniture_Lumberjack_Sign](https://hytaleguide.net/items/lumberjack-sign)
+- [Furniture_Lumberjack_Table](https://hytaleguide.net/items/lumberjack-table)
+- [Furniture_Lumberjack_Trapdoor](https://hytaleguide.net/items/lumberjack-trapdoor)
+- [Furniture_Lumberjack_Wardrobe](https://hytaleguide.net/items/lumberjack-wardrobe)
+- [Furniture_Lumberjack_Window](https://hytaleguide.net/items/lumberjack-window)
+- [Furniture_Outlander_Banner](https://hytaleguide.net/items/outlander-banner)
+- [Furniture_Royal_Magic_Bed](https://hytaleguide.net/items/royal-magic-bed)
+- [Furniture_Royal_Magic_Carpet](https://hytaleguide.net/items/royal-magic-carpet)
+- [Furniture_Royal_Magic_Chair](https://hytaleguide.net/items/royal-magic-chair)
+- [Furniture_Royal_Magic_Chest_Large](https://hytaleguide.net/items/large-royal-magic-chest)
+- [Furniture_Royal_Magic_Chest_Small](https://hytaleguide.net/items/small-royal-magic-chest)
+- [Furniture_Royal_Magic_Couch](https://hytaleguide.net/items/royal-magic-couch)
+- [Furniture_Royal_Magic_Medium_Door](https://hytaleguide.net/items/royal-magic-door)
+- [Furniture_Royal_Magic_Pot](https://hytaleguide.net/items/royal-magic-pot)
+- [Furniture_Royal_Magic_Potion_Glow](https://hytaleguide.net/items/furniture-royal-magic-potion-glow)
+- [Furniture_Royal_Magic_Potion_Glow_Ceiling](https://hytaleguide.net/items/glowing-royal-magic-potion)
+- [Furniture_Royal_Magic_Table](https://hytaleguide.net/items/royal-magic-table)
+- [Furniture_Royal_Magic_Wardrobe](https://hytaleguide.net/items/royal-magic-wardrobe)
+- [Furniture_Royal_Magic_Window](https://hytaleguide.net/items/royal-magic-window)
+- [Furniture_Scarak_Hive_Chest_Large](https://hytaleguide.net/items/large-scarak-hive-chest)
+- [Furniture_Scarak_Hive_Chest_Small](https://hytaleguide.net/items/small-scarak-hive-chest)
+- [Furniture_Scarak_Hive_Door_Large](https://hytaleguide.net/items/large-scarak-hive-door)
+- [Furniture_Scarak_Hive_Door_Medium](https://hytaleguide.net/items/medium-scarak-hive-door)
+- [Furniture_Scarak_Hive_Ladder](https://hytaleguide.net/items/scarak-vine)
+- [Furniture_Scarak_Hive_Lamp](https://hytaleguide.net/items/furniture-scarak-hive-lamp)
+- [Furniture_Scarak_Hive_Lantern](https://hytaleguide.net/items/glowing-scarak-larva)
+- [Furniture_Scarak_Hive_Platform](https://hytaleguide.net/items/scarak-hive-platform)
+- [Furniture_Scarak_Hive_Window](https://hytaleguide.net/items/scarak-hive-window)
+- [Furniture_Tavern_Barrel](https://hytaleguide.net/items/tavern-barrel)
+- [Furniture_Tavern_Bed](https://hytaleguide.net/items/tavern-bed)
+- [Furniture_Tavern_Bench](https://hytaleguide.net/items/tavern-bench)
+- [Furniture_Tavern_Candle](https://hytaleguide.net/items/tavern-candle)
+- [Furniture_Tavern_Chair](https://hytaleguide.net/items/tavern-chair)
+- [Furniture_Tavern_Chandelier](https://hytaleguide.net/items/tavern-chandelier)
+- [Furniture_Tavern_Chest_Large](https://hytaleguide.net/items/large-tavern-chest)
+- [Furniture_Tavern_Chest_Small](https://hytaleguide.net/items/small-tavern-chest)
+- [Furniture_Tavern_Door](https://hytaleguide.net/items/tavern-door)
+- [Furniture_Tavern_Ladder](https://hytaleguide.net/items/tavern-ladder)
+- [Furniture_Tavern_Painting](https://hytaleguide.net/items/tavern-painting)
+- [Furniture_Tavern_Planter](https://hytaleguide.net/items/tavern-planter)
+- [Furniture_Tavern_Platform](https://hytaleguide.net/items/tavern-platform)
+- [Furniture_Tavern_Shelf](https://hytaleguide.net/items/tavern-shelf)
+- [Furniture_Tavern_Sign](https://hytaleguide.net/items/tavern-sign)
+- [Furniture_Tavern_Stool](https://hytaleguide.net/items/tavern-stool)
+- [Furniture_Tavern_Table](https://hytaleguide.net/items/tavern-table)
+- [Furniture_Tavern_Trapdoor](https://hytaleguide.net/items/tavern-trapdoor)
+- [Furniture_Tavern_Wardrobe](https://hytaleguide.net/items/tavern-wardrobe)
+- [Furniture_Tavern_Window](https://hytaleguide.net/items/tavern-window)
+- [Furniture_Temple_Dark_Bed](https://hytaleguide.net/items/dark-temple-bed)
+- [Furniture_Temple_Dark_Brazier](https://hytaleguide.net/items/dark-temple-brazier)
+- [Furniture_Temple_Dark_Candle](https://hytaleguide.net/items/dark-temple-candle)
+- [Furniture_Temple_Dark_Chest_Large](https://hytaleguide.net/items/large-dark-temple-chest)
+- [Furniture_Temple_Dark_Chest_Small](https://hytaleguide.net/items/small-dark-temple-chest)
+- [Furniture_Temple_Dark_Coffin](https://hytaleguide.net/items/dark-temple-coffin)
+- [Furniture_Temple_Dark_Door](https://hytaleguide.net/items/dark-temple-door)
+- [Furniture_Temple_Dark_Door_Large](https://hytaleguide.net/items/large-dark-temple-door)
+- [Furniture_Temple_Dark_Door_Medium](https://hytaleguide.net/items/medium-dark-temple-door)
+- [Furniture_Temple_Dark_Ladder](https://hytaleguide.net/items/dark-temple-ladder)
+- [Furniture_Temple_Dark_Platform](https://hytaleguide.net/items/dark-temple-platform)
+- [Furniture_Temple_Dark_Pot](https://hytaleguide.net/items/dark-temple-jar)
+- [Furniture_Temple_Dark_Shelf](https://hytaleguide.net/items/dark-temple-shelf)
+- [Furniture_Temple_Dark_Sign](https://hytaleguide.net/items/dark-temple-sign)
+- [Furniture_Temple_Dark_Statue](https://hytaleguide.net/items/statue-of-the-watcher)
+- [Furniture_Temple_Dark_Statue_Gaia](https://hytaleguide.net/items/outlander-deity-statue)
+- [Furniture_Temple_Dark_Stool](https://hytaleguide.net/items/dark-temple-stool)
+- [Furniture_Temple_Dark_Table](https://hytaleguide.net/items/dark-temple-table)
+- [Furniture_Temple_Dark_Trapdoor](https://hytaleguide.net/items/dark-temple-trapdoor)
+- [Furniture_Temple_Dark_Wardrobe](https://hytaleguide.net/items/dark-temple-wardrobe)
+- [Furniture_Temple_Dark_Window](https://hytaleguide.net/items/dark-temple-window)
+- [Furniture_Temple_Earth_Door](https://hytaleguide.net/items/earth-temple-door)
+- [Furniture_Temple_Emerald_Bed](https://hytaleguide.net/items/overgrown-temple-bed)
+- [Furniture_Temple_Emerald_Chest_Large](https://hytaleguide.net/items/large-overgrown-temple-chest)
+- [Furniture_Temple_Emerald_Chest_Small](https://hytaleguide.net/items/small-overgrown-temple-chest)
+- [Furniture_Temple_Emerald_Door](https://hytaleguide.net/items/overgrown-temple-door)
+- [Furniture_Temple_Emerald_Door_Medium](https://hytaleguide.net/items/medium-overgrown-temple-door)
+- [Furniture_Temple_Emerald_Ladder](https://hytaleguide.net/items/overgrown-temple-ladder)
+- [Furniture_Temple_Emerald_Platform](https://hytaleguide.net/items/overgrown-temple-platform)
+- [Furniture_Temple_Emerald_Shelf](https://hytaleguide.net/items/overgrown-temple-shelf)
+- [Furniture_Temple_Emerald_Sign](https://hytaleguide.net/items/overgrown-temple-sign)
+- [Furniture_Temple_Emerald_Statue](https://hytaleguide.net/items/overgrown-wooden-figure)
+- [Furniture_Temple_Emerald_Stool](https://hytaleguide.net/items/overgrown-temple-stool)
+- [Furniture_Temple_Emerald_Table](https://hytaleguide.net/items/overgrown-temple-table)
+- [Furniture_Temple_Emerald_Torch](https://hytaleguide.net/items/overgrown-temple-torch)
+- [Furniture_Temple_Emerald_Trapdoor](https://hytaleguide.net/items/overgrown-temple-trapdoor)
+- [Furniture_Temple_Emerald_Wardrobe](https://hytaleguide.net/items/overgrown-temple-wardrobe)
+- [Furniture_Temple_Emerald_Window](https://hytaleguide.net/items/overgrown-temple-window)
+- [Furniture_Temple_Light_Bed](https://hytaleguide.net/items/light-temple-altar)
+- [Furniture_Temple_Light_Bench](https://hytaleguide.net/items/light-temple-bench)
+- [Furniture_Temple_Light_Brazier](https://hytaleguide.net/items/light-temple-brazier)
+- [Furniture_Temple_Light_Chest_Large](https://hytaleguide.net/items/large-light-temple-chest)
+- [Furniture_Temple_Light_Chest_Small](https://hytaleguide.net/items/small-light-temple-chest)
+- [Furniture_Temple_Light_Door](https://hytaleguide.net/items/light-temple-door)
+- [Furniture_Temple_Light_Door_Large](https://hytaleguide.net/items/large-light-temple-door)
+- [Furniture_Temple_Light_Door_Medilum](https://hytaleguide.net/items/medium-light-temple-door)
+- [Furniture_Temple_Light_Ladder](https://hytaleguide.net/items/light-temple-ladder)
+- [Furniture_Temple_Light_Lantern](https://hytaleguide.net/items/light-temple-lantern)
+- [Furniture_Temple_Light_Lantern_Ceiling](https://hytaleguide.net/items/furniture-temple-light-lantern-ceiling)
+- [Furniture_Temple_Light_Painting](https://hytaleguide.net/items/light-temple-painting)
+- [Furniture_Temple_Light_Platform](https://hytaleguide.net/items/light-temple-platform)
+- [Furniture_Temple_Light_Pot](https://hytaleguide.net/items/light-temple-pot)
+- [Furniture_Temple_Light_Shelf](https://hytaleguide.net/items/light-temple-shelf)
+- [Furniture_Temple_Light_Statue](https://hytaleguide.net/items/statue-of-a-slumbering-deity)
+- [Furniture_Temple_Light_Stool](https://hytaleguide.net/items/light-temple-stool)
+- [Furniture_Temple_Light_Table](https://hytaleguide.net/items/light-temple-table)
+- [Furniture_Temple_Light_Trapdoor](https://hytaleguide.net/items/light-temple-trapdoor)
+- [Furniture_Temple_Light_Wardrobe](https://hytaleguide.net/items/light-temple-wardrobe)
+- [Furniture_Temple_Light_Window](https://hytaleguide.net/items/light-temple-window)
+- [Furniture_Temple_Scarak_Brazier](https://hytaleguide.net/items/primordial-scarak-brazier)
+- [Furniture_Temple_Scarak_Chest_Large](https://hytaleguide.net/items/large-primordial-scarak-chest)
+- [Furniture_Temple_Scarak_Chest_Small](https://hytaleguide.net/items/small-primordial-scarak-chest)
+- [Furniture_Temple_Scarak_Door_Large](https://hytaleguide.net/items/large-primordial-scarak-door)
+- [Furniture_Temple_Scarak_Door_Medium](https://hytaleguide.net/items/medium-primordial-scarak-door)
+- [Furniture_Temple_Scarak_Ladder](https://hytaleguide.net/items/primordial-scarak-ladder)
+- [Furniture_Temple_Scarak_Lamp](https://hytaleguide.net/items/primordial-scarak-lamp)
+- [Furniture_Temple_Scarak_Lantern](https://hytaleguide.net/items/primordial-scarak-lantern)
+- [Furniture_Temple_Scarak_Planter](https://hytaleguide.net/items/primordial-scarak-planter)
+- [Furniture_Temple_Scarak_Platform](https://hytaleguide.net/items/primordial-scarak-platform)
+- [Furniture_Temple_Scarak_Pot](https://hytaleguide.net/items/primordial-scarak-pot)
+- [Furniture_Temple_Scarak_Secondary_Pot](https://hytaleguide.net/items/furniture-temple-scarak-secondary-pot)
+- [Furniture_Temple_Scarak_Statue](https://hytaleguide.net/items/statue-of-the-founding-builder)
+- [Furniture_Temple_Scarak_Window](https://hytaleguide.net/items/primordial-scarak-window)
+- [Furniture_Temple_Wind_Candle](https://hytaleguide.net/items/wind-temple-candle)
+- [Furniture_Temple_Wind_Chandelier](https://hytaleguide.net/items/wind-temple-chandelier)
+- [Furniture_Temple_Wind_Chest_Large](https://hytaleguide.net/items/large-wind-temple-chest)
+- [Furniture_Temple_Wind_Chest_Small](https://hytaleguide.net/items/small-wind-temple-chest)
+- [Furniture_Temple_Wind_Door](https://hytaleguide.net/items/wind-temple-door)
+- [Furniture_Temple_Wind_Door_Large](https://hytaleguide.net/items/large-wind-temple-door)
+- [Furniture_Temple_Wind_Door_Medium](https://hytaleguide.net/items/medium-wind-temple-door)
+- [Furniture_Temple_Wind_Ladder](https://hytaleguide.net/items/wind-temple-ladder)
+- [Furniture_Temple_Wind_Platform](https://hytaleguide.net/items/wind-temple-platform)
+- [Furniture_Temple_Wind_Pot](https://hytaleguide.net/items/wind-temple-pot)
+- [Furniture_Temple_Wind_Sign](https://hytaleguide.net/items/wind-temple-sign)
+- [Furniture_Temple_Wind_Statue](https://hytaleguide.net/items/statue-of-a-legendary-beast)
+- [Furniture_Temple_Wind_Statue_Gaia](https://hytaleguide.net/items/statue-of-a-silent-diety)
+- [Furniture_Temple_Wind_Stool](https://hytaleguide.net/items/wind-temple-stool)
+- [Furniture_Temple_Wind_Table](https://hytaleguide.net/items/wind-temple-table)
+- [Furniture_Temple_Wind_Trapdoor](https://hytaleguide.net/items/wind-temple-trapdoor)
+- [Furniture_Temple_Wind_Wardrobe](https://hytaleguide.net/items/wind-temple-wardrobe)
+- [Furniture_Temple_Wind_Window](https://hytaleguide.net/items/wind-temple-window)
+- [Furniture_Village_Bed](https://hytaleguide.net/items/simple-wooden-bed)
+- [Furniture_Village_Bench](https://hytaleguide.net/items/simple-wooden-bench)
+- [Furniture_Village_Bookcase](https://hytaleguide.net/items/simple-wooden-bookshelf)
+- [Furniture_Village_Brazier](https://hytaleguide.net/items/simple-stone-brazier)
+- [Furniture_Village_Chair](https://hytaleguide.net/items/simple-wooden-chair)
+- [Furniture_Village_Chest_Large](https://hytaleguide.net/items/large-iron-chest)
+- [Furniture_Village_Chest_Small](https://hytaleguide.net/items/small-chest)
+- [Furniture_Village_Coffin](https://hytaleguide.net/items/stone-coffin)
+- [Furniture_Village_Counter](https://hytaleguide.net/items/simple-wooden-counter)
+- [Furniture_Village_Crate](https://hytaleguide.net/items/simple-wooden-crate)
+- [Furniture_Village_Door](https://hytaleguide.net/items/simple-wooden-door)
+- [Furniture_Village_Ladder](https://hytaleguide.net/items/simple-wooden-ladder)
+- [Furniture_Village_Painting_1x1](https://hytaleguide.net/items/simple-painting-canvas-1x1)
+- [Furniture_Village_Painting_1x2](https://hytaleguide.net/items/simple-portrait-painting)
+- [Furniture_Village_Painting_2x1](https://hytaleguide.net/items/simple-landscape-painting)
+- [Furniture_Village_Painting_2x2](https://hytaleguide.net/items/simple-square-painting)
+- [Furniture_Village_Painting_3x2](https://hytaleguide.net/items/large-simple-landscape-painting)
+- [Furniture_Village_Planter](https://hytaleguide.net/items/stone-planter)
+- [Furniture_Village_Platform](https://hytaleguide.net/items/simple-wooden-platform)
+- [Furniture_Village_Pot](https://hytaleguide.net/items/clay-pot)
+- [Furniture_Village_Shelf_Full](https://hytaleguide.net/items/simple-wooden-shelf)
+- [Furniture_Village_Sign](https://hytaleguide.net/items/simple-wooden-sign)
+- [Furniture_Village_Statue](https://hytaleguide.net/items/statue-of-an-ancient-knight)
+- [Furniture_Village_Stool](https://hytaleguide.net/items/simple-wooden-stool)
+- [Furniture_Village_Table](https://hytaleguide.net/items/simple-wooden-table)
+- [Furniture_Village_Tombstone](https://hytaleguide.net/items/tombstone)
+- [Furniture_Village_Trapdoor](https://hytaleguide.net/items/simple-wooden-trapdoor)
+- [Furniture_Village_Wardrobe](https://hytaleguide.net/items/simple-wooden-wardrobe)
+- [Furniture_Village_Window](https://hytaleguide.net/items/simple-wooden-window)
+
+## Halloween
+
+- [Halloween_Basket_Pumpkin](https://hytaleguide.net/items/halloween-pumpkin-basket)
+- [Halloween_Basket_Straw](https://hytaleguide.net/items/halloween-straw-basket)
+- [Halloween_Broomstick](https://hytaleguide.net/items/halloween-broomstick)
+- [Halloween_Wagon](https://hytaleguide.net/items/halloween-wagon)
+
+## WinterHoliday
+
+- [WinterHoliday_Cane](https://hytaleguide.net/items/cane-ornament)
+- [WinterHoliday_Garland](https://hytaleguide.net/items/winter-garland)
+- [WinterHoliday_Lights](https://hytaleguide.net/items/winter-lights)
+- [WinterHoliday_Ornament_Bauble](https://hytaleguide.net/items/winter-bauble)
+- [WinterHoliday_Single_Light](https://hytaleguide.net/items/winter-light)
+- [WinterHoliday_Snowflake](https://hytaleguide.net/items/snowflake-tree-topper)
+- [WinterHoliday_Snowman](https://hytaleguide.net/items/snowman)
+- [WinterHoliday_Stocking](https://hytaleguide.net/items/winter-stocking)
+- [WinterHoliday_WinterRoll](https://hytaleguide.net/items/winter-roll)
+
+# Equipment
+
+## Armor
+
+- [Armor_Adamantite_Chest](https://hytaleguide.net/items/adamantite-cuirass)
+- [Armor_Adamantite_Hands](https://hytaleguide.net/items/adamantite-gauntlets)
+- [Armor_Adamantite_Head](https://hytaleguide.net/items/adamantite-helm)
+- [Armor_Adamantite_Legs](https://hytaleguide.net/items/adamantite-greaves)
+- [Armor_Bronze_Chest](https://hytaleguide.net/items/bronze-cuirass)
+- [Armor_Bronze_Hands](https://hytaleguide.net/items/bronze-gauntlets)
+- [Armor_Bronze_Head](https://hytaleguide.net/items/bronze-helm)
+- [Armor_Bronze_Legs](https://hytaleguide.net/items/bronze-greaves)
+- [Armor_Bronze_Ornate_Chest](https://hytaleguide.net/items/ornate-bronze-chest)
+- [Armor_Bronze_Ornate_Hands](https://hytaleguide.net/items/ornate-bronze-gauntlets)
+- [Armor_Bronze_Ornate_Head](https://hytaleguide.net/items/ornate-bronze-helm)
+- [Armor_Cloth_Cindercloth_Chest](https://hytaleguide.net/items/cindercloth-tunic)
+- [Armor_Cloth_Cindercloth_Hands](https://hytaleguide.net/items/cindercloth-gloves)
+- [Armor_Cloth_Cindercloth_Head](https://hytaleguide.net/items/cindercloth-hood)
+- [Armor_Cloth_Cindercloth_Legs](https://hytaleguide.net/items/cindercloth-pants)
+- [Armor_Cloth_Cotton_Chest](https://hytaleguide.net/items/cotton-tunic)
+- [Armor_Cloth_Cotton_Hands](https://hytaleguide.net/items/cotton-gloves)
+- [Armor_Cloth_Cotton_Head](https://hytaleguide.net/items/cotton-hood)
+- [Armor_Cloth_Cotton_Legs](https://hytaleguide.net/items/cotton-pants)
+- [Armor_Cloth_Linen_Chest](https://hytaleguide.net/items/linen-tunic)
+- [Armor_Cloth_Linen_Hands](https://hytaleguide.net/items/linen-gloves)
+- [Armor_Cloth_Linen_Head](https://hytaleguide.net/items/linen-hood)
+- [Armor_Cloth_Linen_Legs](https://hytaleguide.net/items/linen-pants)
+- [Armor_Cloth_Silk_Chest](https://hytaleguide.net/items/silk-tunic)
+- [Armor_Cloth_Silk_Hands](https://hytaleguide.net/items/silk-bracelets)
+- [Armor_Cloth_Silk_Head](https://hytaleguide.net/items/silk-diadem)
+- [Armor_Cloth_Silk_Legs](https://hytaleguide.net/items/silk-pants)
+- [Armor_Cloth_Wool_Chest](https://hytaleguide.net/items/woolen-cuirass)
+- [Armor_Cloth_Wool_Hands](https://hytaleguide.net/items/woolen-gauntlets)
+- [Armor_Cloth_Wool_Head](https://hytaleguide.net/items/woolen-helm)
+- [Armor_Cloth_Wool_Legs](https://hytaleguide.net/items/woolen-pants)
+- [Armor_Cobalt_Chest](https://hytaleguide.net/items/cobalt-cuirass)
+- [Armor_Cobalt_Hands](https://hytaleguide.net/items/cobalt-gauntlets)
+- [Armor_Cobalt_Head](https://hytaleguide.net/items/cobalt-helm)
+- [Armor_Cobalt_Legs](https://hytaleguide.net/items/cobalt-greaves)
+- [Armor_Copper_Chest](https://hytaleguide.net/items/copper-cuirass)
+- [Armor_Copper_Hands](https://hytaleguide.net/items/copper-gauntlets)
+- [Armor_Copper_Head](https://hytaleguide.net/items/copper-helm)
+- [Armor_Copper_Legs](https://hytaleguide.net/items/copper-greaves)
+- [Armor_Diving_Crude_Chest](https://hytaleguide.net/items/crude-diving-suit)
+- [Armor_Diving_Crude_Hands](https://hytaleguide.net/items/crude-diving-gloves)
+- [Armor_Diving_Crude_Head](https://hytaleguide.net/items/crude-diving-mask)
+- [Armor_Diving_Crude_Legs](https://hytaleguide.net/items/crude-diving-flippers)
+- [Armor_Iron_Chest](https://hytaleguide.net/items/iron-cuirass)
+- [Armor_Iron_Hands](https://hytaleguide.net/items/iron-gauntlets)
+- [Armor_Iron_Head](https://hytaleguide.net/items/iron-helm)
+- [Armor_Iron_Legs](https://hytaleguide.net/items/iron-greaves)
+- [Armor_Kweebec_Chest](https://hytaleguide.net/items/kweebec-cuirass)
+- [Armor_Kweebec_Head](https://hytaleguide.net/items/kweebec-helm)
+- [Armor_Leather_Heavy_Chest](https://hytaleguide.net/items/heavy-leather-cuirass)
+- [Armor_Leather_Heavy_Hands](https://hytaleguide.net/items/heavy-leather-gauntlets)
+- [Armor_Leather_Heavy_Head](https://hytaleguide.net/items/heavy-leather-helm)
+- [Armor_Leather_Heavy_Legs](https://hytaleguide.net/items/heavy-leather-pants)
+- [Armor_Leather_Light_Chest](https://hytaleguide.net/items/light-leather-cuirass)
+- [Armor_Leather_Light_Hands](https://hytaleguide.net/items/light-leather-gauntlets)
+- [Armor_Leather_Light_Head](https://hytaleguide.net/items/light-leather-helm)
+- [Armor_Leather_Light_Legs](https://hytaleguide.net/items/light-leather-pants)
+- [Armor_Leather_Medium_Chest](https://hytaleguide.net/items/tmp-medium-leather-cuirass)
+- [Armor_Leather_Medium_Hands](https://hytaleguide.net/items/tmp-medium-leather-gloves)
+- [Armor_Leather_Medium_Head](https://hytaleguide.net/items/tmp-medium-leather-helm)
+- [Armor_Leather_Medium_Legs](https://hytaleguide.net/items/tmp-medium-leather-pants)
+- [Armor_Leather_Raven_Chest](https://hytaleguide.net/items/raven-leather-cuirass)
+- [Armor_Leather_Raven_Hands](https://hytaleguide.net/items/raven-leather-gauntlets)
+- [Armor_Leather_Raven_Head](https://hytaleguide.net/items/raven-leather-hood)
+- [Armor_Leather_Raven_Legs](https://hytaleguide.net/items/raven-leather-pants)
+- [Armor_Leather_Soft_Chest](https://hytaleguide.net/items/soft-leather-cuirass)
+- [Armor_Leather_Soft_Hands](https://hytaleguide.net/items/soft-leather-gauntlets)
+- [Armor_Leather_Soft_Head](https://hytaleguide.net/items/soft-leather-hood)
+- [Armor_Leather_Soft_Legs](https://hytaleguide.net/items/soft-leather-pants)
+- [Armor_Mithril_Chest](https://hytaleguide.net/items/mithril-cuirass)
+- [Armor_Mithril_Hands](https://hytaleguide.net/items/mithril-gauntlets)
+- [Armor_Mithril_Head](https://hytaleguide.net/items/mithril-helm)
+- [Armor_Mithril_Legs](https://hytaleguide.net/items/mithril-greaves)
+- [Armor_Onyxium_Chest](https://hytaleguide.net/items/onyxium-cuirass)
+- [Armor_Onyxium_Hands](https://hytaleguide.net/items/onyxium-gauntlets)
+- [Armor_Onyxium_Head](https://hytaleguide.net/items/onyxium-helm)
+- [Armor_Onyxium_Legs](https://hytaleguide.net/items/onyxium-greaves)
+- [Armor_Prisma_Chest](https://hytaleguide.net/items/prisma-cuirass)
+- [Armor_Prisma_Hands](https://hytaleguide.net/items/prisma-gauntlets)
+- [Armor_Prisma_Head](https://hytaleguide.net/items/prisma-helm)
+- [Armor_Prisma_Legs](https://hytaleguide.net/items/prisma-greaves)
+- [Armor_QA_Chest](https://hytaleguide.net/items/qa-cuirass-hp)
+- [Armor_QA_Hands](https://hytaleguide.net/items/qa-hands-signature-energy)
+- [Armor_QA_Legs](https://hytaleguide.net/items/qa-legs-stamina-energy)
+- [Armor_Steel_Ancient_Chest](https://hytaleguide.net/items/ancient-steel-cuirass)
+- [Armor_Steel_Ancient_Hands](https://hytaleguide.net/items/ancient-steel-gauntlets)
+- [Armor_Steel_Ancient_Head](https://hytaleguide.net/items/ancient-steel-helm)
+- [Armor_Steel_Ancient_Legs](https://hytaleguide.net/items/ancient-steel-greaves)
+- [Armor_Steel_Chest](https://hytaleguide.net/items/steel-cuirass)
+- [Armor_Steel_Hands](https://hytaleguide.net/items/steel-gauntlets)
+- [Armor_Steel_Head](https://hytaleguide.net/items/steel-helm)
+- [Armor_Steel_Legs](https://hytaleguide.net/items/steel-greaves)
+- [Armor_Thorium_Chest](https://hytaleguide.net/items/thorium-cuirass)
+- [Armor_Thorium_Hands](https://hytaleguide.net/items/thorium-gauntlets)
+- [Armor_Thorium_Head](https://hytaleguide.net/items/thorium-helm)
+- [Armor_Thorium_Legs](https://hytaleguide.net/items/thorium-greaves)
+- [Armor_Trooper_Chest](https://hytaleguide.net/items/troopers-cuirass)
+- [Armor_Trooper_Head](https://hytaleguide.net/items/troopers-helm)
+- [Armor_Trooper_Legs](https://hytaleguide.net/items/troopers-pants)
+- [Armor_Trork_Chest](https://hytaleguide.net/items/trork-warrior-cuirass)
+- [Armor_Trork_Hands](https://hytaleguide.net/items/trork-warrior-gauntlets)
+- [Armor_Trork_Head](https://hytaleguide.net/items/trork-warrior-helm)
+- [Armor_Trork_Legs](https://hytaleguide.net/items/trork-warrior-pants)
+- [Armor_Wood_Chest](https://hytaleguide.net/items/wooden-cuirass)
+- [Armor_Wood_Hands](https://hytaleguide.net/items/wooden-gauntlets)
+- [Armor_Wood_Head](https://hytaleguide.net/items/wooden-helm)
+- [Armor_Wood_Legs](https://hytaleguide.net/items/wooden-greaves)
+- [Armor_Wool_Chest](https://hytaleguide.net/items/woolen-tunic)
+- [Armor_Wool_Hands](https://hytaleguide.net/items/woolen-bracelets)
+- [Armor_Wool_Head](https://hytaleguide.net/items/woolen-hood)
+- [Armor_Wool_Legs](https://hytaleguide.net/items/woolen-boots)
+
+## Glider
+
+- [Glider](https://hytaleguide.net/items/glider)
+
+## Tool
+
+- [Tool_Bark_Scraper](https://hytaleguide.net/items/bark-scraper)
+- [Tool_Capture_Crate](https://hytaleguide.net/items/capture-crate)
+- [Tool_Feedbag](https://hytaleguide.net/items/feed-bag)
+- [Tool_Fertilizer](https://hytaleguide.net/items/fertilizer-bag)
+- [Tool_Fertilizer_Crystal](https://hytaleguide.net/items/crystal-fertilizer-bag)
+- [Tool_Fishing_Trap](https://hytaleguide.net/items/fishing-trap)
+- [Tool_Growth_Potion](https://hytaleguide.net/items/growth-stage-potion)
+- [Tool_Hammer_Crude](https://hytaleguide.net/items/crude-hammer)
+- [Tool_Hammer_Iron](https://hytaleguide.net/items/iron-hammer)
+- [Tool_Hatchet_Adamantite](https://hytaleguide.net/items/adamantite-hatchet)
+- [Tool_Hatchet_Cobalt](https://hytaleguide.net/items/cobalt-hatchet)
+- [Tool_Hatchet_Copper](https://hytaleguide.net/items/copper-hatchet)
+- [Tool_Hatchet_Crude](https://hytaleguide.net/items/crude-hatchet)
+- [Tool_Hatchet_Iron](https://hytaleguide.net/items/iron-hatchet)
+- [Tool_Hatchet_Mithril](https://hytaleguide.net/items/mithril-hatchet)
+- [Tool_Hatchet_Onyxium](https://hytaleguide.net/items/onyxium-hatchet)
+- [Tool_Hatchet_Thorium](https://hytaleguide.net/items/thorium-hatchet)
+- [Tool_Hatchet_Wood](https://hytaleguide.net/items/wooden-hatchet)
+- [Tool_Hoe_Copper](https://hytaleguide.net/items/copper-hoe)
+- [Tool_Hoe_Crude](https://hytaleguide.net/items/crude-hoe)
+- [Tool_Hoe_Iron](https://hytaleguide.net/items/iron-hoe)
+- [Tool_Hoe_Thorium](https://hytaleguide.net/items/thorium-hoe)
+- [Tool_Map](https://hytaleguide.net/items/map)
+- [Tool_Pickaxe_Adamantite](https://hytaleguide.net/items/adamantite-pickaxe)
+- [Tool_Pickaxe_Cobalt](https://hytaleguide.net/items/cobalt-pickaxe)
+- [Tool_Pickaxe_Copper](https://hytaleguide.net/items/copper-pickaxe)
+- [Tool_Pickaxe_Crude](https://hytaleguide.net/items/crude-pickaxe)
+- [Tool_Pickaxe_Iron](https://hytaleguide.net/items/iron-pickaxe)
+- [Tool_Pickaxe_Mithril](https://hytaleguide.net/items/mithril-pickaxe)
+- [Tool_Pickaxe_Onyxium](https://hytaleguide.net/items/onyxium-pickaxe)
+- [Tool_Pickaxe_Scrap](https://hytaleguide.net/items/scrap-pickaxe)
+- [Tool_Pickaxe_Thorium](https://hytaleguide.net/items/thorium-pickaxe)
+- [Tool_Pickaxe_Wood](https://hytaleguide.net/items/wooden-pickaxe)
+- [Tool_Repair_Kit_Crude](https://hytaleguide.net/items/crude-repair-kit)
+- [Tool_Repair_Kit_Iron](https://hytaleguide.net/items/repair-kit)
+- [Tool_Repair_Kit_Rare](https://hytaleguide.net/items/rare-repair-kit)
+- [Tool_Sap_Shunt](https://hytaleguide.net/items/sap-shunt)
+- [Tool_Shears_Basic](https://hytaleguide.net/items/crude-shears)
+- [Tool_Shovel_Cobalt](https://hytaleguide.net/items/cobalt-shovel)
+- [Tool_Shovel_Copper](https://hytaleguide.net/items/copper-shovel)
+- [Tool_Shovel_Crude](https://hytaleguide.net/items/crude-shovel)
+- [Tool_Shovel_Iron](https://hytaleguide.net/items/iron-shovel)
+- [Tool_Shovel_Thorium](https://hytaleguide.net/items/thorium-shovel)
+- [Tool_Sickle_Copper](https://hytaleguide.net/items/copper-sickle)
+- [Tool_Sickle_Crude](https://hytaleguide.net/items/crude-sickle)
+- [Tool_Sickle_Iron](https://hytaleguide.net/items/iron-sickle)
+- [Tool_Sickle_Steel_Rusty](https://hytaleguide.net/items/rusty-steel-sickle)
+- [Tool_Trap_Bait](https://hytaleguide.net/items/fish-bait-wild)
+- [Tool_Watering_Can](https://hytaleguide.net/items/empty-watering-can)
+
+## Upgrade
+
+- [Upgrade_Backpack_1](https://hytaleguide.net/items/unlock-backpack)
+- [Upgrade_Backpack_2](https://hytaleguide.net/items/backpack-upgrade-i)
+- [Upgrade_Backpack_3](https://hytaleguide.net/items/backpack-upgrade-ii)
+
+## Utility
+
+- [Utility_Bag_Seed](https://hytaleguide.net/items/seed-bag)
+- [Utility_Helipack](https://hytaleguide.net/items/helipack)
+- [Utility_Leather_Backpack](https://hytaleguide.net/items/leather-backpack)
+- [Utility_Leather_Medium_Backpack](https://hytaleguide.net/items/big-backpack)
+- [Utility_Leather_Quiver](https://hytaleguide.net/items/leather-quiver)
+
+## Weapon
+
+- [Weapon_Arrow_Clearshot](https://hytaleguide.net/items/clearshot-arrow)
+- [Weapon_Arrow_Crude](https://hytaleguide.net/items/crude-arrow)
+- [Weapon_Arrow_Deadeye](https://hytaleguide.net/items/deadeye-arrow)
+- [Weapon_Arrow_Iron](https://hytaleguide.net/items/iron-arrow)
+- [Weapon_Arrow_Trueshot](https://hytaleguide.net/items/trueshot-arrow)
+- [Weapon_Assault_Rifle](https://hytaleguide.net/items/rifle)
+- [Weapon_Axe_Adamantite](https://hytaleguide.net/items/adamantite-axe)
+- [Weapon_Axe_Bone](https://hytaleguide.net/items/feran-bone-axe)
+- [Weapon_Axe_Cobalt](https://hytaleguide.net/items/cobalt-axe)
+- [Weapon_Axe_Copper](https://hytaleguide.net/items/copper-axe)
+- [Weapon_Axe_Crude](https://hytaleguide.net/items/crude-axe)
+- [Weapon_Axe_Doomed](https://hytaleguide.net/items/doomed-outlander-axe)
+- [Weapon_Axe_Iron](https://hytaleguide.net/items/iron-axe)
+- [Weapon_Axe_Iron_Rusty](https://hytaleguide.net/items/rusty-iron-axe)
+- [Weapon_Axe_Mithril](https://hytaleguide.net/items/mithril-axe)
+- [Weapon_Axe_Onyxium](https://hytaleguide.net/items/onyxium-axe)
+- [Weapon_Axe_Stone_Trork](https://hytaleguide.net/items/stone-trork-axe)
+- [Weapon_Axe_Thorium](https://hytaleguide.net/items/thorium-axe)
+- [Weapon_Axe_Tribal](https://hytaleguide.net/items/tribal-axe)
+- [Weapon_Battleaxe_Adamantite](https://hytaleguide.net/items/adamantite-battleaxe)
+- [Weapon_Battleaxe_Cobalt](https://hytaleguide.net/items/cobalt-battleaxe)
+- [Weapon_Battleaxe_Copper](https://hytaleguide.net/items/copper-battleaxe)
+- [Weapon_Battleaxe_Crude](https://hytaleguide.net/items/crude-battleaxe)
+- [Weapon_Battleaxe_Doomed](https://hytaleguide.net/items/doomed-outlander-battleaxe)
+- [Weapon_Battleaxe_Iron](https://hytaleguide.net/items/iron-battleaxe)
+- [Weapon_Battleaxe_Mithril](https://hytaleguide.net/items/mithril-battleaxe)
+- [Weapon_Battleaxe_Onyxium](https://hytaleguide.net/items/onyxium-battleaxe)
+- [Weapon_Battleaxe_Scarab](https://hytaleguide.net/items/scarab-battleaxe)
+- [Weapon_Battleaxe_Scythe_Void](https://hytaleguide.net/items/void-scythe)
+- [Weapon_Battleaxe_Steel_Rusty](https://hytaleguide.net/items/rusty-steel-halberd)
+- [Weapon_Battleaxe_Stone_Trork](https://hytaleguide.net/items/stone-trork-battleaxe)
+- [Weapon_Battleaxe_Thorium](https://hytaleguide.net/items/thorium-battleaxe)
+- [Weapon_Battleaxe_Tribal](https://hytaleguide.net/items/tribal-battleaxe)
+- [Weapon_Battleaxe_Wood_Fence](https://hytaleguide.net/items/wooden-fence)
+- [Weapon_Blowgun_Tribal](https://hytaleguide.net/items/tribal-blowgun)
+- [Weapon_Bomb](https://hytaleguide.net/items/bomb)
+- [Weapon_Bomb_Continuous](https://hytaleguide.net/items/continuous-fire-bomb)
+- [Weapon_Bomb_Fire](https://hytaleguide.net/items/fire-bomb)
+- [Weapon_Bomb_Large_Fire](https://hytaleguide.net/items/large-fire-bomb)
+- [Weapon_Bomb_Popberry](https://hytaleguide.net/items/popberry-bomb)
+- [Weapon_Bomb_Potion_Poison](https://hytaleguide.net/items/poison-potion-bomb)
+- [Weapon_Bomb_Stun](https://hytaleguide.net/items/stun-bomb)
+- [Weapon_Claws_Tribal](https://hytaleguide.net/items/tribal-claws)
+- [Weapon_Club_Adamantite](https://hytaleguide.net/items/adamantite-club)
+- [Weapon_Club_Cobalt](https://hytaleguide.net/items/cobalt-club)
+- [Weapon_Club_Copper](https://hytaleguide.net/items/copper-club)
+- [Weapon_Club_Crude](https://hytaleguide.net/items/crude-club)
+- [Weapon_Club_Doomed](https://hytaleguide.net/items/doomed-outlander-club)
+- [Weapon_Club_Iron](https://hytaleguide.net/items/iron-club)
+- [Weapon_Club_Iron_Rusty](https://hytaleguide.net/items/rusty-iron-club)
+- [Weapon_Club_Mithril](https://hytaleguide.net/items/mithril-club)
+- [Weapon_Club_Onyxium](https://hytaleguide.net/items/onyxium-club)
+- [Weapon_Club_Scrap](https://hytaleguide.net/items/scrap-club)
+- [Weapon_Club_Steel_Flail_Rusty](https://hytaleguide.net/items/rusty-steel-flail)
+- [Weapon_Club_Stone_Trork](https://hytaleguide.net/items/stone-trork-club)
+- [Weapon_Club_Thorium](https://hytaleguide.net/items/thorium-club)
+- [Weapon_Club_Tribal](https://hytaleguide.net/items/tribal-club)
+- [Weapon_Club_Zombie_Arm](https://hytaleguide.net/items/zombie-arm)
+- [Weapon_Club_Zombie_Burnt_Arm](https://hytaleguide.net/items/burnt-zombie-arm)
+- [Weapon_Club_Zombie_Burnt_Leg](https://hytaleguide.net/items/burnt-zombie-leg)
+- [Weapon_Club_Zombie_Frost_Arm](https://hytaleguide.net/items/frost-zombie-arm)
+- [Weapon_Club_Zombie_Frost_Leg](https://hytaleguide.net/items/frost-zombie-leg)
+- [Weapon_Club_Zombie_Leg](https://hytaleguide.net/items/zombie-leg)
+- [Weapon_Club_Zombie_Sand_Arm](https://hytaleguide.net/items/sand-zombie-arm)
+- [Weapon_Club_Zombie_Sand_Leg](https://hytaleguide.net/items/sand-zombie-leg)
+- [Weapon_Crossbow_Ancient_Steel](https://hytaleguide.net/items/ancient-steel-hand-crossbow)
+- [Weapon_Crossbow_Iron](https://hytaleguide.net/items/iron-hand-crossbow)
+- [Weapon_Daggers_Adamantite](https://hytaleguide.net/items/adamantite-daggers)
+- [Weapon_Daggers_Adamantite_Saurian](https://hytaleguide.net/items/adamantite-saurian-daggers)
+- [Weapon_Daggers_Bone](https://hytaleguide.net/items/feran-bone-daggers)
+- [Weapon_Daggers_Bronze](https://hytaleguide.net/items/bronze-daggers)
+- [Weapon_Daggers_Bronze_Ancient](https://hytaleguide.net/items/ancient-bronze-daggers)
+- [Weapon_Daggers_Claw_Bone](https://hytaleguide.net/items/bone-claws)
+- [Weapon_Daggers_Cobalt](https://hytaleguide.net/items/cobalt-daggers)
+- [Weapon_Daggers_Copper](https://hytaleguide.net/items/copper-daggers)
+- [Weapon_Daggers_Crude](https://hytaleguide.net/items/crude-daggers)
+- [Weapon_Daggers_Doomed](https://hytaleguide.net/items/doomed-outlander-daggers)
+- [Weapon_Daggers_Fang_Doomed](https://hytaleguide.net/items/doomed-outlander-fang-daggers)
+- [Weapon_Daggers_Iron](https://hytaleguide.net/items/iron-daggers)
+- [Weapon_Daggers_Mithril](https://hytaleguide.net/items/mithril-daggers)
+- [Weapon_Daggers_Onyxium](https://hytaleguide.net/items/onyxium-daggers)
+- [Weapon_Daggers_Stone_Trork](https://hytaleguide.net/items/stone-trork-daggers)
+- [Weapon_Daggers_Thorium](https://hytaleguide.net/items/thorium-daggers)
+- [Weapon_Dart_Tribal](https://hytaleguide.net/items/tribal-dart)
+- [Weapon_Deployable_Healing_Totem](https://hytaleguide.net/items/healing-totem)
+- [Weapon_Deployable_Slowness_Totem](https://hytaleguide.net/items/slowing-totem)
+- [Weapon_Deployable_Turret](https://hytaleguide.net/items/deployable-turret)
+- [Weapon_Grenade_Frag](https://hytaleguide.net/items/frag-grenade)
+- [Weapon_Gun](https://hytaleguide.net/items/gun)
+- [Weapon_Gun_Blunderbuss](https://hytaleguide.net/items/blunderbuss)
+- [Weapon_Gun_Blunderbuss_Rusty](https://hytaleguide.net/items/weapon-gun-blunderbuss-rusty)
+- [Weapon_Handgun](https://hytaleguide.net/items/handgun)
+- [Weapon_Kunai](https://hytaleguide.net/items/kunai)
+- [Weapon_Longsword_Adamantite](https://hytaleguide.net/items/adamantite-longsword)
+- [Weapon_Longsword_Adamantite_Saurian](https://hytaleguide.net/items/adamantite-saurian-saber)
+- [Weapon_Longsword_Cobalt](https://hytaleguide.net/items/cobalt-longsword)
+- [Weapon_Longsword_Copper](https://hytaleguide.net/items/copper-longsword)
+- [Weapon_Longsword_Crude](https://hytaleguide.net/items/crude-longsword)
+- [Weapon_Longsword_Flame](https://hytaleguide.net/items/flame-longsword)
+- [Weapon_Longsword_Iron](https://hytaleguide.net/items/iron-longsword)
+- [Weapon_Longsword_Katana](https://hytaleguide.net/items/katana)
+- [Weapon_Longsword_Mithril](https://hytaleguide.net/items/mithril-longsword)
+- [Weapon_Longsword_Onyxium](https://hytaleguide.net/items/onyxium-longsword)
+- [Weapon_Longsword_Praetorian](https://hytaleguide.net/items/praetorian-longsword)
+- [Weapon_Longsword_Praetorian_NPC](https://hytaleguide.net/items/skeleton-praetorians-longsword)
+- [Weapon_Longsword_Scarab](https://hytaleguide.net/items/scarab-longsword)
+- [Weapon_Longsword_Spectral](https://hytaleguide.net/items/spectral-longsword)
+- [Weapon_Longsword_Stone_Trork](https://hytaleguide.net/items/stone-trork-longsword)
+- [Weapon_Longsword_Thorium](https://hytaleguide.net/items/thorium-longsword)
+- [Weapon_Longsword_Tribal](https://hytaleguide.net/items/tribal-longsword)
+- [Weapon_Longsword_Void](https://hytaleguide.net/items/void-longsword)
+- [Weapon_Mace_Adamantite](https://hytaleguide.net/items/adamantite-mace)
+- [Weapon_Mace_Cobalt](https://hytaleguide.net/items/cobalt-mace)
+- [Weapon_Mace_Copper](https://hytaleguide.net/items/copper-mace)
+- [Weapon_Mace_Crude](https://hytaleguide.net/items/crude-mace)
+- [Weapon_Mace_Iron](https://hytaleguide.net/items/iron-mace)
+- [Weapon_Mace_Mithril](https://hytaleguide.net/items/mithril-mace)
+- [Weapon_Mace_Onyxium](https://hytaleguide.net/items/onyxium-mace)
+- [Weapon_Mace_Prisma](https://hytaleguide.net/items/prisma-mace)
+- [Weapon_Mace_Scrap](https://hytaleguide.net/items/scrap-mace)
+- [Weapon_Mace_Scrap_NPC](https://hytaleguide.net/items/goblin-dukes-scrap-mace)
+- [Weapon_Mace_Stone_Trork](https://hytaleguide.net/items/stone-trork-mace)
+- [Weapon_Mace_Thorium](https://hytaleguide.net/items/thorium-mace)
+- [Weapon_Shield_Adamantite](https://hytaleguide.net/items/adamantite-shield)
+- [Weapon_Shield_Cobalt](https://hytaleguide.net/items/cobalt-shield)
+- [Weapon_Shield_Copper](https://hytaleguide.net/items/copper-shield)
+- [Weapon_Shield_Doomed](https://hytaleguide.net/items/doomed-outlander-shield)
+- [Weapon_Shield_Iron](https://hytaleguide.net/items/iron-shield)
+- [Weapon_Shield_Mithril](https://hytaleguide.net/items/mithril-shield)
+- [Weapon_Shield_Onyxium](https://hytaleguide.net/items/onyxium-shield)
+- [Weapon_Shield_Orbis_Incandescent](https://hytaleguide.net/items/ancient-knights-incandescent-shield)
+- [Weapon_Shield_Orbis_Knight](https://hytaleguide.net/items/ancient-knights-shield)
+- [Weapon_Shield_Praetorian](https://hytaleguide.net/items/praetorian-shield)
+- [Weapon_Shield_Rusty](https://hytaleguide.net/items/rusty-shield)
+- [Weapon_Shield_Scrap](https://hytaleguide.net/items/scrap-shield)
+- [Weapon_Shield_Scrap_Spiked](https://hytaleguide.net/items/spiked-scrap-shield)
+- [Weapon_Shield_Thorium](https://hytaleguide.net/items/thorium-shield)
+- [Weapon_Shield_Wood](https://hytaleguide.net/items/wooden-shield)
+- [Weapon_Shortbow_Adamantite](https://hytaleguide.net/items/adamantite-shortbow)
+- [Weapon_Shortbow_Bomb](https://hytaleguide.net/items/bomb-shortbow)
+- [Weapon_Shortbow_Bronze](https://hytaleguide.net/items/bronze-shortbow)
+- [Weapon_Shortbow_Cobalt](https://hytaleguide.net/items/cobalt-shortbow)
+- [Weapon_Shortbow_Combat](https://hytaleguide.net/items/combat-shortbow)
+- [Weapon_Shortbow_Copper](https://hytaleguide.net/items/copper-shortbow)
+- [Weapon_Shortbow_Crude](https://hytaleguide.net/items/crude-shortbow)
+- [Weapon_Shortbow_Doomed](https://hytaleguide.net/items/outlander-doomed-shortbow)
+- [Weapon_Shortbow_Flame](https://hytaleguide.net/items/flame-shortbow)
+- [Weapon_Shortbow_Frost](https://hytaleguide.net/items/frost-shortbow)
+- [Weapon_Shortbow_Iron](https://hytaleguide.net/items/iron-shortbow)
+- [Weapon_Shortbow_Iron_Rusty](https://hytaleguide.net/items/rusty-iron-shortbow)
+- [Weapon_Shortbow_Mithril](https://hytaleguide.net/items/mithril-shortbow)
+- [Weapon_Shortbow_Onyxium](https://hytaleguide.net/items/onyxium-shortbow)
+- [Weapon_Shortbow_Pull](https://hytaleguide.net/items/pull-shortbow)
+- [Weapon_Shortbow_Ricochet](https://hytaleguide.net/items/ricochet-shortbow)
+- [Weapon_Shortbow_Thorium](https://hytaleguide.net/items/thorium-shortbow)
+- [Weapon_Shortbow_Vampire](https://hytaleguide.net/items/vampire-shortbow)
+- [Weapon_Spear_Adamantite](https://hytaleguide.net/items/adamantite-spear)
+- [Weapon_Spear_Adamantite_Saurian](https://hytaleguide.net/items/adamantite-saurian-spear)
+- [Weapon_Spear_Bone](https://hytaleguide.net/items/bone-spear)
+- [Weapon_Spear_Bronze](https://hytaleguide.net/items/bronze-spear)
+- [Weapon_Spear_Cobalt](https://hytaleguide.net/items/cobalt-spear)
+- [Weapon_Spear_Copper](https://hytaleguide.net/items/copper-spear)
+- [Weapon_Spear_Crude](https://hytaleguide.net/items/crude-spear)
+- [Weapon_Spear_Double_Incandescent](https://hytaleguide.net/items/incandescent-double-blade)
+- [Weapon_Spear_Fishbone](https://hytaleguide.net/items/fishbone-harpoon)
+- [Weapon_Spear_Iron](https://hytaleguide.net/items/iron-spear)
+- [Weapon_Spear_Leaf](https://hytaleguide.net/items/leaf-spear)
+- [Weapon_Spear_Mithril](https://hytaleguide.net/items/mithril-spear)
+- [Weapon_Spear_Onyxium](https://hytaleguide.net/items/onyxium-spear)
+- [Weapon_Spear_Scrap](https://hytaleguide.net/items/scrap-spear)
+- [Weapon_Spear_Stone_Trork](https://hytaleguide.net/items/stone-trork-spear)
+- [Weapon_Spear_Thorium](https://hytaleguide.net/items/thorium-spear)
+- [Weapon_Spear_Tribal](https://hytaleguide.net/items/tribal-spear)
+- [Weapon_Spellbook_Demon](https://hytaleguide.net/items/demon-spellbook)
+- [Weapon_Spellbook_Fire](https://hytaleguide.net/items/flame-spellbook)
+- [Weapon_Spellbook_Frost](https://hytaleguide.net/items/frost-spellbook)
+- [Weapon_Spellbook_Grimoire_Brown](https://hytaleguide.net/items/brown-grimoire)
+- [Weapon_Spellbook_Grimoire_Purple](https://hytaleguide.net/items/purple-grimoire)
+- [Weapon_Spellbook_Rekindle_Embers](https://hytaleguide.net/items/grimoire-rekindle-embers)
+- [Weapon_Staff_Adamantite](https://hytaleguide.net/items/adamantite-staff)
+- [Weapon_Staff_Bo_Bamboo](https://hytaleguide.net/items/bamboo-bo-staff)
+- [Weapon_Staff_Bo_Wood](https://hytaleguide.net/items/wooden-bo-staff)
+- [Weapon_Staff_Bone](https://hytaleguide.net/items/bone-staff)
+- [Weapon_Staff_Bronze](https://hytaleguide.net/items/bronze-staff)
+- [Weapon_Staff_Cane](https://hytaleguide.net/items/cane)
+- [Weapon_Staff_Cobalt](https://hytaleguide.net/items/cobalt-staff)
+- [Weapon_Staff_Copper](https://hytaleguide.net/items/copper-staff)
+- [Weapon_Staff_Crystal_Fire_Trork](https://hytaleguide.net/items/trork-staff)
+- [Weapon_Staff_Crystal_Flame](https://hytaleguide.net/items/flame-crystal-staff)
+- [Weapon_Staff_Crystal_Ice](https://hytaleguide.net/items/ice-crystal-staff)
+- [Weapon_Staff_Crystal_Purple](https://hytaleguide.net/items/purple-crystal-staff)
+- [Weapon_Staff_Crystal_Red](https://hytaleguide.net/items/red-crystal-staff)
+- [Weapon_Staff_Doomed](https://hytaleguide.net/items/doomed-outlander-staff)
+- [Weapon_Staff_Frost](https://hytaleguide.net/items/frost-staff)
+- [Weapon_Staff_Iron](https://hytaleguide.net/items/iron-staff)
+- [Weapon_Staff_Mithril](https://hytaleguide.net/items/mithril-staff)
+- [Weapon_Staff_Onion](https://hytaleguide.net/items/onion-staff)
+- [Weapon_Staff_Onyxium](https://hytaleguide.net/items/onyxium-staff)
+- [Weapon_Staff_Thorium](https://hytaleguide.net/items/thorium-staff)
+- [Weapon_Staff_Wizard](https://hytaleguide.net/items/wizards-staff)
+- [Weapon_Staff_Wood](https://hytaleguide.net/items/wooden-earth-staff)
+- [Weapon_Staff_Wood_Kweebec](https://hytaleguide.net/items/wooden-kweebec-staff)
+- [Weapon_Staff_Wood_Rotten](https://hytaleguide.net/items/rotten-wooden-staff)
+- [Weapon_Sword_Adamantite](https://hytaleguide.net/items/adamantite-sword)
+- [Weapon_Sword_Bone](https://hytaleguide.net/items/bone-sword)
+- [Weapon_Sword_Bronze](https://hytaleguide.net/items/bronze-sword)
+- [Weapon_Sword_Bronze_Ancient](https://hytaleguide.net/items/ancient-bronze-sword)
+- [Weapon_Sword_Cobalt](https://hytaleguide.net/items/cobalt-sword)
+- [Weapon_Sword_Copper](https://hytaleguide.net/items/copper-sword)
+- [Weapon_Sword_Crude](https://hytaleguide.net/items/crude-sword)
+- [Weapon_Sword_Cutlass](https://hytaleguide.net/items/cutlass)
+- [Weapon_Sword_Doomed](https://hytaleguide.net/items/doomed-outlander-sword)
+- [Weapon_Sword_Frost](https://hytaleguide.net/items/frost-sword)
+- [Weapon_Sword_Iron](https://hytaleguide.net/items/iron-sword)
+- [Weapon_Sword_Mithril](https://hytaleguide.net/items/mithril-sword)
+- [Weapon_Sword_Nexus](https://hytaleguide.net/items/nexus-sword)
+- [Weapon_Sword_Onyxium](https://hytaleguide.net/items/onyxium-sword)
+- [Weapon_Sword_Runic](https://hytaleguide.net/items/runic-sword)
+- [Weapon_Sword_Scrap](https://hytaleguide.net/items/scrap-sword)
+- [Weapon_Sword_Silversteel](https://hytaleguide.net/items/silversteel-sword)
+- [Weapon_Sword_Steel](https://hytaleguide.net/items/steel-sword)
+- [Weapon_Sword_Steel_Incandescent](https://hytaleguide.net/items/incandescent-steel-sword)
+- [Weapon_Sword_Steel_Rusty](https://hytaleguide.net/items/rusty-steel-sword)
+- [Weapon_Sword_Stone_Trork](https://hytaleguide.net/items/stone-trork-sword)
+- [Weapon_Sword_Thorium](https://hytaleguide.net/items/thorium-sword)
+- [Weapon_Sword_Wood](https://hytaleguide.net/items/wooden-sword)
+- [Weapon_Wand_Root](https://hytaleguide.net/items/root-wand)
+- [Weapon_Wand_Stoneskin](https://hytaleguide.net/items/stoneskin-wand)
+- [Weapon_Wand_Tribal](https://hytaleguide.net/items/tribal-wand)
+- [Weapon_Wand_Wood](https://hytaleguide.net/items/wooden-earth-wand)
+- [Weapon_Wand_Wood_Rotten](https://hytaleguide.net/items/rotten-wooden-wand)
+
+# Gameplay
+
+## Coop
+
+- [Coop_Chicken](https://hytaleguide.net/items/chicken-coop)
+
+## Egg
+
+- [Egg_Spawner_Kweebec_Razorleaf](https://hytaleguide.net/items/egg-spawner-kweebec-razorleaf)
+- [Egg_Spawner_Lantern](https://hytaleguide.net/items/egg-spawner-pet-lantern)
+- [Egg_Spawner_Sheep](https://hytaleguide.net/items/egg-spawner-sheep)
+- [Egg_Spawner_Trork](https://hytaleguide.net/items/egg-spawner-trork)
+
+## Farming
+
+- [Farming_Collar](https://hytaleguide.net/items/pet-collar)
+
+## Objective
+
+- [Objective_Bounty](https://hytaleguide.net/items/bounty)
+- [Objective_Treasure_Map](https://hytaleguide.net/items/treasure-map)
+
+## Survival
+
+- [Survival_Trap_Grass](https://hytaleguide.net/items/grass-trap)
+- [Survival_Trap_Snapjaw](https://hytaleguide.net/items/bear-trap)
+- [Survival_Trap_Spike_Iron](https://hytaleguide.net/items/metal-spike-trap)
+- [Survival_Trap_Spike_Wood](https://hytaleguide.net/items/wooden-spike-trap)
+- [Survival_Trap_Spike_Wood_Large](https://hytaleguide.net/items/large-wooden-spike-trap)
+
+## Trap
+
+- [Trap_Ancient_Platform](https://hytaleguide.net/items/cracked-ancient-platform-trap)
+- [Trap_Ice](https://hytaleguide.net/items/cracked-ice-trap)
+- [Trap_Slate](https://hytaleguide.net/items/cracked-slate-trap)
+
+# Nature
+
+## Fish
+
+- [Fish_Bluegill_Item](https://hytaleguide.net/items/bluegill)
+- [Fish_Catfish_Item](https://hytaleguide.net/items/catfish)
+- [Fish_Clownfish_Item](https://hytaleguide.net/items/clownfish)
+- [Fish_Crab_Item](https://hytaleguide.net/items/crab)
+- [Fish_Eel_Moray_Item](https://hytaleguide.net/items/moray-eel)
+- [Fish_Frostgill_Item](https://hytaleguide.net/items/frostgill)
+- [Fish_Jellyfish_Blue_Item](https://hytaleguide.net/items/blue-jellyfish)
+- [Fish_Jellyfish_Cyan_Item](https://hytaleguide.net/items/cyan-jellyfish)
+- [Fish_Jellyfish_Green_Item](https://hytaleguide.net/items/green-jellyfish)
+- [Fish_Jellyfish_Man_Of_War_Item](https://hytaleguide.net/items/man-of-war)
+- [Fish_Jellyfish_Red_Item](https://hytaleguide.net/items/red-jellyfish)
+- [Fish_Jellyfish_Yellow_Item](https://hytaleguide.net/items/yellow-jellyfish)
+- [Fish_Lobster_Item](https://hytaleguide.net/items/lobster)
+- [Fish_Minnow_Item](https://hytaleguide.net/items/minnow)
+- [Fish_Pike_Item](https://hytaleguide.net/items/pike)
+- [Fish_Piranha_Black_Item](https://hytaleguide.net/items/black-piranha)
+- [Fish_Piranha_Item](https://hytaleguide.net/items/piranha)
+- [Fish_Pufferfish_Item](https://hytaleguide.net/items/pufferfish)
+- [Fish_Salmon_Item](https://hytaleguide.net/items/salmon)
+- [Fish_Shark_Hammerhead_Item](https://hytaleguide.net/items/hammerhead-shark)
+- [Fish_Shellfish_Lava_Item](https://hytaleguide.net/items/lava-shellfish)
+- [Fish_Snapjaw_Item](https://hytaleguide.net/items/snapjaw)
+- [Fish_Tang_Blue_Item](https://hytaleguide.net/items/blue-tang)
+- [Fish_Tang_Chevron_Item](https://hytaleguide.net/items/chevron-tang)
+- [Fish_Tang_Lemon_Peel_Item](https://hytaleguide.net/items/lemon-peel-tang)
+- [Fish_Tang_Sailfin_Item](https://hytaleguide.net/items/sailfin-tang)
+- [Fish_Trilobite_Black_Item](https://hytaleguide.net/items/black-trilobite)
+- [Fish_Trilobite_Item](https://hytaleguide.net/items/trilobite)
+- [Fish_Trout_Rainbow_Item](https://hytaleguide.net/items/rainbow-trout)
+- [Fish_Whale_Humpback_Item](https://hytaleguide.net/items/humpback-whale)
+
+## Fluid
+
+- [Fluid_Fire](https://hytaleguide.net/items/fluid-fire)
+- [Fluid_Lava](https://hytaleguide.net/items/lava)
+- [Fluid_Poison](https://hytaleguide.net/items/poison)
+- [Fluid_Slime](https://hytaleguide.net/items/slime)
+- [Fluid_Slime_Red](https://hytaleguide.net/items/red-slime)
+- [Fluid_Tar](https://hytaleguide.net/items/tar)
+- [Fluid_Water](https://hytaleguide.net/items/water)
+- [Fluid_Water_Test](https://hytaleguide.net/items/water-finite)
+
+## Plant
+
+- [Plant_Barnacles](https://hytaleguide.net/items/barnacles)
+- [Plant_Bramble_Dead_Lavathorn](https://hytaleguide.net/items/lavathorn)
+- [Plant_Bramble_Dead_Twisted](https://hytaleguide.net/items/poison-bramble)
+- [Plant_Bramble_Dry_Magic](https://hytaleguide.net/items/dry-magic-bramble)
+- [Plant_Bramble_Dry_Sandthorn](https://hytaleguide.net/items/sandthorn)
+- [Plant_Bramble_Dry_Twisted](https://hytaleguide.net/items/arid-bramble)
+- [Plant_Bramble_Moss_Twisted](https://hytaleguide.net/items/green-bramble)
+- [Plant_Bramble_Winter](https://hytaleguide.net/items/winter-bramble)
+- [Plant_Bush](https://hytaleguide.net/items/bush)
+- [Plant_Bush_Arid](https://hytaleguide.net/items/arid-bush)
+- [Plant_Bush_Arid_Palm](https://hytaleguide.net/items/arid-palm-bush)
+- [Plant_Bush_Arid_Red](https://hytaleguide.net/items/red-arid-bush)
+- [Plant_Bush_Arid_Sharp](https://hytaleguide.net/items/bushy-arid-grass)
+- [Plant_Bush_Bramble](https://hytaleguide.net/items/dry-bramble)
+- [Plant_Bush_Crystal](https://hytaleguide.net/items/big-crystal-bush)
+- [Plant_Bush_Dead](https://hytaleguide.net/items/dead-bush)
+- [Plant_Bush_Dead_Hanging](https://hytaleguide.net/items/dead-hanging-bush)
+- [Plant_Bush_Dead_Tall](https://hytaleguide.net/items/shrub)
+- [Plant_Bush_Dead_Twisted](https://hytaleguide.net/items/large-dead-bush)
+- [Plant_Bush_Green](https://hytaleguide.net/items/green-bush)
+- [Plant_Bush_Hanging](https://hytaleguide.net/items/exotic-hanging-bush)
+- [Plant_Bush_Jungle](https://hytaleguide.net/items/jungle-bush)
+- [Plant_Bush_Lush](https://hytaleguide.net/items/lush-big-bush)
+- [Plant_Bush_Wet](https://hytaleguide.net/items/wet-bush)
+- [Plant_Bush_Winter](https://hytaleguide.net/items/frozen-shrub)
+- [Plant_Bush_Winter_Red](https://hytaleguide.net/items/red-winter-bush)
+- [Plant_Bush_Winter_Sharp](https://hytaleguide.net/items/bushy-winter-grass)
+- [Plant_Bush_Winter_Snow](https://hytaleguide.net/items/snowy-winter-bush)
+- [Plant_Cactus_1](https://hytaleguide.net/items/cactus-bottom)
+- [Plant_Cactus_2](https://hytaleguide.net/items/cactus-middle)
+- [Plant_Cactus_3](https://hytaleguide.net/items/cactus-top)
+- [Plant_Cactus_Ball_1](https://hytaleguide.net/items/cactus-ball)
+- [Plant_Cactus_Flat_1](https://hytaleguide.net/items/small-flat-cactus)
+- [Plant_Cactus_Flat_2](https://hytaleguide.net/items/flat-cactus)
+- [Plant_Cactus_Flat_3](https://hytaleguide.net/items/large-flat-cactus)
+- [Plant_Cactus_Flower](https://hytaleguide.net/items/cactus-flower)
+- [Plant_Coral_Block_Blue](https://hytaleguide.net/items/blue-coral-block)
+- [Plant_Coral_Block_Cyan](https://hytaleguide.net/items/cyan-coral-block)
+- [Plant_Coral_Block_Dead](https://hytaleguide.net/items/dead-coral-block)
+- [Plant_Coral_Block_Dead2](https://hytaleguide.net/items/dying-coral-block)
+- [Plant_Coral_Block_Green](https://hytaleguide.net/items/green-coral-block)
+- [Plant_Coral_Block_Grey](https://hytaleguide.net/items/grey-coral-block)
+- [Plant_Coral_Block_Lime](https://hytaleguide.net/items/lime-green-coral-block)
+- [Plant_Coral_Block_Orange](https://hytaleguide.net/items/orange-coral-block)
+- [Plant_Coral_Block_Pink](https://hytaleguide.net/items/pink-coral-block)
+- [Plant_Coral_Block_Poison](https://hytaleguide.net/items/poisoned-coral-block)
+- [Plant_Coral_Block_Purple](https://hytaleguide.net/items/purple-coral-block)
+- [Plant_Coral_Block_Red](https://hytaleguide.net/items/red-coral-block)
+- [Plant_Coral_Block_Violet](https://hytaleguide.net/items/violet-coral-block)
+- [Plant_Coral_Block_White](https://hytaleguide.net/items/white-coral-block)
+- [Plant_Coral_Block_Yellow](https://hytaleguide.net/items/yellow-coral-block)
+- [Plant_Coral_Bush_Blue](https://hytaleguide.net/items/blue-coral-bush)
+- [Plant_Coral_Bush_Cyan](https://hytaleguide.net/items/cyan-coral-bush)
+- [Plant_Coral_Bush_Dead](https://hytaleguide.net/items/dead-coral-bush)
+- [Plant_Coral_Bush_Dead2](https://hytaleguide.net/items/dying-coral-bush)
+- [Plant_Coral_Bush_Dead3](https://hytaleguide.net/items/bleached-coral-bush)
+- [Plant_Coral_Bush_Green](https://hytaleguide.net/items/green-coral-bush)
+- [Plant_Coral_Bush_Grey](https://hytaleguide.net/items/grey-coral-bush)
+- [Plant_Coral_Bush_Lime](https://hytaleguide.net/items/neon-coral-bush)
+- [Plant_Coral_Bush_Orange](https://hytaleguide.net/items/orange-coral-bush)
+- [Plant_Coral_Bush_Pink](https://hytaleguide.net/items/pink-coral-bush)
+- [Plant_Coral_Bush_Poisoned](https://hytaleguide.net/items/poisoned-coral-bush)
+- [Plant_Coral_Bush_Purple](https://hytaleguide.net/items/purple-coral-bush)
+- [Plant_Coral_Bush_Red](https://hytaleguide.net/items/red-coral-bush)
+- [Plant_Coral_Bush_Violet](https://hytaleguide.net/items/violet-coral-bush)
+- [Plant_Coral_Bush_White](https://hytaleguide.net/items/white-coral-bush)
+- [Plant_Coral_Bush_Yellow](https://hytaleguide.net/items/yellow-coral-bush)
+- [Plant_Coral_Giant_Dead](https://hytaleguide.net/items/dead-giant-coral-branch)
+- [Plant_Coral_Giant_Dead2](https://hytaleguide.net/items/dead-giant-coral-fan)
+- [Plant_Coral_Model_Blue](https://hytaleguide.net/items/blue-coral-sponge)
+- [Plant_Coral_Model_Cyan](https://hytaleguide.net/items/cyan-coral-sponge)
+- [Plant_Coral_Model_Dead](https://hytaleguide.net/items/dead-coral-sponge)
+- [Plant_Coral_Model_Dead2](https://hytaleguide.net/items/dead-bracket-coral)
+- [Plant_Coral_Model_Dead3](https://hytaleguide.net/items/dying-bracket-coral)
+- [Plant_Coral_Model_Dead4](https://hytaleguide.net/items/dying-coral-sponge)
+- [Plant_Coral_Model_Dead5](https://hytaleguide.net/items/dead-coral-tubes)
+- [Plant_Coral_Model_Dead6](https://hytaleguide.net/items/dying-coral-tubes)
+- [Plant_Coral_Model_Dead7](https://hytaleguide.net/items/dead-coral-rose)
+- [Plant_Coral_Model_Green](https://hytaleguide.net/items/green-coral-tubes)
+- [Plant_Coral_Model_Grey](https://hytaleguide.net/items/grey-bracket-coral)
+- [Plant_Coral_Model_Lime](https://hytaleguide.net/items/lime-coral-sponge)
+- [Plant_Coral_Model_Orange](https://hytaleguide.net/items/orange-bracket-coral)
+- [Plant_Coral_Model_Pink](https://hytaleguide.net/items/pink-fan-coral)
+- [Plant_Coral_Model_Purple](https://hytaleguide.net/items/purple-coral-tubes)
+- [Plant_Coral_Model_Red](https://hytaleguide.net/items/red-coral-sponge)
+- [Plant_Coral_Model_Violet](https://hytaleguide.net/items/sea-anemone)
+- [Plant_Coral_Model_White](https://hytaleguide.net/items/white-coral-sponge)
+- [Plant_Coral_Model_Yellow](https://hytaleguide.net/items/yellow-coral-tubes)
+- [Plant_Crop_Apple_Block](https://hytaleguide.net/items/mature-apple)
+- [Plant_Crop_Aubergine_Block](https://hytaleguide.net/items/plant-crop-aubergine-block)
+- [Plant_Crop_Aubergine_Block_Eternal](https://hytaleguide.net/items/mature-aubergine)
+- [Plant_Crop_Aubergine_Item](https://hytaleguide.net/items/aubergine)
+- [Plant_Crop_Berry_Block](https://hytaleguide.net/items/berry-bush)
+- [Plant_Crop_Berry_Wet_Block](https://hytaleguide.net/items/wet-berry-bush)
+- [Plant_Crop_Berry_Winter_Block](https://hytaleguide.net/items/winter-berry-bush)
+- [Plant_Crop_Carrot_Block](https://hytaleguide.net/items/mature-carrot)
+- [Plant_Crop_Carrot_Block_Eternal](https://hytaleguide.net/items/carrot)
+- [Plant_Crop_Carrot_Item](https://hytaleguide.net/items/plant-crop-carrot-item)
+- [Plant_Crop_Cauliflower_Block](https://hytaleguide.net/items/mature-cauliflower)
+- [Plant_Crop_Cauliflower_Block_Eternal](https://hytaleguide.net/items/plant-crop-cauliflower-block-eternal)
+- [Plant_Crop_Cauliflower_Item](https://hytaleguide.net/items/cauliflower)
+- [Plant_Crop_Chilli_Block](https://hytaleguide.net/items/mature-chilli)
+- [Plant_Crop_Chilli_Block_Eternal](https://hytaleguide.net/items/plant-crop-chilli-block-eternal)
+- [Plant_Crop_Chilli_Item](https://hytaleguide.net/items/chilli)
+- [Plant_Crop_Corn_Block](https://hytaleguide.net/items/mature-corn)
+- [Plant_Crop_Corn_Block_Eternal](https://hytaleguide.net/items/plant-crop-corn-block-eternal)
+- [Plant_Crop_Corn_Item](https://hytaleguide.net/items/corn)
+- [Plant_Crop_Cotton_Block](https://hytaleguide.net/items/plant-crop-cotton-block)
+- [Plant_Crop_Cotton_Block_Eternal](https://hytaleguide.net/items/mature-cotton)
+- [Plant_Crop_Cotton_Item](https://hytaleguide.net/items/cotton)
+- [Plant_Crop_Health1](https://hytaleguide.net/items/blood-rose)
+- [Plant_Crop_Health1_Block](https://hytaleguide.net/items/blood-rose-seeds)
+- [Plant_Crop_Health2](https://hytaleguide.net/items/bloodcap-mushroom)
+- [Plant_Crop_Health2_Block](https://hytaleguide.net/items/bloodcap-spores)
+- [Plant_Crop_Health3](https://hytaleguide.net/items/blood-leaf)
+- [Plant_Crop_Health3_Block](https://hytaleguide.net/items/blood-leaf-seeds)
+- [Plant_Crop_Lettuce_Block](https://hytaleguide.net/items/mature-lettuce)
+- [Plant_Crop_Lettuce_Block_Eternal](https://hytaleguide.net/items/plant-crop-lettuce-block-eternal)
+- [Plant_Crop_Lettuce_Item](https://hytaleguide.net/items/lettuce)
+- [Plant_Crop_Mana1](https://hytaleguide.net/items/azure-fern)
+- [Plant_Crop_Mana1_Block](https://hytaleguide.net/items/azure-fern-seeds)
+- [Plant_Crop_Mana2](https://hytaleguide.net/items/azurecap-mushroom)
+- [Plant_Crop_Mana2_Block](https://hytaleguide.net/items/azurecap-spores)
+- [Plant_Crop_Mana3](https://hytaleguide.net/items/azure-kelp)
+- [Plant_Crop_Mana3_Block](https://hytaleguide.net/items/azure-kelp-seeds)
+- [Plant_Crop_Mushroom_Block](https://hytaleguide.net/items/mushroom-seeds)
+- [Plant_Crop_Mushroom_Block_Blue](https://hytaleguide.net/items/blue-mushroom-block)
+- [Plant_Crop_Mushroom_Block_Blue_Branch](https://hytaleguide.net/items/blue-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_Blue_Mycelium](https://hytaleguide.net/items/blue-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_Blue_Trunk](https://hytaleguide.net/items/blue-mushroom-trunk)
+- [Plant_Crop_Mushroom_Block_Brown](https://hytaleguide.net/items/brown-mushroom-block)
+- [Plant_Crop_Mushroom_Block_Brown_Branch](https://hytaleguide.net/items/brown-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_Brown_Mycelium](https://hytaleguide.net/items/brown-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_Brown_Trunk](https://hytaleguide.net/items/brown-mushroom-trunk)
+- [Plant_Crop_Mushroom_Block_Green](https://hytaleguide.net/items/green-mushroom-block)
+- [Plant_Crop_Mushroom_Block_Green_Branch](https://hytaleguide.net/items/green-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_Green_Mycelium](https://hytaleguide.net/items/green-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_Green_Trunk](https://hytaleguide.net/items/green-mushroom-trunk)
+- [Plant_Crop_Mushroom_Block_Purple](https://hytaleguide.net/items/purple-mushroom-block)
+- [Plant_Crop_Mushroom_Block_Purple_Branch](https://hytaleguide.net/items/purple-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_Purple_Mycelium](https://hytaleguide.net/items/purple-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_Purple_Trunk](https://hytaleguide.net/items/purple-mushroom-trunk)
+- [Plant_Crop_Mushroom_Block_Red](https://hytaleguide.net/items/red-mushroom-block)
+- [Plant_Crop_Mushroom_Block_Red_Branch](https://hytaleguide.net/items/red-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_Red_Mycelium](https://hytaleguide.net/items/red-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_Red_Trunk](https://hytaleguide.net/items/red-mushroom-trunk)
+- [Plant_Crop_Mushroom_Block_White](https://hytaleguide.net/items/white-mushroom-block)
+- [Plant_Crop_Mushroom_Block_White_Branch](https://hytaleguide.net/items/white-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_White_Mycelium](https://hytaleguide.net/items/white-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_White_Trunk](https://hytaleguide.net/items/white-mushroom-trunk)
+- [Plant_Crop_Mushroom_Block_Yellow](https://hytaleguide.net/items/yellow-mushroom-block)
+- [Plant_Crop_Mushroom_Block_Yellow_Branch](https://hytaleguide.net/items/yellow-mushroom-branch)
+- [Plant_Crop_Mushroom_Block_Yellow_Mycelium](https://hytaleguide.net/items/yellow-mushroom-mycelium)
+- [Plant_Crop_Mushroom_Block_Yellow_Trunk](https://hytaleguide.net/items/yellow-mushroom-trunk)
+- [Plant_Crop_Mushroom_Boomshroom_Large](https://hytaleguide.net/items/large-boomshroom)
+- [Plant_Crop_Mushroom_Boomshroom_Small](https://hytaleguide.net/items/small-boomshroom)
+- [Plant_Crop_Mushroom_Cap_Brown](https://hytaleguide.net/items/brown-cap-mushroom)
+- [Plant_Crop_Mushroom_Cap_Green](https://hytaleguide.net/items/spotted-green-cap-mushroom)
+- [Plant_Crop_Mushroom_Cap_Poison](https://hytaleguide.net/items/spotted-allium-cap-mushroom)
+- [Plant_Crop_Mushroom_Cap_Red](https://hytaleguide.net/items/red-cap-mushroom)
+- [Plant_Crop_Mushroom_Cap_White](https://hytaleguide.net/items/white-cap-mushroom)
+- [Plant_Crop_Mushroom_Common_Blue](https://hytaleguide.net/items/blue-common-mushroom)
+- [Plant_Crop_Mushroom_Common_Brown](https://hytaleguide.net/items/brown-common-mushroom)
+- [Plant_Crop_Mushroom_Common_Lime](https://hytaleguide.net/items/puffy-green-common-mushroom)
+- [Plant_Crop_Mushroom_Flatcap_Blue](https://hytaleguide.net/items/blue-flatcap-mushroom)
+- [Plant_Crop_Mushroom_Flatcap_Green](https://hytaleguide.net/items/green-flatcap-mushroom)
+- [Plant_Crop_Mushroom_Glowing_Blue](https://hytaleguide.net/items/blue-glowing-mushroom)
+- [Plant_Crop_Mushroom_Glowing_Green](https://hytaleguide.net/items/green-glowing-mushroom)
+- [Plant_Crop_Mushroom_Glowing_Orange](https://hytaleguide.net/items/orange-glowing-mushroom)
+- [Plant_Crop_Mushroom_Glowing_Purple](https://hytaleguide.net/items/purple-glowing-mushroom)
+- [Plant_Crop_Mushroom_Glowing_Red](https://hytaleguide.net/items/red-glowing-mushroom)
+- [Plant_Crop_Mushroom_Glowing_Violet](https://hytaleguide.net/items/violet-glowing-mushroom)
+- [Plant_Crop_Mushroom_Shelve_Brown](https://hytaleguide.net/items/brown-mushroom-shelf)
+- [Plant_Crop_Mushroom_Shelve_Green](https://hytaleguide.net/items/green-mushroom-shelf)
+- [Plant_Crop_Mushroom_Shelve_Yellow](https://hytaleguide.net/items/yellow-mushroom-shelf)
+- [Plant_Crop_Onion_Block](https://hytaleguide.net/items/mature-onions)
+- [Plant_Crop_Onion_Block_Eternal](https://hytaleguide.net/items/plant-crop-onion-block-eternal)
+- [Plant_Crop_Onion_Item](https://hytaleguide.net/items/onion)
+- [Plant_Crop_Potato_Block](https://hytaleguide.net/items/plant-crop-potato-block)
+- [Plant_Crop_Potato_Block_Eternal](https://hytaleguide.net/items/mature-potatoes)
+- [Plant_Crop_Potato_Item](https://hytaleguide.net/items/potato)
+- [Plant_Crop_Pumpkin_Block](https://hytaleguide.net/items/plant-crop-pumpkin-block)
+- [Plant_Crop_Pumpkin_Block_Eternal](https://hytaleguide.net/items/mature-pumpkin)
+- [Plant_Crop_Pumpkin_Item](https://hytaleguide.net/items/pumpkin)
+- [Plant_Crop_Rice_Block](https://hytaleguide.net/items/mature-rice)
+- [Plant_Crop_Rice_Block_Eternal](https://hytaleguide.net/items/plant-crop-rice-block-eternal)
+- [Plant_Crop_Rice_Item](https://hytaleguide.net/items/rice)
+- [Plant_Crop_Stamina1](https://hytaleguide.net/items/storm-thistle)
+- [Plant_Crop_Stamina1_Block](https://hytaleguide.net/items/storm-thistle-seeds)
+- [Plant_Crop_Stamina2](https://hytaleguide.net/items/stormcap-mushroom)
+- [Plant_Crop_Stamina2_Block](https://hytaleguide.net/items/plant-crop-stamina2-block)
+- [Plant_Crop_Stamina3](https://hytaleguide.net/items/storm-sapling)
+- [Plant_Crop_Stamina3_Block](https://hytaleguide.net/items/storm-sapling-seeds)
+- [Plant_Crop_Tomato_Block](https://hytaleguide.net/items/plant-crop-tomato-block)
+- [Plant_Crop_Tomato_Block_Eternal](https://hytaleguide.net/items/mature-tomato)
+- [Plant_Crop_Tomato_Item](https://hytaleguide.net/items/tomato)
+- [Plant_Crop_Turnip_Block](https://hytaleguide.net/items/plant-crop-turnip-block)
+- [Plant_Crop_Turnip_Block_Eternal](https://hytaleguide.net/items/mature-turnip)
+- [Plant_Crop_Turnip_Item](https://hytaleguide.net/items/turnip)
+- [Plant_Crop_Wheat_Block](https://hytaleguide.net/items/mature-wheat)
+- [Plant_Crop_Wheat_Block_Eternal](https://hytaleguide.net/items/plant-crop-wheat-block-eternal)
+- [Plant_Crop_Wheat_Item](https://hytaleguide.net/items/wheat)
+- [Plant_Crop_Wheat_Stage_4_Burnt](https://hytaleguide.net/items/burnt-wheat)
+- [Plant_Crop_Wild_Grass_Block](https://hytaleguide.net/items/wild-grass-seeds)
+- [Plant_Fern](https://hytaleguide.net/items/fern)
+- [Plant_Fern_Arid](https://hytaleguide.net/items/arid-fern)
+- [Plant_Fern_Forest](https://hytaleguide.net/items/forest-fern)
+- [Plant_Fern_Giant](https://hytaleguide.net/items/giant-fern)
+- [Plant_Fern_Jungle](https://hytaleguide.net/items/jungle-fern)
+- [Plant_Fern_Jungle_Trunk](https://hytaleguide.net/items/jungle-fern-trunk)
+- [Plant_Fern_Tall](https://hytaleguide.net/items/tall-fern)
+- [Plant_Fern_Trunk](https://hytaleguide.net/items/plant-fern-trunk)
+- [Plant_Fern_Wet](https://hytaleguide.net/items/plant-fern-wet)
+- [Plant_Fern_Wet_Big](https://hytaleguide.net/items/wet-fern)
+- [Plant_Fern_Wet_Giant](https://hytaleguide.net/items/giant-wet-fern)
+- [Plant_Fern_Wet_Giant_Trunk](https://hytaleguide.net/items/wet-fern-trunk)
+- [Plant_Fern_Winter](https://hytaleguide.net/items/large-fern)
+- [Plant_Flower_Bushy_Blue](https://hytaleguide.net/items/blue-nettle)
+- [Plant_Flower_Bushy_Cyan](https://hytaleguide.net/items/cyan-festuca)
+- [Plant_Flower_Bushy_Green](https://hytaleguide.net/items/nettle)
+- [Plant_Flower_Bushy_Grey](https://hytaleguide.net/items/ashy-bush)
+- [Plant_Flower_Bushy_Orange](https://hytaleguide.net/items/bushy-orange-fern)
+- [Plant_Flower_Bushy_Poisoned](https://hytaleguide.net/items/poisoned-nettle)
+- [Plant_Flower_Bushy_Purple](https://hytaleguide.net/items/purple-nettle)
+- [Plant_Flower_Bushy_Red](https://hytaleguide.net/items/red-featherleaf)
+- [Plant_Flower_Bushy_Violet](https://hytaleguide.net/items/purple-flowers)
+- [Plant_Flower_Bushy_White](https://hytaleguide.net/items/frost-leaf)
+- [Plant_Flower_Bushy_Yellow](https://hytaleguide.net/items/yellow-arid-flower-bush)
+- [Plant_Flower_Common_Blue](https://hytaleguide.net/items/blue-hibiscus)
+- [Plant_Flower_Common_Blue2](https://hytaleguide.net/items/blue-aloe)
+- [Plant_Flower_Common_Cyan](https://hytaleguide.net/items/cyan-arid-flower)
+- [Plant_Flower_Common_Cyan2](https://hytaleguide.net/items/cyan-hibiscus)
+- [Plant_Flower_Common_Grey](https://hytaleguide.net/items/linen-weed)
+- [Plant_Flower_Common_Grey2](https://hytaleguide.net/items/sandylion)
+- [Plant_Flower_Common_Lime](https://hytaleguide.net/items/jungle-flower)
+- [Plant_Flower_Common_Lime2](https://hytaleguide.net/items/lime-succulent)
+- [Plant_Flower_Common_Orange](https://hytaleguide.net/items/chrysanthemum)
+- [Plant_Flower_Common_Orange2](https://hytaleguide.net/items/common-orange-flower)
+- [Plant_Flower_Common_Pink](https://hytaleguide.net/items/common-pink-flower)
+- [Plant_Flower_Common_Pink2](https://hytaleguide.net/items/allium)
+- [Plant_Flower_Common_Poisoned](https://hytaleguide.net/items/carmine-parched-thorn)
+- [Plant_Flower_Common_Poisoned2](https://hytaleguide.net/items/plant-flower-common-poisoned2)
+- [Plant_Flower_Common_Purple](https://hytaleguide.net/items/purple-arid-flower)
+- [Plant_Flower_Common_Purple2](https://hytaleguide.net/items/lava-flower)
+- [Plant_Flower_Common_Red](https://hytaleguide.net/items/red-arid-flower)
+- [Plant_Flower_Common_Red2](https://hytaleguide.net/items/poppy)
+- [Plant_Flower_Common_Violet](https://hytaleguide.net/items/campanula-flower)
+- [Plant_Flower_Common_Violet2](https://hytaleguide.net/items/violets)
+- [Plant_Flower_Common_White](https://hytaleguide.net/items/white-hydrangea)
+- [Plant_Flower_Common_White2](https://hytaleguide.net/items/daisy)
+- [Plant_Flower_Common_Yellow](https://hytaleguide.net/items/yellow-hibiscus)
+- [Plant_Flower_Common_Yellow2](https://hytaleguide.net/items/dandelion)
+- [Plant_Flower_Flax_Blue](https://hytaleguide.net/items/blue-flax)
+- [Plant_Flower_Flax_Orange](https://hytaleguide.net/items/fire-flower)
+- [Plant_Flower_Flax_Pink](https://hytaleguide.net/items/pink-flax)
+- [Plant_Flower_Flax_Purple](https://hytaleguide.net/items/berry-flax)
+- [Plant_Flower_Flax_White](https://hytaleguide.net/items/small-daisies)
+- [Plant_Flower_Flax_Yellow](https://hytaleguide.net/items/lucerne)
+- [Plant_Flower_Hemlock](https://hytaleguide.net/items/hemlock)
+- [Plant_Flower_Orchid_Blue](https://hytaleguide.net/items/blue-cave-weed)
+- [Plant_Flower_Orchid_Cyan](https://hytaleguide.net/items/azure-flower)
+- [Plant_Flower_Orchid_Orange](https://hytaleguide.net/items/orange-orchid)
+- [Plant_Flower_Orchid_Pink](https://hytaleguide.net/items/pink-orchid)
+- [Plant_Flower_Orchid_Poisoned](https://hytaleguide.net/items/black-orchid)
+- [Plant_Flower_Orchid_Purple](https://hytaleguide.net/items/purple-orchid)
+- [Plant_Flower_Orchid_Red](https://hytaleguide.net/items/red-orchid)
+- [Plant_Flower_Orchid_White](https://hytaleguide.net/items/white-orchid)
+- [Plant_Flower_Orchid_Yellow](https://hytaleguide.net/items/yellow-orchid)
+- [Plant_Flower_Poisoned_Orange](https://hytaleguide.net/items/poisoned-flower)
+- [Plant_Flower_Tall_Blue](https://hytaleguide.net/items/delphinium)
+- [Plant_Flower_Tall_Cyan](https://hytaleguide.net/items/bushy-cyan-fern)
+- [Plant_Flower_Tall_Cyan2](https://hytaleguide.net/items/cyan-flower)
+- [Plant_Flower_Tall_Pink](https://hytaleguide.net/items/pink-camelia)
+- [Plant_Flower_Tall_Purple](https://hytaleguide.net/items/lavender)
+- [Plant_Flower_Tall_Red](https://hytaleguide.net/items/tall-red-rafflesia)
+- [Plant_Flower_Tall_Violet](https://hytaleguide.net/items/larkspur)
+- [Plant_Flower_Tall_Yellow](https://hytaleguide.net/items/sunflower)
+- [Plant_Flower_Water_Blue](https://hytaleguide.net/items/blue-waterlily)
+- [Plant_Flower_Water_Duckweed](https://hytaleguide.net/items/duckweed)
+- [Plant_Flower_Water_Green](https://hytaleguide.net/items/waterlily)
+- [Plant_Flower_Water_Purple](https://hytaleguide.net/items/purple-waterlily)
+- [Plant_Flower_Water_Red](https://hytaleguide.net/items/red-waterlily)
+- [Plant_Flower_Water_White](https://hytaleguide.net/items/white-waterlily)
+- [Plant_Fruit_Apple](https://hytaleguide.net/items/apple)
+- [Plant_Fruit_Azure](https://hytaleguide.net/items/azure-fruit)
+- [Plant_Fruit_Berries_Red](https://hytaleguide.net/items/wild-berries)
+- [Plant_Fruit_Coconut](https://hytaleguide.net/items/coconut)
+- [Plant_Fruit_Mango](https://hytaleguide.net/items/magic-mango)
+- [Plant_Fruit_Pinkberry](https://hytaleguide.net/items/pinkberry)
+- [Plant_Fruit_Poison](https://hytaleguide.net/items/poison-tree-fruit)
+- [Plant_Fruit_Spiral](https://hytaleguide.net/items/spiral-tree-fruit)
+- [Plant_Fruit_Windwillow](https://hytaleguide.net/items/windwillow-fruit)
+- [Plant_Grass_Arid](https://hytaleguide.net/items/dry-grass)
+- [Plant_Grass_Arid_Tall](https://hytaleguide.net/items/bushy-savannah-grass)
+- [Plant_Grass_Cave_Short](https://hytaleguide.net/items/short-cave-grass)
+- [Plant_Grass_Dry](https://hytaleguide.net/items/plant-grass-dry)
+- [Plant_Grass_Dry_Tall](https://hytaleguide.net/items/tall-dry-grass)
+- [Plant_Grass_Gnarled](https://hytaleguide.net/items/gnarled-grass)
+- [Plant_Grass_Gnarled_Tall](https://hytaleguide.net/items/tall-gnarled-grass)
+- [Plant_Grass_Jungle](https://hytaleguide.net/items/jungle-grass)
+- [Plant_Grass_Jungle_Tall](https://hytaleguide.net/items/tall-jungle-grass)
+- [Plant_Grass_Lush](https://hytaleguide.net/items/lush-grassplant)
+- [Plant_Grass_Lush_Tall](https://hytaleguide.net/items/tall-lush-grassplant)
+- [Plant_Grass_Poisoned](https://hytaleguide.net/items/poisoned-grass)
+- [Plant_Grass_Rocky](https://hytaleguide.net/items/rocky-grass)
+- [Plant_Grass_Rocky_Tall](https://hytaleguide.net/items/tall-rocky-grass)
+- [Plant_Grass_Sharp](https://hytaleguide.net/items/grass)
+- [Plant_Grass_Sharp_Overgrown](https://hytaleguide.net/items/overgrown-sharp-grass)
+- [Plant_Grass_Sharp_Tall](https://hytaleguide.net/items/tall-grass)
+- [Plant_Grass_Sharp_Wild](https://hytaleguide.net/items/wild-sharp-grass)
+- [Plant_Grass_Snowy](https://hytaleguide.net/items/snowy-grass)
+- [Plant_Grass_Snowy_Tall](https://hytaleguide.net/items/tall-snowy-grass)
+- [Plant_Grass_Wet](https://hytaleguide.net/items/wet-grass)
+- [Plant_Grass_Wet_Overgrown](https://hytaleguide.net/items/overgrown-wet-grass)
+- [Plant_Grass_Wet_Tall](https://hytaleguide.net/items/tall-wet-grass)
+- [Plant_Grass_Wet_Wild](https://hytaleguide.net/items/wild-wet-grass)
+- [Plant_Grass_Winter](https://hytaleguide.net/items/winter-grass)
+- [Plant_Grass_Winter_Tall](https://hytaleguide.net/items/tall-winter-grass)
+- [Plant_Hay_Bundle](https://hytaleguide.net/items/bundle-of-hay)
+- [Plant_Lavender_Block](https://hytaleguide.net/items/plant-lavender-block)
+- [Plant_Lavender_Stage_0](https://hytaleguide.net/items/lavender-seeds)
+- [Plant_Leaves_Amber](https://hytaleguide.net/items/amber-leaves)
+- [Plant_Leaves_Apple](https://hytaleguide.net/items/apple-leaves)
+- [Plant_Leaves_Ash](https://hytaleguide.net/items/ash-leaves)
+- [Plant_Leaves_Aspen](https://hytaleguide.net/items/aspen-leaves)
+- [Plant_Leaves_Autumn](https://hytaleguide.net/items/autumn-leaves)
+- [Plant_Leaves_Autumn_Floor](https://hytaleguide.net/items/forest-floor-leaves)
+- [Plant_Leaves_Azure](https://hytaleguide.net/items/azure-leaves)
+- [Plant_Leaves_Bamboo](https://hytaleguide.net/items/bamboo-leaves)
+- [Plant_Leaves_Banyan](https://hytaleguide.net/items/banyan-leaves)
+- [Plant_Leaves_Beech](https://hytaleguide.net/items/beech-leaves)
+- [Plant_Leaves_Birch](https://hytaleguide.net/items/birch-leaves)
+- [Plant_Leaves_Bottle](https://hytaleguide.net/items/bottletree-leaves)
+- [Plant_Leaves_Bramble](https://hytaleguide.net/items/bramble-leaves)
+- [Plant_Leaves_Burnt](https://hytaleguide.net/items/burnt-leaves)
+- [Plant_Leaves_Camphor](https://hytaleguide.net/items/camphor-leaves)
+- [Plant_Leaves_Cedar](https://hytaleguide.net/items/cedar-leaves)
+- [Plant_Leaves_Crystal](https://hytaleguide.net/items/crystal-leaves)
+- [Plant_Leaves_Dead](https://hytaleguide.net/items/dead-leaves)
+- [Plant_Leaves_Dry](https://hytaleguide.net/items/dry-leaves)
+- [Plant_Leaves_Fig_Blue](https://hytaleguide.net/items/blue-fig-leaves)
+- [Plant_Leaves_Fir](https://hytaleguide.net/items/fir-leaves)
+- [Plant_Leaves_Fir_Red](https://hytaleguide.net/items/red-fir-leaves)
+- [Plant_Leaves_Fir_Snow](https://hytaleguide.net/items/snowy-fir-leaves)
+- [Plant_Leaves_Fir_Tip](https://hytaleguide.net/items/fir-leaves-tip)
+- [Plant_Leaves_Fir_Tip_Snow](https://hytaleguide.net/items/snowy-fir-leaves-tip)
+- [Plant_Leaves_Fire](https://hytaleguide.net/items/fire-leaves)
+- [Plant_Leaves_Frostwood](https://hytaleguide.net/items/frostwood-leaves)
+- [Plant_Leaves_Goldentree](https://hytaleguide.net/items/plant-leaves-goldentree)
+- [Plant_Leaves_Gumboab](https://hytaleguide.net/items/gumboab-leaves)
+- [Plant_Leaves_Jungle](https://hytaleguide.net/items/tropical-leaves)
+- [Plant_Leaves_Jungle_Floor](https://hytaleguide.net/items/jungle-floor-leaves)
+- [Plant_Leaves_Maple](https://hytaleguide.net/items/maple-leaves)
+- [Plant_Leaves_Oak](https://hytaleguide.net/items/oak-leaves)
+- [Plant_Leaves_Palm](https://hytaleguide.net/items/palm-leaves)
+- [Plant_Leaves_Palm_Arid](https://hytaleguide.net/items/arid-palm-leaves)
+- [Plant_Leaves_Palm_Oasis](https://hytaleguide.net/items/giant-palm-leaves)
+- [Plant_Leaves_Palo](https://hytaleguide.net/items/palo-leaves)
+- [Plant_Leaves_Petrified](https://hytaleguide.net/items/petrified-pine-leaves)
+- [Plant_Leaves_Poisoned](https://hytaleguide.net/items/poisoned-leaves)
+- [Plant_Leaves_Poisoned_Floor](https://hytaleguide.net/items/plant-leaves-poisoned-floor)
+- [Plant_Leaves_Redwood](https://hytaleguide.net/items/redwood-leaves)
+- [Plant_Leaves_Sallow](https://hytaleguide.net/items/sallow-leaves)
+- [Plant_Leaves_Snow](https://hytaleguide.net/items/snowy-leaves)
+- [Plant_Leaves_Spiral](https://hytaleguide.net/items/spiral-leaves)
+- [Plant_Leaves_Stormbark](https://hytaleguide.net/items/stormbark-leaves)
+- [Plant_Leaves_Windwillow](https://hytaleguide.net/items/willow-leaves)
+- [Plant_Leaves_Wisteria_Wild](https://hytaleguide.net/items/wild-wisteria-leaves)
+- [Plant_Moss_Block_Blue](https://hytaleguide.net/items/blue-moss-block)
+- [Plant_Moss_Block_Green](https://hytaleguide.net/items/green-moss-block)
+- [Plant_Moss_Block_Green_Dark](https://hytaleguide.net/items/dark-green-moss-block)
+- [Plant_Moss_Block_Red](https://hytaleguide.net/items/red-moss-block)
+- [Plant_Moss_Block_Yellow](https://hytaleguide.net/items/yellow-moss-block)
+- [Plant_Moss_Blue](https://hytaleguide.net/items/blue-moss)
+- [Plant_Moss_Cave_Blue](https://hytaleguide.net/items/blue-hanging-moss)
+- [Plant_Moss_Cave_Green](https://hytaleguide.net/items/green-hanging-moss)
+- [Plant_Moss_Cave_Green_Dark](https://hytaleguide.net/items/dark-green-hanging-moss)
+- [Plant_Moss_Cave_Red](https://hytaleguide.net/items/red-hanging-moss)
+- [Plant_Moss_Cave_Yellow](https://hytaleguide.net/items/yellow-hanging-moss)
+- [Plant_Moss_Green](https://hytaleguide.net/items/moss)
+- [Plant_Moss_Green_Dark](https://hytaleguide.net/items/dark-green-moss)
+- [Plant_Moss_Red](https://hytaleguide.net/items/red-moss)
+- [Plant_Moss_Rug_Blue](https://hytaleguide.net/items/blue-moss-rug)
+- [Plant_Moss_Rug_Green](https://hytaleguide.net/items/green-moss-rug)
+- [Plant_Moss_Rug_Green_Dark](https://hytaleguide.net/items/dark-green-moss-rug)
+- [Plant_Moss_Rug_Lime](https://hytaleguide.net/items/sorrel-rug)
+- [Plant_Moss_Rug_Pink](https://hytaleguide.net/items/pink-moss-rug)
+- [Plant_Moss_Rug_Red](https://hytaleguide.net/items/red-moss-rug)
+- [Plant_Moss_Rug_Yellow](https://hytaleguide.net/items/yellow-moss-rug)
+- [Plant_Moss_Short_Blue](https://hytaleguide.net/items/short-blue-moss)
+- [Plant_Moss_Short_Green](https://hytaleguide.net/items/short-moss)
+- [Plant_Moss_Short_Green_Dark](https://hytaleguide.net/items/short-dark-green-moss)
+- [Plant_Moss_Short_Red](https://hytaleguide.net/items/short-red-moss)
+- [Plant_Moss_Short_Yellow](https://hytaleguide.net/items/short-yellow-moss)
+- [Plant_Moss_Wall_Blue](https://hytaleguide.net/items/blue-wall-moss)
+- [Plant_Moss_Wall_Green](https://hytaleguide.net/items/green-wall-moss)
+- [Plant_Moss_Wall_Green_Dark](https://hytaleguide.net/items/dark-green-wall-moss)
+- [Plant_Moss_Wall_Red](https://hytaleguide.net/items/red-wall-moss)
+- [Plant_Moss_Wall_Yellow](https://hytaleguide.net/items/yellow-wall-moss)
+- [Plant_Moss_Yellow](https://hytaleguide.net/items/yellow-moss)
+- [Plant_Petals_Azure](https://hytaleguide.net/items/azure-petals)
+- [Plant_Petals_Black](https://hytaleguide.net/items/black-petals)
+- [Plant_Petals_Blood](https://hytaleguide.net/items/blood-petals)
+- [Plant_Petals_Blue](https://hytaleguide.net/items/blue-petals)
+- [Plant_Petals_Cyan](https://hytaleguide.net/items/cyan-petals)
+- [Plant_Petals_Green](https://hytaleguide.net/items/green-petals)
+- [Plant_Petals_Orange](https://hytaleguide.net/items/orange-petals)
+- [Plant_Petals_Pink](https://hytaleguide.net/items/pink-petals)
+- [Plant_Petals_Purple](https://hytaleguide.net/items/purple-petals)
+- [Plant_Petals_Red](https://hytaleguide.net/items/red-petals)
+- [Plant_Petals_Storm](https://hytaleguide.net/items/storm-petals)
+- [Plant_Petals_White](https://hytaleguide.net/items/white-petals)
+- [Plant_Petals_Yellow](https://hytaleguide.net/items/yellow-petals)
+- [Plant_Reeds_Arid](https://hytaleguide.net/items/papyrus-reeds)
+- [Plant_Reeds_Lava](https://hytaleguide.net/items/lava-reeds)
+- [Plant_Reeds_Marsh](https://hytaleguide.net/items/river-reeds)
+- [Plant_Reeds_Poison](https://hytaleguide.net/items/poison-reeds)
+- [Plant_Reeds_Water](https://hytaleguide.net/items/tall-water-reeds)
+- [Plant_Reeds_Wet](https://hytaleguide.net/items/wet-reeds)
+- [Plant_Reeds_Winter](https://hytaleguide.net/items/winter-reeds)
+- [Plant_Roots_Cave](https://hytaleguide.net/items/hanging-cave-roots)
+- [Plant_Roots_Cave_Small](https://hytaleguide.net/items/cave-roots)
+- [Plant_Roots_Leafy](https://hytaleguide.net/items/leafy-cave-roots)
+- [Plant_Sapling_Amber](https://hytaleguide.net/items/amber-sapling)
+- [Plant_Sapling_Apple](https://hytaleguide.net/items/apple-sapling)
+- [Plant_Sapling_Ash](https://hytaleguide.net/items/ash-sapling)
+- [Plant_Sapling_Aspen](https://hytaleguide.net/items/aspen-sapling)
+- [Plant_Sapling_Azure](https://hytaleguide.net/items/azure-sapling)
+- [Plant_Sapling_Bamboo](https://hytaleguide.net/items/bamboo-sapling)
+- [Plant_Sapling_Banyan](https://hytaleguide.net/items/banyan-sapling)
+- [Plant_Sapling_Beech](https://hytaleguide.net/items/beech-sapling)
+- [Plant_Sapling_Birch](https://hytaleguide.net/items/birch-sapling)
+- [Plant_Sapling_Bottletree](https://hytaleguide.net/items/bottletree-sapling)
+- [Plant_Sapling_Camphor](https://hytaleguide.net/items/camphor-sapling)
+- [Plant_Sapling_Cedar](https://hytaleguide.net/items/cedar-sapling)
+- [Plant_Sapling_Crystal](https://hytaleguide.net/items/crystal-sapling)
+- [Plant_Sapling_Dry](https://hytaleguide.net/items/dry-sapling)
+- [Plant_Sapling_Fig_Blue](https://hytaleguide.net/items/blue-fig-sapling)
+- [Plant_Sapling_Fire](https://hytaleguide.net/items/fire-sapling)
+- [Plant_Sapling_Gumboab](https://hytaleguide.net/items/gumboab-sapling)
+- [Plant_Sapling_Ice](https://hytaleguide.net/items/frostwood-sapling)
+- [Plant_Sapling_Jungle](https://hytaleguide.net/items/jungle-sapling)
+- [Plant_Sapling_Maple](https://hytaleguide.net/items/maple-sapling)
+- [Plant_Sapling_Oak](https://hytaleguide.net/items/oak-sapling)
+- [Plant_Sapling_Palm](https://hytaleguide.net/items/palm-sapling)
+- [Plant_Sapling_Palo](https://hytaleguide.net/items/palo-sapling)
+- [Plant_Sapling_Petrified](https://hytaleguide.net/items/petrified-pine-sapling)
+- [Plant_Sapling_Poisoned](https://hytaleguide.net/items/poisoned-sapling)
+- [Plant_Sapling_Redwood](https://hytaleguide.net/items/redwood-sapling)
+- [Plant_Sapling_Sallow](https://hytaleguide.net/items/sallow-sapling)
+- [Plant_Sapling_Spiral](https://hytaleguide.net/items/spiral-sapling)
+- [Plant_Sapling_Spruce](https://hytaleguide.net/items/spruce-sapling)
+- [Plant_Sapling_Spruce_Frozen](https://hytaleguide.net/items/frozen-spruce-sapling)
+- [Plant_Sapling_Stormbark](https://hytaleguide.net/items/stormbark-sapling)
+- [Plant_Sapling_Windwillow](https://hytaleguide.net/items/sand-sapling)
+- [Plant_Sapling_Wisteria_Wild](https://hytaleguide.net/items/wild-wisteria-sapling)
+- [Plant_Seaweed_Arid_Red](https://hytaleguide.net/items/red-arid-seaweed)
+- [Plant_Seaweed_Arid_Short](https://hytaleguide.net/items/short-arid-seaweed)
+- [Plant_Seaweed_Arid_Stack](https://hytaleguide.net/items/arid-seaweed-stack)
+- [Plant_Seaweed_Arid_Tall](https://hytaleguide.net/items/tall-arid-seaweed)
+- [Plant_Seaweed_Arid_Yellow](https://hytaleguide.net/items/yellow-arid-seaweed)
+- [Plant_Seaweed_Dead_Eerie](https://hytaleguide.net/items/eerie-dead-seaweed)
+- [Plant_Seaweed_Dead_Ghostly](https://hytaleguide.net/items/ghostly-dead-seaweed)
+- [Plant_Seaweed_Dead_Short](https://hytaleguide.net/items/short-dead-seaweed)
+- [Plant_Seaweed_Dead_Stack](https://hytaleguide.net/items/dead-seaweed-stack)
+- [Plant_Seaweed_Dead_Tall](https://hytaleguide.net/items/tall-dead-seaweed)
+- [Plant_Seaweed_Grass](https://hytaleguide.net/items/short-seaweed)
+- [Plant_Seaweed_Grass_Bulbs](https://hytaleguide.net/items/green-seaweed-bulbs)
+- [Plant_Seaweed_Grass_Green](https://hytaleguide.net/items/green-seaweed)
+- [Plant_Seaweed_Grass_Stack](https://hytaleguide.net/items/seaweed-middle)
+- [Plant_Seaweed_Grass_Tall](https://hytaleguide.net/items/tall-seaweed)
+- [Plant_Seaweed_Wet_Stack](https://hytaleguide.net/items/wet-seaweed)
+- [Plant_Seaweed_Winter_Aurora](https://hytaleguide.net/items/aurora-seaweed)
+- [Plant_Seaweed_Winter_Blue](https://hytaleguide.net/items/blue-winter-seaweed)
+- [Plant_Seaweed_Winter_Short](https://hytaleguide.net/items/short-winter-seaweed)
+- [Plant_Seaweed_Winter_Stack](https://hytaleguide.net/items/winter-seaweed-stack)
+- [Plant_Seaweed_Winter_Tall](https://hytaleguide.net/items/tall-winter-seaweed)
+- [Plant_Seeds_Amber](https://hytaleguide.net/items/amber-seed-bag)
+- [Plant_Seeds_Apple](https://hytaleguide.net/items/apple-seed-bag)
+- [Plant_Seeds_Ash](https://hytaleguide.net/items/ash-seed-bag)
+- [Plant_Seeds_Aspen](https://hytaleguide.net/items/aspen-seed-bag)
+- [Plant_Seeds_Aubergine](https://hytaleguide.net/items/aubergine-seed-bag)
+- [Plant_Seeds_Aubergine_Eternal](https://hytaleguide.net/items/aubergine-seed-bag-eternal)
+- [Plant_Seeds_Azure](https://hytaleguide.net/items/azure-sapling-seed-bag)
+- [Plant_Seeds_Bamboo](https://hytaleguide.net/items/bamboo-seed-bag)
+- [Plant_Seeds_Banyan](https://hytaleguide.net/items/banyan-seed-bag)
+- [Plant_Seeds_Beans_Purple](https://hytaleguide.net/items/purple-beans)
+- [Plant_Seeds_Beech](https://hytaleguide.net/items/beech-seed-bag)
+- [Plant_Seeds_Birch](https://hytaleguide.net/items/birch-seed-bag)
+- [Plant_Seeds_Bottletree](https://hytaleguide.net/items/bottletree-seed-bag)
+- [Plant_Seeds_Camphor](https://hytaleguide.net/items/camphor-seed-bag)
+- [Plant_Seeds_Carrot](https://hytaleguide.net/items/carrot-seed-bag)
+- [Plant_Seeds_Carrot_Eternal](https://hytaleguide.net/items/carrot-seed-bag-eternal)
+- [Plant_Seeds_Cauliflower](https://hytaleguide.net/items/cauliflower-seed-bag)
+- [Plant_Seeds_Cauliflower_Eternal](https://hytaleguide.net/items/cauliflower-seed-bag-eternal)
+- [Plant_Seeds_Cedar](https://hytaleguide.net/items/cedar-seed-bag)
+- [Plant_Seeds_Chilli](https://hytaleguide.net/items/chilli-seed-bag)
+- [Plant_Seeds_Chilli_Eternal](https://hytaleguide.net/items/chilli-seed-bag-eternal)
+- [Plant_Seeds_Corn](https://hytaleguide.net/items/corn-seed-bag)
+- [Plant_Seeds_Corn_Eternal](https://hytaleguide.net/items/corn-seed-bag-eternal)
+- [Plant_Seeds_Cotton](https://hytaleguide.net/items/cotton-seed-bag)
+- [Plant_Seeds_Cotton_Eternal](https://hytaleguide.net/items/cotton-seed-bag-eternal)
+- [Plant_Seeds_Crystal](https://hytaleguide.net/items/crystal-seed-bag)
+- [Plant_Seeds_Dry](https://hytaleguide.net/items/dry-seed-bag)
+- [Plant_Seeds_Fig_Blue](https://hytaleguide.net/items/blue-fig-seed-bag)
+- [Plant_Seeds_Fir](https://hytaleguide.net/items/fir-seed-bag)
+- [Plant_Seeds_Fire](https://hytaleguide.net/items/fire-seed-bag)
+- [Plant_Seeds_Frostwood](https://hytaleguide.net/items/frostwood-seed-bag)
+- [Plant_Seeds_Gumboab](https://hytaleguide.net/items/gumboab-seed-bag)
+- [Plant_Seeds_Health1](https://hytaleguide.net/items/blood-rose-seed-bag)
+- [Plant_Seeds_Health2](https://hytaleguide.net/items/bloodcap-spore-bag)
+- [Plant_Seeds_Health3](https://hytaleguide.net/items/blood-leaf-seed-bag)
+- [Plant_Seeds_Ice](https://hytaleguide.net/items/ice-seed-bag)
+- [Plant_Seeds_Jungle](https://hytaleguide.net/items/jungle-seed-bag)
+- [Plant_Seeds_Lettuce](https://hytaleguide.net/items/lettuce-seed-bag)
+- [Plant_Seeds_Lettuce_Eternal](https://hytaleguide.net/items/lettuce-seed-bag-eternal)
+- [Plant_Seeds_Mana1](https://hytaleguide.net/items/azure-fern-seed-bag)
+- [Plant_Seeds_Mana2](https://hytaleguide.net/items/azurecap-spore-bag)
+- [Plant_Seeds_Mana3](https://hytaleguide.net/items/azure-kelp-seed-bag)
+- [Plant_Seeds_Maple](https://hytaleguide.net/items/maple-seed-bag)
+- [Plant_Seeds_Mushroom](https://hytaleguide.net/items/mushroom-seed-bag)
+- [Plant_Seeds_Oak](https://hytaleguide.net/items/oak-seed-bag)
+- [Plant_Seeds_Onion](https://hytaleguide.net/items/onion-bulb)
+- [Plant_Seeds_Onion_Eternal](https://hytaleguide.net/items/onion-bulb-eternal)
+- [Plant_Seeds_Palm](https://hytaleguide.net/items/palm-seed-bag)
+- [Plant_Seeds_Palo](https://hytaleguide.net/items/palo-seed-bag)
+- [Plant_Seeds_Petrified](https://hytaleguide.net/items/petrified-pine-seed-bag)
+- [Plant_Seeds_Pine](https://hytaleguide.net/items/pinecone)
+- [Plant_Seeds_Poisoned](https://hytaleguide.net/items/poisoned-seed-bag)
+- [Plant_Seeds_Potato](https://hytaleguide.net/items/potato-sprout)
+- [Plant_Seeds_Potato_Eternal](https://hytaleguide.net/items/potato-sprout-eternal)
+- [Plant_Seeds_Pumpkin](https://hytaleguide.net/items/pumpkin-seed-bag)
+- [Plant_Seeds_Pumpkin_Eternal](https://hytaleguide.net/items/pumpkin-seed-bag-eternal)
+- [Plant_Seeds_Redwood](https://hytaleguide.net/items/redwood-seed-bag)
+- [Plant_Seeds_Rice](https://hytaleguide.net/items/rice-seed-bag)
+- [Plant_Seeds_Rice_Eternal](https://hytaleguide.net/items/rice-seed-bag-eternal)
+- [Plant_Seeds_Sallow](https://hytaleguide.net/items/sallow-seed-bag)
+- [Plant_Seeds_Spiral](https://hytaleguide.net/items/spiral-seed-bag)
+- [Plant_Seeds_Stamina1](https://hytaleguide.net/items/storm-thistle-seed-bag)
+- [Plant_Seeds_Stamina2](https://hytaleguide.net/items/stormcap-spores)
+- [Plant_Seeds_Stamina3](https://hytaleguide.net/items/storm-sapling-seed-bag)
+- [Plant_Seeds_Stormbark](https://hytaleguide.net/items/stormbark-seed-bag)
+- [Plant_Seeds_Sunflower](https://hytaleguide.net/items/sunflower-seed-bag)
+- [Plant_Seeds_Test_Tree](https://hytaleguide.net/items/seed-test-tree)
+- [Plant_Seeds_Tomato](https://hytaleguide.net/items/tomato-seed-bag)
+- [Plant_Seeds_Tomato_Eternal](https://hytaleguide.net/items/tomato-seed-bag-eternal)
+- [Plant_Seeds_Turnip](https://hytaleguide.net/items/turnip-seed-bag)
+- [Plant_Seeds_Turnip_Eternal](https://hytaleguide.net/items/turnip-seed-bag-eternal)
+- [Plant_Seeds_Wheat](https://hytaleguide.net/items/wheat-seed-bag)
+- [Plant_Seeds_Wheat_Eternal](https://hytaleguide.net/items/wheat-seed-bag-eternal)
+- [Plant_Seeds_Wild](https://hytaleguide.net/items/wild-grass-seed-bag)
+- [Plant_Seeds_Willow](https://hytaleguide.net/items/willow-seed-bag)
+- [Plant_Seeds_Wisteria_Wild](https://hytaleguide.net/items/wild-wisteria-seed-bag)
+- [Plant_Sunflower_Block](https://hytaleguide.net/items/plant-sunflower-block)
+- [Plant_Sunflower_Stage_0](https://hytaleguide.net/items/sunflower-seeds)
+- [Plant_Test_Tree_Block](https://hytaleguide.net/items/test-tree-0)
+- [Plant_Vine](https://hytaleguide.net/items/wall-ivy)
+- [Plant_Vine_Green_Hanging](https://hytaleguide.net/items/green-spiral-vine)
+- [Plant_Vine_Hanging](https://hytaleguide.net/items/hanging-liana)
+- [Plant_Vine_Jungle](https://hytaleguide.net/items/jungle-wall-vines)
+- [Plant_Vine_Liana](https://hytaleguide.net/items/liana)
+- [Plant_Vine_Liana_End](https://hytaleguide.net/items/liana-end)
+- [Plant_Vine_Red_Hanging](https://hytaleguide.net/items/carmine-hanging-liana)
+- [Plant_Vine_Rug](https://hytaleguide.net/items/vine-rug)
+- [Plant_Vine_Thick_Roots](https://hytaleguide.net/items/thick-vine-roots)
+- [Plant_Vine_Thick_Vertical](https://hytaleguide.net/items/thick-vine)
+- [Plant_Vine_Wall_Dead](https://hytaleguide.net/items/dead-ivy)
+- [Plant_Vine_Wall_Dry](https://hytaleguide.net/items/dry-vine)
+- [Plant_Vine_Wall_Poisoned](https://hytaleguide.net/items/poisoned-ivy)
+- [Plant_Vine_Wall_Winter](https://hytaleguide.net/items/vine)
+
+## Tree
+
+- [Tree_Sap_Glob](https://hytaleguide.net/items/sap-glob)
+
+# Other
+
+## Arcade
+
+- [Arcade_Machine](https://hytaleguide.net/items/arcade-machine)
+
+## Block
+
+- [Block_Spawner_Block](https://hytaleguide.net/items/block-spawner)
+- [Block_Spawner_Block_Large](https://hytaleguide.net/items/block-spawner-large)
+
+## Container
+
+- [Container_Bucket](https://hytaleguide.net/items/wooden-bucket)
+
+## Decorative
+
+- [Decorative_Potion_Template](https://hytaleguide.net/items/template-decorative-potion)
+
+## Flamethrower
+
+- [Flamethrower_Goblin](https://hytaleguide.net/items/goblin-flamethrower)
+
+## Forgotten
+
+- [Forgotten_Temple_Portal_Enter](https://hytaleguide.net/items/forgotten-temple-gateway)
+- [Forgotten_Temple_Portal_Exit](https://hytaleguide.net/items/forgotten-temple-exit)
+
+## Geyzer
+
+- [Geyzer_Spawner1](https://hytaleguide.net/items/geyzer-spawner-5-sec)
+
+## Greenscreen
+
+- [Greenscreen](https://hytaleguide.net/items/greenscreen)
+
+## Kweebec
+
+- [Kweebec_Ancient](https://hytaleguide.net/items/kweebec-ancient)
+
+## Launchpad
+
+- [Launchpad](https://hytaleguide.net/items/launch-platform)
+
+## Leave
+
+- [Leave_Instance](https://hytaleguide.net/items/leave-instance)
+
+## Lobby
+
+- [Lobby_Wall_Poster01](https://hytaleguide.net/items/wall-poster)
+- [Lobby_Wall_Poster_Small01](https://hytaleguide.net/items/small-wall-poster)
+
+## Stalactite
+
+- [Stalactite_Smoke_Floor](https://hytaleguide.net/items/stalactite-smoke-floor)
+
+## Teleporter
+
+- [Teleporter](https://hytaleguide.net/items/teleporter)
+
+## Tinkering
+
+- [Tinkering_Target_Dummy](https://hytaleguide.net/items/training-dummy)
+
+## Vehicle
+
+- [Vehicle_Wood_Boat](https://hytaleguide.net/items/wooden-boat)
+- [Vehicle_Wood_Raft](https://hytaleguide.net/items/wooden-raft)
+
+## VoidInvasion
+
+- [VoidInvasion_Portal](https://hytaleguide.net/items/void-invasion-portal)
+
+## Winter
+
+- [Winter_Holiday_Wreath](https://hytaleguide.net/items/winter-wreath)
+
+# Technical
+
+## Debug
+
+- [Debug_Armor_D_Chest_Of_Damage_Reduction](https://hytaleguide.net/items/debug-leather-cuirass-of-damage-reduction)
+- [Debug_Armor_D_Hands_Of_Regeneration](https://hytaleguide.net/items/debug-leather-gauntlets-of-regeneration)
+- [Debug_Armor_D_Head_Of_Dash_Reduction](https://hytaleguide.net/items/debug-leather-helm-of-dash-cost-reduction)
+- [Debug_Armor_D_Legs_Of_Knockback_Reduction](https://hytaleguide.net/items/debug-leather-pants-of-knockback-reduction)
+- [Debug_Armor_Leather_Light_Chest_Mods](https://hytaleguide.net/items/debug-light-leather-cuirass-mods)
+- [Debug_Armor_O_Chest_Of_Damage_Enhancement](https://hytaleguide.net/items/debug-steel-cuirass-of-damage-enhancement)
+- [Debug_Armor_O_Head_Of_Dash_Exhaustion](https://hytaleguide.net/items/debug-steel-helm-of-dash-cost-increase)
+- [Debug_Armor_O_Legs_Of_Knockback_Enhancement](https://hytaleguide.net/items/debug-steel-greaves-of-knockback-enhancements)
+- [Debug_Block](https://hytaleguide.net/items/debug-block)
+- [Debug_Bow_Two_Handed](https://hytaleguide.net/items/two-handed-bow)
+- [Debug_Combo](https://hytaleguide.net/items/debug-combo-item)
+- [Debug_Continue](https://hytaleguide.net/items/debug-interaction-item)
+- [Debug_Continue_Equip](https://hytaleguide.net/items/debug-continue-equip-hands)
+- [Debug_Continue_Equip_Legs](https://hytaleguide.net/items/debug-continue-equip-legs)
+- [Debug_Forking](https://hytaleguide.net/items/debug-forking)
+- [Debug_Forking_2](https://hytaleguide.net/items/debug-forking-2)
+- [Debug_Projectile](https://hytaleguide.net/items/debug-projectile-item)
+- [Debug_Raycast](https://hytaleguide.net/items/debug-raycast-item)
+- [Debug_Spawn_Marker_Block](https://hytaleguide.net/items/debug-spawn-marker-block)
+- [Debug_Stick](https://hytaleguide.net/items/the-stick)
+- [Debug_Stick_Delay](https://hytaleguide.net/items/the-stick-of-delayed-charging)
+- [Debug_Stick_Parry](https://hytaleguide.net/items/the-stick-of-parrying)
+- [Debug_Stick_Slow](https://hytaleguide.net/items/slow-stick)
+- [Debug_Stick_Stun](https://hytaleguide.net/items/the-stun-stick)
+
+## Editor
+
+- [Editor_Anchor](https://hytaleguide.net/items/editor-anchor)
+- [Editor_Block](https://hytaleguide.net/items/editor-block)
+- [Editor_Empty](https://hytaleguide.net/items/editor-empty)
+
+## EditorTool
+
+- [EditorTool_Boulder](https://hytaleguide.net/items/boulder-brush)
+- [EditorTool_Building](https://hytaleguide.net/items/building-brush)
+- [EditorTool_Cave](https://hytaleguide.net/items/cave-brush)
+- [EditorTool_Cracks](https://hytaleguide.net/items/lava-cracks-brush)
+- [EditorTool_Decoration](https://hytaleguide.net/items/decoration-brush)
+- [EditorTool_Entity](https://hytaleguide.net/items/entity-grabber-tool)
+- [EditorTool_ExampleToolArg](https://hytaleguide.net/items/scripted-brush-example-tool-argument)
+- [EditorTool_Extrude](https://hytaleguide.net/items/extrude-brush-tool)
+- [EditorTool_Flood](https://hytaleguide.net/items/flood-brush-tool)
+- [EditorTool_Forest](https://hytaleguide.net/items/forest-brush)
+- [EditorTool_Grass](https://hytaleguide.net/items/grass-brush)
+- [EditorTool_GrassBrush](https://hytaleguide.net/items/editortool-grassbrush)
+- [EditorTool_GrassPath](https://hytaleguide.net/items/grass-path-brush)
+- [EditorTool_Hitbox](https://hytaleguide.net/items/hitbox-tool)
+- [EditorTool_Hotsprings](https://hytaleguide.net/items/hotsprings-brush)
+- [EditorTool_LaserPointer](https://hytaleguide.net/items/laser-pointer)
+- [EditorTool_Layers](https://hytaleguide.net/items/layer-brush-tool)
+- [EditorTool_Line](https://hytaleguide.net/items/line-brush-tool)
+- [EditorTool_Machinima](https://hytaleguide.net/items/machinima-tool)
+- [EditorTool_Mountain](https://hytaleguide.net/items/mountain-brush)
+- [EditorTool_Noise](https://hytaleguide.net/items/noise-brush-tool)
+- [EditorTool_Paint](https://hytaleguide.net/items/paint-brush-tool)
+- [EditorTool_Paste](https://hytaleguide.net/items/paste-tool)
+- [EditorTool_Path](https://hytaleguide.net/items/path-brush)
+- [EditorTool_PrefabEditing_SelectPrefab](https://hytaleguide.net/items/prefab-selector-tool)
+- [EditorTool_PrefabEditing_SetAnchor](https://hytaleguide.net/items/set-anchor-tool)
+- [EditorTool_Revolve](https://hytaleguide.net/items/revolve-tool)
+- [EditorTool_River](https://hytaleguide.net/items/river-brush)
+- [EditorTool_Rubble](https://hytaleguide.net/items/rubble-brush)
+- [EditorTool_RuinRoofs](https://hytaleguide.net/items/ruins-brush)
+- [EditorTool_Ruins](https://hytaleguide.net/items/editortool-ruins)
+- [EditorTool_Ruler](https://hytaleguide.net/items/ruler-tool)
+- [EditorTool_Scatter](https://hytaleguide.net/items/scatter-brush-tool)
+- [EditorTool_ScriptedBrushTemplate](https://hytaleguide.net/items/scripted-brush)
+- [EditorTool_Sculpt](https://hytaleguide.net/items/sculpt-brush-tool)
+- [EditorTool_Selection](https://hytaleguide.net/items/selection-tool)
+- [EditorTool_Smooth](https://hytaleguide.net/items/smooth-brush-tool)
+- [EditorTool_Spiral](https://hytaleguide.net/items/spiral-brush)
+- [EditorTool_Tentacle](https://hytaleguide.net/items/tentacle-brush)
+- [EditorTool_Tint](https://hytaleguide.net/items/tint-brush-tool)
+
+## ExamplePrefabPlacementBlock
+
+- [ExamplePrefabPlacementBlock_Tree](https://hytaleguide.net/items/tmp-example-prefab-placement-block-tree)
+
+## Filter
+
+- [Filter_Air_Block](https://hytaleguide.net/items/filter-air-block)
+- [Filter_AllScatter](https://hytaleguide.net/items/filter-all-scatter)
+- [Filter_Gravel](https://hytaleguide.net/items/filter-gravel)
+- [Filter_Ores](https://hytaleguide.net/items/filter-ores)
+- [Filter_PlantsAndTrees](https://hytaleguide.net/items/filter-plants-trees)
+- [Filter_PlantScatter](https://hytaleguide.net/items/filter-plant-scatter)
+- [Filter_Rock](https://hytaleguide.net/items/filter-rock)
+- [Filter_Snow](https://hytaleguide.net/items/filter-snow)
+- [Filter_Soils](https://hytaleguide.net/items/filter-soils)
+- [Filter_TreeLeaves](https://hytaleguide.net/items/filter-tree-leaves)
+- [Filter_TreeWood](https://hytaleguide.net/items/filter-tree-wood)
+- [Filter_TreeWoodAndLeaves](https://hytaleguide.net/items/filter-tree-wood-leaves)
+
+## Media
+
+- [Media_RemoteControl](https://hytaleguide.net/items/media-remote-control)
+
+## Memory
+
+- [Memory_Particle](https://hytaleguide.net/items/memory)
+
+## Prefab
+
+- [Prefab_Spawner_Block](https://hytaleguide.net/items/prefab-spawner)
+
+## Prototype
+
+- [Prototype_Ancient_Sign_Hanging](https://hytaleguide.net/items/prototype-ancient-hanging-sign)
+- [Prototype_Cacti_Flower_Giant_Pink](https://hytaleguide.net/items/prototype-giant-pink-cactus-flower)
+- [Prototype_Cactus_Five](https://hytaleguide.net/items/prototype-cactus-block-5)
+- [Prototype_Cactus_Flower_Giant_White](https://hytaleguide.net/items/prototype-giant-white-cactus-flower)
+- [Prototype_Cactus_Flower_Giant_Yellow](https://hytaleguide.net/items/prototype-giant-yellow-cactus-flower)
+- [Prototype_Cactus_Flower_Pink](https://hytaleguide.net/items/prototype-pink-cactus-flower)
+- [Prototype_Cactus_Flower_White](https://hytaleguide.net/items/prototype-white-cactus-flower)
+- [Prototype_Cactus_Flower_Yellow](https://hytaleguide.net/items/prototype-yellow-cactus-flower)
+- [Prototype_Cactus_Four](https://hytaleguide.net/items/prototype-cactus-block-4)
+- [Prototype_Cactus_Kit_Flat_Base](https://hytaleguide.net/items/prototype-cactus-flat-base)
+- [Prototype_Cactus_Kit_Flat_Middle](https://hytaleguide.net/items/prototype-cactus-flat-middle)
+- [Prototype_Cactus_Kit_Flat_Top](https://hytaleguide.net/items/prototype-cactus-flat-top)
+- [Prototype_Cactus_Kit_Tall_Arm](https://hytaleguide.net/items/prototype-cactus-tall-arm)
+- [Prototype_Cactus_Kit_Tall_Arm_Large](https://hytaleguide.net/items/prototype-cactus-tall-arm-large)
+- [Prototype_Cactus_Kit_Tall_Arm_Secondary](https://hytaleguide.net/items/prototype-cactus-tall-arm-secondary)
+- [Prototype_Cactus_Kit_Tall_Base](https://hytaleguide.net/items/prototype-cactus-tall-base)
+- [Prototype_Cactus_Kit_Tall_Middle](https://hytaleguide.net/items/prototype-cactus-tall-middle)
+- [Prototype_Cactus_Kit_Tall_Top](https://hytaleguide.net/items/prototype-cactus-tall-top)
+- [Prototype_Cactus_One](https://hytaleguide.net/items/prototype-cactus-block-1)
+- [Prototype_Cactus_Spike_Long](https://hytaleguide.net/items/prototype-long-cactus-spike)
+- [Prototype_Cactus_Succulent_One](https://hytaleguide.net/items/prototype-large-succulent)
+- [Prototype_Cactus_Succulent_Small](https://hytaleguide.net/items/prototype-small-succulent)
+- [Prototype_Cactus_Tall_Thick_Arm](https://hytaleguide.net/items/prototype-cactus-tall-thick-arm)
+- [Prototype_Cactus_Tall_Thick_Arm_Large](https://hytaleguide.net/items/prototype-cactus-tall-thick-arm-large)
+- [Prototype_Cactus_Tall_Thick_Arm_Secondary](https://hytaleguide.net/items/prototype-cactus-tall-thick-arm-secondary)
+- [Prototype_Cactus_Tall_Thick_Base](https://hytaleguide.net/items/prototype-cactus-tall-thick-base)
+- [Prototype_Cactus_Tall_Thick_Middle](https://hytaleguide.net/items/prototype-cactus-tall-thick-middle)
+- [Prototype_Cactus_Tall_Thick_Top](https://hytaleguide.net/items/prototype-cactus-tall-thick-top)
+- [Prototype_Cactus_Three](https://hytaleguide.net/items/prototype-cactus-block-3)
+- [Prototype_Cactus_Two](https://hytaleguide.net/items/prototype-cactus-block-2)
+- [Prototype_Crude_Sign_Ground](https://hytaleguide.net/items/prototype-crude-sign-ground)
+- [Prototype_Geyser](https://hytaleguide.net/items/prototype-geyser-spawner)
+- [Prototype_Goldenwood_Roof_Gutter_Slope](https://hytaleguide.net/items/prototype-goldenwood-roof-gutter)
+- [Prototype_Human_Ruins_Sign_Arrow](https://hytaleguide.net/items/prototype-lost-civilization-arrow-sign)
+- [Prototype_Human_Ruins_Sign_Hanging](https://hytaleguide.net/items/prototype-lost-civilization-hanging-sign)
+- [Prototype_Human_Ruins_Sign_Shield](https://hytaleguide.net/items/prototype-lost-civilization-shield-sign)
+- [Prototype_NumericalState_Candle](https://hytaleguide.net/items/prototype-numerical-state-candle-1)
+- [Prototype_NumericalState_Candle2](https://hytaleguide.net/items/prototype-numerical-state-candle-2)
+- [Prototype_NumericalState_Candle3](https://hytaleguide.net/items/prototype-numerical-state-candle-3)
+- [Prototype_Rock_Chalk_Brick_Pipe_Corner](https://hytaleguide.net/items/chalk-brick-pipe-corner)
+- [Prototype_Rock_Chalk_Brick_Pipe_Short](https://hytaleguide.net/items/chalk-brick-pipe-short)
+- [Prototype_Rock_Concrete_Brick](https://hytaleguide.net/items/concrete-brick)
+- [Prototype_Rock_Concrete_Slab](https://hytaleguide.net/items/concrete-slab)
+- [Prototype_Rock_Concrete_Slab_Brick](https://hytaleguide.net/items/concrete-slab-brick)
+- [Prototype_Rock_Concrete_Slab_Mid_Top](https://hytaleguide.net/items/concrete-slab-mid-top)
+- [Prototype_Rock_Ledge_Cobble_Pipe_Corner](https://hytaleguide.net/items/ledgestone-cobble-pipe-corner)
+- [Prototype_Rock_Ledge_Cobble_Pipe_Long](https://hytaleguide.net/items/ledgestone-cobble-pipe-long)
+- [Prototype_Rock_Ledge_Cobble_Pipe_Short](https://hytaleguide.net/items/ledgestone-cobble-pipe-short)
+- [Prototype_Rock_Peach_Brick_Pipe_Corner](https://hytaleguide.net/items/peachstone-brick-pipe-corner)
+- [Prototype_Rock_Peach_Brick_Pipe_Short](https://hytaleguide.net/items/peachstone-brick-pipe-short)
+- [Prototype_Rock_Peach_Cobble_Pipe_Corner](https://hytaleguide.net/items/peachstone-cobble-pipe-corner)
+- [Prototype_Rock_Peach_Cobble_Pipe_Short](https://hytaleguide.net/items/peachstone-cobble-pipe-short)
+- [Prototype_Rock_Runic_Cobble_Pipe_Corner](https://hytaleguide.net/items/runic-cobble-pipe-corner)
+- [Prototype_Rock_Runic_Cobble_Pipe_Short](https://hytaleguide.net/items/runic-cobble-pipe-short)
+- [Prototype_Rock_Runic_Dark_Brick_Pipe_Corner](https://hytaleguide.net/items/dark-runic-brick-pipe-corner)
+- [Prototype_Rock_Runic_Dark_Brick_Pipe_Short](https://hytaleguide.net/items/dark-runic-brick-pipe-short)
+- [Prototype_Softwood_Roof_Gutter_Slope](https://hytaleguide.net/items/prototype-softwood-roof-gutter)
+- [Prototype_Succulent_Hanging_One_Corner](https://hytaleguide.net/items/hanging-succulent-one-corner)
+- [Prototype_Succulent_Hanging_One_End](https://hytaleguide.net/items/hanging-succulent-one-end)
+- [Prototype_Succulent_Hanging_One_Horizontal](https://hytaleguide.net/items/hanging-succulent-one-horizontal)
+- [Prototype_Succulent_Hanging_One_Vertical](https://hytaleguide.net/items/hanging-succulent-one-vertical)
+- [Prototype_Succulent_Hanging_Three_Corner](https://hytaleguide.net/items/hanging-succulent-three-corner)
+- [Prototype_Succulent_Hanging_Three_End](https://hytaleguide.net/items/hanging-succulent-three-end)
+- [Prototype_Succulent_Hanging_Three_Horizontal](https://hytaleguide.net/items/hanging-succulent-three-horizontal)
+- [Prototype_Succulent_Hanging_Three_Vertical](https://hytaleguide.net/items/hanging-succulent-three-vertical)
+- [Prototype_Succulent_Hanging_Two_Corner](https://hytaleguide.net/items/hanging-succulent-two-corner)
+- [Prototype_Succulent_Hanging_Two_End](https://hytaleguide.net/items/hanging-succulent-two-end)
+- [Prototype_Succulent_Hanging_Two_Horizontal](https://hytaleguide.net/items/hanging-succulent-two-horizontal)
+- [Prototype_Succulent_Hanging_Two_Vertical](https://hytaleguide.net/items/hanging-succulent-two-vertical)
+- [Prototype_Succulent_Hanging_Vertical](https://hytaleguide.net/items/hanging-succulent-vertical)
+- [Prototype_Temple_Emerald_Sign_Ground](https://hytaleguide.net/items/prototype-emerald-temple-sign)
+- [Prototype_Three_Corner](https://hytaleguide.net/items/prototype-beech-branch-corner)
+- [Prototype_Tool_Book_Mana](https://hytaleguide.net/items/prototype-mana-staff)
+- [Prototype_Tool_Guitar_Mana](https://hytaleguide.net/items/prototype-mana-guitar)
+- [Prototype_Tool_Staff_Mana](https://hytaleguide.net/items/prototype-tool-staff-mana)
+- [Prototype_Window_Corner_Bottom_Left](https://hytaleguide.net/items/prototype-window-corner-bottom-left-1)
+- [Prototype_Window_Corner_Bottom_Right](https://hytaleguide.net/items/prototype-window-corner-bottom-right-1)
+- [Prototype_Window_Corner_Rounded_Bottom_Left](https://hytaleguide.net/items/prototype-window-corner-rounded-bottom-left)
+- [Prototype_Window_Corner_Rounded_Bottom_Right](https://hytaleguide.net/items/prototype-window-corner-bottom-right)
+- [Prototype_Window_Corner_Rounded_Top_Left](https://hytaleguide.net/items/prototype-window-corner-rounded-top-left)
+- [Prototype_Window_Corner_Rounded_Top_Right](https://hytaleguide.net/items/prototype-window-corner-rounded-top-right)
+- [Prototype_Window_Corner_Sloped_Bottom_Left](https://hytaleguide.net/items/prototype-window-corner-bottom-left)
+- [Prototype_Window_Corner_Sloped_Bottom_Right](https://hytaleguide.net/items/prototype-window-corner-sloped-bottom-right)
+- [Prototype_Window_Corner_Sloped_Top_Left](https://hytaleguide.net/items/prototype-window-corner-top-left)
+- [Prototype_Window_Corner_Sloped_Top_Right](https://hytaleguide.net/items/prototype-window-corner-top-right)
+- [Prototype_Window_Corner_Top_Left](https://hytaleguide.net/items/prototype-window-corner-top-left-1)
+- [Prototype_Window_Corner_Top_Right](https://hytaleguide.net/items/prototype-window-corner-top-right-1)
+- [Prototype_Window_Edge_Bottom](https://hytaleguide.net/items/prototype-window-edge-bottom)
+- [Prototype_Window_Edge_Left](https://hytaleguide.net/items/prototype-window-edge-left)
+- [Prototype_Window_Edge_Right](https://hytaleguide.net/items/prototype-window-edge-right)
+- [Prototype_Window_Edge_Top](https://hytaleguide.net/items/prototype-window-edge-top)
+- [Prototype_Window_Long_Horizontal](https://hytaleguide.net/items/prototype-window-horizontal)
+- [Prototype_Window_Long_Horizontal_End_L](https://hytaleguide.net/items/prototype-window-horizontal-end-l)
+- [Prototype_Window_Long_Horizontal_End_R](https://hytaleguide.net/items/prototype-window-horizontal-end-r)
+- [Prototype_Window_Long_Vertical](https://hytaleguide.net/items/prototype-window-vertical)
+- [Prototype_Window_Long_Vertical_End_Top](https://hytaleguide.net/items/prototype-window-long-vertical-end-top)
+- [Prototype_Window_Middle](https://hytaleguide.net/items/prototype-window-middle)
+- [Prototype_Window_Single](https://hytaleguide.net/items/prototype-window-single)
+- [Prototype_Window_Vertical_End_Bottom](https://hytaleguide.net/items/prototype-window-vertical-end-bottom-1)
+- [Prototype_Window_Vertical_Round_Bottom](https://hytaleguide.net/items/prototype-window-vertical-end-bottom)
+- [Prototype_Window_Vertical_Round_Top](https://hytaleguide.net/items/prototype-window-vertical-end-top)
+- [Prototype_Window_Vertical_Triangle_Bottom](https://hytaleguide.net/items/prototype-window-vertical-triangle-bottom)
+- [Prototype_Window_Vertical_Triangle_Top](https://hytaleguide.net/items/prototype-window-vertical-triangle-top)
+- [Prototype_Wood_Beech_Branch_Corner_Sideways](https://hytaleguide.net/items/prototype-corner-sideways)
+- [Prototype_Wood_Beech_Branch_Five](https://hytaleguide.net/items/prototype-five)
+- [Prototype_Wood_Beech_Branch_Five_Sideways](https://hytaleguide.net/items/prototype-five-sideways)
+- [Prototype_Wood_Beech_Branch_Four_Edge](https://hytaleguide.net/items/prototype-four-edge)
+- [Prototype_Wood_Beech_Branch_Four_Edge_Sideways](https://hytaleguide.net/items/prototype-four-edge-sideways)
+- [Prototype_Wood_Beech_Branch_Fullsided](https://hytaleguide.net/items/prototype-fullsided)
+- [Prototype_Wood_Beech_Branch_Three_Corner](https://hytaleguide.net/items/prototype-beech-branch-three-corner)
+- [Prototype_Wood_Beech_Branch_Three_T](https://hytaleguide.net/items/prototype-t)
+- [Prototype_Wood_Beech_Branch_Three_T_Sideways](https://hytaleguide.net/items/prototype-t-sideways)
+- [Prototype_Wood_Beech_Branch_X](https://hytaleguide.net/items/prototype-x)
+- [Prototype_Wood_Beech_Branch_X_Sideways](https://hytaleguide.net/items/prototype-x-sideways)
+- [Prototype_Wood_Blackwood_Fence_Platform](https://hytaleguide.net/items/prototype-blackwood-fence-platform)
+- [Prototype_Wood_Darkwood_Fence_Platform](https://hytaleguide.net/items/prototype-darkwood-fence-platform)
+- [Prototype_Wood_Deadwood_Fence_Platform](https://hytaleguide.net/items/prototype-deadwood-fence-platform)
+- [Prototype_Wood_Drywood_Fence_Platform](https://hytaleguide.net/items/prototype-drywood-fence-platform)
+- [Prototype_Wood_Goldenwood_Fence_Platform](https://hytaleguide.net/items/prototype-goldenwood-fence-platform)
+- [Prototype_Wood_Greenwood_Fence_Platform](https://hytaleguide.net/items/prototype-greenwood-fence-platform)
+- [Prototype_Wood_Hardwood_Fence_Platform](https://hytaleguide.net/items/prototype-hardwood-fence-platform)
+- [Prototype_Wood_Lightwood_Fence_Platform](https://hytaleguide.net/items/prototype-lightwood-fence-platform)
+- [Prototype_Wood_Redwood_Fence_Platform](https://hytaleguide.net/items/prototype-redwood-fence-platform)
+- [Prototype_Wood_Softwood_Fence_Platform](https://hytaleguide.net/items/prototype-softwood-fence-platform)
+- [Prototype_Wood_Tropicalwood_Fence_Platform](https://hytaleguide.net/items/prototype-tropical-wood-fence-platform)
+
+## Template
+
+- [Template_Crop_Berry_Block](https://hytaleguide.net/items/template-berry-bush)
+- [Template_Crop_Block](https://hytaleguide.net/items/template-crop)
+- [Template_Crop_Item](https://hytaleguide.net/items/template-crop-item)
+- [Template_Fish_Item](https://hytaleguide.net/items/template-fish-item)
+- [Template_Food](https://hytaleguide.net/items/template-food)
+- [Template_Fruit](https://hytaleguide.net/items/template-fruit)
+- [Template_Glider](https://hytaleguide.net/items/template-glider)
+- [Template_Seeds](https://hytaleguide.net/items/template-seeds)
+- [Template_Soil](https://hytaleguide.net/items/template-soil)
+- [Template_Tool_Watering_Can](https://hytaleguide.net/items/template-tool-watering-can)
+- [Template_Weapon_Battleaxe](https://hytaleguide.net/items/template-battleaxe)
+- [Template_Weapon_Crossbow](https://hytaleguide.net/items/template-crossbow)
+- [Template_Weapon_Daggers](https://hytaleguide.net/items/template-daggers)
+- [Template_Weapon_Mace](https://hytaleguide.net/items/template-mace)
+- [Template_Weapon_Shield](https://hytaleguide.net/items/template-shield)
+- [Template_Weapon_Shortbow](https://hytaleguide.net/items/template-shortbow)
+- [Template_Weapon_Sword](https://hytaleguide.net/items/template-sword)
+
+## Test
+
+- [Test_All_Rotation](https://hytaleguide.net/items/prototype-all-rotations)
+- [Test_Backpack](https://hytaleguide.net/items/test-backpack-item)
+- [Test_Camera_Item](https://hytaleguide.net/items/test-camera-item)
+- [Test_Objective_Line_Interaction](https://hytaleguide.net/items/test-objective-line-interaction)
+- [Test_Spawn_Marker_Trigger](https://hytaleguide.net/items/test-spawn-marker-trigger)
+
+# World
+
+## Hub
+
+- [Hub_Portal_Default](https://hytaleguide.net/items/exploration-worldgen-portal)
+- [Hub_Portal_Flat](https://hytaleguide.net/items/flat-worldgen-portal)
+- [Hub_Portal_Zone3_Taiga1](https://hytaleguide.net/items/zone-3-taiga-portal)
+
+## Instance
+
+- [Instance_Gateway](https://hytaleguide.net/items/instance-gateway)
+
+## Portal
+
+- [Portal_Device](https://hytaleguide.net/items/ancient-gateway)
+- [Portal_Prefab](https://hytaleguide.net/items/prefab-portal)
+- [Portal_Return](https://hytaleguide.net/items/return-portal)
+
+## PortalKey
+
+- [PortalKey_Hederas_Lair](https://hytaleguide.net/items/fragment-orbis-the-dread-wade)
+- [PortalKey_Henges](https://hytaleguide.net/items/fragment-orbis-silent-henges)
+- [PortalKey_Jungles](https://hytaleguide.net/items/fragment-orbis-talkesi-refuge)
+- [PortalKey_Taiga](https://hytaleguide.net/items/fragment-orbis-dragonspire-weald)
+- [PortalKey_Windsurf_Valley](https://hytaleguide.net/items/fragment-orbis-windrider-valley)
+
+## Spawn
+
+- [Spawn_Butterfly](https://hytaleguide.net/items/butterfly-spawner)
+- [Spawn_Portal](https://hytaleguide.net/items/spawn-portal)
+- [Spawn_Temple_Circle](https://hytaleguide.net/items/circle-spawner)
+- [Spawn_Temple_Circle_Flipped](https://hytaleguide.net/items/flipped-small-circle-spawner)
+- [Spawn_Temple_Circle_Small](https://hytaleguide.net/items/small-circle-spawner)
+- [Spawn_Temple_Helix](https://hytaleguide.net/items/helix-spawner)
+- [Spawn_Temple_RoofSparks](https://hytaleguide.net/items/spark-spawner)
+- [Spawn_TempleLeaves](https://hytaleguide.net/items/leaf-spawner)
+- [Spawn_TempleLeaves_Small](https://hytaleguide.net/items/small-leaf-spawner)
+- [Spawn_Wind](https://hytaleguide.net/items/wind-spawner)
+
+## Spawner
+
+- [Spawner_Rat](https://hytaleguide.net/items/rat-spawner)
+
+# Hytale Mobs - Grouped by Family
+
+Total mobs: 288
+
+## Aquatic
+
+- [Bluegill](https://hytaleguide.net/mobs/bluegill-1)
+- [Catfish](https://hytaleguide.net/mobs/catfish-1)
+- [Clownfish](https://hytaleguide.net/mobs/clownfish-1)
+- [Crab](https://hytaleguide.net/mobs/crab-1)
+- [Eel_Moray](https://hytaleguide.net/mobs/eel-moray)
+- [Frostgill](https://hytaleguide.net/mobs/frostgill-1)
+- [Jellyfish_Blue](https://hytaleguide.net/mobs/jellyfish-blue)
+- [Jellyfish_Cyan](https://hytaleguide.net/mobs/jellyfish-cyan)
+- [Jellyfish_Green](https://hytaleguide.net/mobs/jellyfish-green)
+- [Jellyfish_Man_Of_War](https://hytaleguide.net/mobs/jellyfish-man-of-war)
+- [Jellyfish_Red](https://hytaleguide.net/mobs/jellyfish-red)
+- [Jellyfish_Yellow](https://hytaleguide.net/mobs/jellyfish-yellow)
+- [Lobster](https://hytaleguide.net/mobs/lobster-1)
+- [Minnow](https://hytaleguide.net/mobs/minnow-1)
+- [Pike](https://hytaleguide.net/mobs/pike-1)
+- [Piranha](https://hytaleguide.net/mobs/piranha-1)
+- [Piranha_Black](https://hytaleguide.net/mobs/piranha-black)
+- [Pufferfish](https://hytaleguide.net/mobs/pufferfish-1)
+- [Salmon](https://hytaleguide.net/mobs/salmon-1)
+- [Shark_Hammerhead](https://hytaleguide.net/mobs/shark-hammerhead)
+- [Shellfish_Lava](https://hytaleguide.net/mobs/shellfish-lava)
+- [Snapjaw](https://hytaleguide.net/mobs/snapjaw-1)
+- [Tang_Blue](https://hytaleguide.net/mobs/tang-blue)
+- [Tang_Chevron](https://hytaleguide.net/mobs/tang-chevron)
+- [Tang_Lemon_Peel](https://hytaleguide.net/mobs/tang-lemon-peel)
+- [Tang_Sailfin](https://hytaleguide.net/mobs/tang-sailfin)
+- [Trilobite](https://hytaleguide.net/mobs/trilobite-1)
+- [Trilobite_Black](https://hytaleguide.net/mobs/trilobite-black)
+- [Trout_Rainbow](https://hytaleguide.net/mobs/trout-rainbow)
+- [Whale_Humpback](https://hytaleguide.net/mobs/whale-humpback)
+
+## Birds
+
+- [Archaeopteryx](https://hytaleguide.net/mobs/archaeopteryx)
+- [Bat](https://hytaleguide.net/mobs/bat)
+- [Bat_Ice](https://hytaleguide.net/mobs/ice-bat)
+- [Bluebird](https://hytaleguide.net/mobs/bluebird-1)
+- [Chicken](https://hytaleguide.net/mobs/chicken)
+- [Chicken_Chick](https://hytaleguide.net/mobs/chick)
+- [Chicken_Desert](https://hytaleguide.net/mobs/desert-chicken)
+- [Chicken_Desert_Chick](https://hytaleguide.net/mobs/desert-chick)
+- [Crow](https://hytaleguide.net/mobs/crow)
+- [Duck](https://hytaleguide.net/mobs/duck-1)
+- [Finch_Green](https://hytaleguide.net/mobs/finch-green)
+- [Flamingo](https://hytaleguide.net/mobs/flamingo)
+- [Hawk](https://hytaleguide.net/mobs/hawk)
+- [Owl_Brown](https://hytaleguide.net/mobs/owl-brown)
+- [Owl_Snow](https://hytaleguide.net/mobs/snowy-owl)
+- [Parrot](https://hytaleguide.net/mobs/parrot)
+- [Penguin](https://hytaleguide.net/mobs/penguin)
+- [Pigeon](https://hytaleguide.net/mobs/pigeon)
+- [Pterodactyl](https://hytaleguide.net/mobs/pterodactyl)
+- [Raven](https://hytaleguide.net/mobs/raven)
+- [Skrill_Chick](https://hytaleguide.net/mobs/skrill-chick)
+- [Sparrow](https://hytaleguide.net/mobs/sparrow)
+- [Temple_Bluebird](https://hytaleguide.net/mobs/bluebird)
+- [Temple_Duck](https://hytaleguide.net/mobs/duck)
+- [Temple_Finch_Green](https://hytaleguide.net/mobs/greenfinch)
+- [Temple_Owl_Brown](https://hytaleguide.net/mobs/brown-owl)
+- [Tetrabird](https://hytaleguide.net/mobs/tetrabird)
+- [Turkey](https://hytaleguide.net/mobs/turkey)
+- [Turkey_Chick](https://hytaleguide.net/mobs/turkey-chick)
+- [Vulture](https://hytaleguide.net/mobs/vulture)
+- [Woodpecker](https://hytaleguide.net/mobs/woodpecker)
+
+## Bosses / Named
+
+- [Dragon_Fire](https://hytaleguide.net/mobs/ember-dragon)
+- [Dragon_Frost](https://hytaleguide.net/mobs/frost-dragon)
+- [Dungeon_Scarak_Broodmother_Young](https://hytaleguide.net/mobs/fledgling-scarak-broodmother)
+- [Goblin_Duke](https://hytaleguide.net/mobs/goblin-duke)
+- [Hedera](https://hytaleguide.net/mobs/the-hedera)
+- [Scarak_Broodmother](https://hytaleguide.net/mobs/scarak-broodmother)
+- [Trork_Chieftain](https://hytaleguide.net/mobs/trork-chieftain)
+
+## Elemental / Magical
+
+- [Emberwulf](https://hytaleguide.net/mobs/emberwulf)
+- [Golem_Crystal_Earth](https://hytaleguide.net/mobs/earthen-golem)
+- [Golem_Crystal_Flame](https://hytaleguide.net/mobs/ember-golem)
+- [Golem_Crystal_Frost](https://hytaleguide.net/mobs/frost-golem)
+- [Golem_Crystal_Sand](https://hytaleguide.net/mobs/sandswept-golem)
+- [Golem_Crystal_Thunder](https://hytaleguide.net/mobs/thunder-golem)
+- [Golem_Firesteel](https://hytaleguide.net/mobs/firesteel-golem)
+- [Hatworm](https://hytaleguide.net/mobs/hatworm)
+- [Snapdragon](https://hytaleguide.net/mobs/snapdragon)
+- [Spark_Living](https://hytaleguide.net/mobs/living-spark)
+- [Spirit_Ember](https://hytaleguide.net/mobs/ember-spirit)
+- [Spirit_Frost](https://hytaleguide.net/mobs/frost-spirit)
+- [Spirit_Root](https://hytaleguide.net/mobs/root-spirit)
+- [Spirit_Thunder](https://hytaleguide.net/mobs/thunder-spirit)
+- [Yeti](https://hytaleguide.net/mobs/yeti)
+
+## Farm Animals
+
+- [Bison](https://hytaleguide.net/mobs/bison)
+- [Bison_Calf](https://hytaleguide.net/mobs/bison-calf)
+- [Boar_Piglet](https://hytaleguide.net/mobs/boar-piglet)
+- [Bunny](https://hytaleguide.net/mobs/bunny-1)
+- [Camel](https://hytaleguide.net/mobs/camel)
+- [Camel_Calf](https://hytaleguide.net/mobs/camel-calf)
+- [Cow](https://hytaleguide.net/mobs/cow)
+- [Cow_Calf](https://hytaleguide.net/mobs/calf)
+- [Goat](https://hytaleguide.net/mobs/goat)
+- [Goat_Kid](https://hytaleguide.net/mobs/kid)
+- [Horse](https://hytaleguide.net/mobs/horse)
+- [Horse_Foal](https://hytaleguide.net/mobs/foal)
+- [Moose_Cow](https://hytaleguide.net/mobs/moose-cow)
+- [Mouflon](https://hytaleguide.net/mobs/mouflon)
+- [Mouflon_Lamb](https://hytaleguide.net/mobs/mouflon-lamb)
+- [Pig](https://hytaleguide.net/mobs/pig)
+- [Pig_Piglet](https://hytaleguide.net/mobs/piglet)
+- [Pig_Wild](https://hytaleguide.net/mobs/pig-wild)
+- [Pig_Wild_Piglet](https://hytaleguide.net/mobs/pig-wild-piglet)
+- [Rabbit](https://hytaleguide.net/mobs/rabbit)
+- [Ram](https://hytaleguide.net/mobs/ram)
+- [Ram_Lamb](https://hytaleguide.net/mobs/ram-lamb)
+- [Sheep](https://hytaleguide.net/mobs/sheep)
+- [Sheep_Lamb](https://hytaleguide.net/mobs/lamb)
+- [Temple_Bunny](https://hytaleguide.net/mobs/bunny)
+- [Warthog_Piglet](https://hytaleguide.net/mobs/warthog-piglet)
+
+## Ferans
+
+- [Feran_Burrower](https://hytaleguide.net/mobs/feran-burrower)
+- [Feran_Civilian](https://hytaleguide.net/mobs/feran-civilian-1)
+- [Feran_Cub](https://hytaleguide.net/mobs/feran-cub)
+- [Feran_Longtooth](https://hytaleguide.net/mobs/feran-longtooth-1)
+- [Feran_Sharptooth](https://hytaleguide.net/mobs/feran-sharptooth)
+- [Feran_Windwalker](https://hytaleguide.net/mobs/feran-windwalker)
+- [Temple_Feran](https://hytaleguide.net/mobs/feran-civilian)
+- [Temple_Feran_Longtooth](https://hytaleguide.net/mobs/feran-longtooth)
+
+## Goblins
+
+- [Edible_Goblin_Scrapper](https://hytaleguide.net/mobs/edible-goblin-scrapper)
+- [Goblin_Hermit](https://hytaleguide.net/mobs/goblin-hermit)
+- [Goblin_Lobber](https://hytaleguide.net/mobs/goblin-lobber)
+- [Goblin_Lobber_Patrol](https://hytaleguide.net/mobs/goblin-lobber-patrol)
+- [Goblin_Miner](https://hytaleguide.net/mobs/goblin-miner-1)
+- [Goblin_Miner_Patrol](https://hytaleguide.net/mobs/goblin-miner)
+- [Goblin_Ogre](https://hytaleguide.net/mobs/goblin-ogre)
+- [Goblin_Scavenger](https://hytaleguide.net/mobs/goblin-scavenger-1)
+- [Goblin_Scavenger_Battleaxe](https://hytaleguide.net/mobs/goblin-scavenger)
+- [Goblin_Scavenger_Sword](https://hytaleguide.net/mobs/servernpcrolesgoblin-scavenger-swordname)
+- [Goblin_Scrapper](https://hytaleguide.net/mobs/goblin-scrapper)
+- [Goblin_Scrapper_Patrol](https://hytaleguide.net/mobs/goblin-scrapper-patrol)
+- [Goblin_Thief](https://hytaleguide.net/mobs/goblin-thief)
+- [Goblin_Thief_Patrol](https://hytaleguide.net/mobs/goblin-thief-patrol)
+
+## Hostile Beasts
+
+- [Cactee](https://hytaleguide.net/mobs/cactee)
+- [Fen_Stalker](https://hytaleguide.net/mobs/fen-stalker)
+- [Skrill](https://hytaleguide.net/mobs/skrill)
+- [Trillodon](https://hytaleguide.net/mobs/trillodon)
+
+## Insects / Small Creatures
+
+- [Edible_Rat](https://hytaleguide.net/mobs/rat)
+- [Larva_Silk](https://hytaleguide.net/mobs/silk-larva)
+- [Molerat](https://hytaleguide.net/mobs/molerat)
+- [Rat](https://hytaleguide.net/mobs/rat-1)
+- [Scorpion](https://hytaleguide.net/mobs/scorpion)
+- [Slug_Magma](https://hytaleguide.net/mobs/magma-slug)
+- [Snail_Frost](https://hytaleguide.net/mobs/frost-snail)
+- [Snail_Magma](https://hytaleguide.net/mobs/magma-snail)
+- [Spider](https://hytaleguide.net/mobs/spider)
+- [Spider_Cave](https://hytaleguide.net/mobs/cave-spider)
+
+## Kweebecs
+
+- [Kweebec_Sproutling](https://hytaleguide.net/mobs/kweebec-sproutling)
+- [Temple_Kweebec](https://hytaleguide.net/mobs/kweebec-sapling)
+- [Temple_Kweebec_Elder](https://hytaleguide.net/mobs/kweebec-elder)
+- [Temple_Kweebec_Merchant](https://hytaleguide.net/mobs/rootling-merchant)
+- [Temple_Kweebec_Razorleaf](https://hytaleguide.net/mobs/kweebec-razorleaf)
+- [Temple_Kweebec_Rootling_Static](https://hytaleguide.net/mobs/kweebec-rootling)
+- [Temple_Kweebec_Seedling_Static](https://hytaleguide.net/mobs/kweebec-seedling)
+
+## NPCs
+
+- [Klops_Gentleman](https://hytaleguide.net/mobs/klops-gentleman)
+- [Klops_Miner](https://hytaleguide.net/mobs/klops-miner)
+- [Tuluk_Fisherman](https://hytaleguide.net/mobs/tuluk-fisherman)
+
+## Outlanders
+
+- [Outlander_Berserker](https://hytaleguide.net/mobs/outlander-berserker)
+- [Outlander_Brute](https://hytaleguide.net/mobs/outlander-brute)
+- [Outlander_Cultist](https://hytaleguide.net/mobs/outlander-initiate)
+- [Outlander_Hunter](https://hytaleguide.net/mobs/outlander-hunter)
+- [Outlander_Marauder](https://hytaleguide.net/mobs/outlander-marauder)
+- [Outlander_Peon](https://hytaleguide.net/mobs/outlander-unsworn)
+- [Outlander_Priest](https://hytaleguide.net/mobs/outlander-priest)
+- [Outlander_Sorcerer](https://hytaleguide.net/mobs/outlander-sorcerer)
+- [Outlander_Stalker](https://hytaleguide.net/mobs/outlander-stalker)
+- [Wolf_Outlander_Priest](https://hytaleguide.net/mobs/wolf-outlander-priest)
+- [Wolf_Outlander_Sorcerer](https://hytaleguide.net/mobs/wolf-outlander-sorcerer)
+
+## Reptiles / Amphibians
+
+- [Crocodile](https://hytaleguide.net/mobs/crocodile)
+- [Frog_Blue](https://hytaleguide.net/mobs/frog-blue)
+- [Frog_Green](https://hytaleguide.net/mobs/frog-green)
+- [Gecko](https://hytaleguide.net/mobs/gecko)
+- [Lizard_Sand](https://hytaleguide.net/mobs/sand-lizard)
+- [Raptor_Cave](https://hytaleguide.net/mobs/cave-raptor)
+- [Rex_Cave](https://hytaleguide.net/mobs/cave-rex)
+- [Snake_Cobra](https://hytaleguide.net/mobs/cobra)
+- [Snake_Marsh](https://hytaleguide.net/mobs/marsh-snake)
+- [Snake_Rattle](https://hytaleguide.net/mobs/rattlesnake)
+- [Temple_Frog_Blue](https://hytaleguide.net/mobs/frog)
+- [Temple_Frog_Green](https://hytaleguide.net/mobs/temple-frog-green)
+- [Temple_Frog_Orange](https://hytaleguide.net/mobs/temple-frog-orange)
+- [Toad_Rhino](https://hytaleguide.net/mobs/rhino-toad)
+- [Toad_Rhino_Magma](https://hytaleguide.net/mobs/magma-rhino-toad)
+- [Tortoise](https://hytaleguide.net/mobs/tortoise)
+
+## Scarak
+
+- [Scarak_Defender](https://hytaleguide.net/mobs/scarak-defender-1)
+- [Scarak_Defender_Patrol](https://hytaleguide.net/mobs/scarak-defender)
+- [Scarak_Fighter](https://hytaleguide.net/mobs/scarak-fighter)
+- [Scarak_Fighter_Royal_Guard](https://hytaleguide.net/mobs/scarak-imperial-guard)
+- [Scarak_Louse](https://hytaleguide.net/mobs/scarak-louse)
+- [Scarak_Seeker](https://hytaleguide.net/mobs/scarak-seeker-1)
+- [Scarak_Seeker_Patrol](https://hytaleguide.net/mobs/scarak-seeker)
+
+## Trorks
+
+- [Trork_Brawler](https://hytaleguide.net/mobs/trork-brawler)
+- [Trork_Doctor_Witch](https://hytaleguide.net/mobs/trork-elder)
+- [Trork_Guard](https://hytaleguide.net/mobs/trork-guard)
+- [Trork_Hunter](https://hytaleguide.net/mobs/trork-hunter)
+- [Trork_Mauler](https://hytaleguide.net/mobs/trork-mauler)
+- [Trork_Sentry](https://hytaleguide.net/mobs/trork-sentry-1)
+- [Trork_Sentry_Patrol](https://hytaleguide.net/mobs/trork-sentry)
+- [Trork_Shaman](https://hytaleguide.net/mobs/trork-shaman)
+- [Trork_Unarmed](https://hytaleguide.net/mobs/trork)
+- [Trork_Warrior](https://hytaleguide.net/mobs/trork-warrior)
+- [Trork_Warrior_Patrol](https://hytaleguide.net/mobs/trork-warrior-patrol)
+- [Wolf_Trork_Hunter](https://hytaleguide.net/mobs/wolf-trork-hunter)
+- [Wolf_Trork_Shaman](https://hytaleguide.net/mobs/hunting-wolf)
+
+## Undead
+
+- [Chicken_Undead](https://hytaleguide.net/mobs/undead-chicken)
+- [Cow_Undead](https://hytaleguide.net/mobs/undead-cow)
+- [Dungeon_Skeleton_Sand_Mage](https://hytaleguide.net/mobs/sandswept-skeleton-warlock)
+- [Ghoul](https://hytaleguide.net/mobs/ghoul)
+- [Horse_Skeleton](https://hytaleguide.net/mobs/skeleton-horse)
+- [Horse_Skeleton_Armored](https://hytaleguide.net/mobs/armored-skeleton-horse)
+- [Hound_Bleached](https://hytaleguide.net/mobs/bleached-hound)
+- [Pig_Undead](https://hytaleguide.net/mobs/undead-pig)
+- [Shadow_Knight](https://hytaleguide.net/mobs/shadow-knight)
+- [Skeleton](https://hytaleguide.net/mobs/skeleton)
+- [Skeleton_Archer](https://hytaleguide.net/mobs/skeleton-archer)
+- [Skeleton_Archmage](https://hytaleguide.net/mobs/skeleton-archmage)
+- [Skeleton_Burnt_Alchemist](https://hytaleguide.net/mobs/burnt-skeleton-alchemist)
+- [Skeleton_Burnt_Archer](https://hytaleguide.net/mobs/burnt-skeleton-archer)
+- [Skeleton_Burnt_Gunner](https://hytaleguide.net/mobs/burnt-skeleton-gunner)
+- [Skeleton_Burnt_Knight](https://hytaleguide.net/mobs/burnt-skeleton-knight)
+- [Skeleton_Burnt_Lancer](https://hytaleguide.net/mobs/burnt-skeleton-lancer)
+- [Skeleton_Burnt_Praetorian](https://hytaleguide.net/mobs/burnt-skeleton-praetorian)
+- [Skeleton_Burnt_Soldier](https://hytaleguide.net/mobs/burnt-skeleton-soldier)
+- [Skeleton_Burnt_Wizard](https://hytaleguide.net/mobs/burnt-skeleton-wizard)
+- [Skeleton_Fighter](https://hytaleguide.net/mobs/skeleton-fighter-1)
+- [Skeleton_Fighter_Wander](https://hytaleguide.net/mobs/skeleton-fighter)
+- [Skeleton_Frost_Archer](https://hytaleguide.net/mobs/frost-skeleton-archer)
+- [Skeleton_Frost_Archmage](https://hytaleguide.net/mobs/frost-skeleton-archmage)
+- [Skeleton_Frost_Fighter](https://hytaleguide.net/mobs/frost-skeleton-fighter)
+- [Skeleton_Frost_Knight](https://hytaleguide.net/mobs/frost-skeleton-knight)
+- [Skeleton_Frost_Mage](https://hytaleguide.net/mobs/frost-skeleton-mage)
+- [Skeleton_Frost_Ranger](https://hytaleguide.net/mobs/frost-skeleton-ranger)
+- [Skeleton_Frost_Scout](https://hytaleguide.net/mobs/frost-skeleton-scout)
+- [Skeleton_Frost_Soldier](https://hytaleguide.net/mobs/frost-skeleton-soldier)
+- [Skeleton_Incandescent_Fighter](https://hytaleguide.net/mobs/incandescent-skeleton-fighter)
+- [Skeleton_Incandescent_Footman](https://hytaleguide.net/mobs/incandescent-skeleton-footman)
+- [Skeleton_Incandescent_Head](https://hytaleguide.net/mobs/incandescent-skeleton-head)
+- [Skeleton_Incandescent_Mage](https://hytaleguide.net/mobs/incandescent-skeleton-mage)
+- [Skeleton_Knight](https://hytaleguide.net/mobs/skeleton-knight)
+- [Skeleton_Mage](https://hytaleguide.net/mobs/skeleton-mage)
+- [Skeleton_Pirate_Captain](https://hytaleguide.net/mobs/skeleton-pirate-captain)
+- [Skeleton_Pirate_Gunner](https://hytaleguide.net/mobs/skeleton-pirate-gunner)
+- [Skeleton_Pirate_Striker](https://hytaleguide.net/mobs/skeleton-pirate-striker)
+- [Skeleton_Ranger](https://hytaleguide.net/mobs/skeleton-ranger)
+- [Skeleton_Sand_Archer](https://hytaleguide.net/mobs/sandswept-skeleton-archer)
+- [Skeleton_Sand_Archmage](https://hytaleguide.net/mobs/sandswept-skeleton-archmage)
+- [Skeleton_Sand_Assassin](https://hytaleguide.net/mobs/sandswept-skeleton-assassin)
+- [Skeleton_Sand_Guard](https://hytaleguide.net/mobs/sandswept-skeleton-guard)
+- [Skeleton_Sand_Mage](https://hytaleguide.net/mobs/sandswept-skeleton-mage)
+- [Skeleton_Sand_Ranger](https://hytaleguide.net/mobs/sandswept-skeleton-ranger)
+- [Skeleton_Sand_Scout](https://hytaleguide.net/mobs/sandswept-skeleton-scout)
+- [Skeleton_Sand_Soldier](https://hytaleguide.net/mobs/sandswept-skeleton-soldier)
+- [Skeleton_Scout](https://hytaleguide.net/mobs/skeleton-scout)
+- [Skeleton_Soldier](https://hytaleguide.net/mobs/skeleton-soldier)
+- [Wraith](https://hytaleguide.net/mobs/wraith)
+- [Wraith_Lantern](https://hytaleguide.net/mobs/wraiths-lantern)
+- [Zombie](https://hytaleguide.net/mobs/zombie)
+- [Zombie_Aberrant](https://hytaleguide.net/mobs/aberrant-zombie)
+- [Zombie_Aberrant_Big](https://hytaleguide.net/mobs/large-aberrant-zombie)
+- [Zombie_Aberrant_Small](https://hytaleguide.net/mobs/small-aberrant-zombie)
+- [Zombie_Burnt](https://hytaleguide.net/mobs/burnt-zombie)
+- [Zombie_Frost](https://hytaleguide.net/mobs/frost-zombie)
+- [Zombie_Sand](https://hytaleguide.net/mobs/sandswept-zombie)
+
+## Void
+
+- [Crawler_Void](https://hytaleguide.net/mobs/void-crawler)
+- [Eye_Void](https://hytaleguide.net/mobs/void-eye)
+- [Larva_Void](https://hytaleguide.net/mobs/void-larva)
+- [Spawn_Void](https://hytaleguide.net/mobs/void-spawn)
+
+## Wild Animals
+
+- [Antelope](https://hytaleguide.net/mobs/antelope)
+- [Armadillo](https://hytaleguide.net/mobs/armadillo)
+- [Bear_Grizzly](https://hytaleguide.net/mobs/grizzly-bear)
+- [Bear_Polar](https://hytaleguide.net/mobs/polar-bear)
+- [Boar](https://hytaleguide.net/mobs/boar)
+- [Deer_Doe](https://hytaleguide.net/mobs/deer-doe)
+- [Deer_Stag](https://hytaleguide.net/mobs/deer-stag)
+- [Fox](https://hytaleguide.net/mobs/fox)
+- [Hyena](https://hytaleguide.net/mobs/hyena)
+- [Leopard_Snow](https://hytaleguide.net/mobs/snow-leopard)
+- [Meerkat](https://hytaleguide.net/mobs/meerkat)
+- [Moose_Bull](https://hytaleguide.net/mobs/moose-bull)
+- [Mosshorn](https://hytaleguide.net/mobs/mosshorn)
+- [Mouse](https://hytaleguide.net/mobs/mouse)
+- [Squirrel](https://hytaleguide.net/mobs/squirrel-1)
+- [Temple_Deer_Doe](https://hytaleguide.net/mobs/doe)
+- [Temple_Deer_Stag](https://hytaleguide.net/mobs/stag)
+- [Temple_Squirrel](https://hytaleguide.net/mobs/squirrel)
+- [Tiger_Sabertooth](https://hytaleguide.net/mobs/sabertooth-tiger)
+- [Warthog](https://hytaleguide.net/mobs/warthog)
+- [Werewolf](https://hytaleguide.net/mobs/werewolf)
+- [Wolf_Black](https://hytaleguide.net/mobs/black-wolf)
+- [Wolf_White](https://hytaleguide.net/mobs/white-wolf)
