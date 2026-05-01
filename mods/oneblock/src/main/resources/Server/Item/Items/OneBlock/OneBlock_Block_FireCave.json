@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_FireCave",
   "ItemLevel": 14,
-  "Icon": "Icons/ItemsGenerated/OneBlock_FireCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FireCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

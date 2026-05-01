@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_DesertTempleEntrance",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_DesertTempleEntrance.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InfestedDesert",
   "ItemLevel": 11,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InfestedDesert.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfestedDesert.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

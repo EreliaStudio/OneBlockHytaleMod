@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_GemCave",
   "ItemLevel": 11,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GemCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GemCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

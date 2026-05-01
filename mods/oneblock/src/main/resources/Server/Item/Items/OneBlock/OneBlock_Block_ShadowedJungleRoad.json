@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_ShadowedJungleRoad",
   "ItemLevel": 17,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ShadowedJungleRoad.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ShadowedJungleRoad.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

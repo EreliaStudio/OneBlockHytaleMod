@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_TrorkChieftainCamp",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_TrorkChieftainCamp.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_TrorkChieftainCamp.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

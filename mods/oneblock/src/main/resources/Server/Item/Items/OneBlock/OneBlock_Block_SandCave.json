@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SandCave",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SandCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SandCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_JurassicCave",
   "ItemLevel": 17,
-  "Icon": "Icons/ItemsGenerated/OneBlock_JurassicCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_JurassicCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

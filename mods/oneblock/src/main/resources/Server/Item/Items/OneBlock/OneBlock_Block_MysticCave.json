@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_MysticCave",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_MysticCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_MysticCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

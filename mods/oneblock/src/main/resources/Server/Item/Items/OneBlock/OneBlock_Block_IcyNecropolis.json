@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_IcyNecropolis",
   "ItemLevel": 23,
-  "Icon": "Icons/ItemsGenerated/OneBlock_IcyNecropolis.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IcyNecropolis.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

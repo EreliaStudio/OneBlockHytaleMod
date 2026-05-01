@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_DryJunglePass",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_DryJunglePass.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DryJunglePass.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

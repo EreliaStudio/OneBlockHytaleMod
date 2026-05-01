@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SunkenJungleRuins",
   "ItemLevel": 11,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SunkenJungleRuins.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SunkenJungleRuins.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

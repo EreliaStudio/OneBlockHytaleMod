@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_ElementalConfluence",
   "ItemLevel": 24,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ElementalConfluence.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ElementalConfluence.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

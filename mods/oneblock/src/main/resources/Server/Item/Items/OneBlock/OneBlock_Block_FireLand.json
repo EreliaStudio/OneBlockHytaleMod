@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_FireLand",
   "ItemLevel": 16,
-  "Icon": "Icons/ItemsGenerated/OneBlock_FireLand.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FireLand.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SpiritThreshold",
   "ItemLevel": 21,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SpiritThreshold.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SpiritThreshold.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

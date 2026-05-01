@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Lake",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Lake.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Lake.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

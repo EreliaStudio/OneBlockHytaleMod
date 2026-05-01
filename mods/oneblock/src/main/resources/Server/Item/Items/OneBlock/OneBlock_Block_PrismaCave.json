@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_PrismaCave",
   "ItemLevel": 23,
-  "Icon": "Icons/ItemsGenerated/OneBlock_PrismaCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_PrismaCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

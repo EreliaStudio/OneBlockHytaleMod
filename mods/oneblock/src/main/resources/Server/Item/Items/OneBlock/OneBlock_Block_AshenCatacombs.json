@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_AshenCatacombs",
   "ItemLevel": 20,
-  "Icon": "Icons/ItemsGenerated/OneBlock_AshenCatacombs.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AshenCatacombs.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

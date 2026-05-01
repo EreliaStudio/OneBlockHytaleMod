@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_CowHallow",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_CowHallow.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

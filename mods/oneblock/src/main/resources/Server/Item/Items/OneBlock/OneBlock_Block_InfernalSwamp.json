@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InfernalSwamp",
   "ItemLevel": 22,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InfernalSwamp.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfernalSwamp.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

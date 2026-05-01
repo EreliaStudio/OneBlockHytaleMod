@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_AncientUndeadSanctum",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_AncientUndeadSanctum.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AncientUndeadSanctum.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

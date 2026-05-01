@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_GoldCave",
   "ItemLevel": 7,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GoldCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GoldCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

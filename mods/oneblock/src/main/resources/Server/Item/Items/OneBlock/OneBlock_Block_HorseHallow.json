@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_HorseHallow",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_HorseHallow.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_HorseHallow.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

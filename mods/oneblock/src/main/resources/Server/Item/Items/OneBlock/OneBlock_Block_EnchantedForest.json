@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_EnchantedForest",
   "ItemLevel": 8,
-  "Icon": "Icons/ItemsGenerated/OneBlock_EnchantedForest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_EnchantedForest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

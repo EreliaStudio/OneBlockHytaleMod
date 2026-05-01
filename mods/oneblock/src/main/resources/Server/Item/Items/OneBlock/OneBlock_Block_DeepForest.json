@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_DeepForest",
   "ItemLevel": 7,
-  "Icon": "Icons/ItemsGenerated/OneBlock_DeepForest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DeepForest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

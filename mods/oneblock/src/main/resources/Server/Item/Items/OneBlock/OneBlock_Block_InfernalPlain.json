@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InfernalPlain",
   "ItemLevel": 22,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InfernalPlain.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfernalPlain.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

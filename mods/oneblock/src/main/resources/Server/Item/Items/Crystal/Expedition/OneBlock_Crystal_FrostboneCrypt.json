@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_FrostboneCrypt",
   "ItemLevel": 25,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_FrostboneCrypt.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

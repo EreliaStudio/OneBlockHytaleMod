@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_River",
   "ItemLevel": 4,
-  "Icon": "Icons/ItemsGenerated/OneBlock_River.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_River.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

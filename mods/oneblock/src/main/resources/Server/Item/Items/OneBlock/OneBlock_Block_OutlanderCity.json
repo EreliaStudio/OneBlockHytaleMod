@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_OutlanderCity",
   "ItemLevel": 20,
-  "Icon": "Icons/ItemsGenerated/OneBlock_OutlanderCity.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_OutlanderCity.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

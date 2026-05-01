@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_FrozenGraveyard",
   "ItemLevel": 21,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_FrozenGraveyard.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

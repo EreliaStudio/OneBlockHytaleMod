@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Swamp",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Swamp.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Swamp.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

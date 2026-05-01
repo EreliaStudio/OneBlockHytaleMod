@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_DinoCrisis",
   "ItemLevel": 21,
-  "Icon": "Icons/ItemsGenerated/OneBlock_DinoCrisis.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DinoCrisis.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_BurntBattlefield",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_BurntBattlefield.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_BurntBattlefield.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

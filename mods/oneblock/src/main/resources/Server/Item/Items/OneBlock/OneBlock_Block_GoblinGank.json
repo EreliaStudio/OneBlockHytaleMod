@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_GoblinGank",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GoblinGank.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GoblinGank.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

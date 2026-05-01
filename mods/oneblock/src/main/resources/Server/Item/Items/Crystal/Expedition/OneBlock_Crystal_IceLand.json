@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_IceLand",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_IceLand.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_AridForest",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_AridForest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AridForest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

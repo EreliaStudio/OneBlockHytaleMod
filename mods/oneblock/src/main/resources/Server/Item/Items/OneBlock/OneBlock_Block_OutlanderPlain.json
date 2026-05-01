@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_OutlanderPlain",
   "ItemLevel": 16,
-  "Icon": "Icons/ItemsGenerated/OneBlock_OutlanderPlain.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_OutlanderPlain.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

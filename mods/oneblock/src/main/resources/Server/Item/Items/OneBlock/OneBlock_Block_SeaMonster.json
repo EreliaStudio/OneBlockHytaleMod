@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SeaMonster",
   "ItemLevel": 15,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SeaMonster.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SeaMonster.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

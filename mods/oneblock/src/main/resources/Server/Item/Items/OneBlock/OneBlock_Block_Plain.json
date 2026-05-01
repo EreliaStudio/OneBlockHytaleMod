@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Plain",
   "ItemLevel": 1,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Plain.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Plain.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

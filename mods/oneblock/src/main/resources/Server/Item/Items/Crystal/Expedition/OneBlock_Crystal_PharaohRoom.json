@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_PharaohRoom",
   "ItemLevel": 15,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_PharaohRoom.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

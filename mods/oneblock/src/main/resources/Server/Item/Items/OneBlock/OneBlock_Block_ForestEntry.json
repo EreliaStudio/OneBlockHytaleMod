@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_ForestEntry",
   "ItemLevel": 2,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ForestEntry.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ForestEntry.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

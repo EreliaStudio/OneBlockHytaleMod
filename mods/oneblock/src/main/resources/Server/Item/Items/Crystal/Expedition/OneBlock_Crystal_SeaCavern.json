@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_SeaCavern",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_SeaCavern.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

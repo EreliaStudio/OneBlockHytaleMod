@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_RatCave",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/OneBlock_RatCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_RatCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

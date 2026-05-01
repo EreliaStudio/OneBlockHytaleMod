@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_CopperCave",
   "ItemLevel": 4,
-  "Icon": "Icons/ItemsGenerated/OneBlock_CopperCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CopperCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

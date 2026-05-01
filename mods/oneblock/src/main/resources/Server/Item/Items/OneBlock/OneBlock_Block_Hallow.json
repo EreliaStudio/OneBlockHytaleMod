@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Hallow",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Hallow.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Hallow.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_PirateShipwreck",
   "ItemLevel": 10,
-  "Icon": "Icons/ItemsGenerated/OneBlock_PirateShipwreck.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_PirateShipwreck.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

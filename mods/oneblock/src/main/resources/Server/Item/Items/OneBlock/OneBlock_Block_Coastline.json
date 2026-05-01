@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Coastline",
   "ItemLevel": 6,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Coastline.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Coastline.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

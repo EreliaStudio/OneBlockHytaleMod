@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_CobaltCave",
   "ItemLevel": 10,
-  "Icon": "Icons/ItemsGenerated/OneBlock_CobaltCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CobaltCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

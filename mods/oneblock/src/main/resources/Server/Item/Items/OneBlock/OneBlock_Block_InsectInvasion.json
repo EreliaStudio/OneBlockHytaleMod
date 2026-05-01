@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InsectInvasion",
   "ItemLevel": 10,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InsectInvasion.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InsectInvasion.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

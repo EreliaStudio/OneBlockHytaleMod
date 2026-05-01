@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Quarry",
   "ItemLevel": 3,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Quarry.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Quarry.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

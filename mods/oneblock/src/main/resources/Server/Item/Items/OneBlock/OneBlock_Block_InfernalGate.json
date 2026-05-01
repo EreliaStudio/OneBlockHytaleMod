@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InfernalGate",
   "ItemLevel": 20,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InfernalGate.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfernalGate.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

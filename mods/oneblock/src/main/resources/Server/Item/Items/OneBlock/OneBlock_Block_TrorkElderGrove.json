@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_TrorkElderGrove",
   "ItemLevel": 15,
-  "Icon": "Icons/ItemsGenerated/OneBlock_TrorkElderGrove.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_TrorkElderGrove.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

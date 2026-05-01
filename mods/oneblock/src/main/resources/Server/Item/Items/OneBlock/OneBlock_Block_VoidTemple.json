@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_VoidTemple",
   "ItemLevel": 24,
-  "Icon": "Icons/ItemsGenerated/OneBlock_VoidTemple.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_VoidTemple.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

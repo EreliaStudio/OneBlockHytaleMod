@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SeaCavern",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SeaCavern.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SeaCavern.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

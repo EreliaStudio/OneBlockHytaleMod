@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_ShadowKnightCitadel",
   "ItemLevel": 22,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_ShadowKnightCitadel.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

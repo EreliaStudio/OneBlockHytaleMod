@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_EnchantedForest",
   "ItemLevel": 8,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_EnchantedForest.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

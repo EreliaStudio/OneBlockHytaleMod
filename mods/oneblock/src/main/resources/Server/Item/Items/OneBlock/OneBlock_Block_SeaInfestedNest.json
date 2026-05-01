@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SeaInfestedNest",
   "ItemLevel": 13,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SeaInfestedNest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SeaInfestedNest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

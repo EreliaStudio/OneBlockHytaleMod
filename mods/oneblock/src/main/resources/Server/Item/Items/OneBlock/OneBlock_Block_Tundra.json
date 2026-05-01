@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_Tundra",
   "ItemLevel": 17,
-  "Icon": "Icons/ItemsGenerated/OneBlock_Tundra.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Tundra.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

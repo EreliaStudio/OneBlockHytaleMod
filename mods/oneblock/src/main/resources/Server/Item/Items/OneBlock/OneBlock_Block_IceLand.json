@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_IceLand",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_IceLand.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IceLand.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_FairyPond",
   "ItemLevel": 10,
-  "Icon": "Icons/ItemsGenerated/OneBlock_FairyPond.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FairyPond.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_PharaohRoom",
   "ItemLevel": 15,
-  "Icon": "Icons/ItemsGenerated/OneBlock_PharaohRoom.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_PharaohRoom.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

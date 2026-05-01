@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_FrozenGraveyard",
   "ItemLevel": 21,
-  "Icon": "Icons/ItemsGenerated/OneBlock_FrozenGraveyard.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FrozenGraveyard.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

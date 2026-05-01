@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_FrozenForest",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_FrozenForest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FrozenForest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

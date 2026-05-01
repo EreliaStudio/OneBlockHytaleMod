@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_UndeadTemple",
   "ItemLevel": 17,
-  "Icon": "Icons/ItemsGenerated/OneBlock_UndeadTemple.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_UndeadTemple.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_LostNecropolis",
   "ItemLevel": 15,
-  "Icon": "Icons/ItemsGenerated/OneBlock_LostNecropolis.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_LostNecropolis.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

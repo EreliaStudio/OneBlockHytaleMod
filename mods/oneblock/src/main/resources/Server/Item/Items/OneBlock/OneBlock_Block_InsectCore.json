@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InsectCore",
   "ItemLevel": 17,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InsectCore.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InsectCore.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

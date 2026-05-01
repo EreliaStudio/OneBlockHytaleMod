@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_IceTemple",
   "ItemLevel": 24,
-  "Icon": "Icons/ItemsGenerated/OneBlock_IceTemple.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IceTemple.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

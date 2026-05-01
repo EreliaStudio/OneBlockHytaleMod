@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_InnerDesert",
   "ItemLevel": 8,
-  "Icon": "Icons/ItemsGenerated/OneBlock_InnerDesert.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InnerDesert.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

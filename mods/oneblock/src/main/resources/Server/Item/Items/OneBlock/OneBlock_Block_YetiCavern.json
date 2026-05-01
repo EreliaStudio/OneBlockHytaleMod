@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_YetiCavern",
   "ItemLevel": 22,
-  "Icon": "Icons/ItemsGenerated/OneBlock_YetiCavern.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_YetiCavern.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

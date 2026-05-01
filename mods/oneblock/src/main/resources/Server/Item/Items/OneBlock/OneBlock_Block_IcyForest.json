@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_IcyForest",
   "ItemLevel": 20,
-  "Icon": "Icons/ItemsGenerated/OneBlock_IcyForest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IcyForest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

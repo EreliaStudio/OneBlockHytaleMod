@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_CursedForest",
   "ItemLevel": 13,
-  "Icon": "Icons/ItemsGenerated/OneBlock_CursedForest.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CursedForest.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

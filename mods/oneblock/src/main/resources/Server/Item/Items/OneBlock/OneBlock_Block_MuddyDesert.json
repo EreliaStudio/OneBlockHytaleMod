@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_MuddyDesert",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_MuddyDesert.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_MuddyDesert.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

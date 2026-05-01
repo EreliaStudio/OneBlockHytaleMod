@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_ShadowKnightCitadel",
   "ItemLevel": 22,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ShadowKnightCitadel.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ShadowKnightCitadel.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

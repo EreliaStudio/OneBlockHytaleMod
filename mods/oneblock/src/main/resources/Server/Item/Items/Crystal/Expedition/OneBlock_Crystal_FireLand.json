@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_FireLand",
   "ItemLevel": 16,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_FireLand.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

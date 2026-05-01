@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_DesertTemple",
   "ItemLevel": 13,
-  "Icon": "Icons/ItemsGenerated/OneBlock_DesertTemple.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DesertTemple.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

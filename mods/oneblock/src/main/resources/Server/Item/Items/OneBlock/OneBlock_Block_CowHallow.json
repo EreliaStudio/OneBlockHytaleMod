@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_CowHallow",
   "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock_CowHallow.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CowHallow.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

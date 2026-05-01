@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_TrorkHuntingGround",
   "ItemLevel": 10,
-  "Icon": "Icons/ItemsGenerated/OneBlock_TrorkHuntingGround.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_TrorkHuntingGround.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_TrorkChieftainCamp",
   "ItemLevel": 18,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_TrorkChieftainCamp.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

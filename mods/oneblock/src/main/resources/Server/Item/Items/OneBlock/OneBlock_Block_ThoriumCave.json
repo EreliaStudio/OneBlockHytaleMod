@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_ThoriumCave",
   "ItemLevel": 8,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ThoriumCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ThoriumCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

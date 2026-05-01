@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_ArmoredDeadGrove",
   "ItemLevel": 19,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ArmoredDeadGrove.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ArmoredDeadGrove.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

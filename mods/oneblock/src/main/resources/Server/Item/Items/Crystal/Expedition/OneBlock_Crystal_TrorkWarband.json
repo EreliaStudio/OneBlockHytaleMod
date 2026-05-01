@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_TrorkWarband",
   "ItemLevel": 12,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_TrorkWarband.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

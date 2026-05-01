@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SilverCave",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SilverCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SilverCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

@@ -5,7 +5,7 @@
   },
   "Id": "OneBlock_Crystal_InsectInvasion",
   "ItemLevel": 10,
-  "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_InsectInvasion.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
   ],

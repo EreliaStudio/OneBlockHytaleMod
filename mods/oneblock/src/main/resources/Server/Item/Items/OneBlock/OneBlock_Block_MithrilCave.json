@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_MithrilCave",
   "ItemLevel": 16,
-  "Icon": "Icons/ItemsGenerated/OneBlock_MithrilCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_MithrilCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

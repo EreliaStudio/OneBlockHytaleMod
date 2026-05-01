@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_GoblinInvasion",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GoblinInvasion.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GoblinInvasion.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

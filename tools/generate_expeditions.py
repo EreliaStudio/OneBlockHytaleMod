@@ -34,6 +34,8 @@ CUSTOM_ITEM_DIR = ITEMS / "CustomItems"
 
 BLOCK_TEXTURE_DIR = ONEBLOCK / "Common/BlockTextures"
 BLOCK_ICON_DIR    = ONEBLOCK / "Common/Icons/ItemsGenerated"
+ONEBLOCK_ICON_DIR = BLOCK_ICON_DIR / "OneBlock"
+CRYSTAL_ICON_DIR  = BLOCK_ICON_DIR / "Crystals"
 CUSTOM_ITEM_TEXTURE_DIR = ONEBLOCK / "Common/Items/CustomItems"
 CUSTOM_ITEM_MODEL = ONEBLOCK / "Common/Blocks/CustomItems/OneBlock_CustomItem.blockymodel"
 CUSTOM_ITEM_MODEL_RESOURCE = "Blocks/CustomItems/OneBlock_CustomItem.blockymodel"
@@ -43,6 +45,7 @@ DEFAULT_RENDER_NAMES_FILE = Path("item_render_names.json")
 SCRIPT_DIR           = Path(__file__).parent
 DEFAULT_BLOCK_TEXTURE = SCRIPT_DIR / "OneBlock_DefaultTexture.png"
 DEFAULT_BLOCK_ICON    = SCRIPT_DIR / "OneBlock_DefaultIcon.png"
+DEFAULT_CRYSTAL_ICON  = SCRIPT_DIR / "OneBlock_ExpeditionCrystal_DefaultIcon.png"
 DEFAULT_CUSTOM_ITEM_ICON = SCRIPT_DIR / "OneBlock_CustomItem.png"
 
 CUSTOM_ID_KEY = "CustomID"
@@ -97,7 +100,7 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         },
         "Id": item_id,
         "ItemLevel": item_level,
-        "Icon": "Icons/ItemsGenerated/OneBlock_ExpeditionCrystal_DefaultIcon.png",
+        "Icon": f"Icons/ItemsGenerated/Crystals/OneBlock_Crystal_{eid}.png",
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "Interactions": {
@@ -145,7 +148,7 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
         },
         "Id": item_id,
         "ItemLevel": item_level,
-        "Icon": f"Icons/ItemsGenerated/OneBlock_{eid}.png",
+        "Icon": f"Icons/ItemsGenerated/OneBlock/OneBlock_{eid}.png",
         "Categories": ["Blocks.OneBlock"],
         "PlayerAnimationsId": "Block",
         "Set": "OneBlock",
@@ -585,7 +588,7 @@ def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool, stal
         else:
             print(f"  [warn]   No default block texture found at {DEFAULT_BLOCK_TEXTURE}")
 
-    icon_dst = repo_root / BLOCK_ICON_DIR / f"OneBlock_{eid}.png"
+    icon_dst = repo_root / ONEBLOCK_ICON_DIR / f"OneBlock_{eid}.png"
     if stale is not None:
         stale.discard(icon_dst)
     if not icon_dst.exists():
@@ -599,6 +602,35 @@ def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool, stal
         else:
             print(f"  [warn]   No default block icon found at {DEFAULT_BLOCK_ICON}")
 
+
+
+
+def ensure_crystal_asset(repo_root: Path, expedition_id: str, dry_run: bool, stale: "set[Path] | None" = None):
+    """Copy the default expedition crystal icon for a crystal if its specific icon does not exist."""
+    eid = _safe_eid(expedition_id)
+    icon_dst = repo_root / CRYSTAL_ICON_DIR / f"OneBlock_Crystal_{eid}.png"
+
+    if stale is not None:
+        stale.discard(icon_dst)
+
+    if icon_dst.exists():
+        print(f"  [skip]   {icon_dst.name} already exists")
+        return
+
+    default_src = repo_root / BLOCK_ICON_DIR / "OneBlock_ExpeditionCrystal_DefaultIcon.png"
+    src = default_src if default_src.exists() else DEFAULT_CRYSTAL_ICON
+
+    if not src.exists():
+        print(f"  [warn]   No default crystal icon found at {default_src} or {DEFAULT_CRYSTAL_ICON}")
+        return
+
+    if dry_run:
+        print(f"  [dry-run] Would copy default crystal icon -> {icon_dst.name}")
+        return
+
+    icon_dst.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(src, icon_dst)
+    print(f"  [copy]   {icon_dst.name} <- default crystal icon")
 
 def _custom_item_ids_from_entries(entries: list) -> set[str]:
     out: set[str] = set()
@@ -933,8 +965,11 @@ def collect_generated_files(repo_root: Path) -> "set[Path]":
         (repo_root / CRYSTAL_DIR,            "*.json"),
         (repo_root / BLOCK_DIR,              "OneBlock_Block_*.json"),
         (repo_root / BLOCK_TEXTURE_DIR,      "OneBlock_Block_*.png"),
+        # Legacy root-level OneBlock icons are included so --clean removes old generated paths.
         (repo_root / BLOCK_ICON_DIR,         "OneBlock_*.png"),
+        (repo_root / ONEBLOCK_ICON_DIR,      "OneBlock_*.png"),
         (repo_root / BLOCK_ICON_DIR,         "*_Icon.png"),
+        (repo_root / CRYSTAL_ICON_DIR,       "OneBlock_Crystal_*.png"),
         (repo_root / CUSTOM_ITEM_DIR,        "*.json"),
         (repo_root / CUSTOM_ITEM_TEXTURE_DIR, "*_Texture.png"),
     ]
@@ -1094,6 +1129,7 @@ def main():
         seen_custom_item_ids.update(custom_item_ids)
 
         ensure_block_assets(repo_root, expedition_id, args.dry_run, stale)
+        ensure_crystal_asset(repo_root, expedition_id, args.dry_run, stale)
 
         write_json(
             repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",

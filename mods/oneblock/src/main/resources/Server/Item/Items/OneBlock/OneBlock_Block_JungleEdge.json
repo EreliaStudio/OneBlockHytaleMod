@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_JungleEdge",
   "ItemLevel": 9,
-  "Icon": "Icons/ItemsGenerated/OneBlock_JungleEdge.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_JungleEdge.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

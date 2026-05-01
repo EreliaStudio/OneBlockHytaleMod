@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_GemDeepCave",
   "ItemLevel": 15,
-  "Icon": "Icons/ItemsGenerated/OneBlock_GemDeepCave.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GemDeepCave.png",
   "Categories": [
     "Blocks.OneBlock"
   ],

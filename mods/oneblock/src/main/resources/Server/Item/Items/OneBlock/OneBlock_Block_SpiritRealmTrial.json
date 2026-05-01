@@ -4,7 +4,7 @@
   },
   "Id": "OneBlock_Block_SpiritRealmTrial",
   "ItemLevel": 27,
-  "Icon": "Icons/ItemsGenerated/OneBlock_SpiritRealmTrial.png",
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SpiritRealmTrial.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
