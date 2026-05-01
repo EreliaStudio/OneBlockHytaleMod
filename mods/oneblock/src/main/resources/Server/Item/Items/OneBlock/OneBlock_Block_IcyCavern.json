@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_IcyCavern.name"
   },
   "Id": "OneBlock_Block_IcyCavern",
-  "ItemLevel": 20,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IcyCavern.png",
   "Categories": [
     "Blocks.OneBlock"

@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_HorseHallow.description"
   },
   "Id": "OneBlock_Crystal_HorseHallow",
-  "ItemLevel": 5,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_HorseHallow.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Rare",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Surface"
+          "OneBlock_Enchanter_Easy"
         ],
         "Id": "OneBlockEnchanter"
       }

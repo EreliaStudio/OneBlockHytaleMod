@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_BurntBattlefield.name"
   },
   "Id": "OneBlock_Block_BurntBattlefield",
-  "ItemLevel": 18,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_BurntBattlefield.png",
   "Categories": [
     "Blocks.OneBlock"

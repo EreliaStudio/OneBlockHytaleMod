@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_InfernalPlain.name"
   },
   "Id": "OneBlock_Block_InfernalPlain",
-  "ItemLevel": 22,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfernalPlain.png",
   "Categories": [
     "Blocks.OneBlock"

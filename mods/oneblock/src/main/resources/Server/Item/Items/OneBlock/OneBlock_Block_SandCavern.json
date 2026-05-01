@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_SandCavern.name"
   },
   "Id": "OneBlock_Block_SandCavern",
-  "ItemLevel": 6,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SandCavern.png",
   "Categories": [
     "Blocks.OneBlock"

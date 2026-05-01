@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_OutlanderPlain.name"
   },
   "Id": "OneBlock_Block_OutlanderPlain",
-  "ItemLevel": 16,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_OutlanderPlain.png",
   "Categories": [
     "Blocks.OneBlock"

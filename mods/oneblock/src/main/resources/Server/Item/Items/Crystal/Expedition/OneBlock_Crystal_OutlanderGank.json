@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_OutlanderGank.description"
   },
   "Id": "OneBlock_Crystal_OutlanderGank",
-  "ItemLevel": 17,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_OutlanderGank.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {

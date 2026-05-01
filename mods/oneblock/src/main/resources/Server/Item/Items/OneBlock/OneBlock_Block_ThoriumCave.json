@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_ThoriumCave.name"
   },
   "Id": "OneBlock_Block_ThoriumCave",
-  "ItemLevel": 8,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ThoriumCave.png",
   "Categories": [
     "Blocks.OneBlock"

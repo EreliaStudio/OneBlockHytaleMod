@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_JurassicCave.description"
   },
   "Id": "OneBlock_Crystal_JurassicCave",
-  "ItemLevel": 17,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_JurassicCave.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Underground"
+          "OneBlock_Enchanter_Hard"
         ],
         "Id": "OneBlockEnchanter"
       }

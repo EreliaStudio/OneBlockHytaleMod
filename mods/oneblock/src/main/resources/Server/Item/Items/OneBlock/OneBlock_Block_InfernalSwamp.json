@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_InfernalSwamp.name"
   },
   "Id": "OneBlock_Block_InfernalSwamp",
-  "ItemLevel": 22,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfernalSwamp.png",
   "Categories": [
     "Blocks.OneBlock"

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_AridForest.name"
   },
   "Id": "OneBlock_Block_AridForest",
-  "ItemLevel": 5,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AridForest.png",
   "Categories": [
     "Blocks.OneBlock"

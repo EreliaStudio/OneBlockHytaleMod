@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Quarry.name"
   },
   "Id": "OneBlock_Block_Quarry",
-  "ItemLevel": 3,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Quarry.png",
   "Categories": [
     "Blocks.OneBlock"

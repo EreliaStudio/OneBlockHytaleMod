@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_JungleEdge.name"
   },
   "Id": "OneBlock_Block_JungleEdge",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_JungleEdge.png",
   "Categories": [
     "Blocks.OneBlock"

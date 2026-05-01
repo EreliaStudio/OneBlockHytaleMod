@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_FireLand.name"
   },
   "Id": "OneBlock_Block_FireLand",
-  "ItemLevel": 16,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FireLand.png",
   "Categories": [
     "Blocks.OneBlock"

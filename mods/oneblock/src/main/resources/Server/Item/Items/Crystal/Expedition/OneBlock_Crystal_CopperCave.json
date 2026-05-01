@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_CopperCave.description"
   },
   "Id": "OneBlock_Crystal_CopperCave",
-  "ItemLevel": 4,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_CopperCave.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Underground"
+          "OneBlock_Enchanter_Easy"
         ],
         "Id": "OneBlockEnchanter"
       }

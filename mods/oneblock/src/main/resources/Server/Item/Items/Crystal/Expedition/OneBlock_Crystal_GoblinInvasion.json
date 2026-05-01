@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_GoblinInvasion.description"
   },
   "Id": "OneBlock_Crystal_GoblinInvasion",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_GoblinInvasion.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {

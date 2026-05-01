@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_ShadowKnightCitadel.name"
   },
   "Id": "OneBlock_Block_ShadowKnightCitadel",
-  "ItemLevel": 22,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ShadowKnightCitadel.png",
   "Categories": [
     "Blocks.OneBlock"

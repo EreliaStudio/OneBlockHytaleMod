@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_AshenCatacombs.name"
   },
   "Id": "OneBlock_Block_AshenCatacombs",
-  "ItemLevel": 20,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AshenCatacombs.png",
   "Categories": [
     "Blocks.OneBlock"

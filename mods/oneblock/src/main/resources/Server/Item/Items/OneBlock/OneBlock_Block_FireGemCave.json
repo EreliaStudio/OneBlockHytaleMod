@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_FireGemCave.name"
   },
   "Id": "OneBlock_Block_FireGemCave",
-  "ItemLevel": 24,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FireGemCave.png",
   "Categories": [
     "Blocks.OneBlock"

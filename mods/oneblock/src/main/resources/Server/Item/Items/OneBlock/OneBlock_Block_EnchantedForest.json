@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_EnchantedForest.name"
   },
   "Id": "OneBlock_Block_EnchantedForest",
-  "ItemLevel": 8,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_EnchantedForest.png",
   "Categories": [
     "Blocks.OneBlock"

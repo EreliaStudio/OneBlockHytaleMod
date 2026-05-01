@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_FrostboneCrypt.name"
   },
   "Id": "OneBlock_Block_FrostboneCrypt",
-  "ItemLevel": 25,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FrostboneCrypt.png",
   "Categories": [
     "Blocks.OneBlock"

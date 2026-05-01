@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_GoblinInvasion.name"
   },
   "Id": "OneBlock_Block_GoblinInvasion",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GoblinInvasion.png",
   "Categories": [
     "Blocks.OneBlock"

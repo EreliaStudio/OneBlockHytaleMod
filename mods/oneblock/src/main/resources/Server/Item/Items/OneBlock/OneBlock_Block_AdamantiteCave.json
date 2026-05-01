@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_AdamantiteCave.name"
   },
   "Id": "OneBlock_Block_AdamantiteCave",
-  "ItemLevel": 13,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AdamantiteCave.png",
   "Categories": [
     "Blocks.OneBlock"

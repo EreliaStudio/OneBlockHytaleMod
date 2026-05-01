@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_Quarry.description"
   },
   "Id": "OneBlock_Crystal_Quarry",
-  "ItemLevel": 3,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_Quarry.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Underground"
+          "OneBlock_Enchanter_Easy"
         ],
         "Id": "OneBlockEnchanter"
       }

@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_Forest.description"
   },
   "Id": "OneBlock_Crystal_Forest",
-  "ItemLevel": 3,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_Forest.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Forest"
+          "OneBlock_Enchanter_Easy"
         ],
         "Id": "OneBlockEnchanter"
       }

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_InsectInvasion.name"
   },
   "Id": "OneBlock_Block_InsectInvasion",
-  "ItemLevel": 10,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InsectInvasion.png",
   "Categories": [
     "Blocks.OneBlock"

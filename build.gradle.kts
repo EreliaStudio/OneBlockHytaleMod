@@ -58,18 +58,32 @@ subprojects {
         dependsOn(tasks.named("shadowJar"))
     }
 
-    val deploy by tasks.registering(Copy::class) {
+    val deploy by tasks.registering {
         group = "distribution"
-        description = "Copies the shaded jar into hytale-server/mods"
-        dependsOn(tasks.named("shadowJar"))
+        description = "Copies the shaded jar and asset pack into hytale-server/mods"
+        dependsOn(tasks.named("shadowJar"), tasks.named("processResources"))
 
         val jarFile = tasks.named<ShadowJar>("shadowJar").flatMap { it.archiveFile }
-
-        from(jarFile)
-        into(rootProject.file("hytale-server/mods"))
+        val resourcesDir = tasks.named<ProcessResources>("processResources").map { it.destinationDir }
+        val modsDir = rootProject.file("hytale-server/mods")
+        val packId = "${rootProject.group}_${project.name}"
 
         doFirst {
-            println("Deploying: ${jarFile.get().asFile} -> ${rootProject.file("hytale-server/mods")}")
+            println("Deploying JAR: ${jarFile.get().asFile} -> $modsDir")
+            println("Deploying asset pack: ${resourcesDir.get()} -> ${modsDir}/$packId")
+        }
+
+        doLast {
+            // Copy JAR
+            copy {
+                from(jarFile)
+                into(modsDir)
+            }
+            // Copy asset pack resources into com.EreliaStudio_oneblock/
+            copy {
+                from(resourcesDir)
+                into(file("$modsDir/$packId"))
+            }
         }
     }
 

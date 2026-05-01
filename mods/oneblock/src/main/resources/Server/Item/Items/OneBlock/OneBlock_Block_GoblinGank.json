@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_GoblinGank.name"
   },
   "Id": "OneBlock_Block_GoblinGank",
-  "ItemLevel": 5,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GoblinGank.png",
   "Categories": [
     "Blocks.OneBlock"

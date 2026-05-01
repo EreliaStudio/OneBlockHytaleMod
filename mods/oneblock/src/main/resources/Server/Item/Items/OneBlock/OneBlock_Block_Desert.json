@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Desert.name"
   },
   "Id": "OneBlock_Block_Desert",
-  "ItemLevel": 7,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Desert.png",
   "Categories": [
     "Blocks.OneBlock"

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_InsectNest.name"
   },
   "Id": "OneBlock_Block_InsectNest",
-  "ItemLevel": 13,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InsectNest.png",
   "Categories": [
     "Blocks.OneBlock"

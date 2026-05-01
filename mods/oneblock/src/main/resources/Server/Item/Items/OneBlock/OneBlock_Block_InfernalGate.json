@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_InfernalGate.name"
   },
   "Id": "OneBlock_Block_InfernalGate",
-  "ItemLevel": 20,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InfernalGate.png",
   "Categories": [
     "Blocks.OneBlock"

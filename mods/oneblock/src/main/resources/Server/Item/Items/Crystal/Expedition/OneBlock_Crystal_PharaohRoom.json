@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_PharaohRoom.description"
   },
   "Id": "OneBlock_Crystal_PharaohRoom",
-  "ItemLevel": 15,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_PharaohRoom.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Desert"
+          "OneBlock_Enchanter_Difficult"
         ],
         "Id": "OneBlockEnchanter"
       }

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_GoldCave.name"
   },
   "Id": "OneBlock_Block_GoldCave",
-  "ItemLevel": 7,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_GoldCave.png",
   "Categories": [
     "Blocks.OneBlock"

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Coastline.name"
   },
   "Id": "OneBlock_Block_Coastline",
-  "ItemLevel": 6,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Coastline.png",
   "Categories": [
     "Blocks.OneBlock"

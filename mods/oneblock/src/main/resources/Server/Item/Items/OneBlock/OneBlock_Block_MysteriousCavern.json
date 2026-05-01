@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_MysteriousCavern.name"
   },
   "Id": "OneBlock_Block_MysteriousCavern",
-  "ItemLevel": 6,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_MysteriousCavern.png",
   "Categories": [
     "Blocks.OneBlock"

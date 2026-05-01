@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_DryJunglePass.name"
   },
   "Id": "OneBlock_Block_DryJunglePass",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DryJunglePass.png",
   "Categories": [
     "Blocks.OneBlock"

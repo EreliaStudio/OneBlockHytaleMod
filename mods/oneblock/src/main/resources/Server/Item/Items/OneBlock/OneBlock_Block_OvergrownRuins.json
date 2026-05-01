@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_OvergrownRuins.name"
   },
   "Id": "OneBlock_Block_OvergrownRuins",
-  "ItemLevel": 11,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_OvergrownRuins.png",
   "Categories": [
     "Blocks.OneBlock"

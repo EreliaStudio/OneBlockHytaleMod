@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_DryTrorkCamp.name"
   },
   "Id": "OneBlock_Block_DryTrorkCamp",
-  "ItemLevel": 10,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DryTrorkCamp.png",
   "Categories": [
     "Blocks.OneBlock"

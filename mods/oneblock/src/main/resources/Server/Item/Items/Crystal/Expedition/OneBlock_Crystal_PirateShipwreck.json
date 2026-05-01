@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_PirateShipwreck.description"
   },
   "Id": "OneBlock_Crystal_PirateShipwreck",
-  "ItemLevel": 10,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_PirateShipwreck.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {

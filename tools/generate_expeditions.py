@@ -58,12 +58,12 @@ _STATIC_ICON_NAMES = {
 }
 
 ENCHANTER_CATEGORY_ORDER = [
-    "Surface",
-    "Forest",
-    "Underground",
-    "Cold",
-    "Inferno",
-    "Dark",
+    "Easy",
+    "Advanced",
+    "Difficult",
+    "Hard",
+    "Expert",
+    "Dungeon",
 ]
 
 
@@ -291,40 +291,13 @@ def build_lang_block(expedition_id: str,
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
 
-    loot_lines = "\\nLoot :"
-    for entry in drop_pool:
-        loot_lines += f"\\n- {_display_drop_name(entry, render_names)}"
-
-    reward_lines = ""
-    if mandatory_rewards:
-        reward_lines = "\\nCompletion rewards :"
-        for entry in mandatory_rewards:
-            crystal_id = entry.get("Crystal")
-            if crystal_id is not None:
-                crystal_display = str(crystal_id).replace("_", " ")
-                reward_lines += f"\\n- {_entry_quantity(entry)}x {crystal_display} Crystal (unlocks {crystal_display})"
-            else:
-                reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
-
-    if random_bundles:
-        reward_lines += "\\nRandom reward (one bundle) :"
-        for i, bundle in enumerate(random_bundles, 1):
-            items_str = ", ".join(
-                f"{_entry_quantity(item)}x {_display_drop_name(item, render_names)}"
-                for item in bundle.get("Items", [])
-            )
-            weight = max(1, int(bundle.get("Weight", 1)))
-            reward_lines += f"\\n  [{weight}] {items_str}"
-
     lines = [
 		f"\n# GENERATED ─── {display} {sep}",
 
-		# Existing generated item/block keys
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.{loot_lines}{reward_lines}",
+		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.",
 
-		# New gameplay/UI keys
 		f"expeditions.{eid}.name={display}",
 		f"announcements.expedition_started.{eid}={display} expedition started.",
 		f"announcements.expedition_completed.{eid}={display} expedition complete. The OneBlock has returned to default.",
@@ -474,23 +447,12 @@ def build_lang_dungeon_block(expedition_id: str,
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
 
-    wave_lines = f"\\n{len(waves)} waves :"
-    for i, wave in enumerate(waves, 1):
-        names = ", ".join(w.replace("_", " ") for w in wave)
-        wave_lines += f"\\n  Wave {i}: {names}"
-
-    reward_lines = ""
-    if completion_rewards:
-        reward_lines = "\\nCompletion rewards :"
-        for entry in completion_rewards:
-            reward_lines += f"\\n- {_entry_quantity(entry)}x {_display_drop_name(entry, render_names)}"
-
     lines = [
 		f"\n# GENERATED ─── {display} {sep}",
 
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin the {display} dungeon.{wave_lines}{reward_lines}",
+		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin the {display} dungeon.\\n{len(waves)} waves.",
 
 		f"expeditions.{eid}.name={display}",
 		f"announcements.dungeon_started.{eid}={display} dungeon started.",

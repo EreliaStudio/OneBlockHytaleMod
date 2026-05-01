@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_MuddyDesert.description"
   },
   "Id": "OneBlock_Crystal_MuddyDesert",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_MuddyDesert.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Desert"
+          "OneBlock_Enchanter_Advanced"
         ],
         "Id": "OneBlockEnchanter"
       }

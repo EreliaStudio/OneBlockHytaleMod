@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_TrorkChieftainCamp.description"
   },
   "Id": "OneBlock_Crystal_TrorkChieftainCamp",
-  "ItemLevel": 18,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_TrorkChieftainCamp.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {

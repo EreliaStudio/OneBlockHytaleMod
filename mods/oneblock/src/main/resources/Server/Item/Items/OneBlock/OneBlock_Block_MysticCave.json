@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_MysticCave.name"
   },
   "Id": "OneBlock_Block_MysticCave",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_MysticCave.png",
   "Categories": [
     "Blocks.OneBlock"

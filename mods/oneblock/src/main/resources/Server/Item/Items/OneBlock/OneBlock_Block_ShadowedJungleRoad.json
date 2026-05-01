@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_ShadowedJungleRoad.name"
   },
   "Id": "OneBlock_Block_ShadowedJungleRoad",
-  "ItemLevel": 17,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_ShadowedJungleRoad.png",
   "Categories": [
     "Blocks.OneBlock"

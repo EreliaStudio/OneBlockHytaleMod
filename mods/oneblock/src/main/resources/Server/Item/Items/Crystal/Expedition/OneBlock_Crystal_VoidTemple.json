@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_VoidTemple.description"
   },
   "Id": "OneBlock_Crystal_VoidTemple",
-  "ItemLevel": 24,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_VoidTemple.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Rare",
   "Recipe": {
     "Input": [
       {

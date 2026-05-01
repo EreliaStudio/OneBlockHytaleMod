@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_DinoCrisis.name"
   },
   "Id": "OneBlock_Block_DinoCrisis",
-  "ItemLevel": 21,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_DinoCrisis.png",
   "Categories": [
     "Blocks.OneBlock"

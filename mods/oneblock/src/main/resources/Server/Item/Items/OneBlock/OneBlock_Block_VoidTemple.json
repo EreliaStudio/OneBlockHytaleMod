@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_VoidTemple.name"
   },
   "Id": "OneBlock_Block_VoidTemple",
-  "ItemLevel": 24,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_VoidTemple.png",
   "Categories": [
     "Blocks.OneBlock"

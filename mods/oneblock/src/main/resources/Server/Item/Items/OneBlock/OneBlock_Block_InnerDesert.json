@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_InnerDesert.name"
   },
   "Id": "OneBlock_Block_InnerDesert",
-  "ItemLevel": 8,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_InnerDesert.png",
   "Categories": [
     "Blocks.OneBlock"

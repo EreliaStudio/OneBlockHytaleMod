@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_AncientUndeadSanctum.name"
   },
   "Id": "OneBlock_Block_AncientUndeadSanctum",
-  "ItemLevel": 18,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_AncientUndeadSanctum.png",
   "Categories": [
     "Blocks.OneBlock"

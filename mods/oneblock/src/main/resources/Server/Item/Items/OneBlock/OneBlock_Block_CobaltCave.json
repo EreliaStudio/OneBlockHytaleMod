@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_CobaltCave.name"
   },
   "Id": "OneBlock_Block_CobaltCave",
-  "ItemLevel": 10,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CobaltCave.png",
   "Categories": [
     "Blocks.OneBlock"

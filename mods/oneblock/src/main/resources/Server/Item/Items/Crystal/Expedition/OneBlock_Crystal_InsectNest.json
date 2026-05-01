@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_InsectNest.description"
   },
   "Id": "OneBlock_Crystal_InsectNest",
-  "ItemLevel": 13,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_InsectNest.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Uncommon",
   "Recipe": {
     "Input": [
       {

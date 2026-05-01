@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_FairyPond.name"
   },
   "Id": "OneBlock_Block_FairyPond",
-  "ItemLevel": 10,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FairyPond.png",
   "Categories": [
     "Blocks.OneBlock"

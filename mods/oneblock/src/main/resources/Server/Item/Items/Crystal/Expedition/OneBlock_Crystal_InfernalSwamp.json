@@ -4,7 +4,7 @@
     "Description": "server.items.OneBlock_Crystal_InfernalSwamp.description"
   },
   "Id": "OneBlock_Crystal_InfernalSwamp",
-  "ItemLevel": 22,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_InfernalSwamp.png",
   "Categories": [
     "Items.OneBlockExpeditionCrystal"
@@ -39,7 +39,7 @@
     ]
   },
   "MaxStack": 4,
-  "Quality": "Epic",
+  "Quality": "Rare",
   "Recipe": {
     "Input": [
       {
@@ -52,7 +52,7 @@
       {
         "Type": "Crafting",
         "Categories": [
-          "OneBlock_Enchanter_Fire"
+          "OneBlock_Enchanter_Expert"
         ],
         "Id": "OneBlockEnchanter"
       }

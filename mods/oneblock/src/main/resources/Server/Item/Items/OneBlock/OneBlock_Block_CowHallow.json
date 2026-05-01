@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_CowHallow.name"
   },
   "Id": "OneBlock_Block_CowHallow",
-  "ItemLevel": 5,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CowHallow.png",
   "Categories": [
     "Blocks.OneBlock"

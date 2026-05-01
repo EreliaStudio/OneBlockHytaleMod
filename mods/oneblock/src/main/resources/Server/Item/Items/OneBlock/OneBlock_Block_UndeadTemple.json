@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_UndeadTemple.name"
   },
   "Id": "OneBlock_Block_UndeadTemple",
-  "ItemLevel": 17,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_UndeadTemple.png",
   "Categories": [
     "Blocks.OneBlock"

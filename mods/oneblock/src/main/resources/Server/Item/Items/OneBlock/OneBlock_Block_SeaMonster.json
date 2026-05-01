@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_SeaMonster.name"
   },
   "Id": "OneBlock_Block_SeaMonster",
-  "ItemLevel": 15,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SeaMonster.png",
   "Categories": [
     "Blocks.OneBlock"

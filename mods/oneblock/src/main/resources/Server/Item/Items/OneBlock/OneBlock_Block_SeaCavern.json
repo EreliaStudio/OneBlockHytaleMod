@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_SeaCavern.name"
   },
   "Id": "OneBlock_Block_SeaCavern",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_SeaCavern.png",
   "Categories": [
     "Blocks.OneBlock"

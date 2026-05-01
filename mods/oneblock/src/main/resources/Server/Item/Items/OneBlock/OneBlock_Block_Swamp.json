@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_Swamp.name"
   },
   "Id": "OneBlock_Block_Swamp",
-  "ItemLevel": 5,
+  "ItemLevel": 1,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Swamp.png",
   "Categories": [
     "Blocks.OneBlock"

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_IceLand.name"
   },
   "Id": "OneBlock_Block_IceLand",
-  "ItemLevel": 18,
+  "ItemLevel": 4,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IceLand.png",
   "Categories": [
     "Blocks.OneBlock"

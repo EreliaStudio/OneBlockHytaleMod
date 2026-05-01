@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_IceTemple.name"
   },
   "Id": "OneBlock_Block_IceTemple",
-  "ItemLevel": 24,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IceTemple.png",
   "Categories": [
     "Blocks.OneBlock"

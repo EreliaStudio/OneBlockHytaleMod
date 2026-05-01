@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_JungleCrypt.name"
   },
   "Id": "OneBlock_Block_JungleCrypt",
-  "ItemLevel": 13,
+  "ItemLevel": 3,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_JungleCrypt.png",
   "Categories": [
     "Blocks.OneBlock"

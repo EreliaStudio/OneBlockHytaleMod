@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_YetiCavern.name"
   },
   "Id": "OneBlock_Block_YetiCavern",
-  "ItemLevel": 22,
+  "ItemLevel": 5,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_YetiCavern.png",
   "Categories": [
     "Blocks.OneBlock"

@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_MuddyDesert.name"
   },
   "Id": "OneBlock_Block_MuddyDesert",
-  "ItemLevel": 9,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_MuddyDesert.png",
   "Categories": [
     "Blocks.OneBlock"

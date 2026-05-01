@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_TrorkHuntingGround.name"
   },
   "Id": "OneBlock_Block_TrorkHuntingGround",
-  "ItemLevel": 10,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_TrorkHuntingGround.png",
   "Categories": [
     "Blocks.OneBlock"

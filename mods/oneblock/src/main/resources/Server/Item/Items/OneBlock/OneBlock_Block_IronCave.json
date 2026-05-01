@@ -3,7 +3,7 @@
     "Name": "server.items.OneBlock_Block_IronCave.name"
   },
   "Id": "OneBlock_Block_IronCave",
-  "ItemLevel": 6,
+  "ItemLevel": 2,
   "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_IronCave.png",
   "Categories": [
     "Blocks.OneBlock"
