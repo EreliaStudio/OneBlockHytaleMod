@@ -28,8 +28,9 @@ foreach ($p in $javaProcs) {
 
 if ($javaProcs) { Start-Sleep -Seconds 1 }
 
-# Start server from hytale-server/ so config.json and mods/ are picked up correctly
+# Start server from hytale-server/ so config.json, Assets.zip, and mods/ are picked up correctly
 Set-Location $workdir
-$argList = @("-jar", $serverJar) + $Args
+$defaultArgs = @("--assets", "./Assets.zip", "--backup", "--backup-dir", "backups", "--backup-frequency", "30")
+$argList = @("-jar", $serverJar) + $defaultArgs + $Args
 Write-Host "Starting: $Java $argList  (workdir: $workdir)"
 & $Java @argList

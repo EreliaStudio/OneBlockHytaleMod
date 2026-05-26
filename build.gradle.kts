@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.EreliaStudio"
-version = "1.0.2"
+version = "1.0.3"
 
 allprojects {
     repositories {
@@ -60,29 +60,28 @@ subprojects {
 
     val deploy by tasks.registering {
         group = "distribution"
-        description = "Copies the shaded jar and asset pack into hytale-server/mods"
-        dependsOn(tasks.named("shadowJar"), tasks.named("processResources"))
+        description = "Copies the shaded plugin JAR into hytale-server/mods"
+        dependsOn(tasks.named("shadowJar"))
 
         val jarFile = tasks.named<ShadowJar>("shadowJar").flatMap { it.archiveFile }
-        val resourcesDir = tasks.named<ProcessResources>("processResources").map { it.destinationDir }
         val modsDir = rootProject.file("hytale-server/mods")
         val packId = "${rootProject.group}_${project.name}"
 
         doFirst {
             println("Deploying JAR: ${jarFile.get().asFile} -> $modsDir")
-            println("Deploying asset pack: ${resourcesDir.get()} -> ${modsDir}/$packId")
+            println("Removing legacy standalone asset pack: ${modsDir}/$packId")
+            println("Removing older plugin JARs: ${modsDir}/OneBlock-*.jar")
         }
 
         doLast {
-            // Copy JAR
+            // Resources are embedded in the JAR because manifest.json has IncludesAssetPack=true.
+            delete(file("$modsDir/$packId"))
+            delete(fileTree(modsDir) {
+                include("OneBlock-*.jar")
+            })
             copy {
                 from(jarFile)
                 into(modsDir)
-            }
-            // Copy asset pack resources into com.EreliaStudio_oneblock/
-            copy {
-                from(resourcesDir)
-                into(file("$modsDir/$packId"))
             }
         }
     }
