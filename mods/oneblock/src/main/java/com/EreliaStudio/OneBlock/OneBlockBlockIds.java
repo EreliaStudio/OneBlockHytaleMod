@@ -1,6 +1,6 @@
 package com.EreliaStudio.OneBlock;
 
-import com.hypixel.hytale.math.vector.Vector3i;
+import org.joml.Vector3i;
 
 public final class OneBlockBlockIds
 {

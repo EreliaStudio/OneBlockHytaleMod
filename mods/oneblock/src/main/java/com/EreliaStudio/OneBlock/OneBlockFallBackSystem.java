@@ -9,8 +9,8 @@ import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.system.tick.ArchetypeTickingSystem;
 import com.hypixel.hytale.math.vector.Transform;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3f;
+import com.hypixel.hytale.math.vector.Rotation3f;
+import org.joml.Vector3d;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.modules.entity.teleport.Teleport;
@@ -71,7 +71,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
             }
 
             Vector3d position = transform.getPosition();
-            if (position == null || position.getY() >= FALLBACK_Y)
+            if (position == null || position.y() >= FALLBACK_Y)
             {
                 continue;
             }
@@ -111,7 +111,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
     {
         if (world == null || playerId == null)
         {
-            return new Transform(DEFAULT_SPAWN_POS, Vector3f.ZERO);
+            return new Transform(DEFAULT_SPAWN_POS, new Rotation3f());
         }
 
         WorldConfig config = world.getWorldConfig();
@@ -128,7 +128,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
             }
         }
 
-        return new Transform(DEFAULT_SPAWN_POS, Vector3f.ZERO);
+        return new Transform(DEFAULT_SPAWN_POS, new Rotation3f());
     }
 
     private static boolean isDefaultWorld(World world)

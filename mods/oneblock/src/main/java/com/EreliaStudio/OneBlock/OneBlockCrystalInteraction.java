@@ -9,7 +9,7 @@ import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction;
-import com.hypixel.hytale.math.vector.Vector3i;
+import org.joml.Vector3i;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -80,7 +80,7 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
 
         String newBlockId = OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
         Vector3i pos = OneBlockBlockIds.ONEBLOCK_POSITION;
-        world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), newBlockId));
+        world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), newBlockId));
 
         OneBlockInteractionUtil.consumeHeldItem(interactionContext, heldItem);
 

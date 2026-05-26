@@ -1,10 +1,8 @@
 package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.math.vector.Rotation3f;
 import com.hypixel.hytale.math.vector.Transform;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3f;
-import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.protocol.Color;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.WorldConfig;
@@ -13,6 +11,8 @@ import com.hypixel.hytale.server.core.universe.world.worldgen.provider.VoidWorld
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Level;
+import org.joml.Vector3d;
+import org.joml.Vector3i;
 
 final class OneBlockWorldInitializer
 {
@@ -48,7 +48,7 @@ final class OneBlockWorldInitializer
             WorldConfig config = world.getWorldConfig();
             if (config != null)
             {
-                Transform spawn = new Transform(SPAWN_POS, new Vector3f(0.0F, 0.0F, 0.0F));
+                Transform spawn = new Transform(SPAWN_POS, new Rotation3f(0.0F, 0.0F, 0.0F));
                 config.setSpawnProvider(new GlobalSpawnProvider(spawn));
                 config.setWorldGenProvider(new VoidWorldGenProvider(VOID_TINT, VOID_ENVIRONMENT));
                 config.markChanged();
@@ -56,7 +56,7 @@ final class OneBlockWorldInitializer
 
             if (ORIGIN_PLACED.compareAndSet(false, true))
             {
-                world.setBlock(ORIGIN_BLOCK.getX(), ORIGIN_BLOCK.getY(), ORIGIN_BLOCK.getZ(), resolvedBlockId);
+                world.setBlock(ORIGIN_BLOCK.x(), ORIGIN_BLOCK.y(), ORIGIN_BLOCK.z(), resolvedBlockId);
                 LOGGER.at(Level.INFO).log("Placed OneBlock at " + ORIGIN_BLOCK + " with block " + resolvedBlockId);
             }
         });

@@ -29,7 +29,7 @@ public final class OneBlockHudService
                 OneBlockProgressHud::new
         );
 
-        player.getHudManager().setCustomHud(playerRef, hud);
+        player.getHudManager().addCustomHud(playerRef, hud);
     }
 
     public void hide(Player player)
@@ -46,7 +46,7 @@ public final class OneBlockHudService
         }
 
         hudsByPlayer.remove(playerRef);
-        player.getHudManager().resetHud(playerRef);
+        player.getHudManager().removeCustomHud(playerRef, OneBlockProgressHud.HUD_KEY);
     }
 
     public void clear(Player player)

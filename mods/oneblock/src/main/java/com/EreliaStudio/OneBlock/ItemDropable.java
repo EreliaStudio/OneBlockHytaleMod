@@ -2,9 +2,9 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.Store;
-import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.math.vector.Vector3f;
-import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.math.vector.Rotation3f;
+import org.joml.Vector3d;
+import org.joml.Vector3i;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.modules.entity.item.ItemComponent;
 import com.hypixel.hytale.server.core.universe.world.World;
@@ -42,11 +42,11 @@ public final class ItemDropable implements Dropable
         if (store == null || world == null || spawnBlock == null) return;
 
         int safeQuantity = Math.max(1, quantity);
-        Vector3d dropPos = new Vector3d(spawnBlock.getX() + 0.5, spawnBlock.getY() + 0.1, spawnBlock.getZ() + 0.5);
+        Vector3d dropPos = new Vector3d(spawnBlock.x() + 0.5, spawnBlock.y() + 0.1, spawnBlock.z() + 0.5);
 
         world.execute(() ->
         {
-            var drop = ItemComponent.generateItemDrop(store, new ItemStack(itemId, safeQuantity), dropPos, Vector3f.ZERO, 0.0F, 3.25F, 0.0F);
+            var drop = ItemComponent.generateItemDrop(store, new ItemStack(itemId, safeQuantity), dropPos, Rotation3f.ZERO, 0.0F, 3.25F, 0.0F);
             if (drop != null) store.addEntity(drop, AddReason.SPAWN);
         });
     }

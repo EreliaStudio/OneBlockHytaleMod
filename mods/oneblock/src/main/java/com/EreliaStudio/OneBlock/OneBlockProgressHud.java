@@ -6,11 +6,12 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 
 public final class OneBlockProgressHud extends CustomUIHud
 {
+    public static final String HUD_KEY = "OneBlockProgressHud";
     private static final String UI_FILE = "OneBlockHud.ui";
 
     public OneBlockProgressHud(PlayerRef playerRef)
     {
-        super(playerRef);
+        super(playerRef, HUD_KEY);
     }
 
     @Override

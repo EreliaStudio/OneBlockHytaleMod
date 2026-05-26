@@ -2,7 +2,7 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
-import com.hypixel.hytale.math.vector.Vector3i;
+import org.joml.Vector3i;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
@@ -122,7 +122,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         if (world != null)
         {
             Vector3i pos = OneBlockBlockIds.ONEBLOCK_POSITION;
-            world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
+            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
         }
 
         if (targetPlayer != null)

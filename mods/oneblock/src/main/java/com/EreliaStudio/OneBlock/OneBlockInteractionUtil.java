@@ -8,6 +8,7 @@ import com.hypixel.hytale.server.core.entity.InteractionContext;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.inventory.container.ItemContainer;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.logger.HytaleLogger;
 
@@ -44,8 +45,8 @@ final class OneBlockInteractionUtil
         Ref<EntityStore> ref = interactionContext.getEntity();
         if (ref == null) return;
 
-        Player player = commandBuffer.getComponent(ref, Player.getComponentType());
-        if (player != null) player.sendMessage(Message.raw(message));
+        PlayerRef playerRef = commandBuffer.getComponent(ref, PlayerRef.getComponentType());
+        if (playerRef != null) playerRef.sendMessage(Message.raw(message));
     }
 
     static void finish(InteractionContext interactionContext) { setState(interactionContext, InteractionState.Finished); }

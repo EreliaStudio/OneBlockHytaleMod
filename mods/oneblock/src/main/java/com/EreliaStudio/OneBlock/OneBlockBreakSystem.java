@@ -1,7 +1,6 @@
 package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.builtin.crafting.CraftingPlugin;
-import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.event.events.ecs.BreakBlockEvent;
@@ -19,6 +18,7 @@ import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import org.joml.Vector3i;
 
 public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, BreakBlockEvent>
 {
@@ -67,9 +67,9 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         DropableContext context = new DropableContext(
                 store, world, pos,
-                new Vector3i(pos.getX() + REWARD_OFFSET.getX(),
-                             pos.getY() + REWARD_OFFSET.getY(),
-                             pos.getZ() + REWARD_OFFSET.getZ()),
+                new Vector3i(pos.x() + REWARD_OFFSET.x(),
+                             pos.y() + REWARD_OFFSET.y(),
+                             pos.z() + REWARD_OFFSET.z()),
                 ref,
                 store.getComponent(ref, PlayerRef.getComponentType())
         );
@@ -111,7 +111,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (completedDungeon != null)
         {
-            world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
+            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
             executeDungeonCompletionRewards(completedDungeon, context);
 
             if (player != null)
@@ -121,7 +121,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                     plugin.getHudService().showDungeonCompleted(player, completedDungeon);
                 }
 
-                player.sendMessage(Message.raw("Dungeon complete: " + completedDungeon + ". The OneBlock has returned to default."));
+                if (context.getPlayerRef() != null)
+                {
+                    context.getPlayerRef().sendMessage(Message.raw("Dungeon complete: " + completedDungeon + ". The OneBlock has returned to default."));
+                }
             }
         }
         else
@@ -130,7 +133,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
             if (dungeonBlockId == null) dungeonBlockId = OneBlockBlockIds.DEFAULT_BLOCK_ID;
 
             String finalBlockId = dungeonBlockId;
-            world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), finalBlockId));
+            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), finalBlockId));
 
             int completedWaves = dungeonState.getCurrentWaveIndex();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
@@ -147,7 +150,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                     );
                 }
 
-                player.sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + completedWaves + "/" + totalWaves + " waves completed."));
+                if (context.getPlayerRef() != null)
+                {
+                    context.getPlayerRef().sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + completedWaves + "/" + totalWaves + " waves completed."));
+                }
             }
         }
     }
@@ -157,9 +163,9 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         if (world == null || sourceBlock == null) return List.of();
 
         List<Vector3i> spawnBlocks = new ArrayList<>();
-        int sourceX = sourceBlock.getX();
-        int sourceY = sourceBlock.getY();
-        int sourceZ = sourceBlock.getZ();
+        int sourceX = sourceBlock.x();
+        int sourceY = sourceBlock.y();
+        int sourceZ = sourceBlock.z();
 
         for (int y = sourceY; y >= sourceY - DUNGEON_SPAWN_RADIUS; y--)
         {
@@ -238,7 +244,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                 : event.getBlockType().getId();
 
         String finalBlockId = nextBlockId;
-        world.execute(() -> world.setBlock(pos.getX(), pos.getY(), pos.getZ(), finalBlockId));
+        world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), finalBlockId));
 
         dropRegistry.executeDropable(rewardId, context);
 
