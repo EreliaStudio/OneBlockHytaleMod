@@ -14,11 +14,35 @@ public final class OneBlockDungeonDefaults
     {
         public final String dropId;
         public final int quantity;
+        /** Non-null when this reward is a crystal: the expedition ID whose knowledge is unlocked. */
+        public final String unlockExpeditionId;
 
         public CompletionRewardDefinition(String dropId, int quantity)
         {
+            this(dropId, quantity, null);
+        }
+
+        public CompletionRewardDefinition(String dropId, int quantity, String unlockExpeditionId)
+        {
             this.dropId = dropId;
             this.quantity = Math.max(1, quantity);
+            this.unlockExpeditionId = unlockExpeditionId;
+        }
+
+        public boolean isCrystalReward() { return unlockExpeditionId != null; }
+    }
+
+    public static final class RandomRewardBundle
+    {
+        public final List<CompletionRewardDefinition> items;
+        public final int weight;
+
+        public RandomRewardBundle(List<CompletionRewardDefinition> items, int weight)
+        {
+            this.items = items == null || items.isEmpty()
+                    ? List.of()
+                    : Collections.unmodifiableList(new ArrayList<>(items));
+            this.weight = Math.max(1, weight);
         }
     }
 
@@ -28,11 +52,21 @@ public final class OneBlockDungeonDefaults
         public final String blockId;
         public final List<List<String>> waves;
         public final List<CompletionRewardDefinition> completionRewards;
+        public final List<RandomRewardBundle> randomBundles;
 
         public DungeonDefinition(String dungeonId,
                                  String blockId,
                                  List<List<String>> waves,
                                  List<CompletionRewardDefinition> completionRewards)
+        {
+            this(dungeonId, blockId, waves, completionRewards, List.of());
+        }
+
+        public DungeonDefinition(String dungeonId,
+                                 String blockId,
+                                 List<List<String>> waves,
+                                 List<CompletionRewardDefinition> completionRewards,
+                                 List<RandomRewardBundle> randomBundles)
         {
             this.dungeonId = dungeonId;
             this.blockId = blockId;
@@ -44,12 +78,16 @@ public final class OneBlockDungeonDefaults
             this.completionRewards = completionRewards == null || completionRewards.isEmpty()
                     ? List.of()
                     : Collections.unmodifiableList(new ArrayList<>(completionRewards));
+            this.randomBundles = randomBundles == null || randomBundles.isEmpty()
+                    ? List.of()
+                    : Collections.unmodifiableList(new ArrayList<>(randomBundles));
         }
     }
 
     private static final Map<String, DungeonDefinition> DUNGEONS;
     private static final Set<String> ALL_ENTITY_IDS;
     private static final Set<String> COMPLETION_REWARD_DROP_IDS;
+    private static final java.util.Random RANDOM = new java.util.Random();
 
     static
     {
@@ -69,6 +107,9 @@ public final class OneBlockDungeonDefaults
                         List.of("entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Scrapper", "entity:Goblin_Miner", "entity:Goblin_Miner")
                 ), List.of(
                 reward("ExpeditionPoint", 12)
+        ), List.of(
+                bundle(List.of(crystalReward("IronCave", 1)), 1),
+                bundle(List.of(crystalReward("SandCave", 1)), 1)
         ));
 
         register(dungeons, "GoblinInvasion", List.of(
@@ -330,6 +371,29 @@ public final class OneBlockDungeonDefaults
         return def == null ? List.of() : def.completionRewards;
     }
 
+    public static List<RandomRewardBundle> getRandomBundles(String dungeonId)
+    {
+        DungeonDefinition def = DUNGEONS.get(dungeonId);
+        return def == null ? List.of() : def.randomBundles;
+    }
+
+    public static RandomRewardBundle pickRandomBundle(String dungeonId)
+    {
+        List<RandomRewardBundle> bundles = getRandomBundles(dungeonId);
+        if (bundles.isEmpty()) return null;
+
+        int totalWeight = 0;
+        for (RandomRewardBundle bundle : bundles) totalWeight += bundle.weight;
+        int roll = RANDOM.nextInt(totalWeight);
+        int cursor = 0;
+        for (RandomRewardBundle bundle : bundles)
+        {
+            cursor += bundle.weight;
+            if (roll < cursor) return bundle;
+        }
+        return bundles.get(bundles.size() - 1);
+    }
+
     public static Set<String> getAllEntityIds()
     {
         return ALL_ENTITY_IDS;
@@ -351,9 +415,14 @@ public final class OneBlockDungeonDefaults
         return new CompletionRewardDefinition(dropId, quantity);
     }
 
-    private static CompletionRewardDefinition crystalReward(String dungeonId, int quantity)
+    private static CompletionRewardDefinition crystalReward(String expeditionId, int quantity)
     {
-        return new CompletionRewardDefinition("Crystal_" + dungeonId, quantity);
+        return new CompletionRewardDefinition("OneBlock_Crystal_" + expeditionId, quantity, expeditionId);
+    }
+
+    private static RandomRewardBundle bundle(List<CompletionRewardDefinition> items, int weight)
+    {
+        return new RandomRewardBundle(items, weight);
     }
 
     private static void register(Map<String, DungeonDefinition> map,
@@ -361,8 +430,17 @@ public final class OneBlockDungeonDefaults
                                  List<List<String>> waves,
                                  List<CompletionRewardDefinition> completionRewards)
     {
+        register(map, dungeonId, waves, completionRewards, List.of());
+    }
+
+    private static void register(Map<String, DungeonDefinition> map,
+                                 String dungeonId,
+                                 List<List<String>> waves,
+                                 List<CompletionRewardDefinition> completionRewards,
+                                 List<RandomRewardBundle> randomBundles)
+    {
         String blockId = "OneBlock_Block_" + dungeonId;
-        map.put(dungeonId, new DungeonDefinition(dungeonId, blockId, waves, completionRewards));
+        map.put(dungeonId, new DungeonDefinition(dungeonId, blockId, waves, completionRewards, randomBundles));
     }
 
     private static Set<String> buildAllEntityIds(Map<String, DungeonDefinition> dungeons)
@@ -378,9 +456,16 @@ public final class OneBlockDungeonDefaults
     {
         Set<String> out = new HashSet<>();
         for (DungeonDefinition def : dungeons.values())
+        {
             for (CompletionRewardDefinition reward : def.completionRewards)
                 if (reward != null && reward.dropId != null && !reward.dropId.isEmpty())
                     out.add(reward.dropId);
+            for (RandomRewardBundle bundle : def.randomBundles)
+                if (bundle != null)
+                    for (CompletionRewardDefinition reward : bundle.items)
+                        if (reward != null && reward.dropId != null && !reward.dropId.isEmpty())
+                            out.add(reward.dropId);
+        }
         return Collections.unmodifiableSet(out);
     }
 }

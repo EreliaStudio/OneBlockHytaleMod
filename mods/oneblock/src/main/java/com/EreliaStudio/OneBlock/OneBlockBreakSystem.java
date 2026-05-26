@@ -282,13 +282,39 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
     private void executeDungeonCompletionRewards(String dungeonId, DropableContext context)
     {
-        List<OneBlockDungeonDefaults.CompletionRewardDefinition> rewards =
-                OneBlockDungeonDefaults.getCompletionRewards(dungeonId);
-
-        for (OneBlockDungeonDefaults.CompletionRewardDefinition reward : rewards)
+        for (OneBlockDungeonDefaults.CompletionRewardDefinition reward :
+                OneBlockDungeonDefaults.getCompletionRewards(dungeonId))
         {
-            if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) continue;
-            dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+            giveDungeonReward(reward, context);
+        }
+
+        OneBlockDungeonDefaults.RandomRewardBundle bundle =
+                OneBlockDungeonDefaults.pickRandomBundle(dungeonId);
+
+        if (bundle != null)
+        {
+            for (OneBlockDungeonDefaults.CompletionRewardDefinition reward : bundle.items)
+            {
+                giveDungeonReward(reward, context);
+            }
+        }
+    }
+
+    private void giveDungeonReward(OneBlockDungeonDefaults.CompletionRewardDefinition reward, DropableContext context)
+    {
+        if (reward == null || reward.dropId == null || reward.dropId.isEmpty()) return;
+
+        dropRegistry.executeDropable(reward.dropId, context, reward.quantity);
+
+        if (reward.isCrystalReward())
+        {
+            CraftingPlugin.learnRecipe(context.getPlayerEntity(), reward.dropId, context.getStore());
+
+            OneBlockNotifier.notifyExpeditionUnlocked(
+                    context.getStore(),
+                    context.getPlayerEntity(),
+                    reward.unlockExpeditionId
+            );
         }
     }
 

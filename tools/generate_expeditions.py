@@ -462,14 +462,14 @@ def build_lang_dungeon_block(expedition_id: str,
     return "\n".join(lines)
 
 
-def build_java_dungeon_defaults_block(all_dungeons: list[tuple[str, list, list]]) -> str:
+def build_java_dungeon_defaults_block(all_dungeons: list[tuple[str, list, list, list]]) -> str:
     lines = [
         "    static",
         "    {",
         "        Map<String, DungeonDefinition> dungeons = new HashMap<>();",
     ]
 
-    for dungeon_id, waves, completion_rewards in all_dungeons:
+    for dungeon_id, waves, completion_rewards, random_bundles in all_dungeons:
         lines.append("")
 
         wave_entries = []
@@ -485,9 +485,18 @@ def build_java_dungeon_defaults_block(all_dungeons: list[tuple[str, list, list]]
             f"                {_java_reward_expr(entry)}"
             for entry in completion_rewards
         ]
-        if reward_entries:
-            reward_list = _java_list_expr(reward_entries, "        ")
-            lines.append(f'        register(dungeons, "{dungeon_id}", {waves_expr}, {reward_list});')
+        bundle_entries = [
+            f"                {_java_bundle_expr(b, '                ')}"
+            for b in random_bundles
+        ]
+
+        if reward_entries or bundle_entries:
+            reward_list = _java_list_expr(reward_entries, "        ") if reward_entries else "List.of()"
+            if bundle_entries:
+                random_list = _java_list_expr(bundle_entries, "        ")
+                lines.append(f'        register(dungeons, "{dungeon_id}", {waves_expr}, {reward_list}, {random_list});')
+            else:
+                lines.append(f'        register(dungeons, "{dungeon_id}", {waves_expr}, {reward_list});')
         else:
             lines.append(f'        register(dungeons, "{dungeon_id}", {waves_expr}, List.of());')
 
@@ -1064,8 +1073,8 @@ def main():
     )
     dungeon_enchanter_path = repo_root / DUNGEON_ENCHANTER
 
-    all_expedition_drops: list[tuple[str, int, list, list]] = []
-    all_dungeon_waves: list[tuple[str, list, list]] = []
+    all_expedition_drops: list[tuple[str, int, list, list, list]] = []
+    all_dungeon_waves: list[tuple[str, list, list, list]] = []
     seen_custom_item_ids: set[str] = set()
 
     for expedition_id, cfg in expeditions.items():
@@ -1124,7 +1133,7 @@ def main():
             else:
                 print(f"  [warn]   Lang file not found: {lang_path}")
 
-            all_dungeon_waves.append((expedition_id, waves, mandatory_rewards))
+            all_dungeon_waves.append((expedition_id, waves, mandatory_rewards, random_bundles))
         else:
             ticks = cfg.get("Ticks", 100)
             drop_pool = cfg["BaseDropPool"]

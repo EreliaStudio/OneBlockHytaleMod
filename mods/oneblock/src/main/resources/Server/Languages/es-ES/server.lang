@@ -1,0 +1,1081 @@
+items.Bench_OneBlockEnchanter.name=Encantador de Cristales
+items.Bench_OneBlockEnchanter.description=Fusiona recursos recuperados en cristales de expedición.
+items.Bench_OneBlockDungeonEnchanter.name=Encantador de Cristales de Mazmorra
+items.Bench_OneBlockDungeonEnchanter.description=Fusiona recursos recuperados en cristales de expedición para mazmorras.
+
+items.Locket_GobelinDungeon.name=Medallón GobelinDungeon
+items.ExpeditionPoint.name=PuntoDeExpedición
+items.SwampRuinsToken.name=FichaRuinasDelPantano
+items.AbandonedMineToken.name=FichaMinaAbandonada
+items.FrozenRuinsToken.name=FichaRuinasHeladas
+items.DesertTempleToken.name=FichaTemploDelDesierto
+items.PharaohCatacombsToken.name=FichaCatacumbasDeLFaraón
+items.GobelinCampToken.name=FichaCampamentoGoblin
+
+# GENERATED ─── Default ────────────────────────────────────────────────
+items.OneBlock_Block_Default.name=OneBlock Por Defecto
+items.OneBlock_Crystal_Default.name=Cristal Por Defecto
+items.OneBlock_Crystal_Default.description=Consumir para iniciar una expedición Por Defecto.\n25 pulsos.
+expeditions.Default.name=Por Defecto
+announcements.expedition_started.Default=Expedición Por Defecto iniciada.
+announcements.expedition_completed.Default=Expedición Por Defecto completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Default=Nueva expedición desbloqueada: Por Defecto
+progress.expedition.Default=Por Defecto: {0}/{1} pulsos restantes
+benchCategories.OneBlockEnchanter_Easy=Cristales Fáciles
+
+# GENERATED ─── CaveEntry ──────────────────────────────────────────────
+items.OneBlock_Block_CaveEntry.name=OneBlock EntradaCueva
+items.OneBlock_Crystal_CaveEntry.name=Cristal EntradaCueva
+items.OneBlock_Crystal_CaveEntry.description=Consumir para iniciar una expedición EntradaCueva.\n25 pulsos.
+expeditions.CaveEntry.name=EntradaCueva
+announcements.expedition_started.CaveEntry=Expedición EntradaCueva iniciada.
+announcements.expedition_completed.CaveEntry=Expedición EntradaCueva completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.CaveEntry=Nueva expedición desbloqueada: EntradaCueva
+progress.expedition.CaveEntry=EntradaCueva: {0}/{1} pulsos restantes
+
+# GENERATED ─── ForestEdge ─────────────────────────────────────────────
+items.OneBlock_Block_ForestEdge.name=OneBlock BordeBosque
+items.OneBlock_Crystal_ForestEdge.name=Cristal BordeBosque
+items.OneBlock_Crystal_ForestEdge.description=Consumir para iniciar una expedición BordeBosque.\n25 pulsos.
+expeditions.ForestEdge.name=BordeBosque
+announcements.expedition_started.ForestEdge=Expedición BordeBosque iniciada.
+announcements.expedition_completed.ForestEdge=Expedición BordeBosque completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.ForestEdge=Nueva expedición desbloqueada: BordeBosque
+progress.expedition.ForestEdge=BordeBosque: {0}/{1} pulsos restantes
+
+# GENERATED ─── Plain ──────────────────────────────────────────────────
+items.OneBlock_Block_Plain.name=OneBlock Llanura
+items.OneBlock_Crystal_Plain.name=Cristal Llanura
+items.OneBlock_Crystal_Plain.description=Consumir para iniciar una expedición Llanura.\n25 pulsos.
+expeditions.Plain.name=Llanura
+announcements.expedition_started.Plain=Expedición Llanura iniciada.
+announcements.expedition_completed.Plain=Expedición Llanura completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Plain=Nueva expedición desbloqueada: Llanura
+progress.expedition.Plain=Llanura: {0}/{1} pulsos restantes
+
+# GENERATED ─── Cave ───────────────────────────────────────────────────
+items.OneBlock_Block_Cave.name=OneBlock Cueva
+items.OneBlock_Crystal_Cave.name=Cristal Cueva
+items.OneBlock_Crystal_Cave.description=Consumir para iniciar una expedición Cueva.\n25 pulsos.
+expeditions.Cave.name=Cueva
+announcements.expedition_started.Cave=Expedición Cueva iniciada.
+announcements.expedition_completed.Cave=Expedición Cueva completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Cave=Nueva expedición desbloqueada: Cueva
+progress.expedition.Cave=Cueva: {0}/{1} pulsos restantes
+
+# GENERATED ─── RatCave ────────────────────────────────────────────────
+items.OneBlock_Block_RatCave.name=OneBlock CuevaRatas
+items.OneBlock_Crystal_RatCave.name=Cristal CuevaRatas
+items.OneBlock_Crystal_RatCave.description=Consumir para iniciar la mazmorra CuevaRatas.\n3 oleadas.
+expeditions.RatCave.name=CuevaRatas
+announcements.dungeon_started.RatCave=Mazmorra CuevaRatas iniciada.
+announcements.dungeon_completed.RatCave=Mazmorra CuevaRatas completada. El OneBlock ha vuelto al estado por defecto.
+benchCategories.OneBlockDungeonEnchanter_Dungeon=Cristales de Mazmorra
+
+# GENERATED ─── LowerCave ──────────────────────────────────────────────
+items.OneBlock_Block_LowerCave.name=OneBlock CuevaInferior
+items.OneBlock_Crystal_LowerCave.name=Cristal CuevaInferior
+items.OneBlock_Crystal_LowerCave.description=Consumir para iniciar una expedición CuevaInferior.\n28 pulsos.
+expeditions.LowerCave.name=CuevaInferior
+announcements.expedition_started.LowerCave=Expedición CuevaInferior iniciada.
+announcements.expedition_completed.LowerCave=Expedición CuevaInferior completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.LowerCave=Nueva expedición desbloqueada: CuevaInferior
+progress.expedition.LowerCave=CuevaInferior: {0}/{1} pulsos restantes
+
+# GENERATED ─── CopperCave ─────────────────────────────────────────────
+items.OneBlock_Block_CopperCave.name=OneBlock CuevaCobre
+items.OneBlock_Crystal_CopperCave.name=Cristal CuevaCobre
+items.OneBlock_Crystal_CopperCave.description=Consumir para iniciar una expedición CuevaCobre.\n30 pulsos.
+expeditions.CopperCave.name=CuevaCobre
+announcements.expedition_started.CopperCave=Expedición CuevaCobre iniciada.
+announcements.expedition_completed.CopperCave=Expedición CuevaCobre completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.CopperCave=Nueva expedición desbloqueada: CuevaCobre
+progress.expedition.CopperCave=CuevaCobre: {0}/{1} pulsos restantes
+
+# GENERATED ─── GoblinGank ─────────────────────────────────────────────
+items.OneBlock_Block_GoblinGank.name=OneBlock EmboscadaGoblin
+items.OneBlock_Crystal_GoblinGank.name=Cristal EmboscadaGoblin
+items.OneBlock_Crystal_GoblinGank.description=Consumir para iniciar la mazmorra EmboscadaGoblin.\n3 oleadas.
+expeditions.GoblinGank.name=EmboscadaGoblin
+announcements.dungeon_started.GoblinGank=Mazmorra EmboscadaGoblin iniciada.
+announcements.dungeon_completed.GoblinGank=Mazmorra EmboscadaGoblin completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── IronCave ───────────────────────────────────────────────
+items.OneBlock_Block_IronCave.name=OneBlock CuevaHierro
+items.OneBlock_Crystal_IronCave.name=Cristal CuevaHierro
+items.OneBlock_Crystal_IronCave.description=Consumir para iniciar una expedición CuevaHierro.\n30 pulsos.
+expeditions.IronCave.name=CuevaHierro
+announcements.expedition_started.IronCave=Expedición CuevaHierro iniciada.
+announcements.expedition_completed.IronCave=Expedición CuevaHierro completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.IronCave=Nueva expedición desbloqueada: CuevaHierro
+progress.expedition.IronCave=CuevaHierro: {0}/{1} pulsos restantes
+benchCategories.OneBlockEnchanter_Advanced=Cristales Avanzados
+
+# GENERATED ─── SandCave ───────────────────────────────────────────────
+items.OneBlock_Block_SandCave.name=OneBlock CuevaArena
+items.OneBlock_Crystal_SandCave.name=Cristal CuevaArena
+items.OneBlock_Crystal_SandCave.description=Consumir para iniciar una expedición CuevaArena.\n28 pulsos.
+expeditions.SandCave.name=CuevaArena
+announcements.expedition_started.SandCave=Expedición CuevaArena iniciada.
+announcements.expedition_completed.SandCave=Expedición CuevaArena completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SandCave=Nueva expedición desbloqueada: CuevaArena
+progress.expedition.SandCave=CuevaArena: {0}/{1} pulsos restantes
+
+# GENERATED ─── GoldCave ───────────────────────────────────────────────
+items.OneBlock_Block_GoldCave.name=OneBlock CuevaOro
+items.OneBlock_Crystal_GoldCave.name=Cristal CuevaOro
+items.OneBlock_Crystal_GoldCave.description=Consumir para iniciar una expedición CuevaOro.\n30 pulsos.
+expeditions.GoldCave.name=CuevaOro
+announcements.expedition_started.GoldCave=Expedición CuevaOro iniciada.
+announcements.expedition_completed.GoldCave=Expedición CuevaOro completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.GoldCave=Nueva expedición desbloqueada: CuevaOro
+progress.expedition.GoldCave=CuevaOro: {0}/{1} pulsos restantes
+
+# GENERATED ─── ThoriumCave ────────────────────────────────────────────
+items.OneBlock_Block_ThoriumCave.name=OneBlock CuevaTorio
+items.OneBlock_Crystal_ThoriumCave.name=Cristal CuevaTorio
+items.OneBlock_Crystal_ThoriumCave.description=Consumir para iniciar una expedición CuevaTorio.\n30 pulsos.
+expeditions.ThoriumCave.name=CuevaTorio
+announcements.expedition_started.ThoriumCave=Expedición CuevaTorio iniciada.
+announcements.expedition_completed.ThoriumCave=Expedición CuevaTorio completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.ThoriumCave=Nueva expedición desbloqueada: CuevaTorio
+progress.expedition.ThoriumCave=CuevaTorio: {0}/{1} pulsos restantes
+
+# GENERATED ─── GoblinInvasion ─────────────────────────────────────────
+items.OneBlock_Block_GoblinInvasion.name=OneBlock InvasiónGoblin
+items.OneBlock_Crystal_GoblinInvasion.name=Cristal InvasiónGoblin
+items.OneBlock_Crystal_GoblinInvasion.description=Consumir para iniciar la mazmorra InvasiónGoblin.\n4 oleadas.
+expeditions.GoblinInvasion.name=InvasiónGoblin
+announcements.dungeon_started.GoblinInvasion=Mazmorra InvasiónGoblin iniciada.
+announcements.dungeon_completed.GoblinInvasion=Mazmorra InvasiónGoblin completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── SilverCave ─────────────────────────────────────────────
+items.OneBlock_Block_SilverCave.name=OneBlock CuevaPlata
+items.OneBlock_Crystal_SilverCave.name=Cristal CuevaPlata
+items.OneBlock_Crystal_SilverCave.description=Consumir para iniciar una expedición CuevaPlata.\n30 pulsos.
+expeditions.SilverCave.name=CuevaPlata
+announcements.expedition_started.SilverCave=Expedición CuevaPlata iniciada.
+announcements.expedition_completed.SilverCave=Expedición CuevaPlata completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SilverCave=Nueva expedición desbloqueada: CuevaPlata
+progress.expedition.SilverCave=CuevaPlata: {0}/{1} pulsos restantes
+
+# GENERATED ─── CobaltCave ─────────────────────────────────────────────
+items.OneBlock_Block_CobaltCave.name=OneBlock CuevaCobalt
+items.OneBlock_Crystal_CobaltCave.name=Cristal CuevaCobalt
+items.OneBlock_Crystal_CobaltCave.description=Consumir para iniciar una expedición CuevaCobalt.\n30 pulsos.
+expeditions.CobaltCave.name=CuevaCobalt
+announcements.expedition_started.CobaltCave=Expedición CuevaCobalt iniciada.
+announcements.expedition_completed.CobaltCave=Expedición CuevaCobalt completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.CobaltCave=Nueva expedición desbloqueada: CuevaCobalt
+progress.expedition.CobaltCave=CuevaCobalt: {0}/{1} pulsos restantes
+
+# GENERATED ─── AdamantiteCave ─────────────────────────────────────────
+items.OneBlock_Block_AdamantiteCave.name=OneBlock CuevaAdamantita
+items.OneBlock_Crystal_AdamantiteCave.name=Cristal CuevaAdamantita
+items.OneBlock_Crystal_AdamantiteCave.description=Consumir para iniciar una expedición CuevaAdamantita.\n30 pulsos.
+expeditions.AdamantiteCave.name=CuevaAdamantita
+announcements.expedition_started.AdamantiteCave=Expedición CuevaAdamantita iniciada.
+announcements.expedition_completed.AdamantiteCave=Expedición CuevaAdamantita completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.AdamantiteCave=Nueva expedición desbloqueada: CuevaAdamantita
+progress.expedition.AdamantiteCave=CuevaAdamantita: {0}/{1} pulsos restantes
+benchCategories.OneBlockEnchanter_Difficult=Cristales Difíciles
+
+# GENERATED ─── GemCave ────────────────────────────────────────────────
+items.OneBlock_Block_GemCave.name=OneBlock CuevaGemas
+items.OneBlock_Crystal_GemCave.name=Cristal CuevaGemas
+items.OneBlock_Crystal_GemCave.description=Consumir para iniciar una expedición CuevaGemas.\n30 pulsos.
+expeditions.GemCave.name=CuevaGemas
+announcements.expedition_started.GemCave=Expedición CuevaGemas iniciada.
+announcements.expedition_completed.GemCave=Expedición CuevaGemas completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.GemCave=Nueva expedición desbloqueada: CuevaGemas
+progress.expedition.GemCave=CuevaGemas: {0}/{1} pulsos restantes
+
+# GENERATED ─── FireCave ───────────────────────────────────────────────
+items.OneBlock_Block_FireCave.name=OneBlock CuevaFuego
+items.OneBlock_Crystal_FireCave.name=Cristal CuevaFuego
+items.OneBlock_Crystal_FireCave.description=Consumir para iniciar una expedición CuevaFuego.\n30 pulsos.
+expeditions.FireCave.name=CuevaFuego
+announcements.expedition_started.FireCave=Expedición CuevaFuego iniciada.
+announcements.expedition_completed.FireCave=Expedición CuevaFuego completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FireCave=Nueva expedición desbloqueada: CuevaFuego
+progress.expedition.FireCave=CuevaFuego: {0}/{1} pulsos restantes
+
+# GENERATED ─── GemDeepCave ────────────────────────────────────────────
+items.OneBlock_Block_GemDeepCave.name=OneBlock CuevaGemasProfunda
+items.OneBlock_Crystal_GemDeepCave.name=Cristal CuevaGemasProfunda
+items.OneBlock_Crystal_GemDeepCave.description=Consumir para iniciar una expedición CuevaGemasProfunda.\n30 pulsos.
+expeditions.GemDeepCave.name=CuevaGemasProfunda
+announcements.expedition_started.GemDeepCave=Expedición CuevaGemasProfunda iniciada.
+announcements.expedition_completed.GemDeepCave=Expedición CuevaGemasProfunda completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.GemDeepCave=Nueva expedición desbloqueada: CuevaGemasProfunda
+progress.expedition.GemDeepCave=CuevaGemasProfunda: {0}/{1} pulsos restantes
+
+# GENERATED ─── MithrilCave ────────────────────────────────────────────
+items.OneBlock_Block_MithrilCave.name=OneBlock CuevaMitril
+items.OneBlock_Crystal_MithrilCave.name=Cristal CuevaMitril
+items.OneBlock_Crystal_MithrilCave.description=Consumir para iniciar una expedición CuevaMitril.\n30 pulsos.
+expeditions.MithrilCave.name=CuevaMitril
+announcements.expedition_started.MithrilCave=Expedición CuevaMitril iniciada.
+announcements.expedition_completed.MithrilCave=Expedición CuevaMitril completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.MithrilCave=Nueva expedición desbloqueada: CuevaMitril
+progress.expedition.MithrilCave=CuevaMitril: {0}/{1} pulsos restantes
+benchCategories.OneBlockEnchanter_Hard=Cristales Duros
+
+# GENERATED ─── OnyxiumCave ────────────────────────────────────────────
+items.OneBlock_Block_OnyxiumCave.name=OneBlock CuevaOnixio
+items.OneBlock_Crystal_OnyxiumCave.name=Cristal CuevaOnixio
+items.OneBlock_Crystal_OnyxiumCave.description=Consumir para iniciar una expedición CuevaOnixio.\n30 pulsos.
+expeditions.OnyxiumCave.name=CuevaOnixio
+announcements.expedition_started.OnyxiumCave=Expedición CuevaOnixio iniciada.
+announcements.expedition_completed.OnyxiumCave=Expedición CuevaOnixio completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.OnyxiumCave=Nueva expedición desbloqueada: CuevaOnixio
+progress.expedition.OnyxiumCave=CuevaOnixio: {0}/{1} pulsos restantes
+
+# GENERATED ─── PrismaCave ─────────────────────────────────────────────
+items.OneBlock_Block_PrismaCave.name=OneBlock CuevaPrisma
+items.OneBlock_Crystal_PrismaCave.name=Cristal CuevaPrisma
+items.OneBlock_Crystal_PrismaCave.description=Consumir para iniciar una expedición CuevaPrisma.\n30 pulsos.
+expeditions.PrismaCave.name=CuevaPrisma
+announcements.expedition_started.PrismaCave=Expedición CuevaPrisma iniciada.
+announcements.expedition_completed.PrismaCave=Expedición CuevaPrisma completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.PrismaCave=Nueva expedición desbloqueada: CuevaPrisma
+progress.expedition.PrismaCave=CuevaPrisma: {0}/{1} pulsos restantes
+benchCategories.OneBlockEnchanter_Expert=Cristales Expertos
+
+# GENERATED ─── SandCavern ─────────────────────────────────────────────
+items.OneBlock_Block_SandCavern.name=OneBlock CavernaArena
+items.OneBlock_Crystal_SandCavern.name=Cristal CavernaArena
+items.OneBlock_Crystal_SandCavern.description=Consumir para iniciar una expedición CavernaArena.\n30 pulsos.
+expeditions.SandCavern.name=CavernaArena
+announcements.expedition_started.SandCavern=Expedición CavernaArena iniciada.
+announcements.expedition_completed.SandCavern=Expedición CavernaArena completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SandCavern=Nueva expedición desbloqueada: CavernaArena
+progress.expedition.SandCavern=CavernaArena: {0}/{1} pulsos restantes
+
+# GENERATED ─── Desert ─────────────────────────────────────────────────
+items.OneBlock_Block_Desert.name=OneBlock Desierto
+items.OneBlock_Crystal_Desert.name=Cristal Desierto
+items.OneBlock_Crystal_Desert.description=Consumir para iniciar una expedición Desierto.\n25 pulsos.
+expeditions.Desert.name=Desierto
+announcements.expedition_started.Desert=Expedición Desierto iniciada.
+announcements.expedition_completed.Desert=Expedición Desierto completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Desert=Nueva expedición desbloqueada: Desierto
+progress.expedition.Desert=Desierto: {0}/{1} pulsos restantes
+
+# GENERATED ─── ForestEntry ────────────────────────────────────────────
+items.OneBlock_Block_ForestEntry.name=OneBlock EntradaBosque
+items.OneBlock_Crystal_ForestEntry.name=Cristal EntradaBosque
+items.OneBlock_Crystal_ForestEntry.description=Consumir para iniciar una expedición EntradaBosque.\n25 pulsos.
+expeditions.ForestEntry.name=EntradaBosque
+announcements.expedition_started.ForestEntry=Expedición EntradaBosque iniciada.
+announcements.expedition_completed.ForestEntry=Expedición EntradaBosque completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.ForestEntry=Nueva expedición desbloqueada: EntradaBosque
+progress.expedition.ForestEntry=EntradaBosque: {0}/{1} pulsos restantes
+
+# GENERATED ─── Pond ───────────────────────────────────────────────────
+items.OneBlock_Block_Pond.name=OneBlock Estanque
+items.OneBlock_Crystal_Pond.name=Cristal Estanque
+items.OneBlock_Crystal_Pond.description=Consumir para iniciar una expedición Estanque.\n25 pulsos.
+expeditions.Pond.name=Estanque
+announcements.expedition_started.Pond=Expedición Estanque iniciada.
+announcements.expedition_completed.Pond=Expedición Estanque completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Pond=Nueva expedición desbloqueada: Estanque
+progress.expedition.Pond=Estanque: {0}/{1} pulsos restantes
+
+# GENERATED ─── River ──────────────────────────────────────────────────
+items.OneBlock_Block_River.name=OneBlock Río
+items.OneBlock_Crystal_River.name=Cristal Río
+items.OneBlock_Crystal_River.description=Consumir para iniciar una expedición Río.\n25 pulsos.
+expeditions.River.name=Río
+announcements.expedition_started.River=Expedición Río iniciada.
+announcements.expedition_completed.River=Expedición Río completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.River=Nueva expedición desbloqueada: Río
+progress.expedition.River=Río: {0}/{1} pulsos restantes
+
+# GENERATED ─── Lake ───────────────────────────────────────────────────
+items.OneBlock_Block_Lake.name=OneBlock Lago
+items.OneBlock_Crystal_Lake.name=Cristal Lago
+items.OneBlock_Crystal_Lake.description=Consumir para iniciar una expedición Lago.\n28 pulsos.
+expeditions.Lake.name=Lago
+announcements.expedition_started.Lake=Expedición Lago iniciada.
+announcements.expedition_completed.Lake=Expedición Lago completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Lake=Nueva expedición desbloqueada: Lago
+progress.expedition.Lake=Lago: {0}/{1} pulsos restantes
+
+# GENERATED ─── Sea ────────────────────────────────────────────────────
+items.OneBlock_Block_Sea.name=OneBlock Mar
+items.OneBlock_Crystal_Sea.name=Cristal Mar
+items.OneBlock_Crystal_Sea.description=Consumir para iniciar una expedición Mar.\n30 pulsos.
+expeditions.Sea.name=Mar
+announcements.expedition_started.Sea=Expedición Mar iniciada.
+announcements.expedition_completed.Sea=Expedición Mar completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Sea=Nueva expedición desbloqueada: Mar
+progress.expedition.Sea=Mar: {0}/{1} pulsos restantes
+
+# GENERATED ─── PirateShipwreck ────────────────────────────────────────
+items.OneBlock_Block_PirateShipwreck.name=OneBlock NaufragioPirata
+items.OneBlock_Crystal_PirateShipwreck.name=Cristal NaufragioPirata
+items.OneBlock_Crystal_PirateShipwreck.description=Consumir para iniciar la mazmorra NaufragioPirata.\n4 oleadas.
+expeditions.PirateShipwreck.name=NaufragioPirata
+announcements.dungeon_started.PirateShipwreck=Mazmorra NaufragioPirata iniciada.
+announcements.dungeon_completed.PirateShipwreck=Mazmorra NaufragioPirata completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── Coastline ──────────────────────────────────────────────
+items.OneBlock_Block_Coastline.name=OneBlock Costa
+items.OneBlock_Crystal_Coastline.name=Cristal Costa
+items.OneBlock_Crystal_Coastline.description=Consumir para iniciar una expedición Costa.\n25 pulsos.
+expeditions.Coastline.name=Costa
+announcements.expedition_started.Coastline=Expedición Costa iniciada.
+announcements.expedition_completed.Coastline=Expedición Costa completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Coastline=Nueva expedición desbloqueada: Costa
+progress.expedition.Coastline=Costa: {0}/{1} pulsos restantes
+
+# GENERATED ─── SeaCavern ──────────────────────────────────────────────
+items.OneBlock_Block_SeaCavern.name=OneBlock CavernaMarina
+items.OneBlock_Crystal_SeaCavern.name=Cristal CavernaMarina
+items.OneBlock_Crystal_SeaCavern.description=Consumir para iniciar una expedición CavernaMarina.\n28 pulsos.
+expeditions.SeaCavern.name=CavernaMarina
+announcements.expedition_started.SeaCavern=Expedición CavernaMarina iniciada.
+announcements.expedition_completed.SeaCavern=Expedición CavernaMarina completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SeaCavern=Nueva expedición desbloqueada: CavernaMarina
+progress.expedition.SeaCavern=CavernaMarina: {0}/{1} pulsos restantes
+
+# GENERATED ─── SeaInfestedNest ────────────────────────────────────────
+items.OneBlock_Block_SeaInfestedNest.name=OneBlock NidoMarinoInfestado
+items.OneBlock_Crystal_SeaInfestedNest.name=Cristal NidoMarinoInfestado
+items.OneBlock_Crystal_SeaInfestedNest.description=Consumir para iniciar una expedición NidoMarinoInfestado.\n28 pulsos.
+expeditions.SeaInfestedNest.name=NidoMarinoInfestado
+announcements.expedition_started.SeaInfestedNest=Expedición NidoMarinoInfestado iniciada.
+announcements.expedition_completed.SeaInfestedNest=Expedición NidoMarinoInfestado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SeaInfestedNest=Nueva expedición desbloqueada: NidoMarinoInfestado
+progress.expedition.SeaInfestedNest=NidoMarinoInfestado: {0}/{1} pulsos restantes
+
+# GENERATED ─── SeaMonster ─────────────────────────────────────────────
+items.OneBlock_Block_SeaMonster.name=OneBlock MonstruoMarino
+items.OneBlock_Crystal_SeaMonster.name=Cristal MonstruoMarino
+items.OneBlock_Crystal_SeaMonster.description=Consumir para iniciar la mazmorra MonstruoMarino.\n4 oleadas.
+expeditions.SeaMonster.name=MonstruoMarino
+announcements.dungeon_started.SeaMonster=Mazmorra MonstruoMarino iniciada.
+announcements.dungeon_completed.SeaMonster=Mazmorra MonstruoMarino completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── Forest ─────────────────────────────────────────────────
+items.OneBlock_Block_Forest.name=OneBlock Bosque
+items.OneBlock_Crystal_Forest.name=Cristal Bosque
+items.OneBlock_Crystal_Forest.description=Consumir para iniciar una expedición Bosque.\n25 pulsos.
+expeditions.Forest.name=Bosque
+announcements.expedition_started.Forest=Expedición Bosque iniciada.
+announcements.expedition_completed.Forest=Expedición Bosque completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Forest=Nueva expedición desbloqueada: Bosque
+progress.expedition.Forest=Bosque: {0}/{1} pulsos restantes
+
+# GENERATED ─── AridForest ─────────────────────────────────────────────
+items.OneBlock_Block_AridForest.name=OneBlock BosqueÁrido
+items.OneBlock_Crystal_AridForest.name=Cristal BosqueÁrido
+items.OneBlock_Crystal_AridForest.description=Consumir para iniciar una expedición BosqueÁrido.\n25 pulsos.
+expeditions.AridForest.name=BosqueÁrido
+announcements.expedition_started.AridForest=Expedición BosqueÁrido iniciada.
+announcements.expedition_completed.AridForest=Expedición BosqueÁrido completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.AridForest=Nueva expedición desbloqueada: BosqueÁrido
+progress.expedition.AridForest=BosqueÁrido: {0}/{1} pulsos restantes
+
+# GENERATED ─── Swamp ──────────────────────────────────────────────────
+items.OneBlock_Block_Swamp.name=OneBlock Pantano
+items.OneBlock_Crystal_Swamp.name=Cristal Pantano
+items.OneBlock_Crystal_Swamp.description=Consumir para iniciar una expedición Pantano.\n25 pulsos.
+expeditions.Swamp.name=Pantano
+announcements.expedition_started.Swamp=Expedición Pantano iniciada.
+announcements.expedition_completed.Swamp=Expedición Pantano completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Swamp=Nueva expedición desbloqueada: Pantano
+progress.expedition.Swamp=Pantano: {0}/{1} pulsos restantes
+
+# GENERATED ─── EnchantedForest ────────────────────────────────────────
+items.OneBlock_Block_EnchantedForest.name=OneBlock BosqueEncantado
+items.OneBlock_Crystal_EnchantedForest.name=Cristal BosqueEncantado
+items.OneBlock_Crystal_EnchantedForest.description=Consumir para iniciar una expedición BosqueEncantado.\n25 pulsos.
+expeditions.EnchantedForest.name=BosqueEncantado
+announcements.expedition_started.EnchantedForest=Expedición BosqueEncantado iniciada.
+announcements.expedition_completed.EnchantedForest=Expedición BosqueEncantado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.EnchantedForest=Nueva expedición desbloqueada: BosqueEncantado
+progress.expedition.EnchantedForest=BosqueEncantado: {0}/{1} pulsos restantes
+
+# GENERATED ─── FairyPond ──────────────────────────────────────────────
+items.OneBlock_Block_FairyPond.name=OneBlock EstanqueHada
+items.OneBlock_Crystal_FairyPond.name=Cristal EstanqueHada
+items.OneBlock_Crystal_FairyPond.description=Consumir para iniciar una expedición EstanqueHada.\n25 pulsos.
+expeditions.FairyPond.name=EstanqueHada
+announcements.expedition_started.FairyPond=Expedición EstanqueHada iniciada.
+announcements.expedition_completed.FairyPond=Expedición EstanqueHada completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FairyPond=Nueva expedición desbloqueada: EstanqueHada
+progress.expedition.FairyPond=EstanqueHada: {0}/{1} pulsos restantes
+
+# GENERATED ─── DeepForest ─────────────────────────────────────────────
+items.OneBlock_Block_DeepForest.name=OneBlock BosqueProfundo
+items.OneBlock_Crystal_DeepForest.name=Cristal BosqueProfundo
+items.OneBlock_Crystal_DeepForest.description=Consumir para iniciar una expedición BosqueProfundo.\n25 pulsos.
+expeditions.DeepForest.name=BosqueProfundo
+announcements.expedition_started.DeepForest=Expedición BosqueProfundo iniciada.
+announcements.expedition_completed.DeepForest=Expedición BosqueProfundo completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.DeepForest=Nueva expedición desbloqueada: BosqueProfundo
+progress.expedition.DeepForest=BosqueProfundo: {0}/{1} pulsos restantes
+
+# GENERATED ─── DarkForest ─────────────────────────────────────────────
+items.OneBlock_Block_DarkForest.name=OneBlock BosqueOscuro
+items.OneBlock_Crystal_DarkForest.name=Cristal BosqueOscuro
+items.OneBlock_Crystal_DarkForest.description=Consumir para iniciar una expedición BosqueOscuro.\n25 pulsos.
+expeditions.DarkForest.name=BosqueOscuro
+announcements.expedition_started.DarkForest=Expedición BosqueOscuro iniciada.
+announcements.expedition_completed.DarkForest=Expedición BosqueOscuro completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.DarkForest=Nueva expedición desbloqueada: BosqueOscuro
+progress.expedition.DarkForest=BosqueOscuro: {0}/{1} pulsos restantes
+
+# GENERATED ─── BurnedForest ───────────────────────────────────────────
+items.OneBlock_Block_BurnedForest.name=OneBlock BosqueQuemado
+items.OneBlock_Crystal_BurnedForest.name=Cristal BosqueQuemado
+items.OneBlock_Crystal_BurnedForest.description=Consumir para iniciar una expedición BosqueQuemado.\n25 pulsos.
+expeditions.BurnedForest.name=BosqueQuemado
+announcements.expedition_started.BurnedForest=Expedición BosqueQuemado iniciada.
+announcements.expedition_completed.BurnedForest=Expedición BosqueQuemado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.BurnedForest=Nueva expedición desbloqueada: BosqueQuemado
+progress.expedition.BurnedForest=BosqueQuemado: {0}/{1} pulsos restantes
+
+# GENERATED ─── CursedForest ───────────────────────────────────────────
+items.OneBlock_Block_CursedForest.name=OneBlock BosqueMaldito
+items.OneBlock_Crystal_CursedForest.name=Cristal BosqueMaldito
+items.OneBlock_Crystal_CursedForest.description=Consumir para iniciar una expedición BosqueMaldito.\n25 pulsos.
+expeditions.CursedForest.name=BosqueMaldito
+announcements.expedition_started.CursedForest=Expedición BosqueMaldito iniciada.
+announcements.expedition_completed.CursedForest=Expedición BosqueMaldito completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.CursedForest=Nueva expedición desbloqueada: BosqueMaldito
+progress.expedition.CursedForest=BosqueMaldito: {0}/{1} pulsos restantes
+
+# GENERATED ─── Graveyard ──────────────────────────────────────────────
+items.OneBlock_Block_Graveyard.name=OneBlock Cementerio
+items.OneBlock_Crystal_Graveyard.name=Cristal Cementerio
+items.OneBlock_Crystal_Graveyard.description=Consumir para iniciar una expedición Cementerio.\n25 pulsos.
+expeditions.Graveyard.name=Cementerio
+announcements.expedition_started.Graveyard=Expedición Cementerio iniciada.
+announcements.expedition_completed.Graveyard=Expedición Cementerio completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Graveyard=Nueva expedición desbloqueada: Cementerio
+progress.expedition.Graveyard=Cementerio: {0}/{1} pulsos restantes
+
+# GENERATED ─── UndeadTemple ───────────────────────────────────────────
+items.OneBlock_Block_UndeadTemple.name=OneBlock TemploMuertosVivos
+items.OneBlock_Crystal_UndeadTemple.name=Cristal TemploMuertosVivos
+items.OneBlock_Crystal_UndeadTemple.description=Consumir para iniciar la mazmorra TemploMuertosVivos.\n4 oleadas.
+expeditions.UndeadTemple.name=TemploMuertosVivos
+announcements.dungeon_started.UndeadTemple=Mazmorra TemploMuertosVivos iniciada.
+announcements.dungeon_completed.UndeadTemple=Mazmorra TemploMuertosVivos completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── VoidPortal ─────────────────────────────────────────────
+items.OneBlock_Block_VoidPortal.name=OneBlock PortalVacío
+items.OneBlock_Crystal_VoidPortal.name=Cristal PortalVacío
+items.OneBlock_Crystal_VoidPortal.description=Consumir para iniciar una expedición PortalVacío.\n25 pulsos.
+expeditions.VoidPortal.name=PortalVacío
+announcements.expedition_started.VoidPortal=Expedición PortalVacío iniciada.
+announcements.expedition_completed.VoidPortal=Expedición PortalVacío completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.VoidPortal=Nueva expedición desbloqueada: PortalVacío
+progress.expedition.VoidPortal=PortalVacío: {0}/{1} pulsos restantes
+
+# GENERATED ─── VoidTemple ─────────────────────────────────────────────
+items.OneBlock_Block_VoidTemple.name=OneBlock TemploVacío
+items.OneBlock_Crystal_VoidTemple.name=Cristal TemploVacío
+items.OneBlock_Crystal_VoidTemple.description=Consumir para iniciar la mazmorra TemploVacío.\n4 oleadas.
+expeditions.VoidTemple.name=TemploVacío
+announcements.dungeon_started.VoidTemple=Mazmorra TemploVacío iniciada.
+announcements.dungeon_completed.VoidTemple=Mazmorra TemploVacío completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── OutlanderForest ────────────────────────────────────────
+items.OneBlock_Block_OutlanderForest.name=OneBlock BosqueForastero
+items.OneBlock_Crystal_OutlanderForest.name=Cristal BosqueForastero
+items.OneBlock_Crystal_OutlanderForest.description=Consumir para iniciar una expedición BosqueForastero.\n25 pulsos.
+expeditions.OutlanderForest.name=BosqueForastero
+announcements.expedition_started.OutlanderForest=Expedición BosqueForastero iniciada.
+announcements.expedition_completed.OutlanderForest=Expedición BosqueForastero completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.OutlanderForest=Nueva expedición desbloqueada: BosqueForastero
+progress.expedition.OutlanderForest=BosqueForastero: {0}/{1} pulsos restantes
+
+# GENERATED ─── OutlanderPlain ─────────────────────────────────────────
+items.OneBlock_Block_OutlanderPlain.name=OneBlock LlanuraForastera
+items.OneBlock_Crystal_OutlanderPlain.name=Cristal LlanuraForastera
+items.OneBlock_Crystal_OutlanderPlain.description=Consumir para iniciar una expedición LlanuraForastera.\n25 pulsos.
+expeditions.OutlanderPlain.name=LlanuraForastera
+announcements.expedition_started.OutlanderPlain=Expedición LlanuraForastera iniciada.
+announcements.expedition_completed.OutlanderPlain=Expedición LlanuraForastera completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.OutlanderPlain=Nueva expedición desbloqueada: LlanuraForastera
+progress.expedition.OutlanderPlain=LlanuraForastera: {0}/{1} pulsos restantes
+
+# GENERATED ─── OutlanderGank ──────────────────────────────────────────
+items.OneBlock_Block_OutlanderGank.name=OneBlock EmboscadaForastera
+items.OneBlock_Crystal_OutlanderGank.name=Cristal EmboscadaForastera
+items.OneBlock_Crystal_OutlanderGank.description=Consumir para iniciar la mazmorra EmboscadaForastera.\n4 oleadas.
+expeditions.OutlanderGank.name=EmboscadaForastera
+announcements.dungeon_started.OutlanderGank=Mazmorra EmboscadaForastera iniciada.
+announcements.dungeon_completed.OutlanderGank=Mazmorra EmboscadaForastera completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── OutlanderCity ──────────────────────────────────────────
+items.OneBlock_Block_OutlanderCity.name=OneBlock CiudadForastera
+items.OneBlock_Crystal_OutlanderCity.name=Cristal CiudadForastera
+items.OneBlock_Crystal_OutlanderCity.description=Consumir para iniciar la mazmorra CiudadForastera.\n5 oleadas.
+expeditions.OutlanderCity.name=CiudadForastera
+announcements.dungeon_started.OutlanderCity=Mazmorra CiudadForastera iniciada.
+announcements.dungeon_completed.OutlanderCity=Mazmorra CiudadForastera completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── Tundra ─────────────────────────────────────────────────
+items.OneBlock_Block_Tundra.name=OneBlock Tundra
+items.OneBlock_Crystal_Tundra.name=Cristal Tundra
+items.OneBlock_Crystal_Tundra.description=Consumir para iniciar una expedición Tundra.\n25 pulsos.
+expeditions.Tundra.name=Tundra
+announcements.expedition_started.Tundra=Expedición Tundra iniciada.
+announcements.expedition_completed.Tundra=Expedición Tundra completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Tundra=Nueva expedición desbloqueada: Tundra
+progress.expedition.Tundra=Tundra: {0}/{1} pulsos restantes
+
+# GENERATED ─── FrozenForest ───────────────────────────────────────────
+items.OneBlock_Block_FrozenForest.name=OneBlock BosqueHelado
+items.OneBlock_Crystal_FrozenForest.name=Cristal BosqueHelado
+items.OneBlock_Crystal_FrozenForest.description=Consumir para iniciar una expedición BosqueHelado.\n25 pulsos.
+expeditions.FrozenForest.name=BosqueHelado
+announcements.expedition_started.FrozenForest=Expedición BosqueHelado iniciada.
+announcements.expedition_completed.FrozenForest=Expedición BosqueHelado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FrozenForest=Nueva expedición desbloqueada: BosqueHelado
+progress.expedition.FrozenForest=BosqueHelado: {0}/{1} pulsos restantes
+
+# GENERATED ─── IceLand ────────────────────────────────────────────────
+items.OneBlock_Block_IceLand.name=OneBlock TierraHielo
+items.OneBlock_Crystal_IceLand.name=Cristal TierraHielo
+items.OneBlock_Crystal_IceLand.description=Consumir para iniciar una expedición TierraHielo.\n25 pulsos.
+expeditions.IceLand.name=TierraHielo
+announcements.expedition_started.IceLand=Expedición TierraHielo iniciada.
+announcements.expedition_completed.IceLand=Expedición TierraHielo completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.IceLand=Nueva expedición desbloqueada: TierraHielo
+progress.expedition.IceLand=TierraHielo: {0}/{1} pulsos restantes
+
+# GENERATED ─── IcyCavern ──────────────────────────────────────────────
+items.OneBlock_Block_IcyCavern.name=OneBlock CavernaGélida
+items.OneBlock_Crystal_IcyCavern.name=Cristal CavernaGélida
+items.OneBlock_Crystal_IcyCavern.description=Consumir para iniciar una expedición CavernaGélida.\n28 pulsos.
+expeditions.IcyCavern.name=CavernaGélida
+announcements.expedition_started.IcyCavern=Expedición CavernaGélida iniciada.
+announcements.expedition_completed.IcyCavern=Expedición CavernaGélida completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.IcyCavern=Nueva expedición desbloqueada: CavernaGélida
+progress.expedition.IcyCavern=CavernaGélida: {0}/{1} pulsos restantes
+
+# GENERATED ─── YetiCavern ─────────────────────────────────────────────
+items.OneBlock_Block_YetiCavern.name=OneBlock CavernaYeti
+items.OneBlock_Crystal_YetiCavern.name=Cristal CavernaYeti
+items.OneBlock_Crystal_YetiCavern.description=Consumir para iniciar una expedición CavernaYeti.\n28 pulsos.
+expeditions.YetiCavern.name=CavernaYeti
+announcements.expedition_started.YetiCavern=Expedición CavernaYeti iniciada.
+announcements.expedition_completed.YetiCavern=Expedición CavernaYeti completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.YetiCavern=Nueva expedición desbloqueada: CavernaYeti
+progress.expedition.YetiCavern=CavernaYeti: {0}/{1} pulsos restantes
+
+# GENERATED ─── IceTemple ──────────────────────────────────────────────
+items.OneBlock_Block_IceTemple.name=OneBlock TemploHielo
+items.OneBlock_Crystal_IceTemple.name=Cristal TemploHielo
+items.OneBlock_Crystal_IceTemple.description=Consumir para iniciar la mazmorra TemploHielo.\n4 oleadas.
+expeditions.IceTemple.name=TemploHielo
+announcements.dungeon_started.IceTemple=Mazmorra TemploHielo iniciada.
+announcements.dungeon_completed.IceTemple=Mazmorra TemploHielo completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── IcyForest ──────────────────────────────────────────────
+items.OneBlock_Block_IcyForest.name=OneBlock BosqueGélido
+items.OneBlock_Crystal_IcyForest.name=Cristal BosqueGélido
+items.OneBlock_Crystal_IcyForest.description=Consumir para iniciar una expedición BosqueGélido.\n25 pulsos.
+expeditions.IcyForest.name=BosqueGélido
+announcements.expedition_started.IcyForest=Expedición BosqueGélido iniciada.
+announcements.expedition_completed.IcyForest=Expedición BosqueGélido completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.IcyForest=Nueva expedición desbloqueada: BosqueGélido
+progress.expedition.IcyForest=BosqueGélido: {0}/{1} pulsos restantes
+
+# GENERATED ─── FireLand ───────────────────────────────────────────────
+items.OneBlock_Block_FireLand.name=OneBlock TierraFuego
+items.OneBlock_Crystal_FireLand.name=Cristal TierraFuego
+items.OneBlock_Crystal_FireLand.description=Consumir para iniciar una expedición TierraFuego.\n25 pulsos.
+expeditions.FireLand.name=TierraFuego
+announcements.expedition_started.FireLand=Expedición TierraFuego iniciada.
+announcements.expedition_completed.FireLand=Expedición TierraFuego completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FireLand=Nueva expedición desbloqueada: TierraFuego
+progress.expedition.FireLand=TierraFuego: {0}/{1} pulsos restantes
+
+# GENERATED ─── Volcano ────────────────────────────────────────────────
+items.OneBlock_Block_Volcano.name=OneBlock Volcán
+items.OneBlock_Crystal_Volcano.name=Cristal Volcán
+items.OneBlock_Crystal_Volcano.description=Consumir para iniciar la mazmorra Volcán.\n4 oleadas.
+expeditions.Volcano.name=Volcán
+announcements.dungeon_started.Volcano=Mazmorra Volcán iniciada.
+announcements.dungeon_completed.Volcano=Mazmorra Volcán completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── FieryGraveyard ─────────────────────────────────────────
+items.OneBlock_Block_FieryGraveyard.name=OneBlock CementerioÍgneo
+items.OneBlock_Crystal_FieryGraveyard.name=Cristal CementerioÍgneo
+items.OneBlock_Crystal_FieryGraveyard.description=Consumir para iniciar una expedición CementerioÍgneo.\n25 pulsos.
+expeditions.FieryGraveyard.name=CementerioÍgneo
+announcements.expedition_started.FieryGraveyard=Expedición CementerioÍgneo iniciada.
+announcements.expedition_completed.FieryGraveyard=Expedición CementerioÍgneo completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FieryGraveyard=Nueva expedición desbloqueada: CementerioÍgneo
+progress.expedition.FieryGraveyard=CementerioÍgneo: {0}/{1} pulsos restantes
+
+# GENERATED ─── InfernalGate ───────────────────────────────────────────
+items.OneBlock_Block_InfernalGate.name=OneBlock PuertaInfernal
+items.OneBlock_Crystal_InfernalGate.name=Cristal PuertaInfernal
+items.OneBlock_Crystal_InfernalGate.description=Consumir para iniciar una expedición PuertaInfernal.\n25 pulsos.
+expeditions.InfernalGate.name=PuertaInfernal
+announcements.expedition_started.InfernalGate=Expedición PuertaInfernal iniciada.
+announcements.expedition_completed.InfernalGate=Expedición PuertaInfernal completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.InfernalGate=Nueva expedición desbloqueada: PuertaInfernal
+progress.expedition.InfernalGate=PuertaInfernal: {0}/{1} pulsos restantes
+
+# GENERATED ─── InfernalPlain ──────────────────────────────────────────
+items.OneBlock_Block_InfernalPlain.name=OneBlock LlanuraInfernal
+items.OneBlock_Crystal_InfernalPlain.name=Cristal LlanuraInfernal
+items.OneBlock_Crystal_InfernalPlain.description=Consumir para iniciar una expedición LlanuraInfernal.\n25 pulsos.
+expeditions.InfernalPlain.name=LlanuraInfernal
+announcements.expedition_started.InfernalPlain=Expedición LlanuraInfernal iniciada.
+announcements.expedition_completed.InfernalPlain=Expedición LlanuraInfernal completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.InfernalPlain=Nueva expedición desbloqueada: LlanuraInfernal
+progress.expedition.InfernalPlain=LlanuraInfernal: {0}/{1} pulsos restantes
+
+# GENERATED ─── InfernalSwamp ──────────────────────────────────────────
+items.OneBlock_Block_InfernalSwamp.name=OneBlock PantanoInfernal
+items.OneBlock_Crystal_InfernalSwamp.name=Cristal PantanoInfernal
+items.OneBlock_Crystal_InfernalSwamp.description=Consumir para iniciar una expedición PantanoInfernal.\n25 pulsos.
+expeditions.InfernalSwamp.name=PantanoInfernal
+announcements.expedition_started.InfernalSwamp=Expedición PantanoInfernal iniciada.
+announcements.expedition_completed.InfernalSwamp=Expedición PantanoInfernal completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.InfernalSwamp=Nueva expedición desbloqueada: PantanoInfernal
+progress.expedition.InfernalSwamp=PantanoInfernal: {0}/{1} pulsos restantes
+
+# GENERATED ─── FireGemCave ────────────────────────────────────────────
+items.OneBlock_Block_FireGemCave.name=OneBlock CuevaGemasFuego
+items.OneBlock_Crystal_FireGemCave.name=Cristal CuevaGemasFuego
+items.OneBlock_Crystal_FireGemCave.description=Consumir para iniciar una expedición CuevaGemasFuego.\n28 pulsos.
+expeditions.FireGemCave.name=CuevaGemasFuego
+announcements.expedition_started.FireGemCave=Expedición CuevaGemasFuego iniciada.
+announcements.expedition_completed.FireGemCave=Expedición CuevaGemasFuego completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FireGemCave=Nueva expedición desbloqueada: CuevaGemasFuego
+progress.expedition.FireGemCave=CuevaGemasFuego: {0}/{1} pulsos restantes
+
+# GENERATED ─── DesertTempleEntrance ───────────────────────────────────
+items.OneBlock_Block_DesertTempleEntrance.name=OneBlock EntradaTemploDesierto
+items.OneBlock_Crystal_DesertTempleEntrance.name=Cristal EntradaTemploDesierto
+items.OneBlock_Crystal_DesertTempleEntrance.description=Consumir para iniciar una expedición EntradaTemploDesierto.\n25 pulsos.
+expeditions.DesertTempleEntrance.name=EntradaTemploDesierto
+announcements.expedition_started.DesertTempleEntrance=Expedición EntradaTemploDesierto iniciada.
+announcements.expedition_completed.DesertTempleEntrance=Expedición EntradaTemploDesierto completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.DesertTempleEntrance=Nueva expedición desbloqueada: EntradaTemploDesierto
+progress.expedition.DesertTempleEntrance=EntradaTemploDesierto: {0}/{1} pulsos restantes
+
+# GENERATED ─── DeeperDesertTemple ─────────────────────────────────────
+items.OneBlock_Block_DeeperDesertTemple.name=OneBlock TemploDesiertoProfundo
+items.OneBlock_Crystal_DeeperDesertTemple.name=Cristal TemploDesiertoProfundo
+items.OneBlock_Crystal_DeeperDesertTemple.description=Consumir para iniciar una expedición TemploDesiertoProfundo.\n25 pulsos.
+expeditions.DeeperDesertTemple.name=TemploDesiertoProfundo
+announcements.expedition_started.DeeperDesertTemple=Expedición TemploDesiertoProfundo iniciada.
+announcements.expedition_completed.DeeperDesertTemple=Expedición TemploDesiertoProfundo completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.DeeperDesertTemple=Nueva expedición desbloqueada: TemploDesiertoProfundo
+progress.expedition.DeeperDesertTemple=TemploDesiertoProfundo: {0}/{1} pulsos restantes
+
+# GENERATED ─── DesertTemple ───────────────────────────────────────────
+items.OneBlock_Block_DesertTemple.name=OneBlock TemploDesierto
+items.OneBlock_Crystal_DesertTemple.name=Cristal TemploDesierto
+items.OneBlock_Crystal_DesertTemple.description=Consumir para iniciar la mazmorra TemploDesierto.\n4 oleadas.
+expeditions.DesertTemple.name=TemploDesierto
+announcements.dungeon_started.DesertTemple=Mazmorra TemploDesierto iniciada.
+announcements.dungeon_completed.DesertTemple=Mazmorra TemploDesierto completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── PharaohRoom ────────────────────────────────────────────
+items.OneBlock_Block_PharaohRoom.name=OneBlock SalaFaraón
+items.OneBlock_Crystal_PharaohRoom.name=Cristal SalaFaraón
+items.OneBlock_Crystal_PharaohRoom.description=Consumir para iniciar una expedición SalaFaraón.\n25 pulsos.
+expeditions.PharaohRoom.name=SalaFaraón
+announcements.expedition_started.PharaohRoom=Expedición SalaFaraón iniciada.
+announcements.expedition_completed.PharaohRoom=Expedición SalaFaraón completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.PharaohRoom=Nueva expedición desbloqueada: SalaFaraón
+progress.expedition.PharaohRoom=SalaFaraón: {0}/{1} pulsos restantes
+
+# GENERATED ─── InnerDesert ────────────────────────────────────────────
+items.OneBlock_Block_InnerDesert.name=OneBlock DesiertoInterior
+items.OneBlock_Crystal_InnerDesert.name=Cristal DesiertoInterior
+items.OneBlock_Crystal_InnerDesert.description=Consumir para iniciar una expedición DesiertoInterior.\n25 pulsos.
+expeditions.InnerDesert.name=DesiertoInterior
+announcements.expedition_started.InnerDesert=Expedición DesiertoInterior iniciada.
+announcements.expedition_completed.InnerDesert=Expedición DesiertoInterior completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.InnerDesert=Nueva expedición desbloqueada: DesiertoInterior
+progress.expedition.InnerDesert=DesiertoInterior: {0}/{1} pulsos restantes
+
+# GENERATED ─── MuddyDesert ────────────────────────────────────────────
+items.OneBlock_Block_MuddyDesert.name=OneBlock DesiertoLodoso
+items.OneBlock_Crystal_MuddyDesert.name=Cristal DesiertoLodoso
+items.OneBlock_Crystal_MuddyDesert.description=Consumir para iniciar una expedición DesiertoLodoso.\n25 pulsos.
+expeditions.MuddyDesert.name=DesiertoLodoso
+announcements.expedition_started.MuddyDesert=Expedición DesiertoLodoso iniciada.
+announcements.expedition_completed.MuddyDesert=Expedición DesiertoLodoso completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.MuddyDesert=Nueva expedición desbloqueada: DesiertoLodoso
+progress.expedition.MuddyDesert=DesiertoLodoso: {0}/{1} pulsos restantes
+
+# GENERATED ─── InsectInvasion ─────────────────────────────────────────
+items.OneBlock_Block_InsectInvasion.name=OneBlock InvasiónInsectos
+items.OneBlock_Crystal_InsectInvasion.name=Cristal InvasiónInsectos
+items.OneBlock_Crystal_InsectInvasion.description=Consumir para iniciar la mazmorra InvasiónInsectos.\n3 oleadas.
+expeditions.InsectInvasion.name=InvasiónInsectos
+announcements.dungeon_started.InsectInvasion=Mazmorra InvasiónInsectos iniciada.
+announcements.dungeon_completed.InsectInvasion=Mazmorra InvasiónInsectos completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── InfestedDesert ─────────────────────────────────────────
+items.OneBlock_Block_InfestedDesert.name=OneBlock DesiertoInfestado
+items.OneBlock_Crystal_InfestedDesert.name=Cristal DesiertoInfestado
+items.OneBlock_Crystal_InfestedDesert.description=Consumir para iniciar una expedición DesiertoInfestado.\n25 pulsos.
+expeditions.InfestedDesert.name=DesiertoInfestado
+announcements.expedition_started.InfestedDesert=Expedición DesiertoInfestado iniciada.
+announcements.expedition_completed.InfestedDesert=Expedición DesiertoInfestado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.InfestedDesert=Nueva expedición desbloqueada: DesiertoInfestado
+progress.expedition.InfestedDesert=DesiertoInfestado: {0}/{1} pulsos restantes
+
+# GENERATED ─── InsectNest ─────────────────────────────────────────────
+items.OneBlock_Block_InsectNest.name=OneBlock NidoInsectos
+items.OneBlock_Crystal_InsectNest.name=Cristal NidoInsectos
+items.OneBlock_Crystal_InsectNest.description=Consumir para iniciar la mazmorra NidoInsectos.\n4 oleadas.
+expeditions.InsectNest.name=NidoInsectos
+announcements.dungeon_started.InsectNest=Mazmorra NidoInsectos iniciada.
+announcements.dungeon_completed.InsectNest=Mazmorra NidoInsectos completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── InsideInsectNest ───────────────────────────────────────
+items.OneBlock_Block_InsideInsectNest.name=OneBlock InteriorNidoInsectos
+items.OneBlock_Crystal_InsideInsectNest.name=Cristal InteriorNidoInsectos
+items.OneBlock_Crystal_InsideInsectNest.description=Consumir para iniciar una expedición InteriorNidoInsectos.\n25 pulsos.
+expeditions.InsideInsectNest.name=InteriorNidoInsectos
+announcements.expedition_started.InsideInsectNest=Expedición InteriorNidoInsectos iniciada.
+announcements.expedition_completed.InsideInsectNest=Expedición InteriorNidoInsectos completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.InsideInsectNest=Nueva expedición desbloqueada: InteriorNidoInsectos
+progress.expedition.InsideInsectNest=InteriorNidoInsectos: {0}/{1} pulsos restantes
+
+# GENERATED ─── InsectCore ─────────────────────────────────────────────
+items.OneBlock_Block_InsectCore.name=OneBlock NúcleoInsectos
+items.OneBlock_Crystal_InsectCore.name=Cristal NúcleoInsectos
+items.OneBlock_Crystal_InsectCore.description=Consumir para iniciar la mazmorra NúcleoInsectos.\n4 oleadas.
+expeditions.InsectCore.name=NúcleoInsectos
+announcements.dungeon_started.InsectCore=Mazmorra NúcleoInsectos iniciada.
+announcements.dungeon_completed.InsectCore=Mazmorra NúcleoInsectos completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── Quarry ─────────────────────────────────────────────────
+items.OneBlock_Block_Quarry.name=OneBlock Cantera
+items.OneBlock_Crystal_Quarry.name=Cristal Cantera
+items.OneBlock_Crystal_Quarry.description=Consumir para iniciar una expedición Cantera.\n50 pulsos.
+expeditions.Quarry.name=Cantera
+announcements.expedition_started.Quarry=Expedición Cantera iniciada.
+announcements.expedition_completed.Quarry=Expedición Cantera completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Quarry=Nueva expedición desbloqueada: Cantera
+progress.expedition.Quarry=Cantera: {0}/{1} pulsos restantes
+
+# GENERATED ─── Hallow ─────────────────────────────────────────────────
+items.OneBlock_Block_Hallow.name=OneBlock Sagrado
+items.OneBlock_Crystal_Hallow.name=Cristal Sagrado
+items.OneBlock_Crystal_Hallow.description=Consumir para iniciar una expedición Sagrado.\n30 pulsos.
+expeditions.Hallow.name=Sagrado
+announcements.expedition_started.Hallow=Expedición Sagrado iniciada.
+announcements.expedition_completed.Hallow=Expedición Sagrado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Hallow=Nueva expedición desbloqueada: Sagrado
+progress.expedition.Hallow=Sagrado: {0}/{1} pulsos restantes
+
+# GENERATED ─── CowHallow ──────────────────────────────────────────────
+items.OneBlock_Block_CowHallow.name=OneBlock SagradoVacas
+items.OneBlock_Crystal_CowHallow.name=Cristal SagradoVacas
+items.OneBlock_Crystal_CowHallow.description=Consumir para iniciar una expedición SagradoVacas.\n35 pulsos.
+expeditions.CowHallow.name=SagradoVacas
+announcements.expedition_started.CowHallow=Expedición SagradoVacas iniciada.
+announcements.expedition_completed.CowHallow=Expedición SagradoVacas completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.CowHallow=Nueva expedición desbloqueada: SagradoVacas
+progress.expedition.CowHallow=SagradoVacas: {0}/{1} pulsos restantes
+
+# GENERATED ─── HorseHallow ────────────────────────────────────────────
+items.OneBlock_Block_HorseHallow.name=OneBlock SagradoCaballos
+items.OneBlock_Crystal_HorseHallow.name=Cristal SagradoCaballos
+items.OneBlock_Crystal_HorseHallow.description=Consumir para iniciar una expedición SagradoCaballos.\n35 pulsos.
+expeditions.HorseHallow.name=SagradoCaballos
+announcements.expedition_started.HorseHallow=Expedición SagradoCaballos iniciada.
+announcements.expedition_completed.HorseHallow=Expedición SagradoCaballos completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.HorseHallow=Nueva expedición desbloqueada: SagradoCaballos
+progress.expedition.HorseHallow=SagradoCaballos: {0}/{1} pulsos restantes
+
+# GENERATED ─── MysteriousCavern ───────────────────────────────────────
+items.OneBlock_Block_MysteriousCavern.name=OneBlock CavernaMisteriosa
+items.OneBlock_Crystal_MysteriousCavern.name=Cristal CavernaMisteriosa
+items.OneBlock_Crystal_MysteriousCavern.description=Consumir para iniciar una expedición CavernaMisteriosa.\n30 pulsos.
+expeditions.MysteriousCavern.name=CavernaMisteriosa
+announcements.expedition_started.MysteriousCavern=Expedición CavernaMisteriosa iniciada.
+announcements.expedition_completed.MysteriousCavern=Expedición CavernaMisteriosa completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.MysteriousCavern=Nueva expedición desbloqueada: CavernaMisteriosa
+progress.expedition.MysteriousCavern=CavernaMisteriosa: {0}/{1} pulsos restantes
+
+# GENERATED ─── MysticCave ─────────────────────────────────────────────
+items.OneBlock_Block_MysticCave.name=OneBlock CuevaMística
+items.OneBlock_Crystal_MysticCave.name=Cristal CuevaMística
+items.OneBlock_Crystal_MysticCave.description=Consumir para iniciar una expedición CuevaMística.\n30 pulsos.
+expeditions.MysticCave.name=CuevaMística
+announcements.expedition_started.MysticCave=Expedición CuevaMística iniciada.
+announcements.expedition_completed.MysticCave=Expedición CuevaMística completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.MysticCave=Nueva expedición desbloqueada: CuevaMística
+progress.expedition.MysticCave=CuevaMística: {0}/{1} pulsos restantes
+
+# GENERATED ─── LuxuriousCave ──────────────────────────────────────────
+items.OneBlock_Block_LuxuriousCave.name=OneBlock CuevaSuntuosa
+items.OneBlock_Crystal_LuxuriousCave.name=Cristal CuevaSuntuosa
+items.OneBlock_Crystal_LuxuriousCave.description=Consumir para iniciar una expedición CuevaSuntuosa.\n30 pulsos.
+expeditions.LuxuriousCave.name=CuevaSuntuosa
+announcements.expedition_started.LuxuriousCave=Expedición CuevaSuntuosa iniciada.
+announcements.expedition_completed.LuxuriousCave=Expedición CuevaSuntuosa completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.LuxuriousCave=Nueva expedición desbloqueada: CuevaSuntuosa
+progress.expedition.LuxuriousCave=CuevaSuntuosa: {0}/{1} pulsos restantes
+
+# GENERATED ─── JurassicCave ───────────────────────────────────────────
+items.OneBlock_Block_JurassicCave.name=OneBlock CuevaJurásica
+items.OneBlock_Crystal_JurassicCave.name=Cristal CuevaJurásica
+items.OneBlock_Crystal_JurassicCave.description=Consumir para iniciar una expedición CuevaJurásica.\n30 pulsos.
+expeditions.JurassicCave.name=CuevaJurásica
+announcements.expedition_started.JurassicCave=Expedición CuevaJurásica iniciada.
+announcements.expedition_completed.JurassicCave=Expedición CuevaJurásica completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.JurassicCave=Nueva expedición desbloqueada: CuevaJurásica
+progress.expedition.JurassicCave=CuevaJurásica: {0}/{1} pulsos restantes
+
+# GENERATED ─── DinoCrisis ─────────────────────────────────────────────
+items.OneBlock_Block_DinoCrisis.name=OneBlock CrisisDino
+items.OneBlock_Crystal_DinoCrisis.name=Cristal CrisisDino
+items.OneBlock_Crystal_DinoCrisis.description=Consumir para iniciar la mazmorra CrisisDino.\n6 oleadas.
+expeditions.DinoCrisis.name=CrisisDino
+announcements.dungeon_started.DinoCrisis=Mazmorra CrisisDino iniciada.
+announcements.dungeon_completed.DinoCrisis=Mazmorra CrisisDino completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── DryTrorkCamp ───────────────────────────────────────────
+items.OneBlock_Block_DryTrorkCamp.name=OneBlock CampamentoTrorkSeco
+items.OneBlock_Crystal_DryTrorkCamp.name=Cristal CampamentoTrorkSeco
+items.OneBlock_Crystal_DryTrorkCamp.description=Consumir para iniciar una expedición CampamentoTrorkSeco.\n25 pulsos.
+expeditions.DryTrorkCamp.name=CampamentoTrorkSeco
+announcements.expedition_started.DryTrorkCamp=Expedición CampamentoTrorkSeco iniciada.
+announcements.expedition_completed.DryTrorkCamp=Expedición CampamentoTrorkSeco completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.DryTrorkCamp=Nueva expedición desbloqueada: CampamentoTrorkSeco
+progress.expedition.DryTrorkCamp=CampamentoTrorkSeco: {0}/{1} pulsos restantes
+
+# GENERATED ─── TrorkHuntingGround ─────────────────────────────────────
+items.OneBlock_Block_TrorkHuntingGround.name=OneBlock ZonaCazaTrork
+items.OneBlock_Crystal_TrorkHuntingGround.name=Cristal ZonaCazaTrork
+items.OneBlock_Crystal_TrorkHuntingGround.description=Consumir para iniciar una expedición ZonaCazaTrork.\n25 pulsos.
+expeditions.TrorkHuntingGround.name=ZonaCazaTrork
+announcements.expedition_started.TrorkHuntingGround=Expedición ZonaCazaTrork iniciada.
+announcements.expedition_completed.TrorkHuntingGround=Expedición ZonaCazaTrork completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.TrorkHuntingGround=Nueva expedición desbloqueada: ZonaCazaTrork
+progress.expedition.TrorkHuntingGround=ZonaCazaTrork: {0}/{1} pulsos restantes
+
+# GENERATED ─── TrorkWarband ───────────────────────────────────────────
+items.OneBlock_Block_TrorkWarband.name=OneBlock BandaGuerraTrork
+items.OneBlock_Crystal_TrorkWarband.name=Cristal BandaGuerraTrork
+items.OneBlock_Crystal_TrorkWarband.description=Consumir para iniciar la mazmorra BandaGuerraTrork.\n4 oleadas.
+expeditions.TrorkWarband.name=BandaGuerraTrork
+announcements.dungeon_started.TrorkWarband=Mazmorra BandaGuerraTrork iniciada.
+announcements.dungeon_completed.TrorkWarband=Mazmorra BandaGuerraTrork completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── TrorkStrongholdApproach ────────────────────────────────
+items.OneBlock_Block_TrorkStrongholdApproach.name=OneBlock AccesoFortalezaTrork
+items.OneBlock_Crystal_TrorkStrongholdApproach.name=Cristal AccesoFortalezaTrork
+items.OneBlock_Crystal_TrorkStrongholdApproach.description=Consumir para iniciar una expedición AccesoFortalezaTrork.\n25 pulsos.
+expeditions.TrorkStrongholdApproach.name=AccesoFortalezaTrork
+announcements.expedition_started.TrorkStrongholdApproach=Expedición AccesoFortalezaTrork iniciada.
+announcements.expedition_completed.TrorkStrongholdApproach=Expedición AccesoFortalezaTrork completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.TrorkStrongholdApproach=Nueva expedición desbloqueada: AccesoFortalezaTrork
+progress.expedition.TrorkStrongholdApproach=AccesoFortalezaTrork: {0}/{1} pulsos restantes
+
+# GENERATED ─── TrorkElderGrove ────────────────────────────────────────
+items.OneBlock_Block_TrorkElderGrove.name=OneBlock ArboledaAncianoTrork
+items.OneBlock_Crystal_TrorkElderGrove.name=Cristal ArboledaAncianoTrork
+items.OneBlock_Crystal_TrorkElderGrove.description=Consumir para iniciar una expedición ArboledaAncianoTrork.\n25 pulsos.
+expeditions.TrorkElderGrove.name=ArboledaAncianoTrork
+announcements.expedition_started.TrorkElderGrove=Expedición ArboledaAncianoTrork iniciada.
+announcements.expedition_completed.TrorkElderGrove=Expedición ArboledaAncianoTrork completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.TrorkElderGrove=Nueva expedición desbloqueada: ArboledaAncianoTrork
+progress.expedition.TrorkElderGrove=ArboledaAncianoTrork: {0}/{1} pulsos restantes
+
+# GENERATED ─── TrorkChieftainCamp ─────────────────────────────────────
+items.OneBlock_Block_TrorkChieftainCamp.name=OneBlock CampamentoJefeTrork
+items.OneBlock_Crystal_TrorkChieftainCamp.name=Cristal CampamentoJefeTrork
+items.OneBlock_Crystal_TrorkChieftainCamp.description=Consumir para iniciar la mazmorra CampamentoJefeTrork.\n5 oleadas.
+expeditions.TrorkChieftainCamp.name=CampamentoJefeTrork
+announcements.dungeon_started.TrorkChieftainCamp=Mazmorra CampamentoJefeTrork iniciada.
+announcements.dungeon_completed.TrorkChieftainCamp=Mazmorra CampamentoJefeTrork completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── FrozenGraveyard ────────────────────────────────────────
+items.OneBlock_Block_FrozenGraveyard.name=OneBlock CementerioHelado
+items.OneBlock_Crystal_FrozenGraveyard.name=Cristal CementerioHelado
+items.OneBlock_Crystal_FrozenGraveyard.description=Consumir para iniciar una expedición CementerioHelado.\n25 pulsos.
+expeditions.FrozenGraveyard.name=CementerioHelado
+announcements.expedition_started.FrozenGraveyard=Expedición CementerioHelado iniciada.
+announcements.expedition_completed.FrozenGraveyard=Expedición CementerioHelado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.FrozenGraveyard=Nueva expedición desbloqueada: CementerioHelado
+progress.expedition.FrozenGraveyard=CementerioHelado: {0}/{1} pulsos restantes
+
+# GENERATED ─── IcyNecropolis ──────────────────────────────────────────
+items.OneBlock_Block_IcyNecropolis.name=OneBlock NecrópolisGélida
+items.OneBlock_Crystal_IcyNecropolis.name=Cristal NecrópolisGélida
+items.OneBlock_Crystal_IcyNecropolis.description=Consumir para iniciar una expedición NecrópolisGélida.\n25 pulsos.
+expeditions.IcyNecropolis.name=NecrópolisGélida
+announcements.expedition_started.IcyNecropolis=Expedición NecrópolisGélida iniciada.
+announcements.expedition_completed.IcyNecropolis=Expedición NecrópolisGélida completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.IcyNecropolis=Nueva expedición desbloqueada: NecrópolisGélida
+progress.expedition.IcyNecropolis=NecrópolisGélida: {0}/{1} pulsos restantes
+
+# GENERATED ─── FrostboneCrypt ─────────────────────────────────────────
+items.OneBlock_Block_FrostboneCrypt.name=OneBlock CriptaHuesoEscarcha
+items.OneBlock_Crystal_FrostboneCrypt.name=Cristal CriptaHuesoEscarcha
+items.OneBlock_Crystal_FrostboneCrypt.description=Consumir para iniciar la mazmorra CriptaHuesoEscarcha.\n5 oleadas.
+expeditions.FrostboneCrypt.name=CriptaHuesoEscarcha
+announcements.dungeon_started.FrostboneCrypt=Mazmorra CriptaHuesoEscarcha iniciada.
+announcements.dungeon_completed.FrostboneCrypt=Mazmorra CriptaHuesoEscarcha completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── BurntBattlefield ───────────────────────────────────────
+items.OneBlock_Block_BurntBattlefield.name=OneBlock CamposBatallaQuemado
+items.OneBlock_Crystal_BurntBattlefield.name=Cristal CamposBatallaQuemado
+items.OneBlock_Crystal_BurntBattlefield.description=Consumir para iniciar una expedición CamposBatallaQuemado.\n25 pulsos.
+expeditions.BurntBattlefield.name=CamposBatallaQuemado
+announcements.expedition_started.BurntBattlefield=Expedición CamposBatallaQuemado iniciada.
+announcements.expedition_completed.BurntBattlefield=Expedición CamposBatallaQuemado completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.BurntBattlefield=Nueva expedición desbloqueada: CamposBatallaQuemado
+progress.expedition.BurntBattlefield=CamposBatallaQuemado: {0}/{1} pulsos restantes
+
+# GENERATED ─── AshenCatacombs ─────────────────────────────────────────
+items.OneBlock_Block_AshenCatacombs.name=OneBlock CatacumbasCenizas
+items.OneBlock_Crystal_AshenCatacombs.name=Cristal CatacumbasCenizas
+items.OneBlock_Crystal_AshenCatacombs.description=Consumir para iniciar una expedición CatacumbasCenizas.\n25 pulsos.
+expeditions.AshenCatacombs.name=CatacumbasCenizas
+announcements.expedition_started.AshenCatacombs=Expedición CatacumbasCenizas iniciada.
+announcements.expedition_completed.AshenCatacombs=Expedición CatacumbasCenizas completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.AshenCatacombs=Nueva expedición desbloqueada: CatacumbasCenizas
+progress.expedition.AshenCatacombs=CatacumbasCenizas: {0}/{1} pulsos restantes
+
+# GENERATED ─── BurntSkeletonCitadel ───────────────────────────────────
+items.OneBlock_Block_BurntSkeletonCitadel.name=OneBlock CiudadelaEsqueletoQuemada
+items.OneBlock_Crystal_BurntSkeletonCitadel.name=Cristal CiudadelaEsqueletoQuemada
+items.OneBlock_Crystal_BurntSkeletonCitadel.description=Consumir para iniciar la mazmorra CiudadelaEsqueletoQuemada.\n5 oleadas.
+expeditions.BurntSkeletonCitadel.name=CiudadelaEsqueletoQuemada
+announcements.dungeon_started.BurntSkeletonCitadel=Mazmorra CiudadelaEsqueletoQuemada iniciada.
+announcements.dungeon_completed.BurntSkeletonCitadel=Mazmorra CiudadelaEsqueletoQuemada completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── JungleEdge ─────────────────────────────────────────────
+items.OneBlock_Block_JungleEdge.name=OneBlock BordeJungla
+items.OneBlock_Crystal_JungleEdge.name=Cristal BordeJungla
+items.OneBlock_Crystal_JungleEdge.description=Consumir para iniciar una expedición BordeJungla.\n25 pulsos.
+expeditions.JungleEdge.name=BordeJungla
+announcements.expedition_started.JungleEdge=Expedición BordeJungla iniciada.
+announcements.expedition_completed.JungleEdge=Expedición BordeJungla completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.JungleEdge=Nueva expedición desbloqueada: BordeJungla
+progress.expedition.JungleEdge=BordeJungla: {0}/{1} pulsos restantes
+
+# GENERATED ─── DryJunglePass ──────────────────────────────────────────
+items.OneBlock_Block_DryJunglePass.name=OneBlock PasoJunglaSeca
+items.OneBlock_Crystal_DryJunglePass.name=Cristal PasoJunglaSeca
+items.OneBlock_Crystal_DryJunglePass.description=Consumir para iniciar una expedición PasoJunglaSeca.\n25 pulsos.
+expeditions.DryJunglePass.name=PasoJunglaSeca
+announcements.expedition_started.DryJunglePass=Expedición PasoJunglaSeca iniciada.
+announcements.expedition_completed.DryJunglePass=Expedición PasoJunglaSeca completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.DryJunglePass=Nueva expedición desbloqueada: PasoJunglaSeca
+progress.expedition.DryJunglePass=PasoJunglaSeca: {0}/{1} pulsos restantes
+
+# GENERATED ─── OvergrownRuins ─────────────────────────────────────────
+items.OneBlock_Block_OvergrownRuins.name=OneBlock RuinasInvadidas
+items.OneBlock_Crystal_OvergrownRuins.name=Cristal RuinasInvadidas
+items.OneBlock_Crystal_OvergrownRuins.description=Consumir para iniciar una expedición RuinasInvadidas.\n25 pulsos.
+expeditions.OvergrownRuins.name=RuinasInvadidas
+announcements.expedition_started.OvergrownRuins=Expedición RuinasInvadidas iniciada.
+announcements.expedition_completed.OvergrownRuins=Expedición RuinasInvadidas completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.OvergrownRuins=Nueva expedición desbloqueada: RuinasInvadidas
+progress.expedition.OvergrownRuins=RuinasInvadidas: {0}/{1} pulsos restantes
+
+# GENERATED ─── SunkenJungleRuins ──────────────────────────────────────
+items.OneBlock_Block_SunkenJungleRuins.name=OneBlock RuinasJungleHundidas
+items.OneBlock_Crystal_SunkenJungleRuins.name=Cristal RuinasJungleHundidas
+items.OneBlock_Crystal_SunkenJungleRuins.description=Consumir para iniciar una expedición RuinasJungleHundidas.\n25 pulsos.
+expeditions.SunkenJungleRuins.name=RuinasJungleHundidas
+announcements.expedition_started.SunkenJungleRuins=Expedición RuinasJungleHundidas iniciada.
+announcements.expedition_completed.SunkenJungleRuins=Expedición RuinasJungleHundidas completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SunkenJungleRuins=Nueva expedición desbloqueada: RuinasJungleHundidas
+progress.expedition.SunkenJungleRuins=RuinasJungleHundidas: {0}/{1} pulsos restantes
+
+# GENERATED ─── LostNecropolis ─────────────────────────────────────────
+items.OneBlock_Block_LostNecropolis.name=OneBlock NecrópolisPerdida
+items.OneBlock_Crystal_LostNecropolis.name=Cristal NecrópolisPerdida
+items.OneBlock_Crystal_LostNecropolis.description=Consumir para iniciar una expedición NecrópolisPerdida.\n25 pulsos.
+expeditions.LostNecropolis.name=NecrópolisPerdida
+announcements.expedition_started.LostNecropolis=Expedición NecrópolisPerdida iniciada.
+announcements.expedition_completed.LostNecropolis=Expedición NecrópolisPerdida completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.LostNecropolis=Nueva expedición desbloqueada: NecrópolisPerdida
+progress.expedition.LostNecropolis=NecrópolisPerdida: {0}/{1} pulsos restantes
+
+# GENERATED ─── ShadowedJungleRoad ─────────────────────────────────────
+items.OneBlock_Block_ShadowedJungleRoad.name=OneBlock CaminoJunglaSombrío
+items.OneBlock_Crystal_ShadowedJungleRoad.name=Cristal CaminoJunglaSombrío
+items.OneBlock_Crystal_ShadowedJungleRoad.description=Consumir para iniciar una expedición CaminoJunglaSombrío.\n25 pulsos.
+expeditions.ShadowedJungleRoad.name=CaminoJunglaSombrío
+announcements.expedition_started.ShadowedJungleRoad=Expedición CaminoJunglaSombrío iniciada.
+announcements.expedition_completed.ShadowedJungleRoad=Expedición CaminoJunglaSombrío completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.ShadowedJungleRoad=Nueva expedición desbloqueada: CaminoJunglaSombrío
+progress.expedition.ShadowedJungleRoad=CaminoJunglaSombrío: {0}/{1} pulsos restantes
+
+# GENERATED ─── ArmoredDeadGrove ───────────────────────────────────────
+items.OneBlock_Block_ArmoredDeadGrove.name=OneBlock ArboledaMuertosAcorazados
+items.OneBlock_Crystal_ArmoredDeadGrove.name=Cristal ArboledaMuertosAcorazados
+items.OneBlock_Crystal_ArmoredDeadGrove.description=Consumir para iniciar una expedición ArboledaMuertosAcorazados.\n25 pulsos.
+expeditions.ArmoredDeadGrove.name=ArboledaMuertosAcorazados
+announcements.expedition_started.ArmoredDeadGrove=Expedición ArboledaMuertosAcorazados iniciada.
+announcements.expedition_completed.ArmoredDeadGrove=Expedición ArboledaMuertosAcorazados completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.ArmoredDeadGrove=Nueva expedición desbloqueada: ArboledaMuertosAcorazados
+progress.expedition.ArmoredDeadGrove=ArboledaMuertosAcorazados: {0}/{1} pulsos restantes
+
+# GENERATED ─── JungleCrypt ────────────────────────────────────────────
+items.OneBlock_Block_JungleCrypt.name=OneBlock CriptaJungla
+items.OneBlock_Crystal_JungleCrypt.name=Cristal CriptaJungla
+items.OneBlock_Crystal_JungleCrypt.description=Consumir para iniciar la mazmorra CriptaJungla.\n4 oleadas.
+expeditions.JungleCrypt.name=CriptaJungla
+announcements.dungeon_started.JungleCrypt=Mazmorra CriptaJungla iniciada.
+announcements.dungeon_completed.JungleCrypt=Mazmorra CriptaJungla completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── AncientUndeadSanctum ───────────────────────────────────
+items.OneBlock_Block_AncientUndeadSanctum.name=OneBlock SantuarioMuertosVivosAntiguo
+items.OneBlock_Crystal_AncientUndeadSanctum.name=Cristal SantuarioMuertosVivosAntiguo
+items.OneBlock_Crystal_AncientUndeadSanctum.description=Consumir para iniciar la mazmorra SantuarioMuertosVivosAntiguo.\n5 oleadas.
+expeditions.AncientUndeadSanctum.name=SantuarioMuertosVivosAntiguo
+announcements.dungeon_started.AncientUndeadSanctum=Mazmorra SantuarioMuertosVivosAntiguo iniciada.
+announcements.dungeon_completed.AncientUndeadSanctum=Mazmorra SantuarioMuertosVivosAntiguo completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── ShadowKnightCitadel ────────────────────────────────────
+items.OneBlock_Block_ShadowKnightCitadel.name=OneBlock CiudadelaCaballeroSombra
+items.OneBlock_Crystal_ShadowKnightCitadel.name=Cristal CiudadelaCaballeroSombra
+items.OneBlock_Crystal_ShadowKnightCitadel.description=Consumir para iniciar la mazmorra CiudadelaCaballeroSombra.\n5 oleadas.
+expeditions.ShadowKnightCitadel.name=CiudadelaCaballeroSombra
+announcements.dungeon_started.ShadowKnightCitadel=Mazmorra CiudadelaCaballeroSombra iniciada.
+announcements.dungeon_completed.ShadowKnightCitadel=Mazmorra CiudadelaCaballeroSombra completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── SpiritThreshold ────────────────────────────────────────
+items.OneBlock_Block_SpiritThreshold.name=OneBlock UmbralEspíritu
+items.OneBlock_Crystal_SpiritThreshold.name=Cristal UmbralEspíritu
+items.OneBlock_Crystal_SpiritThreshold.description=Consumir para iniciar una expedición UmbralEspíritu.\n25 pulsos.
+expeditions.SpiritThreshold.name=UmbralEspíritu
+announcements.expedition_started.SpiritThreshold=Expedición UmbralEspíritu iniciada.
+announcements.expedition_completed.SpiritThreshold=Expedición UmbralEspíritu completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.SpiritThreshold=Nueva expedición desbloqueada: UmbralEspíritu
+progress.expedition.SpiritThreshold=UmbralEspíritu: {0}/{1} pulsos restantes
+
+# GENERATED ─── ElementalConfluence ────────────────────────────────────
+items.OneBlock_Block_ElementalConfluence.name=OneBlock ConfluenciaElemental
+items.OneBlock_Crystal_ElementalConfluence.name=Cristal ConfluenciaElemental
+items.OneBlock_Crystal_ElementalConfluence.description=Consumir para iniciar una expedición ConfluenciaElemental.\n25 pulsos.
+expeditions.ElementalConfluence.name=ConfluenciaElemental
+announcements.expedition_started.ElementalConfluence=Expedición ConfluenciaElemental iniciada.
+announcements.expedition_completed.ElementalConfluence=Expedición ConfluenciaElemental completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.ElementalConfluence=Nueva expedición desbloqueada: ConfluenciaElemental
+progress.expedition.ElementalConfluence=ConfluenciaElemental: {0}/{1} pulsos restantes
+
+# GENERATED ─── SpiritRealmTrial ───────────────────────────────────────
+items.OneBlock_Block_SpiritRealmTrial.name=OneBlock PruebaRealmEspíritu
+items.OneBlock_Crystal_SpiritRealmTrial.name=Cristal PruebaRealmEspíritu
+items.OneBlock_Crystal_SpiritRealmTrial.description=Consumir para iniciar la mazmorra PruebaRealmEspíritu.\n8 oleadas.
+expeditions.SpiritRealmTrial.name=PruebaRealmEspíritu
+announcements.dungeon_started.SpiritRealmTrial=Mazmorra PruebaRealmEspíritu iniciada.
+announcements.dungeon_completed.SpiritRealmTrial=Mazmorra PruebaRealmEspíritu completada. El OneBlock ha vuelto al estado por defecto.
