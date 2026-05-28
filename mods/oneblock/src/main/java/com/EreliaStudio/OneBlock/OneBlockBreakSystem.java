@@ -57,6 +57,8 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (!isValidOneBlockBreak(player, event)) return;
 
+        event.setCancelled(true);
+
         EntityStore entityStore = store.getExternalData();
         if (entityStore == null) return;
 
