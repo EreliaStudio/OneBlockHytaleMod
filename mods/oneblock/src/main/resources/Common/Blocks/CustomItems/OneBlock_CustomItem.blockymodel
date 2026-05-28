@@ -2,67 +2,13 @@
   "lod": "auto",
   "nodes": [
     {
-      "id": "2",
+      "id": "1",
       "name": "R-Attachment",
       "children": [
         {
-          "id": "1",
+          "id": "0",
           "name": "CustomItem",
-          "children": [
-            {
-              "id": "0",
-              "name": "Front",
-              "children": [],
-              "position": {
-                "x": 0,
-                "y": 0,
-                "z": 0
-              },
-              "orientation": {
-                "x": 0,
-                "y": -0.707107,
-                "z": 0,
-                "w": 0.707107
-              },
-              "shape": {
-                "type": "quad",
-                "offset": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "stretch": {
-                  "x": 1,
-                  "y": 1,
-                  "z": 1
-                },
-                "settings": {
-                  "size": {
-                    "x": 22,
-                    "y": 32
-                  },
-                  "normal": "+Z"
-                },
-                "visible": true,
-                "doubleSided": true,
-                "shadingMode": "fullbright",
-                "unwrapMode": "custom",
-                "textureLayout": {
-                  "front": {
-                    "offset": {
-                      "x": 4,
-                      "y": 0
-                    },
-                    "mirror": {
-                      "x": false,
-                      "y": false
-                    },
-                    "angle": 0
-                  }
-                }
-              }
-            }
-          ],
+          "children": [],
           "position": {
             "x": 0,
             "y": 19,
@@ -70,9 +16,9 @@
           },
           "orientation": {
             "x": 0,
-            "y": 0.707107,
+            "y": 0,
             "z": 0,
-            "w": 0.707107
+            "w": 1
           },
           "shape": {
             "type": "quad",
@@ -100,7 +46,7 @@
             "textureLayout": {
               "front": {
                 "offset": {
-                  "x": 4,
+                  "x": 0,
                   "y": 0
                 },
                 "mirror": {

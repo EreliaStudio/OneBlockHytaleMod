@@ -5,6 +5,7 @@ import com.hypixel.hytale.component.Store;
 import org.joml.Vector3i;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
+import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractTargetPlayerCommand;
@@ -19,13 +20,13 @@ import java.util.Locale;
 public final class OneBlockCommand extends AbstractTargetPlayerCommand
 {
     private final RequiredArg<String> actionArg;
-    private final RequiredArg<String> valueArg;
+    private final OptionalArg<String> valueArg;
 
     public OneBlockCommand()
     {
         super("oneblock", "Admin commands for the OneBlock expedition system.");
-        this.actionArg = this.withRequiredArg("action", "status|start|stop|list", ArgTypes.STRING);
-        this.valueArg = this.withRequiredArg("value", "Expedition ID (for start), or '-' (for status/stop/list)", ArgTypes.STRING);
+        this.actionArg = this.withRequiredArg("action", "status|start|stop|list|fallProtection=true|false", ArgTypes.STRING);
+        this.valueArg = this.withOptionalArg("value", "Expedition ID (for start/list), or fallProtection true|false", ArgTypes.STRING);
     }
 
     @Override
@@ -44,34 +45,39 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         }
 
         OneBlockExpeditionStateProvider stateProvider = plugin.getExpeditionStateProvider();
+        OneBlockSettingsProvider settingsProvider = plugin.getSettingsProvider();
         OneBlockDropRegistry dropRegistry = plugin.getDropRegistry();
         Player targetPlayer = getPlayer(store, targetRef);
 
-        String action = safeLower(actionArg.get(ctx));
-        String value = valueArg.get(ctx);
+        ParsedAction parsedAction = parseAction(actionArg.get(ctx), valueArg.provided(ctx) ? valueArg.get(ctx) : null);
+        String action = parsedAction.action();
+        String value = parsedAction.value();
 
         switch (action)
         {
-            case "status" -> handleStatus(ctx, stateProvider);
+            case "status" -> handleStatus(ctx, stateProvider, settingsProvider);
             case "start" -> handleStart(ctx, plugin, stateProvider, targetPlayer, value);
             case "stop" -> handleStop(ctx, plugin, stateProvider, targetPlayer, world);
             case "list" -> handleList(ctx, dropRegistry, value);
-            default -> ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected status|start|stop|list)"));
+            case "fallprotection" -> handleFallProtection(ctx, settingsProvider, value);
+            default -> ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected status|start|stop|list|fallProtection=true|false)"));
         }
     }
 
-    private static void handleStatus(CommandContext ctx, OneBlockExpeditionStateProvider stateProvider)
+    private static void handleStatus(CommandContext ctx,
+                                     OneBlockExpeditionStateProvider stateProvider,
+                                     OneBlockSettingsProvider settingsProvider)
     {
         if (!stateProvider.hasActiveExpedition())
         {
-            ctx.sendMessage(Message.raw("No expedition is currently active. OneBlock is in default mode."));
+            ctx.sendMessage(Message.raw("No expedition is currently active. OneBlock is in default mode. Fall protection: " + formatEnabled(settingsProvider.isFallProtectionEnabled())));
             return;
         }
 
         String expeditionId = stateProvider.getActiveExpeditionId();
         int ticks = stateProvider.getTicksRemaining();
 
-        ctx.sendMessage(Message.raw("Active expedition: " + expeditionId + " | Ticks remaining: " + ticks));
+        ctx.sendMessage(Message.raw("Active expedition: " + expeditionId + " | Ticks remaining: " + ticks + " | Fall protection: " + formatEnabled(settingsProvider.isFallProtectionEnabled())));
     }
 
     private static void handleStart(CommandContext ctx,
@@ -149,6 +155,33 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         ctx.sendMessage(Message.raw("Drops for expedition '" + poolId + "' (" + drops.size() + "): " + String.join(", ", drops)));
     }
 
+    private static void handleFallProtection(CommandContext ctx,
+                                             OneBlockSettingsProvider settingsProvider,
+                                             String value)
+    {
+        if (settingsProvider == null)
+        {
+            ctx.sendMessage(Message.raw("OneBlock settings are not available."));
+            return;
+        }
+
+        if (value == null || value.isBlank())
+        {
+            ctx.sendMessage(Message.raw("Fall protection is currently " + formatEnabled(settingsProvider.isFallProtectionEnabled()) + ". Usage: /oneblock fallProtection=true|false"));
+            return;
+        }
+
+        Boolean enabled = parseBoolean(value);
+        if (enabled == null)
+        {
+            ctx.sendMessage(Message.raw("Invalid fallProtection value: " + value + " (expected true or false)"));
+            return;
+        }
+
+        settingsProvider.setFallProtectionEnabled(enabled);
+        ctx.sendMessage(Message.raw("Fall protection is now " + formatEnabled(enabled) + "."));
+    }
+
     private static Player getPlayer(Store<EntityStore> store, Ref<EntityStore> playerRef)
     {
         if (store == null || playerRef == null)
@@ -163,4 +196,34 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
     {
         return value == null ? "" : value.toLowerCase(Locale.ROOT).trim();
     }
+
+    private static ParsedAction parseAction(String rawAction, String rawValue)
+    {
+        String action = rawAction == null ? "" : rawAction.trim();
+        String value = rawValue;
+
+        int separator = action.indexOf('=');
+        if (separator >= 0)
+        {
+            value = action.substring(separator + 1);
+            action = action.substring(0, separator);
+        }
+
+        return new ParsedAction(safeLower(action), value == null ? null : value.trim());
+    }
+
+    private static Boolean parseBoolean(String value)
+    {
+        String normalized = safeLower(value);
+        if ("true".equals(normalized)) return Boolean.TRUE;
+        if ("false".equals(normalized)) return Boolean.FALSE;
+        return null;
+    }
+
+    private static String formatEnabled(boolean enabled)
+    {
+        return enabled ? "enabled" : "disabled";
+    }
+
+    private record ParsedAction(String action, String value) {}
 }

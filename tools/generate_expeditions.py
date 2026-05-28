@@ -37,8 +37,11 @@ BLOCK_ICON_DIR    = ONEBLOCK / "Common/Icons/ItemsGenerated"
 ONEBLOCK_ICON_DIR = BLOCK_ICON_DIR / "OneBlock"
 CRYSTAL_ICON_DIR  = BLOCK_ICON_DIR / "Crystals"
 CUSTOM_ITEM_TEXTURE_DIR = ONEBLOCK / "Common/Items/CustomItems"
+CRYSTAL_TEXTURE_DIR = ONEBLOCK / "Common/Items/Crystals"
 CUSTOM_ITEM_MODEL = ONEBLOCK / "Common/Blocks/CustomItems/OneBlock_CustomItem.blockymodel"
 CUSTOM_ITEM_MODEL_RESOURCE = "Blocks/CustomItems/OneBlock_CustomItem.blockymodel"
+CRYSTAL_ITEM_MODEL = ONEBLOCK / "Common/Blocks/CustomItems/OneBlock_CrystalItem.blockymodel"
+CRYSTAL_ITEM_MODEL_RESOURCE = "Blocks/CustomItems/OneBlock_CrystalItem.blockymodel"
 DEFAULT_RENDER_NAMES_FILE = Path("item_render_names.json")
 
 # ── Default asset templates (next to this script) ────────────────────────────
@@ -101,6 +104,8 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         "Id": item_id,
         "ItemLevel": item_level,
         "Icon": f"Icons/ItemsGenerated/Crystals/OneBlock_Crystal_{eid}.png",
+        "Model": CRYSTAL_ITEM_MODEL_RESOURCE,
+        "Texture": f"Items/Crystals/OneBlock_Crystal_{eid}.png",
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "Interactions": {
@@ -231,7 +236,7 @@ def build_custom_item_model() -> dict:
         "unwrapMode": "custom",
         "textureLayout": {
             "front": {
-                "offset": {"x": 4, "y": 0},
+                "offset": {"x": 0, "y": 0},
                 "mirror": {"x": False, "y": False},
                 "angle": 0,
             },
@@ -242,24 +247,15 @@ def build_custom_item_model() -> dict:
         "lod": "auto",
         "nodes": [
             {
-                "id": "2",
+                "id": "1",
                 "name": "R-Attachment",
                 "children": [
                     {
-                        "id": "1",
+                        "id": "0",
                         "name": "CustomItem",
-                        "children": [
-                            {
-                                "id": "0",
-                                "name": "Front",
-                                "children": [],
-                                "position": {"x": 0, "y": 0, "z": 0},
-                                "orientation": {"x": 0, "y": -0.707107, "z": 0, "w": 0.707107},
-                                "shape": quad_shape,
-                            },
-                        ],
+                        "children": [],
                         "position": {"x": 0, "y": 19, "z": 0},
-                        "orientation": {"x": 0, "y": 0.707107, "z": 0, "w": 0.707107},
+                        "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                         "shape": quad_shape,
                     },
                 ],
@@ -576,32 +572,75 @@ def ensure_block_assets(repo_root: Path, expedition_id: str, dry_run: bool, stal
 
 
 
+def ensure_crystal_item_model(repo_root: Path, dry_run: bool):
+    model_dst = repo_root / CRYSTAL_ITEM_MODEL
+    if model_dst.exists():
+        return
+    if dry_run:
+        print(f"  [dry-run] Would write {model_dst.name}")
+        return
+    quad_shape = {
+        "type": "quad", "offset": {"x": 0, "y": 0, "z": 0}, "stretch": {"x": 1, "y": 1, "z": 1},
+        "settings": {"size": {"x": 22, "y": 22}, "normal": "+Z"},
+        "visible": True, "doubleSided": True, "shadingMode": "fullbright", "unwrapMode": "custom",
+        "textureLayout": {"front": {"offset": {"x": 0, "y": 0}, "mirror": {"x": False, "y": False}, "angle": 0}},
+    }
+    model = {
+        "lod": "auto",
+        "nodes": [{"id": "1", "name": "R-Attachment", "children": [
+            {"id": "0", "name": "CrystalItem", "children": [],
+             "position": {"x": 0, "y": 19, "z": 0},
+             "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+             "shape": quad_shape},
+        ],
+        "position": {"x": 0, "y": 0, "z": 0}, "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+        "shape": {"type": "none", "offset": {"x": 0, "y": 0, "z": 0}, "stretch": {"x": 1, "y": 1, "z": 1},
+                  "settings": {"isPiece": True}, "visible": True, "doubleSided": False,
+                  "shadingMode": "standard", "unwrapMode": "custom", "textureLayout": {}}}],
+    }
+    model_dst.parent.mkdir(parents=True, exist_ok=True)
+    model_dst.write_bytes((json.dumps(model, indent=2, ensure_ascii=False) + "\n").encode("utf-8"))
+    print(f"  [write]  {model_dst.name}")
+
+
 def ensure_crystal_asset(repo_root: Path, expedition_id: str, dry_run: bool, stale: "set[Path] | None" = None):
-    """Copy the default expedition crystal icon for a crystal if its specific icon does not exist."""
+    """Copy the default expedition crystal icon for a crystal if its specific icon does not exist.
+    Also copies the icon into Items/Crystals/ for use as the dropped-item texture."""
+    ensure_crystal_item_model(repo_root, dry_run)
     eid = _safe_eid(expedition_id)
     icon_dst = repo_root / CRYSTAL_ICON_DIR / f"OneBlock_Crystal_{eid}.png"
 
     if stale is not None:
         stale.discard(icon_dst)
 
-    if icon_dst.exists():
-        print(f"  [skip]   {icon_dst.name} already exists")
-        return
-
     default_src = repo_root / BLOCK_ICON_DIR / "OneBlock_ExpeditionCrystal_DefaultIcon.png"
     src = default_src if default_src.exists() else DEFAULT_CRYSTAL_ICON
 
-    if not src.exists():
-        print(f"  [warn]   No default crystal icon found at {default_src} or {DEFAULT_CRYSTAL_ICON}")
-        return
+    if not icon_dst.exists():
+        if not src.exists():
+            print(f"  [warn]   No default crystal icon found at {default_src} or {DEFAULT_CRYSTAL_ICON}")
+        elif dry_run:
+            print(f"  [dry-run] Would copy default crystal icon -> {icon_dst.name}")
+        else:
+            icon_dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, icon_dst)
+            print(f"  [copy]   {icon_dst.name} <- default crystal icon")
+    else:
+        print(f"  [skip]   {icon_dst.name} already exists")
 
-    if dry_run:
-        print(f"  [dry-run] Would copy default crystal icon -> {icon_dst.name}")
-        return
-
-    icon_dst.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, icon_dst)
-    print(f"  [copy]   {icon_dst.name} <- default crystal icon")
+    # Keep Items/Crystals/ texture in sync with the icon
+    texture_dst = repo_root / CRYSTAL_TEXTURE_DIR / f"OneBlock_Crystal_{eid}.png"
+    if stale is not None:
+        stale.discard(texture_dst)
+    icon_src = icon_dst if icon_dst.exists() else (src if src.exists() else None)
+    if icon_src and not texture_dst.exists():
+        if dry_run:
+            print(f"  [dry-run] Would copy crystal texture -> {texture_dst.name}")
+        else:
+            texture_dst.parent.mkdir(parents=True, exist_ok=True)
+            from PIL import Image
+            Image.open(icon_src).resize((22, 22), Image.LANCZOS).save(texture_dst)
+            print(f"  [copy]   {texture_dst.name} <- crystal texture (22x22)")
 
 def _custom_item_ids_from_entries(entries: list) -> set[str]:
     out: set[str] = set()
@@ -941,6 +980,7 @@ def collect_generated_files(repo_root: Path) -> "set[Path]":
         (repo_root / ONEBLOCK_ICON_DIR,      "OneBlock_*.png"),
         (repo_root / BLOCK_ICON_DIR,         "*_Icon.png"),
         (repo_root / CRYSTAL_ICON_DIR,       "OneBlock_Crystal_*.png"),
+        (repo_root / CRYSTAL_TEXTURE_DIR,    "OneBlock_Crystal_*.png"),
         (repo_root / CUSTOM_ITEM_DIR,        "*.json"),
         (repo_root / CUSTOM_ITEM_TEXTURE_DIR, "*_Texture.png"),
     ]

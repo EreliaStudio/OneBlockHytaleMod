@@ -28,6 +28,7 @@ public final class OneBlockPlugin extends JavaPlugin
     private OneBlockExpeditionStateProvider expeditionStateProvider;
     private OneBlockDungeonStateProvider dungeonStateProvider;
     private OneBlockHudService hudService;
+    private OneBlockSettingsProvider settingsProvider;
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -47,6 +48,9 @@ public final class OneBlockPlugin extends JavaPlugin
 
         // ── Services ─────────────────────────────────────────────────────────
         hudService = new OneBlockHudService();
+        settingsProvider = new OneBlockSettingsProvider(
+                getDataDirectory().resolve("oneblock-settings.json")
+        );
 
         // ── Drop engine ──────────────────────────────────────────────────────
         dropRegistry = new OneBlockDropRegistry();
@@ -100,7 +104,7 @@ public final class OneBlockPlugin extends JavaPlugin
         // ── World ────────────────────────────────────────────────────────────
         OneBlockWorldBootstrap.ensureVoidDefaultWorldConfig(getDataDirectory());
 
-        getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem());
+        getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem(settingsProvider));
 
         getEventRegistry().registerGlobal(PrepareUniverseEvent.class, event ->
         {
@@ -180,6 +184,7 @@ public final class OneBlockPlugin extends JavaPlugin
 
         instance = null;
         hudService = null;
+        settingsProvider = null;
         dropRegistry = null;
         expeditionStateProvider = null;
         dungeonStateProvider = null;
@@ -203,6 +208,11 @@ public final class OneBlockPlugin extends JavaPlugin
     public OneBlockHudService getHudService()
     {
         return hudService;
+    }
+
+    public OneBlockSettingsProvider getSettingsProvider()
+    {
+        return settingsProvider;
     }
 
     private String resolveActiveBlockId()

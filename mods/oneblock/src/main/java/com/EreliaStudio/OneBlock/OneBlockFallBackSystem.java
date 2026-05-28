@@ -12,6 +12,9 @@ import com.hypixel.hytale.math.vector.Transform;
 import com.hypixel.hytale.math.vector.Rotation3f;
 import org.joml.Vector3d;
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.modules.entity.damage.Damage;
+import com.hypixel.hytale.server.core.modules.entity.damage.DamageCause;
+import com.hypixel.hytale.server.core.modules.entity.damage.DeathComponent;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.modules.entity.teleport.Teleport;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
@@ -26,6 +29,14 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
 {
     private static final double FALLBACK_Y = 85.0;
     private static final Vector3d DEFAULT_SPAWN_POS = new Vector3d(0.5, 102.0, 0.5);
+    private static final float VOID_DAMAGE_AMOUNT = Float.MAX_VALUE;
+
+    private final OneBlockSettingsProvider settingsProvider;
+
+    public OneBlockFallBackSystem(OneBlockSettingsProvider settingsProvider)
+    {
+        this.settingsProvider = settingsProvider;
+    }
 
     @Override
     public Query<EntityStore> getQuery()
@@ -60,6 +71,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
         ComponentType<EntityStore, TransformComponent> transformType = TransformComponent.getComponentType();
         ComponentType<EntityStore, PlayerRef> playerRefType = PlayerRef.getComponentType();
         ComponentType<EntityStore, Teleport> teleportType = Teleport.getComponentType();
+        ComponentType<EntityStore, DeathComponent> deathType = DeathComponent.getComponentType();
 
         int size = chunk.size();
         for (int i = 0; i < size; i++)
@@ -95,6 +107,12 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
                 continue;
             }
 
+            if (!isFallProtectionEnabled())
+            {
+                killPlayer(buffer, ref, deathType);
+                continue;
+            }
+
             UUID playerId = playerRef == null ? null : playerRef.getUuid();
             Transform spawn = resolveSpawn(world, playerId);
             if (spawn == null)
@@ -105,6 +123,24 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
             Teleport teleport = Teleport.createForPlayer(world, spawn);
             buffer.run(targetStore -> targetStore.addComponent(ref, teleportType, teleport));
         }
+    }
+
+    private boolean isFallProtectionEnabled()
+    {
+        return settingsProvider == null || settingsProvider.isFallProtectionEnabled();
+    }
+
+    private static void killPlayer(CommandBuffer<EntityStore> buffer,
+                                   Ref<EntityStore> ref,
+                                   ComponentType<EntityStore, DeathComponent> deathType)
+    {
+        if (buffer.getComponent(ref, deathType) != null)
+        {
+            return;
+        }
+
+        Damage damage = new Damage(new Damage.EnvironmentSource("oneblock_void"), DamageCause.OUT_OF_WORLD, VOID_DAMAGE_AMOUNT);
+        DeathComponent.tryAddComponent(buffer, ref, damage);
     }
 
     private static Transform resolveSpawn(World world, UUID playerId)
