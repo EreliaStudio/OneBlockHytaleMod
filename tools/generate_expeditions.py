@@ -104,8 +104,6 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         "Id": item_id,
         "ItemLevel": item_level,
         "Icon": f"Icons/ItemsGenerated/Crystals/OneBlock_Crystal_{eid}.png",
-        "Model": CRYSTAL_ITEM_MODEL_RESOURCE,
-        "Texture": f"Items/Crystals/OneBlock_Crystal_{eid}.png",
         "Categories": ["Items.OneBlockExpeditionCrystal"],
         "PlayerAnimationsId": "Item",
         "Interactions": {
@@ -140,6 +138,8 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
         if knowledge_required:
             recipe["KnowledgeRequired"] = True
         data["Recipe"] = recipe
+    data["Model"] = CRYSTAL_ITEM_MODEL_RESOURCE
+    data["Texture"] = f"Items/Crystals/OneBlock_Crystal_{eid}.png"
     return data
 
 
@@ -162,14 +162,15 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
             "DrawType": "Cube",
             "Group": "OneBlock",
             "Flags": {},
-            # Keep all variants hand-breakable; expedition length is controlled by Ticks.
+            # Use the native rock break profile so block health, tools, decals, and
+            # break timing are managed by Hytale. Drops remain plugin-controlled.
             "Gathering": {
                 "Breaking": {
-                    "GatherType": "Soils",
-                    "ID": "Soil_Dirt",
+                    "GatherType": "Rocks",
                     "Quantity": 0,
                 }
             },
+            "BlockParticleSetId": "Stone",
             "Textures": [
                 {
                     "Down": f"BlockTextures/OneBlock_Block_{eid}.png",
@@ -180,6 +181,9 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
             ],
             "TransitionToGroups": [],
             "ParticleColor": "#ffffff",
+            "BlockSoundSetId": "Stone",
+            "PhysicalMaterialId": "Stone",
+            "BlockBreakingDecalId": "Breaking_Decals_Rock",
         },
         "Tags": {
             "Type": ["OneBlock_Block"],
@@ -287,12 +291,20 @@ def build_lang_block(expedition_id: str,
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
 
+    drop_lines = _build_drop_description(drop_pool, render_names)
+    reward_lines = _build_reward_description(
+        mandatory_rewards,
+        random_bundles,
+        render_names,
+    )
+    leads_lines = _build_leads_description(mandatory_rewards, random_bundles)
+
     lines = [
 		f"\n# GENERATED ─── {display} {sep}",
 
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.",
+		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin a {display} expedition.\\n{ticks} ticks.{drop_lines}{reward_lines}{leads_lines}",
 
 		f"expeditions.{eid}.name={display}",
 		f"announcements.expedition_started.{eid}={display} expedition started.",
@@ -336,6 +348,109 @@ def _display_drop_name(entry: dict, render_names: dict[str, str]) -> str:
         if item_id in render_names:
             return render_names[item_id]
     return item_id.replace("_", " ")
+
+
+def _unique_entries(entries: list[dict]) -> list[dict]:
+    seen: set[str] = set()
+    unique: list[dict] = []
+    for entry in entries:
+        drop_id = _entry_drop_id(entry)
+        if drop_id in seen:
+            continue
+        seen.add(drop_id)
+        unique.append(entry)
+    return unique
+
+
+def _build_drop_description(entries: list[dict], render_names: dict[str, str]) -> str:
+    items = _unique_entries([
+        entry for entry in entries
+        if not _entry_drop_id(entry).startswith(JAVA_ENTITY_PREFIX)
+    ])
+    entities = _unique_entries([
+        entry for entry in entries
+        if _entry_drop_id(entry).startswith(JAVA_ENTITY_PREFIX)
+    ])
+
+    if not items and not entities:
+        return ""
+
+    lines = "\\nPossible drops:"
+    if items:
+        lines += "\\nItems:"
+        for entry in items:
+            lines += f"\\n- {_display_drop_name(entry, render_names)}"
+    if entities:
+        lines += "\\nEntities:"
+        for entry in entities:
+            lines += f"\\n- {_display_drop_name(entry, render_names)}"
+    return lines
+
+
+def _format_reward(entry: dict, render_names: dict[str, str]) -> str:
+    quantity = _entry_quantity(entry)
+    return f"{quantity}x {_display_drop_name(entry, render_names)}"
+
+
+def _build_reward_description(mandatory_rewards: list[dict],
+                              random_bundles: list[dict],
+                              render_names: dict[str, str]) -> str:
+    mandatory_items = [
+        entry for entry in mandatory_rewards
+        if entry.get("Crystal") is None
+    ]
+    random_item_bundles = []
+    for bundle in random_bundles:
+        items = [
+            entry for entry in bundle.get("Items", [])
+            if entry.get("Crystal") is None
+        ]
+        if items:
+            random_item_bundles.append((bundle, items))
+
+    lines = ""
+    if mandatory_items:
+        lines += "\\nCompletion rewards:"
+        for entry in mandatory_items:
+            lines += f"\\n- {_format_reward(entry, render_names)}"
+
+    if random_item_bundles:
+        lines += "\\nRandom reward (one bundle):"
+        for bundle, bundle_items in random_item_bundles:
+            items = ", ".join(
+                _format_reward(item, render_names)
+                for item in bundle_items
+            )
+            weight = max(1, int(bundle.get("Weight", 1)))
+            lines += f"\\n- [{weight}] {items}"
+    return lines
+
+
+def _build_leads_description(mandatory_rewards: list[dict],
+                             random_bundles: list[dict]) -> str:
+    # Keep source order and upgrade a possible lead to guaranteed if it is also
+    # present in the mandatory completion rewards.
+    leads: dict[str, bool] = {}
+    for entry in mandatory_rewards:
+        crystal_id = entry.get("Crystal")
+        if crystal_id is not None:
+            leads[str(crystal_id)] = True
+
+    for bundle in random_bundles:
+        for entry in bundle.get("Items", []):
+            crystal_id = entry.get("Crystal")
+            if crystal_id is not None:
+                leads.setdefault(str(crystal_id), False)
+
+    if not leads:
+        return ""
+
+    lines = "\\nLeads to:"
+    for expedition_id, guaranteed in leads.items():
+        display = expedition_id.replace("_", " ")
+        suffix = "" if guaranteed else " (possible)"
+        lines += f"\\n- {display}{suffix}"
+    return lines
 
 
 def _entry_quantity(entry: dict) -> int:
@@ -437,18 +552,32 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list, 
 
 def build_lang_dungeon_block(expedition_id: str,
                              waves: list,
-                             completion_rewards: list,
+                             mandatory_rewards: list,
+                             random_bundles: list,
                              render_names: dict[str, str]) -> str:
     eid = _safe_eid(expedition_id)
     display = expedition_id.replace("_", " ")
     sep = "─" * max(0, 55 - len(display))
+
+    entity_entries = [
+        {"ID": f"{JAVA_ENTITY_PREFIX}{entity_id}"}
+        for wave in waves
+        for entity_id in wave
+    ]
+    entity_lines = _build_drop_description(entity_entries, render_names)
+    reward_lines = _build_reward_description(
+        mandatory_rewards,
+        random_bundles,
+        render_names,
+    )
+    leads_lines = _build_leads_description(mandatory_rewards, random_bundles)
 
     lines = [
 		f"\n# GENERATED ─── {display} {sep}",
 
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name=OneBlock {display}",
 		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.name={display} Crystal",
-		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin the {display} dungeon.\\n{len(waves)} waves.",
+		f"{PREFIX_ITEMS_LANG}.OneBlock_Crystal_{eid}.description=Consume to begin the {display} dungeon.\\n{len(waves)} waves.{entity_lines}{reward_lines}{leads_lines}",
 
 		f"expeditions.{eid}.name={display}",
 		f"announcements.dungeon_started.{eid}={display} dungeon started.",
@@ -878,7 +1007,8 @@ def patch_custom_item_lang(path: Path, custom_id: str, dry_run: bool):
 def _patch_dungeon_lang(path: Path,
                         expedition_id: str,
                         waves: list,
-                        completion_rewards: list,
+                        mandatory_rewards: list,
+                        random_bundles: list,
                         render_names: dict[str, str],
                         dry_run: bool):
     eid = _safe_eid(expedition_id)
@@ -889,7 +1019,13 @@ def _patch_dungeon_lang(path: Path,
         print(f"  [skip]   Lang already has entries for {expedition_id}")
         return
 
-    block = build_lang_dungeon_block(expedition_id, waves, completion_rewards, render_names)
+    block = build_lang_dungeon_block(
+        expedition_id,
+        waves,
+        mandatory_rewards,
+        random_bundles,
+        render_names,
+    )
 
     if dry_run:
         print(f"  [dry-run] Would append lang entries for {expedition_id}")
@@ -1168,7 +1304,15 @@ def main():
                 print(f"  [warn]   DungeonEnchanter JSON not found: {dungeon_enchanter_path}")
 
             if lang_path.exists():
-                _patch_dungeon_lang(lang_path, expedition_id, waves, mandatory_rewards, render_names, args.dry_run)
+                _patch_dungeon_lang(
+                    lang_path,
+                    expedition_id,
+                    waves,
+                    mandatory_rewards,
+                    random_bundles,
+                    render_names,
+                    args.dry_run,
+                )
                 patch_group_lang(lang_path, group, args.dry_run, "OneBlockDungeonEnchanter")
             else:
                 print(f"  [warn]   Lang file not found: {lang_path}")

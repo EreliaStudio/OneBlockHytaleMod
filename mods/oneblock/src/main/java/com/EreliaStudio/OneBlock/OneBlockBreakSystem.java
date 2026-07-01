@@ -57,8 +57,6 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (!isValidOneBlockBreak(player, event)) return;
 
-        event.setCancelled(true);
-
         EntityStore entityStore = store.getExternalData();
         if (entityStore == null) return;
 
@@ -230,7 +228,12 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         List<String> drops = dropRegistry.getKnownDrops(poolId);
         String rewardId = dropRegistry.pickReward(poolId, drops);
-        if (rewardId == null || rewardId.isEmpty()) return;
+        if (rewardId == null || rewardId.isEmpty())
+        {
+            String currentBlockId = event.getBlockType().getId();
+            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), currentBlockId));
+            return;
+        }
 
         String activeExpeditionBeforeBreak = expeditionState.getActiveExpeditionId();
         int totalTicks = expeditionState.getTotalTicks();

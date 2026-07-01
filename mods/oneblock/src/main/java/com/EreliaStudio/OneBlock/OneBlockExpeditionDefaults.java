@@ -1555,6 +1555,19 @@ public final class OneBlockExpeditionDefaults
                 crystalReward("SpiritRealmTrial", 1)
         ));
 
+        register(expeditions, "CrystalCavern", 15, List.of(
+                drop("Ingredient_Crystal_Blue", 1),
+                drop("Ingredient_Crystal_Cyan", 1),
+                drop("Ingredient_Crystal_Green", 1),
+                drop("Ingredient_Crystal_Pink", 1),
+                drop("Ingredient_Crystal_Purple", 1),
+                drop("Ingredient_Crystal_Red", 1),
+                drop("Ingredient_Crystal_White", 1),
+                drop("Ingredient_Crystal_Yellow", 1)
+        ), List.of(
+                reward("ExpeditionPoint", 4)
+        ));
+
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);
         DEFAULT_IDS = buildDefaultIds(EXPEDITIONS);
         DEFAULT_WEIGHTS = buildDefaultWeights(EXPEDITIONS);

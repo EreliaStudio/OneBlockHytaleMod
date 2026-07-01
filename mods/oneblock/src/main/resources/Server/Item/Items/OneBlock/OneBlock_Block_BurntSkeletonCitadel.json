@@ -17,11 +17,11 @@
     "Flags": {},
     "Gathering": {
       "Breaking": {
-        "GatherType": "Soils",
-        "ID": "Soil_Dirt",
+        "GatherType": "Rocks",
         "Quantity": 0
       }
     },
+    "BlockParticleSetId": "Stone",
     "Textures": [
       {
         "Down": "BlockTextures/OneBlock_Block_BurntSkeletonCitadel.png",
@@ -31,7 +31,10 @@
       }
     ],
     "TransitionToGroups": [],
-    "ParticleColor": "#ffffff"
+    "ParticleColor": "#ffffff",
+    "BlockSoundSetId": "Stone",
+    "PhysicalMaterialId": "Stone",
+    "BlockBreakingDecalId": "Breaking_Decals_Rock"
   },
   "Tags": {
     "Type": [

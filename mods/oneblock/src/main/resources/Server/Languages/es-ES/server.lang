@@ -1079,3 +1079,13 @@ items.OneBlock_Crystal_SpiritRealmTrial.description=Consumir para iniciar la maz
 expeditions.SpiritRealmTrial.name=PruebaRealmEspíritu
 announcements.dungeon_started.SpiritRealmTrial=Mazmorra PruebaRealmEspíritu iniciada.
 announcements.dungeon_completed.SpiritRealmTrial=Mazmorra PruebaRealmEspíritu completada. El OneBlock ha vuelto al estado por defecto.
+
+# GENERATED ─── CrystalCavern ──────────────────────────────────────────
+items.OneBlock_Block_CrystalCavern.name=OneBlock Caverna de Cristal
+items.OneBlock_Crystal_CrystalCavern.name=Cristal Caverna de Cristal
+items.OneBlock_Crystal_CrystalCavern.description=Consumir para iniciar una expedición Caverna de Cristal.\n15 pulsos.\nPosibles recompensas:\nObjetos:\n- Fragmentos de Cristal Azul\n- Fragmentos de Cristal Cian\n- Fragmentos de Cristal Verde\n- Fragmentos de Cristal Rosa\n- Fragmentos de Cristal Morado\n- Fragmentos de Cristal Rojo\n- Fragmentos de Cristal Blanco\n- Fragmentos de Cristal Amarillo\nRecompensas de finalización:\n- 4x PuntoDeExpedición
+expeditions.CrystalCavern.name=Caverna de Cristal
+announcements.expedition_started.CrystalCavern=Expedición Caverna de Cristal iniciada.
+announcements.expedition_completed.CrystalCavern=Expedición Caverna de Cristal completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.CrystalCavern=Nueva expedición desbloqueada: Caverna de Cristal
+progress.expedition.CrystalCavern=Caverna de Cristal: {0}/{1} pulsos restantes

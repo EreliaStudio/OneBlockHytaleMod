@@ -7908,5 +7908,61 @@
 			"Random": []
 		}
 	},
+	"CrystalCavern": {
+		"ItemLevel": 2,
+		"Category": "Advanced",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 8
+				}
+			]
+		},
+		"Ticks": 15,
+		"BaseDropPool": [
+			{
+				"ID": "Ingredient_Crystal_Blue",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_Cyan",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_Green",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_Pink",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_Purple",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_Red",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_White",
+				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Crystal_Yellow",
+				"Weight": 1
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 4
+				}
+			],
+			"Random": []
+		}
+	},
 	"_category_note": "Categories manually sorted into Surface, Underground, Forest, Ocean, Desert, Ice, Fire, Jungle, Mystic, and Dungeon. Dungeon is reserved for generator dungeon entries."
 }

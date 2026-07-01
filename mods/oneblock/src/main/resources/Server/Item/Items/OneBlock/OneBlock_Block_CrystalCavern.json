@@ -1,10 +1,10 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.OneBlock_Block_FrozenGraveyard.name"
+    "Name": "server.items.OneBlock_Block_CrystalCavern.name"
   },
-  "Id": "OneBlock_Block_FrozenGraveyard",
-  "ItemLevel": 5,
-  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_FrozenGraveyard.png",
+  "Id": "OneBlock_Block_CrystalCavern",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CrystalCavern.png",
   "Categories": [
     "Blocks.OneBlock"
   ],
@@ -24,9 +24,9 @@
     "BlockParticleSetId": "Stone",
     "Textures": [
       {
-        "Down": "BlockTextures/OneBlock_Block_FrozenGraveyard.png",
-        "Sides": "BlockTextures/OneBlock_Block_FrozenGraveyard.png",
-        "Up": "BlockTextures/OneBlock_Block_FrozenGraveyard.png",
+        "Down": "BlockTextures/OneBlock_Block_CrystalCavern.png",
+        "Sides": "BlockTextures/OneBlock_Block_CrystalCavern.png",
+        "Up": "BlockTextures/OneBlock_Block_CrystalCavern.png",
         "Weight": 1
       }
     ],

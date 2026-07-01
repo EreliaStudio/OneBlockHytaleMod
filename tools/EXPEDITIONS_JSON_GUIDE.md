@@ -225,6 +225,12 @@ For each expedition the script creates or patches:
 | Java static block | `OneBlockExpeditionDefaults.java` or `OneBlockDungeonDefaults.java` |
 | Custom item JSON + assets | `Items/CustomItems/<CustomID>.json` + icon + texture (only for `CustomID` entries) |
 
+Crystal descriptions are derived from the same source data:
+
+- **Possible drops** lists the unique items and entities in `BaseDropPool` (or dungeon waves).
+- **Completion rewards** lists non-crystal mandatory and random rewards.
+- **Leads to** lists expeditions unlocked by crystal completion rewards. Crystals in random bundles are marked as possible leads.
+
 Replace the placeholder PNGs with real artwork before shipping. The script will never overwrite an existing PNG.
 
 ---
