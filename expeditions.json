@@ -1056,6 +1056,15 @@
 					"Weight": 1,
 					"Items": [
 						{
+							"Crystal": "CrystalCavern",
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
 							"Crystal": "MithrilCave",
 							"Quantity": 1
 						}

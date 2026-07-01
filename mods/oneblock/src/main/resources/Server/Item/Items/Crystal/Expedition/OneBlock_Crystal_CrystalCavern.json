@@ -56,7 +56,8 @@
         ],
         "Id": "OneBlockEnchanter"
       }
-    ]
+    ],
+    "KnowledgeRequired": true
   },
   "Model": "Blocks/CustomItems/OneBlock_CrystalItem.blockymodel",
   "Texture": "Items/Crystals/OneBlock_Crystal_CrystalCavern.png"

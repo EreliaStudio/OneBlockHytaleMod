@@ -309,6 +309,7 @@ public final class OneBlockExpeditionDefaults
                 reward("ExpeditionPoint", 6)
         ), List.of(
                 bundle(List.of(crystalReward("GemDeepCave", 1)), 1),
+                bundle(List.of(crystalReward("CrystalCavern", 1)), 1),
                 bundle(List.of(crystalReward("MithrilCave", 1)), 1)
         ));
 
