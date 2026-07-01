@@ -4,11 +4,14 @@ import com.hypixel.hytale.builtin.crafting.CraftingPlugin;
 import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.event.events.ecs.BreakBlockEvent;
+import com.hypixel.hytale.server.core.modules.blockhealth.BlockHealthChunk;
+import com.hypixel.hytale.server.core.modules.blockhealth.BlockHealthModule;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
+import com.hypixel.hytale.server.core.universe.world.storage.ChunkStore;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
-import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.protocol.BlockMaterial;
+import com.hypixel.hytale.math.util.ChunkUtil;
 
 import com.hypixel.hytale.component.*;
 import com.hypixel.hytale.component.query.Query;
@@ -64,6 +67,12 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         if (world == null) return;
 
         Vector3i pos = event.getTargetBlock();
+
+        // BreakBlockEvent is emitted after native block health reaches zero.
+        // Keep the supporting block physically present, then reset its native
+        // health entry so the next break starts with full rock durability.
+        event.setCancelled(true);
+        resetBlockHealth(world, pos);
 
         DropableContext context = new DropableContext(
                 store, world, pos,
@@ -121,10 +130,6 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                     plugin.getHudService().showDungeonCompleted(player, completedDungeon);
                 }
 
-                if (context.getPlayerRef() != null)
-                {
-                    context.getPlayerRef().sendMessage(Message.raw("Dungeon complete: " + completedDungeon + ". The OneBlock has returned to default."));
-                }
             }
         }
         else
@@ -150,10 +155,6 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                     );
                 }
 
-                if (context.getPlayerRef() != null)
-                {
-                    context.getPlayerRef().sendMessage(Message.raw("Wave " + waveIndex + " spawned. " + completedWaves + "/" + totalWaves + " waves completed."));
-                }
             }
         }
     }
@@ -364,6 +365,28 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                     context.getPlayerEntity(),
                     reward.unlockExpeditionId
             );
+        }
+    }
+
+    private static void resetBlockHealth(World world, Vector3i pos)
+    {
+        if (world == null || pos == null) return;
+
+        ChunkStore chunkStore = world.getChunkStore();
+        if (chunkStore == null) return;
+
+        long chunkIndex = ChunkUtil.indexChunkFromBlock(pos.x(), pos.z());
+        Ref<ChunkStore> chunkRef = chunkStore.getChunkReference(chunkIndex);
+        if (chunkRef == null || !chunkRef.isValid()) return;
+
+        Store<ChunkStore> chunkComponentStore = chunkStore.getStore();
+        BlockHealthChunk blockHealth = chunkComponentStore.getComponent(
+                chunkRef,
+                BlockHealthModule.get().getBlockHealthChunkComponentType()
+        );
+        if (blockHealth != null)
+        {
+            blockHealth.removeBlock(world, pos);
         }
     }
 

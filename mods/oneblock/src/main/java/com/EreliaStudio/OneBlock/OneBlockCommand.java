@@ -3,7 +3,6 @@ package com.EreliaStudio.OneBlock;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import org.joml.Vector3i;
-import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
@@ -40,13 +39,11 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
         if (plugin == null)
         {
-            ctx.sendMessage(Message.raw("OneBlock plugin is not available."));
             return;
         }
 
         OneBlockExpeditionStateProvider stateProvider = plugin.getExpeditionStateProvider();
         OneBlockSettingsProvider settingsProvider = plugin.getSettingsProvider();
-        OneBlockDropRegistry dropRegistry = plugin.getDropRegistry();
         Player targetPlayer = getPlayer(store, targetRef);
 
         ParsedAction parsedAction = parseAction(actionArg.get(ctx), valueArg.provided(ctx) ? valueArg.get(ctx) : null);
@@ -55,40 +52,21 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
 
         switch (action)
         {
-            case "status" -> handleStatus(ctx, stateProvider, settingsProvider);
-            case "start" -> handleStart(ctx, plugin, stateProvider, targetPlayer, value);
-            case "stop" -> handleStop(ctx, plugin, stateProvider, targetPlayer, world);
-            case "list" -> handleList(ctx, dropRegistry, value);
-            case "fallprotection" -> handleFallProtection(ctx, settingsProvider, value);
-            default -> ctx.sendMessage(Message.raw("Unknown action: " + action + " (expected status|start|stop|list|fallProtection=true|false)"));
+            case "start" -> handleStart(plugin, stateProvider, targetPlayer, value);
+            case "stop" -> handleStop(plugin, stateProvider, targetPlayer, world);
+            case "fallprotection" -> handleFallProtection(settingsProvider, value);
+            case "status", "list" -> { }
+            default -> { }
         }
     }
 
-    private static void handleStatus(CommandContext ctx,
-                                     OneBlockExpeditionStateProvider stateProvider,
-                                     OneBlockSettingsProvider settingsProvider)
-    {
-        if (!stateProvider.hasActiveExpedition())
-        {
-            ctx.sendMessage(Message.raw("No expedition is currently active. OneBlock is in default mode. Fall protection: " + formatEnabled(settingsProvider.isFallProtectionEnabled())));
-            return;
-        }
-
-        String expeditionId = stateProvider.getActiveExpeditionId();
-        int ticks = stateProvider.getTicksRemaining();
-
-        ctx.sendMessage(Message.raw("Active expedition: " + expeditionId + " | Ticks remaining: " + ticks + " | Fall protection: " + formatEnabled(settingsProvider.isFallProtectionEnabled())));
-    }
-
-    private static void handleStart(CommandContext ctx,
-                                    OneBlockPlugin plugin,
+    private static void handleStart(OneBlockPlugin plugin,
                                     OneBlockExpeditionStateProvider stateProvider,
                                     Player targetPlayer,
                                     String expeditionId)
     {
         if (expeditionId == null || expeditionId.isBlank() || "-".equals(expeditionId.trim()))
         {
-            ctx.sendMessage(Message.raw("Usage: /oneblock - start <expeditionId>"));
             return;
         }
 
@@ -106,22 +84,17 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
             );
         }
 
-        ctx.sendMessage(Message.raw("Started expedition '" + normalizedExpeditionId + "' with " + ticks + " ticks."));
     }
 
-    private static void handleStop(CommandContext ctx,
-                                   OneBlockPlugin plugin,
+    private static void handleStop(OneBlockPlugin plugin,
                                    OneBlockExpeditionStateProvider stateProvider,
                                    Player targetPlayer,
                                    World world)
     {
         if (!stateProvider.hasActiveExpedition())
         {
-            ctx.sendMessage(Message.raw("No expedition is active."));
             return;
         }
-
-        String expeditionId = stateProvider.getActiveExpeditionId();
 
         stateProvider.endExpedition();
 
@@ -136,50 +109,28 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
             plugin.getHudService().clear(targetPlayer);
         }
 
-        ctx.sendMessage(Message.raw("Stopped expedition '" + expeditionId + "'. OneBlock reset to default."));
     }
 
-    private static void handleList(CommandContext ctx, OneBlockDropRegistry dropRegistry, String expeditionId)
-    {
-        String poolId = (expeditionId == null || expeditionId.isBlank() || "-".equals(expeditionId.trim()))
-                ? OneBlockPools.DEFAULT_POOL_ID
-                : OneBlockPools.normalizePoolId(expeditionId.trim());
-
-        var drops = dropRegistry.getKnownDrops(poolId);
-        if (drops.isEmpty())
-        {
-            ctx.sendMessage(Message.raw("No drops registered for expedition: " + poolId));
-            return;
-        }
-
-        ctx.sendMessage(Message.raw("Drops for expedition '" + poolId + "' (" + drops.size() + "): " + String.join(", ", drops)));
-    }
-
-    private static void handleFallProtection(CommandContext ctx,
-                                             OneBlockSettingsProvider settingsProvider,
+    private static void handleFallProtection(OneBlockSettingsProvider settingsProvider,
                                              String value)
     {
         if (settingsProvider == null)
         {
-            ctx.sendMessage(Message.raw("OneBlock settings are not available."));
             return;
         }
 
         if (value == null || value.isBlank())
         {
-            ctx.sendMessage(Message.raw("Fall protection is currently " + formatEnabled(settingsProvider.isFallProtectionEnabled()) + ". Usage: /oneblock fallProtection=true|false"));
             return;
         }
 
         Boolean enabled = parseBoolean(value);
         if (enabled == null)
         {
-            ctx.sendMessage(Message.raw("Invalid fallProtection value: " + value + " (expected true or false)"));
             return;
         }
 
         settingsProvider.setFallProtectionEnabled(enabled);
-        ctx.sendMessage(Message.raw("Fall protection is now " + formatEnabled(enabled) + "."));
     }
 
     private static Player getPlayer(Store<EntityStore> store, Ref<EntityStore> playerRef)
@@ -218,11 +169,6 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         if ("true".equals(normalized)) return Boolean.TRUE;
         if ("false".equals(normalized)) return Boolean.FALSE;
         return null;
-    }
-
-    private static String formatEnabled(boolean enabled)
-    {
-        return enabled ? "enabled" : "disabled";
     }
 
     private record ParsedAction(String action, String value) {}

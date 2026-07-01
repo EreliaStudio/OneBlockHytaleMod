@@ -1,15 +1,9 @@
 package com.EreliaStudio.OneBlock;
 
-import com.hypixel.hytale.component.CommandBuffer;
-import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.protocol.InteractionState;
-import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.entity.InteractionContext;
-import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.inventory.container.ItemContainer;
-import com.hypixel.hytale.server.core.universe.PlayerRef;
-import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.logger.HytaleLogger;
 
 import java.util.logging.Level;
@@ -36,17 +30,6 @@ final class OneBlockInteractionUtil
         }
 
         interactionContext.setHeldItem(updatedStack);
-    }
-
-    static void notifyPlayer(CommandBuffer<EntityStore> commandBuffer, InteractionContext interactionContext, String message)
-    {
-        if (commandBuffer == null || interactionContext == null || message == null || message.isEmpty()) return;
-
-        Ref<EntityStore> ref = interactionContext.getEntity();
-        if (ref == null) return;
-
-        PlayerRef playerRef = commandBuffer.getComponent(ref, PlayerRef.getComponentType());
-        if (playerRef != null) playerRef.sendMessage(Message.raw(message));
     }
 
     static void finish(InteractionContext interactionContext) { setState(interactionContext, InteractionState.Finished); }
