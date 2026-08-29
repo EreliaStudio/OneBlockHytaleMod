@@ -1,0 +1,1091 @@
+items.Bench_OneBlockEnchanter.name=Očarovač kryštálov
+items.Bench_OneBlockEnchanter.description=Spája zachránené suroviny a vytvára z nich expedičné kryštály.
+items.Bench_OneBlockDungeonEnchanter.name=Očarovač kryštálov žalárov
+items.Bench_OneBlockDungeonEnchanter.description=Spája zachránené suroviny a vytvára z nich expedičné kryštály pre žaláre.
+
+items.Locket_GobelinDungeon.name=Medailón goblinieho žalára
+items.ExpeditionPoint.name=Expedičný bod
+items.SwampRuinsToken.name=Žetón ruín močiara
+items.AbandonedMineToken.name=Žetón opustenej bane
+items.FrozenRuinsToken.name=Žetón zamrznutých ruín
+items.DesertTempleToken.name=Žetón púštneho chrámu
+items.PharaohCatacombsToken.name=Žetón faraónových katakomb
+items.GobelinCampToken.name=Žetón goblinieho tábora
+
+# GENERATED ─── Default ────────────────────────────────────────────────
+items.OneBlock_Block_Default.name=OneBlock: Predvolená
+items.OneBlock_Crystal_Default.name=Kryštál: Predvolená
+items.OneBlock_Crystal_Default.description=Spotrebujte tento kryštál a začnite expedíciu „Predvolená“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Vstup do jaskyne (možné)\n- Okraj lesa (možné)\n- Planina (možné)
+expeditions.Default.name=Predvolená
+announcements.expedition_started.Default=Expedícia „Predvolená“ sa začala.
+announcements.expedition_completed.Default=Expedícia „Predvolená“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Default=Odomknutá nová expedícia: „Predvolená“
+progress.expedition.Default=Predvolená: zostáva {0}/{1} blokov
+benchCategories.OneBlockEnchanter_Easy=Jednoduché kryštály
+
+# GENERATED ─── CaveEntry ──────────────────────────────────────────────
+items.OneBlock_Block_CaveEntry.name=OneBlock: Vstup do jaskyne
+items.OneBlock_Crystal_CaveEntry.name=Kryštál: Vstup do jaskyne
+items.OneBlock_Crystal_CaveEntry.description=Spotrebujte tento kryštál a začnite expedíciu „Vstup do jaskyne“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Rubble Stone\n- Stone\n- Copper Ore\nEntity:\n- Bat\n- Rat\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Jaskyňa
+expeditions.CaveEntry.name=Vstup do jaskyne
+announcements.expedition_started.CaveEntry=Expedícia „Vstup do jaskyne“ sa začala.
+announcements.expedition_completed.CaveEntry=Expedícia „Vstup do jaskyne“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.CaveEntry=Odomknutá nová expedícia: „Vstup do jaskyne“
+progress.expedition.CaveEntry=Vstup do jaskyne: zostáva {0}/{1} blokov
+
+# GENERATED ─── ForestEdge ─────────────────────────────────────────────
+items.OneBlock_Block_ForestEdge.name=OneBlock: Okraj lesa
+items.OneBlock_Crystal_ForestEdge.name=Kryštál: Okraj lesa
+items.OneBlock_Crystal_ForestEdge.description=Spotrebujte tento kryštál a začnite expedíciu „Okraj lesa“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Stick\n- Oak Trunk\n- Oak Sapling\n- Apple Fruit\nEntity:\n- Rabbit\n- Boar\n- Boar Piglet\n- Fox\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Vstup do lesa
+expeditions.ForestEdge.name=Okraj lesa
+announcements.expedition_started.ForestEdge=Expedícia „Okraj lesa“ sa začala.
+announcements.expedition_completed.ForestEdge=Expedícia „Okraj lesa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.ForestEdge=Odomknutá nová expedícia: „Okraj lesa“
+progress.expedition.ForestEdge=Okraj lesa: zostáva {0}/{1} blokov
+
+# GENERATED ─── Plain ──────────────────────────────────────────────────
+items.OneBlock_Block_Plain.name=OneBlock: Planina
+items.OneBlock_Crystal_Plain.name=Kryštál: Planina
+items.OneBlock_Crystal_Plain.description=Spotrebujte tento kryštál a začnite expedíciu „Planina“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fibre\n- Soil Grass\n- Soil Dirt\n- Plant Grass Sharp\n- Hay Bundle\n- Wheat\n- Carrot\n- Corn\nEntity:\n- Rabbit\n- Sheep\n- Chicken\n- Antelope\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Lom (možné)\n- Posvätné miesto (možné)
+expeditions.Plain.name=Planina
+announcements.expedition_started.Plain=Expedícia „Planina“ sa začala.
+announcements.expedition_completed.Plain=Expedícia „Planina“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Plain=Odomknutá nová expedícia: „Planina“
+progress.expedition.Plain=Planina: zostáva {0}/{1} blokov
+
+# GENERATED ─── Cave ───────────────────────────────────────────────────
+items.OneBlock_Block_Cave.name=OneBlock: Jaskyňa
+items.OneBlock_Crystal_Cave.name=Kryštál: Jaskyňa
+items.OneBlock_Crystal_Cave.description=Spotrebujte tento kryštál a začnite expedíciu „Jaskyňa“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Stone\n- Rubble Stone\n- Copper Ore\nEntity:\n- Rat\n- Bat\n- Spider\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Potkania jaskyňa (možné)\n- Dolná jaskyňa (možné)
+expeditions.Cave.name=Jaskyňa
+announcements.expedition_started.Cave=Expedícia „Jaskyňa“ sa začala.
+announcements.expedition_completed.Cave=Expedícia „Jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Cave=Odomknutá nová expedícia: „Jaskyňa“
+progress.expedition.Cave=Jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── RatCave ────────────────────────────────────────────────
+items.OneBlock_Block_RatCave.name=OneBlock: Potkania jaskyňa
+items.OneBlock_Crystal_RatCave.name=Kryštál: Potkania jaskyňa
+items.OneBlock_Crystal_RatCave.description=Spotrebujte tento kryštál a vstúpte do žalára „Potkania jaskyňa“.\nPočet vĺn: 3.\nMožná korisť:\nEntity:\n- Rat\n- Spider\n- Spider Cave\nOdmeny za dokončenie:\n- 8x Expedičný bod
+expeditions.RatCave.name=Potkania jaskyňa
+announcements.dungeon_started.RatCave=Žalár „Potkania jaskyňa“ sa začal.
+announcements.dungeon_completed.RatCave=Žalár „Potkania jaskyňa“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+benchCategories.OneBlockDungeonEnchanter_Dungeon=Kryštály žalárov
+
+# GENERATED ─── LowerCave ──────────────────────────────────────────────
+items.OneBlock_Block_LowerCave.name=OneBlock: Dolná jaskyňa
+items.OneBlock_Crystal_LowerCave.name=Kryštál: Dolná jaskyňa
+items.OneBlock_Crystal_LowerCave.description=Spotrebujte tento kryštál a začnite expedíciu „Dolná jaskyňa“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Stone\n- Rubble Stone\n- Copper Ore\nEntity:\n- Rat\n- Bat\n- Spider\n- Spider Cave\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Medená jaskyňa
+expeditions.LowerCave.name=Dolná jaskyňa
+announcements.expedition_started.LowerCave=Expedícia „Dolná jaskyňa“ sa začala.
+announcements.expedition_completed.LowerCave=Expedícia „Dolná jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.LowerCave=Odomknutá nová expedícia: „Dolná jaskyňa“
+progress.expedition.LowerCave=Dolná jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── CopperCave ─────────────────────────────────────────────
+items.OneBlock_Block_CopperCave.name=OneBlock: Medená jaskyňa
+items.OneBlock_Crystal_CopperCave.name=Kryštál: Medená jaskyňa
+items.OneBlock_Crystal_CopperCave.description=Spotrebujte tento kryštál a začnite expedíciu „Medená jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Stone\n- Rubble Stone\n- Copper Ore\n- Iron Ore\nEntity:\n- Bat\n- Rat\n- Goblin Miner\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Gobliní prepad
+expeditions.CopperCave.name=Medená jaskyňa
+announcements.expedition_started.CopperCave=Expedícia „Medená jaskyňa“ sa začala.
+announcements.expedition_completed.CopperCave=Expedícia „Medená jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.CopperCave=Odomknutá nová expedícia: „Medená jaskyňa“
+progress.expedition.CopperCave=Medená jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── GoblinGank ─────────────────────────────────────────────
+items.OneBlock_Block_GoblinGank.name=OneBlock: Gobliní prepad
+items.OneBlock_Crystal_GoblinGank.name=Kryštál: Gobliní prepad
+items.OneBlock_Crystal_GoblinGank.description=Spotrebujte tento kryštál a vstúpte do žalára „Gobliní prepad“.\nPočet vĺn: 3.\nMožná korisť:\nEntity:\n- Goblin Scrapper\n- Goblin Miner\nOdmeny za dokončenie:\n- 12x Expedičný bod\nOdomyká:\n- Železná jaskyňa (možné)\n- Piesočná jaskyňa (možné)
+expeditions.GoblinGank.name=Gobliní prepad
+announcements.dungeon_started.GoblinGank=Žalár „Gobliní prepad“ sa začal.
+announcements.dungeon_completed.GoblinGank=Žalár „Gobliní prepad“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── IronCave ───────────────────────────────────────────────
+items.OneBlock_Block_IronCave.name=OneBlock: Železná jaskyňa
+items.OneBlock_Crystal_IronCave.name=Kryštál: Železná jaskyňa
+items.OneBlock_Crystal_IronCave.description=Spotrebujte tento kryštál a začnite expedíciu „Železná jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Basalt\n- Rubble Basalt\n- Iron Ore\n- Thorium Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Scavenger\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Zlatá jaskyňa (možné)\n- Tóriová jaskyňa (možné)
+expeditions.IronCave.name=Železná jaskyňa
+announcements.expedition_started.IronCave=Expedícia „Železná jaskyňa“ sa začala.
+announcements.expedition_completed.IronCave=Expedícia „Železná jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.IronCave=Odomknutá nová expedícia: „Železná jaskyňa“
+progress.expedition.IronCave=Železná jaskyňa: zostáva {0}/{1} blokov
+benchCategories.OneBlockEnchanter_Advanced=Pokročilé kryštály
+
+# GENERATED ─── SandCave ───────────────────────────────────────────────
+items.OneBlock_Block_SandCave.name=OneBlock: Piesočná jaskyňa
+items.OneBlock_Crystal_SandCave.name=Kryštál: Piesočná jaskyňa
+items.OneBlock_Crystal_SandCave.description=Spotrebujte tento kryštál a začnite expedíciu „Piesočná jaskyňa“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nEntity:\n- Bat\n- Spider\n- Cactee\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Piesočná kaverna
+expeditions.SandCave.name=Piesočná jaskyňa
+announcements.expedition_started.SandCave=Expedícia „Piesočná jaskyňa“ sa začala.
+announcements.expedition_completed.SandCave=Expedícia „Piesočná jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SandCave=Odomknutá nová expedícia: „Piesočná jaskyňa“
+progress.expedition.SandCave=Piesočná jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── GoldCave ───────────────────────────────────────────────
+items.OneBlock_Block_GoldCave.name=OneBlock: Zlatá jaskyňa
+items.OneBlock_Crystal_GoldCave.name=Kryštál: Zlatá jaskyňa
+items.OneBlock_Crystal_GoldCave.description=Spotrebujte tento kryštál a začnite expedíciu „Zlatá jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Basalt\n- Rubble Basalt\n- Gold Ore\n- Topaz Gem\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Thief\nOdmeny za dokončenie:\n- 3x Expedičný bod
+expeditions.GoldCave.name=Zlatá jaskyňa
+announcements.expedition_started.GoldCave=Expedícia „Zlatá jaskyňa“ sa začala.
+announcements.expedition_completed.GoldCave=Expedícia „Zlatá jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.GoldCave=Odomknutá nová expedícia: „Zlatá jaskyňa“
+progress.expedition.GoldCave=Zlatá jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── ThoriumCave ────────────────────────────────────────────
+items.OneBlock_Block_ThoriumCave.name=OneBlock: Tóriová jaskyňa
+items.OneBlock_Crystal_ThoriumCave.name=Kryštál: Tóriová jaskyňa
+items.OneBlock_Crystal_ThoriumCave.description=Spotrebujte tento kryštál a začnite expedíciu „Tóriová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Basalt\n- Rubble Basalt\n- Thorium Ore\n- Cobalt Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Goblinia invázia (možné)\n- Strieborná jaskyňa (možné)
+expeditions.ThoriumCave.name=Tóriová jaskyňa
+announcements.expedition_started.ThoriumCave=Expedícia „Tóriová jaskyňa“ sa začala.
+announcements.expedition_completed.ThoriumCave=Expedícia „Tóriová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.ThoriumCave=Odomknutá nová expedícia: „Tóriová jaskyňa“
+progress.expedition.ThoriumCave=Tóriová jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── GoblinInvasion ─────────────────────────────────────────
+items.OneBlock_Block_GoblinInvasion.name=OneBlock: Goblinia invázia
+items.OneBlock_Crystal_GoblinInvasion.name=Kryštál: Goblinia invázia
+items.OneBlock_Crystal_GoblinInvasion.description=Spotrebujte tento kryštál a vstúpte do žalára „Goblinia invázia“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Goblin Scrapper\n- Goblin Miner\nOdmeny za dokončenie:\n- 24x Expedičný bod\nOdomyká:\n- Kobaltová jaskyňa
+expeditions.GoblinInvasion.name=Goblinia invázia
+announcements.dungeon_started.GoblinInvasion=Žalár „Goblinia invázia“ sa začal.
+announcements.dungeon_completed.GoblinInvasion=Žalár „Goblinia invázia“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── SilverCave ─────────────────────────────────────────────
+items.OneBlock_Block_SilverCave.name=OneBlock: Strieborná jaskyňa
+items.OneBlock_Crystal_SilverCave.name=Kryštál: Strieborná jaskyňa
+items.OneBlock_Crystal_SilverCave.description=Spotrebujte tento kryštál a začnite expedíciu „Strieborná jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Shale\n- Rubble Shale\n- Silver Ore\n- Sapphire Gem\nEntity:\n- Goblin Miner\n- Spider Cave\n- Goblin Thief\nOdmeny za dokončenie:\n- 4x Expedičný bod
+expeditions.SilverCave.name=Strieborná jaskyňa
+announcements.expedition_started.SilverCave=Expedícia „Strieborná jaskyňa“ sa začala.
+announcements.expedition_completed.SilverCave=Expedícia „Strieborná jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SilverCave=Odomknutá nová expedícia: „Strieborná jaskyňa“
+progress.expedition.SilverCave=Strieborná jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── CobaltCave ─────────────────────────────────────────────
+items.OneBlock_Block_CobaltCave.name=OneBlock: Kobaltová jaskyňa
+items.OneBlock_Crystal_CobaltCave.name=Kryštál: Kobaltová jaskyňa
+items.OneBlock_Crystal_CobaltCave.description=Spotrebujte tento kryštál a začnite expedíciu „Kobaltová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Shale\n- Rubble Shale\n- Cobalt Ore\n- Adamantite Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Adamantitová jaskyňa (možné)\n- Jaskyňa drahokamov (možné)\n- Ohnivá jaskyňa (možné)
+expeditions.CobaltCave.name=Kobaltová jaskyňa
+announcements.expedition_started.CobaltCave=Expedícia „Kobaltová jaskyňa“ sa začala.
+announcements.expedition_completed.CobaltCave=Expedícia „Kobaltová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.CobaltCave=Odomknutá nová expedícia: „Kobaltová jaskyňa“
+progress.expedition.CobaltCave=Kobaltová jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── AdamantiteCave ─────────────────────────────────────────
+items.OneBlock_Block_AdamantiteCave.name=OneBlock: Adamantitová jaskyňa
+items.OneBlock_Crystal_AdamantiteCave.name=Kryštál: Adamantitová jaskyňa
+items.OneBlock_Crystal_AdamantiteCave.description=Spotrebujte tento kryštál a začnite expedíciu „Adamantitová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Hlboká jaskyňa drahokamov (možné)\n- Mithrilová jaskyňa (možné)
+expeditions.AdamantiteCave.name=Adamantitová jaskyňa
+announcements.expedition_started.AdamantiteCave=Expedícia „Adamantitová jaskyňa“ sa začala.
+announcements.expedition_completed.AdamantiteCave=Expedícia „Adamantitová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.AdamantiteCave=Odomknutá nová expedícia: „Adamantitová jaskyňa“
+progress.expedition.AdamantiteCave=Adamantitová jaskyňa: zostáva {0}/{1} blokov
+benchCategories.OneBlockEnchanter_Difficult=Náročné kryštály
+
+# GENERATED ─── GemCave ────────────────────────────────────────────────
+items.OneBlock_Block_GemCave.name=OneBlock: Jaskyňa drahokamov
+items.OneBlock_Crystal_GemCave.name=Kryštál: Jaskyňa drahokamov
+items.OneBlock_Crystal_GemCave.description=Spotrebujte tento kryštál a začnite expedíciu „Jaskyňa drahokamov“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rubble Shale\n- Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\nEntity:\n- Spider Cave\n- Goblin Thief\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 5x Expedičný bod
+expeditions.GemCave.name=Jaskyňa drahokamov
+announcements.expedition_started.GemCave=Expedícia „Jaskyňa drahokamov“ sa začala.
+announcements.expedition_completed.GemCave=Expedícia „Jaskyňa drahokamov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.GemCave=Odomknutá nová expedícia: „Jaskyňa drahokamov“
+progress.expedition.GemCave=Jaskyňa drahokamov: zostáva {0}/{1} blokov
+
+# GENERATED ─── FireCave ───────────────────────────────────────────────
+items.OneBlock_Block_FireCave.name=OneBlock: Ohnivá jaskyňa
+items.OneBlock_Crystal_FireCave.name=Kryštál: Ohnivá jaskyňa
+items.OneBlock_Crystal_FireCave.description=Spotrebujte tento kryštál a začnite expedíciu „Ohnivá jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntity:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Pekelná brána
+expeditions.FireCave.name=Ohnivá jaskyňa
+announcements.expedition_started.FireCave=Expedícia „Ohnivá jaskyňa“ sa začala.
+announcements.expedition_completed.FireCave=Expedícia „Ohnivá jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FireCave=Odomknutá nová expedícia: „Ohnivá jaskyňa“
+progress.expedition.FireCave=Ohnivá jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── GemDeepCave ────────────────────────────────────────────
+items.OneBlock_Block_GemDeepCave.name=OneBlock: Hlboká jaskyňa drahokamov
+items.OneBlock_Crystal_GemDeepCave.name=Kryštál: Hlboká jaskyňa drahokamov
+items.OneBlock_Crystal_GemDeepCave.description=Spotrebujte tento kryštál a začnite expedíciu „Hlboká jaskyňa drahokamov“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Shale\n- Rubble Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\n- Diamond Gem\nEntity:\n- Spider Cave\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 7x Expedičný bod
+expeditions.GemDeepCave.name=Hlboká jaskyňa drahokamov
+announcements.expedition_started.GemDeepCave=Expedícia „Hlboká jaskyňa drahokamov“ sa začala.
+announcements.expedition_completed.GemDeepCave=Expedícia „Hlboká jaskyňa drahokamov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.GemDeepCave=Odomknutá nová expedícia: „Hlboká jaskyňa drahokamov“
+progress.expedition.GemDeepCave=Hlboká jaskyňa drahokamov: zostáva {0}/{1} blokov
+
+# GENERATED ─── MithrilCave ────────────────────────────────────────────
+items.OneBlock_Block_MithrilCave.name=OneBlock: Mithrilová jaskyňa
+items.OneBlock_Crystal_MithrilCave.name=Kryštál: Mithrilová jaskyňa
+items.OneBlock_Crystal_MithrilCave.description=Spotrebujte tento kryštál a začnite expedíciu „Mithrilová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rock Ledge Brick\n- Mithril Ore\n- Onyxium Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Ogre\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Onýxiová jaskyňa
+expeditions.MithrilCave.name=Mithrilová jaskyňa
+announcements.expedition_started.MithrilCave=Expedícia „Mithrilová jaskyňa“ sa začala.
+announcements.expedition_completed.MithrilCave=Expedícia „Mithrilová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.MithrilCave=Odomknutá nová expedícia: „Mithrilová jaskyňa“
+progress.expedition.MithrilCave=Mithrilová jaskyňa: zostáva {0}/{1} blokov
+benchCategories.OneBlockEnchanter_Hard=Ťažké kryštály
+
+# GENERATED ─── OnyxiumCave ────────────────────────────────────────────
+items.OneBlock_Block_OnyxiumCave.name=OneBlock: Onýxiová jaskyňa
+items.OneBlock_Crystal_OnyxiumCave.name=Kryštál: Onýxiová jaskyňa
+items.OneBlock_Crystal_OnyxiumCave.description=Spotrebujte tento kryštál a začnite expedíciu „Onýxiová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rock Ledge Brick\n- Onyxium Ore\n- Prisma Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Crawler Void\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Prizmatická jaskyňa
+expeditions.OnyxiumCave.name=Onýxiová jaskyňa
+announcements.expedition_started.OnyxiumCave=Expedícia „Onýxiová jaskyňa“ sa začala.
+announcements.expedition_completed.OnyxiumCave=Expedícia „Onýxiová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.OnyxiumCave=Odomknutá nová expedícia: „Onýxiová jaskyňa“
+progress.expedition.OnyxiumCave=Onýxiová jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── PrismaCave ─────────────────────────────────────────────
+items.OneBlock_Block_PrismaCave.name=OneBlock: Prizmatická jaskyňa
+items.OneBlock_Crystal_PrismaCave.name=Kryštál: Prizmatická jaskyňa
+items.OneBlock_Crystal_PrismaCave.description=Spotrebujte tento kryštál a začnite expedíciu „Prizmatická jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rubble Volcanic\n- Prisma Ore\n- Zephyr Gem\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Crawler Void\n- Eye Void\nOdmeny za dokončenie:\n- 10x Expedičný bod
+expeditions.PrismaCave.name=Prizmatická jaskyňa
+announcements.expedition_started.PrismaCave=Expedícia „Prizmatická jaskyňa“ sa začala.
+announcements.expedition_completed.PrismaCave=Expedícia „Prizmatická jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.PrismaCave=Odomknutá nová expedícia: „Prizmatická jaskyňa“
+progress.expedition.PrismaCave=Prizmatická jaskyňa: zostáva {0}/{1} blokov
+benchCategories.OneBlockEnchanter_Expert=Expertné kryštály
+
+# GENERATED ─── SandCavern ─────────────────────────────────────────────
+items.OneBlock_Block_SandCavern.name=OneBlock: Piesočná kaverna
+items.OneBlock_Crystal_SandCavern.name=Kryštál: Piesočná kaverna
+items.OneBlock_Crystal_SandCavern.description=Spotrebujte tento kryštál a začnite expedíciu „Piesočná kaverna“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rubble Stone\n- Stone\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nEntity:\n- Bat\n- Cactee\n- Zombie Sand\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Púšť
+expeditions.SandCavern.name=Piesočná kaverna
+announcements.expedition_started.SandCavern=Expedícia „Piesočná kaverna“ sa začala.
+announcements.expedition_completed.SandCavern=Expedícia „Piesočná kaverna“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SandCavern=Odomknutá nová expedícia: „Piesočná kaverna“
+progress.expedition.SandCavern=Piesočná kaverna: zostáva {0}/{1} blokov
+
+# GENERATED ─── Desert ─────────────────────────────────────────────────
+items.OneBlock_Block_Desert.name=OneBlock: Púšť
+items.OneBlock_Crystal_Desert.name=Kryštál: Púšť
+items.OneBlock_Crystal_Desert.description=Spotrebujte tento kryštál a začnite expedíciu „Púšť“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nEntity:\n- Cactee\n- Camel\n- Camel Calf\n- Zombie Sand\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Suchý priesmyk džungľou (možné)\n- Vstup do púštneho chrámu (možné)\n- Vnútorná púšť (možné)\n- Suchý tábor Trorkov (možné)
+expeditions.Desert.name=Púšť
+announcements.expedition_started.Desert=Expedícia „Púšť“ sa začala.
+announcements.expedition_completed.Desert=Expedícia „Púšť“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Desert=Odomknutá nová expedícia: „Púšť“
+progress.expedition.Desert=Púšť: zostáva {0}/{1} blokov
+
+# GENERATED ─── ForestEntry ────────────────────────────────────────────
+items.OneBlock_Block_ForestEntry.name=OneBlock: Vstup do lesa
+items.OneBlock_Crystal_ForestEntry.name=Kryštál: Vstup do lesa
+items.OneBlock_Crystal_ForestEntry.description=Spotrebujte tento kryštál a začnite expedíciu „Vstup do lesa“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Brown Cap Mushroom\n- Brown Common Mushroom\n- Brown Shelve Mushroom\nEntity:\n- Boar\n- Boar Piglet\n- Pigeon\n- Fox\n- Wolf Black\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Rybník (možné)\n- Les (možné)
+expeditions.ForestEntry.name=Vstup do lesa
+announcements.expedition_started.ForestEntry=Expedícia „Vstup do lesa“ sa začala.
+announcements.expedition_completed.ForestEntry=Expedícia „Vstup do lesa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.ForestEntry=Odomknutá nová expedícia: „Vstup do lesa“
+progress.expedition.ForestEntry=Vstup do lesa: zostáva {0}/{1} blokov
+
+# GENERATED ─── Pond ───────────────────────────────────────────────────
+items.OneBlock_Block_Pond.name=OneBlock: Rybník
+items.OneBlock_Crystal_Pond.name=Kryštál: Rybník
+items.OneBlock_Crystal_Pond.description=Spotrebujte tento kryštál a začnite expedíciu „Rybník“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Soil Dirt\nEntity:\n- Frog Green\n- Duck\n- Bluegill\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Rieka
+expeditions.Pond.name=Rybník
+announcements.expedition_started.Pond=Expedícia „Rybník“ sa začala.
+announcements.expedition_completed.Pond=Expedícia „Rybník“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Pond=Odomknutá nová expedícia: „Rybník“
+progress.expedition.Pond=Rybník: zostáva {0}/{1} blokov
+
+# GENERATED ─── River ──────────────────────────────────────────────────
+items.OneBlock_Block_River.name=OneBlock: Rieka
+items.OneBlock_Crystal_River.name=Kryštál: Rieka
+items.OneBlock_Crystal_River.description=Spotrebujte tento kryštál a začnite expedíciu „Rieka“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fish Bluegill Item\n- Rubble Stone\n- Stone\n- Soil Clay\n- Plant Moss Green\nEntity:\n- Frog Green\n- Duck\n- Bluegill\n- Crab\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Jazero (možné)\n- More (možné)\n- Pobrežie (možné)
+expeditions.River.name=Rieka
+announcements.expedition_started.River=Expedícia „Rieka“ sa začala.
+announcements.expedition_completed.River=Expedícia „Rieka“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.River=Odomknutá nová expedícia: „Rieka“
+progress.expedition.River=Rieka: zostáva {0}/{1} blokov
+
+# GENERATED ─── Lake ───────────────────────────────────────────────────
+items.OneBlock_Block_Lake.name=OneBlock: Jazero
+items.OneBlock_Crystal_Lake.name=Kryštál: Jazero
+items.OneBlock_Crystal_Lake.description=Spotrebujte tento kryštál a začnite expedíciu „Jazero“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\nEntity:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nOdmeny za dokončenie:\n- 2x Expedičný bod
+expeditions.Lake.name=Jazero
+announcements.expedition_started.Lake=Expedícia „Jazero“ sa začala.
+announcements.expedition_completed.Lake=Expedícia „Jazero“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Lake=Odomknutá nová expedícia: „Jazero“
+progress.expedition.Lake=Jazero: zostáva {0}/{1} blokov
+
+# GENERATED ─── Sea ────────────────────────────────────────────────────
+items.OneBlock_Block_Sea.name=OneBlock: More
+items.OneBlock_Crystal_Sea.name=Kryštál: More
+items.OneBlock_Crystal_Sea.description=Spotrebujte tento kryštál a začnite expedíciu „More“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rock Aqua Brick\n- Plant Coral Block Yellow\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\n- Fish Salmon Item\n- Fish Crab Item\n- Fish Lobster Item\n- Fish Shark Hammerhead Item\nEntity:\n- Crab\n- Bluegill\n- Skeleton Pirate Striker\n- Skeleton Pirate Gunner\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Pirátsky vrak
+expeditions.Sea.name=More
+announcements.expedition_started.Sea=Expedícia „More“ sa začala.
+announcements.expedition_completed.Sea=Expedícia „More“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Sea=Odomknutá nová expedícia: „More“
+progress.expedition.Sea=More: zostáva {0}/{1} blokov
+
+# GENERATED ─── PirateShipwreck ────────────────────────────────────────
+items.OneBlock_Block_PirateShipwreck.name=OneBlock: Pirátsky vrak
+items.OneBlock_Crystal_PirateShipwreck.name=Kryštál: Pirátsky vrak
+items.OneBlock_Crystal_PirateShipwreck.description=Spotrebujte tento kryštál a vstúpte do žalára „Pirátsky vrak“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Skeleton Pirate Striker\n- Skeleton Pirate Gunner\n- Skeleton Pirate Captain\nOdmeny za dokončenie:\n- 30x Expedičný bod
+expeditions.PirateShipwreck.name=Pirátsky vrak
+announcements.dungeon_started.PirateShipwreck=Žalár „Pirátsky vrak“ sa začal.
+announcements.dungeon_completed.PirateShipwreck=Žalár „Pirátsky vrak“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── Coastline ──────────────────────────────────────────────
+items.OneBlock_Block_Coastline.name=OneBlock: Pobrežie
+items.OneBlock_Crystal_Coastline.name=Kryštál: Pobrežie
+items.OneBlock_Crystal_Coastline.description=Spotrebujte tento kryštál a začnite expedíciu „Pobrežie“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\nEntity:\n- Crab\n- Duck\n- Cactee\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Morská kaverna
+expeditions.Coastline.name=Pobrežie
+announcements.expedition_started.Coastline=Expedícia „Pobrežie“ sa začala.
+announcements.expedition_completed.Coastline=Expedícia „Pobrežie“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Coastline=Odomknutá nová expedícia: „Pobrežie“
+progress.expedition.Coastline=Pobrežie: zostáva {0}/{1} blokov
+
+# GENERATED ─── SeaCavern ──────────────────────────────────────────────
+items.OneBlock_Block_SeaCavern.name=OneBlock: Morská kaverna
+items.OneBlock_Crystal_SeaCavern.name=Kryštál: Morská kaverna
+items.OneBlock_Crystal_SeaCavern.description=Spotrebujte tento kryštál a začnite expedíciu „Morská kaverna“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Rock Aqua Brick\n- Sapphire Gem\n- Diamond Gem\nEntity:\n- Crab\n- Spider Cave\n- Scarak Louse\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Zamorené morské hniezdo
+expeditions.SeaCavern.name=Morská kaverna
+announcements.expedition_started.SeaCavern=Expedícia „Morská kaverna“ sa začala.
+announcements.expedition_completed.SeaCavern=Expedícia „Morská kaverna“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SeaCavern=Odomknutá nová expedícia: „Morská kaverna“
+progress.expedition.SeaCavern=Morská kaverna: zostáva {0}/{1} blokov
+
+# GENERATED ─── SeaInfestedNest ────────────────────────────────────────
+items.OneBlock_Block_SeaInfestedNest.name=OneBlock: Zamorené morské hniezdo
+items.OneBlock_Crystal_SeaInfestedNest.name=Kryštál: Zamorené morské hniezdo
+items.OneBlock_Crystal_SeaInfestedNest.description=Spotrebujte tento kryštál a začnite expedíciu „Zamorené morské hniezdo“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Soil Hive\n- Soil Hive Brick\n- Scaled Hide\n- Scaled Leather\n- Sapphire Gem\n- Diamond Gem\nEntity:\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Morská príšera
+expeditions.SeaInfestedNest.name=Zamorené morské hniezdo
+announcements.expedition_started.SeaInfestedNest=Expedícia „Zamorené morské hniezdo“ sa začala.
+announcements.expedition_completed.SeaInfestedNest=Expedícia „Zamorené morské hniezdo“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SeaInfestedNest=Odomknutá nová expedícia: „Zamorené morské hniezdo“
+progress.expedition.SeaInfestedNest=Zamorené morské hniezdo: zostáva {0}/{1} blokov
+
+# GENERATED ─── SeaMonster ─────────────────────────────────────────────
+items.OneBlock_Block_SeaMonster.name=OneBlock: Morská príšera
+items.OneBlock_Crystal_SeaMonster.name=Kryštál: Morská príšera
+items.OneBlock_Crystal_SeaMonster.description=Spotrebujte tento kryštál a vstúpte do žalára „Morská príšera“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Scarak Louse\n- Spider\n- Scarak Fighter\n- Spider Cave\n- Scarak Defender\n- Scarak Seeker\n- Scarak Broodmother\nOdmeny za dokončenie:\n- 40x Expedičný bod
+expeditions.SeaMonster.name=Morská príšera
+announcements.dungeon_started.SeaMonster=Žalár „Morská príšera“ sa začal.
+announcements.dungeon_completed.SeaMonster=Žalár „Morská príšera“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── Forest ─────────────────────────────────────────────────
+items.OneBlock_Block_Forest.name=OneBlock: Les
+items.OneBlock_Crystal_Forest.name=Kryštál: Les
+items.OneBlock_Crystal_Forest.description=Spotrebujte tento kryštál a začnite expedíciu „Les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Apple Fruit\nEntity:\n- Boar\n- Boar Piglet\n- Fox\n- Pigeon\n- Deer Doe\n- Wolf Black\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Vyprahnutý les (možné)\n- Močiar (možné)\n- Hlboký les (možné)\n- Okraj džungle (možné)
+expeditions.Forest.name=Les
+announcements.expedition_started.Forest=Expedícia „Les“ sa začala.
+announcements.expedition_completed.Forest=Expedícia „Les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Forest=Odomknutá nová expedícia: „Les“
+progress.expedition.Forest=Les: zostáva {0}/{1} blokov
+
+# GENERATED ─── AridForest ─────────────────────────────────────────────
+items.OneBlock_Block_AridForest.name=OneBlock: Vyprahnutý les
+items.OneBlock_Crystal_AridForest.name=Kryštál: Vyprahnutý les
+items.OneBlock_Crystal_AridForest.description=Spotrebujte tento kryštál a začnite expedíciu „Vyprahnutý les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Ash Trunk\n- Bottletree Trunk\n- Plant Sapling Bottletree\n- Plant Leaves Bottle\n- Plant Seeds Bottletree\n- Sandstone\n- Rubble Sandstone\nEntity:\n- Fox\n- Armadillo\n- Cactee\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Púšť
+expeditions.AridForest.name=Vyprahnutý les
+announcements.expedition_started.AridForest=Expedícia „Vyprahnutý les“ sa začala.
+announcements.expedition_completed.AridForest=Expedícia „Vyprahnutý les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.AridForest=Odomknutá nová expedícia: „Vyprahnutý les“
+progress.expedition.AridForest=Vyprahnutý les: zostáva {0}/{1} blokov
+
+# GENERATED ─── Swamp ──────────────────────────────────────────────────
+items.OneBlock_Block_Swamp.name=OneBlock: Močiar
+items.OneBlock_Crystal_Swamp.name=Kryštál: Močiar
+items.OneBlock_Crystal_Swamp.description=Spotrebujte tento kryštál a začnite expedíciu „Močiar“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Dirt\n- Soil Clay\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Yellow Mushroom Block\nEntity:\n- Frog Green\n- Crocodile\n- Fen Stalker\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Začarovaný les
+expeditions.Swamp.name=Močiar
+announcements.expedition_started.Swamp=Expedícia „Močiar“ sa začala.
+announcements.expedition_completed.Swamp=Expedícia „Močiar“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Swamp=Odomknutá nová expedícia: „Močiar“
+progress.expedition.Swamp=Močiar: zostáva {0}/{1} blokov
+
+# GENERATED ─── EnchantedForest ────────────────────────────────────────
+items.OneBlock_Block_EnchantedForest.name=OneBlock: Začarovaný les
+items.OneBlock_Crystal_EnchantedForest.name=Kryštál: Začarovaný les
+items.OneBlock_Crystal_EnchantedForest.description=Spotrebujte tento kryštál a začnite expedíciu „Začarovaný les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Goldentree\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Emerald Gem\n- Topaz Gem\nEntity:\n- Deer Doe\n- Bluebird\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Vílí rybník
+expeditions.EnchantedForest.name=Začarovaný les
+announcements.expedition_started.EnchantedForest=Expedícia „Začarovaný les“ sa začala.
+announcements.expedition_completed.EnchantedForest=Expedícia „Začarovaný les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.EnchantedForest=Odomknutá nová expedícia: „Začarovaný les“
+progress.expedition.EnchantedForest=Začarovaný les: zostáva {0}/{1} blokov
+
+# GENERATED ─── FairyPond ──────────────────────────────────────────────
+items.OneBlock_Block_FairyPond.name=OneBlock: Vílí rybník
+items.OneBlock_Crystal_FairyPond.name=Kryštál: Vílí rybník
+items.OneBlock_Crystal_FairyPond.description=Spotrebujte tento kryštál a začnite expedíciu „Vílí rybník“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Plant Flower Common Pink2\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Plant Petals Yellow\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Topaz Gem\nEntity:\n- Frog Green\n- Duck\n- Bluebird\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 5x Expedičný bod
+expeditions.FairyPond.name=Vílí rybník
+announcements.expedition_started.FairyPond=Expedícia „Vílí rybník“ sa začala.
+announcements.expedition_completed.FairyPond=Expedícia „Vílí rybník“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FairyPond=Odomknutá nová expedícia: „Vílí rybník“
+progress.expedition.FairyPond=Vílí rybník: zostáva {0}/{1} blokov
+
+# GENERATED ─── DeepForest ─────────────────────────────────────────────
+items.OneBlock_Block_DeepForest.name=OneBlock: Hlboký les
+items.OneBlock_Crystal_DeepForest.name=Kryštál: Hlboký les
+items.OneBlock_Crystal_DeepForest.description=Spotrebujte tento kryštál a začnite expedíciu „Hlboký les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Beech Trunk\n- Ash Trunk\n- Maple Trunk\n- Beech Sapling\n- Plant Sapling Ash\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Trunk\n- Emerald Gem\nEntity:\n- Boar\n- Fox\n- Wolf Black\n- Crawler\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Temný les (možné)\n- Okraj džungle (možné)\n- Lovisko Trorkov (možné)
+expeditions.DeepForest.name=Hlboký les
+announcements.expedition_started.DeepForest=Expedícia „Hlboký les“ sa začala.
+announcements.expedition_completed.DeepForest=Expedícia „Hlboký les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.DeepForest=Odomknutá nová expedícia: „Hlboký les“
+progress.expedition.DeepForest=Hlboký les: zostáva {0}/{1} blokov
+
+# GENERATED ─── DarkForest ─────────────────────────────────────────────
+items.OneBlock_Block_DarkForest.name=OneBlock: Temný les
+items.OneBlock_Crystal_DarkForest.name=Kryštál: Temný les
+items.OneBlock_Crystal_DarkForest.description=Spotrebujte tento kryštál a začnite expedíciu „Temný les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Plant Leaves Bramble\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Mycelium\n- Plant Crop Mushroom Shelve Yellow\n- Bone Fragment\n- Ruby Gem\nEntity:\n- Wolf Black\n- Crawler\n- Zombie\n- Zombie Aberrant\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Spálený les (možné)\n- Prekliaty les (možné)
+expeditions.DarkForest.name=Temný les
+announcements.expedition_started.DarkForest=Expedícia „Temný les“ sa začala.
+announcements.expedition_completed.DarkForest=Expedícia „Temný les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.DarkForest=Odomknutá nová expedícia: „Temný les“
+progress.expedition.DarkForest=Temný les: zostáva {0}/{1} blokov
+
+# GENERATED ─── BurnedForest ───────────────────────────────────────────
+items.OneBlock_Block_BurnedForest.name=OneBlock: Spálený les
+items.OneBlock_Crystal_BurnedForest.name=Kryštál: Spálený les
+items.OneBlock_Crystal_BurnedForest.description=Spotrebujte tento kryštál a začnite expedíciu „Spálený les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Ash Trunk\n- Fire Essence\n- Volcanic\n- Rubble Volcanic\n- Powder Boom\n- Thorium Ore\nEntity:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Archer\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Ohnivá krajina
+expeditions.BurnedForest.name=Spálený les
+announcements.expedition_started.BurnedForest=Expedícia „Spálený les“ sa začala.
+announcements.expedition_completed.BurnedForest=Expedícia „Spálený les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.BurnedForest=Odomknutá nová expedícia: „Spálený les“
+progress.expedition.BurnedForest=Spálený les: zostáva {0}/{1} blokov
+
+# GENERATED ─── CursedForest ───────────────────────────────────────────
+items.OneBlock_Block_CursedForest.name=OneBlock: Prekliaty les
+items.OneBlock_Crystal_CursedForest.name=Kryštál: Prekliaty les
+items.OneBlock_Crystal_CursedForest.description=Spotrebujte tento kryštál a začnite expedíciu „Prekliaty les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Zephyr Gem\nEntity:\n- Zombie\n- Zombie Aberrant\n- Skeleton Scout\n- Skeleton Archer\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Les Vyhnancov (možné)\n- Cintorín (možné)
+expeditions.CursedForest.name=Prekliaty les
+announcements.expedition_started.CursedForest=Expedícia „Prekliaty les“ sa začala.
+announcements.expedition_completed.CursedForest=Expedícia „Prekliaty les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.CursedForest=Odomknutá nová expedícia: „Prekliaty les“
+progress.expedition.CursedForest=Prekliaty les: zostáva {0}/{1} blokov
+
+# GENERATED ─── Graveyard ──────────────────────────────────────────────
+items.OneBlock_Block_Graveyard.name=OneBlock: Cintorín
+items.OneBlock_Crystal_Graveyard.name=Kryštál: Cintorín
+items.OneBlock_Crystal_Graveyard.description=Spotrebujte tento kryštál a začnite expedíciu „Cintorín“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Furniture Village Tombstone\n- Furniture Ancient Coffin\n- Weapon Club Zombie Arm\n- Weapon Club Zombie Leg\nEntity:\n- Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Skeleton Soldier\n- Skeleton Mage\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Chrám nemŕtvych
+expeditions.Graveyard.name=Cintorín
+announcements.expedition_started.Graveyard=Expedícia „Cintorín“ sa začala.
+announcements.expedition_completed.Graveyard=Expedícia „Cintorín“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Graveyard=Odomknutá nová expedícia: „Cintorín“
+progress.expedition.Graveyard=Cintorín: zostáva {0}/{1} blokov
+
+# GENERATED ─── UndeadTemple ───────────────────────────────────────────
+items.OneBlock_Block_UndeadTemple.name=OneBlock: Chrám nemŕtvych
+items.OneBlock_Crystal_UndeadTemple.name=Kryštál: Chrám nemŕtvych
+items.OneBlock_Crystal_UndeadTemple.description=Spotrebujte tento kryštál a vstúpte do žalára „Chrám nemŕtvych“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Skeleton Scout\n- Zombie\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Knight\n- Skeleton Ranger\n- Skeleton Mage\nOdmeny za dokončenie:\n- 45x Expedičný bod\nOdomyká:\n- Portál Prázdnoty
+expeditions.UndeadTemple.name=Chrám nemŕtvych
+announcements.dungeon_started.UndeadTemple=Žalár „Chrám nemŕtvych“ sa začal.
+announcements.dungeon_completed.UndeadTemple=Žalár „Chrám nemŕtvych“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── VoidPortal ─────────────────────────────────────────────
+items.OneBlock_Block_VoidPortal.name=OneBlock: Portál Prázdnoty
+items.OneBlock_Crystal_VoidPortal.name=Kryštál: Portál Prázdnoty
+items.OneBlock_Crystal_VoidPortal.description=Spotrebujte tento kryštál a začnite expedíciu „Portál Prázdnoty“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Rock Runic Brick\n- Rock Runic Cobble\n- Rock Runic Dark Brick\n- Rock Gem Voidstone\n- Void Essence\n- Voidheart\n- Onyxium Ore\nEntity:\n- Larva Void\n- Crawler Void\n- Eye Void\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Chrám Prázdnoty (možné)\n- Prah duchov (možné)
+expeditions.VoidPortal.name=Portál Prázdnoty
+announcements.expedition_started.VoidPortal=Expedícia „Portál Prázdnoty“ sa začala.
+announcements.expedition_completed.VoidPortal=Expedícia „Portál Prázdnoty“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.VoidPortal=Odomknutá nová expedícia: „Portál Prázdnoty“
+progress.expedition.VoidPortal=Portál Prázdnoty: zostáva {0}/{1} blokov
+
+# GENERATED ─── VoidTemple ─────────────────────────────────────────────
+items.OneBlock_Block_VoidTemple.name=OneBlock: Chrám Prázdnoty
+items.OneBlock_Crystal_VoidTemple.name=Kryštál: Chrám Prázdnoty
+items.OneBlock_Crystal_VoidTemple.description=Spotrebujte tento kryštál a vstúpte do žalára „Chrám Prázdnoty“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Larva Void\n- Crawler Void\n- Eye Void\n- Spawn Void\n- Wraith\nOdmeny za dokončenie:\n- 75x Expedičný bod
+expeditions.VoidTemple.name=Chrám Prázdnoty
+announcements.dungeon_started.VoidTemple=Žalár „Chrám Prázdnoty“ sa začal.
+announcements.dungeon_completed.VoidTemple=Žalár „Chrám Prázdnoty“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── OutlanderForest ────────────────────────────────────────
+items.OneBlock_Block_OutlanderForest.name=OneBlock: Les Vyhnancov
+items.OneBlock_Crystal_OutlanderForest.name=Kryštál: Les Vyhnancov
+items.OneBlock_Crystal_OutlanderForest.description=Spotrebujte tento kryštál a začnite expedíciu „Les Vyhnancov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Prismic Hide\n- Zephyr Gem\nEntity:\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Prepad Vyhnancov (možné)\n- Planina Vyhnancov (možné)
+expeditions.OutlanderForest.name=Les Vyhnancov
+announcements.expedition_started.OutlanderForest=Expedícia „Les Vyhnancov“ sa začala.
+announcements.expedition_completed.OutlanderForest=Expedícia „Les Vyhnancov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.OutlanderForest=Odomknutá nová expedícia: „Les Vyhnancov“
+progress.expedition.OutlanderForest=Les Vyhnancov: zostáva {0}/{1} blokov
+
+# GENERATED ─── OutlanderPlain ─────────────────────────────────────────
+items.OneBlock_Block_OutlanderPlain.name=OneBlock: Planina Vyhnancov
+items.OneBlock_Crystal_OutlanderPlain.name=Kryštál: Planina Vyhnancov
+items.OneBlock_Crystal_OutlanderPlain.description=Spotrebujte tento kryštál a začnite expedíciu „Planina Vyhnancov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Wheat\n- Corn\n- Carrot\n- Prismic Hide\n- Prismic Leather\n- Adamantite Ore\nEntity:\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Berserker\n- Outlander Marauder\n- Outlander Priest\n- Outlander Brute\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Mesto Vyhnancov (možné)\n- Tundra (možné)
+expeditions.OutlanderPlain.name=Planina Vyhnancov
+announcements.expedition_started.OutlanderPlain=Expedícia „Planina Vyhnancov“ sa začala.
+announcements.expedition_completed.OutlanderPlain=Expedícia „Planina Vyhnancov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.OutlanderPlain=Odomknutá nová expedícia: „Planina Vyhnancov“
+progress.expedition.OutlanderPlain=Planina Vyhnancov: zostáva {0}/{1} blokov
+
+# GENERATED ─── OutlanderGank ──────────────────────────────────────────
+items.OneBlock_Block_OutlanderGank.name=OneBlock: Prepad Vyhnancov
+items.OneBlock_Crystal_OutlanderGank.name=Kryštál: Prepad Vyhnancov
+items.OneBlock_Crystal_OutlanderGank.description=Spotrebujte tento kryštál a vstúpte do žalára „Prepad Vyhnancov“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\n- Outlander Berserker\nOdmeny za dokončenie:\n- 42x Expedičný bod
+expeditions.OutlanderGank.name=Prepad Vyhnancov
+announcements.dungeon_started.OutlanderGank=Žalár „Prepad Vyhnancov“ sa začal.
+announcements.dungeon_completed.OutlanderGank=Žalár „Prepad Vyhnancov“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── OutlanderCity ──────────────────────────────────────────
+items.OneBlock_Block_OutlanderCity.name=OneBlock: Mesto Vyhnancov
+items.OneBlock_Crystal_OutlanderCity.name=Kryštál: Mesto Vyhnancov
+items.OneBlock_Crystal_OutlanderCity.description=Spotrebujte tento kryštál a vstúpte do žalára „Mesto Vyhnancov“.\nPočet vĺn: 5.\nMožná korisť:\nEntity:\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\n- Outlander Berserker\n- Outlander Priest\n- Outlander Brute\nOdmeny za dokončenie:\n- 60x Expedičný bod
+expeditions.OutlanderCity.name=Mesto Vyhnancov
+announcements.dungeon_started.OutlanderCity=Žalár „Mesto Vyhnancov“ sa začal.
+announcements.dungeon_completed.OutlanderCity=Žalár „Mesto Vyhnancov“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── Tundra ─────────────────────────────────────────────────
+items.OneBlock_Block_Tundra.name=OneBlock: Tundra
+items.OneBlock_Crystal_Tundra.name=Kryštál: Tundra
+items.OneBlock_Crystal_Tundra.description=Spotrebujte tento kryštál a začnite expedíciu „Tundra“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Ice\n- Rubble Ice\n- Ice Trunk\n- Plant Seeds Ice\n- Ice Essence\nEntity:\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Scout\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Zamrznutý les (možné)\n- Ľadová krajina (možné)
+expeditions.Tundra.name=Tundra
+announcements.expedition_started.Tundra=Expedícia „Tundra“ sa začala.
+announcements.expedition_completed.Tundra=Expedícia „Tundra“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Tundra=Odomknutá nová expedícia: „Tundra“
+progress.expedition.Tundra=Tundra: zostáva {0}/{1} blokov
+
+# GENERATED ─── FrozenForest ───────────────────────────────────────────
+items.OneBlock_Block_FrozenForest.name=OneBlock: Zamrznutý les
+items.OneBlock_Crystal_FrozenForest.name=Kryštál: Zamrznutý les
+items.OneBlock_Crystal_FrozenForest.description=Spotrebujte tento kryštál a začnite expedíciu „Zamrznutý les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Birch Trunk\n- Birch Sapling\n- Plant Leaves Birch\n- Ice Trunk\n- Ice\n- Rubble Ice\n- Ice Essence\nEntity:\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Ranger\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Ľadový les
+expeditions.FrozenForest.name=Zamrznutý les
+announcements.expedition_started.FrozenForest=Expedícia „Zamrznutý les“ sa začala.
+announcements.expedition_completed.FrozenForest=Expedícia „Zamrznutý les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FrozenForest=Odomknutá nová expedícia: „Zamrznutý les“
+progress.expedition.FrozenForest=Zamrznutý les: zostáva {0}/{1} blokov
+
+# GENERATED ─── IceLand ────────────────────────────────────────────────
+items.OneBlock_Block_IceLand.name=OneBlock: Ľadová krajina
+items.OneBlock_Crystal_IceLand.name=Kryštál: Ľadová krajina
+items.OneBlock_Crystal_IceLand.description=Spotrebujte tento kryštál a začnite expedíciu „Ľadová krajina“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Trunk\n- Ice Essence\nEntity:\n- Zombie Frost\n- Skeleton Frost Scout\n- Golem Crystal Frost\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Ľadová kaverna
+expeditions.IceLand.name=Ľadová krajina
+announcements.expedition_started.IceLand=Expedícia „Ľadová krajina“ sa začala.
+announcements.expedition_completed.IceLand=Expedícia „Ľadová krajina“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.IceLand=Odomknutá nová expedícia: „Ľadová krajina“
+progress.expedition.IceLand=Ľadová krajina: zostáva {0}/{1} blokov
+
+# GENERATED ─── IcyCavern ──────────────────────────────────────────────
+items.OneBlock_Block_IcyCavern.name=OneBlock: Ľadová kaverna
+items.OneBlock_Crystal_IcyCavern.name=Kryštál: Ľadová kaverna
+items.OneBlock_Crystal_IcyCavern.description=Spotrebujte tento kryštál a začnite expedíciu „Ľadová kaverna“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Silver Ore\n- Sapphire Gem\n- Ice Essence\nEntity:\n- Zombie Frost\n- Skeleton Frost Fighter\n- Skeleton Frost Mage\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Yetiho kaverna (možné)\n- Zamrznutý cintorín (možné)
+expeditions.IcyCavern.name=Ľadová kaverna
+announcements.expedition_started.IcyCavern=Expedícia „Ľadová kaverna“ sa začala.
+announcements.expedition_completed.IcyCavern=Expedícia „Ľadová kaverna“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.IcyCavern=Odomknutá nová expedícia: „Ľadová kaverna“
+progress.expedition.IcyCavern=Ľadová kaverna: zostáva {0}/{1} blokov
+
+# GENERATED ─── YetiCavern ─────────────────────────────────────────────
+items.OneBlock_Block_YetiCavern.name=OneBlock: Yetiho kaverna
+items.OneBlock_Crystal_YetiCavern.name=Kryštál: Yetiho kaverna
+items.OneBlock_Crystal_YetiCavern.description=Spotrebujte tento kryštál a začnite expedíciu „Yetiho kaverna“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Diamond Gem\n- Weapon Staff Crystal Ice\nEntity:\n- Golem Crystal Frost\n- Skeleton Frost Knight\n- Dragon Frost\nOdmeny za dokončenie:\n- 10x Expedičný bod\nOdomyká:\n- Ľadový chrám
+expeditions.YetiCavern.name=Yetiho kaverna
+announcements.expedition_started.YetiCavern=Expedícia „Yetiho kaverna“ sa začala.
+announcements.expedition_completed.YetiCavern=Expedícia „Yetiho kaverna“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.YetiCavern=Odomknutá nová expedícia: „Yetiho kaverna“
+progress.expedition.YetiCavern=Yetiho kaverna: zostáva {0}/{1} blokov
+
+# GENERATED ─── IceTemple ──────────────────────────────────────────────
+items.OneBlock_Block_IceTemple.name=OneBlock: Ľadový chrám
+items.OneBlock_Crystal_IceTemple.name=Kryštál: Ľadový chrám
+items.OneBlock_Crystal_IceTemple.description=Spotrebujte tento kryštál a vstúpte do žalára „Ľadový chrám“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Zombie Frost\n- Skeleton Frost Scout\n- Skeleton Frost Fighter\n- Skeleton Frost Ranger\n- Golem Crystal Frost\n- Skeleton Frost Mage\n- Dragon Frost\n- Skeleton Frost Knight\nOdmeny za dokončenie:\n- 75x Expedičný bod
+expeditions.IceTemple.name=Ľadový chrám
+announcements.dungeon_started.IceTemple=Žalár „Ľadový chrám“ sa začal.
+announcements.dungeon_completed.IceTemple=Žalár „Ľadový chrám“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── IcyForest ──────────────────────────────────────────────
+items.OneBlock_Block_IcyForest.name=OneBlock: Ľadový les
+items.OneBlock_Crystal_IcyForest.name=Kryštál: Ľadový les
+items.OneBlock_Crystal_IcyForest.description=Spotrebujte tento kryštál a začnite expedíciu „Ľadový les“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Ice Trunk\n- Plant Seeds Ice\n- Plant Leaves Birch\n- Birch Trunk\n- Ice\n- Ice Essence\nEntity:\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Ranger\n- Golem Crystal Frost\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Prah duchov
+expeditions.IcyForest.name=Ľadový les
+announcements.expedition_started.IcyForest=Expedícia „Ľadový les“ sa začala.
+announcements.expedition_completed.IcyForest=Expedícia „Ľadový les“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.IcyForest=Odomknutá nová expedícia: „Ľadový les“
+progress.expedition.IcyForest=Ľadový les: zostáva {0}/{1} blokov
+
+# GENERATED ─── FireLand ───────────────────────────────────────────────
+items.OneBlock_Block_FireLand.name=OneBlock: Ohnivá krajina
+items.OneBlock_Crystal_FireLand.name=Kryštál: Ohnivá krajina
+items.OneBlock_Crystal_FireLand.description=Spotrebujte tento kryštál a začnite expedíciu „Ohnivá krajina“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntity:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Sopka (možné)\n- Ohnivý cintorín (možné)
+expeditions.FireLand.name=Ohnivá krajina
+announcements.expedition_started.FireLand=Expedícia „Ohnivá krajina“ sa začala.
+announcements.expedition_completed.FireLand=Expedícia „Ohnivá krajina“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FireLand=Odomknutá nová expedícia: „Ohnivá krajina“
+progress.expedition.FireLand=Ohnivá krajina: zostáva {0}/{1} blokov
+
+# GENERATED ─── Volcano ────────────────────────────────────────────────
+items.OneBlock_Block_Volcano.name=OneBlock: Sopka
+items.OneBlock_Crystal_Volcano.name=Kryštál: Sopka
+items.OneBlock_Crystal_Volcano.description=Spotrebujte tento kryštál a vstúpte do žalára „Sopka“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Knight\n- Skeleton Burnt Wizard\n- Golem Crystal Flame\n- Skeleton Burnt Praetorian\nOdmeny za dokončenie:\n- 55x Expedičný bod
+expeditions.Volcano.name=Sopka
+announcements.dungeon_started.Volcano=Žalár „Sopka“ sa začal.
+announcements.dungeon_completed.Volcano=Žalár „Sopka“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── FieryGraveyard ─────────────────────────────────────────
+items.OneBlock_Block_FieryGraveyard.name=OneBlock: Ohnivý cintorín
+items.OneBlock_Crystal_FieryGraveyard.name=Kryštál: Ohnivý cintorín
+items.OneBlock_Crystal_FieryGraveyard.description=Spotrebujte tento kryštál a začnite expedíciu „Ohnivý cintorín“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Fire Essence\n- Ruby Gem\nEntity:\n- Zombie Burnt\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Knight\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Ohnivá jaskyňa (možné)\n- Spálené bojisko (možné)
+expeditions.FieryGraveyard.name=Ohnivý cintorín
+announcements.expedition_started.FieryGraveyard=Expedícia „Ohnivý cintorín“ sa začala.
+announcements.expedition_completed.FieryGraveyard=Expedícia „Ohnivý cintorín“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FieryGraveyard=Odomknutá nová expedícia: „Ohnivý cintorín“
+progress.expedition.FieryGraveyard=Ohnivý cintorín: zostáva {0}/{1} blokov
+
+# GENERATED ─── InfernalGate ───────────────────────────────────────────
+items.OneBlock_Block_InfernalGate.name=OneBlock: Pekelná brána
+items.OneBlock_Crystal_InfernalGate.name=Kryštál: Pekelná brána
+items.OneBlock_Crystal_InfernalGate.description=Spotrebujte tento kryštál a začnite expedíciu „Pekelná brána“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Rock Runic Brick\n- Rock Volcanic Cracked Incandescent\n- Rock Volcanic Cracked Lava Incandescent\n- Fire Essence\n- Mithril Ore\n- Onyxium Ore\nEntity:\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Mage\n- Golem Crystal Flame\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Pekelná planina (možné)\n- Pekelný močiar (možné)
+expeditions.InfernalGate.name=Pekelná brána
+announcements.expedition_started.InfernalGate=Expedícia „Pekelná brána“ sa začala.
+announcements.expedition_completed.InfernalGate=Expedícia „Pekelná brána“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.InfernalGate=Odomknutá nová expedícia: „Pekelná brána“
+progress.expedition.InfernalGate=Pekelná brána: zostáva {0}/{1} blokov
+
+# GENERATED ─── InfernalPlain ──────────────────────────────────────────
+items.OneBlock_Block_InfernalPlain.name=OneBlock: Pekelná planina
+items.OneBlock_Crystal_InfernalPlain.name=Kryštál: Pekelná planina
+items.OneBlock_Crystal_InfernalPlain.description=Spotrebujte tento kryštál a začnite expedíciu „Pekelná planina“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Cindercloth Bolt\n- Mithril Ore\n- Onyxium Ore\nEntity:\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Footman\n- Emberwulf\n- Golem Firesteel\nOdmeny za dokončenie:\n- 10x Expedičný bod\nOdomyká:\n- Jaskyňa ohnivých drahokamov
+expeditions.InfernalPlain.name=Pekelná planina
+announcements.expedition_started.InfernalPlain=Expedícia „Pekelná planina“ sa začala.
+announcements.expedition_completed.InfernalPlain=Expedícia „Pekelná planina“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.InfernalPlain=Odomknutá nová expedícia: „Pekelná planina“
+progress.expedition.InfernalPlain=Pekelná planina: zostáva {0}/{1} blokov
+
+# GENERATED ─── InfernalSwamp ──────────────────────────────────────────
+items.OneBlock_Block_InfernalSwamp.name=OneBlock: Pekelný močiar
+items.OneBlock_Crystal_InfernalSwamp.name=Kryštál: Pekelný močiar
+items.OneBlock_Crystal_InfernalSwamp.description=Spotrebujte tento kryštál a začnite expedíciu „Pekelný močiar“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Mud\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Yellow Mushroom Block\n- Fire Essence\n- Ruby Gem\n- Onyxium Ore\nEntity:\n- Fen Stalker\n- Zombie Burnt\n- Skeleton Incandescent Mage\n- Golem Crystal Flame\nOdmeny za dokončenie:\n- 10x Expedičný bod
+expeditions.InfernalSwamp.name=Pekelný močiar
+announcements.expedition_started.InfernalSwamp=Expedícia „Pekelný močiar“ sa začala.
+announcements.expedition_completed.InfernalSwamp=Expedícia „Pekelný močiar“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.InfernalSwamp=Odomknutá nová expedícia: „Pekelný močiar“
+progress.expedition.InfernalSwamp=Pekelný močiar: zostáva {0}/{1} blokov
+
+# GENERATED ─── FireGemCave ────────────────────────────────────────────
+items.OneBlock_Block_FireGemCave.name=OneBlock: Jaskyňa ohnivých drahokamov
+items.OneBlock_Crystal_FireGemCave.name=Kryštál: Jaskyňa ohnivých drahokamov
+items.OneBlock_Crystal_FireGemCave.description=Spotrebujte tento kryštál a začnite expedíciu „Jaskyňa ohnivých drahokamov“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rock Volcanic Cracked Incandescent\n- Ruby Gem\n- Diamond Gem\n- Onyxium Ore\n- Prisma Ore\nEntity:\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Mage\n- Golem Firesteel\n- Golem Crystal Thunder\nOdmeny za dokončenie:\n- 11x Expedičný bod\nOdomyká:\n- Sútok živlov
+expeditions.FireGemCave.name=Jaskyňa ohnivých drahokamov
+announcements.expedition_started.FireGemCave=Expedícia „Jaskyňa ohnivých drahokamov“ sa začala.
+announcements.expedition_completed.FireGemCave=Expedícia „Jaskyňa ohnivých drahokamov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FireGemCave=Odomknutá nová expedícia: „Jaskyňa ohnivých drahokamov“
+progress.expedition.FireGemCave=Jaskyňa ohnivých drahokamov: zostáva {0}/{1} blokov
+
+# GENERATED ─── DesertTempleEntrance ───────────────────────────────────
+items.OneBlock_Block_DesertTempleEntrance.name=OneBlock: Vstup do púštneho chrámu
+items.OneBlock_Crystal_DesertTempleEntrance.name=Kryštál: Vstup do púštneho chrámu
+items.OneBlock_Crystal_DesertTempleEntrance.description=Spotrebujte tento kryštál a začnite expedíciu „Vstup do púštneho chrámu“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Sandstone\n- Rubble Sandstone\n- Furniture Ancient Pot\n- Furniture Ancient Crate\n- Deco Pot Clay Broken\n- Gold Ore\nEntity:\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Hlbiny púštneho chrámu
+expeditions.DesertTempleEntrance.name=Vstup do púštneho chrámu
+announcements.expedition_started.DesertTempleEntrance=Expedícia „Vstup do púštneho chrámu“ sa začala.
+announcements.expedition_completed.DesertTempleEntrance=Expedícia „Vstup do púštneho chrámu“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.DesertTempleEntrance=Odomknutá nová expedícia: „Vstup do púštneho chrámu“
+progress.expedition.DesertTempleEntrance=Vstup do púštneho chrámu: zostáva {0}/{1} blokov
+
+# GENERATED ─── DeeperDesertTemple ─────────────────────────────────────
+items.OneBlock_Block_DeeperDesertTemple.name=OneBlock: Hlbiny púštneho chrámu
+items.OneBlock_Crystal_DeeperDesertTemple.name=Kryštál: Hlbiny púštneho chrámu
+items.OneBlock_Crystal_DeeperDesertTemple.description=Spotrebujte tento kryštál a začnite expedíciu „Hlbiny púštneho chrámu“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Sandstone\n- Rock Sandstone Brick\n- Furniture Ancient Pot\n- Furniture Ancient Statue\n- Furniture Ancient Candle\n- Topaz Gem\n- Gold Ore\nEntity:\n- Zombie Sand\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Mage\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Púštny chrám
+expeditions.DeeperDesertTemple.name=Hlbiny púštneho chrámu
+announcements.expedition_started.DeeperDesertTemple=Expedícia „Hlbiny púštneho chrámu“ sa začala.
+announcements.expedition_completed.DeeperDesertTemple=Expedícia „Hlbiny púštneho chrámu“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.DeeperDesertTemple=Odomknutá nová expedícia: „Hlbiny púštneho chrámu“
+progress.expedition.DeeperDesertTemple=Hlbiny púštneho chrámu: zostáva {0}/{1} blokov
+
+# GENERATED ─── DesertTemple ───────────────────────────────────────────
+items.OneBlock_Block_DesertTemple.name=OneBlock: Púštny chrám
+items.OneBlock_Crystal_DesertTemple.name=Kryštál: Púštny chrám
+items.OneBlock_Crystal_DesertTemple.description=Spotrebujte tento kryštál a vstúpte do žalára „Púštny chrám“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\n- Skeleton Knight\n- Skeleton Mage\n- Skeleton Sand Archmage\n- Skeleton Soldier\nOdmeny za dokončenie:\n- 35x Expedičný bod\nOdomyká:\n- Faraónova komnata
+expeditions.DesertTemple.name=Púštny chrám
+announcements.dungeon_started.DesertTemple=Žalár „Púštny chrám“ sa začal.
+announcements.dungeon_completed.DesertTemple=Žalár „Púštny chrám“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── PharaohRoom ────────────────────────────────────────────
+items.OneBlock_Block_PharaohRoom.name=OneBlock: Faraónova komnata
+items.OneBlock_Crystal_PharaohRoom.name=Kryštál: Faraónova komnata
+items.OneBlock_Crystal_PharaohRoom.description=Spotrebujte tento kryštál a začnite expedíciu „Faraónova komnata“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Deco Treasure\n- Furniture Ancient Coffin\n- Furniture Ancient Statue\n- Furniture Ancient Chest Large Treasure\n- Gold Ore\n- Diamond Gem\nEntity:\n- Zombie Sand\n- Skeleton Knight\n- Skeleton Mage\n- Skeleton Sand Archmage\nOdmeny za dokončenie:\n- 7x Expedičný bod
+expeditions.PharaohRoom.name=Faraónova komnata
+announcements.expedition_started.PharaohRoom=Expedícia „Faraónova komnata“ sa začala.
+announcements.expedition_completed.PharaohRoom=Expedícia „Faraónova komnata“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.PharaohRoom=Odomknutá nová expedícia: „Faraónova komnata“
+progress.expedition.PharaohRoom=Faraónova komnata: zostáva {0}/{1} blokov
+
+# GENERATED ─── InnerDesert ────────────────────────────────────────────
+items.OneBlock_Block_InnerDesert.name=OneBlock: Vnútorná púšť
+items.OneBlock_Crystal_InnerDesert.name=Kryštál: Vnútorná púšť
+items.OneBlock_Crystal_InnerDesert.description=Spotrebujte tento kryštál a začnite expedíciu „Vnútorná púšť“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nEntity:\n- Cactee\n- Camel\n- Zombie Sand\n- Scarak Louse\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Suchý priesmyk džungľou (možné)\n- Hmyzia invázia (možné)
+expeditions.InnerDesert.name=Vnútorná púšť
+announcements.expedition_started.InnerDesert=Expedícia „Vnútorná púšť“ sa začala.
+announcements.expedition_completed.InnerDesert=Expedícia „Vnútorná púšť“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.InnerDesert=Odomknutá nová expedícia: „Vnútorná púšť“
+progress.expedition.InnerDesert=Vnútorná púšť: zostáva {0}/{1} blokov
+
+# GENERATED ─── MuddyDesert ────────────────────────────────────────────
+items.OneBlock_Block_MuddyDesert.name=OneBlock: Bahnitá púšť
+items.OneBlock_Crystal_MuddyDesert.name=Kryštál: Bahnitá púšť
+items.OneBlock_Crystal_MuddyDesert.description=Spotrebujte tento kryštál a začnite expedíciu „Bahnitá púšť“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Sand\n- Soil Dirt\n- Soil Mud\n- Soil Gravel\n- Cactus 1\n- Tomato\nEntity:\n- Cactee\n- Crocodile\n- Scarak Louse\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Zamorená púšť
+expeditions.MuddyDesert.name=Bahnitá púšť
+announcements.expedition_started.MuddyDesert=Expedícia „Bahnitá púšť“ sa začala.
+announcements.expedition_completed.MuddyDesert=Expedícia „Bahnitá púšť“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.MuddyDesert=Odomknutá nová expedícia: „Bahnitá púšť“
+progress.expedition.MuddyDesert=Bahnitá púšť: zostáva {0}/{1} blokov
+
+# GENERATED ─── InsectInvasion ─────────────────────────────────────────
+items.OneBlock_Block_InsectInvasion.name=OneBlock: Hmyzia invázia
+items.OneBlock_Crystal_InsectInvasion.name=Kryštál: Hmyzia invázia
+items.OneBlock_Crystal_InsectInvasion.description=Spotrebujte tento kryštál a vstúpte do žalára „Hmyzia invázia“.\nPočet vĺn: 3.\nMožná korisť:\nEntity:\n- Scarak Louse\n- Spider\n- Scarak Fighter\n- Scarak Seeker\n- Spider Cave\nOdmeny za dokončenie:\n- 26x Expedičný bod\nOdomyká:\n- Bahnitá púšť
+expeditions.InsectInvasion.name=Hmyzia invázia
+announcements.dungeon_started.InsectInvasion=Žalár „Hmyzia invázia“ sa začal.
+announcements.dungeon_completed.InsectInvasion=Žalár „Hmyzia invázia“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── InfestedDesert ─────────────────────────────────────────
+items.OneBlock_Block_InfestedDesert.name=OneBlock: Zamorená púšť
+items.OneBlock_Crystal_InfestedDesert.name=Kryštál: Zamorená púšť
+items.OneBlock_Crystal_InfestedDesert.description=Spotrebujte tento kryštál a začnite expedíciu „Zamorená púšť“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Hive\n- Soil Hive Brick\n- Cactus Ball 1\n- Scaled Hide\nEntity:\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Hmyzie hniezdo
+expeditions.InfestedDesert.name=Zamorená púšť
+announcements.expedition_started.InfestedDesert=Expedícia „Zamorená púšť“ sa začala.
+announcements.expedition_completed.InfestedDesert=Expedícia „Zamorená púšť“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.InfestedDesert=Odomknutá nová expedícia: „Zamorená púšť“
+progress.expedition.InfestedDesert=Zamorená púšť: zostáva {0}/{1} blokov
+
+# GENERATED ─── InsectNest ─────────────────────────────────────────────
+items.OneBlock_Block_InsectNest.name=OneBlock: Hmyzie hniezdo
+items.OneBlock_Crystal_InsectNest.name=Kryštál: Hmyzie hniezdo
+items.OneBlock_Crystal_InsectNest.description=Spotrebujte tento kryštál a vstúpte do žalára „Hmyzie hniezdo“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Scarak Louse\n- Spider\n- Scarak Fighter\n- Spider Cave\n- Scarak Defender\n- Scarak Seeker\n- Scarak Broodmother\nOdmeny za dokončenie:\n- 36x Expedičný bod\nOdomyká:\n- Vnútro hmyzieho hniezda
+expeditions.InsectNest.name=Hmyzie hniezdo
+announcements.dungeon_started.InsectNest=Žalár „Hmyzie hniezdo“ sa začal.
+announcements.dungeon_completed.InsectNest=Žalár „Hmyzie hniezdo“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── InsideInsectNest ───────────────────────────────────────
+items.OneBlock_Block_InsideInsectNest.name=OneBlock: Vnútro hmyzieho hniezda
+items.OneBlock_Crystal_InsideInsectNest.name=Kryštál: Vnútro hmyzieho hniezda
+items.OneBlock_Crystal_InsideInsectNest.description=Spotrebujte tento kryštál a začnite expedíciu „Vnútro hmyzieho hniezda“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Hive\n- Soil Hive Brick\n- Ruby Gem\nEntity:\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Jadro hniezda
+expeditions.InsideInsectNest.name=Vnútro hmyzieho hniezda
+announcements.expedition_started.InsideInsectNest=Expedícia „Vnútro hmyzieho hniezda“ sa začala.
+announcements.expedition_completed.InsideInsectNest=Expedícia „Vnútro hmyzieho hniezda“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.InsideInsectNest=Odomknutá nová expedícia: „Vnútro hmyzieho hniezda“
+progress.expedition.InsideInsectNest=Vnútro hmyzieho hniezda: zostáva {0}/{1} blokov
+
+# GENERATED ─── InsectCore ─────────────────────────────────────────────
+items.OneBlock_Block_InsectCore.name=OneBlock: Jadro hniezda
+items.OneBlock_Crystal_InsectCore.name=Kryštál: Jadro hniezda
+items.OneBlock_Crystal_InsectCore.description=Spotrebujte tento kryštál a vstúpte do žalára „Jadro hniezda“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\n- Spider Cave\n- Scarak Broodmother\nOdmeny za dokončenie:\n- 50x Expedičný bod
+expeditions.InsectCore.name=Jadro hniezda
+announcements.dungeon_started.InsectCore=Žalár „Jadro hniezda“ sa začal.
+announcements.dungeon_completed.InsectCore=Žalár „Jadro hniezda“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── Quarry ─────────────────────────────────────────────────
+items.OneBlock_Block_Quarry.name=OneBlock: Lom
+items.OneBlock_Crystal_Quarry.name=Kryštál: Lom
+items.OneBlock_Crystal_Quarry.description=Spotrebujte tento kryštál a začnite expedíciu „Lom“.\nPočet blokov na rozbitie: 50.\nMožná korisť:\nPredmety:\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Basalt\n- Copper Ore\n- Iron Ore\nEntity:\n- Bat\n- Goblin Miner\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Tajomná kaverna
+expeditions.Quarry.name=Lom
+announcements.expedition_started.Quarry=Expedícia „Lom“ sa začala.
+announcements.expedition_completed.Quarry=Expedícia „Lom“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Quarry=Odomknutá nová expedícia: „Lom“
+progress.expedition.Quarry=Lom: zostáva {0}/{1} blokov
+
+# GENERATED ─── Hallow ─────────────────────────────────────────────────
+items.OneBlock_Block_Hallow.name=OneBlock: Posvätné miesto
+items.OneBlock_Crystal_Hallow.name=Kryštál: Posvätné miesto
+items.OneBlock_Crystal_Hallow.description=Spotrebujte tento kryštál a začnite expedíciu „Posvätné miesto“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Wheat\n- Corn\n- Carrot\n- Food Bread\n- Apple Fruit\nEntity:\n- Rabbit\n- Sheep\n- Chicken\n- Deer Doe\nOdmeny za dokončenie:\n- 2x Expedičný bod\nOdomyká:\n- Útočisko kráv (možné)\n- Útočisko koní (možné)\n- Rieka (možné)
+expeditions.Hallow.name=Posvätné miesto
+announcements.expedition_started.Hallow=Expedícia „Posvätné miesto“ sa začala.
+announcements.expedition_completed.Hallow=Expedícia „Posvätné miesto“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Hallow=Odomknutá nová expedícia: „Posvätné miesto“
+progress.expedition.Hallow=Posvätné miesto: zostáva {0}/{1} blokov
+
+# GENERATED ─── CowHallow ──────────────────────────────────────────────
+items.OneBlock_Block_CowHallow.name=OneBlock: Útočisko kráv
+items.OneBlock_Crystal_CowHallow.name=Kryštál: Útočisko kráv
+items.OneBlock_Crystal_CowHallow.description=Spotrebujte tento kryštál a začnite expedíciu „Útočisko kráv“.\nPočet blokov na rozbitie: 35.\nMožná korisť:\nPredmety:\n- Wheat\n- Corn\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nEntity:\n- Cow\n- Cow Calf\n- Wolf Black\nOdmeny za dokončenie:\n- 2x Expedičný bod
+expeditions.CowHallow.name=Útočisko kráv
+announcements.expedition_started.CowHallow=Expedícia „Útočisko kráv“ sa začala.
+announcements.expedition_completed.CowHallow=Expedícia „Útočisko kráv“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.CowHallow=Odomknutá nová expedícia: „Útočisko kráv“
+progress.expedition.CowHallow=Útočisko kráv: zostáva {0}/{1} blokov
+
+# GENERATED ─── HorseHallow ────────────────────────────────────────────
+items.OneBlock_Block_HorseHallow.name=OneBlock: Útočisko koní
+items.OneBlock_Crystal_HorseHallow.name=Kryštál: Útočisko koní
+items.OneBlock_Crystal_HorseHallow.description=Spotrebujte tento kryštál a začnite expedíciu „Útočisko koní“.\nPočet blokov na rozbitie: 35.\nMožná korisť:\nPredmety:\n- Carrot\n- Wheat\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nEntity:\n- Horse\n- Wolf Black\nOdmeny za dokončenie:\n- 2x Expedičný bod
+expeditions.HorseHallow.name=Útočisko koní
+announcements.expedition_started.HorseHallow=Expedícia „Útočisko koní“ sa začala.
+announcements.expedition_completed.HorseHallow=Expedícia „Útočisko koní“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.HorseHallow=Odomknutá nová expedícia: „Útočisko koní“
+progress.expedition.HorseHallow=Útočisko koní: zostáva {0}/{1} blokov
+
+# GENERATED ─── MysteriousCavern ───────────────────────────────────────
+items.OneBlock_Block_MysteriousCavern.name=OneBlock: Tajomná kaverna
+items.OneBlock_Crystal_MysteriousCavern.name=Kryštál: Tajomná kaverna
+items.OneBlock_Crystal_MysteriousCavern.description=Spotrebujte tento kryštál a začnite expedíciu „Tajomná kaverna“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Sapphire Gem\n- Iron Ore\nEntity:\n- Bat\n- Spider Cave\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 3x Expedičný bod\nOdomyká:\n- Mystická jaskyňa
+expeditions.MysteriousCavern.name=Tajomná kaverna
+announcements.expedition_started.MysteriousCavern=Expedícia „Tajomná kaverna“ sa začala.
+announcements.expedition_completed.MysteriousCavern=Expedícia „Tajomná kaverna“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.MysteriousCavern=Odomknutá nová expedícia: „Tajomná kaverna“
+progress.expedition.MysteriousCavern=Tajomná kaverna: zostáva {0}/{1} blokov
+
+# GENERATED ─── MysticCave ─────────────────────────────────────────────
+items.OneBlock_Block_MysticCave.name=OneBlock: Mystická jaskyňa
+items.OneBlock_Crystal_MysticCave.name=Kryštál: Mystická jaskyňa
+items.OneBlock_Crystal_MysticCave.description=Spotrebujte tento kryštál a začnite expedíciu „Mystická jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rock Runic Brick\n- Sapphire Gem\n- Emerald Gem\n- Yellow Crystal Shards\nEntity:\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Prepychová jaskyňa
+expeditions.MysticCave.name=Mystická jaskyňa
+announcements.expedition_started.MysticCave=Expedícia „Mystická jaskyňa“ sa začala.
+announcements.expedition_completed.MysticCave=Expedícia „Mystická jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.MysticCave=Odomknutá nová expedícia: „Mystická jaskyňa“
+progress.expedition.MysticCave=Mystická jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── LuxuriousCave ──────────────────────────────────────────
+items.OneBlock_Block_LuxuriousCave.name=OneBlock: Prepychová jaskyňa
+items.OneBlock_Crystal_LuxuriousCave.name=Kryštál: Prepychová jaskyňa
+items.OneBlock_Crystal_LuxuriousCave.description=Spotrebujte tento kryštál a začnite expedíciu „Prepychová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Emerald Gem\n- Topaz Gem\n- Diamond Gem\n- Gold Ore\n- Adamantite Ore\n- Deco Treasure\nEntity:\n- Golem Crystal Earth\n- Goblin Thief\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Jurská jaskyňa
+expeditions.LuxuriousCave.name=Prepychová jaskyňa
+announcements.expedition_started.LuxuriousCave=Expedícia „Prepychová jaskyňa“ sa začala.
+announcements.expedition_completed.LuxuriousCave=Expedícia „Prepychová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.LuxuriousCave=Odomknutá nová expedícia: „Prepychová jaskyňa“
+progress.expedition.LuxuriousCave=Prepychová jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── JurassicCave ───────────────────────────────────────────
+items.OneBlock_Block_JurassicCave.name=OneBlock: Jurská jaskyňa
+items.OneBlock_Crystal_JurassicCave.name=Kryštál: Jurská jaskyňa
+items.OneBlock_Crystal_JurassicCave.description=Spotrebujte tento kryštál a začnite expedíciu „Jurská jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike Large\n- Scaled Hide\n- Scaled Leather\n- Diamond Gem\n- Adamantite Ore\nEntity:\n- Archaeopteryx\n- Crocodile\n- Raptor Cave\n- Rex Cave\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Dinosauří kríza
+expeditions.JurassicCave.name=Jurská jaskyňa
+announcements.expedition_started.JurassicCave=Expedícia „Jurská jaskyňa“ sa začala.
+announcements.expedition_completed.JurassicCave=Expedícia „Jurská jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.JurassicCave=Odomknutá nová expedícia: „Jurská jaskyňa“
+progress.expedition.JurassicCave=Jurská jaskyňa: zostáva {0}/{1} blokov
+
+# GENERATED ─── DinoCrisis ─────────────────────────────────────────────
+items.OneBlock_Block_DinoCrisis.name=OneBlock: Dinosauří kríza
+items.OneBlock_Crystal_DinoCrisis.name=Kryštál: Dinosauří kríza
+items.OneBlock_Crystal_DinoCrisis.description=Spotrebujte tento kryštál a vstúpte do žalára „Dinosauří kríza“.\nPočet vĺn: 6.\nMožná korisť:\nEntity:\n- Archaeopteryx\n- Crocodile\n- Raptor Cave\n- Crawler\n- Rex Cave\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 65x Expedičný bod
+expeditions.DinoCrisis.name=Dinosauří kríza
+announcements.dungeon_started.DinoCrisis=Žalár „Dinosauří kríza“ sa začal.
+announcements.dungeon_completed.DinoCrisis=Žalár „Dinosauří kríza“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── DryTrorkCamp ───────────────────────────────────────────
+items.OneBlock_Block_DryTrorkCamp.name=OneBlock: Suchý tábor Trorkov
+items.OneBlock_Crystal_DryTrorkCamp.name=Kryštál: Suchý tábor Trorkov
+items.OneBlock_Crystal_DryTrorkCamp.description=Spotrebujte tento kryštál a začnite expedíciu „Suchý tábor Trorkov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Ash Trunk\n- Sandstone\n- Rubble Sandstone\n- Bone Fragment\n- Scaled Hide\n- Gold Ore\nEntity:\n- Trork Sentry\n- Trork Hunter\n- Wolf Trork Shaman\n- Trork Brawler\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Bojová družina Trorkov
+expeditions.DryTrorkCamp.name=Suchý tábor Trorkov
+announcements.expedition_started.DryTrorkCamp=Expedícia „Suchý tábor Trorkov“ sa začala.
+announcements.expedition_completed.DryTrorkCamp=Expedícia „Suchý tábor Trorkov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.DryTrorkCamp=Odomknutá nová expedícia: „Suchý tábor Trorkov“
+progress.expedition.DryTrorkCamp=Suchý tábor Trorkov: zostáva {0}/{1} blokov
+
+# GENERATED ─── TrorkHuntingGround ─────────────────────────────────────
+items.OneBlock_Block_TrorkHuntingGround.name=OneBlock: Lovisko Trorkov
+items.OneBlock_Crystal_TrorkHuntingGround.name=Kryštál: Lovisko Trorkov
+items.OneBlock_Crystal_TrorkHuntingGround.description=Spotrebujte tento kryštál a začnite expedíciu „Lovisko Trorkov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Beech Trunk\n- Ash Trunk\n- Plant Leaves Bramble\n- Bone Fragment\n- Scaled Hide\n- Emerald Gem\nEntity:\n- Wolf Trork Shaman\n- Trork Hunter\n- Trork Sentry\n- Trork Brawler\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Bojová družina Trorkov
+expeditions.TrorkHuntingGround.name=Lovisko Trorkov
+announcements.expedition_started.TrorkHuntingGround=Expedícia „Lovisko Trorkov“ sa začala.
+announcements.expedition_completed.TrorkHuntingGround=Expedícia „Lovisko Trorkov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.TrorkHuntingGround=Odomknutá nová expedícia: „Lovisko Trorkov“
+progress.expedition.TrorkHuntingGround=Lovisko Trorkov: zostáva {0}/{1} blokov
+
+# GENERATED ─── TrorkWarband ───────────────────────────────────────────
+items.OneBlock_Block_TrorkWarband.name=OneBlock: Bojová družina Trorkov
+items.OneBlock_Crystal_TrorkWarband.name=Kryštál: Bojová družina Trorkov
+items.OneBlock_Crystal_TrorkWarband.description=Spotrebujte tento kryštál a vstúpte do žalára „Bojová družina Trorkov“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Wolf Trork Shaman\n- Trork Sentry\n- Trork Hunter\n- Trork Brawler\n- Trork Warrior\n- Trork Mauler\n- Trork Guard\nOdmeny za dokončenie:\n- 32x Expedičný bod\nOdomyká:\n- Prístup k pevnosti Trorkov
+expeditions.TrorkWarband.name=Bojová družina Trorkov
+announcements.dungeon_started.TrorkWarband=Žalár „Bojová družina Trorkov“ sa začal.
+announcements.dungeon_completed.TrorkWarband=Žalár „Bojová družina Trorkov“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── TrorkStrongholdApproach ────────────────────────────────
+items.OneBlock_Block_TrorkStrongholdApproach.name=OneBlock: Prístup k pevnosti Trorkov
+items.OneBlock_Crystal_TrorkStrongholdApproach.name=Kryštál: Prístup k pevnosti Trorkov
+items.OneBlock_Crystal_TrorkStrongholdApproach.description=Spotrebujte tento kryštál a začnite expedíciu „Prístup k pevnosti Trorkov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Sandstone\n- Rock Runic Brick\n- Bone Fragment\n- Scaled Hide\n- Scaled Leather\n- Thorium Ore\nEntity:\n- Trork Sentry\n- Trork Warrior\n- Trork Guard\n- Trork Mauler\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Háj starších Trorkov
+expeditions.TrorkStrongholdApproach.name=Prístup k pevnosti Trorkov
+announcements.expedition_started.TrorkStrongholdApproach=Expedícia „Prístup k pevnosti Trorkov“ sa začala.
+announcements.expedition_completed.TrorkStrongholdApproach=Expedícia „Prístup k pevnosti Trorkov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.TrorkStrongholdApproach=Odomknutá nová expedícia: „Prístup k pevnosti Trorkov“
+progress.expedition.TrorkStrongholdApproach=Prístup k pevnosti Trorkov: zostáva {0}/{1} blokov
+
+# GENERATED ─── TrorkElderGrove ────────────────────────────────────────
+items.OneBlock_Block_TrorkElderGrove.name=OneBlock: Háj starších Trorkov
+items.OneBlock_Crystal_TrorkElderGrove.name=Kryštál: Háj starších Trorkov
+items.OneBlock_Crystal_TrorkElderGrove.description=Spotrebujte tento kryštál a začnite expedíciu „Háj starších Trorkov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Emerald Gem\n- Zephyr Gem\nEntity:\n- Trork Doctor Witch\n- Trork Hunter\n- Trork Guard\n- Wolf Trork Shaman\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Tábor náčelníka Trorkov
+expeditions.TrorkElderGrove.name=Háj starších Trorkov
+announcements.expedition_started.TrorkElderGrove=Expedícia „Háj starších Trorkov“ sa začala.
+announcements.expedition_completed.TrorkElderGrove=Expedícia „Háj starších Trorkov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.TrorkElderGrove=Odomknutá nová expedícia: „Háj starších Trorkov“
+progress.expedition.TrorkElderGrove=Háj starších Trorkov: zostáva {0}/{1} blokov
+
+# GENERATED ─── TrorkChieftainCamp ─────────────────────────────────────
+items.OneBlock_Block_TrorkChieftainCamp.name=OneBlock: Tábor náčelníka Trorkov
+items.OneBlock_Crystal_TrorkChieftainCamp.name=Kryštál: Tábor náčelníka Trorkov
+items.OneBlock_Crystal_TrorkChieftainCamp.description=Spotrebujte tento kryštál a vstúpte do žalára „Tábor náčelníka Trorkov“.\nPočet vĺn: 5.\nMožná korisť:\nEntity:\n- Trork Sentry\n- Wolf Trork Shaman\n- Trork Brawler\n- Trork Hunter\n- Trork Warrior\n- Trork Mauler\n- Trork Guard\n- Trork Doctor Witch\n- Trork Chieftain\nOdmeny za dokončenie:\n- 55x Expedičný bod
+expeditions.TrorkChieftainCamp.name=Tábor náčelníka Trorkov
+announcements.dungeon_started.TrorkChieftainCamp=Žalár „Tábor náčelníka Trorkov“ sa začal.
+announcements.dungeon_completed.TrorkChieftainCamp=Žalár „Tábor náčelníka Trorkov“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── FrozenGraveyard ────────────────────────────────────────
+items.OneBlock_Block_FrozenGraveyard.name=OneBlock: Zamrznutý cintorín
+items.OneBlock_Crystal_FrozenGraveyard.name=Kryštál: Zamrznutý cintorín
+items.OneBlock_Crystal_FrozenGraveyard.description=Spotrebujte tento kryštál a začnite expedíciu „Zamrznutý cintorín“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\nEntity:\n- Skeleton Frost Scout\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Soldier\n- Skeleton Frost Mage\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Ľadová nekropola
+expeditions.FrozenGraveyard.name=Zamrznutý cintorín
+announcements.expedition_started.FrozenGraveyard=Expedícia „Zamrznutý cintorín“ sa začala.
+announcements.expedition_completed.FrozenGraveyard=Expedícia „Zamrznutý cintorín“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.FrozenGraveyard=Odomknutá nová expedícia: „Zamrznutý cintorín“
+progress.expedition.FrozenGraveyard=Zamrznutý cintorín: zostáva {0}/{1} blokov
+
+# GENERATED ─── IcyNecropolis ──────────────────────────────────────────
+items.OneBlock_Block_IcyNecropolis.name=OneBlock: Ľadová nekropola
+items.OneBlock_Crystal_IcyNecropolis.name=Kryštál: Ľadová nekropola
+items.OneBlock_Crystal_IcyNecropolis.description=Spotrebujte tento kryštál a začnite expedíciu „Ľadová nekropola“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\n- Diamond Gem\nEntity:\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Mage\n- Skeleton Frost Soldier\n- Skeleton Frost Knight\n- Skeleton Frost Archmage\nOdmeny za dokončenie:\n- 10x Expedičný bod\nOdomyká:\n- Krypta mrazivých kostí
+expeditions.IcyNecropolis.name=Ľadová nekropola
+announcements.expedition_started.IcyNecropolis=Expedícia „Ľadová nekropola“ sa začala.
+announcements.expedition_completed.IcyNecropolis=Expedícia „Ľadová nekropola“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.IcyNecropolis=Odomknutá nová expedícia: „Ľadová nekropola“
+progress.expedition.IcyNecropolis=Ľadová nekropola: zostáva {0}/{1} blokov
+
+# GENERATED ─── FrostboneCrypt ─────────────────────────────────────────
+items.OneBlock_Block_FrostboneCrypt.name=OneBlock: Krypta mrazivých kostí
+items.OneBlock_Crystal_FrostboneCrypt.name=Kryštál: Krypta mrazivých kostí
+items.OneBlock_Crystal_FrostboneCrypt.description=Spotrebujte tento kryštál a vstúpte do žalára „Krypta mrazivých kostí“.\nPočet vĺn: 5.\nMožná korisť:\nEntity:\n- Skeleton Frost Scout\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Soldier\n- Skeleton Frost Mage\n- Skeleton Frost Knight\n- Skeleton Frost Archmage\n- Golem Crystal Frost\nOdmeny za dokončenie:\n- 80x Expedičný bod\nOdomyká:\n- Ľadový chrám
+expeditions.FrostboneCrypt.name=Krypta mrazivých kostí
+announcements.dungeon_started.FrostboneCrypt=Žalár „Krypta mrazivých kostí“ sa začal.
+announcements.dungeon_completed.FrostboneCrypt=Žalár „Krypta mrazivých kostí“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── BurntBattlefield ───────────────────────────────────────
+items.OneBlock_Block_BurntBattlefield.name=OneBlock: Spálené bojisko
+items.OneBlock_Crystal_BurntBattlefield.name=Kryštál: Spálené bojisko
+items.OneBlock_Crystal_BurntBattlefield.description=Spotrebujte tento kryštál a začnite expedíciu „Spálené bojisko“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Ruby Gem\nEntity:\n- Skeleton Scout\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Knight\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Popolavé katakomby
+expeditions.BurntBattlefield.name=Spálené bojisko
+announcements.expedition_started.BurntBattlefield=Expedícia „Spálené bojisko“ sa začala.
+announcements.expedition_completed.BurntBattlefield=Expedícia „Spálené bojisko“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.BurntBattlefield=Odomknutá nová expedícia: „Spálené bojisko“
+progress.expedition.BurntBattlefield=Spálené bojisko: zostáva {0}/{1} blokov
+
+# GENERATED ─── AshenCatacombs ─────────────────────────────────────────
+items.OneBlock_Block_AshenCatacombs.name=OneBlock: Popolavé katakomby
+items.OneBlock_Crystal_AshenCatacombs.name=Kryštál: Popolavé katakomby
+items.OneBlock_Crystal_AshenCatacombs.description=Spotrebujte tento kryštál a začnite expedíciu „Popolavé katakomby“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Volcanic\n- Rubble Volcanic\n- Rock Volcanic Cracked Incandescent\n- Fire Essence\n- Ruby Gem\n- Mithril Ore\nEntity:\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Gunner\n- Skeleton Burnt Wizard\n- Skeleton Burnt Knight\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Citadela spálených kostlivcov
+expeditions.AshenCatacombs.name=Popolavé katakomby
+announcements.expedition_started.AshenCatacombs=Expedícia „Popolavé katakomby“ sa začala.
+announcements.expedition_completed.AshenCatacombs=Expedícia „Popolavé katakomby“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.AshenCatacombs=Odomknutá nová expedícia: „Popolavé katakomby“
+progress.expedition.AshenCatacombs=Popolavé katakomby: zostáva {0}/{1} blokov
+
+# GENERATED ─── BurntSkeletonCitadel ───────────────────────────────────
+items.OneBlock_Block_BurntSkeletonCitadel.name=OneBlock: Citadela spálených kostlivcov
+items.OneBlock_Crystal_BurntSkeletonCitadel.name=Kryštál: Citadela spálených kostlivcov
+items.OneBlock_Crystal_BurntSkeletonCitadel.description=Spotrebujte tento kryštál a vstúpte do žalára „Citadela spálených kostlivcov“.\nPočet vĺn: 5.\nMožná korisť:\nEntity:\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Gunner\n- Skeleton Burnt Knight\n- Skeleton Burnt Wizard\n- Skeleton Burnt Praetorian\nOdmeny za dokončenie:\n- 70x Expedičný bod\nOdomyká:\n- Pekelná brána
+expeditions.BurntSkeletonCitadel.name=Citadela spálených kostlivcov
+announcements.dungeon_started.BurntSkeletonCitadel=Žalár „Citadela spálených kostlivcov“ sa začal.
+announcements.dungeon_completed.BurntSkeletonCitadel=Žalár „Citadela spálených kostlivcov“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── JungleEdge ─────────────────────────────────────────────
+items.OneBlock_Block_JungleEdge.name=OneBlock: Okraj džungle
+items.OneBlock_Crystal_JungleEdge.name=Kryštál: Okraj džungle
+items.OneBlock_Crystal_JungleEdge.description=Spotrebujte tento kryštál a začnite expedíciu „Okraj džungle“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bamboo Trunk\n- Jungle Trunk\n- Stick\n- Fibre\n- Mango Fruit\n- Coconut Fruit\n- Plant Sapling Bamboo\n- Plant Sapling Jungle\n- Emerald Gem\nEntity:\n- Parrot\n- Gecko\n- Frog Green\n- Snake Marsh\n- Zombie\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Zarastené ruiny
+expeditions.JungleEdge.name=Okraj džungle
+announcements.expedition_started.JungleEdge=Expedícia „Okraj džungle“ sa začala.
+announcements.expedition_completed.JungleEdge=Expedícia „Okraj džungle“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.JungleEdge=Odomknutá nová expedícia: „Okraj džungle“
+progress.expedition.JungleEdge=Okraj džungle: zostáva {0}/{1} blokov
+
+# GENERATED ─── DryJunglePass ──────────────────────────────────────────
+items.OneBlock_Block_DryJunglePass.name=OneBlock: Suchý priesmyk džungľou
+items.OneBlock_Crystal_DryJunglePass.name=Kryštál: Suchý priesmyk džungľou
+items.OneBlock_Crystal_DryJunglePass.description=Spotrebujte tento kryštál a začnite expedíciu „Suchý priesmyk džungľou“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Bamboo Trunk\n- Jungle Trunk\n- Stick\n- Fibre\n- Coconut Fruit\n- Plant Sapling Bamboo\n- Plant Sapling Jungle\n- Topaz Gem\nEntity:\n- Cactee\n- Gecko\n- Snake Marsh\n- Zombie Sand\n- Skeleton Scout\nOdmeny za dokončenie:\n- 4x Expedičný bod\nOdomyká:\n- Potopené ruiny džungle
+expeditions.DryJunglePass.name=Suchý priesmyk džungľou
+announcements.expedition_started.DryJunglePass=Expedícia „Suchý priesmyk džungľou“ sa začala.
+announcements.expedition_completed.DryJunglePass=Expedícia „Suchý priesmyk džungľou“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.DryJunglePass=Odomknutá nová expedícia: „Suchý priesmyk džungľou“
+progress.expedition.DryJunglePass=Suchý priesmyk džungľou: zostáva {0}/{1} blokov
+
+# GENERATED ─── OvergrownRuins ─────────────────────────────────────────
+items.OneBlock_Block_OvergrownRuins.name=OneBlock: Zarastené ruiny
+items.OneBlock_Crystal_OvergrownRuins.name=Kryštál: Zarastené ruiny
+items.OneBlock_Crystal_OvergrownRuins.description=Spotrebujte tento kryštál a začnite expedíciu „Zarastené ruiny“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Maple Trunk\n- Plant Leaves Bramble\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Bone Fragment\n- Emerald Gem\nEntity:\n- Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Crocodile\n- Toad Rhino\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Krypta džungle
+expeditions.OvergrownRuins.name=Zarastené ruiny
+announcements.expedition_started.OvergrownRuins=Expedícia „Zarastené ruiny“ sa začala.
+announcements.expedition_completed.OvergrownRuins=Expedícia „Zarastené ruiny“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.OvergrownRuins=Odomknutá nová expedícia: „Zarastené ruiny“
+progress.expedition.OvergrownRuins=Zarastené ruiny: zostáva {0}/{1} blokov
+
+# GENERATED ─── SunkenJungleRuins ──────────────────────────────────────
+items.OneBlock_Block_SunkenJungleRuins.name=OneBlock: Potopené ruiny džungle
+items.OneBlock_Crystal_SunkenJungleRuins.name=Kryštál: Potopené ruiny džungle
+items.OneBlock_Crystal_SunkenJungleRuins.description=Spotrebujte tento kryštál a začnite expedíciu „Potopené ruiny džungle“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Soil Clay\n- Soil Dirt\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Rock Sandstone Brick\n- Bone Fragment\n- Sapphire Gem\nEntity:\n- Zombie Sand\n- Zombie\n- Skeleton Soldier\n- Crocodile\n- Snake Marsh\nOdmeny za dokončenie:\n- 5x Expedičný bod\nOdomyká:\n- Krypta džungle
+expeditions.SunkenJungleRuins.name=Potopené ruiny džungle
+announcements.expedition_started.SunkenJungleRuins=Expedícia „Potopené ruiny džungle“ sa začala.
+announcements.expedition_completed.SunkenJungleRuins=Expedícia „Potopené ruiny džungle“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SunkenJungleRuins=Odomknutá nová expedícia: „Potopené ruiny džungle“
+progress.expedition.SunkenJungleRuins=Potopené ruiny džungle: zostáva {0}/{1} blokov
+
+# GENERATED ─── LostNecropolis ─────────────────────────────────────────
+items.OneBlock_Block_LostNecropolis.name=OneBlock: Stratená nekropola
+items.OneBlock_Crystal_LostNecropolis.name=Kryštál: Stratená nekropola
+items.OneBlock_Crystal_LostNecropolis.description=Spotrebujte tento kryštál a začnite expedíciu „Stratená nekropola“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Rock Runic Brick\n- Emerald Gem\n- Ruby Gem\nEntity:\n- Skeleton Soldier\n- Skeleton Fighter\n- Skeleton Archer\n- Skeleton Ranger\n- Skeleton Mage\n- Zombie Aberrant\n- Zombie Aberrant Big\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Starobylá svätyňa nemŕtvych (možné)\n- Tienistá cesta džungľou (možné)
+expeditions.LostNecropolis.name=Stratená nekropola
+announcements.expedition_started.LostNecropolis=Expedícia „Stratená nekropola“ sa začala.
+announcements.expedition_completed.LostNecropolis=Expedícia „Stratená nekropola“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.LostNecropolis=Odomknutá nová expedícia: „Stratená nekropola“
+progress.expedition.LostNecropolis=Stratená nekropola: zostáva {0}/{1} blokov
+
+# GENERATED ─── ShadowedJungleRoad ─────────────────────────────────────
+items.OneBlock_Block_ShadowedJungleRoad.name=OneBlock: Tienistá cesta džungľou
+items.OneBlock_Crystal_ShadowedJungleRoad.name=Kryštál: Tienistá cesta džungľou
+items.OneBlock_Crystal_ShadowedJungleRoad.description=Spotrebujte tento kryštál a začnite expedíciu „Tienistá cesta džungľou“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Spine\n- Zephyr Gem\nEntity:\n- Wraith\n- Horse Skeleton\n- Horse Skeleton Armored\n- Skeleton Knight\n- Skeleton Archmage\n- Pig Undead\n- Chicken Undead\nOdmeny za dokončenie:\n- 8x Expedičný bod\nOdomyká:\n- Háj obrnených mŕtvych
+expeditions.ShadowedJungleRoad.name=Tienistá cesta džungľou
+announcements.expedition_started.ShadowedJungleRoad=Expedícia „Tienistá cesta džungľou“ sa začala.
+announcements.expedition_completed.ShadowedJungleRoad=Expedícia „Tienistá cesta džungľou“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.ShadowedJungleRoad=Odomknutá nová expedícia: „Tienistá cesta džungľou“
+progress.expedition.ShadowedJungleRoad=Tienistá cesta džungľou: zostáva {0}/{1} blokov
+
+# GENERATED ─── ArmoredDeadGrove ───────────────────────────────────────
+items.OneBlock_Block_ArmoredDeadGrove.name=OneBlock: Háj obrnených mŕtvych
+items.OneBlock_Crystal_ArmoredDeadGrove.name=Kryštál: Háj obrnených mŕtvych
+items.OneBlock_Crystal_ArmoredDeadGrove.description=Spotrebujte tento kryštál a začnite expedíciu „Háj obrnených mŕtvych“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Wood Amber Trunk\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spine\n- Zephyr Gem\nEntity:\n- Horse Skeleton Armored\n- Horse Skeleton\n- Shadow Knight\n- Wraith\n- Skeleton Knight\n- Skeleton Archmage\n- Ghoul\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Citadela tieňového rytiera
+expeditions.ArmoredDeadGrove.name=Háj obrnených mŕtvych
+announcements.expedition_started.ArmoredDeadGrove=Expedícia „Háj obrnených mŕtvych“ sa začala.
+announcements.expedition_completed.ArmoredDeadGrove=Expedícia „Háj obrnených mŕtvych“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.ArmoredDeadGrove=Odomknutá nová expedícia: „Háj obrnených mŕtvych“
+progress.expedition.ArmoredDeadGrove=Háj obrnených mŕtvych: zostáva {0}/{1} blokov
+
+# GENERATED ─── JungleCrypt ────────────────────────────────────────────
+items.OneBlock_Block_JungleCrypt.name=OneBlock: Krypta džungle
+items.OneBlock_Crystal_JungleCrypt.name=Kryštál: Krypta džungle
+items.OneBlock_Crystal_JungleCrypt.description=Spotrebujte tento kryštál a vstúpte do žalára „Krypta džungle“.\nPočet vĺn: 4.\nMožná korisť:\nEntity:\n- Zombie\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\n- Skeleton Soldier\n- Skeleton Fighter\n- Skeleton Knight\n- Skeleton Ranger\n- Skeleton Mage\nOdmeny za dokončenie:\n- 36x Expedičný bod\nOdomyká:\n- Stratená nekropola
+expeditions.JungleCrypt.name=Krypta džungle
+announcements.dungeon_started.JungleCrypt=Žalár „Krypta džungle“ sa začal.
+announcements.dungeon_completed.JungleCrypt=Žalár „Krypta džungle“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── AncientUndeadSanctum ───────────────────────────────────
+items.OneBlock_Block_AncientUndeadSanctum.name=OneBlock: Starobylá svätyňa nemŕtvych
+items.OneBlock_Crystal_AncientUndeadSanctum.name=Kryštál: Starobylá svätyňa nemŕtvych
+items.OneBlock_Crystal_AncientUndeadSanctum.description=Spotrebujte tento kryštál a vstúpte do žalára „Starobylá svätyňa nemŕtvych“.\nPočet vĺn: 5.\nMožná korisť:\nEntity:\n- Zombie\n- Zombie Aberrant\n- Zombie Aberrant Small\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Fighter\n- Skeleton Knight\n- Skeleton Mage\n- Zombie Aberrant Big\n- Skeleton Archmage\n- Skeleton Ranger\n- Ghoul\n- Wraith\nOdmeny za dokončenie:\n- 58x Expedičný bod
+expeditions.AncientUndeadSanctum.name=Starobylá svätyňa nemŕtvych
+announcements.dungeon_started.AncientUndeadSanctum=Žalár „Starobylá svätyňa nemŕtvych“ sa začal.
+announcements.dungeon_completed.AncientUndeadSanctum=Žalár „Starobylá svätyňa nemŕtvych“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── ShadowKnightCitadel ────────────────────────────────────
+items.OneBlock_Block_ShadowKnightCitadel.name=OneBlock: Citadela tieňového rytiera
+items.OneBlock_Crystal_ShadowKnightCitadel.name=Kryštál: Citadela tieňového rytiera
+items.OneBlock_Crystal_ShadowKnightCitadel.description=Spotrebujte tento kryštál a vstúpte do žalára „Citadela tieňového rytiera“.\nPočet vĺn: 5.\nMožná korisť:\nEntity:\n- Horse Skeleton\n- Pig Undead\n- Chicken Undead\n- Horse Skeleton Armored\n- Skeleton Knight\n- Wraith\n- Skeleton Archmage\n- Shadow Knight\nOdmeny za dokončenie:\n- 72x Expedičný bod
+expeditions.ShadowKnightCitadel.name=Citadela tieňového rytiera
+announcements.dungeon_started.ShadowKnightCitadel=Žalár „Citadela tieňového rytiera“ sa začal.
+announcements.dungeon_completed.ShadowKnightCitadel=Žalár „Citadela tieňového rytiera“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── SpiritThreshold ────────────────────────────────────────
+items.OneBlock_Block_SpiritThreshold.name=OneBlock: Prah duchov
+items.OneBlock_Crystal_SpiritThreshold.name=Kryštál: Prah duchov
+items.OneBlock_Crystal_SpiritThreshold.description=Spotrebujte tento kryštál a začnite expedíciu „Prah duchov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Life Essence\n- Ice Essence\n- Lightning Essence\n- Fire Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nEntity:\n- Spirit Root\n- Spirit Frost\n- Spirit Thunder\n- Spirit Ember\n- Golem Crystal Earth\nOdmeny za dokončenie:\n- 9x Expedičný bod\nOdomyká:\n- Sútok živlov
+expeditions.SpiritThreshold.name=Prah duchov
+announcements.expedition_started.SpiritThreshold=Expedícia „Prah duchov“ sa začala.
+announcements.expedition_completed.SpiritThreshold=Expedícia „Prah duchov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.SpiritThreshold=Odomknutá nová expedícia: „Prah duchov“
+progress.expedition.SpiritThreshold=Prah duchov: zostáva {0}/{1} blokov
+
+# GENERATED ─── ElementalConfluence ────────────────────────────────────
+items.OneBlock_Block_ElementalConfluence.name=OneBlock: Sútok živlov
+items.OneBlock_Crystal_ElementalConfluence.name=Kryštál: Sútok živlov
+items.OneBlock_Crystal_ElementalConfluence.description=Spotrebujte tento kryštál a začnite expedíciu „Sútok živlov“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fire Essence\n- Ice Essence\n- Life Essence\n- Lightning Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nEntity:\n- Golem Crystal Earth\n- Golem Firesteel\n- Golem Crystal Frost\n- Golem Crystal Flame\n- Golem Crystal Sand\n- Golem Crystal Thunder\n- Spirit Frost\n- Spirit Thunder\n- Spirit Root\n- Spirit Ember\nOdmeny za dokončenie:\n- 11x Expedičný bod\nOdomyká:\n- Skúška ríše duchov
+expeditions.ElementalConfluence.name=Sútok živlov
+announcements.expedition_started.ElementalConfluence=Expedícia „Sútok živlov“ sa začala.
+announcements.expedition_completed.ElementalConfluence=Expedícia „Sútok živlov“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.ElementalConfluence=Odomknutá nová expedícia: „Sútok živlov“
+progress.expedition.ElementalConfluence=Sútok živlov: zostáva {0}/{1} blokov
+
+# GENERATED ─── SpiritRealmTrial ───────────────────────────────────────
+items.OneBlock_Block_SpiritRealmTrial.name=OneBlock: Skúška ríše duchov
+items.OneBlock_Crystal_SpiritRealmTrial.name=Kryštál: Skúška ríše duchov
+items.OneBlock_Crystal_SpiritRealmTrial.description=Spotrebujte tento kryštál a vstúpte do žalára „Skúška ríše duchov“.\nPočet vĺn: 8.\nMožná korisť:\nEntity:\n- Spirit Root\n- Spirit Ember\n- Spirit Frost\n- Spirit Thunder\n- Golem Crystal Earth\n- Golem Crystal Sand\n- Golem Crystal Flame\n- Golem Firesteel\n- Golem Crystal Frost\n- Golem Crystal Thunder\nOdmeny za dokončenie:\n- 95x Expedičný bod
+expeditions.SpiritRealmTrial.name=Skúška ríše duchov
+announcements.dungeon_started.SpiritRealmTrial=Žalár „Skúška ríše duchov“ sa začal.
+announcements.dungeon_completed.SpiritRealmTrial=Žalár „Skúška ríše duchov“ je dokončený. OneBlock sa vrátil do predvoleného stavu.
+
+# GENERATED ─── CrystalCavern ──────────────────────────────────────────
+items.OneBlock_Block_CrystalCavern.name=OneBlock: Kryštálová kaverna
+items.OneBlock_Crystal_CrystalCavern.name=Kryštál: Kryštálová kaverna
+items.OneBlock_Crystal_CrystalCavern.description=Spotrebujte tento kryštál a začnite expedíciu „Kryštálová kaverna“.\nPočet blokov na rozbitie: 15.\nMožná korisť:\nPredmety:\n- Blue Crystal Shards\n- Cyan Crystal Shards\n- Green Crystal Shards\n- Pink Crystal Shards\n- Purple Crystal Shards\n- Red Crystal Shards\n- White Crystal Shards\n- Yellow Crystal Shards\nOdmeny za dokončenie:\n- 4x Expedičný bod
+expeditions.CrystalCavern.name=Kryštálová kaverna
+announcements.expedition_started.CrystalCavern=Expedícia „Kryštálová kaverna“ sa začala.
+announcements.expedition_completed.CrystalCavern=Expedícia „Kryštálová kaverna“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.CrystalCavern=Odomknutá nová expedícia: „Kryštálová kaverna“
+progress.expedition.CrystalCavern=Kryštálová kaverna: zostáva {0}/{1} blokov

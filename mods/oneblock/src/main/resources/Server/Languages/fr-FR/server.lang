@@ -1,0 +1,1091 @@
+items.Bench_OneBlockEnchanter.name=Enchanteur de cristaux
+items.Bench_OneBlockEnchanter.description=Fusionne les ressources récupérées pour créer des cristaux d’expédition.
+items.Bench_OneBlockDungeonEnchanter.name=Enchanteur de cristaux de donjon
+items.Bench_OneBlockDungeonEnchanter.description=Fusionne les ressources récupérées pour créer des cristaux d’expédition de donjon.
+
+items.Locket_GobelinDungeon.name=Médaillon du donjon gobelin
+items.ExpeditionPoint.name=Point d’expédition
+items.SwampRuinsToken.name=Jeton des ruines du marais
+items.AbandonedMineToken.name=Jeton de la mine abandonnée
+items.FrozenRuinsToken.name=Jeton des ruines gelées
+items.DesertTempleToken.name=Jeton du temple du désert
+items.PharaohCatacombsToken.name=Jeton des catacombes du pharaon
+items.GobelinCampToken.name=Jeton du camp gobelin
+
+# GENERATED ─── Default ────────────────────────────────────────────────
+items.OneBlock_Block_Default.name=OneBlock : Par défaut
+items.OneBlock_Crystal_Default.name=Cristal : Par défaut
+items.OneBlock_Crystal_Default.description=Consommez ce cristal pour commencer l’expédition « Par défaut ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Entrée de la grotte (possible)\n- Lisière de la forêt (possible)\n- Plaine (possible)
+expeditions.Default.name=Par défaut
+announcements.expedition_started.Default=L’expédition « Par défaut » a commencé.
+announcements.expedition_completed.Default=L’expédition « Par défaut » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Default=Nouvelle expédition débloquée : « Par défaut »
+progress.expedition.Default=Par défaut : {0}/{1} blocs restants
+benchCategories.OneBlockEnchanter_Easy=Cristaux faciles
+
+# GENERATED ─── CaveEntry ──────────────────────────────────────────────
+items.OneBlock_Block_CaveEntry.name=OneBlock : Entrée de la grotte
+items.OneBlock_Crystal_CaveEntry.name=Cristal : Entrée de la grotte
+items.OneBlock_Crystal_CaveEntry.description=Consommez ce cristal pour commencer l’expédition « Entrée de la grotte ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Stone\n- Stone\n- Copper Ore\nEntités :\n- Bat\n- Rat\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Grotte
+expeditions.CaveEntry.name=Entrée de la grotte
+announcements.expedition_started.CaveEntry=L’expédition « Entrée de la grotte » a commencé.
+announcements.expedition_completed.CaveEntry=L’expédition « Entrée de la grotte » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.CaveEntry=Nouvelle expédition débloquée : « Entrée de la grotte »
+progress.expedition.CaveEntry=Entrée de la grotte : {0}/{1} blocs restants
+
+# GENERATED ─── ForestEdge ─────────────────────────────────────────────
+items.OneBlock_Block_ForestEdge.name=OneBlock : Lisière de la forêt
+items.OneBlock_Crystal_ForestEdge.name=Cristal : Lisière de la forêt
+items.OneBlock_Crystal_ForestEdge.description=Consommez ce cristal pour commencer l’expédition « Lisière de la forêt ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Stick\n- Oak Trunk\n- Oak Sapling\n- Apple Fruit\nEntités :\n- Rabbit\n- Boar\n- Boar Piglet\n- Fox\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Entrée de la forêt
+expeditions.ForestEdge.name=Lisière de la forêt
+announcements.expedition_started.ForestEdge=L’expédition « Lisière de la forêt » a commencé.
+announcements.expedition_completed.ForestEdge=L’expédition « Lisière de la forêt » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.ForestEdge=Nouvelle expédition débloquée : « Lisière de la forêt »
+progress.expedition.ForestEdge=Lisière de la forêt : {0}/{1} blocs restants
+
+# GENERATED ─── Plain ──────────────────────────────────────────────────
+items.OneBlock_Block_Plain.name=OneBlock : Plaine
+items.OneBlock_Crystal_Plain.name=Cristal : Plaine
+items.OneBlock_Crystal_Plain.description=Consommez ce cristal pour commencer l’expédition « Plaine ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fibre\n- Soil Grass\n- Soil Dirt\n- Plant Grass Sharp\n- Hay Bundle\n- Wheat\n- Carrot\n- Corn\nEntités :\n- Rabbit\n- Sheep\n- Chicken\n- Antelope\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Carrière (possible)\n- Lieu sacré (possible)
+expeditions.Plain.name=Plaine
+announcements.expedition_started.Plain=L’expédition « Plaine » a commencé.
+announcements.expedition_completed.Plain=L’expédition « Plaine » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Plain=Nouvelle expédition débloquée : « Plaine »
+progress.expedition.Plain=Plaine : {0}/{1} blocs restants
+
+# GENERATED ─── Cave ───────────────────────────────────────────────────
+items.OneBlock_Block_Cave.name=OneBlock : Grotte
+items.OneBlock_Crystal_Cave.name=Cristal : Grotte
+items.OneBlock_Crystal_Cave.description=Consommez ce cristal pour commencer l’expédition « Grotte ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Stone\n- Rubble Stone\n- Copper Ore\nEntités :\n- Rat\n- Bat\n- Spider\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Grotte aux rats (possible)\n- Grotte inférieure (possible)
+expeditions.Cave.name=Grotte
+announcements.expedition_started.Cave=L’expédition « Grotte » a commencé.
+announcements.expedition_completed.Cave=L’expédition « Grotte » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Cave=Nouvelle expédition débloquée : « Grotte »
+progress.expedition.Cave=Grotte : {0}/{1} blocs restants
+
+# GENERATED ─── RatCave ────────────────────────────────────────────────
+items.OneBlock_Block_RatCave.name=OneBlock : Grotte aux rats
+items.OneBlock_Crystal_RatCave.name=Cristal : Grotte aux rats
+items.OneBlock_Crystal_RatCave.description=Consommez ce cristal pour commencer le donjon « Grotte aux rats ».\n3 vagues.\nButins possibles :\nEntités :\n- Rat\n- Spider\n- Spider Cave\nRécompenses de fin :\n- 8x Point d’expédition
+expeditions.RatCave.name=Grotte aux rats
+announcements.dungeon_started.RatCave=Le donjon « Grotte aux rats » a commencé.
+announcements.dungeon_completed.RatCave=Le donjon « Grotte aux rats » est terminé. Le OneBlock est revenu à son état par défaut.
+benchCategories.OneBlockDungeonEnchanter_Dungeon=Cristaux de donjon
+
+# GENERATED ─── LowerCave ──────────────────────────────────────────────
+items.OneBlock_Block_LowerCave.name=OneBlock : Grotte inférieure
+items.OneBlock_Crystal_LowerCave.name=Cristal : Grotte inférieure
+items.OneBlock_Crystal_LowerCave.description=Consommez ce cristal pour commencer l’expédition « Grotte inférieure ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Stone\n- Rubble Stone\n- Copper Ore\nEntités :\n- Rat\n- Bat\n- Spider\n- Spider Cave\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Mine de cuivre
+expeditions.LowerCave.name=Grotte inférieure
+announcements.expedition_started.LowerCave=L’expédition « Grotte inférieure » a commencé.
+announcements.expedition_completed.LowerCave=L’expédition « Grotte inférieure » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.LowerCave=Nouvelle expédition débloquée : « Grotte inférieure »
+progress.expedition.LowerCave=Grotte inférieure : {0}/{1} blocs restants
+
+# GENERATED ─── CopperCave ─────────────────────────────────────────────
+items.OneBlock_Block_CopperCave.name=OneBlock : Mine de cuivre
+items.OneBlock_Crystal_CopperCave.name=Cristal : Mine de cuivre
+items.OneBlock_Crystal_CopperCave.description=Consommez ce cristal pour commencer l’expédition « Mine de cuivre ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Stone\n- Rubble Stone\n- Copper Ore\n- Iron Ore\nEntités :\n- Bat\n- Rat\n- Goblin Miner\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Embuscade gobeline
+expeditions.CopperCave.name=Mine de cuivre
+announcements.expedition_started.CopperCave=L’expédition « Mine de cuivre » a commencé.
+announcements.expedition_completed.CopperCave=L’expédition « Mine de cuivre » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.CopperCave=Nouvelle expédition débloquée : « Mine de cuivre »
+progress.expedition.CopperCave=Mine de cuivre : {0}/{1} blocs restants
+
+# GENERATED ─── GoblinGank ─────────────────────────────────────────────
+items.OneBlock_Block_GoblinGank.name=OneBlock : Embuscade gobeline
+items.OneBlock_Crystal_GoblinGank.name=Cristal : Embuscade gobeline
+items.OneBlock_Crystal_GoblinGank.description=Consommez ce cristal pour commencer le donjon « Embuscade gobeline ».\n3 vagues.\nButins possibles :\nEntités :\n- Goblin Scrapper\n- Goblin Miner\nRécompenses de fin :\n- 12x Point d’expédition\nDébloque :\n- Mine de fer (possible)\n- Grotte de sable (possible)
+expeditions.GoblinGank.name=Embuscade gobeline
+announcements.dungeon_started.GoblinGank=Le donjon « Embuscade gobeline » a commencé.
+announcements.dungeon_completed.GoblinGank=Le donjon « Embuscade gobeline » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── IronCave ───────────────────────────────────────────────
+items.OneBlock_Block_IronCave.name=OneBlock : Mine de fer
+items.OneBlock_Crystal_IronCave.name=Cristal : Mine de fer
+items.OneBlock_Crystal_IronCave.description=Consommez ce cristal pour commencer l’expédition « Mine de fer ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Basalt\n- Rubble Basalt\n- Iron Ore\n- Thorium Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Scavenger\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Mine d’or (possible)\n- Mine de thorium (possible)
+expeditions.IronCave.name=Mine de fer
+announcements.expedition_started.IronCave=L’expédition « Mine de fer » a commencé.
+announcements.expedition_completed.IronCave=L’expédition « Mine de fer » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.IronCave=Nouvelle expédition débloquée : « Mine de fer »
+progress.expedition.IronCave=Mine de fer : {0}/{1} blocs restants
+benchCategories.OneBlockEnchanter_Advanced=Cristaux avancés
+
+# GENERATED ─── SandCave ───────────────────────────────────────────────
+items.OneBlock_Block_SandCave.name=OneBlock : Grotte de sable
+items.OneBlock_Crystal_SandCave.name=Cristal : Grotte de sable
+items.OneBlock_Crystal_SandCave.description=Consommez ce cristal pour commencer l’expédition « Grotte de sable ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nEntités :\n- Bat\n- Spider\n- Cactee\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Caverne de sable
+expeditions.SandCave.name=Grotte de sable
+announcements.expedition_started.SandCave=L’expédition « Grotte de sable » a commencé.
+announcements.expedition_completed.SandCave=L’expédition « Grotte de sable » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SandCave=Nouvelle expédition débloquée : « Grotte de sable »
+progress.expedition.SandCave=Grotte de sable : {0}/{1} blocs restants
+
+# GENERATED ─── GoldCave ───────────────────────────────────────────────
+items.OneBlock_Block_GoldCave.name=OneBlock : Mine d’or
+items.OneBlock_Crystal_GoldCave.name=Cristal : Mine d’or
+items.OneBlock_Crystal_GoldCave.description=Consommez ce cristal pour commencer l’expédition « Mine d’or ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Basalt\n- Rubble Basalt\n- Gold Ore\n- Topaz Gem\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Thief\nRécompenses de fin :\n- 3x Point d’expédition
+expeditions.GoldCave.name=Mine d’or
+announcements.expedition_started.GoldCave=L’expédition « Mine d’or » a commencé.
+announcements.expedition_completed.GoldCave=L’expédition « Mine d’or » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.GoldCave=Nouvelle expédition débloquée : « Mine d’or »
+progress.expedition.GoldCave=Mine d’or : {0}/{1} blocs restants
+
+# GENERATED ─── ThoriumCave ────────────────────────────────────────────
+items.OneBlock_Block_ThoriumCave.name=OneBlock : Mine de thorium
+items.OneBlock_Crystal_ThoriumCave.name=Cristal : Mine de thorium
+items.OneBlock_Crystal_ThoriumCave.description=Consommez ce cristal pour commencer l’expédition « Mine de thorium ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Basalt\n- Rubble Basalt\n- Thorium Ore\n- Cobalt Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Invasion gobeline (possible)\n- Mine d’argent (possible)
+expeditions.ThoriumCave.name=Mine de thorium
+announcements.expedition_started.ThoriumCave=L’expédition « Mine de thorium » a commencé.
+announcements.expedition_completed.ThoriumCave=L’expédition « Mine de thorium » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.ThoriumCave=Nouvelle expédition débloquée : « Mine de thorium »
+progress.expedition.ThoriumCave=Mine de thorium : {0}/{1} blocs restants
+
+# GENERATED ─── GoblinInvasion ─────────────────────────────────────────
+items.OneBlock_Block_GoblinInvasion.name=OneBlock : Invasion gobeline
+items.OneBlock_Crystal_GoblinInvasion.name=Cristal : Invasion gobeline
+items.OneBlock_Crystal_GoblinInvasion.description=Consommez ce cristal pour commencer le donjon « Invasion gobeline ».\n4 vagues.\nButins possibles :\nEntités :\n- Goblin Scrapper\n- Goblin Miner\nRécompenses de fin :\n- 24x Point d’expédition\nDébloque :\n- Mine de cobalt
+expeditions.GoblinInvasion.name=Invasion gobeline
+announcements.dungeon_started.GoblinInvasion=Le donjon « Invasion gobeline » a commencé.
+announcements.dungeon_completed.GoblinInvasion=Le donjon « Invasion gobeline » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── SilverCave ─────────────────────────────────────────────
+items.OneBlock_Block_SilverCave.name=OneBlock : Mine d’argent
+items.OneBlock_Crystal_SilverCave.name=Cristal : Mine d’argent
+items.OneBlock_Crystal_SilverCave.description=Consommez ce cristal pour commencer l’expédition « Mine d’argent ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Shale\n- Rubble Shale\n- Silver Ore\n- Sapphire Gem\nEntités :\n- Goblin Miner\n- Spider Cave\n- Goblin Thief\nRécompenses de fin :\n- 4x Point d’expédition
+expeditions.SilverCave.name=Mine d’argent
+announcements.expedition_started.SilverCave=L’expédition « Mine d’argent » a commencé.
+announcements.expedition_completed.SilverCave=L’expédition « Mine d’argent » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SilverCave=Nouvelle expédition débloquée : « Mine d’argent »
+progress.expedition.SilverCave=Mine d’argent : {0}/{1} blocs restants
+
+# GENERATED ─── CobaltCave ─────────────────────────────────────────────
+items.OneBlock_Block_CobaltCave.name=OneBlock : Mine de cobalt
+items.OneBlock_Crystal_CobaltCave.name=Cristal : Mine de cobalt
+items.OneBlock_Crystal_CobaltCave.description=Consommez ce cristal pour commencer l’expédition « Mine de cobalt ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Shale\n- Rubble Shale\n- Cobalt Ore\n- Adamantite Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Mine d’adamantite (possible)\n- Grotte aux gemmes (possible)\n- Grotte ardente (possible)
+expeditions.CobaltCave.name=Mine de cobalt
+announcements.expedition_started.CobaltCave=L’expédition « Mine de cobalt » a commencé.
+announcements.expedition_completed.CobaltCave=L’expédition « Mine de cobalt » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.CobaltCave=Nouvelle expédition débloquée : « Mine de cobalt »
+progress.expedition.CobaltCave=Mine de cobalt : {0}/{1} blocs restants
+
+# GENERATED ─── AdamantiteCave ─────────────────────────────────────────
+items.OneBlock_Block_AdamantiteCave.name=OneBlock : Mine d’adamantite
+items.OneBlock_Crystal_AdamantiteCave.name=Cristal : Mine d’adamantite
+items.OneBlock_Crystal_AdamantiteCave.description=Consommez ce cristal pour commencer l’expédition « Mine d’adamantite ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Grotte profonde aux gemmes (possible)\n- Mine de mithril (possible)
+expeditions.AdamantiteCave.name=Mine d’adamantite
+announcements.expedition_started.AdamantiteCave=L’expédition « Mine d’adamantite » a commencé.
+announcements.expedition_completed.AdamantiteCave=L’expédition « Mine d’adamantite » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.AdamantiteCave=Nouvelle expédition débloquée : « Mine d’adamantite »
+progress.expedition.AdamantiteCave=Mine d’adamantite : {0}/{1} blocs restants
+benchCategories.OneBlockEnchanter_Difficult=Cristaux difficiles
+
+# GENERATED ─── GemCave ────────────────────────────────────────────────
+items.OneBlock_Block_GemCave.name=OneBlock : Grotte aux gemmes
+items.OneBlock_Crystal_GemCave.name=Cristal : Grotte aux gemmes
+items.OneBlock_Crystal_GemCave.description=Consommez ce cristal pour commencer l’expédition « Grotte aux gemmes ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Shale\n- Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\nEntités :\n- Spider Cave\n- Goblin Thief\n- Golem Crystal Earth\nRécompenses de fin :\n- 5x Point d’expédition
+expeditions.GemCave.name=Grotte aux gemmes
+announcements.expedition_started.GemCave=L’expédition « Grotte aux gemmes » a commencé.
+announcements.expedition_completed.GemCave=L’expédition « Grotte aux gemmes » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.GemCave=Nouvelle expédition débloquée : « Grotte aux gemmes »
+progress.expedition.GemCave=Grotte aux gemmes : {0}/{1} blocs restants
+
+# GENERATED ─── FireCave ───────────────────────────────────────────────
+items.OneBlock_Block_FireCave.name=OneBlock : Grotte ardente
+items.OneBlock_Crystal_FireCave.name=Cristal : Grotte ardente
+items.OneBlock_Crystal_FireCave.description=Consommez ce cristal pour commencer l’expédition « Grotte ardente ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntités :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Porte infernale
+expeditions.FireCave.name=Grotte ardente
+announcements.expedition_started.FireCave=L’expédition « Grotte ardente » a commencé.
+announcements.expedition_completed.FireCave=L’expédition « Grotte ardente » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FireCave=Nouvelle expédition débloquée : « Grotte ardente »
+progress.expedition.FireCave=Grotte ardente : {0}/{1} blocs restants
+
+# GENERATED ─── GemDeepCave ────────────────────────────────────────────
+items.OneBlock_Block_GemDeepCave.name=OneBlock : Grotte profonde aux gemmes
+items.OneBlock_Crystal_GemDeepCave.name=Cristal : Grotte profonde aux gemmes
+items.OneBlock_Crystal_GemDeepCave.description=Consommez ce cristal pour commencer l’expédition « Grotte profonde aux gemmes ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Shale\n- Rubble Shale\n- Emerald Gem\n- Topaz Gem\n- Sapphire Gem\n- Diamond Gem\nEntités :\n- Spider Cave\n- Golem Crystal Earth\nRécompenses de fin :\n- 7x Point d’expédition
+expeditions.GemDeepCave.name=Grotte profonde aux gemmes
+announcements.expedition_started.GemDeepCave=L’expédition « Grotte profonde aux gemmes » a commencé.
+announcements.expedition_completed.GemDeepCave=L’expédition « Grotte profonde aux gemmes » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.GemDeepCave=Nouvelle expédition débloquée : « Grotte profonde aux gemmes »
+progress.expedition.GemDeepCave=Grotte profonde aux gemmes : {0}/{1} blocs restants
+
+# GENERATED ─── MithrilCave ────────────────────────────────────────────
+items.OneBlock_Block_MithrilCave.name=OneBlock : Mine de mithril
+items.OneBlock_Crystal_MithrilCave.name=Cristal : Mine de mithril
+items.OneBlock_Crystal_MithrilCave.description=Consommez ce cristal pour commencer l’expédition « Mine de mithril ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rock Ledge Brick\n- Mithril Ore\n- Onyxium Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Ogre\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Mine d’onyxium
+expeditions.MithrilCave.name=Mine de mithril
+announcements.expedition_started.MithrilCave=L’expédition « Mine de mithril » a commencé.
+announcements.expedition_completed.MithrilCave=L’expédition « Mine de mithril » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.MithrilCave=Nouvelle expédition débloquée : « Mine de mithril »
+progress.expedition.MithrilCave=Mine de mithril : {0}/{1} blocs restants
+benchCategories.OneBlockEnchanter_Hard=Cristaux redoutables
+
+# GENERATED ─── OnyxiumCave ────────────────────────────────────────────
+items.OneBlock_Block_OnyxiumCave.name=OneBlock : Mine d’onyxium
+items.OneBlock_Crystal_OnyxiumCave.name=Cristal : Mine d’onyxium
+items.OneBlock_Crystal_OnyxiumCave.description=Consommez ce cristal pour commencer l’expédition « Mine d’onyxium ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rock Ledge Brick\n- Onyxium Ore\n- Prisma Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Crawler Void\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Mine de prisma
+expeditions.OnyxiumCave.name=Mine d’onyxium
+announcements.expedition_started.OnyxiumCave=L’expédition « Mine d’onyxium » a commencé.
+announcements.expedition_completed.OnyxiumCave=L’expédition « Mine d’onyxium » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.OnyxiumCave=Nouvelle expédition débloquée : « Mine d’onyxium »
+progress.expedition.OnyxiumCave=Mine d’onyxium : {0}/{1} blocs restants
+
+# GENERATED ─── PrismaCave ─────────────────────────────────────────────
+items.OneBlock_Block_PrismaCave.name=OneBlock : Mine de prisma
+items.OneBlock_Crystal_PrismaCave.name=Cristal : Mine de prisma
+items.OneBlock_Crystal_PrismaCave.description=Consommez ce cristal pour commencer l’expédition « Mine de prisma ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rubble Volcanic\n- Prisma Ore\n- Zephyr Gem\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Crawler Void\n- Eye Void\nRécompenses de fin :\n- 10x Point d’expédition
+expeditions.PrismaCave.name=Mine de prisma
+announcements.expedition_started.PrismaCave=L’expédition « Mine de prisma » a commencé.
+announcements.expedition_completed.PrismaCave=L’expédition « Mine de prisma » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.PrismaCave=Nouvelle expédition débloquée : « Mine de prisma »
+progress.expedition.PrismaCave=Mine de prisma : {0}/{1} blocs restants
+benchCategories.OneBlockEnchanter_Expert=Cristaux experts
+
+# GENERATED ─── SandCavern ─────────────────────────────────────────────
+items.OneBlock_Block_SandCavern.name=OneBlock : Caverne de sable
+items.OneBlock_Crystal_SandCavern.name=Cristal : Caverne de sable
+items.OneBlock_Crystal_SandCavern.description=Consommez ce cristal pour commencer l’expédition « Caverne de sable ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Stone\n- Stone\n- Sandstone\n- Rubble Sandstone\n- Gold Ore\nEntités :\n- Bat\n- Cactee\n- Zombie Sand\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Désert
+expeditions.SandCavern.name=Caverne de sable
+announcements.expedition_started.SandCavern=L’expédition « Caverne de sable » a commencé.
+announcements.expedition_completed.SandCavern=L’expédition « Caverne de sable » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SandCavern=Nouvelle expédition débloquée : « Caverne de sable »
+progress.expedition.SandCavern=Caverne de sable : {0}/{1} blocs restants
+
+# GENERATED ─── Desert ─────────────────────────────────────────────────
+items.OneBlock_Block_Desert.name=OneBlock : Désert
+items.OneBlock_Crystal_Desert.name=Cristal : Désert
+items.OneBlock_Crystal_Desert.description=Consommez ce cristal pour commencer l’expédition « Désert ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nEntités :\n- Cactee\n- Camel\n- Camel Calf\n- Zombie Sand\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Col aride de la jungle (possible)\n- Entrée du temple du désert (possible)\n- Désert intérieur (possible)\n- Camp Trork aride (possible)
+expeditions.Desert.name=Désert
+announcements.expedition_started.Desert=L’expédition « Désert » a commencé.
+announcements.expedition_completed.Desert=L’expédition « Désert » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Desert=Nouvelle expédition débloquée : « Désert »
+progress.expedition.Desert=Désert : {0}/{1} blocs restants
+
+# GENERATED ─── ForestEntry ────────────────────────────────────────────
+items.OneBlock_Block_ForestEntry.name=OneBlock : Entrée de la forêt
+items.OneBlock_Crystal_ForestEntry.name=Cristal : Entrée de la forêt
+items.OneBlock_Crystal_ForestEntry.description=Consommez ce cristal pour commencer l’expédition « Entrée de la forêt ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Brown Cap Mushroom\n- Brown Common Mushroom\n- Brown Shelve Mushroom\nEntités :\n- Boar\n- Boar Piglet\n- Pigeon\n- Fox\n- Wolf Black\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Étang (possible)\n- Forêt (possible)
+expeditions.ForestEntry.name=Entrée de la forêt
+announcements.expedition_started.ForestEntry=L’expédition « Entrée de la forêt » a commencé.
+announcements.expedition_completed.ForestEntry=L’expédition « Entrée de la forêt » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.ForestEntry=Nouvelle expédition débloquée : « Entrée de la forêt »
+progress.expedition.ForestEntry=Entrée de la forêt : {0}/{1} blocs restants
+
+# GENERATED ─── Pond ───────────────────────────────────────────────────
+items.OneBlock_Block_Pond.name=OneBlock : Étang
+items.OneBlock_Crystal_Pond.name=Cristal : Étang
+items.OneBlock_Crystal_Pond.description=Consommez ce cristal pour commencer l’expédition « Étang ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Soil Dirt\nEntités :\n- Frog Green\n- Duck\n- Bluegill\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Rivière
+expeditions.Pond.name=Étang
+announcements.expedition_started.Pond=L’expédition « Étang » a commencé.
+announcements.expedition_completed.Pond=L’expédition « Étang » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Pond=Nouvelle expédition débloquée : « Étang »
+progress.expedition.Pond=Étang : {0}/{1} blocs restants
+
+# GENERATED ─── River ──────────────────────────────────────────────────
+items.OneBlock_Block_River.name=OneBlock : Rivière
+items.OneBlock_Crystal_River.name=Cristal : Rivière
+items.OneBlock_Crystal_River.description=Consommez ce cristal pour commencer l’expédition « Rivière ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fish Bluegill Item\n- Rubble Stone\n- Stone\n- Soil Clay\n- Plant Moss Green\nEntités :\n- Frog Green\n- Duck\n- Bluegill\n- Crab\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Lac (possible)\n- Mer (possible)\n- Littoral (possible)
+expeditions.River.name=Rivière
+announcements.expedition_started.River=L’expédition « Rivière » a commencé.
+announcements.expedition_completed.River=L’expédition « Rivière » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.River=Nouvelle expédition débloquée : « Rivière »
+progress.expedition.River=Rivière : {0}/{1} blocs restants
+
+# GENERATED ─── Lake ───────────────────────────────────────────────────
+items.OneBlock_Block_Lake.name=OneBlock : Lac
+items.OneBlock_Crystal_Lake.name=Cristal : Lac
+items.OneBlock_Crystal_Lake.description=Consommez ce cristal pour commencer l’expédition « Lac ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\nEntités :\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nRécompenses de fin :\n- 2x Point d’expédition
+expeditions.Lake.name=Lac
+announcements.expedition_started.Lake=L’expédition « Lac » a commencé.
+announcements.expedition_completed.Lake=L’expédition « Lac » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Lake=Nouvelle expédition débloquée : « Lac »
+progress.expedition.Lake=Lac : {0}/{1} blocs restants
+
+# GENERATED ─── Sea ────────────────────────────────────────────────────
+items.OneBlock_Block_Sea.name=OneBlock : Mer
+items.OneBlock_Crystal_Sea.name=Cristal : Mer
+items.OneBlock_Crystal_Sea.description=Consommez ce cristal pour commencer l’expédition « Mer ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rock Aqua Brick\n- Plant Coral Block Yellow\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\n- Fish Salmon Item\n- Fish Crab Item\n- Fish Lobster Item\n- Fish Shark Hammerhead Item\nEntités :\n- Crab\n- Bluegill\n- Skeleton Pirate Striker\n- Skeleton Pirate Gunner\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Épave pirate
+expeditions.Sea.name=Mer
+announcements.expedition_started.Sea=L’expédition « Mer » a commencé.
+announcements.expedition_completed.Sea=L’expédition « Mer » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Sea=Nouvelle expédition débloquée : « Mer »
+progress.expedition.Sea=Mer : {0}/{1} blocs restants
+
+# GENERATED ─── PirateShipwreck ────────────────────────────────────────
+items.OneBlock_Block_PirateShipwreck.name=OneBlock : Épave pirate
+items.OneBlock_Crystal_PirateShipwreck.name=Cristal : Épave pirate
+items.OneBlock_Crystal_PirateShipwreck.description=Consommez ce cristal pour commencer le donjon « Épave pirate ».\n4 vagues.\nButins possibles :\nEntités :\n- Skeleton Pirate Striker\n- Skeleton Pirate Gunner\n- Skeleton Pirate Captain\nRécompenses de fin :\n- 30x Point d’expédition
+expeditions.PirateShipwreck.name=Épave pirate
+announcements.dungeon_started.PirateShipwreck=Le donjon « Épave pirate » a commencé.
+announcements.dungeon_completed.PirateShipwreck=Le donjon « Épave pirate » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── Coastline ──────────────────────────────────────────────
+items.OneBlock_Block_Coastline.name=OneBlock : Littoral
+items.OneBlock_Crystal_Coastline.name=Cristal : Littoral
+items.OneBlock_Crystal_Coastline.description=Consommez ce cristal pour commencer l’expédition « Littoral ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Plant Coral Bush Yellow\n- Plant Coral Model Yellow\n- Sapphire Gem\nEntités :\n- Crab\n- Duck\n- Cactee\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Caverne marine
+expeditions.Coastline.name=Littoral
+announcements.expedition_started.Coastline=L’expédition « Littoral » a commencé.
+announcements.expedition_completed.Coastline=L’expédition « Littoral » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Coastline=Nouvelle expédition débloquée : « Littoral »
+progress.expedition.Coastline=Littoral : {0}/{1} blocs restants
+
+# GENERATED ─── SeaCavern ──────────────────────────────────────────────
+items.OneBlock_Block_SeaCavern.name=OneBlock : Caverne marine
+items.OneBlock_Crystal_SeaCavern.name=Cristal : Caverne marine
+items.OneBlock_Crystal_SeaCavern.description=Consommez ce cristal pour commencer l’expédition « Caverne marine ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Rock Aqua Brick\n- Sapphire Gem\n- Diamond Gem\nEntités :\n- Crab\n- Spider Cave\n- Scarak Louse\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Nid marin infesté
+expeditions.SeaCavern.name=Caverne marine
+announcements.expedition_started.SeaCavern=L’expédition « Caverne marine » a commencé.
+announcements.expedition_completed.SeaCavern=L’expédition « Caverne marine » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SeaCavern=Nouvelle expédition débloquée : « Caverne marine »
+progress.expedition.SeaCavern=Caverne marine : {0}/{1} blocs restants
+
+# GENERATED ─── SeaInfestedNest ────────────────────────────────────────
+items.OneBlock_Block_SeaInfestedNest.name=OneBlock : Nid marin infesté
+items.OneBlock_Crystal_SeaInfestedNest.name=Cristal : Nid marin infesté
+items.OneBlock_Crystal_SeaInfestedNest.description=Consommez ce cristal pour commencer l’expédition « Nid marin infesté ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Soil Hive\n- Soil Hive Brick\n- Scaled Hide\n- Scaled Leather\n- Sapphire Gem\n- Diamond Gem\nEntités :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Monstre marin
+expeditions.SeaInfestedNest.name=Nid marin infesté
+announcements.expedition_started.SeaInfestedNest=L’expédition « Nid marin infesté » a commencé.
+announcements.expedition_completed.SeaInfestedNest=L’expédition « Nid marin infesté » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SeaInfestedNest=Nouvelle expédition débloquée : « Nid marin infesté »
+progress.expedition.SeaInfestedNest=Nid marin infesté : {0}/{1} blocs restants
+
+# GENERATED ─── SeaMonster ─────────────────────────────────────────────
+items.OneBlock_Block_SeaMonster.name=OneBlock : Monstre marin
+items.OneBlock_Crystal_SeaMonster.name=Cristal : Monstre marin
+items.OneBlock_Crystal_SeaMonster.description=Consommez ce cristal pour commencer le donjon « Monstre marin ».\n4 vagues.\nButins possibles :\nEntités :\n- Scarak Louse\n- Spider\n- Scarak Fighter\n- Spider Cave\n- Scarak Defender\n- Scarak Seeker\n- Scarak Broodmother\nRécompenses de fin :\n- 40x Point d’expédition
+expeditions.SeaMonster.name=Monstre marin
+announcements.dungeon_started.SeaMonster=Le donjon « Monstre marin » a commencé.
+announcements.dungeon_completed.SeaMonster=Le donjon « Monstre marin » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── Forest ─────────────────────────────────────────────────
+items.OneBlock_Block_Forest.name=OneBlock : Forêt
+items.OneBlock_Crystal_Forest.name=Cristal : Forêt
+items.OneBlock_Crystal_Forest.description=Consommez ce cristal pour commencer l’expédition « Forêt ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Apple Fruit\nEntités :\n- Boar\n- Boar Piglet\n- Fox\n- Pigeon\n- Deer Doe\n- Wolf Black\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Forêt aride (possible)\n- Marais (possible)\n- Forêt profonde (possible)\n- Lisière de la jungle (possible)
+expeditions.Forest.name=Forêt
+announcements.expedition_started.Forest=L’expédition « Forêt » a commencé.
+announcements.expedition_completed.Forest=L’expédition « Forêt » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Forest=Nouvelle expédition débloquée : « Forêt »
+progress.expedition.Forest=Forêt : {0}/{1} blocs restants
+
+# GENERATED ─── AridForest ─────────────────────────────────────────────
+items.OneBlock_Block_AridForest.name=OneBlock : Forêt aride
+items.OneBlock_Crystal_AridForest.name=Cristal : Forêt aride
+items.OneBlock_Crystal_AridForest.description=Consommez ce cristal pour commencer l’expédition « Forêt aride ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Ash Trunk\n- Bottletree Trunk\n- Plant Sapling Bottletree\n- Plant Leaves Bottle\n- Plant Seeds Bottletree\n- Sandstone\n- Rubble Sandstone\nEntités :\n- Fox\n- Armadillo\n- Cactee\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Désert
+expeditions.AridForest.name=Forêt aride
+announcements.expedition_started.AridForest=L’expédition « Forêt aride » a commencé.
+announcements.expedition_completed.AridForest=L’expédition « Forêt aride » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.AridForest=Nouvelle expédition débloquée : « Forêt aride »
+progress.expedition.AridForest=Forêt aride : {0}/{1} blocs restants
+
+# GENERATED ─── Swamp ──────────────────────────────────────────────────
+items.OneBlock_Block_Swamp.name=OneBlock : Marais
+items.OneBlock_Crystal_Swamp.name=Cristal : Marais
+items.OneBlock_Crystal_Swamp.description=Consommez ce cristal pour commencer l’expédition « Marais ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Dirt\n- Soil Clay\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Yellow Mushroom Block\nEntités :\n- Frog Green\n- Crocodile\n- Fen Stalker\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Forêt enchantée
+expeditions.Swamp.name=Marais
+announcements.expedition_started.Swamp=L’expédition « Marais » a commencé.
+announcements.expedition_completed.Swamp=L’expédition « Marais » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Swamp=Nouvelle expédition débloquée : « Marais »
+progress.expedition.Swamp=Marais : {0}/{1} blocs restants
+
+# GENERATED ─── EnchantedForest ────────────────────────────────────────
+items.OneBlock_Block_EnchantedForest.name=OneBlock : Forêt enchantée
+items.OneBlock_Crystal_EnchantedForest.name=Cristal : Forêt enchantée
+items.OneBlock_Crystal_EnchantedForest.description=Consommez ce cristal pour commencer l’expédition « Forêt enchantée ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Goldentree\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Emerald Gem\n- Topaz Gem\nEntités :\n- Deer Doe\n- Bluebird\n- Golem Crystal Earth\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Étang féerique
+expeditions.EnchantedForest.name=Forêt enchantée
+announcements.expedition_started.EnchantedForest=L’expédition « Forêt enchantée » a commencé.
+announcements.expedition_completed.EnchantedForest=L’expédition « Forêt enchantée » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.EnchantedForest=Nouvelle expédition débloquée : « Forêt enchantée »
+progress.expedition.EnchantedForest=Forêt enchantée : {0}/{1} blocs restants
+
+# GENERATED ─── FairyPond ──────────────────────────────────────────────
+items.OneBlock_Block_FairyPond.name=OneBlock : Étang féerique
+items.OneBlock_Crystal_FairyPond.name=Cristal : Étang féerique
+items.OneBlock_Crystal_FairyPond.description=Consommez ce cristal pour commencer l’expédition « Étang féerique ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Plant Flower Common Pink2\n- Plant Flower Common Yellow\n- Plant Flower Orchid Yellow\n- Plant Petals Yellow\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Topaz Gem\nEntités :\n- Frog Green\n- Duck\n- Bluebird\n- Golem Crystal Earth\nRécompenses de fin :\n- 5x Point d’expédition
+expeditions.FairyPond.name=Étang féerique
+announcements.expedition_started.FairyPond=L’expédition « Étang féerique » a commencé.
+announcements.expedition_completed.FairyPond=L’expédition « Étang féerique » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FairyPond=Nouvelle expédition débloquée : « Étang féerique »
+progress.expedition.FairyPond=Étang féerique : {0}/{1} blocs restants
+
+# GENERATED ─── DeepForest ─────────────────────────────────────────────
+items.OneBlock_Block_DeepForest.name=OneBlock : Forêt profonde
+items.OneBlock_Crystal_DeepForest.name=Cristal : Forêt profonde
+items.OneBlock_Crystal_DeepForest.description=Consommez ce cristal pour commencer l’expédition « Forêt profonde ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Beech Trunk\n- Ash Trunk\n- Maple Trunk\n- Beech Sapling\n- Plant Sapling Ash\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Trunk\n- Emerald Gem\nEntités :\n- Boar\n- Fox\n- Wolf Black\n- Crawler\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Forêt sombre (possible)\n- Lisière de la jungle (possible)\n- Territoire de chasse Trork (possible)
+expeditions.DeepForest.name=Forêt profonde
+announcements.expedition_started.DeepForest=L’expédition « Forêt profonde » a commencé.
+announcements.expedition_completed.DeepForest=L’expédition « Forêt profonde » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.DeepForest=Nouvelle expédition débloquée : « Forêt profonde »
+progress.expedition.DeepForest=Forêt profonde : {0}/{1} blocs restants
+
+# GENERATED ─── DarkForest ─────────────────────────────────────────────
+items.OneBlock_Block_DarkForest.name=OneBlock : Forêt sombre
+items.OneBlock_Crystal_DarkForest.name=Cristal : Forêt sombre
+items.OneBlock_Crystal_DarkForest.description=Consommez ce cristal pour commencer l’expédition « Forêt sombre ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Plant Leaves Bramble\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Mycelium\n- Plant Crop Mushroom Shelve Yellow\n- Bone Fragment\n- Ruby Gem\nEntités :\n- Wolf Black\n- Crawler\n- Zombie\n- Zombie Aberrant\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Forêt brûlée (possible)\n- Forêt maudite (possible)
+expeditions.DarkForest.name=Forêt sombre
+announcements.expedition_started.DarkForest=L’expédition « Forêt sombre » a commencé.
+announcements.expedition_completed.DarkForest=L’expédition « Forêt sombre » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.DarkForest=Nouvelle expédition débloquée : « Forêt sombre »
+progress.expedition.DarkForest=Forêt sombre : {0}/{1} blocs restants
+
+# GENERATED ─── BurnedForest ───────────────────────────────────────────
+items.OneBlock_Block_BurnedForest.name=OneBlock : Forêt brûlée
+items.OneBlock_Crystal_BurnedForest.name=Cristal : Forêt brûlée
+items.OneBlock_Crystal_BurnedForest.description=Consommez ce cristal pour commencer l’expédition « Forêt brûlée ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Ash Trunk\n- Fire Essence\n- Volcanic\n- Rubble Volcanic\n- Powder Boom\n- Thorium Ore\nEntités :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Archer\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Terres de feu
+expeditions.BurnedForest.name=Forêt brûlée
+announcements.expedition_started.BurnedForest=L’expédition « Forêt brûlée » a commencé.
+announcements.expedition_completed.BurnedForest=L’expédition « Forêt brûlée » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.BurnedForest=Nouvelle expédition débloquée : « Forêt brûlée »
+progress.expedition.BurnedForest=Forêt brûlée : {0}/{1} blocs restants
+
+# GENERATED ─── CursedForest ───────────────────────────────────────────
+items.OneBlock_Block_CursedForest.name=OneBlock : Forêt maudite
+items.OneBlock_Crystal_CursedForest.name=Cristal : Forêt maudite
+items.OneBlock_Crystal_CursedForest.description=Consommez ce cristal pour commencer l’expédition « Forêt maudite ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Zephyr Gem\nEntités :\n- Zombie\n- Zombie Aberrant\n- Skeleton Scout\n- Skeleton Archer\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Forêt des Exilés (possible)\n- Cimetière (possible)
+expeditions.CursedForest.name=Forêt maudite
+announcements.expedition_started.CursedForest=L’expédition « Forêt maudite » a commencé.
+announcements.expedition_completed.CursedForest=L’expédition « Forêt maudite » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.CursedForest=Nouvelle expédition débloquée : « Forêt maudite »
+progress.expedition.CursedForest=Forêt maudite : {0}/{1} blocs restants
+
+# GENERATED ─── Graveyard ──────────────────────────────────────────────
+items.OneBlock_Block_Graveyard.name=OneBlock : Cimetière
+items.OneBlock_Crystal_Graveyard.name=Cristal : Cimetière
+items.OneBlock_Crystal_Graveyard.description=Consommez ce cristal pour commencer l’expédition « Cimetière ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Furniture Village Tombstone\n- Furniture Ancient Coffin\n- Weapon Club Zombie Arm\n- Weapon Club Zombie Leg\nEntités :\n- Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Skeleton Soldier\n- Skeleton Mage\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Temple des morts-vivants
+expeditions.Graveyard.name=Cimetière
+announcements.expedition_started.Graveyard=L’expédition « Cimetière » a commencé.
+announcements.expedition_completed.Graveyard=L’expédition « Cimetière » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Graveyard=Nouvelle expédition débloquée : « Cimetière »
+progress.expedition.Graveyard=Cimetière : {0}/{1} blocs restants
+
+# GENERATED ─── UndeadTemple ───────────────────────────────────────────
+items.OneBlock_Block_UndeadTemple.name=OneBlock : Temple des morts-vivants
+items.OneBlock_Crystal_UndeadTemple.name=Cristal : Temple des morts-vivants
+items.OneBlock_Crystal_UndeadTemple.description=Consommez ce cristal pour commencer le donjon « Temple des morts-vivants ».\n4 vagues.\nButins possibles :\nEntités :\n- Skeleton Scout\n- Zombie\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Knight\n- Skeleton Ranger\n- Skeleton Mage\nRécompenses de fin :\n- 45x Point d’expédition\nDébloque :\n- Portail du Vide
+expeditions.UndeadTemple.name=Temple des morts-vivants
+announcements.dungeon_started.UndeadTemple=Le donjon « Temple des morts-vivants » a commencé.
+announcements.dungeon_completed.UndeadTemple=Le donjon « Temple des morts-vivants » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── VoidPortal ─────────────────────────────────────────────
+items.OneBlock_Block_VoidPortal.name=OneBlock : Portail du Vide
+items.OneBlock_Crystal_VoidPortal.name=Cristal : Portail du Vide
+items.OneBlock_Crystal_VoidPortal.description=Consommez ce cristal pour commencer l’expédition « Portail du Vide ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Rock Runic Brick\n- Rock Runic Cobble\n- Rock Runic Dark Brick\n- Rock Gem Voidstone\n- Void Essence\n- Voidheart\n- Onyxium Ore\nEntités :\n- Larva Void\n- Crawler Void\n- Eye Void\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Temple du Vide (possible)\n- Seuil des esprits (possible)
+expeditions.VoidPortal.name=Portail du Vide
+announcements.expedition_started.VoidPortal=L’expédition « Portail du Vide » a commencé.
+announcements.expedition_completed.VoidPortal=L’expédition « Portail du Vide » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.VoidPortal=Nouvelle expédition débloquée : « Portail du Vide »
+progress.expedition.VoidPortal=Portail du Vide : {0}/{1} blocs restants
+
+# GENERATED ─── VoidTemple ─────────────────────────────────────────────
+items.OneBlock_Block_VoidTemple.name=OneBlock : Temple du Vide
+items.OneBlock_Crystal_VoidTemple.name=Cristal : Temple du Vide
+items.OneBlock_Crystal_VoidTemple.description=Consommez ce cristal pour commencer le donjon « Temple du Vide ».\n4 vagues.\nButins possibles :\nEntités :\n- Larva Void\n- Crawler Void\n- Eye Void\n- Spawn Void\n- Wraith\nRécompenses de fin :\n- 75x Point d’expédition
+expeditions.VoidTemple.name=Temple du Vide
+announcements.dungeon_started.VoidTemple=Le donjon « Temple du Vide » a commencé.
+announcements.dungeon_completed.VoidTemple=Le donjon « Temple du Vide » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── OutlanderForest ────────────────────────────────────────
+items.OneBlock_Block_OutlanderForest.name=OneBlock : Forêt des Exilés
+items.OneBlock_Crystal_OutlanderForest.name=Cristal : Forêt des Exilés
+items.OneBlock_Crystal_OutlanderForest.description=Consommez ce cristal pour commencer l’expédition « Forêt des Exilés ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Prismic Hide\n- Zephyr Gem\nEntités :\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Embuscade des Exilés (possible)\n- Plaine des Exilés (possible)
+expeditions.OutlanderForest.name=Forêt des Exilés
+announcements.expedition_started.OutlanderForest=L’expédition « Forêt des Exilés » a commencé.
+announcements.expedition_completed.OutlanderForest=L’expédition « Forêt des Exilés » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.OutlanderForest=Nouvelle expédition débloquée : « Forêt des Exilés »
+progress.expedition.OutlanderForest=Forêt des Exilés : {0}/{1} blocs restants
+
+# GENERATED ─── OutlanderPlain ─────────────────────────────────────────
+items.OneBlock_Block_OutlanderPlain.name=OneBlock : Plaine des Exilés
+items.OneBlock_Crystal_OutlanderPlain.name=Cristal : Plaine des Exilés
+items.OneBlock_Crystal_OutlanderPlain.description=Consommez ce cristal pour commencer l’expédition « Plaine des Exilés ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Wheat\n- Corn\n- Carrot\n- Prismic Hide\n- Prismic Leather\n- Adamantite Ore\nEntités :\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Berserker\n- Outlander Marauder\n- Outlander Priest\n- Outlander Brute\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Cité des Exilés (possible)\n- Toundra (possible)
+expeditions.OutlanderPlain.name=Plaine des Exilés
+announcements.expedition_started.OutlanderPlain=L’expédition « Plaine des Exilés » a commencé.
+announcements.expedition_completed.OutlanderPlain=L’expédition « Plaine des Exilés » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.OutlanderPlain=Nouvelle expédition débloquée : « Plaine des Exilés »
+progress.expedition.OutlanderPlain=Plaine des Exilés : {0}/{1} blocs restants
+
+# GENERATED ─── OutlanderGank ──────────────────────────────────────────
+items.OneBlock_Block_OutlanderGank.name=OneBlock : Embuscade des Exilés
+items.OneBlock_Crystal_OutlanderGank.name=Cristal : Embuscade des Exilés
+items.OneBlock_Crystal_OutlanderGank.description=Consommez ce cristal pour commencer le donjon « Embuscade des Exilés ».\n4 vagues.\nButins possibles :\nEntités :\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\n- Outlander Berserker\nRécompenses de fin :\n- 42x Point d’expédition
+expeditions.OutlanderGank.name=Embuscade des Exilés
+announcements.dungeon_started.OutlanderGank=Le donjon « Embuscade des Exilés » a commencé.
+announcements.dungeon_completed.OutlanderGank=Le donjon « Embuscade des Exilés » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── OutlanderCity ──────────────────────────────────────────
+items.OneBlock_Block_OutlanderCity.name=OneBlock : Cité des Exilés
+items.OneBlock_Crystal_OutlanderCity.name=Cristal : Cité des Exilés
+items.OneBlock_Crystal_OutlanderCity.description=Consommez ce cristal pour commencer le donjon « Cité des Exilés ».\n5 vagues.\nButins possibles :\nEntités :\n- Outlander Cultist\n- Outlander Hunter\n- Outlander Marauder\n- Outlander Berserker\n- Outlander Priest\n- Outlander Brute\nRécompenses de fin :\n- 60x Point d’expédition
+expeditions.OutlanderCity.name=Cité des Exilés
+announcements.dungeon_started.OutlanderCity=Le donjon « Cité des Exilés » a commencé.
+announcements.dungeon_completed.OutlanderCity=Le donjon « Cité des Exilés » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── Tundra ─────────────────────────────────────────────────
+items.OneBlock_Block_Tundra.name=OneBlock : Toundra
+items.OneBlock_Crystal_Tundra.name=Cristal : Toundra
+items.OneBlock_Crystal_Tundra.description=Consommez ce cristal pour commencer l’expédition « Toundra ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Ice\n- Rubble Ice\n- Ice Trunk\n- Plant Seeds Ice\n- Ice Essence\nEntités :\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Scout\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Forêt gelée (possible)\n- Terres de glace (possible)
+expeditions.Tundra.name=Toundra
+announcements.expedition_started.Tundra=L’expédition « Toundra » a commencé.
+announcements.expedition_completed.Tundra=L’expédition « Toundra » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Tundra=Nouvelle expédition débloquée : « Toundra »
+progress.expedition.Tundra=Toundra : {0}/{1} blocs restants
+
+# GENERATED ─── FrozenForest ───────────────────────────────────────────
+items.OneBlock_Block_FrozenForest.name=OneBlock : Forêt gelée
+items.OneBlock_Crystal_FrozenForest.name=Cristal : Forêt gelée
+items.OneBlock_Crystal_FrozenForest.description=Consommez ce cristal pour commencer l’expédition « Forêt gelée ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Birch Trunk\n- Birch Sapling\n- Plant Leaves Birch\n- Ice Trunk\n- Ice\n- Rubble Ice\n- Ice Essence\nEntités :\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Ranger\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Forêt glacée
+expeditions.FrozenForest.name=Forêt gelée
+announcements.expedition_started.FrozenForest=L’expédition « Forêt gelée » a commencé.
+announcements.expedition_completed.FrozenForest=L’expédition « Forêt gelée » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FrozenForest=Nouvelle expédition débloquée : « Forêt gelée »
+progress.expedition.FrozenForest=Forêt gelée : {0}/{1} blocs restants
+
+# GENERATED ─── IceLand ────────────────────────────────────────────────
+items.OneBlock_Block_IceLand.name=OneBlock : Terres de glace
+items.OneBlock_Crystal_IceLand.name=Cristal : Terres de glace
+items.OneBlock_Crystal_IceLand.description=Consommez ce cristal pour commencer l’expédition « Terres de glace ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Trunk\n- Ice Essence\nEntités :\n- Zombie Frost\n- Skeleton Frost Scout\n- Golem Crystal Frost\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Caverne glacée
+expeditions.IceLand.name=Terres de glace
+announcements.expedition_started.IceLand=L’expédition « Terres de glace » a commencé.
+announcements.expedition_completed.IceLand=L’expédition « Terres de glace » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.IceLand=Nouvelle expédition débloquée : « Terres de glace »
+progress.expedition.IceLand=Terres de glace : {0}/{1} blocs restants
+
+# GENERATED ─── IcyCavern ──────────────────────────────────────────────
+items.OneBlock_Block_IcyCavern.name=OneBlock : Caverne glacée
+items.OneBlock_Crystal_IcyCavern.name=Cristal : Caverne glacée
+items.OneBlock_Crystal_IcyCavern.description=Consommez ce cristal pour commencer l’expédition « Caverne glacée ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Silver Ore\n- Sapphire Gem\n- Ice Essence\nEntités :\n- Zombie Frost\n- Skeleton Frost Fighter\n- Skeleton Frost Mage\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Caverne du yéti (possible)\n- Cimetière gelé (possible)
+expeditions.IcyCavern.name=Caverne glacée
+announcements.expedition_started.IcyCavern=L’expédition « Caverne glacée » a commencé.
+announcements.expedition_completed.IcyCavern=L’expédition « Caverne glacée » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.IcyCavern=Nouvelle expédition débloquée : « Caverne glacée »
+progress.expedition.IcyCavern=Caverne glacée : {0}/{1} blocs restants
+
+# GENERATED ─── YetiCavern ─────────────────────────────────────────────
+items.OneBlock_Block_YetiCavern.name=OneBlock : Caverne du yéti
+items.OneBlock_Crystal_YetiCavern.name=Cristal : Caverne du yéti
+items.OneBlock_Crystal_YetiCavern.description=Consommez ce cristal pour commencer l’expédition « Caverne du yéti ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Diamond Gem\n- Weapon Staff Crystal Ice\nEntités :\n- Golem Crystal Frost\n- Skeleton Frost Knight\n- Dragon Frost\nRécompenses de fin :\n- 10x Point d’expédition\nDébloque :\n- Temple de glace
+expeditions.YetiCavern.name=Caverne du yéti
+announcements.expedition_started.YetiCavern=L’expédition « Caverne du yéti » a commencé.
+announcements.expedition_completed.YetiCavern=L’expédition « Caverne du yéti » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.YetiCavern=Nouvelle expédition débloquée : « Caverne du yéti »
+progress.expedition.YetiCavern=Caverne du yéti : {0}/{1} blocs restants
+
+# GENERATED ─── IceTemple ──────────────────────────────────────────────
+items.OneBlock_Block_IceTemple.name=OneBlock : Temple de glace
+items.OneBlock_Crystal_IceTemple.name=Cristal : Temple de glace
+items.OneBlock_Crystal_IceTemple.description=Consommez ce cristal pour commencer le donjon « Temple de glace ».\n4 vagues.\nButins possibles :\nEntités :\n- Zombie Frost\n- Skeleton Frost Scout\n- Skeleton Frost Fighter\n- Skeleton Frost Ranger\n- Golem Crystal Frost\n- Skeleton Frost Mage\n- Dragon Frost\n- Skeleton Frost Knight\nRécompenses de fin :\n- 75x Point d’expédition
+expeditions.IceTemple.name=Temple de glace
+announcements.dungeon_started.IceTemple=Le donjon « Temple de glace » a commencé.
+announcements.dungeon_completed.IceTemple=Le donjon « Temple de glace » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── IcyForest ──────────────────────────────────────────────
+items.OneBlock_Block_IcyForest.name=OneBlock : Forêt glacée
+items.OneBlock_Crystal_IcyForest.name=Cristal : Forêt glacée
+items.OneBlock_Crystal_IcyForest.description=Consommez ce cristal pour commencer l’expédition « Forêt glacée ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Ice Trunk\n- Plant Seeds Ice\n- Plant Leaves Birch\n- Birch Trunk\n- Ice\n- Ice Essence\nEntités :\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Ranger\n- Golem Crystal Frost\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Seuil des esprits
+expeditions.IcyForest.name=Forêt glacée
+announcements.expedition_started.IcyForest=L’expédition « Forêt glacée » a commencé.
+announcements.expedition_completed.IcyForest=L’expédition « Forêt glacée » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.IcyForest=Nouvelle expédition débloquée : « Forêt glacée »
+progress.expedition.IcyForest=Forêt glacée : {0}/{1} blocs restants
+
+# GENERATED ─── FireLand ───────────────────────────────────────────────
+items.OneBlock_Block_FireLand.name=OneBlock : Terres de feu
+items.OneBlock_Crystal_FireLand.name=Cristal : Terres de feu
+items.OneBlock_Crystal_FireLand.description=Consommez ce cristal pour commencer l’expédition « Terres de feu ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntités :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Volcan (possible)\n- Cimetière enflammé (possible)
+expeditions.FireLand.name=Terres de feu
+announcements.expedition_started.FireLand=L’expédition « Terres de feu » a commencé.
+announcements.expedition_completed.FireLand=L’expédition « Terres de feu » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FireLand=Nouvelle expédition débloquée : « Terres de feu »
+progress.expedition.FireLand=Terres de feu : {0}/{1} blocs restants
+
+# GENERATED ─── Volcano ────────────────────────────────────────────────
+items.OneBlock_Block_Volcano.name=OneBlock : Volcan
+items.OneBlock_Crystal_Volcano.name=Cristal : Volcan
+items.OneBlock_Crystal_Volcano.description=Consommez ce cristal pour commencer le donjon « Volcan ».\n4 vagues.\nButins possibles :\nEntités :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Knight\n- Skeleton Burnt Wizard\n- Golem Crystal Flame\n- Skeleton Burnt Praetorian\nRécompenses de fin :\n- 55x Point d’expédition
+expeditions.Volcano.name=Volcan
+announcements.dungeon_started.Volcano=Le donjon « Volcan » a commencé.
+announcements.dungeon_completed.Volcano=Le donjon « Volcan » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── FieryGraveyard ─────────────────────────────────────────
+items.OneBlock_Block_FieryGraveyard.name=OneBlock : Cimetière enflammé
+items.OneBlock_Crystal_FieryGraveyard.name=Cristal : Cimetière enflammé
+items.OneBlock_Crystal_FieryGraveyard.description=Consommez ce cristal pour commencer l’expédition « Cimetière enflammé ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Fire Essence\n- Ruby Gem\nEntités :\n- Zombie Burnt\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Knight\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Grotte ardente (possible)\n- Champ de bataille calciné (possible)
+expeditions.FieryGraveyard.name=Cimetière enflammé
+announcements.expedition_started.FieryGraveyard=L’expédition « Cimetière enflammé » a commencé.
+announcements.expedition_completed.FieryGraveyard=L’expédition « Cimetière enflammé » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FieryGraveyard=Nouvelle expédition débloquée : « Cimetière enflammé »
+progress.expedition.FieryGraveyard=Cimetière enflammé : {0}/{1} blocs restants
+
+# GENERATED ─── InfernalGate ───────────────────────────────────────────
+items.OneBlock_Block_InfernalGate.name=OneBlock : Porte infernale
+items.OneBlock_Crystal_InfernalGate.name=Cristal : Porte infernale
+items.OneBlock_Crystal_InfernalGate.description=Consommez ce cristal pour commencer l’expédition « Porte infernale ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Rock Runic Brick\n- Rock Volcanic Cracked Incandescent\n- Rock Volcanic Cracked Lava Incandescent\n- Fire Essence\n- Mithril Ore\n- Onyxium Ore\nEntités :\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Mage\n- Golem Crystal Flame\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Plaine infernale (possible)\n- Marais infernal (possible)
+expeditions.InfernalGate.name=Porte infernale
+announcements.expedition_started.InfernalGate=L’expédition « Porte infernale » a commencé.
+announcements.expedition_completed.InfernalGate=L’expédition « Porte infernale » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.InfernalGate=Nouvelle expédition débloquée : « Porte infernale »
+progress.expedition.InfernalGate=Porte infernale : {0}/{1} blocs restants
+
+# GENERATED ─── InfernalPlain ──────────────────────────────────────────
+items.OneBlock_Block_InfernalPlain.name=OneBlock : Plaine infernale
+items.OneBlock_Crystal_InfernalPlain.name=Cristal : Plaine infernale
+items.OneBlock_Crystal_InfernalPlain.description=Consommez ce cristal pour commencer l’expédition « Plaine infernale ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Cindercloth Bolt\n- Mithril Ore\n- Onyxium Ore\nEntités :\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Footman\n- Emberwulf\n- Golem Firesteel\nRécompenses de fin :\n- 10x Point d’expédition\nDébloque :\n- Grotte aux gemmes de feu
+expeditions.InfernalPlain.name=Plaine infernale
+announcements.expedition_started.InfernalPlain=L’expédition « Plaine infernale » a commencé.
+announcements.expedition_completed.InfernalPlain=L’expédition « Plaine infernale » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.InfernalPlain=Nouvelle expédition débloquée : « Plaine infernale »
+progress.expedition.InfernalPlain=Plaine infernale : {0}/{1} blocs restants
+
+# GENERATED ─── InfernalSwamp ──────────────────────────────────────────
+items.OneBlock_Block_InfernalSwamp.name=OneBlock : Marais infernal
+items.OneBlock_Crystal_InfernalSwamp.name=Cristal : Marais infernal
+items.OneBlock_Crystal_InfernalSwamp.description=Consommez ce cristal pour commencer l’expédition « Marais infernal ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Mud\n- Plant Moss Yellow\n- Plant Moss Block Yellow\n- Yellow Mushroom Block\n- Fire Essence\n- Ruby Gem\n- Onyxium Ore\nEntités :\n- Fen Stalker\n- Zombie Burnt\n- Skeleton Incandescent Mage\n- Golem Crystal Flame\nRécompenses de fin :\n- 10x Point d’expédition
+expeditions.InfernalSwamp.name=Marais infernal
+announcements.expedition_started.InfernalSwamp=L’expédition « Marais infernal » a commencé.
+announcements.expedition_completed.InfernalSwamp=L’expédition « Marais infernal » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.InfernalSwamp=Nouvelle expédition débloquée : « Marais infernal »
+progress.expedition.InfernalSwamp=Marais infernal : {0}/{1} blocs restants
+
+# GENERATED ─── FireGemCave ────────────────────────────────────────────
+items.OneBlock_Block_FireGemCave.name=OneBlock : Grotte aux gemmes de feu
+items.OneBlock_Crystal_FireGemCave.name=Cristal : Grotte aux gemmes de feu
+items.OneBlock_Crystal_FireGemCave.description=Consommez ce cristal pour commencer l’expédition « Grotte aux gemmes de feu ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rock Volcanic Cracked Incandescent\n- Ruby Gem\n- Diamond Gem\n- Onyxium Ore\n- Prisma Ore\nEntités :\n- Skeleton Incandescent Fighter\n- Skeleton Incandescent Mage\n- Golem Firesteel\n- Golem Crystal Thunder\nRécompenses de fin :\n- 11x Point d’expédition\nDébloque :\n- Confluence élémentaire
+expeditions.FireGemCave.name=Grotte aux gemmes de feu
+announcements.expedition_started.FireGemCave=L’expédition « Grotte aux gemmes de feu » a commencé.
+announcements.expedition_completed.FireGemCave=L’expédition « Grotte aux gemmes de feu » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FireGemCave=Nouvelle expédition débloquée : « Grotte aux gemmes de feu »
+progress.expedition.FireGemCave=Grotte aux gemmes de feu : {0}/{1} blocs restants
+
+# GENERATED ─── DesertTempleEntrance ───────────────────────────────────
+items.OneBlock_Block_DesertTempleEntrance.name=OneBlock : Entrée du temple du désert
+items.OneBlock_Crystal_DesertTempleEntrance.name=Cristal : Entrée du temple du désert
+items.OneBlock_Crystal_DesertTempleEntrance.description=Consommez ce cristal pour commencer l’expédition « Entrée du temple du désert ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Sandstone\n- Rubble Sandstone\n- Furniture Ancient Pot\n- Furniture Ancient Crate\n- Deco Pot Clay Broken\n- Gold Ore\nEntités :\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Profondeurs du temple du désert
+expeditions.DesertTempleEntrance.name=Entrée du temple du désert
+announcements.expedition_started.DesertTempleEntrance=L’expédition « Entrée du temple du désert » a commencé.
+announcements.expedition_completed.DesertTempleEntrance=L’expédition « Entrée du temple du désert » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.DesertTempleEntrance=Nouvelle expédition débloquée : « Entrée du temple du désert »
+progress.expedition.DesertTempleEntrance=Entrée du temple du désert : {0}/{1} blocs restants
+
+# GENERATED ─── DeeperDesertTemple ─────────────────────────────────────
+items.OneBlock_Block_DeeperDesertTemple.name=OneBlock : Profondeurs du temple du désert
+items.OneBlock_Crystal_DeeperDesertTemple.name=Cristal : Profondeurs du temple du désert
+items.OneBlock_Crystal_DeeperDesertTemple.description=Consommez ce cristal pour commencer l’expédition « Profondeurs du temple du désert ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Sandstone\n- Rock Sandstone Brick\n- Furniture Ancient Pot\n- Furniture Ancient Statue\n- Furniture Ancient Candle\n- Topaz Gem\n- Gold Ore\nEntités :\n- Zombie Sand\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Mage\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Temple du désert
+expeditions.DeeperDesertTemple.name=Profondeurs du temple du désert
+announcements.expedition_started.DeeperDesertTemple=L’expédition « Profondeurs du temple du désert » a commencé.
+announcements.expedition_completed.DeeperDesertTemple=L’expédition « Profondeurs du temple du désert » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.DeeperDesertTemple=Nouvelle expédition débloquée : « Profondeurs du temple du désert »
+progress.expedition.DeeperDesertTemple=Profondeurs du temple du désert : {0}/{1} blocs restants
+
+# GENERATED ─── DesertTemple ───────────────────────────────────────────
+items.OneBlock_Block_DesertTemple.name=OneBlock : Temple du désert
+items.OneBlock_Crystal_DesertTemple.name=Cristal : Temple du désert
+items.OneBlock_Crystal_DesertTemple.description=Consommez ce cristal pour commencer le donjon « Temple du désert ».\n4 vagues.\nButins possibles :\nEntités :\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\n- Skeleton Knight\n- Skeleton Mage\n- Skeleton Sand Archmage\n- Skeleton Soldier\nRécompenses de fin :\n- 35x Point d’expédition\nDébloque :\n- Salle du pharaon
+expeditions.DesertTemple.name=Temple du désert
+announcements.dungeon_started.DesertTemple=Le donjon « Temple du désert » a commencé.
+announcements.dungeon_completed.DesertTemple=Le donjon « Temple du désert » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── PharaohRoom ────────────────────────────────────────────
+items.OneBlock_Block_PharaohRoom.name=OneBlock : Salle du pharaon
+items.OneBlock_Crystal_PharaohRoom.name=Cristal : Salle du pharaon
+items.OneBlock_Crystal_PharaohRoom.description=Consommez ce cristal pour commencer l’expédition « Salle du pharaon ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Deco Treasure\n- Furniture Ancient Coffin\n- Furniture Ancient Statue\n- Furniture Ancient Chest Large Treasure\n- Gold Ore\n- Diamond Gem\nEntités :\n- Zombie Sand\n- Skeleton Knight\n- Skeleton Mage\n- Skeleton Sand Archmage\nRécompenses de fin :\n- 7x Point d’expédition
+expeditions.PharaohRoom.name=Salle du pharaon
+announcements.expedition_started.PharaohRoom=L’expédition « Salle du pharaon » a commencé.
+announcements.expedition_completed.PharaohRoom=L’expédition « Salle du pharaon » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.PharaohRoom=Nouvelle expédition débloquée : « Salle du pharaon »
+progress.expedition.PharaohRoom=Salle du pharaon : {0}/{1} blocs restants
+
+# GENERATED ─── InnerDesert ────────────────────────────────────────────
+items.OneBlock_Block_InnerDesert.name=OneBlock : Désert intérieur
+items.OneBlock_Crystal_InnerDesert.name=Cristal : Désert intérieur
+items.OneBlock_Crystal_InnerDesert.description=Consommez ce cristal pour commencer l’expédition « Désert intérieur ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Cactus Ball 1\n- Cactus Flat 1\n- Gold Ore\nEntités :\n- Cactee\n- Camel\n- Zombie Sand\n- Scarak Louse\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Col aride de la jungle (possible)\n- Invasion d’insectes (possible)
+expeditions.InnerDesert.name=Désert intérieur
+announcements.expedition_started.InnerDesert=L’expédition « Désert intérieur » a commencé.
+announcements.expedition_completed.InnerDesert=L’expédition « Désert intérieur » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.InnerDesert=Nouvelle expédition débloquée : « Désert intérieur »
+progress.expedition.InnerDesert=Désert intérieur : {0}/{1} blocs restants
+
+# GENERATED ─── MuddyDesert ────────────────────────────────────────────
+items.OneBlock_Block_MuddyDesert.name=OneBlock : Désert boueux
+items.OneBlock_Crystal_MuddyDesert.name=Cristal : Désert boueux
+items.OneBlock_Crystal_MuddyDesert.description=Consommez ce cristal pour commencer l’expédition « Désert boueux ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Sand\n- Soil Dirt\n- Soil Mud\n- Soil Gravel\n- Cactus 1\n- Tomato\nEntités :\n- Cactee\n- Crocodile\n- Scarak Louse\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Désert infesté
+expeditions.MuddyDesert.name=Désert boueux
+announcements.expedition_started.MuddyDesert=L’expédition « Désert boueux » a commencé.
+announcements.expedition_completed.MuddyDesert=L’expédition « Désert boueux » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.MuddyDesert=Nouvelle expédition débloquée : « Désert boueux »
+progress.expedition.MuddyDesert=Désert boueux : {0}/{1} blocs restants
+
+# GENERATED ─── InsectInvasion ─────────────────────────────────────────
+items.OneBlock_Block_InsectInvasion.name=OneBlock : Invasion d’insectes
+items.OneBlock_Crystal_InsectInvasion.name=Cristal : Invasion d’insectes
+items.OneBlock_Crystal_InsectInvasion.description=Consommez ce cristal pour commencer le donjon « Invasion d’insectes ».\n3 vagues.\nButins possibles :\nEntités :\n- Scarak Louse\n- Spider\n- Scarak Fighter\n- Scarak Seeker\n- Spider Cave\nRécompenses de fin :\n- 26x Point d’expédition\nDébloque :\n- Désert boueux
+expeditions.InsectInvasion.name=Invasion d’insectes
+announcements.dungeon_started.InsectInvasion=Le donjon « Invasion d’insectes » a commencé.
+announcements.dungeon_completed.InsectInvasion=Le donjon « Invasion d’insectes » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── InfestedDesert ─────────────────────────────────────────
+items.OneBlock_Block_InfestedDesert.name=OneBlock : Désert infesté
+items.OneBlock_Crystal_InfestedDesert.name=Cristal : Désert infesté
+items.OneBlock_Crystal_InfestedDesert.description=Consommez ce cristal pour commencer l’expédition « Désert infesté ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Hive\n- Soil Hive Brick\n- Cactus Ball 1\n- Scaled Hide\nEntités :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Seeker\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Nid d’insectes
+expeditions.InfestedDesert.name=Désert infesté
+announcements.expedition_started.InfestedDesert=L’expédition « Désert infesté » a commencé.
+announcements.expedition_completed.InfestedDesert=L’expédition « Désert infesté » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.InfestedDesert=Nouvelle expédition débloquée : « Désert infesté »
+progress.expedition.InfestedDesert=Désert infesté : {0}/{1} blocs restants
+
+# GENERATED ─── InsectNest ─────────────────────────────────────────────
+items.OneBlock_Block_InsectNest.name=OneBlock : Nid d’insectes
+items.OneBlock_Crystal_InsectNest.name=Cristal : Nid d’insectes
+items.OneBlock_Crystal_InsectNest.description=Consommez ce cristal pour commencer le donjon « Nid d’insectes ».\n4 vagues.\nButins possibles :\nEntités :\n- Scarak Louse\n- Spider\n- Scarak Fighter\n- Spider Cave\n- Scarak Defender\n- Scarak Seeker\n- Scarak Broodmother\nRécompenses de fin :\n- 36x Point d’expédition\nDébloque :\n- Intérieur du nid d’insectes
+expeditions.InsectNest.name=Nid d’insectes
+announcements.dungeon_started.InsectNest=Le donjon « Nid d’insectes » a commencé.
+announcements.dungeon_completed.InsectNest=Le donjon « Nid d’insectes » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── InsideInsectNest ───────────────────────────────────────
+items.OneBlock_Block_InsideInsectNest.name=OneBlock : Intérieur du nid d’insectes
+items.OneBlock_Crystal_InsideInsectNest.name=Cristal : Intérieur du nid d’insectes
+items.OneBlock_Crystal_InsideInsectNest.description=Consommez ce cristal pour commencer l’expédition « Intérieur du nid d’insectes ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Hive\n- Soil Hive Brick\n- Ruby Gem\nEntités :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Cœur de la colonie
+expeditions.InsideInsectNest.name=Intérieur du nid d’insectes
+announcements.expedition_started.InsideInsectNest=L’expédition « Intérieur du nid d’insectes » a commencé.
+announcements.expedition_completed.InsideInsectNest=L’expédition « Intérieur du nid d’insectes » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.InsideInsectNest=Nouvelle expédition débloquée : « Intérieur du nid d’insectes »
+progress.expedition.InsideInsectNest=Intérieur du nid d’insectes : {0}/{1} blocs restants
+
+# GENERATED ─── InsectCore ─────────────────────────────────────────────
+items.OneBlock_Block_InsectCore.name=OneBlock : Cœur de la colonie
+items.OneBlock_Crystal_InsectCore.name=Cristal : Cœur de la colonie
+items.OneBlock_Crystal_InsectCore.description=Consommez ce cristal pour commencer le donjon « Cœur de la colonie ».\n4 vagues.\nButins possibles :\nEntités :\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\n- Spider Cave\n- Scarak Broodmother\nRécompenses de fin :\n- 50x Point d’expédition
+expeditions.InsectCore.name=Cœur de la colonie
+announcements.dungeon_started.InsectCore=Le donjon « Cœur de la colonie » a commencé.
+announcements.dungeon_completed.InsectCore=Le donjon « Cœur de la colonie » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── Quarry ─────────────────────────────────────────────────
+items.OneBlock_Block_Quarry.name=OneBlock : Carrière
+items.OneBlock_Crystal_Quarry.name=Cristal : Carrière
+items.OneBlock_Crystal_Quarry.description=Consommez ce cristal pour commencer l’expédition « Carrière ».\n50 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Basalt\n- Copper Ore\n- Iron Ore\nEntités :\n- Bat\n- Goblin Miner\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Caverne mystérieuse
+expeditions.Quarry.name=Carrière
+announcements.expedition_started.Quarry=L’expédition « Carrière » a commencé.
+announcements.expedition_completed.Quarry=L’expédition « Carrière » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Quarry=Nouvelle expédition débloquée : « Carrière »
+progress.expedition.Quarry=Carrière : {0}/{1} blocs restants
+
+# GENERATED ─── Hallow ─────────────────────────────────────────────────
+items.OneBlock_Block_Hallow.name=OneBlock : Lieu sacré
+items.OneBlock_Crystal_Hallow.name=Cristal : Lieu sacré
+items.OneBlock_Crystal_Hallow.description=Consommez ce cristal pour commencer l’expédition « Lieu sacré ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Wheat\n- Corn\n- Carrot\n- Food Bread\n- Apple Fruit\nEntités :\n- Rabbit\n- Sheep\n- Chicken\n- Deer Doe\nRécompenses de fin :\n- 2x Point d’expédition\nDébloque :\n- Sanctuaire des vaches (possible)\n- Sanctuaire des chevaux (possible)\n- Rivière (possible)
+expeditions.Hallow.name=Lieu sacré
+announcements.expedition_started.Hallow=L’expédition « Lieu sacré » a commencé.
+announcements.expedition_completed.Hallow=L’expédition « Lieu sacré » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Hallow=Nouvelle expédition débloquée : « Lieu sacré »
+progress.expedition.Hallow=Lieu sacré : {0}/{1} blocs restants
+
+# GENERATED ─── CowHallow ──────────────────────────────────────────────
+items.OneBlock_Block_CowHallow.name=OneBlock : Sanctuaire des vaches
+items.OneBlock_Crystal_CowHallow.name=Cristal : Sanctuaire des vaches
+items.OneBlock_Crystal_CowHallow.description=Consommez ce cristal pour commencer l’expédition « Sanctuaire des vaches ».\n35 blocs à briser.\nButins possibles :\nObjets :\n- Wheat\n- Corn\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nEntités :\n- Cow\n- Cow Calf\n- Wolf Black\nRécompenses de fin :\n- 2x Point d’expédition
+expeditions.CowHallow.name=Sanctuaire des vaches
+announcements.expedition_started.CowHallow=L’expédition « Sanctuaire des vaches » a commencé.
+announcements.expedition_completed.CowHallow=L’expédition « Sanctuaire des vaches » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.CowHallow=Nouvelle expédition débloquée : « Sanctuaire des vaches »
+progress.expedition.CowHallow=Sanctuaire des vaches : {0}/{1} blocs restants
+
+# GENERATED ─── HorseHallow ────────────────────────────────────────────
+items.OneBlock_Block_HorseHallow.name=OneBlock : Sanctuaire des chevaux
+items.OneBlock_Crystal_HorseHallow.name=Cristal : Sanctuaire des chevaux
+items.OneBlock_Crystal_HorseHallow.description=Consommez ce cristal pour commencer l’expédition « Sanctuaire des chevaux ».\n35 blocs à briser.\nButins possibles :\nObjets :\n- Carrot\n- Wheat\n- Wool Bolt\n- Food Bread\n- Apple Fruit\nEntités :\n- Horse\n- Wolf Black\nRécompenses de fin :\n- 2x Point d’expédition
+expeditions.HorseHallow.name=Sanctuaire des chevaux
+announcements.expedition_started.HorseHallow=L’expédition « Sanctuaire des chevaux » a commencé.
+announcements.expedition_completed.HorseHallow=L’expédition « Sanctuaire des chevaux » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.HorseHallow=Nouvelle expédition débloquée : « Sanctuaire des chevaux »
+progress.expedition.HorseHallow=Sanctuaire des chevaux : {0}/{1} blocs restants
+
+# GENERATED ─── MysteriousCavern ───────────────────────────────────────
+items.OneBlock_Block_MysteriousCavern.name=OneBlock : Caverne mystérieuse
+items.OneBlock_Crystal_MysteriousCavern.name=Cristal : Caverne mystérieuse
+items.OneBlock_Crystal_MysteriousCavern.description=Consommez ce cristal pour commencer l’expédition « Caverne mystérieuse ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Sapphire Gem\n- Iron Ore\nEntités :\n- Bat\n- Spider Cave\n- Golem Crystal Earth\nRécompenses de fin :\n- 3x Point d’expédition\nDébloque :\n- Grotte mystique
+expeditions.MysteriousCavern.name=Caverne mystérieuse
+announcements.expedition_started.MysteriousCavern=L’expédition « Caverne mystérieuse » a commencé.
+announcements.expedition_completed.MysteriousCavern=L’expédition « Caverne mystérieuse » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.MysteriousCavern=Nouvelle expédition débloquée : « Caverne mystérieuse »
+progress.expedition.MysteriousCavern=Caverne mystérieuse : {0}/{1} blocs restants
+
+# GENERATED ─── MysticCave ─────────────────────────────────────────────
+items.OneBlock_Block_MysticCave.name=OneBlock : Grotte mystique
+items.OneBlock_Crystal_MysticCave.name=Cristal : Grotte mystique
+items.OneBlock_Crystal_MysticCave.description=Consommez ce cristal pour commencer l’expédition « Grotte mystique ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rock Runic Brick\n- Sapphire Gem\n- Emerald Gem\n- Yellow Crystal Shards\nEntités :\n- Golem Crystal Earth\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Grotte luxueuse
+expeditions.MysticCave.name=Grotte mystique
+announcements.expedition_started.MysticCave=L’expédition « Grotte mystique » a commencé.
+announcements.expedition_completed.MysticCave=L’expédition « Grotte mystique » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.MysticCave=Nouvelle expédition débloquée : « Grotte mystique »
+progress.expedition.MysticCave=Grotte mystique : {0}/{1} blocs restants
+
+# GENERATED ─── LuxuriousCave ──────────────────────────────────────────
+items.OneBlock_Block_LuxuriousCave.name=OneBlock : Grotte luxueuse
+items.OneBlock_Crystal_LuxuriousCave.name=Cristal : Grotte luxueuse
+items.OneBlock_Crystal_LuxuriousCave.description=Consommez ce cristal pour commencer l’expédition « Grotte luxueuse ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Emerald Gem\n- Topaz Gem\n- Diamond Gem\n- Gold Ore\n- Adamantite Ore\n- Deco Treasure\nEntités :\n- Golem Crystal Earth\n- Goblin Thief\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Grotte jurassique
+expeditions.LuxuriousCave.name=Grotte luxueuse
+announcements.expedition_started.LuxuriousCave=L’expédition « Grotte luxueuse » a commencé.
+announcements.expedition_completed.LuxuriousCave=L’expédition « Grotte luxueuse » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.LuxuriousCave=Nouvelle expédition débloquée : « Grotte luxueuse »
+progress.expedition.LuxuriousCave=Grotte luxueuse : {0}/{1} blocs restants
+
+# GENERATED ─── JurassicCave ───────────────────────────────────────────
+items.OneBlock_Block_JurassicCave.name=OneBlock : Grotte jurassique
+items.OneBlock_Crystal_JurassicCave.name=Cristal : Grotte jurassique
+items.OneBlock_Crystal_JurassicCave.description=Consommez ce cristal pour commencer l’expédition « Grotte jurassique ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike Large\n- Scaled Hide\n- Scaled Leather\n- Diamond Gem\n- Adamantite Ore\nEntités :\n- Archaeopteryx\n- Crocodile\n- Raptor Cave\n- Rex Cave\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Crise des dinosaures
+expeditions.JurassicCave.name=Grotte jurassique
+announcements.expedition_started.JurassicCave=L’expédition « Grotte jurassique » a commencé.
+announcements.expedition_completed.JurassicCave=L’expédition « Grotte jurassique » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.JurassicCave=Nouvelle expédition débloquée : « Grotte jurassique »
+progress.expedition.JurassicCave=Grotte jurassique : {0}/{1} blocs restants
+
+# GENERATED ─── DinoCrisis ─────────────────────────────────────────────
+items.OneBlock_Block_DinoCrisis.name=OneBlock : Crise des dinosaures
+items.OneBlock_Crystal_DinoCrisis.name=Cristal : Crise des dinosaures
+items.OneBlock_Crystal_DinoCrisis.description=Consommez ce cristal pour commencer le donjon « Crise des dinosaures ».\n6 vagues.\nButins possibles :\nEntités :\n- Archaeopteryx\n- Crocodile\n- Raptor Cave\n- Crawler\n- Rex Cave\n- Golem Crystal Earth\nRécompenses de fin :\n- 65x Point d’expédition
+expeditions.DinoCrisis.name=Crise des dinosaures
+announcements.dungeon_started.DinoCrisis=Le donjon « Crise des dinosaures » a commencé.
+announcements.dungeon_completed.DinoCrisis=Le donjon « Crise des dinosaures » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── DryTrorkCamp ───────────────────────────────────────────
+items.OneBlock_Block_DryTrorkCamp.name=OneBlock : Camp Trork aride
+items.OneBlock_Crystal_DryTrorkCamp.name=Cristal : Camp Trork aride
+items.OneBlock_Crystal_DryTrorkCamp.description=Consommez ce cristal pour commencer l’expédition « Camp Trork aride ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Ash Trunk\n- Sandstone\n- Rubble Sandstone\n- Bone Fragment\n- Scaled Hide\n- Gold Ore\nEntités :\n- Trork Sentry\n- Trork Hunter\n- Wolf Trork Shaman\n- Trork Brawler\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Bande de guerre Trork
+expeditions.DryTrorkCamp.name=Camp Trork aride
+announcements.expedition_started.DryTrorkCamp=L’expédition « Camp Trork aride » a commencé.
+announcements.expedition_completed.DryTrorkCamp=L’expédition « Camp Trork aride » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.DryTrorkCamp=Nouvelle expédition débloquée : « Camp Trork aride »
+progress.expedition.DryTrorkCamp=Camp Trork aride : {0}/{1} blocs restants
+
+# GENERATED ─── TrorkHuntingGround ─────────────────────────────────────
+items.OneBlock_Block_TrorkHuntingGround.name=OneBlock : Territoire de chasse Trork
+items.OneBlock_Crystal_TrorkHuntingGround.name=Cristal : Territoire de chasse Trork
+items.OneBlock_Crystal_TrorkHuntingGround.description=Consommez ce cristal pour commencer l’expédition « Territoire de chasse Trork ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Beech Trunk\n- Ash Trunk\n- Plant Leaves Bramble\n- Bone Fragment\n- Scaled Hide\n- Emerald Gem\nEntités :\n- Wolf Trork Shaman\n- Trork Hunter\n- Trork Sentry\n- Trork Brawler\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Bande de guerre Trork
+expeditions.TrorkHuntingGround.name=Territoire de chasse Trork
+announcements.expedition_started.TrorkHuntingGround=L’expédition « Territoire de chasse Trork » a commencé.
+announcements.expedition_completed.TrorkHuntingGround=L’expédition « Territoire de chasse Trork » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.TrorkHuntingGround=Nouvelle expédition débloquée : « Territoire de chasse Trork »
+progress.expedition.TrorkHuntingGround=Territoire de chasse Trork : {0}/{1} blocs restants
+
+# GENERATED ─── TrorkWarband ───────────────────────────────────────────
+items.OneBlock_Block_TrorkWarband.name=OneBlock : Bande de guerre Trork
+items.OneBlock_Crystal_TrorkWarband.name=Cristal : Bande de guerre Trork
+items.OneBlock_Crystal_TrorkWarband.description=Consommez ce cristal pour commencer le donjon « Bande de guerre Trork ».\n4 vagues.\nButins possibles :\nEntités :\n- Wolf Trork Shaman\n- Trork Sentry\n- Trork Hunter\n- Trork Brawler\n- Trork Warrior\n- Trork Mauler\n- Trork Guard\nRécompenses de fin :\n- 32x Point d’expédition\nDébloque :\n- Approche de la forteresse Trork
+expeditions.TrorkWarband.name=Bande de guerre Trork
+announcements.dungeon_started.TrorkWarband=Le donjon « Bande de guerre Trork » a commencé.
+announcements.dungeon_completed.TrorkWarband=Le donjon « Bande de guerre Trork » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── TrorkStrongholdApproach ────────────────────────────────
+items.OneBlock_Block_TrorkStrongholdApproach.name=OneBlock : Approche de la forteresse Trork
+items.OneBlock_Crystal_TrorkStrongholdApproach.name=Cristal : Approche de la forteresse Trork
+items.OneBlock_Crystal_TrorkStrongholdApproach.description=Consommez ce cristal pour commencer l’expédition « Approche de la forteresse Trork ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Sandstone\n- Rock Runic Brick\n- Bone Fragment\n- Scaled Hide\n- Scaled Leather\n- Thorium Ore\nEntités :\n- Trork Sentry\n- Trork Warrior\n- Trork Guard\n- Trork Mauler\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Bosquet des anciens Trorks
+expeditions.TrorkStrongholdApproach.name=Approche de la forteresse Trork
+announcements.expedition_started.TrorkStrongholdApproach=L’expédition « Approche de la forteresse Trork » a commencé.
+announcements.expedition_completed.TrorkStrongholdApproach=L’expédition « Approche de la forteresse Trork » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.TrorkStrongholdApproach=Nouvelle expédition débloquée : « Approche de la forteresse Trork »
+progress.expedition.TrorkStrongholdApproach=Approche de la forteresse Trork : {0}/{1} blocs restants
+
+# GENERATED ─── TrorkElderGrove ────────────────────────────────────────
+items.OneBlock_Block_TrorkElderGrove.name=OneBlock : Bosquet des anciens Trorks
+items.OneBlock_Crystal_TrorkElderGrove.name=Cristal : Bosquet des anciens Trorks
+items.OneBlock_Crystal_TrorkElderGrove.description=Consommez ce cristal pour commencer l’expédition « Bosquet des anciens Trorks ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Wood Amber Trunk\n- Plant Sapling Amber\n- Plant Leaves Amber\n- Plant Leaves Bramble\n- Emerald Gem\n- Zephyr Gem\nEntités :\n- Trork Doctor Witch\n- Trork Hunter\n- Trork Guard\n- Wolf Trork Shaman\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Camp du chef Trork
+expeditions.TrorkElderGrove.name=Bosquet des anciens Trorks
+announcements.expedition_started.TrorkElderGrove=L’expédition « Bosquet des anciens Trorks » a commencé.
+announcements.expedition_completed.TrorkElderGrove=L’expédition « Bosquet des anciens Trorks » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.TrorkElderGrove=Nouvelle expédition débloquée : « Bosquet des anciens Trorks »
+progress.expedition.TrorkElderGrove=Bosquet des anciens Trorks : {0}/{1} blocs restants
+
+# GENERATED ─── TrorkChieftainCamp ─────────────────────────────────────
+items.OneBlock_Block_TrorkChieftainCamp.name=OneBlock : Camp du chef Trork
+items.OneBlock_Crystal_TrorkChieftainCamp.name=Cristal : Camp du chef Trork
+items.OneBlock_Crystal_TrorkChieftainCamp.description=Consommez ce cristal pour commencer le donjon « Camp du chef Trork ».\n5 vagues.\nButins possibles :\nEntités :\n- Trork Sentry\n- Wolf Trork Shaman\n- Trork Brawler\n- Trork Hunter\n- Trork Warrior\n- Trork Mauler\n- Trork Guard\n- Trork Doctor Witch\n- Trork Chieftain\nRécompenses de fin :\n- 55x Point d’expédition
+expeditions.TrorkChieftainCamp.name=Camp du chef Trork
+announcements.dungeon_started.TrorkChieftainCamp=Le donjon « Camp du chef Trork » a commencé.
+announcements.dungeon_completed.TrorkChieftainCamp=Le donjon « Camp du chef Trork » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── FrozenGraveyard ────────────────────────────────────────
+items.OneBlock_Block_FrozenGraveyard.name=OneBlock : Cimetière gelé
+items.OneBlock_Crystal_FrozenGraveyard.name=Cristal : Cimetière gelé
+items.OneBlock_Crystal_FrozenGraveyard.description=Consommez ce cristal pour commencer l’expédition « Cimetière gelé ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\nEntités :\n- Skeleton Frost Scout\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Soldier\n- Skeleton Frost Mage\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Nécropole glacée
+expeditions.FrozenGraveyard.name=Cimetière gelé
+announcements.expedition_started.FrozenGraveyard=L’expédition « Cimetière gelé » a commencé.
+announcements.expedition_completed.FrozenGraveyard=L’expédition « Cimetière gelé » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.FrozenGraveyard=Nouvelle expédition débloquée : « Cimetière gelé »
+progress.expedition.FrozenGraveyard=Cimetière gelé : {0}/{1} blocs restants
+
+# GENERATED ─── IcyNecropolis ──────────────────────────────────────────
+items.OneBlock_Block_IcyNecropolis.name=OneBlock : Nécropole glacée
+items.OneBlock_Crystal_IcyNecropolis.name=Cristal : Nécropole glacée
+items.OneBlock_Crystal_IcyNecropolis.description=Consommez ce cristal pour commencer l’expédition « Nécropole glacée ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Ice\n- Rubble Ice\n- Rock Ice Icicles\n- Ice Essence\n- Sapphire Gem\n- Diamond Gem\nEntités :\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Mage\n- Skeleton Frost Soldier\n- Skeleton Frost Knight\n- Skeleton Frost Archmage\nRécompenses de fin :\n- 10x Point d’expédition\nDébloque :\n- Crypte des os gelés
+expeditions.IcyNecropolis.name=Nécropole glacée
+announcements.expedition_started.IcyNecropolis=L’expédition « Nécropole glacée » a commencé.
+announcements.expedition_completed.IcyNecropolis=L’expédition « Nécropole glacée » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.IcyNecropolis=Nouvelle expédition débloquée : « Nécropole glacée »
+progress.expedition.IcyNecropolis=Nécropole glacée : {0}/{1} blocs restants
+
+# GENERATED ─── FrostboneCrypt ─────────────────────────────────────────
+items.OneBlock_Block_FrostboneCrypt.name=OneBlock : Crypte des os gelés
+items.OneBlock_Crystal_FrostboneCrypt.name=Cristal : Crypte des os gelés
+items.OneBlock_Crystal_FrostboneCrypt.description=Consommez ce cristal pour commencer le donjon « Crypte des os gelés ».\n5 vagues.\nButins possibles :\nEntités :\n- Skeleton Frost Scout\n- Skeleton Frost Ranger\n- Skeleton Frost Fighter\n- Skeleton Frost Archer\n- Skeleton Frost Soldier\n- Skeleton Frost Mage\n- Skeleton Frost Knight\n- Skeleton Frost Archmage\n- Golem Crystal Frost\nRécompenses de fin :\n- 80x Point d’expédition\nDébloque :\n- Temple de glace
+expeditions.FrostboneCrypt.name=Crypte des os gelés
+announcements.dungeon_started.FrostboneCrypt=Le donjon « Crypte des os gelés » a commencé.
+announcements.dungeon_completed.FrostboneCrypt=Le donjon « Crypte des os gelés » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── BurntBattlefield ───────────────────────────────────────
+items.OneBlock_Block_BurntBattlefield.name=OneBlock : Champ de bataille calciné
+items.OneBlock_Crystal_BurntBattlefield.name=Cristal : Champ de bataille calciné
+items.OneBlock_Crystal_BurntBattlefield.description=Consommez ce cristal pour commencer l’expédition « Champ de bataille calciné ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Ruby Gem\nEntités :\n- Skeleton Scout\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Knight\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Catacombes cendrées
+expeditions.BurntBattlefield.name=Champ de bataille calciné
+announcements.expedition_started.BurntBattlefield=L’expédition « Champ de bataille calciné » a commencé.
+announcements.expedition_completed.BurntBattlefield=L’expédition « Champ de bataille calciné » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.BurntBattlefield=Nouvelle expédition débloquée : « Champ de bataille calciné »
+progress.expedition.BurntBattlefield=Champ de bataille calciné : {0}/{1} blocs restants
+
+# GENERATED ─── AshenCatacombs ─────────────────────────────────────────
+items.OneBlock_Block_AshenCatacombs.name=OneBlock : Catacombes cendrées
+items.OneBlock_Crystal_AshenCatacombs.name=Cristal : Catacombes cendrées
+items.OneBlock_Crystal_AshenCatacombs.description=Consommez ce cristal pour commencer l’expédition « Catacombes cendrées ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Deco Bone Spine\n- Volcanic\n- Rubble Volcanic\n- Rock Volcanic Cracked Incandescent\n- Fire Essence\n- Ruby Gem\n- Mithril Ore\nEntités :\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Gunner\n- Skeleton Burnt Wizard\n- Skeleton Burnt Knight\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Citadelle des squelettes calcinés
+expeditions.AshenCatacombs.name=Catacombes cendrées
+announcements.expedition_started.AshenCatacombs=L’expédition « Catacombes cendrées » a commencé.
+announcements.expedition_completed.AshenCatacombs=L’expédition « Catacombes cendrées » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.AshenCatacombs=Nouvelle expédition débloquée : « Catacombes cendrées »
+progress.expedition.AshenCatacombs=Catacombes cendrées : {0}/{1} blocs restants
+
+# GENERATED ─── BurntSkeletonCitadel ───────────────────────────────────
+items.OneBlock_Block_BurntSkeletonCitadel.name=OneBlock : Citadelle des squelettes calcinés
+items.OneBlock_Crystal_BurntSkeletonCitadel.name=Cristal : Citadelle des squelettes calcinés
+items.OneBlock_Crystal_BurntSkeletonCitadel.description=Consommez ce cristal pour commencer le donjon « Citadelle des squelettes calcinés ».\n5 vagues.\nButins possibles :\nEntités :\n- Skeleton Burnt Soldier\n- Skeleton Burnt Archer\n- Skeleton Burnt Lancer\n- Skeleton Burnt Gunner\n- Skeleton Burnt Knight\n- Skeleton Burnt Wizard\n- Skeleton Burnt Praetorian\nRécompenses de fin :\n- 70x Point d’expédition\nDébloque :\n- Porte infernale
+expeditions.BurntSkeletonCitadel.name=Citadelle des squelettes calcinés
+announcements.dungeon_started.BurntSkeletonCitadel=Le donjon « Citadelle des squelettes calcinés » a commencé.
+announcements.dungeon_completed.BurntSkeletonCitadel=Le donjon « Citadelle des squelettes calcinés » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── JungleEdge ─────────────────────────────────────────────
+items.OneBlock_Block_JungleEdge.name=OneBlock : Lisière de la jungle
+items.OneBlock_Crystal_JungleEdge.name=Cristal : Lisière de la jungle
+items.OneBlock_Crystal_JungleEdge.description=Consommez ce cristal pour commencer l’expédition « Lisière de la jungle ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bamboo Trunk\n- Jungle Trunk\n- Stick\n- Fibre\n- Mango Fruit\n- Coconut Fruit\n- Plant Sapling Bamboo\n- Plant Sapling Jungle\n- Emerald Gem\nEntités :\n- Parrot\n- Gecko\n- Frog Green\n- Snake Marsh\n- Zombie\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Ruines envahies
+expeditions.JungleEdge.name=Lisière de la jungle
+announcements.expedition_started.JungleEdge=L’expédition « Lisière de la jungle » a commencé.
+announcements.expedition_completed.JungleEdge=L’expédition « Lisière de la jungle » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.JungleEdge=Nouvelle expédition débloquée : « Lisière de la jungle »
+progress.expedition.JungleEdge=Lisière de la jungle : {0}/{1} blocs restants
+
+# GENERATED ─── DryJunglePass ──────────────────────────────────────────
+items.OneBlock_Block_DryJunglePass.name=OneBlock : Col aride de la jungle
+items.OneBlock_Crystal_DryJunglePass.name=Cristal : Col aride de la jungle
+items.OneBlock_Crystal_DryJunglePass.description=Consommez ce cristal pour commencer l’expédition « Col aride de la jungle ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Sand\n- Sandstone\n- Rubble Sandstone\n- Cactus 1\n- Bamboo Trunk\n- Jungle Trunk\n- Stick\n- Fibre\n- Coconut Fruit\n- Plant Sapling Bamboo\n- Plant Sapling Jungle\n- Topaz Gem\nEntités :\n- Cactee\n- Gecko\n- Snake Marsh\n- Zombie Sand\n- Skeleton Scout\nRécompenses de fin :\n- 4x Point d’expédition\nDébloque :\n- Ruines englouties de la jungle
+expeditions.DryJunglePass.name=Col aride de la jungle
+announcements.expedition_started.DryJunglePass=L’expédition « Col aride de la jungle » a commencé.
+announcements.expedition_completed.DryJunglePass=L’expédition « Col aride de la jungle » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.DryJunglePass=Nouvelle expédition débloquée : « Col aride de la jungle »
+progress.expedition.DryJunglePass=Col aride de la jungle : {0}/{1} blocs restants
+
+# GENERATED ─── OvergrownRuins ─────────────────────────────────────────
+items.OneBlock_Block_OvergrownRuins.name=OneBlock : Ruines envahies
+items.OneBlock_Crystal_OvergrownRuins.name=Cristal : Ruines envahies
+items.OneBlock_Crystal_OvergrownRuins.description=Consommez ce cristal pour commencer l’expédition « Ruines envahies ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Maple Trunk\n- Plant Leaves Bramble\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Bone Fragment\n- Emerald Gem\nEntités :\n- Zombie\n- Skeleton Scout\n- Skeleton Archer\n- Crocodile\n- Toad Rhino\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Crypte de la jungle
+expeditions.OvergrownRuins.name=Ruines envahies
+announcements.expedition_started.OvergrownRuins=L’expédition « Ruines envahies » a commencé.
+announcements.expedition_completed.OvergrownRuins=L’expédition « Ruines envahies » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.OvergrownRuins=Nouvelle expédition débloquée : « Ruines envahies »
+progress.expedition.OvergrownRuins=Ruines envahies : {0}/{1} blocs restants
+
+# GENERATED ─── SunkenJungleRuins ──────────────────────────────────────
+items.OneBlock_Block_SunkenJungleRuins.name=OneBlock : Ruines englouties de la jungle
+items.OneBlock_Crystal_SunkenJungleRuins.name=Cristal : Ruines englouties de la jungle
+items.OneBlock_Crystal_SunkenJungleRuins.description=Consommez ce cristal pour commencer l’expédition « Ruines englouties de la jungle ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Soil Clay\n- Soil Dirt\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Rock Runic Brick\n- Rock Sandstone Brick\n- Bone Fragment\n- Sapphire Gem\nEntités :\n- Zombie Sand\n- Zombie\n- Skeleton Soldier\n- Crocodile\n- Snake Marsh\nRécompenses de fin :\n- 5x Point d’expédition\nDébloque :\n- Crypte de la jungle
+expeditions.SunkenJungleRuins.name=Ruines englouties de la jungle
+announcements.expedition_started.SunkenJungleRuins=L’expédition « Ruines englouties de la jungle » a commencé.
+announcements.expedition_completed.SunkenJungleRuins=L’expédition « Ruines englouties de la jungle » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SunkenJungleRuins=Nouvelle expédition débloquée : « Ruines englouties de la jungle »
+progress.expedition.SunkenJungleRuins=Ruines englouties de la jungle : {0}/{1} blocs restants
+
+# GENERATED ─── LostNecropolis ─────────────────────────────────────────
+items.OneBlock_Block_LostNecropolis.name=OneBlock : Nécropole perdue
+items.OneBlock_Crystal_LostNecropolis.name=Cristal : Nécropole perdue
+items.OneBlock_Crystal_LostNecropolis.description=Consommez ce cristal pour commencer l’expédition « Nécropole perdue ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spike\n- Rock Runic Brick\n- Emerald Gem\n- Ruby Gem\nEntités :\n- Skeleton Soldier\n- Skeleton Fighter\n- Skeleton Archer\n- Skeleton Ranger\n- Skeleton Mage\n- Zombie Aberrant\n- Zombie Aberrant Big\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Ancien sanctuaire des morts-vivants (possible)\n- Route ombragée de la jungle (possible)
+expeditions.LostNecropolis.name=Nécropole perdue
+announcements.expedition_started.LostNecropolis=L’expédition « Nécropole perdue » a commencé.
+announcements.expedition_completed.LostNecropolis=L’expédition « Nécropole perdue » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.LostNecropolis=Nouvelle expédition débloquée : « Nécropole perdue »
+progress.expedition.LostNecropolis=Nécropole perdue : {0}/{1} blocs restants
+
+# GENERATED ─── ShadowedJungleRoad ─────────────────────────────────────
+items.OneBlock_Block_ShadowedJungleRoad.name=OneBlock : Route ombragée de la jungle
+items.OneBlock_Crystal_ShadowedJungleRoad.name=Cristal : Route ombragée de la jungle
+items.OneBlock_Crystal_ShadowedJungleRoad.description=Consommez ce cristal pour commencer l’expédition « Route ombragée de la jungle ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Spine\n- Zephyr Gem\nEntités :\n- Wraith\n- Horse Skeleton\n- Horse Skeleton Armored\n- Skeleton Knight\n- Skeleton Archmage\n- Pig Undead\n- Chicken Undead\nRécompenses de fin :\n- 8x Point d’expédition\nDébloque :\n- Bosquet des morts en armure
+expeditions.ShadowedJungleRoad.name=Route ombragée de la jungle
+announcements.expedition_started.ShadowedJungleRoad=L’expédition « Route ombragée de la jungle » a commencé.
+announcements.expedition_completed.ShadowedJungleRoad=L’expédition « Route ombragée de la jungle » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.ShadowedJungleRoad=Nouvelle expédition débloquée : « Route ombragée de la jungle »
+progress.expedition.ShadowedJungleRoad=Route ombragée de la jungle : {0}/{1} blocs restants
+
+# GENERATED ─── ArmoredDeadGrove ───────────────────────────────────────
+items.OneBlock_Block_ArmoredDeadGrove.name=OneBlock : Bosquet des morts en armure
+items.OneBlock_Crystal_ArmoredDeadGrove.name=Cristal : Bosquet des morts en armure
+items.OneBlock_Crystal_ArmoredDeadGrove.description=Consommez ce cristal pour commencer l’expédition « Bosquet des morts en armure ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Wood Amber Trunk\n- Plant Leaves Bramble\n- Rock Runic Brick\n- Bone Fragment\n- Deco Bone Full\n- Deco Bone Spine\n- Zephyr Gem\nEntités :\n- Horse Skeleton Armored\n- Horse Skeleton\n- Shadow Knight\n- Wraith\n- Skeleton Knight\n- Skeleton Archmage\n- Ghoul\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Citadelle du chevalier de l’ombre
+expeditions.ArmoredDeadGrove.name=Bosquet des morts en armure
+announcements.expedition_started.ArmoredDeadGrove=L’expédition « Bosquet des morts en armure » a commencé.
+announcements.expedition_completed.ArmoredDeadGrove=L’expédition « Bosquet des morts en armure » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.ArmoredDeadGrove=Nouvelle expédition débloquée : « Bosquet des morts en armure »
+progress.expedition.ArmoredDeadGrove=Bosquet des morts en armure : {0}/{1} blocs restants
+
+# GENERATED ─── JungleCrypt ────────────────────────────────────────────
+items.OneBlock_Block_JungleCrypt.name=OneBlock : Crypte de la jungle
+items.OneBlock_Crystal_JungleCrypt.name=Cristal : Crypte de la jungle
+items.OneBlock_Crystal_JungleCrypt.description=Consommez ce cristal pour commencer le donjon « Crypte de la jungle ».\n4 vagues.\nButins possibles :\nEntités :\n- Zombie\n- Zombie Sand\n- Skeleton Scout\n- Skeleton Archer\n- Skeleton Soldier\n- Skeleton Fighter\n- Skeleton Knight\n- Skeleton Ranger\n- Skeleton Mage\nRécompenses de fin :\n- 36x Point d’expédition\nDébloque :\n- Nécropole perdue
+expeditions.JungleCrypt.name=Crypte de la jungle
+announcements.dungeon_started.JungleCrypt=Le donjon « Crypte de la jungle » a commencé.
+announcements.dungeon_completed.JungleCrypt=Le donjon « Crypte de la jungle » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── AncientUndeadSanctum ───────────────────────────────────
+items.OneBlock_Block_AncientUndeadSanctum.name=OneBlock : Ancien sanctuaire des morts-vivants
+items.OneBlock_Crystal_AncientUndeadSanctum.name=Cristal : Ancien sanctuaire des morts-vivants
+items.OneBlock_Crystal_AncientUndeadSanctum.description=Consommez ce cristal pour commencer le donjon « Ancien sanctuaire des morts-vivants ».\n5 vagues.\nButins possibles :\nEntités :\n- Zombie\n- Zombie Aberrant\n- Zombie Aberrant Small\n- Skeleton Soldier\n- Skeleton Archer\n- Skeleton Fighter\n- Skeleton Knight\n- Skeleton Mage\n- Zombie Aberrant Big\n- Skeleton Archmage\n- Skeleton Ranger\n- Ghoul\n- Wraith\nRécompenses de fin :\n- 58x Point d’expédition
+expeditions.AncientUndeadSanctum.name=Ancien sanctuaire des morts-vivants
+announcements.dungeon_started.AncientUndeadSanctum=Le donjon « Ancien sanctuaire des morts-vivants » a commencé.
+announcements.dungeon_completed.AncientUndeadSanctum=Le donjon « Ancien sanctuaire des morts-vivants » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── ShadowKnightCitadel ────────────────────────────────────
+items.OneBlock_Block_ShadowKnightCitadel.name=OneBlock : Citadelle du chevalier de l’ombre
+items.OneBlock_Crystal_ShadowKnightCitadel.name=Cristal : Citadelle du chevalier de l’ombre
+items.OneBlock_Crystal_ShadowKnightCitadel.description=Consommez ce cristal pour commencer le donjon « Citadelle du chevalier de l’ombre ».\n5 vagues.\nButins possibles :\nEntités :\n- Horse Skeleton\n- Pig Undead\n- Chicken Undead\n- Horse Skeleton Armored\n- Skeleton Knight\n- Wraith\n- Skeleton Archmage\n- Shadow Knight\nRécompenses de fin :\n- 72x Point d’expédition
+expeditions.ShadowKnightCitadel.name=Citadelle du chevalier de l’ombre
+announcements.dungeon_started.ShadowKnightCitadel=Le donjon « Citadelle du chevalier de l’ombre » a commencé.
+announcements.dungeon_completed.ShadowKnightCitadel=Le donjon « Citadelle du chevalier de l’ombre » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── SpiritThreshold ────────────────────────────────────────
+items.OneBlock_Block_SpiritThreshold.name=OneBlock : Seuil des esprits
+items.OneBlock_Crystal_SpiritThreshold.name=Cristal : Seuil des esprits
+items.OneBlock_Crystal_SpiritThreshold.description=Consommez ce cristal pour commencer l’expédition « Seuil des esprits ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Life Essence\n- Ice Essence\n- Lightning Essence\n- Fire Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nEntités :\n- Spirit Root\n- Spirit Frost\n- Spirit Thunder\n- Spirit Ember\n- Golem Crystal Earth\nRécompenses de fin :\n- 9x Point d’expédition\nDébloque :\n- Confluence élémentaire
+expeditions.SpiritThreshold.name=Seuil des esprits
+announcements.expedition_started.SpiritThreshold=L’expédition « Seuil des esprits » a commencé.
+announcements.expedition_completed.SpiritThreshold=L’expédition « Seuil des esprits » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.SpiritThreshold=Nouvelle expédition débloquée : « Seuil des esprits »
+progress.expedition.SpiritThreshold=Seuil des esprits : {0}/{1} blocs restants
+
+# GENERATED ─── ElementalConfluence ────────────────────────────────────
+items.OneBlock_Block_ElementalConfluence.name=OneBlock : Confluence élémentaire
+items.OneBlock_Crystal_ElementalConfluence.name=Cristal : Confluence élémentaire
+items.OneBlock_Crystal_ElementalConfluence.description=Consommez ce cristal pour commencer l’expédition « Confluence élémentaire ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fire Essence\n- Ice Essence\n- Life Essence\n- Lightning Essence\n- Water Essence\n- Light Motes\n- Void Essence\n- Voidheart\nEntités :\n- Golem Crystal Earth\n- Golem Firesteel\n- Golem Crystal Frost\n- Golem Crystal Flame\n- Golem Crystal Sand\n- Golem Crystal Thunder\n- Spirit Frost\n- Spirit Thunder\n- Spirit Root\n- Spirit Ember\nRécompenses de fin :\n- 11x Point d’expédition\nDébloque :\n- Épreuve du royaume des esprits
+expeditions.ElementalConfluence.name=Confluence élémentaire
+announcements.expedition_started.ElementalConfluence=L’expédition « Confluence élémentaire » a commencé.
+announcements.expedition_completed.ElementalConfluence=L’expédition « Confluence élémentaire » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.ElementalConfluence=Nouvelle expédition débloquée : « Confluence élémentaire »
+progress.expedition.ElementalConfluence=Confluence élémentaire : {0}/{1} blocs restants
+
+# GENERATED ─── SpiritRealmTrial ───────────────────────────────────────
+items.OneBlock_Block_SpiritRealmTrial.name=OneBlock : Épreuve du royaume des esprits
+items.OneBlock_Crystal_SpiritRealmTrial.name=Cristal : Épreuve du royaume des esprits
+items.OneBlock_Crystal_SpiritRealmTrial.description=Consommez ce cristal pour commencer le donjon « Épreuve du royaume des esprits ».\n8 vagues.\nButins possibles :\nEntités :\n- Spirit Root\n- Spirit Ember\n- Spirit Frost\n- Spirit Thunder\n- Golem Crystal Earth\n- Golem Crystal Sand\n- Golem Crystal Flame\n- Golem Firesteel\n- Golem Crystal Frost\n- Golem Crystal Thunder\nRécompenses de fin :\n- 95x Point d’expédition
+expeditions.SpiritRealmTrial.name=Épreuve du royaume des esprits
+announcements.dungeon_started.SpiritRealmTrial=Le donjon « Épreuve du royaume des esprits » a commencé.
+announcements.dungeon_completed.SpiritRealmTrial=Le donjon « Épreuve du royaume des esprits » est terminé. Le OneBlock est revenu à son état par défaut.
+
+# GENERATED ─── CrystalCavern ──────────────────────────────────────────
+items.OneBlock_Block_CrystalCavern.name=OneBlock : Caverne de cristal
+items.OneBlock_Crystal_CrystalCavern.name=Cristal : Caverne de cristal
+items.OneBlock_Crystal_CrystalCavern.description=Consommez ce cristal pour commencer l’expédition « Caverne de cristal ».\n15 blocs à briser.\nButins possibles :\nObjets :\n- Blue Crystal Shards\n- Cyan Crystal Shards\n- Green Crystal Shards\n- Pink Crystal Shards\n- Purple Crystal Shards\n- Red Crystal Shards\n- White Crystal Shards\n- Yellow Crystal Shards\nRécompenses de fin :\n- 4x Point d’expédition
+expeditions.CrystalCavern.name=Caverne de cristal
+announcements.expedition_started.CrystalCavern=L’expédition « Caverne de cristal » a commencé.
+announcements.expedition_completed.CrystalCavern=L’expédition « Caverne de cristal » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.CrystalCavern=Nouvelle expédition débloquée : « Caverne de cristal »
+progress.expedition.CrystalCavern=Caverne de cristal : {0}/{1} blocs restants

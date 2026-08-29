@@ -3,13 +3,13 @@ package com.EreliaStudio.OneBlock;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @SuppressWarnings("removal")
 public final class OneBlockHudService
 {
-    private final Map<PlayerRef, OneBlockProgressHud> hudsByPlayer = new HashMap<>();
+    private final Map<PlayerRef, OneBlockProgressHud> hudsByPlayer = new ConcurrentHashMap<>();
 
     public void show(Player player)
     {

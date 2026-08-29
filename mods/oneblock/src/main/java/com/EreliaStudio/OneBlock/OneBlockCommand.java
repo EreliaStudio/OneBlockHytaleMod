@@ -7,13 +7,15 @@ import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
 import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
+import com.hypixel.hytale.server.core.command.system.CommandSender;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractTargetPlayerCommand;
-import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 import java.util.Locale;
 
 public final class OneBlockCommand extends AbstractTargetPlayerCommand
@@ -24,8 +26,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
     public OneBlockCommand()
     {
         super("oneblock", "Admin commands for the OneBlock expedition system.");
-        this.actionArg = this.withRequiredArg("action", "status|start|stop|list|fallProtection=true|false", ArgTypes.STRING);
-        this.valueArg = this.withOptionalArg("value", "Expedition ID (for start/list), or fallProtection true|false", ArgTypes.STRING);
+        this.actionArg = this.withRequiredArg("action", "create|join|status|start|stop|list|fallProtection=true|false", ArgTypes.STRING);
+        this.valueArg = this.withOptionalArg("value", "World name, expedition ID, or fallProtection true|false", ArgTypes.STRING);
     }
 
     @Override
@@ -42,27 +44,119 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
             return;
         }
 
-        OneBlockExpeditionStateProvider stateProvider = plugin.getExpeditionStateProvider();
-        OneBlockSettingsProvider settingsProvider = plugin.getSettingsProvider();
-        Player targetPlayer = getPlayer(store, targetRef);
-
         ParsedAction parsedAction = parseAction(actionArg.get(ctx), valueArg.provided(ctx) ? valueArg.get(ctx) : null);
         String action = parsedAction.action();
         String value = parsedAction.value();
 
+        if ("create".equals(action))
+        {
+            handleCreate(ctx, plugin, targetPlayerRef, value);
+            return;
+        }
+        if ("join".equals(action))
+        {
+            handleJoin(ctx, plugin, targetPlayerRef, value);
+            return;
+        }
+
+        OneBlockWorldStateRegistry stateRegistry = plugin.getWorldStateRegistry();
+        if (stateRegistry == null)
+        {
+            return;
+        }
+        if ("list".equals(action))
+        {
+            ctx.sendMessage(Message.raw("OneBlock worlds: " + String.join(", ", stateRegistry.getManagedWorldNames())));
+            return;
+        }
+        if ("fallprotection".equals(action))
+        {
+            handleFallProtection(plugin.getSettingsProvider(), value);
+            return;
+        }
+        if (!stateRegistry.isManaged(world))
+        {
+            ctx.sendMessage(Message.raw("This command action requires a managed OneBlock world."));
+            return;
+        }
+
+        OneBlockExpeditionStateProvider stateProvider = stateRegistry.expeditionState(world);
         switch (action)
         {
-            case "start" -> handleStart(plugin, stateProvider, targetPlayer, value);
-            case "stop" -> handleStop(plugin, stateProvider, targetPlayer, world);
-            case "fallprotection" -> handleFallProtection(settingsProvider, value);
-            case "status", "list" -> { }
-            default -> { }
+            case "start" -> handleStart(plugin, stateRegistry, stateProvider, world, value);
+            case "stop" -> handleStop(plugin, stateRegistry, stateProvider, world);
+            case "status" -> handleStatus(ctx, stateRegistry, world);
+            default -> ctx.sendMessage(Message.raw("Unknown OneBlock action: " + action));
         }
     }
 
+    private static void handleCreate(CommandContext ctx,
+                                     OneBlockPlugin plugin,
+                                     PlayerRef targetPlayerRef,
+                                     String worldName)
+    {
+        CommandSender sender = ctx.sender();
+        try
+        {
+            plugin.getWorldService()
+                    .createExpeditionWorld(worldName, List.of(targetPlayerRef))
+                    .whenComplete((createdWorld, error) ->
+                    {
+                        if (error != null)
+                        {
+                            sender.sendMessage(Message.raw("Could not create OneBlock world: " + rootMessage(error)));
+                            return;
+                        }
+                        sender.sendMessage(Message.raw(
+                                "Created OneBlock world '" + createdWorld.getName() + "' and moved "
+                                        + targetPlayerRef.getUsername() + "."
+                        ));
+                    });
+        }
+        catch (Exception exception)
+        {
+            sender.sendMessage(Message.raw("Could not create OneBlock world: " + rootMessage(exception)));
+        }
+    }
+
+    private static void handleJoin(CommandContext ctx,
+                                   OneBlockPlugin plugin,
+                                   PlayerRef targetPlayerRef,
+                                   String worldName)
+    {
+        if (worldName == null || worldName.isBlank())
+        {
+            ctx.sendMessage(Message.raw("A world name is required."));
+            return;
+        }
+
+        if (!plugin.getWorldStateRegistry().isManaged(worldName.trim()))
+        {
+            ctx.sendMessage(Message.raw("No OneBlock world named '" + worldName.trim() + "'."));
+            return;
+        }
+
+        CommandSender sender = ctx.sender();
+        plugin.getWorldService().movePlayers(worldName.trim(), List.of(targetPlayerRef))
+                .whenComplete((targetWorld, error) ->
+                {
+                    if (error != null)
+                    {
+                        sender.sendMessage(Message.raw("Could not move player: " + rootMessage(error)));
+                    }
+                    else
+                    {
+                        sender.sendMessage(Message.raw(
+                                "Moved " + targetPlayerRef.getUsername() + " to '" + targetWorld.getName() + "'."
+                        ));
+                    }
+                });
+    }
+
     private static void handleStart(OneBlockPlugin plugin,
+                                    OneBlockWorldStateRegistry stateRegistry,
                                     OneBlockExpeditionStateProvider stateProvider,
-                                    Player targetPlayer,
+                                    World world,
                                     String expeditionId)
     {
         if (expeditionId == null || expeditionId.isBlank() || "-".equals(expeditionId.trim()))
@@ -73,30 +167,33 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         String normalizedExpeditionId = expeditionId.trim();
         int ticks = OneBlockExpeditionDefaults.getTicks(normalizedExpeditionId);
 
+        stateRegistry.dungeonState(world).endDungeon();
         stateProvider.startExpedition(normalizedExpeditionId, ticks);
 
-        if (targetPlayer != null)
-        {
-            plugin.getHudService().showExpeditionStarted(
-                    targetPlayer,
+        OneBlockWorldPlayers.forEach(
+                world,
+                worldPlayer -> plugin.getHudService().showExpeditionStarted(
+                    worldPlayer,
                     normalizedExpeditionId,
                     ticks
-            );
-        }
+                )
+        );
 
     }
 
     private static void handleStop(OneBlockPlugin plugin,
+                                   OneBlockWorldStateRegistry stateRegistry,
                                    OneBlockExpeditionStateProvider stateProvider,
-                                   Player targetPlayer,
                                    World world)
     {
-        if (!stateProvider.hasActiveExpedition())
+        OneBlockDungeonStateProvider dungeonState = stateRegistry.dungeonState(world);
+        if (!stateProvider.hasActiveExpedition() && !dungeonState.isDungeonActive())
         {
             return;
         }
 
         stateProvider.endExpedition();
+        dungeonState.endDungeon();
 
         if (world != null)
         {
@@ -104,10 +201,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
             world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
         }
 
-        if (targetPlayer != null)
-        {
-            plugin.getHudService().clear(targetPlayer);
-        }
+        OneBlockWorldPlayers.forEach(world, plugin.getHudService()::clear);
 
     }
 
@@ -131,16 +225,6 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         }
 
         settingsProvider.setFallProtectionEnabled(enabled);
-    }
-
-    private static Player getPlayer(Store<EntityStore> store, Ref<EntityStore> playerRef)
-    {
-        if (store == null || playerRef == null)
-        {
-            return null;
-        }
-
-        return store.getComponent(playerRef, Player.getComponentType());
     }
 
     private static String safeLower(String value)
@@ -169,6 +253,43 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         if ("true".equals(normalized)) return Boolean.TRUE;
         if ("false".equals(normalized)) return Boolean.FALSE;
         return null;
+    }
+
+    private static void handleStatus(CommandContext ctx,
+                                     OneBlockWorldStateRegistry stateRegistry,
+                                     World world)
+    {
+        OneBlockDungeonStateProvider dungeon = stateRegistry.dungeonState(world);
+        if (dungeon.isDungeonActive())
+        {
+            ctx.sendMessage(Message.raw(
+                    "World '" + world.getName() + "': dungeon " + dungeon.getActiveDungeonId()
+                            + ", wave " + (dungeon.getCurrentWaveIndex() + 1)
+            ));
+            return;
+        }
+
+        OneBlockExpeditionStateProvider expedition = stateRegistry.expeditionState(world);
+        if (expedition.hasActiveExpedition())
+        {
+            ctx.sendMessage(Message.raw(
+                    "World '" + world.getName() + "': expedition " + expedition.getActiveExpeditionId()
+                            + ", " + expedition.getTicksRemaining() + "/" + expedition.getTotalTicks() + " blocks remaining"
+            ));
+            return;
+        }
+
+        ctx.sendMessage(Message.raw("World '" + world.getName() + "': no active expedition."));
+    }
+
+    private static String rootMessage(Throwable error)
+    {
+        Throwable current = error;
+        while (current.getCause() != null)
+        {
+            current = current.getCause();
+        }
+        return current.getMessage() == null ? current.getClass().getSimpleName() : current.getMessage();
     }
 
     private record ParsedAction(String action, String value) {}

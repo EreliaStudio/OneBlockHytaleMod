@@ -27,7 +27,6 @@ final class OneBlockWorldBootstrap
     private static final String VOID_WORLD_GEN = "Void";
     private static final String VOID_ENVIRONMENT = "Env_Default_Void";
     private static final String VOID_TINT = "#5a992b";
-    private static final String WORLD_NAME = "default";
     private static final String MARKER_FILE = "void-world-ready.marker";
 
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
@@ -45,8 +44,17 @@ final class OneBlockWorldBootstrap
             return;
         }
 
-        Path worldDir = serverRoot.resolve("universe").resolve("worlds").resolve(WORLD_NAME);
+        Path worldDir = serverRoot.resolve("universe").resolve("worlds").resolve("default");
         ensureVoidWorldDir(worldDir);
+    }
+
+    static boolean ensureVoidWorldConfig(Path worldsPath, String worldName)
+    {
+        if (worldsPath == null || worldName == null || worldName.isBlank())
+        {
+            return false;
+        }
+        return ensureVoidWorldDir(worldsPath.resolve(worldName));
     }
 
     static void ensureVoidWorldAtSavePath(Path worldSavePath)
@@ -59,7 +67,7 @@ final class OneBlockWorldBootstrap
         ensureVoidWorldDir(worldSavePath);
     }
 
-    private static void ensureVoidWorldDir(Path worldDir)
+    private static boolean ensureVoidWorldDir(Path worldDir)
     {
         boolean worldDirMissing = !Files.exists(worldDir);
         Path configPath = worldDir.resolve("config.json");
@@ -68,20 +76,20 @@ final class OneBlockWorldBootstrap
             if (!createWorldConfigFromTemplate(worldDir, configPath))
             {
                 LOGGER.at(Level.WARNING).log("World config not found at " + configPath);
-                return;
+                return false;
             }
         }
 
         boolean updated = updateWorldGenToVoid(configPath);
         if (updated)
         {
-            LOGGER.at(Level.INFO).log("WorldGen for '" + WORLD_NAME + "' set to Void.");
+            LOGGER.at(Level.INFO).log("WorldGen for '" + worldDir.getFileName() + "' set to Void.");
         }
 
         Path marker = worldDir.resolve(MARKER_FILE);
         if (Files.exists(marker))
         {
-            return;
+            return true;
         }
 
         Path chunksDir = worldDir.resolve("chunks");
@@ -113,7 +121,9 @@ final class OneBlockWorldBootstrap
         catch (IOException e)
         {
             LOGGER.at(Level.WARNING).log("Failed to write world reset marker: " + e.getMessage());
+            return false;
         }
+        return true;
     }
 
     private static boolean createWorldConfigFromTemplate(Path worldDir, Path configPath)

@@ -9,7 +9,8 @@ import com.hypixel.hytale.server.core.universe.world.WorldConfig;
 import com.hypixel.hytale.server.core.universe.world.spawn.GlobalSpawnProvider;
 import com.hypixel.hytale.server.core.universe.world.worldgen.provider.VoidWorldGenProvider;
 
-import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import org.joml.Vector3d;
 import org.joml.Vector3i;
@@ -28,14 +29,9 @@ final class OneBlockWorldInitializer
     }
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-    private static final AtomicBoolean ORIGIN_PLACED = new AtomicBoolean(false);
+    private static final Set<String> INITIALIZED_WORLDS = ConcurrentHashMap.newKeySet();
 
     private OneBlockWorldInitializer() {}
-
-    static boolean isDefaultWorld(World world)
-    {
-        return world != null && World.DEFAULT.equals(world.getName());
-    }
 
     static void initializeWorld(World world, String blockId)
     {
@@ -54,10 +50,12 @@ final class OneBlockWorldInitializer
                 config.markChanged();
             }
 
-            if (ORIGIN_PLACED.compareAndSet(false, true))
+            if (INITIALIZED_WORLDS.add(world.getName()))
             {
                 world.setBlock(ORIGIN_BLOCK.x(), ORIGIN_BLOCK.y(), ORIGIN_BLOCK.z(), resolvedBlockId);
-                LOGGER.at(Level.INFO).log("Placed OneBlock at " + ORIGIN_BLOCK + " with block " + resolvedBlockId);
+                LOGGER.at(Level.INFO).log(
+                        "Placed OneBlock in '" + world.getName() + "' at " + ORIGIN_BLOCK + " with block " + resolvedBlockId
+                );
             }
         });
     }

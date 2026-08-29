@@ -29,17 +29,14 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     private static final int DUNGEON_SPAWN_RADIUS = 5;
 
     private final OneBlockDropRegistry dropRegistry;
-    private final OneBlockExpeditionStateProvider expeditionState;
-    private final OneBlockDungeonStateProvider dungeonState;
+    private final OneBlockWorldStateRegistry stateRegistry;
 
     public OneBlockBreakSystem(OneBlockDropRegistry dropRegistry,
-                               OneBlockExpeditionStateProvider expeditionState,
-                               OneBlockDungeonStateProvider dungeonState)
+                               OneBlockWorldStateRegistry stateRegistry)
     {
         super(BreakBlockEvent.class);
         this.dropRegistry = dropRegistry;
-        this.expeditionState = expeditionState;
-        this.dungeonState = dungeonState;
+        this.stateRegistry = stateRegistry;
     }
 
     @Override
@@ -64,7 +61,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         if (entityStore == null) return;
 
         World world = entityStore.getWorld();
-        if (world == null) return;
+        if (world == null || !stateRegistry.isManaged(world)) return;
+
+        OneBlockExpeditionStateProvider expeditionState = stateRegistry.expeditionState(world);
+        OneBlockDungeonStateProvider dungeonState = stateRegistry.dungeonState(world);
 
         Vector3i pos = event.getTargetBlock();
 
@@ -85,15 +85,19 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (dungeonState.isDungeonActive())
         {
-            handleDungeonBreak(world, pos, player, context);
+            handleDungeonBreak(world, pos, player, context, dungeonState);
         }
         else
         {
-            handleExpeditionBreak(world, pos, player, event, context);
+            handleExpeditionBreak(world, pos, player, event, context, expeditionState);
         }
     }
 
-    private void handleDungeonBreak(World world, Vector3i pos, Player player, DropableContext context)
+    private void handleDungeonBreak(World world,
+                                    Vector3i pos,
+                                    Player player,
+                                    DropableContext context,
+                                    OneBlockDungeonStateProvider dungeonState)
     {
         String dungeonId = dungeonState.getActiveDungeonId();
         int waveIndex = dungeonState.getCurrentWaveIndex();
@@ -123,13 +127,12 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
             world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
             executeDungeonCompletionRewards(completedDungeon, context);
 
-            if (player != null)
+            if (plugin != null)
             {
-                if (plugin != null)
-                {
-                    plugin.getHudService().showDungeonCompleted(player, completedDungeon);
-                }
-
+                OneBlockWorldPlayers.forEach(
+                        world,
+                        worldPlayer -> plugin.getHudService().showDungeonCompleted(worldPlayer, completedDungeon)
+                );
             }
         }
         else
@@ -143,18 +146,17 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
             int completedWaves = dungeonState.getCurrentWaveIndex();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
 
-            if (player != null)
+            if (plugin != null)
             {
-                if (plugin != null)
-                {
-                    plugin.getHudService().updateDungeonWave(
-                            player,
+                OneBlockWorldPlayers.forEach(
+                        world,
+                        worldPlayer -> plugin.getHudService().updateDungeonWave(
+                            worldPlayer,
                             dungeonId,
                             completedWaves,
                             totalWaves
-                    );
-                }
-
+                        )
+                );
             }
         }
     }
@@ -222,10 +224,11 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                                        Vector3i pos,
                                        Player player,
                                        BreakBlockEvent event,
-                                       DropableContext context)
+                                       DropableContext context,
+                                       OneBlockExpeditionStateProvider expeditionState)
     {
         String poolId = OneBlockPools.resolvePoolId(event.getBlockType());
-        ensureExpeditionActiveForBreak(player, poolId);
+        ensureExpeditionActiveForBreak(world, poolId, expeditionState);
 
         List<String> drops = dropRegistry.getKnownDrops(poolId);
         String rewardId = dropRegistry.pickReward(poolId, drops);
@@ -256,27 +259,39 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
 
-        if (completedExpedition != null && player != null)
+        if (completedExpedition != null)
         {
-            executeExpeditionCompletionRewards(completedExpedition, context);
+            if (player != null)
+            {
+                executeExpeditionCompletionRewards(completedExpedition, context);
+            }
 
             if (plugin != null)
             {
-                plugin.getHudService().showExpeditionCompleted(player, completedExpedition);
+                OneBlockWorldPlayers.forEach(
+                        world,
+                        worldPlayer -> plugin.getHudService().showExpeditionCompleted(worldPlayer, completedExpedition)
+                );
             }
         }
-        else if (player != null && plugin != null && activeExpeditionBeforeBreak != null && !activeExpeditionBeforeBreak.isBlank())
+        else if (plugin != null && activeExpeditionBeforeBreak != null && !activeExpeditionBeforeBreak.isBlank())
         {
-            plugin.getHudService().updateExpeditionTicks(
-                    player,
-                    activeExpeditionBeforeBreak,
-                    expeditionState.getTicksRemaining(),
-                    totalTicks
+            int finalTotalTicks = totalTicks;
+            OneBlockWorldPlayers.forEach(
+                    world,
+                    worldPlayer -> plugin.getHudService().updateExpeditionTicks(
+                        worldPlayer,
+                        activeExpeditionBeforeBreak,
+                        expeditionState.getTicksRemaining(),
+                        finalTotalTicks
+                    )
             );
         }
     }
 
-    private void ensureExpeditionActiveForBreak(Player player, String expeditionId)
+    private void ensureExpeditionActiveForBreak(World world,
+                                                String expeditionId,
+                                                OneBlockExpeditionStateProvider expeditionState)
     {
         if (expeditionState.hasActiveExpedition()) return;
         if (expeditionId == null || expeditionId.isBlank()) return;
@@ -286,9 +301,12 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         expeditionState.startExpedition(expeditionId, ticks);
 
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
-        if (player != null && plugin != null)
+        if (plugin != null)
         {
-            plugin.getHudService().showExpeditionStarted(player, expeditionId, ticks);
+            OneBlockWorldPlayers.forEach(
+                    world,
+                    worldPlayer -> plugin.getHudService().showExpeditionStarted(worldPlayer, expeditionId, ticks)
+            );
         }
     }
 

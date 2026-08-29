@@ -88,7 +88,35 @@ Special output ids:
 - `Empty` removes the output (failure).
 
 ## World Generation
-The worldgen mod keeps the existing behavior:
+The plugin keeps the existing behavior in the `default` world:
 - Void world.
 - OneBlock placed at `x=0, y=100, z=0`.
 - Spawn at `x=0.5, y=102, z=0.5`.
+
+## Multiplayer Expeditions
+
+OneBlock can manage multiple void worlds at the same time. Every managed world has exactly one OneBlock and its own expedition/dungeon progress. A block break, crystal use, HUD update, or fall recovery only affects players and state in that world.
+
+Admin actions:
+
+- `/oneblock create <worldName>` creates a persistent OneBlock world and moves the command's target player into it. Use `-` instead of a name to generate one automatically.
+- `/oneblock join <worldName>` loads an existing OneBlock world if necessary and moves the target player into it.
+- `/oneblock list` lists registered OneBlock worlds.
+- `/oneblock status`, `start`, and `stop` operate on the target player's current world.
+
+The command inherits Hytale's optional `player` target argument, so an administrator can create or join a world on behalf of another player.
+
+Server code can create a world for any party size through the public service:
+
+```java
+OneBlockWorldService worlds = OneBlockPlugin.getInstance().getWorldService();
+
+worlds.createExpeditionWorld("oneblock-party-42", partyPlayerRefs)
+      .thenAccept(world -> {
+          // The world is initialized and every supplied player has been transferred.
+      });
+```
+
+Use `movePlayers(worldName, partyPlayerRefs)` to load a previous expedition world and transfer a party back into it.
+
+Managed world names are stored in `oneblock-worlds.json`. The original `default` world continues to use `oneblock-expedition.json` and `oneblock-dungeon.json`; additional worlds have isolated save files under the plugin data directory's `worlds/` folder.

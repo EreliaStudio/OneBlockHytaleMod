@@ -1,5 +1,6 @@
 package com.EreliaStudio.OneBlock;
 
+import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.event.events.PrepareUniverseEvent;
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
@@ -11,6 +12,7 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.WorldConfig;
 import com.hypixel.hytale.server.core.universe.world.WorldConfigProvider;
 import com.hypixel.hytale.server.core.universe.world.events.AddWorldEvent;
+import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
 import java.nio.file.Path;
@@ -25,8 +27,8 @@ public final class OneBlockPlugin extends JavaPlugin
     private static OneBlockPlugin instance;
 
     private OneBlockDropRegistry dropRegistry;
-    private OneBlockExpeditionStateProvider expeditionStateProvider;
-    private OneBlockDungeonStateProvider dungeonStateProvider;
+    private OneBlockWorldStateRegistry worldStateRegistry;
+    private OneBlockWorldService worldService;
     private OneBlockHudService hudService;
     private OneBlockSettingsProvider settingsProvider;
 
@@ -55,21 +57,15 @@ public final class OneBlockPlugin extends JavaPlugin
         // ── Drop engine ──────────────────────────────────────────────────────
         dropRegistry = new OneBlockDropRegistry();
 
-        expeditionStateProvider = new OneBlockExpeditionStateProvider(
-                getDataDirectory().resolve("oneblock-expedition.json")
-        );
-
-        dungeonStateProvider = new OneBlockDungeonStateProvider(
-                getDataDirectory().resolve("oneblock-dungeon.json")
-        );
+        worldStateRegistry = new OneBlockWorldStateRegistry(getDataDirectory());
+        worldService = new OneBlockWorldService(worldStateRegistry, hudService);
 
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
 
         getEntityStoreRegistry().registerSystem(
                 new OneBlockBreakSystem(
                         dropRegistry,
-                        expeditionStateProvider,
-                        dungeonStateProvider
+                        worldStateRegistry
                 )
         );
 
@@ -104,7 +100,7 @@ public final class OneBlockPlugin extends JavaPlugin
         // ── World ────────────────────────────────────────────────────────────
         OneBlockWorldBootstrap.ensureVoidDefaultWorldConfig(getDataDirectory());
 
-        getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem(settingsProvider));
+        getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem(settingsProvider, worldStateRegistry));
 
         getEventRegistry().registerGlobal(PrepareUniverseEvent.class, event ->
         {
@@ -117,7 +113,7 @@ public final class OneBlockPlugin extends JavaPlugin
                 {
                     CompletableFuture<WorldConfig> future = original.load(path, worldName);
 
-                    if (!World.DEFAULT.equals(worldName))
+                    if (!worldStateRegistry.isManaged(worldName))
                     {
                         return future;
                     }
@@ -146,26 +142,49 @@ public final class OneBlockPlugin extends JavaPlugin
         {
             World world = event.getWorld();
 
-            if (OneBlockWorldInitializer.isDefaultWorld(world))
+            if (worldStateRegistry.isManaged(world))
             {
                 OneBlockWorldBootstrap.ensureVoidWorldAtSavePath(world.getSavePath());
-                OneBlockWorldInitializer.initializeWorld(world, resolveActiveBlockId());
+                OneBlockWorldInitializer.initializeWorld(world, resolveActiveBlockId(world));
             }
         });
 
         getEventRegistry().registerGlobal(PlayerReadyEvent.class, event ->
         {
-            if (!expeditionStateProvider.hasActiveExpedition())
+            Ref<EntityStore> playerEntityRef = event.getPlayerRef();
+            EntityStore entityStore = playerEntityRef == null || playerEntityRef.getStore() == null
+                    ? null
+                    : playerEntityRef.getStore().getExternalData();
+            World world = entityStore == null ? null : entityStore.getWorld();
+            if (!worldStateRegistry.isManaged(world))
             {
                 return;
             }
 
             Player player = event.getPlayer();
-            String expeditionId = expeditionStateProvider.getActiveExpeditionId();
-            int ticksRemaining = expeditionStateProvider.getTicksRemaining();
-            int totalTicks = expeditionStateProvider.getTotalTicks();
+            OneBlockDungeonStateProvider dungeonState = worldStateRegistry.dungeonState(world);
+            if (dungeonState.isDungeonActive())
+            {
+                String dungeonId = dungeonState.getActiveDungeonId();
+                int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
+                hudService.showDungeonStarted(player, dungeonId, totalWaves);
+                hudService.updateDungeonWave(player, dungeonId, dungeonState.getCurrentWaveIndex(), totalWaves);
+                return;
+            }
 
-            hudService.restoreExpeditionHud(player, expeditionId, ticksRemaining, totalTicks);
+            OneBlockExpeditionStateProvider expeditionState = worldStateRegistry.expeditionState(world);
+            if (!expeditionState.hasActiveExpedition())
+            {
+                hudService.clear(player);
+                return;
+            }
+
+            hudService.restoreExpeditionHud(
+                    player,
+                    expeditionState.getActiveExpeditionId(),
+                    expeditionState.getTicksRemaining(),
+                    expeditionState.getTotalTicks()
+            );
         });
 
         LOGGER.at(Level.INFO).log("Setup complete.");
@@ -186,18 +205,38 @@ public final class OneBlockPlugin extends JavaPlugin
         hudService = null;
         settingsProvider = null;
         dropRegistry = null;
-        expeditionStateProvider = null;
-        dungeonStateProvider = null;
+        worldService = null;
+        worldStateRegistry = null;
     }
 
     public OneBlockExpeditionStateProvider getExpeditionStateProvider()
     {
-        return expeditionStateProvider;
+        return worldStateRegistry == null ? null : worldStateRegistry.expeditionState(World.DEFAULT);
     }
 
     public OneBlockDungeonStateProvider getDungeonStateProvider()
     {
-        return dungeonStateProvider;
+        return worldStateRegistry == null ? null : worldStateRegistry.dungeonState(World.DEFAULT);
+    }
+
+    public OneBlockWorldStateRegistry getWorldStateRegistry()
+    {
+        return worldStateRegistry;
+    }
+
+    public OneBlockWorldService getWorldService()
+    {
+        return worldService;
+    }
+
+    public OneBlockExpeditionStateProvider getExpeditionStateProvider(World world)
+    {
+        return worldStateRegistry == null ? null : worldStateRegistry.expeditionState(world);
+    }
+
+    public OneBlockDungeonStateProvider getDungeonStateProvider(World world)
+    {
+        return worldStateRegistry == null ? null : worldStateRegistry.dungeonState(world);
     }
 
     public OneBlockDropRegistry getDropRegistry()
@@ -215,16 +254,18 @@ public final class OneBlockPlugin extends JavaPlugin
         return settingsProvider;
     }
 
-    private String resolveActiveBlockId()
+    private String resolveActiveBlockId(World world)
     {
-        if (dungeonStateProvider != null && dungeonStateProvider.isDungeonActive())
+        OneBlockDungeonStateProvider dungeonStateProvider = worldStateRegistry.dungeonState(world);
+        if (dungeonStateProvider.isDungeonActive())
         {
             String dungeonId = dungeonStateProvider.getActiveDungeonId();
             String blockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
             return blockId != null ? blockId : OneBlockBlockIds.DEFAULT_BLOCK_ID;
         }
 
-        if (expeditionStateProvider != null && expeditionStateProvider.hasActiveExpedition())
+        OneBlockExpeditionStateProvider expeditionStateProvider = worldStateRegistry.expeditionState(world);
+        if (expeditionStateProvider.hasActiveExpedition())
         {
             String expeditionId = expeditionStateProvider.getActiveExpeditionId();
             return OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);

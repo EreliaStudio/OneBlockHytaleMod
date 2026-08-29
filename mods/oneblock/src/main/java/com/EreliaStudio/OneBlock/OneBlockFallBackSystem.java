@@ -32,10 +32,13 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
     private static final float VOID_DAMAGE_AMOUNT = Float.MAX_VALUE;
 
     private final OneBlockSettingsProvider settingsProvider;
+    private final OneBlockWorldStateRegistry stateRegistry;
 
-    public OneBlockFallBackSystem(OneBlockSettingsProvider settingsProvider)
+    public OneBlockFallBackSystem(OneBlockSettingsProvider settingsProvider,
+                                  OneBlockWorldStateRegistry stateRegistry)
     {
         this.settingsProvider = settingsProvider;
+        this.stateRegistry = stateRegistry;
     }
 
     @Override
@@ -62,7 +65,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
         }
 
         World world = entityStore.getWorld();
-        if (!isDefaultWorld(world))
+        if (stateRegistry == null || !stateRegistry.isManaged(world))
         {
             return;
         }
@@ -165,10 +168,5 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
         }
 
         return new Transform(DEFAULT_SPAWN_POS, new Rotation3f());
-    }
-
-    private static boolean isDefaultWorld(World world)
-    {
-        return world != null && World.DEFAULT.equals(world.getName());
     }
 }
