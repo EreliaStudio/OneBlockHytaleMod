@@ -60,8 +60,66 @@ Spaces in expedition IDs are allowed but will be converted to `_` internally for
 | Field | Type | Description |
 |-------|------|-------------|
 | `CompletionRewards` | object or array | Items/crystals awarded when the expedition completes — see [Completion Rewards](#completion-rewards) |
+| `Solidity` | object | Exact damage ticks and required tool for this expedition's OneBlock — see [Solidity](#solidity) |
+| `DisplayName` | string | Optional player-facing English name. The internal expedition ID, generated asset IDs, and saved-state key remain unchanged. |
 
 > **Legacy alias:** `Rewards` is accepted as an alias for `CompletionRewards` and `Group` as an alias for `Category`.
+
+---
+
+## Solidity
+
+`Solidity` controls how many successful damage ticks are needed to break the
+OneBlock and which tool is accepted.
+
+```json
+"Solidity": {
+  "Ticks": 10,
+  "Tool": "Pickaxe"
+}
+```
+
+- `Ticks` must be a positive integer. The server applies exactly `1 / Ticks`
+  damage per accepted damage event.
+- `Tool` accepts `Hand`, `Pickaxe`, or `Axe` (case-insensitive).
+- `Hand` accepts an empty hand or any held item. `Pickaxe` only accepts items
+  using the Pickaxe animation. `Axe` accepts Hatchet or Axe animations.
+- If `Solidity` is omitted, the backward-compatible default is one tick with
+  `Hand`.
+- `GatherType` may be used instead of `Tool`: `SoftBlocks` maps to `Hand`,
+  `Rocks` to `Pickaxe`, and `Woods` to `Axe`.
+
+Wrong tools deal no damage. On the final tick, native removal is cancelled and
+the next OneBlock is placed synchronously at the same coordinate.
+
+`Ticks` describes the 1x base break time. A held tool scales its damage using
+the greater of its native Hytale power for the block's gather type and its item
+level (`ItemLevel / 10`), with a minimum multiplier of 1x. This preserves the
+configured count for a crude tool while allowing higher-tier tools to break the
+same block faster. For example, an Adamantite pickaxe is 4x and a Mithril
+pickaxe is 5x. Empty hands and non-tool items stay at 1x. Modded tools also
+participate when they expose a matching native tool spec or item level.
+
+The current data set gives every expedition an explicit baseline: item levels
+1 through 5 take 3, 4, 5, 6, and 8 accepted hits respectively. Cave, stone,
+ruin, and temple themes generally use `Pickaxe`; forest and wood themes use
+`Axe`; other themes use `Hand`. To populate this baseline in another expedition
+file, run:
+
+```powershell
+python tools/populate_solidity.py expeditions.json
+```
+
+Existing `Solidity` objects are preserved. Add `--overwrite` to recalculate all
+of them, then edit individual values in `expeditions.json` as needed.
+
+Tool durability is consumed once per completed OneBlock. Hytale handles native
+durability for `Pickaxe`/`Rocks` and `Axe`/`Woods`; the mod adds one use when a
+durable tool completes a `Hand`/`SoftBlocks` block, whose native gather behavior
+does not normally consume durability.
+
+The expedition-level `Ticks` field is separate: it is the number of OneBlock
+rewards before that expedition completes.
 
 ---
 
@@ -245,6 +303,7 @@ Replace the placeholder PNGs with real artwork before shipping. The script will 
     "ItemLevel": 1,
     "Category": "Surface",
     "Ticks": 25,
+    "Solidity": { "Ticks": 4, "Tool": "Hand" },
     "Crystal": {
       "Input": [
         { "ItemId": "Ingredient_Fibre", "Quantity": 4 }

@@ -13,14 +13,14 @@ items.PharaohCatacombsToken.name=PharaohCatacombsToken
 items.GobelinCampToken.name=GobelinCampToken
 
 # GENERATED ─── Default ────────────────────────────────────────────────
-items.OneBlock_Block_Default.name=OneBlock Default
-items.OneBlock_Crystal_Default.name=Default Crystal
-items.OneBlock_Crystal_Default.description=Consume to begin a Default expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- CaveEntry (possible)\n- ForestEdge (possible)\n- Plain (possible)
-expeditions.Default.name=Default
-announcements.expedition_started.Default=Default expedition started.
-announcements.expedition_completed.Default=Default expedition complete. The OneBlock has returned to default.
-announcements.expedition_unlocked.Default=New expedition unlocked: Default
-progress.expedition.Default=Default: {0}/{1} ticks remaining
+items.OneBlock_Block_Default.name=OneBlock Meadow
+items.OneBlock_Crystal_Default.name=Meadow Crystal
+items.OneBlock_Crystal_Default.description=Consume to begin a Meadow expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- CaveEntry (possible)\n- ForestEdge (possible)\n- Plain (possible)
+expeditions.Default.name=Meadow
+announcements.expedition_started.Default=Meadow expedition started.
+announcements.expedition_completed.Default=Meadow expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.Default=New expedition unlocked: Meadow
+progress.expedition.Default=Meadow: {0}/{1} ticks remaining
 benchCategories.OneBlockEnchanter_Easy=Easy Crystals
 
 # GENERATED ─── CaveEntry ──────────────────────────────────────────────
@@ -172,7 +172,7 @@ progress.expedition.CobaltCave=CobaltCave: {0}/{1} ticks remaining
 # GENERATED ─── AdamantiteCave ─────────────────────────────────────────
 items.OneBlock_Block_AdamantiteCave.name=OneBlock AdamantiteCave
 items.OneBlock_Crystal_AdamantiteCave.name=AdamantiteCave Crystal
-items.OneBlock_Crystal_AdamantiteCave.description=Consume to begin a AdamantiteCave expedition.\n30 ticks.\nPossible drops:\nItems:\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntities:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nCompletion rewards:\n- 6x ExpeditionPoint\nLeads to:\n- GemDeepCave (possible)\n- MithrilCave (possible)
+items.OneBlock_Crystal_AdamantiteCave.description=Consume to begin a AdamantiteCave expedition.\n30 ticks.\nPossible drops:\nItems:\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntities:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nCompletion rewards:\n- 6x ExpeditionPoint\nLeads to:\n- GemDeepCave (possible)\n- CrystalCavern (possible)\n- MithrilCave (possible)
 expeditions.AdamantiteCave.name=AdamantiteCave
 announcements.expedition_started.AdamantiteCave=AdamantiteCave expedition started.
 announcements.expedition_completed.AdamantiteCave=AdamantiteCave expedition complete. The OneBlock has returned to default.
@@ -295,7 +295,7 @@ progress.expedition.River=River: {0}/{1} ticks remaining
 # GENERATED ─── Lake ───────────────────────────────────────────────────
 items.OneBlock_Block_Lake.name=OneBlock Lake
 items.OneBlock_Crystal_Lake.name=Lake Crystal
-items.OneBlock_Crystal_Lake.description=Consume to begin a Lake expedition.\n28 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\nEntities:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nCompletion rewards:\n- 2x ExpeditionPoint
+items.OneBlock_Crystal_Lake.description=Consume to begin a Lake expedition.\n28 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\n- Water Bucket\nEntities:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nCompletion rewards:\n- 2x ExpeditionPoint
 expeditions.Lake.name=Lake
 announcements.expedition_started.Lake=Lake expedition started.
 announcements.expedition_completed.Lake=Lake expedition complete. The OneBlock has returned to default.
@@ -591,7 +591,7 @@ progress.expedition.IcyForest=IcyForest: {0}/{1} ticks remaining
 # GENERATED ─── FireLand ───────────────────────────────────────────────
 items.OneBlock_Block_FireLand.name=OneBlock FireLand
 items.OneBlock_Crystal_FireLand.name=FireLand Crystal
-items.OneBlock_Crystal_FireLand.description=Consume to begin a FireLand expedition.\n25 ticks.\nPossible drops:\nItems:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntities:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nCompletion rewards:\n- 7x ExpeditionPoint\nLeads to:\n- Volcano (possible)\n- FieryGraveyard (possible)
+items.OneBlock_Crystal_FireLand.description=Consume to begin a FireLand expedition.\n25 ticks.\nPossible drops:\nItems:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\n- Lava Bucket\nEntities:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nCompletion rewards:\n- 7x ExpeditionPoint\nLeads to:\n- Volcano (possible)\n- FieryGraveyard (possible)
 expeditions.FireLand.name=FireLand
 announcements.expedition_started.FireLand=FireLand expedition started.
 announcements.expedition_completed.FireLand=FireLand expedition complete. The OneBlock has returned to default.

@@ -11,7 +11,7 @@ SOURCE = LANGUAGES / "en-US/server.lang"
 
 
 NAME_TABLE = """
-Default|Par défaut|Predvolená
+Default|Prairie|Lúka
 CaveEntry|Entrée de la grotte|Vstup do jaskyne
 ForestEdge|Lisière de la forêt|Okraj lesa
 Plain|Plaine|Planina

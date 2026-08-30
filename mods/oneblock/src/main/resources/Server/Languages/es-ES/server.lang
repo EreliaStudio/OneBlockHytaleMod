@@ -13,14 +13,14 @@ items.PharaohCatacombsToken.name=FichaCatacumbasDeLFaraón
 items.GobelinCampToken.name=FichaCampamentoGoblin
 
 # GENERATED ─── Default ────────────────────────────────────────────────
-items.OneBlock_Block_Default.name=OneBlock Por Defecto
-items.OneBlock_Crystal_Default.name=Cristal Por Defecto
-items.OneBlock_Crystal_Default.description=Consumir para iniciar una expedición Por Defecto.\n25 pulsos.
-expeditions.Default.name=Por Defecto
-announcements.expedition_started.Default=Expedición Por Defecto iniciada.
-announcements.expedition_completed.Default=Expedición Por Defecto completada. El OneBlock ha vuelto al estado por defecto.
-announcements.expedition_unlocked.Default=Nueva expedición desbloqueada: Por Defecto
-progress.expedition.Default=Por Defecto: {0}/{1} pulsos restantes
+items.OneBlock_Block_Default.name=OneBlock Pradera
+items.OneBlock_Crystal_Default.name=Cristal de la Pradera
+items.OneBlock_Crystal_Default.description=Consumir para iniciar una expedición a la Pradera.\n25 pulsos.
+expeditions.Default.name=Pradera
+announcements.expedition_started.Default=Expedición a la Pradera iniciada.
+announcements.expedition_completed.Default=Expedición a la Pradera completada. El OneBlock ha vuelto al estado por defecto.
+announcements.expedition_unlocked.Default=Nueva expedición desbloqueada: Pradera
+progress.expedition.Default=Pradera: {0}/{1} pulsos restantes
 benchCategories.OneBlockEnchanter_Easy=Cristales Fáciles
 
 # GENERATED ─── CaveEntry ──────────────────────────────────────────────

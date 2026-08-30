@@ -17,8 +17,7 @@
     "Flags": {},
     "Gathering": {
       "Breaking": {
-        "GatherType": "Rocks",
-        "Quantity": 0
+        "GatherType": "Rocks"
       }
     },
     "BlockParticleSetId": "Stone",

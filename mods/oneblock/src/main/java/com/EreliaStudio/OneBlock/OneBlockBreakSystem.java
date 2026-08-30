@@ -68,11 +68,15 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         Vector3i pos = event.getTargetBlock();
 
-        // BreakBlockEvent is emitted after native block health reaches zero.
-        // Keep the supporting block physically present, then reset its native
-        // health entry so the next break starts with full rock durability.
+        // Cancel native removal before replacing the OneBlock synchronously.
+        // This keeps the coordinate occupied throughout the final damage tick.
         event.setCancelled(true);
         resetBlockHealth(world, pos);
+        OneBlockToolDurability.applyForCompletedBreak(
+                ref,
+                store,
+                event.getBlockType().getId()
+        );
 
         DropableContext context = new DropableContext(
                 store, world, pos,
@@ -124,7 +128,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (completedDungeon != null)
         {
-            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID));
+            world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID);
             executeDungeonCompletionRewards(completedDungeon, context);
 
             if (plugin != null)
@@ -140,8 +144,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
             String dungeonBlockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
             if (dungeonBlockId == null) dungeonBlockId = OneBlockBlockIds.DEFAULT_BLOCK_ID;
 
-            String finalBlockId = dungeonBlockId;
-            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), finalBlockId));
+            world.setBlock(pos.x(), pos.y(), pos.z(), dungeonBlockId);
 
             int completedWaves = dungeonState.getCurrentWaveIndex();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
@@ -235,7 +238,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         if (rewardId == null || rewardId.isEmpty())
         {
             String currentBlockId = event.getBlockType().getId();
-            world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), currentBlockId));
+            world.setBlock(pos.x(), pos.y(), pos.z(), currentBlockId);
             return;
         }
 
@@ -252,8 +255,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                 ? OneBlockBlockIds.DEFAULT_BLOCK_ID
                 : event.getBlockType().getId();
 
-        String finalBlockId = nextBlockId;
-        world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), finalBlockId));
+        world.setBlock(pos.x(), pos.y(), pos.z(), nextBlockId);
 
         dropRegistry.executeDropable(rewardId, context);
 

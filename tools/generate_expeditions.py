@@ -53,6 +53,18 @@ DEFAULT_CUSTOM_ITEM_ICON = SCRIPT_DIR / "OneBlock_CustomItem.png"
 
 CUSTOM_ID_KEY = "CustomID"
 
+SOLIDITY_DEFAULT_TICKS = 1
+SOLIDITY_DEFAULT_TOOL = "Hand"
+SOLIDITY_TO_GATHER_TYPE = {
+    "Hand": "SoftBlocks",
+    "Pickaxe": "Rocks",
+    "Axe": "Woods",
+}
+GATHER_TYPE_TO_SOLIDITY = {
+    gather_type.lower(): tool
+    for tool, gather_type in SOLIDITY_TO_GATHER_TYPE.items()
+}
+
 # PNGs in Icons/ItemsGenerated that are NOT expedition-generated and must be preserved
 _STATIC_ICON_NAMES = {
     "OneBlock_ExpeditionCrystal_DefaultIcon.png",
@@ -74,6 +86,15 @@ def _safe_eid(expedition_id: str) -> str:
     return expedition_id.replace(" ", "_")
 
 
+def _display_name(expedition_id: str, cfg: dict) -> str:
+    raw = cfg.get("DisplayName")
+    if raw is None:
+        return expedition_id.replace("_", " ")
+    if not isinstance(raw, str) or not raw.strip():
+        raise ValueError(f"{expedition_id}.DisplayName must be a non-empty string")
+    return raw.strip()
+
+
 def _quality(item_level: int) -> str:
     if item_level <= 4:
         return "Uncommon"
@@ -90,6 +111,45 @@ def _category_sort_key(category: dict) -> tuple[int, str]:
         if group in ENCHANTER_CATEGORY_ORDER:
             return (ENCHANTER_CATEGORY_ORDER.index(group), category_id)
     return (len(ENCHANTER_CATEGORY_ORDER), category_id)
+
+
+def _parse_solidity(expedition_id: str, cfg: dict) -> dict:
+    raw = cfg.get("Solidity")
+    if raw is None:
+        return {
+            "Ticks": SOLIDITY_DEFAULT_TICKS,
+            "Tool": SOLIDITY_DEFAULT_TOOL,
+            "GatherType": SOLIDITY_TO_GATHER_TYPE[SOLIDITY_DEFAULT_TOOL],
+        }
+    if not isinstance(raw, dict):
+        raise ValueError(f"{expedition_id}.Solidity must be an object")
+
+    ticks = raw.get("Ticks", SOLIDITY_DEFAULT_TICKS)
+    if isinstance(ticks, bool) or not isinstance(ticks, int) or ticks < 1:
+        raise ValueError(f"{expedition_id}.Solidity.Ticks must be a positive integer")
+
+    tool_value = raw.get("Tool")
+    if tool_value is None and raw.get("GatherType") is not None:
+        tool_value = GATHER_TYPE_TO_SOLIDITY.get(str(raw["GatherType"]).strip().lower())
+        if tool_value is None:
+            allowed = ", ".join(SOLIDITY_TO_GATHER_TYPE.values())
+            raise ValueError(
+                f"{expedition_id}.Solidity.GatherType must be one of: {allowed}"
+            )
+    if tool_value is None:
+        tool_value = SOLIDITY_DEFAULT_TOOL
+
+    normalized_tools = {name.lower(): name for name in SOLIDITY_TO_GATHER_TYPE}
+    tool = normalized_tools.get(str(tool_value).strip().lower())
+    if tool is None:
+        allowed = ", ".join(SOLIDITY_TO_GATHER_TYPE)
+        raise ValueError(f"{expedition_id}.Solidity.Tool must be one of: {allowed}")
+
+    return {
+        "Ticks": ticks,
+        "Tool": tool,
+        "GatherType": SOLIDITY_TO_GATHER_TYPE[tool],
+    }
 
 
 def build_crystal(expedition_id: str, category: str, item_level: int, inputs: list, ticks: int, bench_id: str = "OneBlockEnchanter", knowledge_required: bool = False) -> dict:
@@ -143,7 +203,7 @@ def build_crystal(expedition_id: str, category: str, item_level: int, inputs: li
     return data
 
 
-def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
+def build_oneblock_block(expedition_id: str, item_level: int, solidity: dict) -> dict:
     eid = _safe_eid(expedition_id)
     item_id = f"OneBlock_Block_{eid}"
 
@@ -162,12 +222,11 @@ def build_oneblock_block(expedition_id: str, item_level: int) -> dict:
             "DrawType": "Cube",
             "Group": "OneBlock",
             "Flags": {},
-            # Use the native rock break profile so block health, tools, decals, and
-            # break timing are managed by Hytale. Drops remain plugin-controlled.
+            # GatherType provides the matching native feedback. Exact damage and
+            # strict tool enforcement are handled by OneBlockDamageSystem.
             "Gathering": {
                 "Breaking": {
-                    "GatherType": "Rocks",
-                    "Quantity": 0,
+                    "GatherType": solidity["GatherType"],
                 }
             },
             "BlockParticleSetId": "Stone",
@@ -282,13 +341,14 @@ def build_custom_item_model() -> dict:
 
 
 def build_lang_block(expedition_id: str,
+                     display_name: str,
                      drop_pool: list,
                      mandatory_rewards: list,
                      random_bundles: list,
                      ticks: int,
                      render_names: dict[str, str]) -> str:
     eid = _safe_eid(expedition_id)
-    display = expedition_id.replace("_", " ")
+    display = display_name
     sep = "─" * max(0, 55 - len(display))
 
     drop_lines = _build_drop_description(drop_pool, render_names)
@@ -550,13 +610,34 @@ def build_java_defaults_block(all_expeditions: list[tuple[str, int, list, list, 
     return "\n".join(lines)
 
 
+def build_java_display_names_block(display_name_overrides: list[tuple[str, str]]) -> str:
+    lines = [
+        "    static",
+        "    {",
+        "        Map<String, String> names = new HashMap<>();",
+    ]
+
+    for expedition_id, display_name in display_name_overrides:
+        lines.append(
+            f"        names.put({json.dumps(expedition_id, ensure_ascii=False)}, "
+            f"{json.dumps(display_name, ensure_ascii=False)});"
+        )
+
+    lines += [
+        "        DISPLAY_NAMES = Collections.unmodifiableMap(names);",
+        "    }",
+    ]
+    return "\n".join(lines)
+
+
 def build_lang_dungeon_block(expedition_id: str,
+                             display_name: str,
                              waves: list,
                              mandatory_rewards: list,
                              random_bundles: list,
                              render_names: dict[str, str]) -> str:
     eid = _safe_eid(expedition_id)
-    display = expedition_id.replace("_", " ")
+    display = display_name
     sep = "─" * max(0, 55 - len(display))
 
     entity_entries = [
@@ -633,6 +714,27 @@ def build_java_dungeon_defaults_block(all_dungeons: list[tuple[str, list, list, 
         "    }",
     ]
 
+    return "\n".join(lines)
+
+
+def build_java_solidity_defaults_block(all_solidity: list[tuple[str, int, str]]) -> str:
+    lines = [
+        "    static",
+        "    {",
+        "        Map<String, SolidityDefinition> definitions = new HashMap<>();",
+    ]
+
+    for expedition_id, ticks, tool in all_solidity:
+        lines.append("")
+        lines.append(
+            f'        register(definitions, "{expedition_id}", {ticks}, RequiredTool.{tool.upper()});'
+        )
+
+    lines += [
+        "",
+        "        BY_BLOCK_ID = Collections.unmodifiableMap(definitions);",
+        "    }",
+    ]
     return "\n".join(lines)
 
 
@@ -943,8 +1045,46 @@ def patch_enchanter(path: Path, expedition_id: str, group: str, dry_run: bool, b
     print(f"  [patch]  {bench_id} ← {eid} → group {gid}")
 
 
+def _upsert_lang_block(path: Path,
+                       expedition_id: str,
+                       block: str,
+                       marker: str,
+                       dry_run: bool):
+    existing = path.read_text(encoding="utf-8")
+
+    if marker not in existing:
+        if dry_run:
+            print(f"  [dry-run] Would append lang entries for {expedition_id}")
+            return
+        path.write_text(existing.rstrip() + "\n" + block + "\n", encoding="utf-8")
+        print(f"  [patch]  lang <- {expedition_id}")
+        return
+
+    updated = existing
+    for line in block.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#") or "=" not in stripped:
+            continue
+
+        key = stripped.split("=", 1)[0]
+        pattern = rf"(?m)^{re.escape(key)}=.*$"
+        if re.search(pattern, updated):
+            updated = re.sub(pattern, lambda _: stripped, updated, count=1)
+        else:
+            updated = updated.rstrip() + "\n" + stripped + "\n"
+
+    if updated == existing:
+        print(f"  [skip]   Lang already up to date for {expedition_id}")
+    elif dry_run:
+        print(f"  [dry-run] Would update lang entries for {expedition_id}")
+    else:
+        path.write_text(updated, encoding="utf-8")
+        print(f"  [patch]  lang updated <- {expedition_id}")
+
+
 def patch_lang(path: Path,
                expedition_id: str,
+               display_name: str,
                drop_pool: list,
                mandatory_rewards: list,
                random_bundles: list,
@@ -952,21 +1092,9 @@ def patch_lang(path: Path,
                render_names: dict[str, str],
                dry_run: bool):
     eid = _safe_eid(expedition_id)
-    existing = path.read_text(encoding="utf-8")
     marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
-
-    if marker in existing:
-        print(f"  [skip]   Lang already has entries for {expedition_id}")
-        return
-
-    block = build_lang_block(expedition_id, drop_pool, mandatory_rewards, random_bundles, ticks, render_names)
-
-    if dry_run:
-        print(f"  [dry-run] Would append lang entries for {expedition_id}")
-        return
-
-    path.write_text(existing.rstrip() + "\n" + block + "\n", encoding="utf-8")
-    print(f"  [patch]  lang ← {expedition_id}")
+    block = build_lang_block(expedition_id, display_name, drop_pool, mandatory_rewards, random_bundles, ticks, render_names)
+    _upsert_lang_block(path, expedition_id, block, marker, dry_run)
 
 
 def patch_group_lang(path: Path, group: str, dry_run: bool, bench_id: str = "OneBlockEnchanter"):
@@ -1006,33 +1134,24 @@ def patch_custom_item_lang(path: Path, custom_id: str, dry_run: bool):
 
 def _patch_dungeon_lang(path: Path,
                         expedition_id: str,
+                        display_name: str,
                         waves: list,
                         mandatory_rewards: list,
                         random_bundles: list,
                         render_names: dict[str, str],
                         dry_run: bool):
     eid = _safe_eid(expedition_id)
-    existing = path.read_text(encoding="utf-8")
     marker = f"{PREFIX_ITEMS_LANG}.OneBlock_Block_{eid}.name"
-
-    if marker in existing:
-        print(f"  [skip]   Lang already has entries for {expedition_id}")
-        return
-
     block = build_lang_dungeon_block(
         expedition_id,
+        display_name,
         waves,
         mandatory_rewards,
         random_bundles,
         render_names,
     )
 
-    if dry_run:
-        print(f"  [dry-run] Would append lang entries for {expedition_id}")
-        return
-
-    path.write_text(existing.rstrip() + "\n" + block + "\n", encoding="utf-8")
-    print(f"  [patch]  lang ← {expedition_id}")
+    _upsert_lang_block(path, expedition_id, block, marker, dry_run)
 
 
 def _patch_java_static(java_path: Path, static_block: str, label: str, count: int, dry_run: bool):
@@ -1211,6 +1330,10 @@ def main():
 
     raw = json.loads(input_path.read_text(encoding="utf-8-sig"))
     expeditions = {k: v for k, v in raw.items() if not k.startswith("_")}
+    solidity_by_expedition = {
+        expedition_id: _parse_solidity(expedition_id, cfg)
+        for expedition_id, cfg in expeditions.items()
+    }
 
     knowledge_gated_ids: set[str] = set()
     for cfg in expeditions.values():
@@ -1247,21 +1370,36 @@ def main():
         "mods/oneblock/src/main/java"
         "/com/EreliaStudio/OneBlock/OneBlockDungeonDefaults.java"
     )
+    java_solidity_defaults_path = repo_root / Path(
+        "mods/oneblock/src/main/java"
+        "/com/EreliaStudio/OneBlock/OneBlockSolidityDefaults.java"
+    )
+    java_display_names_path = repo_root / Path(
+        "mods/oneblock/src/main/java"
+        "/com/EreliaStudio/OneBlock/OneBlockDisplayNames.java"
+    )
     dungeon_enchanter_path = repo_root / DUNGEON_ENCHANTER
 
     all_expedition_drops: list[tuple[str, int, list, list, list]] = []
     all_dungeon_waves: list[tuple[str, list, list, list]] = []
+    all_solidity: list[tuple[str, int, str]] = []
+    display_name_overrides: list[tuple[str, str]] = []
     seen_custom_item_ids: set[str] = set()
 
     for expedition_id, cfg in expeditions.items():
         print(f"\n=== {expedition_id} ===")
 
         item_level = cfg["ItemLevel"]
+        display_name = _display_name(expedition_id, cfg)
+        if display_name != expedition_id.replace("_", " "):
+            display_name_overrides.append((expedition_id, display_name))
         crystal_cfg = cfg["Crystal"]
         group = cfg.get("Category", cfg.get("Group", expedition_id))
         completion_rewards = cfg.get("CompletionRewards", cfg.get("Rewards", [])) or []
         eid = _safe_eid(expedition_id)
         is_dungeon = group == "Dungeon"
+        solidity = solidity_by_expedition[expedition_id]
+        all_solidity.append((expedition_id, solidity["Ticks"], solidity["Tool"]))
 
         mandatory_rewards, random_bundles = _parse_completion_rewards(completion_rewards)
 
@@ -1280,7 +1418,7 @@ def main():
 
         write_json(
             repo_root / BLOCK_DIR / f"OneBlock_Block_{eid}.json",
-            build_oneblock_block(expedition_id, item_level),
+            build_oneblock_block(expedition_id, item_level, solidity),
             args.dry_run,
             stale,
         )
@@ -1307,6 +1445,7 @@ def main():
                 _patch_dungeon_lang(
                     lang_path,
                     expedition_id,
+                    display_name,
                     waves,
                     mandatory_rewards,
                     random_bundles,
@@ -1337,7 +1476,7 @@ def main():
                 print(f"  [warn]   Enchanter JSON not found: {enchanter_path}")
 
             if lang_path.exists():
-                patch_lang(lang_path, expedition_id, drop_pool, mandatory_rewards, random_bundles, ticks, render_names, args.dry_run)
+                patch_lang(lang_path, expedition_id, display_name, drop_pool, mandatory_rewards, random_bundles, ticks, render_names, args.dry_run)
                 patch_group_lang(lang_path, group, args.dry_run)
             else:
                 print(f"  [warn]   Lang file not found: {lang_path}")
@@ -1348,6 +1487,10 @@ def main():
                        "OneBlockExpeditionDefaults.java", len(all_expedition_drops), args.dry_run)
     _patch_java_static(java_dungeon_defaults_path, build_java_dungeon_defaults_block(all_dungeon_waves),
                        "OneBlockDungeonDefaults.java", len(all_dungeon_waves), args.dry_run)
+    _patch_java_static(java_solidity_defaults_path, build_java_solidity_defaults_block(all_solidity),
+                       "OneBlockSolidityDefaults.java", len(all_solidity), args.dry_run)
+    _patch_java_static(java_display_names_path, build_java_display_names_block(display_name_overrides),
+                       "OneBlockDisplayNames.java", len(display_name_overrides), args.dry_run)
 
     if stale is not None:
         remove_stale_files(stale, args.dry_run)

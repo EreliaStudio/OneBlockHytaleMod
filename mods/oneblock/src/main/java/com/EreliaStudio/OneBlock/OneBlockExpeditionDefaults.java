@@ -491,7 +491,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Moss_Block_Green", 18),
                 drop("Plant_Moss_Rug_Green", 18),
                 drop("Soil_Clay", 16),
-                drop("Rock_Gem_Sapphire", 3)
+                drop("Rock_Gem_Sapphire", 3),
+                drop("*Container_Bucket_State_Filled_Water", 1)
         ), List.of(
                 reward("ExpeditionPoint", 2)
         ));
@@ -901,7 +902,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Rubble_Volcanic", 16),
                 drop("Ingredient_Fire_Essence", 8),
                 drop("Ore_Thorium", 8),
-                drop("Ore_Cobalt", 3)
+                drop("Ore_Cobalt", 3),
+                drop("Fluid_Lava", 1)
         ), List.of(
                 reward("ExpeditionPoint", 7)
         ), List.of(

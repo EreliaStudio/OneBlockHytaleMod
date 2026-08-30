@@ -1,20 +1,32 @@
-@OneBlockBarBackground = PatchStyle(TexturePath: "OneBlockBarBackground.png");
-@OneBlockBarFill = PatchStyle(TexturePath: "OneBlockBarFill.png");
+@OneBlockHudFrame = PatchStyle(TexturePath: "OneBlockHudFrame.png");
+@OneBlockBarBackground = PatchStyle(Color: #101C31);
+@OneBlockBarFill = PatchStyle(TexturePath: "OneBlockHudProgressFill.png");
 
 Group #OneBlockHudRoot {
-  Anchor: (Top: 80, Left: 0, Right: 0, Height: 72);
+  Anchor: (Top: 48, Left: 0, Right: 0, Height: 136);
+  LayoutMode: Center;
 
   Group #OneBlockHudContent {
-    Anchor: (Top: 0, Left: 752, Right: 752, Height: 72);
+    Anchor: (Width: 760, Height: 136);
+    Background: @OneBlockHudFrame;
 
     Label #OneBlockBarTitle {
-      Anchor: (Top: 0, Left: 0, Right: 0, Height: 20);
+      Anchor: (Top: 31, Left: 40, Right: 40, Height: 48);
       Text: "";
-      Style: (HorizontalAlignment: Center);
+      Style: (
+        HorizontalAlignment: Center,
+        VerticalAlignment: Center,
+        FontSize: 27,
+        TextColor: #F5F7FC,
+        OutlineColor: #07101E,
+        LetterSpacing: 1.2,
+        RenderUppercase: true,
+        RenderBold: true
+      );
     }
 
     ProgressBar #OneBlockBar {
-      Anchor: (Top: 25, Left: 0, Right: 0, Height: 32);
+      Anchor: (Top: 92, Left: 30, Right: 30, Height: 18);
       Value: 0.0;
       Background: @OneBlockBarBackground;
       Bar: @OneBlockBarFill;

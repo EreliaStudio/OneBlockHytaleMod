@@ -13,14 +13,14 @@ items.PharaohCatacombsToken.name=Jeton des catacombes du pharaon
 items.GobelinCampToken.name=Jeton du camp gobelin
 
 # GENERATED ─── Default ────────────────────────────────────────────────
-items.OneBlock_Block_Default.name=OneBlock : Par défaut
-items.OneBlock_Crystal_Default.name=Cristal : Par défaut
-items.OneBlock_Crystal_Default.description=Consommez ce cristal pour commencer l’expédition « Par défaut ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Entrée de la grotte (possible)\n- Lisière de la forêt (possible)\n- Plaine (possible)
-expeditions.Default.name=Par défaut
-announcements.expedition_started.Default=L’expédition « Par défaut » a commencé.
-announcements.expedition_completed.Default=L’expédition « Par défaut » est terminée. Le OneBlock est revenu à son état par défaut.
-announcements.expedition_unlocked.Default=Nouvelle expédition débloquée : « Par défaut »
-progress.expedition.Default=Par défaut : {0}/{1} blocs restants
+items.OneBlock_Block_Default.name=OneBlock : Prairie
+items.OneBlock_Crystal_Default.name=Cristal : Prairie
+items.OneBlock_Crystal_Default.description=Consommez ce cristal pour commencer l’expédition « Prairie ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nRécompenses de fin :\n- 1x Point d’expédition\nDébloque :\n- Entrée de la grotte (possible)\n- Lisière de la forêt (possible)\n- Plaine (possible)
+expeditions.Default.name=Prairie
+announcements.expedition_started.Default=L’expédition « Prairie » a commencé.
+announcements.expedition_completed.Default=L’expédition « Prairie » est terminée. Le OneBlock est revenu à son état par défaut.
+announcements.expedition_unlocked.Default=Nouvelle expédition débloquée : « Prairie »
+progress.expedition.Default=Prairie : {0}/{1} blocs restants
 benchCategories.OneBlockEnchanter_Easy=Cristaux faciles
 
 # GENERATED ─── CaveEntry ──────────────────────────────────────────────
@@ -172,7 +172,7 @@ progress.expedition.CobaltCave=Mine de cobalt : {0}/{1} blocs restants
 # GENERATED ─── AdamantiteCave ─────────────────────────────────────────
 items.OneBlock_Block_AdamantiteCave.name=OneBlock : Mine d’adamantite
 items.OneBlock_Crystal_AdamantiteCave.name=Cristal : Mine d’adamantite
-items.OneBlock_Crystal_AdamantiteCave.description=Consommez ce cristal pour commencer l’expédition « Mine d’adamantite ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Grotte profonde aux gemmes (possible)\n- Mine de mithril (possible)
+items.OneBlock_Crystal_AdamantiteCave.description=Consommez ce cristal pour commencer l’expédition « Mine d’adamantite ».\n30 blocs à briser.\nButins possibles :\nObjets :\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntités :\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nRécompenses de fin :\n- 6x Point d’expédition\nDébloque :\n- Grotte profonde aux gemmes (possible)\n- Caverne de cristal (possible)\n- Mine de mithril (possible)
 expeditions.AdamantiteCave.name=Mine d’adamantite
 announcements.expedition_started.AdamantiteCave=L’expédition « Mine d’adamantite » a commencé.
 announcements.expedition_completed.AdamantiteCave=L’expédition « Mine d’adamantite » est terminée. Le OneBlock est revenu à son état par défaut.
@@ -295,7 +295,7 @@ progress.expedition.River=Rivière : {0}/{1} blocs restants
 # GENERATED ─── Lake ───────────────────────────────────────────────────
 items.OneBlock_Block_Lake.name=OneBlock : Lac
 items.OneBlock_Crystal_Lake.name=Cristal : Lac
-items.OneBlock_Crystal_Lake.description=Consommez ce cristal pour commencer l’expédition « Lac ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\nEntités :\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nRécompenses de fin :\n- 2x Point d’expédition
+items.OneBlock_Crystal_Lake.description=Consommez ce cristal pour commencer l’expédition « Lac ».\n28 blocs à briser.\nButins possibles :\nObjets :\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\n- Water Bucket\nEntités :\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nRécompenses de fin :\n- 2x Point d’expédition
 expeditions.Lake.name=Lac
 announcements.expedition_started.Lake=L’expédition « Lac » a commencé.
 announcements.expedition_completed.Lake=L’expédition « Lac » est terminée. Le OneBlock est revenu à son état par défaut.
@@ -591,7 +591,7 @@ progress.expedition.IcyForest=Forêt glacée : {0}/{1} blocs restants
 # GENERATED ─── FireLand ───────────────────────────────────────────────
 items.OneBlock_Block_FireLand.name=OneBlock : Terres de feu
 items.OneBlock_Crystal_FireLand.name=Cristal : Terres de feu
-items.OneBlock_Crystal_FireLand.description=Consommez ce cristal pour commencer l’expédition « Terres de feu ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntités :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Volcan (possible)\n- Cimetière enflammé (possible)
+items.OneBlock_Crystal_FireLand.description=Consommez ce cristal pour commencer l’expédition « Terres de feu ».\n25 blocs à briser.\nButins possibles :\nObjets :\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\n- Lava Bucket\nEntités :\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nRécompenses de fin :\n- 7x Point d’expédition\nDébloque :\n- Volcan (possible)\n- Cimetière enflammé (possible)
 expeditions.FireLand.name=Terres de feu
 announcements.expedition_started.FireLand=L’expédition « Terres de feu » a commencé.
 announcements.expedition_completed.FireLand=L’expédition « Terres de feu » est terminée. Le OneBlock est revenu à son état par défaut.

@@ -197,11 +197,6 @@ public final class OneBlockHudService
 
     private static String readableName(String id)
     {
-        if (id == null || id.isBlank())
-        {
-            return "Unknown";
-        }
-
-        return id.replace("_", " ");
+        return OneBlockDisplayNames.get(id);
     }
 }

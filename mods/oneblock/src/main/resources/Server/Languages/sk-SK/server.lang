@@ -13,14 +13,14 @@ items.PharaohCatacombsToken.name=Žetón faraónových katakomb
 items.GobelinCampToken.name=Žetón goblinieho tábora
 
 # GENERATED ─── Default ────────────────────────────────────────────────
-items.OneBlock_Block_Default.name=OneBlock: Predvolená
-items.OneBlock_Crystal_Default.name=Kryštál: Predvolená
-items.OneBlock_Crystal_Default.description=Spotrebujte tento kryštál a začnite expedíciu „Predvolená“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Vstup do jaskyne (možné)\n- Okraj lesa (možné)\n- Planina (možné)
-expeditions.Default.name=Predvolená
-announcements.expedition_started.Default=Expedícia „Predvolená“ sa začala.
-announcements.expedition_completed.Default=Expedícia „Predvolená“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
-announcements.expedition_unlocked.Default=Odomknutá nová expedícia: „Predvolená“
-progress.expedition.Default=Predvolená: zostáva {0}/{1} blokov
+items.OneBlock_Block_Default.name=OneBlock: Lúka
+items.OneBlock_Crystal_Default.name=Kryštál: Lúka
+items.OneBlock_Crystal_Default.description=Spotrebujte tento kryštál a začnite expedíciu „Lúka“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Fibre\n- Stick\n- Rubble Stone\n- Soil Dirt\nOdmeny za dokončenie:\n- 1x Expedičný bod\nOdomyká:\n- Vstup do jaskyne (možné)\n- Okraj lesa (možné)\n- Planina (možné)
+expeditions.Default.name=Lúka
+announcements.expedition_started.Default=Expedícia „Lúka“ sa začala.
+announcements.expedition_completed.Default=Expedícia „Lúka“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
+announcements.expedition_unlocked.Default=Odomknutá nová expedícia: „Lúka“
+progress.expedition.Default=Lúka: zostáva {0}/{1} blokov
 benchCategories.OneBlockEnchanter_Easy=Jednoduché kryštály
 
 # GENERATED ─── CaveEntry ──────────────────────────────────────────────
@@ -172,7 +172,7 @@ progress.expedition.CobaltCave=Kobaltová jaskyňa: zostáva {0}/{1} blokov
 # GENERATED ─── AdamantiteCave ─────────────────────────────────────────
 items.OneBlock_Block_AdamantiteCave.name=OneBlock: Adamantitová jaskyňa
 items.OneBlock_Crystal_AdamantiteCave.name=Kryštál: Adamantitová jaskyňa
-items.OneBlock_Crystal_AdamantiteCave.description=Spotrebujte tento kryštál a začnite expedíciu „Adamantitová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Hlboká jaskyňa drahokamov (možné)\n- Mithrilová jaskyňa (možné)
+items.OneBlock_Crystal_AdamantiteCave.description=Spotrebujte tento kryštál a začnite expedíciu „Adamantitová jaskyňa“.\nPočet blokov na rozbitie: 30.\nMožná korisť:\nPredmety:\n- Rubble Shale\n- Shale\n- Adamantite Ore\n- Mithril Ore\nEntity:\n- Goblin Scrapper\n- Goblin Miner\n- Goblin Lobber\n- Goblin Ogre\nOdmeny za dokončenie:\n- 6x Expedičný bod\nOdomyká:\n- Hlboká jaskyňa drahokamov (možné)\n- Kryštálová kaverna (možné)\n- Mithrilová jaskyňa (možné)
 expeditions.AdamantiteCave.name=Adamantitová jaskyňa
 announcements.expedition_started.AdamantiteCave=Expedícia „Adamantitová jaskyňa“ sa začala.
 announcements.expedition_completed.AdamantiteCave=Expedícia „Adamantitová jaskyňa“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
@@ -295,7 +295,7 @@ progress.expedition.River=Rieka: zostáva {0}/{1} blokov
 # GENERATED ─── Lake ───────────────────────────────────────────────────
 items.OneBlock_Block_Lake.name=OneBlock: Jazero
 items.OneBlock_Crystal_Lake.name=Kryštál: Jazero
-items.OneBlock_Crystal_Lake.description=Spotrebujte tento kryštál a začnite expedíciu „Jazero“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\nEntity:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nOdmeny za dokončenie:\n- 2x Expedičný bod
+items.OneBlock_Crystal_Lake.description=Spotrebujte tento kryštál a začnite expedíciu „Jazero“.\nPočet blokov na rozbitie: 28.\nMožná korisť:\nPredmety:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\n- Water Bucket\nEntity:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nOdmeny za dokončenie:\n- 2x Expedičný bod
 expeditions.Lake.name=Jazero
 announcements.expedition_started.Lake=Expedícia „Jazero“ sa začala.
 announcements.expedition_completed.Lake=Expedícia „Jazero“ je dokončená. OneBlock sa vrátil do predvoleného stavu.
@@ -591,7 +591,7 @@ progress.expedition.IcyForest=Ľadový les: zostáva {0}/{1} blokov
 # GENERATED ─── FireLand ───────────────────────────────────────────────
 items.OneBlock_Block_FireLand.name=OneBlock: Ohnivá krajina
 items.OneBlock_Crystal_FireLand.name=Kryštál: Ohnivá krajina
-items.OneBlock_Crystal_FireLand.description=Spotrebujte tento kryštál a začnite expedíciu „Ohnivá krajina“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\nEntity:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Sopka (možné)\n- Ohnivý cintorín (možné)
+items.OneBlock_Crystal_FireLand.description=Spotrebujte tento kryštál a začnite expedíciu „Ohnivá krajina“.\nPočet blokov na rozbitie: 25.\nMožná korisť:\nPredmety:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\n- Lava Bucket\nEntity:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nOdmeny za dokončenie:\n- 7x Expedičný bod\nOdomyká:\n- Sopka (možné)\n- Ohnivý cintorín (možné)
 expeditions.FireLand.name=Ohnivá krajina
 announcements.expedition_started.FireLand=Expedícia „Ohnivá krajina“ sa začala.
 announcements.expedition_completed.FireLand=Expedícia „Ohnivá krajina“ je dokončená. OneBlock sa vrátil do predvoleného stavu.

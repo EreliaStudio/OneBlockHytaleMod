@@ -63,6 +63,10 @@ public final class OneBlockPlugin extends JavaPlugin
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
 
         getEntityStoreRegistry().registerSystem(
+                new OneBlockDamageSystem(worldStateRegistry)
+        );
+
+        getEntityStoreRegistry().registerSystem(
                 new OneBlockBreakSystem(
                         dropRegistry,
                         worldStateRegistry

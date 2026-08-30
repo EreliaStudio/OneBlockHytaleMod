@@ -1,8 +1,13 @@
 ﻿{
 	"_comment": "Generated from mainDiagram.puml, then normalized by fix_oneblock_expeditions.py. Known typo expedition IDs, invalid item IDs, and display-style mob names were corrected. Crystal recipe costs still use ExpeditionPoint. Branching unlocks remain in CompletionRewards.Random. ItemLevel values were remapped to difficulty tiers: 1=Easy, 2=Advanced, 3=Difficult, 4=Hard, 5=Expert. Category=Dungeon remains separate from normal expedition sections.",
 	"Default": {
+		"DisplayName": "Meadow",
 		"ItemLevel": 1,
 		"Category": "Easy",
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
+		},
 		"Crystal": {
 			"Input": [
 				{
@@ -114,6 +119,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"ForestEdge": {
@@ -174,6 +183,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Axe"
 		}
 	},
 	"Plain": {
@@ -265,6 +278,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"Cave": {
@@ -332,6 +349,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"RatCave": {
@@ -370,6 +391,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"LowerCave": {
@@ -426,6 +451,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"CopperCave": {
@@ -482,6 +511,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"GoblinGank": {
@@ -540,6 +573,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"IronCave": {
@@ -611,6 +648,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"SandCave": {
@@ -667,6 +708,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"GoldCave": {
@@ -719,6 +764,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"ThoriumCave": {
@@ -790,6 +839,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"GoblinInvasion": {
@@ -851,6 +904,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"SilverCave": {
@@ -903,6 +960,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"CobaltCave": {
@@ -987,6 +1048,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"AdamantiteCave": {
@@ -1071,6 +1136,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"GemCave": {
@@ -1127,6 +1196,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"FireCave": {
@@ -1191,6 +1264,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"GemDeepCave": {
@@ -1251,6 +1328,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"MithrilCave": {
@@ -1303,6 +1384,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"OnyxiumCave": {
@@ -1355,6 +1440,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"PrismaCave": {
@@ -1411,6 +1500,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"SandCavern": {
@@ -1471,6 +1564,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"Desert": {
@@ -1576,6 +1673,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"ForestEntry": {
@@ -1679,6 +1780,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Axe"
 		}
 	},
 	"Pond": {
@@ -1739,6 +1844,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"River": {
@@ -1827,6 +1936,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"Lake": {
@@ -1877,6 +1990,10 @@
 			{
 				"ID": "Rock_Gem_Sapphire",
 				"Weight": 3
+			},
+			{
+				"ID": "*Container_Bucket_State_Filled_Water",
+				"Weight": 1
 			}
 		],
 		"CompletionRewards": {
@@ -1887,6 +2004,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"Sea": {
@@ -1971,6 +2092,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"PirateShipwreck": {
@@ -2026,6 +2151,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"Coastline": {
@@ -2090,6 +2219,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"SeaCavern": {
@@ -2150,6 +2283,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"SeaInfestedNest": {
@@ -2218,6 +2355,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"SeaMonster": {
@@ -2285,6 +2426,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Hand"
 		}
 	},
 	"Forest": {
@@ -2402,6 +2547,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Axe"
 		}
 	},
 	"AridForest": {
@@ -2470,6 +2619,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Axe"
 		}
 	},
 	"Swamp": {
@@ -2538,6 +2691,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"EnchantedForest": {
@@ -2610,6 +2767,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"FairyPond": {
@@ -2678,6 +2839,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"DeepForest": {
@@ -2778,6 +2943,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"DarkForest": {
@@ -2861,6 +3030,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"BurnedForest": {
@@ -2925,6 +3098,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
 		}
 	},
 	"CursedForest": {
@@ -3012,6 +3189,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
 		}
 	},
 	"Graveyard": {
@@ -3088,6 +3269,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"UndeadTemple": {
@@ -3147,6 +3332,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"VoidPortal": {
@@ -3230,6 +3419,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"VoidTemple": {
@@ -3295,6 +3488,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"OutlanderForest": {
@@ -3374,6 +3571,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
 		}
 	},
 	"OutlanderPlain": {
@@ -3465,6 +3666,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"OutlanderGank": {
@@ -3520,6 +3725,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"OutlanderCity": {
@@ -3592,6 +3801,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"Tundra": {
@@ -3671,6 +3884,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"FrozenForest": {
@@ -3739,6 +3956,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Axe"
 		}
 	},
 	"IceLand": {
@@ -3803,6 +4024,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"IcyCavern": {
@@ -3882,6 +4107,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"YetiCavern": {
@@ -3946,6 +4175,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"IceTemple": {
@@ -4005,6 +4238,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"IcyForest": {
@@ -4073,6 +4310,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Axe"
 		}
 	},
 	"FireLand": {
@@ -4123,6 +4364,10 @@
 			{
 				"ID": "Ore_Cobalt",
 				"Weight": 3
+			},
+			{
+				"ID": "Fluid_Lava",
+				"Weight": 1
 			}
 		],
 		"CompletionRewards": {
@@ -4152,6 +4397,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"Volcano": {
@@ -4211,6 +4460,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"FieryGraveyard": {
@@ -4294,6 +4547,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"InfernalGate": {
@@ -4373,6 +4630,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"InfernalPlain": {
@@ -4441,6 +4702,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Hand"
 		}
 	},
 	"InfernalSwamp": {
@@ -4509,6 +4774,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Hand"
 		}
 	},
 	"FireGemCave": {
@@ -4577,6 +4846,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"DesertTempleEntrance": {
@@ -4641,6 +4914,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"DeeperDesertTemple": {
@@ -4713,6 +4990,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"DesertTemple": {
@@ -4782,6 +5063,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"PharaohRoom": {
@@ -4846,6 +5131,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"InnerDesert": {
@@ -4933,6 +5222,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"MuddyDesert": {
@@ -4997,6 +5290,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"InsectInvasion": {
@@ -5053,6 +5350,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Hand"
 		}
 	},
 	"InfestedDesert": {
@@ -5117,6 +5418,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Hand"
 		}
 	},
 	"InsectNest": {
@@ -5184,6 +5489,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"InsideInsectNest": {
@@ -5252,6 +5561,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"InsectCore": {
@@ -5324,6 +5637,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"Quarry": {
@@ -5388,6 +5705,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
 		}
 	},
 	"Hallow": {
@@ -5476,6 +5797,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"CowHallow": {
@@ -5532,6 +5857,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"HorseHallow": {
@@ -5584,6 +5913,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Hand"
 		}
 	},
 	"MysteriousCavern": {
@@ -5648,6 +5981,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"MysticCave": {
@@ -5704,6 +6041,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"LuxuriousCave": {
@@ -5768,6 +6109,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"JurassicCave": {
@@ -5840,6 +6185,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"DinoCrisis": {
@@ -5913,6 +6262,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Hand"
 		}
 	},
 	"DryTrorkCamp": {
@@ -5981,6 +6334,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"TrorkHuntingGround": {
@@ -6049,6 +6406,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"TrorkWarband": {
@@ -6105,6 +6466,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
 		}
 	},
 	"TrorkStrongholdApproach": {
@@ -6173,6 +6538,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
 		}
 	},
 	"TrorkElderGrove": {
@@ -6241,6 +6610,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
 		}
 	},
 	"TrorkChieftainCamp": {
@@ -6307,6 +6680,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Axe"
 		}
 	},
 	"FrozenGraveyard": {
@@ -6395,6 +6772,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"IcyNecropolis": {
@@ -6491,6 +6872,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"FrostboneCrypt": {
@@ -6561,6 +6946,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"BurntBattlefield": {
@@ -6641,6 +7030,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Hand"
 		}
 	},
 	"AshenCatacombs": {
@@ -6733,6 +7126,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"BurntSkeletonCitadel": {
@@ -6810,6 +7207,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"JungleEdge": {
@@ -6894,6 +7295,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"DryJunglePass": {
@@ -6990,6 +7395,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
 		}
 	},
 	"OvergrownRuins": {
@@ -7070,6 +7479,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"SunkenJungleRuins": {
@@ -7150,6 +7563,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"LostNecropolis": {
@@ -7249,6 +7666,10 @@
 					]
 				}
 			]
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"ShadowedJungleRoad": {
@@ -7329,6 +7750,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Axe"
 		}
 	},
 	"ArmoredDeadGrove": {
@@ -7413,6 +7838,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Axe"
 		}
 	},
 	"JungleCrypt": {
@@ -7477,6 +7906,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
 		}
 	},
 	"AncientUndeadSanctum": {
@@ -7559,6 +7992,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
 		}
 	},
 	"ShadowKnightCitadel": {
@@ -7636,6 +8073,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Pickaxe"
 		}
 	},
 	"SpiritThreshold": {
@@ -7716,6 +8157,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Hand"
 		}
 	},
 	"ElementalConfluence": {
@@ -7816,6 +8261,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Hand"
 		}
 	},
 	"SpiritRealmTrial": {
@@ -7915,6 +8364,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 8,
+			"Tool": "Hand"
 		}
 	},
 	"CrystalCavern": {
@@ -7971,6 +8424,10 @@
 				}
 			],
 			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
 		}
 	},
 	"_category_note": "Categories manually sorted into Surface, Underground, Forest, Ocean, Desert, Ice, Fire, Jungle, Mystic, and Dungeon. Dungeon is reserved for generator dungeon entries."
