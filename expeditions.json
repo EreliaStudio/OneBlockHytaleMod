@@ -1,5 +1,5 @@
 ﻿{
-	"_comment": "Generated from mainDiagram.puml, then normalized by fix_oneblock_expeditions.py. Known typo expedition IDs, invalid item IDs, and display-style mob names were corrected. Crystal recipe costs still use ExpeditionPoint. Branching unlocks remain in CompletionRewards.Random. ItemLevel values were remapped to difficulty tiers: 1=Easy, 2=Advanced, 3=Difficult, 4=Hard, 5=Expert. Category=Dungeon remains separate from normal expedition sections.",
+	"_comment": "Generated from mainDiagram.puml, then normalized by fix_oneblock_expeditions.py. Known typo expedition IDs, invalid item IDs, and display-style mob names were corrected. Crystal recipe costs still use ExpeditionPoint. Branching unlocks remain in CompletionRewards.Random. ItemLevel values were remapped to difficulty tiers: 1=Easy, 2=Advanced, 3=Difficult, 4=Hard, 5=Expert. Category=Dungeon remains separate from normal expedition sections. Resource expansion adds audited non-craftable, non-mob-economy world resources; existing expeditions are preserved except for new unlock branches and two fitting resource drops.",
 	"Default": {
 		"DisplayName": "Meadow",
 		"ItemLevel": 1,
@@ -2282,7 +2282,17 @@
 					"Quantity": 1
 				}
 			],
-			"Random": []
+			"Random": [
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "AquaGrotto",
+							"Quantity": 1
+						}
+					]
+				}
+			]
 		},
 		"Solidity": {
 			"Ticks": 4,
@@ -2677,6 +2687,10 @@
 			{
 				"ID": "Plant_Crop_Mushroom_Block_Yellow",
 				"Weight": 4
+			},
+			{
+				"ID": "Rubble_Stone_Mossy",
+				"Weight": 10
 			}
 		],
 		"CompletionRewards": {
@@ -2938,6 +2952,15 @@
 					"Items": [
 						{
 							"Crystal": "TrorkHuntingGround",
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "TemperateGrove",
 							"Quantity": 1
 						}
 					]
@@ -3882,6 +3905,15 @@
 							"Quantity": 1
 						}
 					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "PermafrostShelf",
+							"Quantity": 1
+						}
+					]
 				}
 			]
 		},
@@ -4392,6 +4424,15 @@
 					"Items": [
 						{
 							"Crystal": "FieryGraveyard",
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "VolcanicFault",
 							"Quantity": 1
 						}
 					]
@@ -5547,6 +5588,10 @@
 			{
 				"ID": "Rock_Gem_Ruby",
 				"Weight": 5
+			},
+			{
+				"ID": "Soil_Hive_Corrupted_Brick",
+				"Weight": 10
 			}
 		],
 		"CompletionRewards": {
@@ -5704,7 +5749,17 @@
 					"Quantity": 1
 				}
 			],
-			"Random": []
+			"Random": [
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "ChalkCliffs",
+							"Quantity": 1
+						}
+					]
+				}
+			]
 		},
 		"Solidity": {
 			"Ticks": 3,
@@ -8430,5 +8485,751 @@
 			"Tool": "Pickaxe"
 		}
 	},
-	"_category_note": "Categories manually sorted into Surface, Underground, Forest, Ocean, Desert, Ice, Fire, Jungle, Mystic, and Dungeon. Dungeon is reserved for generator dungeon entries."
+	"_category_note": "Categories manually sorted into Surface, Underground, Forest, Ocean, Desert, Ice, Fire, Jungle, Mystic, and Dungeon. Dungeon is reserved for generator dungeon entries.",
+	"ChalkCliffs": {
+		"ItemLevel": 1,
+		"Category": "Easy",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 3
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Bat",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Rat",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Chalk",
+				"Weight": 26
+			},
+			{
+				"ID": "Rock_Chalk_Cobble",
+				"Weight": 24
+			},
+			{
+				"ID": "Rubble_Chalk",
+				"Weight": 22
+			},
+			{
+				"ID": "Rock_Slate_Cobble",
+				"Weight": 10
+			},
+			{
+				"ID": "Rubble_Slate",
+				"Weight": 8
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				}
+			],
+			"Random": [
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "CalciteCavern",
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "LimestoneCavern",
+							"Quantity": 1
+						}
+					]
+				}
+			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Pickaxe"
+		}
+	},
+	"CalciteCavern": {
+		"ItemLevel": 2,
+		"Category": "Advanced",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 6
+				}
+			]
+		},
+		"Ticks": 28,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Bat",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Spider_Cave",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Calcite",
+				"Weight": 24
+			},
+			{
+				"ID": "Rock_Calcite_Cobble",
+				"Weight": 22
+			},
+			{
+				"ID": "Rubble_Calcite",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Ledge_Cobble",
+				"Weight": 12
+			},
+			{
+				"ID": "Rock_Shale_Cobble",
+				"Weight": 10
+			},
+			{
+				"ID": "Rock_Salt",
+				"Weight": 6
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 3
+				},
+				{
+					"Crystal": "WhiteStoneCavern",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
+		}
+	},
+	"LimestoneCavern": {
+		"ItemLevel": 2,
+		"Category": "Advanced",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 7
+				}
+			]
+		},
+		"Ticks": 28,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Bat",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Spider_Cave",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Lime_Cobble",
+				"Weight": 24
+			},
+			{
+				"ID": "Rubble_Lime",
+				"Weight": 22
+			},
+			{
+				"ID": "Rock_Sandstone_Cobble",
+				"Weight": 18
+			},
+			{
+				"ID": "Rock_Sandstone_Red_Cobble",
+				"Weight": 12
+			},
+			{
+				"ID": "Rubble_Sandstone_Red",
+				"Weight": 10
+			},
+			{
+				"ID": "Rock_Salt",
+				"Weight": 6
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 3
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
+		}
+	},
+	"WhiteStoneCavern": {
+		"ItemLevel": 2,
+		"Category": "Advanced",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 8
+				}
+			]
+		},
+		"Ticks": 28,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Spider_Cave",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Bat",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Sandstone_White_Cobble",
+				"Weight": 22
+			},
+			{
+				"ID": "Rubble_Sandstone_White",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Marble_Cobble",
+				"Weight": 18
+			},
+			{
+				"ID": "Rubble_Marble",
+				"Weight": 16
+			},
+			{
+				"ID": "Rock_Peach_Cobble",
+				"Weight": 12
+			},
+			{
+				"ID": "Rock_Ledge_Cobble",
+				"Weight": 8
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 4
+				},
+				{
+					"Crystal": "QuartziteCavern",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
+		}
+	},
+	"QuartziteCavern": {
+		"ItemLevel": 3,
+		"Category": "Difficult",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 11
+				}
+			]
+		},
+		"Ticks": 30,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Goblin_Miner",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Spider_Cave",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Quartzite_Cobble",
+				"Weight": 24
+			},
+			{
+				"ID": "Rubble_Quartzite",
+				"Weight": 22
+			},
+			{
+				"ID": "Rock_Basalt_Cobble",
+				"Weight": 14
+			},
+			{
+				"ID": "Rock_Shale_Cobble",
+				"Weight": 14
+			},
+			{
+				"ID": "Rock_Ledge_Cobble",
+				"Weight": 10
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 5
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Pickaxe"
+		}
+	},
+	"AquaGrotto": {
+		"ItemLevel": 2,
+		"Category": "Advanced",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 8
+				}
+			]
+		},
+		"Ticks": 28,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Crab",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Spider_Cave",
+				"Weight": 2
+			},
+			{
+				"ID": "Rock_Aqua_Cobble",
+				"Weight": 28
+			},
+			{
+				"ID": "Rubble_Aqua",
+				"Weight": 24
+			},
+			{
+				"ID": "Rock_Calcite_Cobble",
+				"Weight": 12
+			},
+			{
+				"ID": "Rock_Gem_Sapphire",
+				"Weight": 3
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 4
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Pickaxe"
+		}
+	},
+	"PermafrostShelf": {
+		"ItemLevel": 4,
+		"Category": "Hard",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 18
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Wolf_Black",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Zombie_Frost",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Skeleton_Frost_Scout",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Ice_Permafrost",
+				"Weight": 22
+			},
+			{
+				"ID": "Soil_Snow",
+				"Weight": 18
+			},
+			{
+				"ID": "Rock_Ice",
+				"Weight": 18
+			},
+			{
+				"ID": "Rubble_Ice",
+				"Weight": 16
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 8
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
+		}
+	},
+	"VolcanicFault": {
+		"ItemLevel": 4,
+		"Category": "Hard",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 18
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Zombie_Burnt",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Emberwulf",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Skeleton_Burnt_Soldier",
+				"Weight": 1
+			},
+			{
+				"ID": "Rock_Volcanic_Cobble",
+				"Weight": 20
+			},
+			{
+				"ID": "Rock_Volcanic_Cracked_Lava",
+				"Weight": 18
+			},
+			{
+				"ID": "Soil_Ash",
+				"Weight": 18
+			},
+			{
+				"ID": "Rock_Magma_Cooled",
+				"Weight": 16
+			},
+			{
+				"ID": "Rock_Magma_Cooled_Cobble",
+				"Weight": 14
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 8
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 6,
+			"Tool": "Pickaxe"
+		}
+	},
+	"TemperateGrove": {
+		"ItemLevel": 1,
+		"Category": "Easy",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 4
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Rabbit",
+				"Weight": 3
+			},
+			{
+				"ID": "entity:Fox",
+				"Weight": 1
+			},
+			{
+				"ID": "Wood_Apple_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Aspen_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Camphor_Trunk",
+				"Weight": 16
+			},
+			{
+				"ID": "Wood_Cedar_Trunk",
+				"Weight": 16
+			},
+			{
+				"ID": "Wood_Fir_Trunk",
+				"Weight": 14
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 2
+				}
+			],
+			"Random": [
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "DryWoodland",
+							"Quantity": 1
+						}
+					]
+				},
+				{
+					"Weight": 1,
+					"Items": [
+						{
+							"Crystal": "AncientCanopy",
+							"Quantity": 1
+						}
+					]
+				}
+			]
+		},
+		"Solidity": {
+			"Ticks": 3,
+			"Tool": "Axe"
+		}
+	},
+	"DryWoodland": {
+		"ItemLevel": 2,
+		"Category": "Advanced",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 7
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Cactee",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Fox",
+				"Weight": 1
+			},
+			{
+				"ID": "Wood_Dry_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Gumboab_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Palm_Trunk",
+				"Weight": 16
+			},
+			{
+				"ID": "Wood_Palo_Trunk",
+				"Weight": 16
+			},
+			{
+				"ID": "Wood_Fig_Blue_Trunk",
+				"Weight": 14
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 3
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 4,
+			"Tool": "Axe"
+		}
+	},
+	"AncientCanopy": {
+		"ItemLevel": 3,
+		"Category": "Difficult",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 12
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Crawler",
+				"Weight": 2
+			},
+			{
+				"ID": "entity:Wolf_Black",
+				"Weight": 1
+			},
+			{
+				"ID": "Wood_Banyan_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Redwood_Trunk",
+				"Weight": 18
+			},
+			{
+				"ID": "Wood_Sallow_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Windwillow_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Wisteria_Wild_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Wood_Spiral_Trunk",
+				"Weight": 10
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 5
+				},
+				{
+					"Crystal": "ElementalGrove",
+					"Quantity": 1
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 5,
+			"Tool": "Axe"
+		}
+	},
+	"ElementalGrove": {
+		"ItemLevel": 5,
+		"Category": "Expert",
+		"Crystal": {
+			"Input": [
+				{
+					"ItemId": "ExpeditionPoint",
+					"Quantity": 22
+				}
+			]
+		},
+		"Ticks": 25,
+		"BaseDropPool": [
+			{
+				"ID": "entity:Spirit_Root",
+				"Weight": 1
+			},
+			{
+				"ID": "entity:Spirit_Ember",
+				"Weight": 1
+			},
+			{
+				"ID": "Wood_Azure_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Crystal_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Fire_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Poisoned_Trunk",
+				"Weight": 14
+			},
+			{
+				"ID": "Wood_Petrified_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Wood_Stormbark_Trunk",
+				"Weight": 12
+			},
+			{
+				"ID": "Wood_Burnt_Trunk",
+				"Weight": 10
+			}
+		],
+		"CompletionRewards": {
+			"Mandatory": [
+				{
+					"CustomID": "ExpeditionPoint",
+					"Quantity": 9
+				}
+			],
+			"Random": []
+		},
+		"Solidity": {
+			"Ticks": 7,
+			"Tool": "Axe"
+		}
+	}
 }

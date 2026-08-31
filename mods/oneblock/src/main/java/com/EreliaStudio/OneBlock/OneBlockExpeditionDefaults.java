@@ -544,6 +544,8 @@ public final class OneBlockExpeditionDefaults
         ), List.of(
                 reward("ExpeditionPoint", 4),
                 crystalReward("SeaInfestedNest", 1)
+        ), List.of(
+                bundle(List.of(crystalReward("AquaGrotto", 1)), 1)
         ));
 
         register(expeditions, "SeaInfestedNest", 28, List.of(
@@ -612,7 +614,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Moss_Rug_Green", 18),
                 drop("Plant_Crop_Mushroom_Common_Brown", 12),
                 drop("Plant_Crop_Mushroom_Shelve_Brown", 8),
-                drop("Plant_Crop_Mushroom_Block_Yellow", 4)
+                drop("Plant_Crop_Mushroom_Block_Yellow", 4),
+                drop("Rubble_Stone_Mossy", 10)
         ), List.of(
                 reward("ExpeditionPoint", 2),
                 crystalReward("EnchantedForest", 1)
@@ -669,7 +672,8 @@ public final class OneBlockExpeditionDefaults
         ), List.of(
                 bundle(List.of(crystalReward("DarkForest", 1)), 1),
                 bundle(List.of(crystalReward("JungleEdge", 1)), 1),
-                bundle(List.of(crystalReward("TrorkHuntingGround", 1)), 1)
+                bundle(List.of(crystalReward("TrorkHuntingGround", 1)), 1),
+                bundle(List.of(crystalReward("TemperateGrove", 1)), 1)
         ));
 
         register(expeditions, "DarkForest", 25, List.of(
@@ -811,7 +815,8 @@ public final class OneBlockExpeditionDefaults
                 reward("ExpeditionPoint", 8)
         ), List.of(
                 bundle(List.of(crystalReward("FrozenForest", 1)), 1),
-                bundle(List.of(crystalReward("IceLand", 1)), 1)
+                bundle(List.of(crystalReward("IceLand", 1)), 1),
+                bundle(List.of(crystalReward("PermafrostShelf", 1)), 1)
         ));
 
         register(expeditions, "FrozenForest", 25, List.of(
@@ -908,7 +913,8 @@ public final class OneBlockExpeditionDefaults
                 reward("ExpeditionPoint", 7)
         ), List.of(
                 bundle(List.of(crystalReward("Volcano", 1)), 1),
-                bundle(List.of(crystalReward("FieryGraveyard", 1)), 1)
+                bundle(List.of(crystalReward("FieryGraveyard", 1)), 1),
+                bundle(List.of(crystalReward("VolcanicFault", 1)), 1)
         ));
 
         register(expeditions, "FieryGraveyard", 25, List.of(
@@ -1100,7 +1106,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Soil_Hive_Brick", 16),
                 drop("Soil_Hive_Brick", 10),
                 drop("Soil_Hive_Brick", 10),
-                drop("Rock_Gem_Ruby", 5)
+                drop("Rock_Gem_Ruby", 5),
+                drop("Soil_Hive_Corrupted_Brick", 10)
         ), List.of(
                 reward("ExpeditionPoint", 6),
                 crystalReward("InsectCore", 1)
@@ -1119,6 +1126,8 @@ public final class OneBlockExpeditionDefaults
         ), List.of(
                 reward("ExpeditionPoint", 2),
                 crystalReward("MysteriousCavern", 1)
+        ), List.of(
+                bundle(List.of(crystalReward("ChalkCliffs", 1)), 1)
         ));
 
         register(expeditions, "Hallow", 30, List.of(
@@ -1569,6 +1578,165 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Crystal_Yellow", 1)
         ), List.of(
                 reward("ExpeditionPoint", 4)
+        ));
+
+        register(expeditions, "ChalkCliffs", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Rat"), 1),
+                drop("Rock_Chalk", 26),
+                drop("Rock_Chalk_Cobble", 24),
+                drop("Rubble_Chalk", 22),
+                drop("Rock_Slate_Cobble", 10),
+                drop("Rubble_Slate", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 2)
+        ), List.of(
+                bundle(List.of(crystalReward("CalciteCavern", 1)), 1),
+                bundle(List.of(crystalReward("LimestoneCavern", 1)), 1)
+        ));
+
+        register(expeditions, "CalciteCavern", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Spider_Cave"), 1),
+                drop("Rock_Calcite", 24),
+                drop("Rock_Calcite_Cobble", 22),
+                drop("Rubble_Calcite", 20),
+                drop("Rock_Ledge_Cobble", 12),
+                drop("Rock_Shale_Cobble", 10),
+                drop("Rock_Salt", 6)
+        ), List.of(
+                reward("ExpeditionPoint", 3),
+                crystalReward("WhiteStoneCavern", 1)
+        ));
+
+        register(expeditions, "LimestoneCavern", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Bat"), 2),
+                drop(OneBlockDropId.entityDropId("Spider_Cave"), 1),
+                drop("Rock_Lime_Cobble", 24),
+                drop("Rubble_Lime", 22),
+                drop("Rock_Sandstone_Cobble", 18),
+                drop("Rock_Sandstone_Red_Cobble", 12),
+                drop("Rubble_Sandstone_Red", 10),
+                drop("Rock_Salt", 6)
+        ), List.of(
+                reward("ExpeditionPoint", 3)
+        ));
+
+        register(expeditions, "WhiteStoneCavern", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Spider_Cave"), 2),
+                drop(OneBlockDropId.entityDropId("Bat"), 1),
+                drop("Rock_Sandstone_White_Cobble", 22),
+                drop("Rubble_Sandstone_White", 20),
+                drop("Rock_Marble_Cobble", 18),
+                drop("Rubble_Marble", 16),
+                drop("Rock_Peach_Cobble", 12),
+                drop("Rock_Ledge_Cobble", 8)
+        ), List.of(
+                reward("ExpeditionPoint", 4),
+                crystalReward("QuartziteCavern", 1)
+        ));
+
+        register(expeditions, "QuartziteCavern", 30, List.of(
+                drop(OneBlockDropId.entityDropId("Goblin_Miner"), 2),
+                drop(OneBlockDropId.entityDropId("Spider_Cave"), 1),
+                drop("Rock_Quartzite_Cobble", 24),
+                drop("Rubble_Quartzite", 22),
+                drop("Rock_Basalt_Cobble", 14),
+                drop("Rock_Shale_Cobble", 14),
+                drop("Rock_Ledge_Cobble", 10)
+        ), List.of(
+                reward("ExpeditionPoint", 5)
+        ));
+
+        register(expeditions, "AquaGrotto", 28, List.of(
+                drop(OneBlockDropId.entityDropId("Crab"), 3),
+                drop(OneBlockDropId.entityDropId("Spider_Cave"), 2),
+                drop("Rock_Aqua_Cobble", 28),
+                drop("Rubble_Aqua", 24),
+                drop("Rock_Calcite_Cobble", 12),
+                drop("Rock_Gem_Sapphire", 3)
+        ), List.of(
+                reward("ExpeditionPoint", 4)
+        ));
+
+        register(expeditions, "PermafrostShelf", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Wolf_Black"), 2),
+                drop(OneBlockDropId.entityDropId("Zombie_Frost"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Frost_Scout"), 1),
+                drop("Rock_Ice_Permafrost", 22),
+                drop("Soil_Snow", 18),
+                drop("Rock_Ice", 18),
+                drop("Rubble_Ice", 16)
+        ), List.of(
+                reward("ExpeditionPoint", 8)
+        ));
+
+        register(expeditions, "VolcanicFault", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Zombie_Burnt"), 2),
+                drop(OneBlockDropId.entityDropId("Emberwulf"), 2),
+                drop(OneBlockDropId.entityDropId("Skeleton_Burnt_Soldier"), 1),
+                drop("Rock_Volcanic_Cobble", 20),
+                drop("Rock_Volcanic_Cracked_Lava", 18),
+                drop("Soil_Ash", 18),
+                drop("Rock_Magma_Cooled", 16),
+                drop("Rock_Magma_Cooled_Cobble", 14)
+        ), List.of(
+                reward("ExpeditionPoint", 8)
+        ));
+
+        register(expeditions, "TemperateGrove", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Rabbit"), 3),
+                drop(OneBlockDropId.entityDropId("Fox"), 1),
+                drop("Wood_Apple_Trunk", 18),
+                drop("Wood_Aspen_Trunk", 18),
+                drop("Wood_Camphor_Trunk", 16),
+                drop("Wood_Cedar_Trunk", 16),
+                drop("Wood_Fir_Trunk", 14)
+        ), List.of(
+                reward("ExpeditionPoint", 2)
+        ), List.of(
+                bundle(List.of(crystalReward("DryWoodland", 1)), 1),
+                bundle(List.of(crystalReward("AncientCanopy", 1)), 1)
+        ));
+
+        register(expeditions, "DryWoodland", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Cactee"), 1),
+                drop(OneBlockDropId.entityDropId("Fox"), 1),
+                drop("Wood_Dry_Trunk", 18),
+                drop("Wood_Gumboab_Trunk", 18),
+                drop("Wood_Palm_Trunk", 16),
+                drop("Wood_Palo_Trunk", 16),
+                drop("Wood_Fig_Blue_Trunk", 14)
+        ), List.of(
+                reward("ExpeditionPoint", 3)
+        ));
+
+        register(expeditions, "AncientCanopy", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Crawler"), 2),
+                drop(OneBlockDropId.entityDropId("Wolf_Black"), 1),
+                drop("Wood_Banyan_Trunk", 18),
+                drop("Wood_Redwood_Trunk", 18),
+                drop("Wood_Sallow_Trunk", 14),
+                drop("Wood_Windwillow_Trunk", 14),
+                drop("Wood_Wisteria_Wild_Trunk", 12),
+                drop("Wood_Spiral_Trunk", 10)
+        ), List.of(
+                reward("ExpeditionPoint", 5),
+                crystalReward("ElementalGrove", 1)
+        ));
+
+        register(expeditions, "ElementalGrove", 25, List.of(
+                drop(OneBlockDropId.entityDropId("Spirit_Root"), 1),
+                drop(OneBlockDropId.entityDropId("Spirit_Ember"), 1),
+                drop("Wood_Azure_Trunk", 14),
+                drop("Wood_Crystal_Trunk", 14),
+                drop("Wood_Fire_Trunk", 14),
+                drop("Wood_Poisoned_Trunk", 14),
+                drop("Wood_Petrified_Trunk", 12),
+                drop("Wood_Stormbark_Trunk", 12),
+                drop("Wood_Burnt_Trunk", 10)
+        ), List.of(
+                reward("ExpeditionPoint", 9)
         ));
 
         EXPEDITIONS = Collections.unmodifiableMap(expeditions);

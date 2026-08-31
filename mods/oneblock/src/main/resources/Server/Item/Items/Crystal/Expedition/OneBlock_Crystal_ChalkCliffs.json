@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_ChalkCliffs.name",
+    "Description": "server.items.OneBlock_Crystal_ChalkCliffs.description"
+  },
+  "Id": "OneBlock_Crystal_ChalkCliffs",
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_ChalkCliffs.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "ChalkCliffs"
+    ],
+    "OneBlockCrystalTicks": [
+      "25"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Uncommon",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 3
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Easy"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Model": "Blocks/CustomItems/OneBlock_CrystalItem.blockymodel",
+  "Texture": "Items/Crystals/OneBlock_Crystal_ChalkCliffs.png"
+}

@@ -260,6 +260,30 @@ public final class OneBlockSolidityDefaults
 
         register(definitions, "CrystalCavern", 4, RequiredTool.PICKAXE);
 
+        register(definitions, "ChalkCliffs", 3, RequiredTool.PICKAXE);
+
+        register(definitions, "CalciteCavern", 4, RequiredTool.PICKAXE);
+
+        register(definitions, "LimestoneCavern", 4, RequiredTool.PICKAXE);
+
+        register(definitions, "WhiteStoneCavern", 4, RequiredTool.PICKAXE);
+
+        register(definitions, "QuartziteCavern", 5, RequiredTool.PICKAXE);
+
+        register(definitions, "AquaGrotto", 4, RequiredTool.PICKAXE);
+
+        register(definitions, "PermafrostShelf", 6, RequiredTool.PICKAXE);
+
+        register(definitions, "VolcanicFault", 6, RequiredTool.PICKAXE);
+
+        register(definitions, "TemperateGrove", 3, RequiredTool.AXE);
+
+        register(definitions, "DryWoodland", 4, RequiredTool.AXE);
+
+        register(definitions, "AncientCanopy", 5, RequiredTool.AXE);
+
+        register(definitions, "ElementalGrove", 7, RequiredTool.AXE);
+
         BY_BLOCK_ID = Collections.unmodifiableMap(definitions);
     }
 

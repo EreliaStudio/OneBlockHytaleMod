@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_QuartziteCavern.name",
+    "Description": "server.items.OneBlock_Crystal_QuartziteCavern.description"
+  },
+  "Id": "OneBlock_Crystal_QuartziteCavern",
+  "ItemLevel": 3,
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_QuartziteCavern.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "QuartziteCavern"
+    ],
+    "OneBlockCrystalTicks": [
+      "30"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Uncommon",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 11
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Difficult"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Model": "Blocks/CustomItems/OneBlock_CrystalItem.blockymodel",
+  "Texture": "Items/Crystals/OneBlock_Crystal_QuartziteCavern.png"
+}

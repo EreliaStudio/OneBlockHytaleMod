@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_VolcanicFault.name",
+    "Description": "server.items.OneBlock_Crystal_VolcanicFault.description"
+  },
+  "Id": "OneBlock_Crystal_VolcanicFault",
+  "ItemLevel": 4,
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_VolcanicFault.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "VolcanicFault"
+    ],
+    "OneBlockCrystalTicks": [
+      "25"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Uncommon",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 18
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Hard"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Model": "Blocks/CustomItems/OneBlock_CrystalItem.blockymodel",
+  "Texture": "Items/Crystals/OneBlock_Crystal_VolcanicFault.png"
+}

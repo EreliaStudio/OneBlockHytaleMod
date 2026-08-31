@@ -1,0 +1,56 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Block_CalciteCavern.name"
+  },
+  "Id": "OneBlock_Block_CalciteCavern",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_CalciteCavern.png",
+  "Categories": [
+    "Blocks.OneBlock"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "OneBlock",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "OneBlock",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "BlockParticleSetId": "Stone",
+    "Textures": [
+      {
+        "Down": "BlockTextures/OneBlock_Block_CalciteCavern.png",
+        "Sides": "BlockTextures/OneBlock_Block_CalciteCavern.png",
+        "Up": "BlockTextures/OneBlock_Block_CalciteCavern.png",
+        "Weight": 1
+      }
+    ],
+    "TransitionToGroups": [],
+    "ParticleColor": "#ffffff",
+    "BlockSoundSetId": "Stone",
+    "PhysicalMaterialId": "Stone",
+    "BlockBreakingDecalId": "Breaking_Decals_Rock"
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Block"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

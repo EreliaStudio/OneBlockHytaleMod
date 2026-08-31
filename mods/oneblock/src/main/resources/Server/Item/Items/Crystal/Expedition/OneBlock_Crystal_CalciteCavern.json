@@ -1,0 +1,64 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Crystal_CalciteCavern.name",
+    "Description": "server.items.OneBlock_Crystal_CalciteCavern.description"
+  },
+  "Id": "OneBlock_Crystal_CalciteCavern",
+  "ItemLevel": 2,
+  "Icon": "Icons/ItemsGenerated/Crystals/OneBlock_Crystal_CalciteCavern.png",
+  "Categories": [
+    "Items.OneBlockExpeditionCrystal"
+  ],
+  "PlayerAnimationsId": "Item",
+  "Interactions": {
+    "Primary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    },
+    "Secondary": {
+      "Interactions": [
+        {
+          "Type": "oneblock_crystal_use"
+        }
+      ]
+    }
+  },
+  "Consumable": true,
+  "Tags": {
+    "Type": [
+      "OneBlock_ExpeditionCrystal"
+    ],
+    "OneBlockCrystalExpedition": [
+      "CalciteCavern"
+    ],
+    "OneBlockCrystalTicks": [
+      "28"
+    ]
+  },
+  "MaxStack": 4,
+  "Quality": "Uncommon",
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "ExpeditionPoint",
+        "Quantity": 6
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Enchanter_Advanced"
+        ],
+        "Id": "OneBlockEnchanter"
+      }
+    ],
+    "KnowledgeRequired": true
+  },
+  "Model": "Blocks/CustomItems/OneBlock_CrystalItem.blockymodel",
+  "Texture": "Items/Crystals/OneBlock_Crystal_CalciteCavern.png"
+}

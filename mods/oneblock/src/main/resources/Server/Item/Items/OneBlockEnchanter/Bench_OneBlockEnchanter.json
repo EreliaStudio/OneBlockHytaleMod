@@ -68,7 +68,9 @@
             "OneBlock_Crystal_Quarry",
             "OneBlock_Crystal_Hallow",
             "OneBlock_Crystal_CowHallow",
-            "OneBlock_Crystal_HorseHallow"
+            "OneBlock_Crystal_HorseHallow",
+            "OneBlock_Crystal_ChalkCliffs",
+            "OneBlock_Crystal_TemperateGrove"
           ]
         },
         {
@@ -99,7 +101,12 @@
             "OneBlock_Crystal_TrorkHuntingGround",
             "OneBlock_Crystal_JungleEdge",
             "OneBlock_Crystal_DryJunglePass",
-            "OneBlock_Crystal_CrystalCavern"
+            "OneBlock_Crystal_CrystalCavern",
+            "OneBlock_Crystal_CalciteCavern",
+            "OneBlock_Crystal_LimestoneCavern",
+            "OneBlock_Crystal_WhiteStoneCavern",
+            "OneBlock_Crystal_AquaGrotto",
+            "OneBlock_Crystal_DryWoodland"
           ]
         },
         {
@@ -125,7 +132,9 @@
             "OneBlock_Crystal_TrorkElderGrove",
             "OneBlock_Crystal_OvergrownRuins",
             "OneBlock_Crystal_SunkenJungleRuins",
-            "OneBlock_Crystal_LostNecropolis"
+            "OneBlock_Crystal_LostNecropolis",
+            "OneBlock_Crystal_QuartziteCavern",
+            "OneBlock_Crystal_AncientCanopy"
           ]
         },
         {
@@ -149,7 +158,9 @@
             "OneBlock_Crystal_BurntBattlefield",
             "OneBlock_Crystal_AshenCatacombs",
             "OneBlock_Crystal_ShadowedJungleRoad",
-            "OneBlock_Crystal_ArmoredDeadGrove"
+            "OneBlock_Crystal_ArmoredDeadGrove",
+            "OneBlock_Crystal_PermafrostShelf",
+            "OneBlock_Crystal_VolcanicFault"
           ]
         },
         {
@@ -165,7 +176,8 @@
             "OneBlock_Crystal_FrozenGraveyard",
             "OneBlock_Crystal_IcyNecropolis",
             "OneBlock_Crystal_SpiritThreshold",
-            "OneBlock_Crystal_ElementalConfluence"
+            "OneBlock_Crystal_ElementalConfluence",
+            "OneBlock_Crystal_ElementalGrove"
           ]
         }
       ],

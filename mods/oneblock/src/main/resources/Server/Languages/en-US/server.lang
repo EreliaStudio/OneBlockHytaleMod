@@ -340,7 +340,7 @@ progress.expedition.Coastline=Coastline: {0}/{1} ticks remaining
 # GENERATED ─── SeaCavern ──────────────────────────────────────────────
 items.OneBlock_Block_SeaCavern.name=OneBlock SeaCavern
 items.OneBlock_Crystal_SeaCavern.name=SeaCavern Crystal
-items.OneBlock_Crystal_SeaCavern.description=Consume to begin a SeaCavern expedition.\n28 ticks.\nPossible drops:\nItems:\n- Rock Aqua Brick\n- Sapphire Gem\n- Diamond Gem\nEntities:\n- Crab\n- Spider Cave\n- Scarak Louse\nCompletion rewards:\n- 4x ExpeditionPoint\nLeads to:\n- SeaInfestedNest
+items.OneBlock_Crystal_SeaCavern.description=Consume to begin a SeaCavern expedition.\n28 ticks.\nPossible drops:\nItems:\n- Rock Aqua Brick\n- Sapphire Gem\n- Diamond Gem\nEntities:\n- Crab\n- Spider Cave\n- Scarak Louse\nCompletion rewards:\n- 4x ExpeditionPoint\nLeads to:\n- SeaInfestedNest\n- AquaGrotto (possible)
 expeditions.SeaCavern.name=SeaCavern
 announcements.expedition_started.SeaCavern=SeaCavern expedition started.
 announcements.expedition_completed.SeaCavern=SeaCavern expedition complete. The OneBlock has returned to default.
@@ -388,7 +388,7 @@ progress.expedition.AridForest=AridForest: {0}/{1} ticks remaining
 # GENERATED ─── Swamp ──────────────────────────────────────────────────
 items.OneBlock_Block_Swamp.name=OneBlock Swamp
 items.OneBlock_Crystal_Swamp.name=Swamp Crystal
-items.OneBlock_Crystal_Swamp.description=Consume to begin a Swamp expedition.\n25 ticks.\nPossible drops:\nItems:\n- Soil Dirt\n- Soil Clay\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Yellow Mushroom Block\nEntities:\n- Frog Green\n- Crocodile\n- Fen Stalker\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- EnchantedForest
+items.OneBlock_Crystal_Swamp.description=Consume to begin a Swamp expedition.\n25 ticks.\nPossible drops:\nItems:\n- Soil Dirt\n- Soil Clay\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Yellow Mushroom Block\n- Rubble Stone Mossy\nEntities:\n- Frog Green\n- Crocodile\n- Fen Stalker\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- EnchantedForest
 expeditions.Swamp.name=Swamp
 announcements.expedition_started.Swamp=Swamp expedition started.
 announcements.expedition_completed.Swamp=Swamp expedition complete. The OneBlock has returned to default.
@@ -418,7 +418,7 @@ progress.expedition.FairyPond=FairyPond: {0}/{1} ticks remaining
 # GENERATED ─── DeepForest ─────────────────────────────────────────────
 items.OneBlock_Block_DeepForest.name=OneBlock DeepForest
 items.OneBlock_Crystal_DeepForest.name=DeepForest Crystal
-items.OneBlock_Crystal_DeepForest.description=Consume to begin a DeepForest expedition.\n25 ticks.\nPossible drops:\nItems:\n- Beech Trunk\n- Ash Trunk\n- Maple Trunk\n- Beech Sapling\n- Plant Sapling Ash\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Trunk\n- Emerald Gem\nEntities:\n- Boar\n- Fox\n- Wolf Black\n- Crawler\nCompletion rewards:\n- 3x ExpeditionPoint\nLeads to:\n- DarkForest (possible)\n- JungleEdge (possible)\n- TrorkHuntingGround (possible)
+items.OneBlock_Crystal_DeepForest.description=Consume to begin a DeepForest expedition.\n25 ticks.\nPossible drops:\nItems:\n- Beech Trunk\n- Ash Trunk\n- Maple Trunk\n- Beech Sapling\n- Plant Sapling Ash\n- Yellow Mushroom Block\n- Plant Crop Mushroom Block Yellow Trunk\n- Emerald Gem\nEntities:\n- Boar\n- Fox\n- Wolf Black\n- Crawler\nCompletion rewards:\n- 3x ExpeditionPoint\nLeads to:\n- DarkForest (possible)\n- JungleEdge (possible)\n- TrorkHuntingGround (possible)\n- TemperateGrove (possible)
 expeditions.DeepForest.name=DeepForest
 announcements.expedition_started.DeepForest=DeepForest expedition started.
 announcements.expedition_completed.DeepForest=DeepForest expedition complete. The OneBlock has returned to default.
@@ -530,7 +530,7 @@ announcements.dungeon_completed.OutlanderCity=OutlanderCity dungeon complete. Th
 # GENERATED ─── Tundra ─────────────────────────────────────────────────
 items.OneBlock_Block_Tundra.name=OneBlock Tundra
 items.OneBlock_Crystal_Tundra.name=Tundra Crystal
-items.OneBlock_Crystal_Tundra.description=Consume to begin a Tundra expedition.\n25 ticks.\nPossible drops:\nItems:\n- Ice\n- Rubble Ice\n- Ice Trunk\n- Plant Seeds Ice\n- Ice Essence\nEntities:\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Scout\nCompletion rewards:\n- 8x ExpeditionPoint\nLeads to:\n- FrozenForest (possible)\n- IceLand (possible)
+items.OneBlock_Crystal_Tundra.description=Consume to begin a Tundra expedition.\n25 ticks.\nPossible drops:\nItems:\n- Ice\n- Rubble Ice\n- Ice Trunk\n- Plant Seeds Ice\n- Ice Essence\nEntities:\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Scout\nCompletion rewards:\n- 8x ExpeditionPoint\nLeads to:\n- FrozenForest (possible)\n- IceLand (possible)\n- PermafrostShelf (possible)
 expeditions.Tundra.name=Tundra
 announcements.expedition_started.Tundra=Tundra expedition started.
 announcements.expedition_completed.Tundra=Tundra expedition complete. The OneBlock has returned to default.
@@ -598,7 +598,7 @@ progress.expedition.IcyForest=IcyForest: {0}/{1} ticks remaining
 # GENERATED ─── FireLand ───────────────────────────────────────────────
 items.OneBlock_Block_FireLand.name=OneBlock FireLand
 items.OneBlock_Crystal_FireLand.name=FireLand Crystal
-items.OneBlock_Crystal_FireLand.description=Consume to begin a FireLand expedition.\n25 ticks.\nPossible drops:\nItems:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\n- Lava Bucket\nEntities:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nCompletion rewards:\n- 7x ExpeditionPoint\nLeads to:\n- Volcano (possible)\n- FieryGraveyard (possible)
+items.OneBlock_Crystal_FireLand.description=Consume to begin a FireLand expedition.\n25 ticks.\nPossible drops:\nItems:\n- Volcanic\n- Rubble Volcanic\n- Fire Essence\n- Thorium Ore\n- Cobalt Ore\n- Lava Bucket\nEntities:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nCompletion rewards:\n- 7x ExpeditionPoint\nLeads to:\n- Volcano (possible)\n- FieryGraveyard (possible)\n- VolcanicFault (possible)
 expeditions.FireLand.name=FireLand
 announcements.expedition_started.FireLand=FireLand expedition started.
 announcements.expedition_completed.FireLand=FireLand expedition complete. The OneBlock has returned to default.
@@ -750,7 +750,7 @@ announcements.dungeon_completed.InsectNest=InsectNest dungeon complete. The OneB
 # GENERATED ─── InsideInsectNest ───────────────────────────────────────
 items.OneBlock_Block_InsideInsectNest.name=OneBlock InsideInsectNest
 items.OneBlock_Crystal_InsideInsectNest.name=InsideInsectNest Crystal
-items.OneBlock_Crystal_InsideInsectNest.description=Consume to begin a InsideInsectNest expedition.\n25 ticks.\nPossible drops:\nItems:\n- Soil Hive\n- Soil Hive Brick\n- Ruby Gem\nEntities:\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\nCompletion rewards:\n- 6x ExpeditionPoint\nLeads to:\n- InsectCore
+items.OneBlock_Crystal_InsideInsectNest.description=Consume to begin a InsideInsectNest expedition.\n25 ticks.\nPossible drops:\nItems:\n- Soil Hive\n- Soil Hive Brick\n- Ruby Gem\n- Soil Hive Corrupted Brick\nEntities:\n- Scarak Louse\n- Scarak Fighter\n- Scarak Defender\n- Scarak Seeker\nCompletion rewards:\n- 6x ExpeditionPoint\nLeads to:\n- InsectCore
 expeditions.InsideInsectNest.name=InsideInsectNest
 announcements.expedition_started.InsideInsectNest=InsideInsectNest expedition started.
 announcements.expedition_completed.InsideInsectNest=InsideInsectNest expedition complete. The OneBlock has returned to default.
@@ -768,7 +768,7 @@ announcements.dungeon_completed.InsectCore=InsectCore dungeon complete. The OneB
 # GENERATED ─── Quarry ─────────────────────────────────────────────────
 items.OneBlock_Block_Quarry.name=OneBlock Quarry
 items.OneBlock_Crystal_Quarry.name=Quarry Crystal
-items.OneBlock_Crystal_Quarry.description=Consume to begin a Quarry expedition.\n50 ticks.\nPossible drops:\nItems:\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Basalt\n- Copper Ore\n- Iron Ore\nEntities:\n- Bat\n- Goblin Miner\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- MysteriousCavern
+items.OneBlock_Crystal_Quarry.description=Consume to begin a Quarry expedition.\n50 ticks.\nPossible drops:\nItems:\n- Rubble Stone\n- Stone\n- Slate\n- Shale\n- Basalt\n- Copper Ore\n- Iron Ore\nEntities:\n- Bat\n- Goblin Miner\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- MysteriousCavern\n- ChalkCliffs (possible)
 expeditions.Quarry.name=Quarry
 announcements.expedition_started.Quarry=Quarry expedition started.
 announcements.expedition_completed.Quarry=Quarry expedition complete. The OneBlock has returned to default.
@@ -1096,3 +1096,123 @@ announcements.expedition_started.CrystalCavern=CrystalCavern expedition started.
 announcements.expedition_completed.CrystalCavern=CrystalCavern expedition complete. The OneBlock has returned to default.
 announcements.expedition_unlocked.CrystalCavern=New expedition unlocked: CrystalCavern
 progress.expedition.CrystalCavern=CrystalCavern: {0}/{1} ticks remaining
+
+# GENERATED ─── ChalkCliffs ────────────────────────────────────────────
+items.OneBlock_Block_ChalkCliffs.name=OneBlock ChalkCliffs
+items.OneBlock_Crystal_ChalkCliffs.name=ChalkCliffs Crystal
+items.OneBlock_Crystal_ChalkCliffs.description=Consume to begin a ChalkCliffs expedition.\n25 ticks.\nPossible drops:\nItems:\n- Rock Chalk\n- Rock Chalk Cobble\n- Rubble Chalk\n- Rock Slate Cobble\n- Rubble Slate\nEntities:\n- Bat\n- Rat\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- CalciteCavern (possible)\n- LimestoneCavern (possible)
+expeditions.ChalkCliffs.name=ChalkCliffs
+announcements.expedition_started.ChalkCliffs=ChalkCliffs expedition started.
+announcements.expedition_completed.ChalkCliffs=ChalkCliffs expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.ChalkCliffs=New expedition unlocked: ChalkCliffs
+progress.expedition.ChalkCliffs=ChalkCliffs: {0}/{1} ticks remaining
+
+# GENERATED ─── CalciteCavern ──────────────────────────────────────────
+items.OneBlock_Block_CalciteCavern.name=OneBlock CalciteCavern
+items.OneBlock_Crystal_CalciteCavern.name=CalciteCavern Crystal
+items.OneBlock_Crystal_CalciteCavern.description=Consume to begin a CalciteCavern expedition.\n28 ticks.\nPossible drops:\nItems:\n- Rock Calcite\n- Rock Calcite Cobble\n- Rubble Calcite\n- Rock Ledge Cobble\n- Rock Shale Cobble\n- Rock Salt\nEntities:\n- Bat\n- Spider Cave\nCompletion rewards:\n- 3x ExpeditionPoint\nLeads to:\n- WhiteStoneCavern
+expeditions.CalciteCavern.name=CalciteCavern
+announcements.expedition_started.CalciteCavern=CalciteCavern expedition started.
+announcements.expedition_completed.CalciteCavern=CalciteCavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.CalciteCavern=New expedition unlocked: CalciteCavern
+progress.expedition.CalciteCavern=CalciteCavern: {0}/{1} ticks remaining
+
+# GENERATED ─── LimestoneCavern ────────────────────────────────────────
+items.OneBlock_Block_LimestoneCavern.name=OneBlock LimestoneCavern
+items.OneBlock_Crystal_LimestoneCavern.name=LimestoneCavern Crystal
+items.OneBlock_Crystal_LimestoneCavern.description=Consume to begin a LimestoneCavern expedition.\n28 ticks.\nPossible drops:\nItems:\n- Rock Lime Cobble\n- Rubble Lime\n- Rock Sandstone Cobble\n- Rock Sandstone Red Cobble\n- Rubble Sandstone Red\n- Rock Salt\nEntities:\n- Bat\n- Spider Cave\nCompletion rewards:\n- 3x ExpeditionPoint
+expeditions.LimestoneCavern.name=LimestoneCavern
+announcements.expedition_started.LimestoneCavern=LimestoneCavern expedition started.
+announcements.expedition_completed.LimestoneCavern=LimestoneCavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.LimestoneCavern=New expedition unlocked: LimestoneCavern
+progress.expedition.LimestoneCavern=LimestoneCavern: {0}/{1} ticks remaining
+
+# GENERATED ─── WhiteStoneCavern ───────────────────────────────────────
+items.OneBlock_Block_WhiteStoneCavern.name=OneBlock WhiteStoneCavern
+items.OneBlock_Crystal_WhiteStoneCavern.name=WhiteStoneCavern Crystal
+items.OneBlock_Crystal_WhiteStoneCavern.description=Consume to begin a WhiteStoneCavern expedition.\n28 ticks.\nPossible drops:\nItems:\n- Rock Sandstone White Cobble\n- Rubble Sandstone White\n- Rock Marble Cobble\n- Rubble Marble\n- Rock Peach Cobble\n- Rock Ledge Cobble\nEntities:\n- Spider Cave\n- Bat\nCompletion rewards:\n- 4x ExpeditionPoint\nLeads to:\n- QuartziteCavern
+expeditions.WhiteStoneCavern.name=WhiteStoneCavern
+announcements.expedition_started.WhiteStoneCavern=WhiteStoneCavern expedition started.
+announcements.expedition_completed.WhiteStoneCavern=WhiteStoneCavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.WhiteStoneCavern=New expedition unlocked: WhiteStoneCavern
+progress.expedition.WhiteStoneCavern=WhiteStoneCavern: {0}/{1} ticks remaining
+
+# GENERATED ─── QuartziteCavern ────────────────────────────────────────
+items.OneBlock_Block_QuartziteCavern.name=OneBlock QuartziteCavern
+items.OneBlock_Crystal_QuartziteCavern.name=QuartziteCavern Crystal
+items.OneBlock_Crystal_QuartziteCavern.description=Consume to begin a QuartziteCavern expedition.\n30 ticks.\nPossible drops:\nItems:\n- Rock Quartzite Cobble\n- Rubble Quartzite\n- Rock Basalt Cobble\n- Rock Shale Cobble\n- Rock Ledge Cobble\nEntities:\n- Goblin Miner\n- Spider Cave\nCompletion rewards:\n- 5x ExpeditionPoint
+expeditions.QuartziteCavern.name=QuartziteCavern
+announcements.expedition_started.QuartziteCavern=QuartziteCavern expedition started.
+announcements.expedition_completed.QuartziteCavern=QuartziteCavern expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.QuartziteCavern=New expedition unlocked: QuartziteCavern
+progress.expedition.QuartziteCavern=QuartziteCavern: {0}/{1} ticks remaining
+
+# GENERATED ─── AquaGrotto ─────────────────────────────────────────────
+items.OneBlock_Block_AquaGrotto.name=OneBlock AquaGrotto
+items.OneBlock_Crystal_AquaGrotto.name=AquaGrotto Crystal
+items.OneBlock_Crystal_AquaGrotto.description=Consume to begin a AquaGrotto expedition.\n28 ticks.\nPossible drops:\nItems:\n- Rock Aqua Cobble\n- Rubble Aqua\n- Rock Calcite Cobble\n- Sapphire Gem\nEntities:\n- Crab\n- Spider Cave\nCompletion rewards:\n- 4x ExpeditionPoint
+expeditions.AquaGrotto.name=AquaGrotto
+announcements.expedition_started.AquaGrotto=AquaGrotto expedition started.
+announcements.expedition_completed.AquaGrotto=AquaGrotto expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.AquaGrotto=New expedition unlocked: AquaGrotto
+progress.expedition.AquaGrotto=AquaGrotto: {0}/{1} ticks remaining
+
+# GENERATED ─── PermafrostShelf ────────────────────────────────────────
+items.OneBlock_Block_PermafrostShelf.name=OneBlock PermafrostShelf
+items.OneBlock_Crystal_PermafrostShelf.name=PermafrostShelf Crystal
+items.OneBlock_Crystal_PermafrostShelf.description=Consume to begin a PermafrostShelf expedition.\n25 ticks.\nPossible drops:\nItems:\n- Permafrost Ice\n- Soil Snow\n- Ice\n- Rubble Ice\nEntities:\n- Wolf Black\n- Zombie Frost\n- Skeleton Frost Scout\nCompletion rewards:\n- 8x ExpeditionPoint
+expeditions.PermafrostShelf.name=PermafrostShelf
+announcements.expedition_started.PermafrostShelf=PermafrostShelf expedition started.
+announcements.expedition_completed.PermafrostShelf=PermafrostShelf expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.PermafrostShelf=New expedition unlocked: PermafrostShelf
+progress.expedition.PermafrostShelf=PermafrostShelf: {0}/{1} ticks remaining
+
+# GENERATED ─── VolcanicFault ──────────────────────────────────────────
+items.OneBlock_Block_VolcanicFault.name=OneBlock VolcanicFault
+items.OneBlock_Crystal_VolcanicFault.name=VolcanicFault Crystal
+items.OneBlock_Crystal_VolcanicFault.description=Consume to begin a VolcanicFault expedition.\n25 ticks.\nPossible drops:\nItems:\n- Rock Volcanic Cobble\n- Rock Volcanic Cracked Lava\n- Soil Ash\n- Rock Magma Cooled\n- Rock Magma Cooled Cobble\nEntities:\n- Zombie Burnt\n- Emberwulf\n- Skeleton Burnt Soldier\nCompletion rewards:\n- 8x ExpeditionPoint
+expeditions.VolcanicFault.name=VolcanicFault
+announcements.expedition_started.VolcanicFault=VolcanicFault expedition started.
+announcements.expedition_completed.VolcanicFault=VolcanicFault expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.VolcanicFault=New expedition unlocked: VolcanicFault
+progress.expedition.VolcanicFault=VolcanicFault: {0}/{1} ticks remaining
+
+# GENERATED ─── TemperateGrove ─────────────────────────────────────────
+items.OneBlock_Block_TemperateGrove.name=OneBlock TemperateGrove
+items.OneBlock_Crystal_TemperateGrove.name=TemperateGrove Crystal
+items.OneBlock_Crystal_TemperateGrove.description=Consume to begin a TemperateGrove expedition.\n25 ticks.\nPossible drops:\nItems:\n- Wood Apple Trunk\n- Aspen Trunk\n- Camphor Trunk\n- Cedar Trunk\n- Fir Trunk\nEntities:\n- Rabbit\n- Fox\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- DryWoodland (possible)\n- AncientCanopy (possible)
+expeditions.TemperateGrove.name=TemperateGrove
+announcements.expedition_started.TemperateGrove=TemperateGrove expedition started.
+announcements.expedition_completed.TemperateGrove=TemperateGrove expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.TemperateGrove=New expedition unlocked: TemperateGrove
+progress.expedition.TemperateGrove=TemperateGrove: {0}/{1} ticks remaining
+
+# GENERATED ─── DryWoodland ────────────────────────────────────────────
+items.OneBlock_Block_DryWoodland.name=OneBlock DryWoodland
+items.OneBlock_Crystal_DryWoodland.name=DryWoodland Crystal
+items.OneBlock_Crystal_DryWoodland.description=Consume to begin a DryWoodland expedition.\n25 ticks.\nPossible drops:\nItems:\n- Dry Trunk\n- Gumboab Trunk\n- Palm Trunk\n- Palo Trunk\n- Blue Fig Trunk\nEntities:\n- Cactee\n- Fox\nCompletion rewards:\n- 3x ExpeditionPoint
+expeditions.DryWoodland.name=DryWoodland
+announcements.expedition_started.DryWoodland=DryWoodland expedition started.
+announcements.expedition_completed.DryWoodland=DryWoodland expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.DryWoodland=New expedition unlocked: DryWoodland
+progress.expedition.DryWoodland=DryWoodland: {0}/{1} ticks remaining
+
+# GENERATED ─── AncientCanopy ──────────────────────────────────────────
+items.OneBlock_Block_AncientCanopy.name=OneBlock AncientCanopy
+items.OneBlock_Crystal_AncientCanopy.name=AncientCanopy Crystal
+items.OneBlock_Crystal_AncientCanopy.description=Consume to begin a AncientCanopy expedition.\n25 ticks.\nPossible drops:\nItems:\n- Banyan Trunk\n- Redwood Trunk\n- Sallow Trunk\n- Windwillow Trunk\n- Wisteria Wild Trunk\n- Spiral Trunk\nEntities:\n- Crawler\n- Wolf Black\nCompletion rewards:\n- 5x ExpeditionPoint\nLeads to:\n- ElementalGrove
+expeditions.AncientCanopy.name=AncientCanopy
+announcements.expedition_started.AncientCanopy=AncientCanopy expedition started.
+announcements.expedition_completed.AncientCanopy=AncientCanopy expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.AncientCanopy=New expedition unlocked: AncientCanopy
+progress.expedition.AncientCanopy=AncientCanopy: {0}/{1} ticks remaining
+
+# GENERATED ─── ElementalGrove ─────────────────────────────────────────
+items.OneBlock_Block_ElementalGrove.name=OneBlock ElementalGrove
+items.OneBlock_Crystal_ElementalGrove.name=ElementalGrove Crystal
+items.OneBlock_Crystal_ElementalGrove.description=Consume to begin a ElementalGrove expedition.\n25 ticks.\nPossible drops:\nItems:\n- Azure Trunk\n- Crystal Trunk\n- Fire Trunk\n- Poisoned Trunk\n- Petrified Trunk\n- Stormbark Trunk\n- Burnt Trunk\nEntities:\n- Spirit Root\n- Spirit Ember\nCompletion rewards:\n- 9x ExpeditionPoint
+expeditions.ElementalGrove.name=ElementalGrove
+announcements.expedition_started.ElementalGrove=ElementalGrove expedition started.
+announcements.expedition_completed.ElementalGrove=ElementalGrove expedition complete. The OneBlock has returned to default.
+announcements.expedition_unlocked.ElementalGrove=New expedition unlocked: ElementalGrove
+progress.expedition.ElementalGrove=ElementalGrove: {0}/{1} ticks remaining
