@@ -1,0 +1,44 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Root_Remover.name",
+    "Description": "server.items.OneBlock_Root_Remover.description"
+  },
+  "Parent": "Tool_Pickaxe_Crude",
+  "Icon": "Icons/Items/Root_Pickaxe_Tool.png",
+  "Quality": "Uncommon",
+  "ItemLevel": 1,
+  "Model": "Items/Tools/Pickaxe/Crude.blockymodel",
+  "Texture": "Items/Tools/Root_Pickaxe_Texture.png",
+  "Recipe": {
+    "TimeSeconds": 2,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 2
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 2
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Roots"
+        ],
+        "Id": "OneBlockRootWorkbench"
+      }
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Tool",
+      "OneBlock_Root_Remover"
+    ]
+  },
+  "MaxStack": 1,
+  "MaxDurability": 500
+}

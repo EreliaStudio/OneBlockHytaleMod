@@ -30,13 +30,16 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
     private final OneBlockDropRegistry dropRegistry;
     private final OneBlockWorldStateRegistry stateRegistry;
+    private final OneBlockRootRegistry rootRegistry;
 
     public OneBlockBreakSystem(OneBlockDropRegistry dropRegistry,
-                               OneBlockWorldStateRegistry stateRegistry)
+                               OneBlockWorldStateRegistry stateRegistry,
+                               OneBlockRootRegistry rootRegistry)
     {
         super(BreakBlockEvent.class);
         this.dropRegistry = dropRegistry;
         this.stateRegistry = stateRegistry;
+        this.rootRegistry = rootRegistry;
     }
 
     @Override
@@ -54,20 +57,40 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     {
         Ref<EntityStore> ref = chunk.getReferenceTo(entityIndex);
         Player player = store.getComponent(ref, Player.getComponentType());
-
-        if (!isValidOneBlockBreak(player, event)) return;
+        if (player == null || event == null) return;
 
         EntityStore entityStore = store.getExternalData();
         if (entityStore == null) return;
 
         World world = entityStore.getWorld();
-        if (world == null || !stateRegistry.isManaged(world)) return;
+        if (world == null) return;
 
         Vector3i pos = event.getTargetBlock();
-        if (!OneBlockBlockIds.ONEBLOCK_POSITION.equals(pos)) return;
+        OneBlockRootRegistry.RootEntry root = rootRegistry.find(world, pos);
+        boolean generatedWorldBlock = stateRegistry.isManaged(world)
+                && OneBlockBlockIds.ONEBLOCK_POSITION.equals(pos);
+        if (root == null && !generatedWorldBlock) return;
 
-        OneBlockExpeditionStateProvider expeditionState = stateRegistry.expeditionState(world);
-        OneBlockDungeonStateProvider dungeonState = stateRegistry.dungeonState(world);
+        if (root != null && OneBlockDamageSystem.isRemovalTool(event.getItemInHand()))
+        {
+            removeRoot(world, pos, event, root, player);
+            return;
+        }
+
+        if (!isValidOneBlockBreak(player, event))
+        {
+            // Creative removal does not run OneBlock progression, but it must
+            // not leave a stale ownership record behind.
+            if (root != null && isCreative(player)) rootRegistry.remove(world, pos);
+            return;
+        }
+
+        OneBlockExpeditionStateProvider expeditionState = root == null
+                ? stateRegistry.expeditionState(world)
+                : rootRegistry.expeditionState(world, root.ownerId());
+        OneBlockDungeonStateProvider dungeonState = root == null
+                ? stateRegistry.dungeonState(world)
+                : rootRegistry.dungeonState(world, root.ownerId());
 
         // Cancel native removal before replacing the OneBlock synchronously.
         // This keeps the coordinate occupied throughout the final damage tick.
@@ -90,11 +113,30 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (dungeonState.isDungeonActive())
         {
-            handleDungeonBreak(world, pos, player, context, dungeonState);
+            handleDungeonBreak(world, pos, player, context, dungeonState, root);
         }
         else
         {
-            handleExpeditionBreak(world, pos, player, event, context, expeditionState);
+            handleExpeditionBreak(world, pos, player, event, context, expeditionState, root);
+        }
+    }
+
+    private void removeRoot(World world,
+                            Vector3i pos,
+                            BreakBlockEvent event,
+                            OneBlockRootRegistry.RootEntry root,
+                            Player player)
+    {
+        event.setCancelled(true);
+        resetBlockHealth(world, pos);
+        rootRegistry.remove(world, pos);
+        world.setBlock(pos.x(), pos.y(), pos.z(), BlockType.EMPTY_KEY);
+
+        if (player != null && player.getPlayerRef() != null)
+        {
+            player.getPlayerRef().sendMessage(com.hypixel.hytale.server.core.Message.raw(
+                    "Removed " + displayOwner(root) + "'s OneBlock Root. Its expedition progress was kept."
+            ));
         }
     }
 
@@ -102,7 +144,8 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                                     Vector3i pos,
                                     Player player,
                                     DropableContext context,
-                                    OneBlockDungeonStateProvider dungeonState)
+                                    OneBlockDungeonStateProvider dungeonState,
+                                    OneBlockRootRegistry.RootEntry root)
     {
         String dungeonId = dungeonState.getActiveDungeonId();
         int waveIndex = dungeonState.getCurrentWaveIndex();
@@ -129,13 +172,15 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         if (completedDungeon != null)
         {
-            world.setBlock(pos.x(), pos.y(), pos.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID);
+            setTargetBlocks(world, pos, root, OneBlockBlockIds.DEFAULT_BLOCK_ID);
             executeDungeonCompletionRewards(completedDungeon, context);
 
             if (plugin != null)
             {
-                OneBlockWorldPlayers.forEach(
+                OneBlockAudience.forTarget(
                         world,
+                        player,
+                        root,
                         worldPlayer -> plugin.getHudService().showDungeonCompleted(worldPlayer, completedDungeon)
                 );
             }
@@ -145,15 +190,17 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
             String dungeonBlockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
             if (dungeonBlockId == null) dungeonBlockId = OneBlockBlockIds.DEFAULT_BLOCK_ID;
 
-            world.setBlock(pos.x(), pos.y(), pos.z(), dungeonBlockId);
+            setTargetBlocks(world, pos, root, dungeonBlockId);
 
             int completedWaves = dungeonState.getCurrentWaveIndex();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
 
             if (plugin != null)
             {
-                OneBlockWorldPlayers.forEach(
+                OneBlockAudience.forTarget(
                         world,
+                        player,
+                        root,
                         worldPlayer -> plugin.getHudService().updateDungeonWave(
                             worldPlayer,
                             dungeonId,
@@ -229,17 +276,18 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                                        Player player,
                                        BreakBlockEvent event,
                                        DropableContext context,
-                                       OneBlockExpeditionStateProvider expeditionState)
+                                       OneBlockExpeditionStateProvider expeditionState,
+                                       OneBlockRootRegistry.RootEntry root)
     {
         String poolId = OneBlockPools.resolvePoolId(event.getBlockType());
-        ensureExpeditionActiveForBreak(world, poolId, expeditionState);
+        ensureExpeditionActiveForBreak(world, player, poolId, expeditionState, root);
 
         List<String> drops = dropRegistry.getKnownDrops(poolId);
         String rewardId = dropRegistry.pickReward(poolId, drops);
         if (rewardId == null || rewardId.isEmpty())
         {
             String currentBlockId = event.getBlockType().getId();
-            world.setBlock(pos.x(), pos.y(), pos.z(), currentBlockId);
+            setTargetBlocks(world, pos, root, currentBlockId);
             return;
         }
 
@@ -256,7 +304,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                 ? OneBlockBlockIds.DEFAULT_BLOCK_ID
                 : event.getBlockType().getId();
 
-        world.setBlock(pos.x(), pos.y(), pos.z(), nextBlockId);
+        setTargetBlocks(world, pos, root, nextBlockId);
 
         dropRegistry.executeDropable(rewardId, context);
 
@@ -271,8 +319,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
             if (plugin != null)
             {
-                OneBlockWorldPlayers.forEach(
+                OneBlockAudience.forTarget(
                         world,
+                        player,
+                        root,
                         worldPlayer -> plugin.getHudService().showExpeditionCompleted(worldPlayer, completedExpedition)
                 );
             }
@@ -280,8 +330,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         else if (plugin != null && activeExpeditionBeforeBreak != null && !activeExpeditionBeforeBreak.isBlank())
         {
             int finalTotalTicks = totalTicks;
-            OneBlockWorldPlayers.forEach(
+            OneBlockAudience.forTarget(
                     world,
+                    player,
+                    root,
                     worldPlayer -> plugin.getHudService().updateExpeditionTicks(
                         worldPlayer,
                         activeExpeditionBeforeBreak,
@@ -293,8 +345,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     }
 
     private void ensureExpeditionActiveForBreak(World world,
+                                                Player player,
                                                 String expeditionId,
-                                                OneBlockExpeditionStateProvider expeditionState)
+                                                OneBlockExpeditionStateProvider expeditionState,
+                                                OneBlockRootRegistry.RootEntry root)
     {
         if (expeditionState.hasActiveExpedition()) return;
         if (expeditionId == null || expeditionId.isBlank()) return;
@@ -306,11 +360,37 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
         if (plugin != null)
         {
-            OneBlockWorldPlayers.forEach(
+            OneBlockAudience.forTarget(
                     world,
+                    player,
+                    root,
                     worldPlayer -> plugin.getHudService().showExpeditionStarted(worldPlayer, expeditionId, ticks)
             );
         }
+    }
+
+    private void setTargetBlocks(World world,
+                                 Vector3i source,
+                                 OneBlockRootRegistry.RootEntry root,
+                                 String blockId)
+    {
+        if (root == null)
+        {
+            world.setBlock(source.x(), source.y(), source.z(), blockId);
+            return;
+        }
+
+        for (Vector3i rootPosition : rootRegistry.positions(world, root.ownerId()))
+        {
+            world.setBlock(rootPosition.x(), rootPosition.y(), rootPosition.z(), blockId);
+        }
+    }
+
+    private static String displayOwner(OneBlockRootRegistry.RootEntry root)
+    {
+        return root.ownerName() == null || root.ownerName().isBlank()
+                ? root.ownerId().toString()
+                : root.ownerName();
     }
 
     private void executeDungeonCompletionRewards(String dungeonId, DropableContext context)
@@ -419,5 +499,11 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         if (gameMode != null && "Creative".equalsIgnoreCase(gameMode.toString())) return false;
 
         return OneBlockBlockUtil.isOneBlock(event.getBlockType());
+    }
+
+    private static boolean isCreative(Player player)
+    {
+        Object gameMode = player == null ? null : player.getGameMode();
+        return gameMode != null && "Creative".equalsIgnoreCase(gameMode.toString());
     }
 }

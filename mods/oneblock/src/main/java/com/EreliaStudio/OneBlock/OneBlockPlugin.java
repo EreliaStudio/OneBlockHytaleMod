@@ -8,6 +8,7 @@ import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.WorldConfig;
 import com.hypixel.hytale.server.core.universe.world.WorldConfigProvider;
@@ -28,6 +29,7 @@ public final class OneBlockPlugin extends JavaPlugin
 
     private OneBlockDropRegistry dropRegistry;
     private OneBlockWorldStateRegistry worldStateRegistry;
+    private OneBlockRootRegistry rootRegistry;
     private OneBlockWorldService worldService;
     private OneBlockHudService hudService;
     private OneBlockSettingsProvider settingsProvider;
@@ -58,22 +60,24 @@ public final class OneBlockPlugin extends JavaPlugin
         dropRegistry = new OneBlockDropRegistry();
 
         worldStateRegistry = new OneBlockWorldStateRegistry(getDataDirectory());
+        rootRegistry = new OneBlockRootRegistry(getDataDirectory());
         worldService = new OneBlockWorldService(worldStateRegistry, hudService);
 
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
 
         getEntityStoreRegistry().registerSystem(
-                new OneBlockDamageSystem(worldStateRegistry)
+                new OneBlockDamageSystem(worldStateRegistry, rootRegistry)
         );
 
         getEntityStoreRegistry().registerSystem(
                 new OneBlockBreakSystem(
                         dropRegistry,
-                        worldStateRegistry
+                        worldStateRegistry,
+                        rootRegistry
                 )
         );
 
-        getEntityStoreRegistry().registerSystem(new OneBlockPlacementSystem());
+        getEntityStoreRegistry().registerSystem(new OneBlockPlacementSystem(rootRegistry));
 
         getCommandRegistry().registerCommand(new OneBlockCommand());
 
@@ -160,12 +164,17 @@ public final class OneBlockPlugin extends JavaPlugin
                     ? null
                     : playerEntityRef.getStore().getExternalData();
             World world = entityStore == null ? null : entityStore.getWorld();
+            Player player = event.getPlayer();
             if (!worldStateRegistry.isManaged(world))
             {
+                PlayerRef playerRef = player == null ? null : player.getPlayerRef();
+                if (playerRef != null && rootRegistry.hasRoots(world, playerRef.getUuid()))
+                {
+                    restoreRootHud(player, world, playerRef.getUuid());
+                }
                 return;
             }
 
-            Player player = event.getPlayer();
             OneBlockDungeonStateProvider dungeonState = worldStateRegistry.dungeonState(world);
             if (dungeonState.isDungeonActive())
             {
@@ -211,6 +220,7 @@ public final class OneBlockPlugin extends JavaPlugin
         dropRegistry = null;
         worldService = null;
         worldStateRegistry = null;
+        rootRegistry = null;
     }
 
     public OneBlockExpeditionStateProvider getExpeditionStateProvider()
@@ -235,6 +245,11 @@ public final class OneBlockPlugin extends JavaPlugin
     public OneBlockWorldService getWorldService()
     {
         return worldService;
+    }
+
+    public OneBlockRootRegistry getRootRegistry()
+    {
+        return rootRegistry;
     }
 
     public OneBlockExpeditionStateProvider getExpeditionStateProvider(World world)
@@ -280,6 +295,38 @@ public final class OneBlockPlugin extends JavaPlugin
         }
 
         return OneBlockBlockIds.DEFAULT_BLOCK_ID;
+    }
+
+    private void restoreRootHud(Player player, World world, java.util.UUID ownerId)
+    {
+        OneBlockDungeonStateProvider dungeonState = rootRegistry.dungeonState(world, ownerId);
+        if (dungeonState.isDungeonActive())
+        {
+            String dungeonId = dungeonState.getActiveDungeonId();
+            int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
+            hudService.showDungeonStarted(player, dungeonId, totalWaves);
+            hudService.updateDungeonWave(
+                    player,
+                    dungeonId,
+                    dungeonState.getCurrentWaveIndex(),
+                    totalWaves
+            );
+            return;
+        }
+
+        OneBlockExpeditionStateProvider expeditionState = rootRegistry.expeditionState(world, ownerId);
+        if (!expeditionState.hasActiveExpedition())
+        {
+            hudService.clear(player);
+            return;
+        }
+
+        hudService.restoreExpeditionHud(
+                player,
+                expeditionState.getActiveExpeditionId(),
+                expeditionState.getTicksRemaining(),
+                expeditionState.getTotalTicks()
+        );
     }
 
     private static void registerDropables(OneBlockDropRegistry registry, Iterable<String> dropableIds)

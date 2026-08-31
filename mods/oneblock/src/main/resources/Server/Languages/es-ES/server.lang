@@ -2,6 +2,13 @@ items.Bench_OneBlockEnchanter.name=Encantador de Cristales
 items.Bench_OneBlockEnchanter.description=Fusiona recursos recuperados en cristales de expedición.
 items.Bench_OneBlockDungeonEnchanter.name=Encantador de Cristales de Mazmorra
 items.Bench_OneBlockDungeonEnchanter.description=Fusiona recursos recuperados en cristales de expedición para mazmorras.
+items.Bench_OneBlockRootWorkbench.name=Banco de raíces OneBlock
+items.Bench_OneBlockRootWorkbench.description=Fabrica raíces OneBlock y la herramienta para retirarlas con seguridad.
+items.OneBlock_Root.name=Raíz OneBlock
+items.OneBlock_Root.description=Coloca esta raíz para crear tu partida OneBlock. Todas tus raíces de este mundo comparten el mismo progreso, incluso cuando las mina un amigo.
+items.OneBlock_Root_Remover.name=Extractor de raíces
+items.OneBlock_Root_Remover.description=Retira una raíz OneBlock sin avanzar su expedición. El progreso se conserva.
+benchCategories.OneBlockRootWorkbench_Roots=Raíces y herramientas
 
 items.Locket_GobelinDungeon.name=Medallón GobelinDungeon
 items.ExpeditionPoint.name=PuntoDeExpedición

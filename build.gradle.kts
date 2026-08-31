@@ -66,16 +66,19 @@ subprojects {
         val jarFile = tasks.named<ShadowJar>("shadowJar").flatMap { it.archiveFile }
         val modsDir = rootProject.file("hytale-server/mods")
         val packId = "${rootProject.group}_${project.name}"
+        val legacyAssetPackDir = rootProject.file("hytale-server/mods/$packId")
 
         doFirst {
             println("Deploying JAR: ${jarFile.get().asFile} -> $modsDir")
-            println("Removing legacy standalone asset pack: ${modsDir}/$packId")
+            println("Removing legacy standalone asset pack when a manifest is present: $legacyAssetPackDir")
             println("Removing older plugin JARs: ${modsDir}/OneBlock-*.jar")
         }
 
         doLast {
             // Resources are embedded in the JAR because manifest.json has IncludesAssetPack=true.
-            delete(file("$modsDir/$packId"))
+            if (legacyAssetPackDir.resolve("manifest.json").isFile) {
+                delete(legacyAssetPackDir)
+            }
             delete(fileTree(modsDir) {
                 include("OneBlock-*.jar")
             })

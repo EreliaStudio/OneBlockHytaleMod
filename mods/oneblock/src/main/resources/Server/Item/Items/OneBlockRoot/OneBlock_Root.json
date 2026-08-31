@@ -1,0 +1,85 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.OneBlock_Root.name",
+    "Description": "server.items.OneBlock_Root.description"
+  },
+  "ItemLevel": 1,
+  "Icon": "Icons/ItemsGenerated/OneBlock/OneBlock_Default.png",
+  "Categories": [
+    "Blocks.OneBlock"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "OneBlock",
+  "Recipe": {
+    "TimeSeconds": 2,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Rubble_Stone",
+        "Quantity": 8
+      },
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 4
+      }
+    ],
+    "OutputQuantity": 1,
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "OneBlock_Roots"
+        ],
+        "Id": "OneBlockRootWorkbench"
+      }
+    ]
+  },
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "OneBlock",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "SoftBlocks"
+      }
+    },
+    "BlockParticleSetId": "Stone",
+    "Textures": [
+      {
+        "Down": "BlockTextures/OneBlock_Block_Default.png",
+        "Sides": "BlockTextures/OneBlock_Block_Default.png",
+        "Up": "BlockTextures/OneBlock_Block_Default.png",
+        "Weight": 1
+      }
+    ],
+    "TransitionToGroups": [],
+    "ParticleColor": "#b7db3a",
+    "BlockSoundSetId": "Stone",
+    "PhysicalMaterialId": "Stone",
+    "BlockBreakingDecalId": "Breaking_Decals_Rock"
+  },
+  "Tags": {
+    "Type": [
+      "OneBlock_Root"
+    ]
+  },
+  "IconProperties": {
+    "Scale": 0.3,
+    "Rotation": [
+      339.295,
+      229.107,
+      337.792
+    ],
+    "Translation": [
+      0,
+      -6
+    ]
+  },
+  "MaxStack": 16,
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

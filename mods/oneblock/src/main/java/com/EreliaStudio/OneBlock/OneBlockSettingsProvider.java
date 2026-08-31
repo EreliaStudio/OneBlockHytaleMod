@@ -9,10 +9,13 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class OneBlockSettingsProvider
 {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
+    public static final double DEFAULT_FALLOFF_HEIGHT = -20.0;
 
     private final Path filePath;
     private volatile SaveData state;
@@ -31,6 +34,36 @@ public final class OneBlockSettingsProvider
     public synchronized void setFallProtectionEnabled(boolean enabled)
     {
         state.fallProtection = enabled;
+        save();
+    }
+
+    public synchronized double getFalloffHeight(String worldName)
+    {
+        if (worldName == null || state.falloffHeights == null)
+        {
+            return DEFAULT_FALLOFF_HEIGHT;
+        }
+
+        Double height = state.falloffHeights.get(worldName);
+        return height == null || !Double.isFinite(height) ? DEFAULT_FALLOFF_HEIGHT : height;
+    }
+
+    public synchronized void setFalloffHeight(String worldName, double height)
+    {
+        if (worldName == null || worldName.isBlank())
+        {
+            throw new IllegalArgumentException("World name cannot be blank");
+        }
+        if (!Double.isFinite(height))
+        {
+            throw new IllegalArgumentException("Falloff height must be a finite number");
+        }
+        if (state.falloffHeights == null)
+        {
+            state.falloffHeights = new HashMap<>();
+        }
+
+        state.falloffHeights.put(worldName, height);
         save();
     }
 
@@ -65,5 +98,6 @@ public final class OneBlockSettingsProvider
     private static final class SaveData
     {
         private boolean fallProtection = true;
+        private Map<String, Double> falloffHeights = new HashMap<>();
     }
 }

@@ -19,11 +19,14 @@ import javax.annotation.Nonnull;
 public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, DamageBlockEvent>
 {
     private final OneBlockWorldStateRegistry stateRegistry;
+    private final OneBlockRootRegistry rootRegistry;
 
-    public OneBlockDamageSystem(OneBlockWorldStateRegistry stateRegistry)
+    public OneBlockDamageSystem(OneBlockWorldStateRegistry stateRegistry,
+                                OneBlockRootRegistry rootRegistry)
     {
         super(DamageBlockEvent.class);
         this.stateRegistry = stateRegistry;
+        this.rootRegistry = rootRegistry;
     }
 
     @Override
@@ -47,8 +50,20 @@ public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, D
         if (entityStore == null) return;
 
         World world = entityStore.getWorld();
-        if (world == null || !stateRegistry.isManaged(world)) return;
-        if (!OneBlockBlockIds.ONEBLOCK_POSITION.equals(event.getTargetBlock())) return;
+        if (world == null) return;
+
+        OneBlockRootRegistry.RootEntry root = rootRegistry.find(world, event.getTargetBlock());
+        boolean generatedWorldBlock = stateRegistry.isManaged(world)
+                && OneBlockBlockIds.ONEBLOCK_POSITION.equals(event.getTargetBlock());
+        if (root == null && !generatedWorldBlock) return;
+
+        if (root != null && isRemovalTool(event.getItemInHand()))
+        {
+            // The extractor deliberately bypasses expedition tool rules and
+            // destroys the root in a single completed break.
+            event.setDamage(1.0F);
+            return;
+        }
 
         OneBlockSolidityDefaults.SolidityDefinition solidity =
                 OneBlockSolidityDefaults.get(event.getBlockType().getId());
@@ -71,6 +86,12 @@ public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, D
                 solidity.ticks(),
                 toolMultiplier
         ));
+    }
+
+    static boolean isRemovalTool(ItemStack itemStack)
+    {
+        return !ItemStack.isEmpty(itemStack)
+                && OneBlockBlockIds.ROOT_REMOVAL_TOOL_ID.equals(itemStack.getItemId());
     }
 
     private static boolean isManagedOneBlockDamage(Player player, DamageBlockEvent event)

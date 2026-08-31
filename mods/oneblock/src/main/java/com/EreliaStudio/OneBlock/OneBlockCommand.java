@@ -26,8 +26,8 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
     public OneBlockCommand()
     {
         super("oneblock", "Create and join isolated OneBlock worlds.");
-        this.actionArg = this.withRequiredArg("action", "create|join|status|start|stop|list|fallProtection=true|false", ArgTypes.STRING);
-        this.valueArg = this.withOptionalArg("value", "World name, expedition ID, or fallProtection true|false", ArgTypes.STRING);
+        this.actionArg = this.withRequiredArg("action", "create|join|status|start|stop|list|fallProtection=true|false|falloffHeight=X", ArgTypes.STRING);
+        this.valueArg = this.withOptionalArg("value", "World name, expedition ID, fall protection, or falloff height", ArgTypes.STRING);
     }
 
     @Override
@@ -72,6 +72,11 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         if ("fallprotection".equals(action))
         {
             handleFallProtection(plugin.getSettingsProvider(), value);
+            return;
+        }
+        if ("falloffheight".equals(action))
+        {
+            handleFalloffHeight(ctx, plugin.getSettingsProvider(), world, value);
             return;
         }
         if (!stateRegistry.isManaged(world))
@@ -225,6 +230,49 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
         }
 
         settingsProvider.setFallProtectionEnabled(enabled);
+    }
+
+    private static void handleFalloffHeight(CommandContext ctx,
+                                            OneBlockSettingsProvider settingsProvider,
+                                            World world,
+                                            String value)
+    {
+        if (settingsProvider == null || world == null)
+        {
+            return;
+        }
+        if (value == null || value.isBlank())
+        {
+            ctx.sendMessage(Message.raw("A numeric falloff height is required."));
+            return;
+        }
+
+        final double height;
+        try
+        {
+            height = Double.parseDouble(value.trim());
+        }
+        catch (NumberFormatException exception)
+        {
+            ctx.sendMessage(Message.raw("Invalid falloff height: " + value));
+            return;
+        }
+
+        if (!Double.isFinite(height))
+        {
+            ctx.sendMessage(Message.raw("Falloff height must be a finite number."));
+            return;
+        }
+
+        settingsProvider.setFalloffHeight(world.getName(), height);
+        ctx.sendMessage(Message.raw(
+                "Falloff height for world '" + world.getName() + "' set to " + formatHeight(height) + "."
+        ));
+    }
+
+    private static String formatHeight(double height)
+    {
+        return height == Math.rint(height) ? Long.toString((long) height) : Double.toString(height);
     }
 
     private static String safeLower(String value)

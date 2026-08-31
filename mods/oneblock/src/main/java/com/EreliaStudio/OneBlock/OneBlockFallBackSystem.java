@@ -22,12 +22,12 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.WorldConfig;
 import com.hypixel.hytale.server.core.universe.world.spawn.ISpawnProvider;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.server.core.universe.world.worldgen.provider.VoidWorldGenProvider;
 
 import java.util.UUID;
 
 public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityStore>
 {
-    private static final double FALLBACK_Y = 85.0;
     private static final Vector3d DEFAULT_SPAWN_POS = new Vector3d(0.5, 102.0, 0.5);
     private static final float VOID_DAMAGE_AMOUNT = Float.MAX_VALUE;
 
@@ -65,10 +65,13 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
         }
 
         World world = entityStore.getWorld();
-        if (stateRegistry == null || !stateRegistry.isManaged(world))
+        if (!isOneBlockVoidWorld(world))
         {
             return;
         }
+        double falloffHeight = settingsProvider == null
+                ? OneBlockSettingsProvider.DEFAULT_FALLOFF_HEIGHT
+                : settingsProvider.getFalloffHeight(world.getName());
 
         ComponentType<EntityStore, Player> playerType = Player.getComponentType();
         ComponentType<EntityStore, TransformComponent> transformType = TransformComponent.getComponentType();
@@ -86,7 +89,7 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
             }
 
             Vector3d position = transform.getPosition();
-            if (position == null || position.y() >= FALLBACK_Y)
+            if (position == null || position.y() >= falloffHeight)
             {
                 continue;
             }
@@ -131,6 +134,27 @@ public final class OneBlockFallBackSystem extends ArchetypeTickingSystem<EntityS
     private boolean isFallProtectionEnabled()
     {
         return settingsProvider == null || settingsProvider.isFallProtectionEnabled();
+    }
+
+    /**
+     * Legacy OneBlock installations may still have a void-generated default
+     * world even though the default world is no longer kept in the managed
+     * world registry. Detect the actual generator so void cleanup continues
+     * to work for those saves without affecting ordinary terrain worlds.
+     */
+    private boolean isOneBlockVoidWorld(World world)
+    {
+        if (world == null)
+        {
+            return false;
+        }
+        if (stateRegistry != null && stateRegistry.isManaged(world))
+        {
+            return true;
+        }
+
+        WorldConfig config = world.getWorldConfig();
+        return config != null && config.getWorldGenProvider() instanceof VoidWorldGenProvider;
     }
 
     private static void killPlayer(CommandBuffer<EntityStore> buffer,

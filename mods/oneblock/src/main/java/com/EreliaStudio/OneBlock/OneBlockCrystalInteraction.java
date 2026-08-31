@@ -2,15 +2,18 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.CommandBuffer;
+import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.protocol.InteractionType;
 import com.hypixel.hytale.server.core.entity.InteractionContext;
+import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.SimpleInstantInteraction;
-import org.joml.Vector3i;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.logger.HytaleLogger;
+import org.joml.Vector3i;
 
 import javax.annotation.Nonnull;
 
@@ -76,18 +79,49 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
         }
 
         OneBlockWorldStateRegistry stateRegistry = plugin.getWorldStateRegistry();
-        if (stateRegistry == null || !stateRegistry.isManaged(world))
+        OneBlockRootRegistry rootRegistry = plugin.getRootRegistry();
+        if (stateRegistry == null || rootRegistry == null)
         {
-            OneBlockInteractionUtil.fail(interactionContext, LOGGER, "This is not a OneBlock world");
+            OneBlockInteractionUtil.fail(interactionContext, LOGGER, "OneBlock state is unavailable");
             return;
         }
 
-        OneBlockExpeditionStateProvider expeditionState = stateRegistry.expeditionState(world);
-        OneBlockDungeonStateProvider dungeonState = stateRegistry.dungeonState(world);
+        Ref<EntityStore> actorEntityRef = interactionContext.getEntity();
+        Player actor = actorEntityRef == null
+                ? null
+                : commandBuffer.getComponent(actorEntityRef, Player.getComponentType());
+        PlayerRef actorPlayerRef = actorEntityRef == null
+                ? null
+                : commandBuffer.getComponent(actorEntityRef, PlayerRef.getComponentType());
+
+        boolean hasPersonalRoots = actorPlayerRef != null
+                && rootRegistry.hasRoots(world, actorPlayerRef.getUuid());
+        OneBlockRootRegistry.RootEntry root = hasPersonalRoots
+                ? new OneBlockRootRegistry.RootEntry(
+                        actorPlayerRef.getUuid(),
+                        actorPlayerRef.getUsername()
+                )
+                : null;
+
+        if (root == null && !stateRegistry.isManaged(world))
+        {
+            OneBlockInteractionUtil.fail(
+                    interactionContext,
+                    LOGGER,
+                    "Place a OneBlock Root before using an expedition crystal"
+            );
+            return;
+        }
+
+        OneBlockExpeditionStateProvider expeditionState = root == null
+                ? stateRegistry.expeditionState(world)
+                : rootRegistry.expeditionState(world, root.ownerId());
+        OneBlockDungeonStateProvider dungeonState = root == null
+                ? stateRegistry.dungeonState(world)
+                : rootRegistry.dungeonState(world, root.ownerId());
 
         String newBlockId = OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
-        Vector3i pos = OneBlockBlockIds.ONEBLOCK_POSITION;
-        world.execute(() -> world.setBlock(pos.x(), pos.y(), pos.z(), newBlockId));
+        world.execute(() -> setTargetBlocks(world, rootRegistry, root, newBlockId));
 
         OneBlockInteractionUtil.consumeHeldItem(interactionContext, heldItem);
 
@@ -98,8 +132,10 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
 
             int waveCount = OneBlockDungeonDefaults.getWaveCount(expeditionId);
 
-            OneBlockWorldPlayers.forEach(
+            OneBlockAudience.forTarget(
                     world,
+                    actor,
+                    root,
                     worldPlayer -> plugin.getHudService().showDungeonStarted(worldPlayer, expeditionId, waveCount)
             );
         }
@@ -110,12 +146,32 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
             dungeonState.endDungeon();
             expeditionState.startExpedition(expeditionId, ticks);
 
-            OneBlockWorldPlayers.forEach(
+            OneBlockAudience.forTarget(
                     world,
+                    actor,
+                    root,
                     worldPlayer -> plugin.getHudService().showExpeditionStarted(worldPlayer, expeditionId, ticks)
             );
         }
 
         OneBlockInteractionUtil.finish(interactionContext);
+    }
+
+    private static void setTargetBlocks(World world,
+                                        OneBlockRootRegistry rootRegistry,
+                                        OneBlockRootRegistry.RootEntry root,
+                                        String blockId)
+    {
+        if (root == null)
+        {
+            Vector3i position = OneBlockBlockIds.ONEBLOCK_POSITION;
+            world.setBlock(position.x(), position.y(), position.z(), blockId);
+            return;
+        }
+
+        for (Vector3i position : rootRegistry.positions(world, root.ownerId()))
+        {
+            world.setBlock(position.x(), position.y(), position.z(), blockId);
+        }
     }
 }

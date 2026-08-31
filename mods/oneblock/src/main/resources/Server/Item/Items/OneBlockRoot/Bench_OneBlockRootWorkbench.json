@@ -1,0 +1,114 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Bench_OneBlockRootWorkbench.name",
+    "Description": "server.items.Bench_OneBlockRootWorkbench.description"
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Fibre",
+        "Quantity": 4
+      },
+      {
+        "ItemId": "Rubble_Stone",
+        "Quantity": 3
+      },
+      {
+        "ItemId": "Ingredient_Stick",
+        "Quantity": 2
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Tools"
+        ],
+        "Id": "Fieldcraft"
+      }
+    ]
+  },
+  "Icon": "Icons/ItemsGenerated/OneBlock_RootWorkbench_Icon.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Benches/OneBlock_RootWorkbench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/BenchTextures/OneBlock_RootWorkbench_Texture.png",
+        "Weight": 1
+      }
+    ],
+    "HitboxType": "Bench_Alchemy",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Id": "OneBlockRootWorkbench",
+      "Type": "Crafting",
+      "Categories": [
+        {
+          "Id": "OneBlock_Roots",
+          "Icon": "Icons/CraftingCategories/OneBlock_RootWorkbench_Icon.png",
+          "Name": "server.benchCategories.OneBlockRootWorkbench_Roots"
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Arcane_Workbench_Open_Local",
+      "LocalCloseSoundEventId": "SFX_Arcane_Workbench_Close_Local"
+    },
+    "State": {
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/Benches/Alchemy_Crafting.blockyanim"
+        }
+      }
+    },
+    "BlockEntity": {
+      "Components": {
+        "BenchBlock": {}
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#8baa24",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Stone"
+  },
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [
+      22.5,
+      45.0,
+      22.5
+    ],
+    "Translation": [
+      12.9,
+      -11.7
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "MaxStack": 1,
+  "ItemLevel": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

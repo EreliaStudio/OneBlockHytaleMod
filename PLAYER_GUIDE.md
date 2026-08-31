@@ -47,6 +47,24 @@ Your expedition and dungeon progress is saved between server restarts. Fall
 protection is enabled by default and returns players to the island if they fall
 too far into the void.
 
+### Shared-world Roots
+
+Players can also run several independent OneBlock games inside an ordinary
+shared world. Craft a **OneBlock Root Workbench** from the Fieldcraft menu, then
+use it to craft a **OneBlock Root** and a **Root Extractor**.
+
+The player who places a Root owns its saved expedition. Any player may mine the
+Root: if Alice mines Bob's Root, Bob's expedition advances and both Alice and
+Bob see its current progress. A player may place several Roots in the same
+world; every Root they own shares one expedition and changes phase together.
+Different owners remain independent even when their Roots are close together.
+
+Use an expedition crystal anywhere in the world to change the shared activity
+of every Root you own; it does not matter which direction or block you are
+looking at. Use the Root Extractor to remove a Root without producing a reward
+or advancing the expedition. Removing the last Root does not erase its owner's
+saved progress, so a replacement Root can continue the same game later.
+
 ## 2. Commands
 
 The `/oneblock` commands are primarily intended for server administrators.
@@ -63,12 +81,14 @@ manage an expedition when necessary.
 | `/oneblock stop` | Stops the current activity and restores Meadow. |
 | `/oneblock fallProtection true` | Enables protection from falling into the void. |
 | `/oneblock fallProtection false` | Disables protection from falling into the void. |
+| `/oneblock falloffHeight=-20` | Sets the void cutoff for your current world. |
 
 World names may contain letters, numbers, `_`, and `-`. If no custom name is
 needed, `/oneblock create -` generates one automatically. The `status`, `start`,
 and `stop` commands affect the targeted player's current OneBlock world, not
-every world on the server. Each OneBlock world contains exactly one generated
-OneBlock; OneBlock block items cannot be placed manually to add more.
+every world on the server. Each dedicated OneBlock world contains exactly one
+generated OneBlock. Expedition block items cannot be placed directly; use a
+crafted OneBlock Root when adding a player-owned game to a shared world.
 
 After entering a OneBlock world, regular players do not need further commands
 for normal progression: breaking the starter OneBlock begins Meadow, and using

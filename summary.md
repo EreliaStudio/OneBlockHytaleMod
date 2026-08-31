@@ -55,7 +55,7 @@ Managed worlds use a persistent void generator configuration with environment `E
 - Applies the configured sky/environment tint.
 - Avoids reinitializing the same world more than once during a server run.
 
-Fall protection is enabled by default. Players below `Y=85` are returned to the configured world spawn. If fall protection is disabled, the normal out-of-world death behavior is applied instead. Non-player entities that fall into the void are removed. The setting persists in `oneblock-settings.json`.
+Fall protection is enabled by default. Each void world has a falloff height of `Y=-20` by default. Players below it are returned to the configured world spawn; if fall protection is disabled, they are killed with out-of-world damage instead. Non-player entities and dropped items below it are removed. Per-world heights and the protection setting persist in `oneblock-settings.json`.
 
 ## Deterministic block durability and tools
 
@@ -213,8 +213,9 @@ The root command is `/oneblock`. It is implemented as an administrative target-p
 | `/oneblock stop` | Ends the current expedition/dungeon, restores the default block, and clears the HUD. |
 | `/oneblock fallProtection true` | Enables persistent void fall protection. |
 | `/oneblock fallProtection false` | Disables persistent void fall protection. |
+| `/oneblock falloffHeight=-20` | Sets the persistent falloff height for the target player's current world. |
 
-The compact forms `/oneblock fallProtection=true` and `/oneblock fallProtection=false` are also accepted. Actions other than `create`, `join`, `list`, and the global fall-protection setting require the target player to be in a managed OneBlock world.
+The compact forms `/oneblock fallProtection=true` and `/oneblock fallProtection=false` are also accepted. `/oneblock falloffHeight -20` is equivalent to the compact form above. Actions other than `create`, `join`, `list`, and the fall settings require the target player to be in a managed OneBlock world.
 
 ## Localization
 

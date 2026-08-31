@@ -163,7 +163,7 @@ mods/oneblock/
 |-------|------|
 | `OneBlockWorldBootstrap` | Creates the void configuration for explicitly requested OneBlock worlds without modifying the server's default world. |
 | `OneBlockWorldInitializer` | On world load: installs the void world-gen provider, places the starting OneBlock (at the appropriate block ID based on active expedition/dungeon), and sets the spawn point to (0.5, 102, 0.5). |
-| `OneBlockFallBackSystem` | `ArchetypeTickingSystem` — teleports any entity below Y=85 back to spawn. |
+| `OneBlockFallBackSystem` | `ArchetypeTickingSystem` — below the per-world falloff height (default Y=-20), teleports or kills players according to fall protection and removes non-player entities/items. |
 
 ---
 
