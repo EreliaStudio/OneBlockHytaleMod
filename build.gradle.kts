@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.EreliaStudio"
-version = "1.0.5"
+version = "1.0.6"
 
 allprojects {
     repositories {

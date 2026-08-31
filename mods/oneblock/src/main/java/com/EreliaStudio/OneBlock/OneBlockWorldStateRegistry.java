@@ -18,9 +18,8 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Owns the persistent state of every OneBlock world.
  *
- * <p>The legacy default-world files are intentionally retained so existing
- * installations keep their current expedition. Additional worlds receive
- * isolated state files below {@code worlds/}.</p>
+ * <p>Only worlds explicitly created for OneBlock are managed. Their state is
+ * stored below {@code worlds/} in an isolated directory per world.</p>
  */
 public final class OneBlockWorldStateRegistry
 {
@@ -37,9 +36,12 @@ public final class OneBlockWorldStateRegistry
         this.registryPath = dataDirectory.resolve("oneblock-worlds.json");
         loadManagedWorlds();
 
-        // Preserve the original single-world behaviour.
-        managedWorlds.add(World.DEFAULT);
-        saveManagedWorlds();
+        // Migrate registries written by older versions, which automatically
+        // treated the normal server world as a OneBlock world.
+        if (managedWorlds.remove(World.DEFAULT))
+        {
+            saveManagedWorlds();
+        }
     }
 
     public boolean isManaged(World world)
@@ -57,6 +59,10 @@ public final class OneBlockWorldStateRegistry
         if (worldName == null || worldName.isBlank())
         {
             throw new IllegalArgumentException("World name cannot be blank");
+        }
+        if (World.DEFAULT.equals(worldName))
+        {
+            throw new IllegalArgumentException("The default world cannot be managed by OneBlock");
         }
 
         if (managedWorlds.add(worldName))
@@ -110,14 +116,6 @@ public final class OneBlockWorldStateRegistry
 
     private WorldState createState(String worldName)
     {
-        if (World.DEFAULT.equals(worldName))
-        {
-            return new WorldState(
-                    new OneBlockExpeditionStateProvider(dataDirectory.resolve("oneblock-expedition.json")),
-                    new OneBlockDungeonStateProvider(dataDirectory.resolve("oneblock-dungeon.json"))
-            );
-        }
-
         String directoryName = Base64.getUrlEncoder().withoutPadding()
                 .encodeToString(worldName.getBytes(StandardCharsets.UTF_8));
         Path worldStateDirectory = dataDirectory.resolve("worlds").resolve(directoryName);

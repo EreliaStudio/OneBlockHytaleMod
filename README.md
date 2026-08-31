@@ -2,6 +2,10 @@
 
 This repository splits the OneBlock gameplay into small, focused mods. Each mod builds to its own jar and can be deployed together to the server.
 
+Players should start with the [OneBlock Player Guide](PLAYER_GUIDE.md), which
+explains the gameplay loop, expeditions, crystals, tools, dungeons, multiplayer,
+and progression without requiring development knowledge.
+
 ## Modules
 - `mods/oneblock-block` Core OneBlock block, drop registry, player drop state, and the `/oneblock` command.
 - `mods/oneblock-itemdropable` Dropable implementation for items.
@@ -88,14 +92,17 @@ Special output ids:
 - `Empty` removes the output (failure).
 
 ## World Generation
-The plugin keeps the existing behavior in the `default` world:
-- Void world.
-- OneBlock placed at `x=0, y=100, z=0`.
-- Spawn at `x=0.5, y=102, z=0.5`.
+The plugin does not modify or manage the server's `default` world. Players initially
+arrive at the normal server spawn with the server's configured world generation.
+An administrator must use `/oneblock create <worldName>` to create a separate void
+OneBlock world, or `/oneblock join <worldName>` to enter one that already exists.
 
 ## Multiplayer Expeditions
 
 OneBlock can manage multiple void worlds at the same time. Every managed world has exactly one OneBlock and its own expedition/dungeon progress. A block break, crystal use, HUD update, or fall recovery only affects players and state in that world.
+
+OneBlock block items cannot be placed manually. Creating another OneBlock always
+means creating another isolated world with `/oneblock create <worldName>`.
 
 Admin actions:
 
@@ -119,4 +126,6 @@ worlds.createExpeditionWorld("oneblock-party-42", partyPlayerRefs)
 
 Use `movePlayers(worldName, partyPlayerRefs)` to load a previous expedition world and transfer a party back into it.
 
-Managed world names are stored in `oneblock-worlds.json`. The original `default` world continues to use `oneblock-expedition.json` and `oneblock-dungeon.json`; additional worlds have isolated save files under the plugin data directory's `worlds/` folder.
+Managed world names are stored in `oneblock-worlds.json`. Every explicitly created
+OneBlock world has isolated save files under the plugin data directory's `worlds/`
+folder. Legacy `default` entries are removed from the registry during startup.

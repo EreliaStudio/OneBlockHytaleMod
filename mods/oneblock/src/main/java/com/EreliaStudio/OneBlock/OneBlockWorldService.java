@@ -5,7 +5,6 @@ import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.math.vector.Rotation3f;
 import com.hypixel.hytale.math.vector.Transform;
 import com.hypixel.hytale.server.core.entity.entities.Player;
-import com.hypixel.hytale.server.core.modules.entity.teleport.Teleport;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
 import com.hypixel.hytale.server.core.universe.world.World;
@@ -202,29 +201,19 @@ public final class OneBlockWorldService
             );
         }
 
-        CompletableFuture<Void> teleportCompleted = new CompletableFuture<>();
-        sourceWorld.execute(() ->
-        {
-            try
-            {
-                Teleport teleport = Teleport.createForPlayer(targetWorld, SPAWN);
-                teleport.setOnComplete(teleportCompleted);
-                sourceStore.addComponent(entityRef, Teleport.getComponentType(), teleport);
-            }
-            catch (Exception exception)
-            {
-                teleportCompleted.completeExceptionally(exception);
-            }
-        });
-
-        return teleportCompleted.thenCompose(nothing ->
+        return Universe.transferPlayerAsync(
+                playerRef,
+                sourceWorld,
+                CompletableFuture.completedFuture(targetWorld),
+                world -> SPAWN
+        ).thenCompose(transferredPlayer ->
         {
             CompletableFuture<Void> hudRestored = new CompletableFuture<>();
             targetWorld.execute(() ->
             {
                 try
                 {
-                    restoreHud(targetWorld, playerRef);
+                    restoreHud(targetWorld, transferredPlayer);
                     hudRestored.complete(null);
                 }
                 catch (Exception exception)

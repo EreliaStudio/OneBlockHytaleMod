@@ -35,19 +35,6 @@ final class OneBlockWorldBootstrap
     {
     }
 
-    static void ensureVoidDefaultWorldConfig(Path dataDir)
-    {
-        Path serverRoot = resolveServerRoot(dataDir);
-        if (serverRoot == null)
-        {
-            LOGGER.at(Level.WARNING).log("Could not resolve server root to configure void world.");
-            return;
-        }
-
-        Path worldDir = serverRoot.resolve("universe").resolve("worlds").resolve("default");
-        ensureVoidWorldDir(worldDir);
-    }
-
     static boolean ensureVoidWorldConfig(Path worldsPath, String worldName)
     {
         if (worldsPath == null || worldName == null || worldName.isBlank())
@@ -258,61 +245,6 @@ final class OneBlockWorldBootstrap
             return element.getAsJsonObject();
         }
         return new JsonObject();
-    }
-
-    private static Path resolveServerRoot(Path dataDir)
-    {
-        Path fromCodeSource = resolveServerRootFromCodeSource();
-        if (fromCodeSource != null)
-        {
-            return fromCodeSource;
-        }
-
-        if (dataDir == null)
-        {
-            return null;
-        }
-
-        Path modsDir = dataDir.getParent();
-        if (modsDir == null)
-        {
-            return null;
-        }
-
-        Path serverRoot = modsDir.getParent();
-        if (serverRoot == null)
-        {
-            return null;
-        }
-
-        return serverRoot;
-    }
-
-    private static Path resolveServerRootFromCodeSource()
-    {
-        var location = OneBlockWorldBootstrap.class.getProtectionDomain().getCodeSource();
-        if (location == null)
-        {
-            return null;
-        }
-        try
-        {
-            Path codePath = Path.of(location.getLocation().toURI());
-            if (Files.isRegularFile(codePath))
-            {
-                Path modsDir = codePath.getParent();
-                return modsDir != null ? modsDir.getParent() : null;
-            }
-            if (Files.isDirectory(codePath))
-            {
-                Path modsDir = codePath.getParent();
-                return modsDir != null ? modsDir.getParent() : null;
-            }
-        }
-        catch (Exception ignored)
-        {
-        }
-        return null;
     }
 
     private static void deleteDirectory(Path path) throws IOException

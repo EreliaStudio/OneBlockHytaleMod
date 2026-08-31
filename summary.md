@@ -12,7 +12,7 @@ OneBlock is a server-side Hytale game mode with an embedded asset pack. Each man
 | Content definitions | 112 total: 88 expeditions and 24 dungeons |
 | Difficulty tiers | Easy, Advanced, Difficult, Hard, and Expert |
 | Starter expedition | Meadow (stable internal ID: `Default`) |
-| Managed worlds | One default world plus any number of additional simultaneous worlds |
+| Managed worlds | Any number of explicitly created simultaneous OneBlock worlds; the normal default world is untouched |
 | OneBlock position | `(0, 100, 0)` in every managed world |
 | Player spawn | `(0.5, 102, 0.5)` |
 | Languages | English, Spanish, French, and Slovak |
@@ -44,7 +44,7 @@ Additional worlds are created with the OneBlock void-world configuration, regist
 
 World names accept letters, numbers, `_`, and `-`, with a maximum length of 48 characters. Passing no name, a blank name, or `-` during creation generates a name in the form `oneblock-xxxxxxxx`.
 
-Managed world names persist in `oneblock-worlds.json`. The default world keeps the legacy top-level state files, while additional worlds store isolated expedition and dungeon state under a Base64-encoded `worlds/<encoded-world-name>/` data directory.
+Managed world names persist in `oneblock-worlds.json`. Every OneBlock world stores isolated expedition and dungeon state under a Base64-encoded `worlds/<encoded-world-name>/` data directory. The normal `default` world is never registered or modified, and legacy registry entries for it are removed on startup.
 
 ## World initialization and void safety
 
@@ -197,7 +197,7 @@ The mod writes state after progression changes so active sessions can survive a 
 - World registry: names of managed OneBlock worlds.
 - Settings: fall-protection state.
 
-The default world uses `oneblock-expedition.json` and `oneblock-dungeon.json`. Additional worlds use independent `expedition.json` and `dungeon.json` files below the plugin's `worlds/` data directory.
+Each explicitly created world uses independent `expedition.json` and `dungeon.json` files below the plugin's `worlds/` data directory. Legacy top-level state files are no longer used.
 
 ## Server commands
 
@@ -256,6 +256,7 @@ It does not overwrite existing PNG artwork. The full schema and examples are doc
 | Path | Purpose |
 | --- | --- |
 | `expeditions.json` | Main content definition file |
+| `PLAYER_GUIDE.md` | Player-facing introduction, progression guide, and gameplay reference |
 | `mods/oneblock/src/main/java/com/EreliaStudio/OneBlock/` | Server-side runtime implementation |
 | `mods/oneblock/src/main/resources/` | Manifest, item/block assets, UI, recipes, textures, and languages |
 | `tools/generate_expeditions.py` | Content generator and validation pipeline |

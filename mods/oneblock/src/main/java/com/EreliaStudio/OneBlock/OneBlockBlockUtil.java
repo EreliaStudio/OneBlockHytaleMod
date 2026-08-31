@@ -13,7 +13,11 @@ public final class OneBlockBlockUtil
     {
         if (blockType == null) return false;
 
-        Item item = blockType.getItem();
+        return isOneBlock(blockType.getItem());
+    }
+
+    public static boolean isOneBlock(Item item)
+    {
         if (item == null) return false;
 
         String[] categories = item.getCategories();

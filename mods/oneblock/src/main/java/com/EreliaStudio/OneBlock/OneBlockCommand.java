@@ -25,7 +25,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
 
     public OneBlockCommand()
     {
-        super("oneblock", "Admin commands for the OneBlock expedition system.");
+        super("oneblock", "Create and join isolated OneBlock worlds.");
         this.actionArg = this.withRequiredArg("action", "create|join|status|start|stop|list|fallProtection=true|false", ArgTypes.STRING);
         this.valueArg = this.withOptionalArg("value", "World name, expedition ID, or fallProtection true|false", ArgTypes.STRING);
     }
@@ -108,7 +108,7 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand
                             return;
                         }
                         sender.sendMessage(Message.raw(
-                                "Created OneBlock world '" + createdWorld.getName() + "' and moved "
+                                "Created isolated OneBlock world '" + createdWorld.getName() + "' and moved "
                                         + targetPlayerRef.getUsername() + "."
                         ));
                     });

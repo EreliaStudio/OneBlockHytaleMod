@@ -64,7 +64,7 @@ mods/oneblock/
 
 | Class | Role |
 |-------|------|
-| `OneBlockPlugin` | Plugin entry point. Wires all services (HUD, drop registry, state providers), registers event handlers, registers the `oneblock_crystal_use` interaction codec, and sets up the void world. |
+| `OneBlockPlugin` | Plugin entry point. Wires all services (HUD, drop registry, state providers), registers event handlers, registers the `oneblock_crystal_use` interaction codec, and initializes only explicitly managed OneBlock worlds. |
 
 ---
 
@@ -161,7 +161,7 @@ mods/oneblock/
 
 | Class | Role |
 |-------|------|
-| `OneBlockWorldBootstrap` | Ensures the default world config is set to void (no terrain). Runs on startup and on world load. |
+| `OneBlockWorldBootstrap` | Creates the void configuration for explicitly requested OneBlock worlds without modifying the server's default world. |
 | `OneBlockWorldInitializer` | On world load: installs the void world-gen provider, places the starting OneBlock (at the appropriate block ID based on active expedition/dungeon), and sets the spawn point to (0.5, 102, 0.5). |
 | `OneBlockFallBackSystem` | `ArchetypeTickingSystem` — teleports any entity below Y=85 back to spawn. |
 

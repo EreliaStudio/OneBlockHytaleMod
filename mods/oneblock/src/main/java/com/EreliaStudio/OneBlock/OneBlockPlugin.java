@@ -73,6 +73,8 @@ public final class OneBlockPlugin extends JavaPlugin
                 )
         );
 
+        getEntityStoreRegistry().registerSystem(new OneBlockPlacementSystem());
+
         getCommandRegistry().registerCommand(new OneBlockCommand());
 
         // ── Expedition progression ───────────────────────────────────────────
@@ -102,8 +104,6 @@ public final class OneBlockPlugin extends JavaPlugin
         );
 
         // ── World ────────────────────────────────────────────────────────────
-        OneBlockWorldBootstrap.ensureVoidDefaultWorldConfig(getDataDirectory());
-
         getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem(settingsProvider, worldStateRegistry));
 
         getEventRegistry().registerGlobal(PrepareUniverseEvent.class, event ->
@@ -215,12 +215,16 @@ public final class OneBlockPlugin extends JavaPlugin
 
     public OneBlockExpeditionStateProvider getExpeditionStateProvider()
     {
-        return worldStateRegistry == null ? null : worldStateRegistry.expeditionState(World.DEFAULT);
+        return worldStateRegistry == null || !worldStateRegistry.isManaged(World.DEFAULT)
+                ? null
+                : worldStateRegistry.expeditionState(World.DEFAULT);
     }
 
     public OneBlockDungeonStateProvider getDungeonStateProvider()
     {
-        return worldStateRegistry == null ? null : worldStateRegistry.dungeonState(World.DEFAULT);
+        return worldStateRegistry == null || !worldStateRegistry.isManaged(World.DEFAULT)
+                ? null
+                : worldStateRegistry.dungeonState(World.DEFAULT);
     }
 
     public OneBlockWorldStateRegistry getWorldStateRegistry()

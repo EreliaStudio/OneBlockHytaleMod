@@ -63,10 +63,11 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         World world = entityStore.getWorld();
         if (world == null || !stateRegistry.isManaged(world)) return;
 
+        Vector3i pos = event.getTargetBlock();
+        if (!OneBlockBlockIds.ONEBLOCK_POSITION.equals(pos)) return;
+
         OneBlockExpeditionStateProvider expeditionState = stateRegistry.expeditionState(world);
         OneBlockDungeonStateProvider dungeonState = stateRegistry.dungeonState(world);
-
-        Vector3i pos = event.getTargetBlock();
 
         // Cancel native removal before replacing the OneBlock synchronously.
         // This keeps the coordinate occupied throughout the final damage tick.

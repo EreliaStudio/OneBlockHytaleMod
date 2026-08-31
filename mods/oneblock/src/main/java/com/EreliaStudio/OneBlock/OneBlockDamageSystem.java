@@ -48,6 +48,7 @@ public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, D
 
         World world = entityStore.getWorld();
         if (world == null || !stateRegistry.isManaged(world)) return;
+        if (!OneBlockBlockIds.ONEBLOCK_POSITION.equals(event.getTargetBlock())) return;
 
         OneBlockSolidityDefaults.SolidityDefinition solidity =
                 OneBlockSolidityDefaults.get(event.getBlockType().getId());
