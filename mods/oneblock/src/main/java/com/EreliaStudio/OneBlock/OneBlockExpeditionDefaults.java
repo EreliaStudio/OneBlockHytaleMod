@@ -146,7 +146,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Ingredient_Stick", 35),
                 drop("Wood_Oak_Trunk", 28),
                 drop("Plant_Sapling_Oak", 8),
-                drop("Plant_Fruit_Apple", 3)
+                drop("Plant_Fruit_Apple", 3),
+                drop("Ingredient_Life_Essence", 5)
         ), List.of(
                 reward("ExpeditionPoint", 1),
                 crystalReward("ForestEntry", 1)
@@ -164,7 +165,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Hay_Bundle", 10),
                 drop("Plant_Crop_Wheat_Item", 8),
                 drop("Plant_Crop_Carrot_Item", 5),
-                drop("Plant_Crop_Corn_Item", 5)
+                drop("Plant_Crop_Corn_Item", 5),
+                drop("Ingredient_Life_Essence", 5)
         ), List.of(
                 reward("ExpeditionPoint", 1)
         ), List.of(
@@ -442,7 +444,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Sapling_Ash", 5),
                 drop("Plant_Crop_Mushroom_Cap_Brown", 8),
                 drop("Plant_Crop_Mushroom_Common_Brown", 8),
-                drop("Plant_Crop_Mushroom_Shelve_Brown", 5)
+                drop("Plant_Crop_Mushroom_Shelve_Brown", 5),
+                drop("Ingredient_Life_Essence", 15)
         ), List.of(
                 reward("ExpeditionPoint", 1)
         ), List.of(
@@ -458,7 +461,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Moss_Block_Green", 18),
                 drop("Plant_Moss_Rug_Green", 18),
                 drop("Soil_Clay", 14),
-                drop("Soil_Dirt", 18)
+                drop("Soil_Dirt", 18),
+                drop("Ingredient_Life_Essence", 10)
         ), List.of(
                 reward("ExpeditionPoint", 2),
                 crystalReward("River", 1)
@@ -473,7 +477,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Rubble_Stone", 18),
                 drop("Rock_Stone", 18),
                 drop("Soil_Clay", 14),
-                drop("Plant_Moss_Green", 16)
+                drop("Plant_Moss_Green", 16),
+                drop("Ingredient_Life_Essence", 5)
         ), List.of(
                 reward("ExpeditionPoint", 2)
         ), List.of(
@@ -492,7 +497,8 @@ public final class OneBlockExpeditionDefaults
                 drop("Plant_Moss_Rug_Green", 18),
                 drop("Soil_Clay", 16),
                 drop("Rock_Gem_Sapphire", 3),
-                drop("*Container_Bucket_State_Filled_Water", 1)
+                drop("*Container_Bucket_State_Filled_Water", 1),
+                drop("Ingredient_Life_Essence", 5)
         ), List.of(
                 reward("ExpeditionPoint", 2)
         ));

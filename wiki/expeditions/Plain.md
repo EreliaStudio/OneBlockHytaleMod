@@ -18,18 +18,19 @@
 
 | Drop | Chance per pool roll |
 |---|---:|
-| Rabbit *(mob)* (`entity:Rabbit`) | **3.23%** |
-| Sheep *(mob)* (`entity:Sheep`) | **1.61%** |
-| Chicken *(mob)* (`entity:Chicken`) | **2.42%** |
-| Antelope *(mob)* (`entity:Antelope`) | **0.81%** |
-| `Ingredient_Fibre` | **24.19%** |
-| `Soil_Grass` | **16.13%** |
-| `Soil_Dirt` | **16.13%** |
-| `Plant_Grass_Sharp` | **12.90%** |
-| `Plant_Hay_Bundle` | **8.06%** |
-| `Plant_Crop_Wheat_Item` | **6.45%** |
-| `Plant_Crop_Carrot_Item` | **4.03%** |
-| `Plant_Crop_Corn_Item` | **4.03%** |
+| Rabbit *(mob)* (`entity:Rabbit`) | **3.10%** |
+| Sheep *(mob)* (`entity:Sheep`) | **1.55%** |
+| Chicken *(mob)* (`entity:Chicken`) | **2.33%** |
+| Antelope *(mob)* (`entity:Antelope`) | **0.78%** |
+| `Ingredient_Fibre` | **23.26%** |
+| `Soil_Grass` | **15.50%** |
+| `Soil_Dirt` | **15.50%** |
+| `Plant_Grass_Sharp` | **12.40%** |
+| `Plant_Hay_Bundle` | **7.75%** |
+| `Plant_Crop_Wheat_Item` | **6.20%** |
+| `Plant_Crop_Carrot_Item` | **3.88%** |
+| `Plant_Crop_Corn_Item` | **3.88%** |
+| `Ingredient_Life_Essence` | **3.88%** |
 
 ### Completion rewards
 

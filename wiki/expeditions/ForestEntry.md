@@ -18,21 +18,22 @@
 
 | Drop | Chance per pool roll |
 |---|---:|
-| Boar *(mob)* (`entity:Boar`) | **2.27%** |
-| Boar Piglet *(mob)* (`entity:Boar_Piglet`) | **3.03%** |
-| Pigeon *(mob)* (`entity:Pigeon`) | **3.03%** |
-| Fox *(mob)* (`entity:Fox`) | **1.52%** |
-| Wolf Black *(mob)* (`entity:Wolf_Black`) | **0.76%** |
-| `Ingredient_Stick` | **21.21%** |
-| `Wood_Oak_Trunk` | **18.18%** |
-| `Wood_Beech_Trunk` | **12.12%** |
-| `Wood_Ash_Trunk` | **7.58%** |
-| `Plant_Sapling_Oak` | **6.06%** |
-| `Plant_Sapling_Beech` | **4.55%** |
-| `Plant_Sapling_Ash` | **3.79%** |
-| `Plant_Crop_Mushroom_Cap_Brown` | **6.06%** |
-| `Plant_Crop_Mushroom_Common_Brown` | **6.06%** |
-| `Plant_Crop_Mushroom_Shelve_Brown` | **3.79%** |
+| Boar *(mob)* (`entity:Boar`) | **2.04%** |
+| Boar Piglet *(mob)* (`entity:Boar_Piglet`) | **2.72%** |
+| Pigeon *(mob)* (`entity:Pigeon`) | **2.72%** |
+| Fox *(mob)* (`entity:Fox`) | **1.36%** |
+| Wolf Black *(mob)* (`entity:Wolf_Black`) | **0.68%** |
+| `Ingredient_Stick` | **19.05%** |
+| `Wood_Oak_Trunk` | **16.33%** |
+| `Wood_Beech_Trunk` | **10.88%** |
+| `Wood_Ash_Trunk` | **6.80%** |
+| `Plant_Sapling_Oak` | **5.44%** |
+| `Plant_Sapling_Beech` | **4.08%** |
+| `Plant_Sapling_Ash` | **3.40%** |
+| `Plant_Crop_Mushroom_Cap_Brown` | **5.44%** |
+| `Plant_Crop_Mushroom_Common_Brown` | **5.44%** |
+| `Plant_Crop_Mushroom_Shelve_Brown` | **3.40%** |
+| `Ingredient_Life_Essence` | **10.20%** |
 
 ### Completion rewards
 

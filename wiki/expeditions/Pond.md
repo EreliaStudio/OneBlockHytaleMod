@@ -18,14 +18,15 @@
 
 | Drop | Chance per pool roll |
 |---|---:|
-| Frog Green *(mob)* (`entity:Frog_Green`) | **4%** |
-| Duck *(mob)* (`entity:Duck`) | **4%** |
-| Bluegill *(mob)* (`entity:Bluegill`) | **4%** |
-| `Fish_Bluegill_Item` | **20%** |
-| `Plant_Moss_Block_Green` | **18%** |
-| `Plant_Moss_Rug_Green` | **18%** |
-| `Soil_Clay` | **14%** |
-| `Soil_Dirt` | **18%** |
+| Frog Green *(mob)* (`entity:Frog_Green`) | **3.64%** |
+| Duck *(mob)* (`entity:Duck`) | **3.64%** |
+| Bluegill *(mob)* (`entity:Bluegill`) | **3.64%** |
+| `Fish_Bluegill_Item` | **18.18%** |
+| `Plant_Moss_Block_Green` | **16.36%** |
+| `Plant_Moss_Rug_Green` | **16.36%** |
+| `Soil_Clay` | **12.73%** |
+| `Soil_Dirt` | **16.36%** |
+| `Ingredient_Life_Essence` | **9.09%** |
 
 ### Completion rewards
 

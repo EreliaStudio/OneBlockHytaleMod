@@ -24,6 +24,14 @@ From the repo root:
 ```
 The deploy tasks copy each shaded jar to `hytale-server/mods`.
 
+## Dedicated OneBlock Server
+
+The `:oneblock-islands` companion module adds UUID-based island ownership,
+membership, `/island`, world-entry enforcement, island edit protection, and a
+minimal protected `spawn` hub. See [SERVER_SETUP.md](SERVER_SETUP.md) for the
+local dedicated-server deployment, third-party mod versions, permissions, and
+the remaining in-game portal setup.
+
 ## How Drops Work
 - The OneBlock block chooses a pool id based on its block type. The default resolver uses the expedition name derived from the block id.
 - The drop registry picks a dropable id by weighted random from that pool.

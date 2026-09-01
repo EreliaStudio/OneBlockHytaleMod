@@ -43,7 +43,7 @@ progress.expedition.CaveEntry=CaveEntry: {0}/{1} ticks remaining
 # GENERATED ─── ForestEdge ─────────────────────────────────────────────
 items.OneBlock_Block_ForestEdge.name=OneBlock ForestEdge
 items.OneBlock_Crystal_ForestEdge.name=ForestEdge Crystal
-items.OneBlock_Crystal_ForestEdge.description=Consume to begin a ForestEdge expedition.\n25 ticks.\nPossible drops:\nItems:\n- Stick\n- Oak Trunk\n- Oak Sapling\n- Apple Fruit\nEntities:\n- Rabbit\n- Boar\n- Boar Piglet\n- Fox\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- ForestEntry
+items.OneBlock_Crystal_ForestEdge.description=Consume to begin a ForestEdge expedition.\n25 ticks.\nPossible drops:\nItems:\n- Stick\n- Oak Trunk\n- Oak Sapling\n- Apple Fruit\n- Life Essence\nEntities:\n- Rabbit\n- Boar\n- Boar Piglet\n- Fox\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- ForestEntry
 expeditions.ForestEdge.name=ForestEdge
 announcements.expedition_started.ForestEdge=ForestEdge expedition started.
 announcements.expedition_completed.ForestEdge=ForestEdge expedition complete. The OneBlock has returned to default.
@@ -53,7 +53,7 @@ progress.expedition.ForestEdge=ForestEdge: {0}/{1} ticks remaining
 # GENERATED ─── Plain ──────────────────────────────────────────────────
 items.OneBlock_Block_Plain.name=OneBlock Plain
 items.OneBlock_Crystal_Plain.name=Plain Crystal
-items.OneBlock_Crystal_Plain.description=Consume to begin a Plain expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fibre\n- Soil Grass\n- Soil Dirt\n- Plant Grass Sharp\n- Hay Bundle\n- Wheat\n- Carrot\n- Corn\nEntities:\n- Rabbit\n- Sheep\n- Chicken\n- Antelope\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- Quarry (possible)\n- Hallow (possible)
+items.OneBlock_Crystal_Plain.description=Consume to begin a Plain expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fibre\n- Soil Grass\n- Soil Dirt\n- Plant Grass Sharp\n- Hay Bundle\n- Wheat\n- Carrot\n- Corn\n- Life Essence\nEntities:\n- Rabbit\n- Sheep\n- Chicken\n- Antelope\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- Quarry (possible)\n- Hallow (possible)
 expeditions.Plain.name=Plain
 announcements.expedition_started.Plain=Plain expedition started.
 announcements.expedition_completed.Plain=Plain expedition complete. The OneBlock has returned to default.
@@ -272,7 +272,7 @@ progress.expedition.Desert=Desert: {0}/{1} ticks remaining
 # GENERATED ─── ForestEntry ────────────────────────────────────────────
 items.OneBlock_Block_ForestEntry.name=OneBlock ForestEntry
 items.OneBlock_Crystal_ForestEntry.name=ForestEntry Crystal
-items.OneBlock_Crystal_ForestEntry.description=Consume to begin a ForestEntry expedition.\n25 ticks.\nPossible drops:\nItems:\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Brown Cap Mushroom\n- Brown Common Mushroom\n- Brown Shelve Mushroom\nEntities:\n- Boar\n- Boar Piglet\n- Pigeon\n- Fox\n- Wolf Black\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- Pond (possible)\n- Forest (possible)
+items.OneBlock_Crystal_ForestEntry.description=Consume to begin a ForestEntry expedition.\n25 ticks.\nPossible drops:\nItems:\n- Stick\n- Oak Trunk\n- Beech Trunk\n- Ash Trunk\n- Oak Sapling\n- Beech Sapling\n- Plant Sapling Ash\n- Brown Cap Mushroom\n- Brown Common Mushroom\n- Brown Shelve Mushroom\n- Life Essence\nEntities:\n- Boar\n- Boar Piglet\n- Pigeon\n- Fox\n- Wolf Black\nCompletion rewards:\n- 1x ExpeditionPoint\nLeads to:\n- Pond (possible)\n- Forest (possible)
 expeditions.ForestEntry.name=ForestEntry
 announcements.expedition_started.ForestEntry=ForestEntry expedition started.
 announcements.expedition_completed.ForestEntry=ForestEntry expedition complete. The OneBlock has returned to default.
@@ -282,7 +282,7 @@ progress.expedition.ForestEntry=ForestEntry: {0}/{1} ticks remaining
 # GENERATED ─── Pond ───────────────────────────────────────────────────
 items.OneBlock_Block_Pond.name=OneBlock Pond
 items.OneBlock_Crystal_Pond.name=Pond Crystal
-items.OneBlock_Crystal_Pond.description=Consume to begin a Pond expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Soil Dirt\nEntities:\n- Frog Green\n- Duck\n- Bluegill\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- River
+items.OneBlock_Crystal_Pond.description=Consume to begin a Pond expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Soil Dirt\n- Life Essence\nEntities:\n- Frog Green\n- Duck\n- Bluegill\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- River
 expeditions.Pond.name=Pond
 announcements.expedition_started.Pond=Pond expedition started.
 announcements.expedition_completed.Pond=Pond expedition complete. The OneBlock has returned to default.
@@ -292,7 +292,7 @@ progress.expedition.Pond=Pond: {0}/{1} ticks remaining
 # GENERATED ─── River ──────────────────────────────────────────────────
 items.OneBlock_Block_River.name=OneBlock River
 items.OneBlock_Crystal_River.name=River Crystal
-items.OneBlock_Crystal_River.description=Consume to begin a River expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Rubble Stone\n- Stone\n- Soil Clay\n- Plant Moss Green\nEntities:\n- Frog Green\n- Duck\n- Bluegill\n- Crab\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- Lake (possible)\n- Sea (possible)\n- Coastline (possible)
+items.OneBlock_Crystal_River.description=Consume to begin a River expedition.\n25 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Rubble Stone\n- Stone\n- Soil Clay\n- Plant Moss Green\n- Life Essence\nEntities:\n- Frog Green\n- Duck\n- Bluegill\n- Crab\nCompletion rewards:\n- 2x ExpeditionPoint\nLeads to:\n- Lake (possible)\n- Sea (possible)\n- Coastline (possible)
 expeditions.River.name=River
 announcements.expedition_started.River=River expedition started.
 announcements.expedition_completed.River=River expedition complete. The OneBlock has returned to default.
@@ -302,7 +302,7 @@ progress.expedition.River=River: {0}/{1} ticks remaining
 # GENERATED ─── Lake ───────────────────────────────────────────────────
 items.OneBlock_Block_Lake.name=OneBlock Lake
 items.OneBlock_Crystal_Lake.name=Lake Crystal
-items.OneBlock_Crystal_Lake.description=Consume to begin a Lake expedition.\n28 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\n- Water Bucket\nEntities:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nCompletion rewards:\n- 2x ExpeditionPoint
+items.OneBlock_Crystal_Lake.description=Consume to begin a Lake expedition.\n28 ticks.\nPossible drops:\nItems:\n- Fish Bluegill Item\n- Plant Moss Block Green\n- Plant Moss Rug Green\n- Soil Clay\n- Sapphire Gem\n- Water Bucket\n- Life Essence\nEntities:\n- Frog Green\n- Duck\n- Bluegill\n- Crocodile\nCompletion rewards:\n- 2x ExpeditionPoint
 expeditions.Lake.name=Lake
 announcements.expedition_started.Lake=Lake expedition started.
 announcements.expedition_completed.Lake=Lake expedition complete. The OneBlock has returned to default.

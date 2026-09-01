@@ -25,7 +25,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `*Container_Bucket_State_Filled_Water`
 
-- [Lake](expeditions/Lake.md) — **1.12%**
+- [Lake](expeditions/Lake.md) — **1.06%**
 
 <a id="d"></a>
 ## D
@@ -81,9 +81,9 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `Fish_Bluegill_Item`
 
-- [Lake](expeditions/Lake.md) — **24.72%**
-- [Pond](expeditions/Pond.md) — **20%**
-- [River](expeditions/River.md) — **20.62%**
+- [Lake](expeditions/Lake.md) — **23.40%**
+- [Pond](expeditions/Pond.md) — **18.18%**
+- [River](expeditions/River.md) — **19.61%**
 
 ### `Fish_Crab_Item`
 
@@ -212,7 +212,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Meadow](expeditions/Default.md) — **26.09%**
 - [Dry Jungle Pass](expeditions/DryJunglePass.md) — **6.61%**
 - [Jungle Edge](expeditions/JungleEdge.md) — **13.04%**
-- [Plain](expeditions/Plain.md) — **24.19%**
+- [Plain](expeditions/Plain.md) — **23.26%**
 
 ### `Ingredient_Fire_Essence`
 
@@ -268,6 +268,12 @@ The percentage shown next to each expedition is the normalized chance for that i
 ### `Ingredient_Life_Essence`
 
 - [Elemental Confluence](expeditions/ElementalConfluence.md) — **14.04%**
+- [Forest Edge](expeditions/ForestEdge.md) — **5.62%**
+- [Forest Entry](expeditions/ForestEntry.md) — **10.20%**
+- [Lake](expeditions/Lake.md) — **5.32%**
+- [Plain](expeditions/Plain.md) — **3.88%**
+- [Pond](expeditions/Pond.md) — **9.09%**
+- [River](expeditions/River.md) — **4.90%**
 - [Spirit Threshold](expeditions/SpiritThreshold.md) — **17.78%**
 
 ### `Ingredient_Lightning_Essence`
@@ -289,8 +295,8 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Meadow](expeditions/Default.md) — **26.09%**
 - [Dry Jungle Pass](expeditions/DryJunglePass.md) — **8.26%**
 - [Forest](expeditions/Forest.md) — **22.03%**
-- [Forest Edge](expeditions/ForestEdge.md) — **41.67%**
-- [Forest Entry](expeditions/ForestEntry.md) — **21.21%**
+- [Forest Edge](expeditions/ForestEdge.md) — **39.33%**
+- [Forest Entry](expeditions/ForestEntry.md) — **19.05%**
 - [Jungle Edge](expeditions/JungleEdge.md) — **15.22%**
 
 ### `Ingredient_Void_Essence`
@@ -435,14 +441,14 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Hallow](expeditions/Hallow.md) — **20.20%**
 - [Horse Hallow](expeditions/HorseHallow.md) — **35.71%**
 - [Outlander Plain](expeditions/OutlanderPlain.md) — **19.28%**
-- [Plain](expeditions/Plain.md) — **4.03%**
+- [Plain](expeditions/Plain.md) — **3.88%**
 
 ### `Plant_Crop_Corn_Item`
 
 - [Cow Hallow](expeditions/CowHallow.md) — **27.27%**
 - [Hallow](expeditions/Hallow.md) — **20.20%**
 - [Outlander Plain](expeditions/OutlanderPlain.md) — **21.69%**
-- [Plain](expeditions/Plain.md) — **4.03%**
+- [Plain](expeditions/Plain.md) — **3.88%**
 
 ### `Plant_Crop_Mushroom_Block_Yellow`
 
@@ -461,16 +467,16 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `Plant_Crop_Mushroom_Cap_Brown`
 
-- [Forest Entry](expeditions/ForestEntry.md) — **6.06%**
+- [Forest Entry](expeditions/ForestEntry.md) — **5.44%**
 
 ### `Plant_Crop_Mushroom_Common_Brown`
 
-- [Forest Entry](expeditions/ForestEntry.md) — **6.06%**
+- [Forest Entry](expeditions/ForestEntry.md) — **5.44%**
 - [Swamp](expeditions/Swamp.md) — **10.08%**
 
 ### `Plant_Crop_Mushroom_Shelve_Brown`
 
-- [Forest Entry](expeditions/ForestEntry.md) — **3.79%**
+- [Forest Entry](expeditions/ForestEntry.md) — **3.40%**
 - [Swamp](expeditions/Swamp.md) — **6.72%**
 
 ### `Plant_Crop_Mushroom_Shelve_Yellow`
@@ -487,7 +493,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Hallow](expeditions/Hallow.md) — **30.30%**
 - [Horse Hallow](expeditions/HorseHallow.md) — **28.57%**
 - [Outlander Plain](expeditions/OutlanderPlain.md) — **24.10%**
-- [Plain](expeditions/Plain.md) — **6.45%**
+- [Plain](expeditions/Plain.md) — **6.20%**
 
 ### `Plant_Flower_Common_Pink2`
 
@@ -507,7 +513,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 - [Cow Hallow](expeditions/CowHallow.md) — **9.09%**
 - [Forest](expeditions/Forest.md) — **4.24%**
-- [Forest Edge](expeditions/ForestEdge.md) — **3.57%**
+- [Forest Edge](expeditions/ForestEdge.md) — **3.37%**
 - [Hallow](expeditions/Hallow.md) — **8.08%**
 - [Horse Hallow](expeditions/HorseHallow.md) — **9.52%**
 
@@ -522,11 +528,11 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `Plant_Grass_Sharp`
 
-- [Plain](expeditions/Plain.md) — **12.90%**
+- [Plain](expeditions/Plain.md) — **12.40%**
 
 ### `Plant_Hay_Bundle`
 
-- [Plain](expeditions/Plain.md) — **8.06%**
+- [Plain](expeditions/Plain.md) — **7.75%**
 
 ### `Plant_Leaves_Amber`
 
@@ -560,9 +566,9 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `Plant_Moss_Block_Green`
 
-- [Lake](expeditions/Lake.md) — **20.22%**
+- [Lake](expeditions/Lake.md) — **19.15%**
 - [Overgrown Ruins](expeditions/OvergrownRuins.md) — **14.43%**
-- [Pond](expeditions/Pond.md) — **18%**
+- [Pond](expeditions/Pond.md) — **16.36%**
 - [Sunken Jungle Ruins](expeditions/SunkenJungleRuins.md) — **15.53%**
 - [Swamp](expeditions/Swamp.md) — **15.13%**
 
@@ -573,13 +579,13 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `Plant_Moss_Green`
 
-- [River](expeditions/River.md) — **16.49%**
+- [River](expeditions/River.md) — **15.69%**
 
 ### `Plant_Moss_Rug_Green`
 
-- [Lake](expeditions/Lake.md) — **20.22%**
+- [Lake](expeditions/Lake.md) — **19.15%**
 - [Overgrown Ruins](expeditions/OvergrownRuins.md) — **12.37%**
-- [Pond](expeditions/Pond.md) — **18%**
+- [Pond](expeditions/Pond.md) — **16.36%**
 - [Sunken Jungle Ruins](expeditions/SunkenJungleRuins.md) — **13.59%**
 - [Swamp](expeditions/Swamp.md) — **15.13%**
 
@@ -602,7 +608,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 - [Deep Forest](expeditions/DeepForest.md) — **7.53%**
 - [Forest](expeditions/Forest.md) — **4.24%**
-- [Forest Entry](expeditions/ForestEntry.md) — **3.79%**
+- [Forest Entry](expeditions/ForestEntry.md) — **3.40%**
 
 ### `Plant_Sapling_Bamboo`
 
@@ -613,7 +619,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 - [Deep Forest](expeditions/DeepForest.md) — **8.60%**
 - [Forest](expeditions/Forest.md) — **5.08%**
-- [Forest Entry](expeditions/ForestEntry.md) — **4.55%**
+- [Forest Entry](expeditions/ForestEntry.md) — **4.08%**
 
 ### `Plant_Sapling_Birch`
 
@@ -631,8 +637,8 @@ The percentage shown next to each expedition is the normalized chance for that i
 ### `Plant_Sapling_Oak`
 
 - [Forest](expeditions/Forest.md) — **6.78%**
-- [Forest Edge](expeditions/ForestEdge.md) — **9.52%**
-- [Forest Entry](expeditions/ForestEntry.md) — **6.06%**
+- [Forest Edge](expeditions/ForestEdge.md) — **8.99%**
+- [Forest Entry](expeditions/ForestEntry.md) — **5.44%**
 
 ### `Plant_Seeds_Bottletree`
 
@@ -729,7 +735,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Gem Deep Cave](expeditions/GemDeepCave.md) — **10.26%**
 - [Icy Cavern](expeditions/IcyCavern.md) — **7.23%**
 - [Icy Necropolis](expeditions/IcyNecropolis.md) — **4.13%**
-- [Lake](expeditions/Lake.md) — **3.37%**
+- [Lake](expeditions/Lake.md) — **3.19%**
 - [Mysterious Cavern](expeditions/MysteriousCavern.md) — **2.97%**
 - [Mystic Cave](expeditions/MysticCave.md) — **14.81%**
 - [Sea](expeditions/Sea.md) — **2.70%**
@@ -910,7 +916,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Lower Cave](expeditions/LowerCave.md) — **40.70%**
 - [Mysterious Cavern](expeditions/MysteriousCavern.md) — **23.76%**
 - [Quarry](expeditions/Quarry.md) — **28.30%**
-- [River](expeditions/River.md) — **18.56%**
+- [River](expeditions/River.md) — **17.65%**
 - [Sand Cavern](expeditions/SandCavern.md) — **21.57%**
 
 ### `Rock_Volcanic`
@@ -1025,7 +1031,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Lower Cave](expeditions/LowerCave.md) — **40.70%**
 - [Mysterious Cavern](expeditions/MysteriousCavern.md) — **23.76%**
 - [Quarry](expeditions/Quarry.md) — **28.30%**
-- [River](expeditions/River.md) — **18.56%**
+- [River](expeditions/River.md) — **17.65%**
 - [Sand Cavern](expeditions/SandCavern.md) — **21.57%**
 
 ### `Rubble_Stone_Mossy`
@@ -1051,9 +1057,9 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 ### `Soil_Clay`
 
-- [Lake](expeditions/Lake.md) — **17.98%**
-- [Pond](expeditions/Pond.md) — **14%**
-- [River](expeditions/River.md) — **14.43%**
+- [Lake](expeditions/Lake.md) — **17.02%**
+- [Pond](expeditions/Pond.md) — **12.73%**
+- [River](expeditions/River.md) — **13.73%**
 - [Sunken Jungle Ruins](expeditions/SunkenJungleRuins.md) — **15.53%**
 - [Swamp](expeditions/Swamp.md) — **16.81%**
 
@@ -1061,14 +1067,14 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 - [Meadow](expeditions/Default.md) — **21.74%**
 - [Muddy Desert](expeditions/MuddyDesert.md) — **21.36%**
-- [Plain](expeditions/Plain.md) — **16.13%**
-- [Pond](expeditions/Pond.md) — **18%**
+- [Plain](expeditions/Plain.md) — **15.50%**
+- [Pond](expeditions/Pond.md) — **16.36%**
 - [Sunken Jungle Ruins](expeditions/SunkenJungleRuins.md) — **13.59%**
 - [Swamp](expeditions/Swamp.md) — **18.49%**
 
 ### `Soil_Grass`
 
-- [Plain](expeditions/Plain.md) — **16.13%**
+- [Plain](expeditions/Plain.md) — **15.50%**
 
 ### `Soil_Gravel`
 
@@ -1141,7 +1147,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 - [Deep Forest](expeditions/DeepForest.md) — **19.35%**
 - [Dry Trork Camp](expeditions/DryTrorkCamp.md) — **21.18%**
 - [Forest](expeditions/Forest.md) — **10.17%**
-- [Forest Entry](expeditions/ForestEntry.md) — **7.58%**
+- [Forest Entry](expeditions/ForestEntry.md) — **6.80%**
 - [Trork Hunting Ground](expeditions/TrorkHuntingGround.md) — **22.78%**
 
 ### `Wood_Aspen_Trunk`
@@ -1165,7 +1171,7 @@ The percentage shown next to each expedition is the normalized chance for that i
 
 - [Deep Forest](expeditions/DeepForest.md) — **23.66%**
 - [Forest](expeditions/Forest.md) — **15.25%**
-- [Forest Entry](expeditions/ForestEntry.md) — **12.12%**
+- [Forest Entry](expeditions/ForestEntry.md) — **10.88%**
 - [Trork Hunting Ground](expeditions/TrorkHuntingGround.md) — **25.32%**
 
 ### `Wood_Birch_Trunk`
@@ -1233,8 +1239,8 @@ The percentage shown next to each expedition is the normalized chance for that i
 ### `Wood_Oak_Trunk`
 
 - [Forest](expeditions/Forest.md) — **18.64%**
-- [Forest Edge](expeditions/ForestEdge.md) — **33.33%**
-- [Forest Entry](expeditions/ForestEntry.md) — **18.18%**
+- [Forest Edge](expeditions/ForestEdge.md) — **31.46%**
+- [Forest Entry](expeditions/ForestEntry.md) — **16.33%**
 
 ### `Wood_Palm_Trunk`
 

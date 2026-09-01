@@ -1,0 +1,14 @@
+{
+  "Group": "com.EreliaStudio",
+  "Name": "${name}",
+  "Version": "${version}",
+  "Description": "UUID-first ownership, membership, access control, and orchestration for OneBlock worlds.",
+  "ServerVersion": ">=0.6.2",
+  "Main": "com.EreliaStudio.OneBlockIslands.OneBlockIslandsPlugin",
+  "IncludesAssetPack": false,
+  "DisabledByDefault": false,
+  "Dependencies": {
+    "com.EreliaStudio:oneblock": ">=1.0.6"
+  },
+  "OptionalDependencies": {}
+}

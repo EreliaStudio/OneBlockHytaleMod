@@ -17,16 +17,17 @@
 
 | Drop | Chance per pool roll |
 |---|---:|
-| Frog Green *(mob)* (`entity:Frog_Green`) | **3.37%** |
-| Duck *(mob)* (`entity:Duck`) | **3.37%** |
-| Bluegill *(mob)* (`entity:Bluegill`) | **4.49%** |
-| Crocodile *(mob)* (`entity:Crocodile`) | **1.12%** |
-| `Fish_Bluegill_Item` | **24.72%** |
-| `Plant_Moss_Block_Green` | **20.22%** |
-| `Plant_Moss_Rug_Green` | **20.22%** |
-| `Soil_Clay` | **17.98%** |
-| `Rock_Gem_Sapphire` | **3.37%** |
-| `*Container_Bucket_State_Filled_Water` | **1.12%** |
+| Frog Green *(mob)* (`entity:Frog_Green`) | **3.19%** |
+| Duck *(mob)* (`entity:Duck`) | **3.19%** |
+| Bluegill *(mob)* (`entity:Bluegill`) | **4.26%** |
+| Crocodile *(mob)* (`entity:Crocodile`) | **1.06%** |
+| `Fish_Bluegill_Item` | **23.40%** |
+| `Plant_Moss_Block_Green` | **19.15%** |
+| `Plant_Moss_Rug_Green` | **19.15%** |
+| `Soil_Clay` | **17.02%** |
+| `Rock_Gem_Sapphire` | **3.19%** |
+| `*Container_Bucket_State_Filled_Water` | **1.06%** |
+| `Ingredient_Life_Essence` | **5.32%** |
 
 ### Completion rewards
 

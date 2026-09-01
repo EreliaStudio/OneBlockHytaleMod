@@ -169,6 +169,10 @@
 			{
 				"ID": "Plant_Fruit_Apple",
 				"Weight": 3
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 5
 			}
 		],
 		"CompletionRewards": {
@@ -248,6 +252,10 @@
 			},
 			{
 				"ID": "Plant_Crop_Corn_Item",
+				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
 				"Weight": 5
 			}
 		],
@@ -1751,6 +1759,10 @@
 			{
 				"ID": "Plant_Crop_Mushroom_Shelve_Brown",
 				"Weight": 5
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 15
 			}
 		],
 		"CompletionRewards": {
@@ -1830,6 +1842,10 @@
 			{
 				"ID": "Soil_Dirt",
 				"Weight": 18
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 10
 			}
 		],
 		"CompletionRewards": {
@@ -1898,6 +1914,10 @@
 			{
 				"ID": "Plant_Moss_Green",
 				"Weight": 16
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 5
 			}
 		],
 		"CompletionRewards": {
@@ -1994,6 +2014,10 @@
 			{
 				"ID": "*Container_Bucket_State_Filled_Water",
 				"Weight": 1
+			},
+			{
+				"ID": "Ingredient_Life_Essence",
+				"Weight": 5
 			}
 		],
 		"CompletionRewards": {

@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.EreliaStudio"
-version = "1.0.6"
+version = "1.0.7"
 
 allprojects {
     repositories {
@@ -64,6 +64,7 @@ subprojects {
         dependsOn(tasks.named("shadowJar"))
 
         val jarFile = tasks.named<ShadowJar>("shadowJar").flatMap { it.archiveFile }
+        val jarBaseName = tasks.named<ShadowJar>("shadowJar").flatMap { it.archiveBaseName }
         val modsDir = rootProject.file("hytale-server/mods")
         val packId = "${rootProject.group}_${project.name}"
         val legacyAssetPackDir = rootProject.file("hytale-server/mods/$packId")
@@ -71,7 +72,7 @@ subprojects {
         doFirst {
             println("Deploying JAR: ${jarFile.get().asFile} -> $modsDir")
             println("Removing legacy standalone asset pack when a manifest is present: $legacyAssetPackDir")
-            println("Removing older plugin JARs: ${modsDir}/OneBlock-*.jar")
+            println("Removing older plugin JARs for ${project.name}: ${modsDir}/${jarBaseName.get()}-*.jar")
         }
 
         doLast {
@@ -80,7 +81,7 @@ subprojects {
                 delete(legacyAssetPackDir)
             }
             delete(fileTree(modsDir) {
-                include("OneBlock-*.jar")
+                include("${jarBaseName.get()}-*.jar")
             })
             copy {
                 from(jarFile)

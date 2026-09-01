@@ -18,14 +18,15 @@
 
 | Drop | Chance per pool roll |
 |---|---:|
-| Rabbit *(mob)* (`entity:Rabbit`) | **4.76%** |
-| Boar *(mob)* (`entity:Boar`) | **2.38%** |
-| Boar Piglet *(mob)* (`entity:Boar_Piglet`) | **3.57%** |
-| Fox *(mob)* (`entity:Fox`) | **1.19%** |
-| `Ingredient_Stick` | **41.67%** |
-| `Wood_Oak_Trunk` | **33.33%** |
-| `Plant_Sapling_Oak` | **9.52%** |
-| `Plant_Fruit_Apple` | **3.57%** |
+| Rabbit *(mob)* (`entity:Rabbit`) | **4.49%** |
+| Boar *(mob)* (`entity:Boar`) | **2.25%** |
+| Boar Piglet *(mob)* (`entity:Boar_Piglet`) | **3.37%** |
+| Fox *(mob)* (`entity:Fox`) | **1.12%** |
+| `Ingredient_Stick` | **39.33%** |
+| `Wood_Oak_Trunk` | **31.46%** |
+| `Plant_Sapling_Oak` | **8.99%** |
+| `Plant_Fruit_Apple` | **3.37%** |
+| `Ingredient_Life_Essence` | **5.62%** |
 
 ### Completion rewards
 
