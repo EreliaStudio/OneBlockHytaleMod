@@ -7,11 +7,13 @@ Group #OneBlockHudRoot {
   LayoutMode: Center;
 
   Group #OneBlockHudContent {
-    Anchor: (Width: 760, Height: 96);
+    Anchor: (MinWidth: 260, Height: 96);
+    LayoutMode: Top;
+    Padding: (Horizontal: 30);
     Background: @OneBlockHudFrame;
 
     Label #OneBlockBarTitle {
-      Anchor: (Top: 22, Left: 40, Right: 40, Height: 36);
+      Anchor: (Top: 22, Left: 10, Right: 10, Height: 36);
       Text: "";
       Style: (
         HorizontalAlignment: Center,
@@ -26,7 +28,7 @@ Group #OneBlockHudRoot {
     }
 
     ProgressBar #OneBlockBar {
-      Anchor: (Top: 65, Left: 30, Right: 30, Height: 13);
+      Anchor: (Top: 7, Height: 13);
       Value: 0.0;
       Background: @OneBlockBarBackground;
       Bar: @OneBlockBarFill;

@@ -3,7 +3,7 @@
   "UUID": { "$binary": "AAAAAAAAAAAAAAAAAAAAAA==", "$type": "04" },
   "Seed": 0,
   "SpawnProvider": { "Id": "Global", "SpawnPoint": { "X": 0.5, "Y": 102.0, "Z": 0.5, "Pitch": 0.0, "Yaw": 0.0, "Roll": 0.0 } },
-  "WorldGen": { "Type": "Void", "Environment": "Env_Default_Void", "Tint": "#4d78a8" },
+  "WorldGen": { "Type": "Void", "Environment": "Env_Default_Void", "Tint": "#5a992b" },
   "WorldMap": { "Type": "WorldGen" },
   "ChunkStorage": { "Type": "Hytale" },
   "ChunkConfig": {},

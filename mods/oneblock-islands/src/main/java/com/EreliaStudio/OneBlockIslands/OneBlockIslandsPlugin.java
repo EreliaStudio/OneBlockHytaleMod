@@ -7,6 +7,8 @@ import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
+import com.hypixel.hytale.server.core.universe.world.events.AddWorldEvent;
+import com.hypixel.hytale.server.core.universe.world.events.StartWorldEvent;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
@@ -33,6 +35,8 @@ public final class OneBlockIslandsPlugin extends JavaPlugin {
         getEntityStoreRegistry().registerSystem(new IslandMutationSystems.Place(islands));
         getEntityStoreRegistry().registerSystem(new IslandMutationSystems.UseBlock(islands));
         getEntityStoreRegistry().registerSystem(new IslandMutationSystems.UseEntity(islands));
+        getEventRegistry().registerGlobal(AddWorldEvent.class, event -> hub.worldAdded(event.getWorld()));
+        getEventRegistry().registerGlobal(StartWorldEvent.class, event -> hub.worldStarted(event.getWorld()));
         getEventRegistry().registerGlobal(PlayerReadyEvent.class, event -> {
             PlayerRef player = event.getPlayer() == null ? null : event.getPlayer().getPlayerRef();
             if (player != null) redirectIfUnauthorized(player);

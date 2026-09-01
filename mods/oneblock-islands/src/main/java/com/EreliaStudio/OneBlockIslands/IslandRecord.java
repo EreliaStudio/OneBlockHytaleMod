@@ -8,6 +8,7 @@ import java.util.UUID;
 public final class IslandRecord {
     String id;
     String worldName;
+    String name;
     UUID ownerUuid;
     Set<UUID> members = new LinkedHashSet<>();
     Set<UUID> pendingInvites = new LinkedHashSet<>();
@@ -17,15 +18,17 @@ public final class IslandRecord {
 
     IslandRecord() {}
 
-    IslandRecord(UUID ownerUuid, String worldName) {
+    IslandRecord(UUID ownerUuid, String worldName, String name) {
         this.id = UUID.randomUUID().toString();
         this.worldName = worldName;
+        this.name = name;
         this.ownerUuid = ownerUuid;
         this.createdAt = Instant.now().toString();
     }
 
     public String id() { return id; }
     public String worldName() { return worldName; }
+    public String name() { return name; }
     public UUID ownerUuid() { return ownerUuid; }
     public Set<UUID> members() { return Set.copyOf(members); }
     public Set<UUID> pendingInvites() { return Set.copyOf(pendingInvites); }

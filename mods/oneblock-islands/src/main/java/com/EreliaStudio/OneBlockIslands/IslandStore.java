@@ -17,7 +17,8 @@ import java.util.Optional;
 import java.util.UUID;
 
 public final class IslandStore {
-    private static final int FORMAT_VERSION = 1;
+    private static final int FORMAT_VERSION = 2;
+    public static final String HOME_NAME = "Home";
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private final Path path;
     private final Map<String, IslandRecord> byWorld = new LinkedHashMap<>();
@@ -36,7 +37,7 @@ public final class IslandStore {
                     throw new IOException("Duplicate island world: " + island.worldName);
                 }
             }
-            validateUniqueMembership();
+            validateUniqueIslandNames();
         } catch (JsonParseException | IllegalStateException e) {
             throw new IOException("Malformed island database " + path + ": " + e.getMessage(), e);
         }
@@ -46,8 +47,28 @@ public final class IslandStore {
         return byWorld.values().stream().filter(i -> i.canEdit(player)).findFirst();
     }
 
+    public synchronized List<IslandRecord> findAllByPlayer(UUID player) {
+        return byWorld.values().stream().filter(i -> i.canEdit(player)).toList();
+    }
+
     public synchronized Optional<IslandRecord> findByOwner(UUID owner) {
-        return byWorld.values().stream().filter(i -> owner.equals(i.ownerUuid)).findFirst();
+        return findHome(owner);
+    }
+
+    public synchronized Optional<IslandRecord> findHome(UUID owner) {
+        return byWorld.values().stream()
+                .filter(i -> owner.equals(i.ownerUuid) && HOME_NAME.equalsIgnoreCase(i.name))
+                .findFirst();
+    }
+
+    public synchronized Optional<IslandRecord> findOwned(UUID owner, String name) {
+        if (name == null) return Optional.empty();
+        return byWorld.values().stream()
+                .filter(i -> owner.equals(i.ownerUuid) && name.equalsIgnoreCase(i.name)).findFirst();
+    }
+
+    public synchronized List<IslandRecord> findOwned(UUID owner) {
+        return byWorld.values().stream().filter(i -> owner.equals(i.ownerUuid)).toList();
     }
 
     public synchronized Optional<IslandRecord> findByWorld(String world) {
@@ -55,68 +76,140 @@ public final class IslandStore {
     }
 
     public synchronized IslandRecord create(UUID owner) throws IOException {
-        Optional<IslandRecord> existing = findByPlayer(owner);
+        Optional<IslandRecord> existing = findHome(owner);
         if (existing.isPresent()) return existing.get();
-        String worldName = "ob_" + owner.toString().replace("-", "");
+        return create(owner, HOME_NAME);
+    }
+
+    public synchronized IslandRecord create(UUID owner, String requestedName) throws IOException {
+        String name = normalizeName(requestedName);
+        Optional<IslandRecord> existing = findOwned(owner, name);
+        if (existing.isPresent()) {
+            if (HOME_NAME.equalsIgnoreCase(name)) return existing.get();
+            throw new IllegalStateException("You already own an island named " + name);
+        }
+        String worldName = HOME_NAME.equalsIgnoreCase(name)
+                ? "ob_" + owner.toString().replace("-", "")
+                : "ob_" + UUID.randomUUID().toString().replace("-", "");
         if (byWorld.containsKey(worldName)) throw new IllegalStateException("Island world collision: " + worldName);
-        IslandRecord island = new IslandRecord(owner, worldName);
+        IslandRecord island = new IslandRecord(owner, worldName, name);
         byWorld.put(worldName, island);
-        save();
+        try {
+            save();
+        } catch (IOException error) {
+            byWorld.remove(worldName);
+            throw error;
+        }
         return island;
     }
 
     public synchronized void rollbackCreate(IslandRecord island) throws IOException {
         if (island != null && byWorld.get(island.worldName) == island) {
             byWorld.remove(island.worldName);
-            save();
+            try {
+                save();
+            } catch (IOException error) {
+                byWorld.put(island.worldName, island);
+                throw error;
+            }
         }
     }
 
     public synchronized boolean invite(UUID owner, UUID invitee) throws IOException {
-        IslandRecord island = findByOwner(owner).orElseThrow(() -> new IllegalStateException("You do not own an island"));
-        if (findByPlayer(invitee).isPresent()) throw new IllegalStateException("That player already belongs to an island");
+        IslandRecord island = findHome(owner).orElseThrow(() -> new IllegalStateException("You do not own a Home island"));
+        return invite(island.worldName, owner, invitee);
+    }
+
+    public synchronized boolean invite(String worldName, UUID owner, UUID invitee) throws IOException {
+        IslandRecord island = ownedWorld(worldName, owner);
+        if (island.canEdit(invitee)) throw new IllegalStateException("That player already belongs to this island");
         boolean changed = island.pendingInvites.add(invitee);
-        if (changed) save();
+        if (changed) {
+            try {
+                save();
+            } catch (IOException error) {
+                island.pendingInvites.remove(invitee);
+                throw error;
+            }
+        }
         return changed;
     }
 
     public synchronized IslandRecord accept(UUID player) throws IOException {
-        if (findByPlayer(player).isPresent()) throw new IllegalStateException("You already belong to an island");
         IslandRecord island = byWorld.values().stream().filter(i -> i.pendingInvites.contains(player)).findFirst()
                 .orElseThrow(() -> new IllegalStateException("You have no pending island invite"));
         island.pendingInvites.remove(player);
         island.members.add(player);
-        save();
+        try {
+            save();
+        } catch (IOException error) {
+            island.members.remove(player);
+            island.pendingInvites.add(player);
+            throw error;
+        }
         return island;
     }
 
     public synchronized void kick(UUID owner, UUID member) throws IOException {
-        IslandRecord island = findByOwner(owner).orElseThrow(() -> new IllegalStateException("You do not own an island"));
+        IslandRecord island = findHome(owner).orElseThrow(() -> new IllegalStateException("You do not own a Home island"));
+        kick(island.worldName, owner, member);
+    }
+
+    public synchronized void kick(String worldName, UUID owner, UUID member) throws IOException {
+        IslandRecord island = ownedWorld(worldName, owner);
         if (!island.members.remove(member)) throw new IllegalStateException("That player is not a member");
-        save();
+        try {
+            save();
+        } catch (IOException error) {
+            island.members.add(member);
+            throw error;
+        }
     }
 
     public synchronized void leave(UUID player) throws IOException {
         IslandRecord island = findByPlayer(player).orElseThrow(() -> new IllegalStateException("You do not belong to an island"));
+        leave(island.worldName, player);
+    }
+
+    public synchronized void leave(String worldName, UUID player) throws IOException {
+        IslandRecord island = findByWorld(worldName).filter(i -> i.canEdit(player))
+                .orElseThrow(() -> new IllegalStateException("You do not belong to that island"));
         if (player.equals(island.ownerUuid)) throw new IllegalStateException("The owner cannot leave; use an admin repair command");
         island.members.remove(player);
-        save();
+        try {
+            save();
+        } catch (IOException error) {
+            island.members.add(player);
+            throw error;
+        }
     }
 
     public synchronized void adminAdd(UUID owner, UUID player) throws IOException {
-        IslandRecord island = findByOwner(owner).orElseThrow(() -> new IllegalStateException("Owner has no island"));
-        if (findByPlayer(player).isPresent()) throw new IllegalStateException("Player already belongs to an island");
-        island.pendingInvites.remove(player);
+        IslandRecord island = findHome(owner).orElseThrow(() -> new IllegalStateException("Owner has no Home island"));
+        if (island.canEdit(player)) throw new IllegalStateException("Player already belongs to that island");
+        boolean wasInvited = island.pendingInvites.remove(player);
         island.members.add(player);
-        save();
+        try {
+            save();
+        } catch (IOException error) {
+            island.members.remove(player);
+            if (wasInvited) island.pendingInvites.add(player);
+            throw error;
+        }
     }
 
     public synchronized void adminRemove(UUID owner, UUID player) throws IOException { kick(owner, player); }
 
-    public synchronized void deleteMetadata(UUID owner) throws IOException {
-        IslandRecord island = findByOwner(owner).orElseThrow(() -> new IllegalStateException("Owner has no island"));
+    public synchronized IslandRecord deleteMetadata(UUID owner) throws IOException {
+        IslandRecord island = findHome(owner).orElseThrow(() -> new IllegalStateException("Owner has no Home island"));
         byWorld.remove(island.worldName);
-        save();
+        try {
+            save();
+        } catch (IOException error) {
+            byWorld.put(island.worldName, island);
+            throw error;
+        }
+        return island;
     }
 
     private void save() throws IOException {
@@ -133,24 +226,38 @@ public final class IslandStore {
     private static void validate(IslandRecord island) throws IOException {
         if (island == null || island.ownerUuid == null || island.worldName == null || island.worldName.isBlank())
             throw new IOException("Island entry is missing ownerUuid or worldName");
+        if (island.name == null || island.name.isBlank()) island.name = HOME_NAME;
         if (island.members == null) island.members = new java.util.LinkedHashSet<>();
         if (island.pendingInvites == null) island.pendingInvites = new java.util.LinkedHashSet<>();
         if (island.bannedVisitors == null) island.bannedVisitors = new java.util.LinkedHashSet<>();
         island.members.remove(island.ownerUuid);
     }
 
-    private void validateUniqueMembership() throws IOException {
-        Map<UUID, String> membership = new LinkedHashMap<>();
+    private void validateUniqueIslandNames() throws IOException {
+        Map<String, String> names = new LinkedHashMap<>();
         for (IslandRecord island : byWorld.values()) {
-            for (UUID player : concat(island.ownerUuid, island.members)) {
-                String prior = membership.putIfAbsent(player, island.worldName);
-                if (prior != null) throw new IOException("Player " + player + " belongs to both " + prior + " and " + island.worldName);
-            }
+            String key = island.ownerUuid + "\u0000" + island.name.toLowerCase(java.util.Locale.ROOT);
+            String prior = names.putIfAbsent(key, island.worldName);
+            if (prior != null) throw new IOException("Owner " + island.ownerUuid + " has duplicate island name " + island.name);
         }
     }
 
-    private static List<UUID> concat(UUID owner, java.util.Set<UUID> members) {
-        List<UUID> result = new ArrayList<>(); result.add(owner); result.addAll(members); return result;
+    private IslandRecord ownedWorld(String worldName, UUID owner) {
+        IslandRecord island = byWorld.get(worldName);
+        if (island == null || !owner.equals(island.ownerUuid)) {
+            throw new IllegalStateException("You do not own that island");
+        }
+        return island;
+    }
+
+    private static String normalizeName(String requestedName) {
+        String name = requestedName == null ? "" : requestedName.trim();
+        if (name.isEmpty()) throw new IllegalArgumentException("Island name is required");
+        if (name.length() > 32) throw new IllegalArgumentException("Island names may contain at most 32 characters");
+        if (!name.matches("[A-Za-z0-9_-]+")) {
+            throw new IllegalArgumentException("Island names may only contain letters, numbers, underscores, and hyphens");
+        }
+        return HOME_NAME.equalsIgnoreCase(name) ? HOME_NAME : name;
     }
 
     private static final class Database {
