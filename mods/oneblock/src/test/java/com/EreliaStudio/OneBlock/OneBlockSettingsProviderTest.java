@@ -15,12 +15,12 @@ final class OneBlockSettingsProviderTest
     Path dataDirectory;
 
     @Test
-    void falloffHeightDefaultsToMinusTwentyForEveryWorld()
+    void falloffHeightDefaultsToOneForEveryWorld()
     {
         OneBlockSettingsProvider settings = settings();
 
-        assertEquals(-20.0, settings.getFalloffHeight("default"));
-        assertEquals(-20.0, settings.getFalloffHeight("oneblock-party"));
+        assertEquals(1.0, settings.getFalloffHeight("default"));
+        assertEquals(1.0, settings.getFalloffHeight("oneblock-party"));
     }
 
     @Test
@@ -33,7 +33,7 @@ final class OneBlockSettingsProviderTest
         OneBlockSettingsProvider reloaded = settings();
         assertEquals(-35.0, reloaded.getFalloffHeight("default"));
         assertEquals(12.5, reloaded.getFalloffHeight("oneblock-party"));
-        assertEquals(-20.0, reloaded.getFalloffHeight("another-world"));
+        assertEquals(1.0, reloaded.getFalloffHeight("another-world"));
     }
 
     @Test
@@ -44,7 +44,7 @@ final class OneBlockSettingsProviderTest
         OneBlockSettingsProvider settings = settings();
 
         assertFalse(settings.isFallProtectionEnabled());
-        assertEquals(-20.0, settings.getFalloffHeight("default"));
+        assertEquals(1.0, settings.getFalloffHeight("default"));
     }
 
     private OneBlockSettingsProvider settings()

@@ -147,7 +147,7 @@ The **Dungeon Enchanter** is the crafting station for dungeon crystals.
 
 - The world is a **complete void** — no terrain, no natural generation.
 - Players spawn at **(0.5, 102, 0.5)**, directly above the OneBlock.
-- **Fall protection** uses a per-world cutoff at Y=-20 by default. Below it, players are teleported back to spawn when protection is enabled or killed by out-of-world damage when it is disabled; non-player entities and dropped items are removed.
+- **Fall protection** uses a per-world cutoff at Y=1 by default. Below it, players are teleported back to spawn when protection is enabled or killed by out-of-world damage when it is disabled; non-player entities and dropped items are removed.
 - The world has no PvP by default.
 - Players build their base entirely from materials dropped by the OneBlock.
 

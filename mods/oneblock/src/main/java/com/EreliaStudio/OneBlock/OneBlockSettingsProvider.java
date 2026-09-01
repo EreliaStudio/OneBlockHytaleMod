@@ -15,7 +15,7 @@ import java.util.Map;
 public final class OneBlockSettingsProvider
 {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    public static final double DEFAULT_FALLOFF_HEIGHT = -20.0;
+    public static final double DEFAULT_FALLOFF_HEIGHT = 1.0;
 
     private final Path filePath;
     private volatile SaveData state;
