@@ -29,16 +29,13 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     private static final int DUNGEON_SPAWN_RADIUS = 5;
 
     private final OneBlockDropRegistry dropRegistry;
-    private final OneBlockWorldStateRegistry stateRegistry;
     private final OneBlockRootRegistry rootRegistry;
 
     public OneBlockBreakSystem(OneBlockDropRegistry dropRegistry,
-                               OneBlockWorldStateRegistry stateRegistry,
                                OneBlockRootRegistry rootRegistry)
     {
         super(BreakBlockEvent.class);
         this.dropRegistry = dropRegistry;
-        this.stateRegistry = stateRegistry;
         this.rootRegistry = rootRegistry;
     }
 
@@ -67,11 +64,17 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         Vector3i pos = event.getTargetBlock();
         OneBlockRootRegistry.RootEntry root = rootRegistry.find(world, pos);
-        boolean generatedWorldBlock = stateRegistry.isManaged(world)
-                && OneBlockBlockIds.ONEBLOCK_POSITION.equals(pos);
-        if (root == null && !generatedWorldBlock) return;
+        if (root == null) return;
+        PlayerRef playerRef = store.getComponent(ref, PlayerRef.getComponentType());
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null && (playerRef == null
+                || !plugin.mayUse(world, playerRef.getUuid(), root)))
+        {
+            event.setCancelled(true);
+            return;
+        }
 
-        if (root != null && OneBlockDamageSystem.isRemovalTool(event.getItemInHand()))
+        if (OneBlockDamageSystem.isRemovalTool(event.getItemInHand()))
         {
             removeRoot(world, pos, event, root, player);
             return;
@@ -81,16 +84,12 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         {
             // Creative removal does not run OneBlock progression, but it must
             // not leave a stale ownership record behind.
-            if (root != null && isCreative(player)) rootRegistry.remove(world, pos);
+            if (isCreative(player)) rootRegistry.remove(world, pos);
             return;
         }
 
-        OneBlockExpeditionStateProvider expeditionState = root == null
-                ? stateRegistry.expeditionState(world)
-                : rootRegistry.expeditionState(world, root.ownerId());
-        OneBlockDungeonStateProvider dungeonState = root == null
-                ? stateRegistry.dungeonState(world)
-                : rootRegistry.dungeonState(world, root.ownerId());
+        OneBlockExpeditionStateProvider expeditionState = rootRegistry.expeditionState(world, root.ownerId());
+        OneBlockDungeonStateProvider dungeonState = rootRegistry.dungeonState(world, root.ownerId());
 
         // Cancel native removal before replacing the OneBlock synchronously.
         // This keeps the coordinate occupied throughout the final damage tick.
@@ -108,7 +107,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                              pos.y() + REWARD_OFFSET.y(),
                              pos.z() + REWARD_OFFSET.z()),
                 ref,
-                store.getComponent(ref, PlayerRef.getComponentType())
+                playerRef
         );
 
         if (dungeonState.isDungeonActive())
@@ -374,12 +373,6 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
                                  OneBlockRootRegistry.RootEntry root,
                                  String blockId)
     {
-        if (root == null)
-        {
-            world.setBlock(source.x(), source.y(), source.z(), blockId);
-            return;
-        }
-
         for (Vector3i rootPosition : rootRegistry.positions(world, root.ownerId()))
         {
             world.setBlock(rootPosition.x(), rootPosition.y(), rootPosition.z(), blockId);

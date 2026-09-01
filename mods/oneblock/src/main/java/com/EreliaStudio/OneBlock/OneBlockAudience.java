@@ -32,9 +32,13 @@ final class OneBlockAudience
         Set<UUID> notified = new HashSet<>();
         notifyPlayer(actor, action, notified);
 
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
         for (PlayerRef playerRef : world.getPlayerRefs())
         {
-            if (!root.ownerId().equals(playerRef.getUuid())) continue;
+            UUID ownerId = plugin == null
+                    ? playerRef.getUuid()
+                    : plugin.resolveOwner(world, playerRef.getUuid());
+            if (!root.ownerId().equals(ownerId)) continue;
             notifyPlayer(playerRef.getComponent(Player.getComponentType()), action, notified);
         }
     }

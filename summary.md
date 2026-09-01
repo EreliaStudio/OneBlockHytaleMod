@@ -1,6 +1,6 @@
 # OneBlock Hytale Mod — Current Implementation Summary
 
-OneBlock is a server-side Hytale game mode with an embedded asset pack. Each managed world is a persistent void expedition instance containing exactly one regenerating OneBlock. A server can run multiple OneBlock worlds at the same time, with separate players, progression, dungeon state, and HUD updates in every world.
+OneBlock is a server-side Hytale mechanic with an embedded asset pack. The core tracks regenerating OneBlocks by world, position, and owner without controlling world generation. The companion islands module creates isolated void islands and maps owners and members to a shared center OneBlock.
 
 ## Current scope
 
@@ -8,13 +8,13 @@ OneBlock is a server-side Hytale game mode with an embedded asset pack. Each man
 | --- | --- |
 | Mod version | `1.0.5` |
 | Supported server | Hytale Server `>=0.5.2` |
-| Gradle modules | One module: `:oneblock` |
+| Gradle modules | `:oneblock` core and `:oneblock-islands` orchestration |
 | Content definitions | 112 total: 88 expeditions and 24 dungeons |
 | Difficulty tiers | Easy, Advanced, Difficult, Hard, and Expert |
 | Starter expedition | Meadow (stable internal ID: `Default`) |
-| Managed worlds | Any number of explicitly created simultaneous OneBlock worlds; the normal default world is untouched |
-| OneBlock position | `(0, 100, 0)` in every managed world |
-| Player spawn | `(0.5, 102, 0.5)` |
+| OneBlock scope | Registered world + block position + owner |
+| Island OneBlock position | `(0, 100, 0)` |
+| Island spawn | `(0.5, 102, 0.5)` |
 | Languages | English, Spanish, French, and Slovak |
 | Generated visual assets | 112 OneBlock variants and 112 matching crystals |
 
@@ -27,35 +27,23 @@ This is no longer only a proof of concept: the multiplayer world lifecycle, data
 3. Regular expedition progress decreases once per completed block break.
 4. Expedition Points and crystal unlocks are awarded through configured completion rewards.
 5. Players craft expedition or dungeon crystals at their corresponding enchanter.
-6. Using a crystal changes that world's OneBlock and starts its configured expedition or dungeon.
-7. Completion returns the world to the default OneBlock.
+6. Using a crystal changes the accessible registered roots and starts their configured expedition or dungeon.
+7. Completion returns those roots to the default OneBlock.
 
 ## Multiplayer and multi-world support
 
-The server maintains a registry of managed OneBlock worlds. Every managed world has:
+The core root registry permits multiple independent owners and positions in any existing world. Each owner's state is persisted per world. The islands module creates a dedicated world per island and resolves authorized members to the island owner's state, so the group shares progression and HUD updates without introducing island concepts into the core.
 
-- Its own OneBlock at `(0, 100, 0)`.
-- Its own active expedition and remaining-break counter.
-- Its own active dungeon and wave index.
-- World-scoped HUD broadcasts and completion messages.
-- Persistent state that is restored independently after a restart.
+## Island world initialization and void safety
 
-Additional worlds are created with the OneBlock void-world configuration, registered, loaded, and then populated with the requested players. The service API accepts a collection of players, so a party can be moved into a newly created expedition world together. The `/oneblock` command uses Hytale's target-player command support for command-line transfers.
-
-World names accept letters, numbers, `_`, and `-`, with a maximum length of 48 characters. Passing no name, a blank name, or `-` during creation generates a name in the form `oneblock-xxxxxxxx`.
-
-Managed world names persist in `oneblock-worlds.json`. Every OneBlock world stores isolated expedition and dungeon state under a Base64-encoded `worlds/<encoded-world-name>/` data directory. The normal `default` world is never registered or modified, and legacy registry entries for it are removed on startup.
-
-## World initialization and void safety
-
-Managed worlds use a persistent void generator configuration with environment `Env_Default_Void`. On initialization the mod:
+Only the islands module creates persistent void worlds with environment `Env_Default_Void`. It:
 
 - Places `OneBlock_Block_Default` at the fixed OneBlock position.
 - Sets the player spawn above the block.
 - Applies the configured sky/environment tint.
-- Avoids reinitializing the same world more than once during a server run.
+- Registers the center block through the core OneBlock API.
 
-Fall protection is enabled by default. Each void world has a falloff height of `Y=-20` by default. Players below it are returned to the configured world spawn; if fall protection is disabled, they are killed with out-of-world damage instead. Non-player entities and dropped items below it are removed. Per-world heights and the protection setting persist in `oneblock-settings.json`.
+Island fall protection returns players below `Y=1` to the island spawn and removes fallen non-player entities. The core OneBlock mod contains no world generator or fall system. The server's `default` world is untouched.
 
 ## Deterministic block durability and tools
 
@@ -160,13 +148,13 @@ Important current behavior: dungeon progression is **break-driven**. The mod doe
 
 ## Crystals, crafting, and progression
 
-Every expedition and dungeon has a corresponding consumable crystal. A crystal can be used only inside a managed OneBlock world. Using it:
+Every expedition and dungeon has a corresponding consumable crystal. A crystal can be used when the player has an accessible registered OneBlock context. Using it:
 
 - Replaces the current OneBlock with the corresponding visual variant.
-- Ends the other active mode in that world.
+- Ends the other active mode for that root owner.
 - Starts the selected expedition or dungeon state.
 - Consumes the held crystal.
-- Updates the HUD only for players in that world.
+- Updates the HUD for players mapped to that same root owner.
 
 The **Crystal Enchanter** contains regular expedition crystal recipes organized by the five difficulty tiers. The **Dungeon Enchanter** contains the dungeon crystal recipes. Both benches are registered as craftable content.
 
@@ -184,7 +172,7 @@ The mod includes a custom top-centered expedition panel built from:
 
 The HUD displays an uppercase expedition or dungeon title and a graphical progress bar. Regular expeditions use remaining versus total breaks; dungeons use completed versus total waves.
 
-HUD state is scoped by world, restored when a player becomes ready or is transferred into a managed world, and cleared on completion or an administrative stop. Players in other simultaneous OneBlock worlds do not receive the update.
+HUD state is restored only when the current world contains an accessible registered OneBlock. Entering spawn or any world without one clears the HUD. Island members resolve to their island owner's shared state.
 
 Because the UI resources are embedded in the plugin JAR and `IncludesAssetPack` is enabled, no separate standalone asset-pack folder is required after deployment.
 
@@ -194,10 +182,9 @@ The mod writes state after progression changes so active sessions can survive a 
 
 - Expedition: active ID, remaining breaks, and total breaks.
 - Dungeon: active ID and current wave index.
-- World registry: names of managed OneBlock worlds.
-- Settings: fall-protection state.
+- Root registry: world, position, owner UUID, and owner name.
 
-Each explicitly created world uses independent `expedition.json` and `dungeon.json` files below the plugin's `worlds/` data directory. Legacy top-level state files are no longer used.
+Each owner uses independent expedition and dungeon files under the encoded `root-worlds/<world>/owners/<uuid>/` data directory.
 
 ## Server commands
 
@@ -205,17 +192,11 @@ The root command is `/oneblock`. It is implemented as an administrative target-p
 
 | Command | Result |
 | --- | --- |
-| `/oneblock create <worldName>` | Creates/loads a managed void world and moves the target player into it. Use `-` to generate a name. |
-| `/oneblock join <worldName>` | Moves the target player into an existing managed OneBlock world. |
-| `/oneblock list` | Lists registered OneBlock worlds. |
-| `/oneblock status` | Shows the active expedition and remaining breaks, or the current dungeon wave, for the target player's world. |
-| `/oneblock start <expeditionId>` | Starts the requested expedition in the current managed world. |
+| `/oneblock status` | Shows the accessible OneBlock state for the target player in the current world. |
+| `/oneblock start <expeditionId>` | Starts the requested expedition for that OneBlock owner. |
 | `/oneblock stop` | Ends the current expedition/dungeon, restores the default block, and clears the HUD. |
-| `/oneblock fallProtection true` | Enables persistent void fall protection. |
-| `/oneblock fallProtection false` | Disables persistent void fall protection. |
-| `/oneblock falloffHeight=-20` | Sets the persistent falloff height for the target player's current world. |
 
-The compact forms `/oneblock fallProtection=true` and `/oneblock fallProtection=false` are also accepted. `/oneblock falloffHeight -20` is equivalent to the compact form above. Actions other than `create`, `join`, `list`, and the fall settings require the target player to be in a managed OneBlock world.
+Island creation, joining, membership, and travel are handled by `/island` commands.
 
 ## Localization
 

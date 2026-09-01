@@ -2,9 +2,9 @@
 
 ## 1. Game loop
 
-You begin at the server's normal spawn. An administrator can create a separate
-OneBlock world with `/oneblock create <worldName>` or move you into an existing
-one with `/oneblock join <worldName>`. In that void world, every time you finish
+You begin at the server's normal spawn. Use `/island` to create or return to
+your personal island, or `/island join` to visit an island you belong to. The
+islands mod creates a separate void world with one shared OneBlock. Every time you finish
 breaking the OneBlock, it immediately returns and gives you a
 random reward. It may drop building materials, plants, ores, equipment, or
 other useful resources. Some breaks summon animals or hostile creatures
@@ -38,10 +38,10 @@ protected platform and suitable equipment before starting one. Clear each wave
 before breaking the block again, because the next wave can be summoned even if
 enemies from the previous wave are still alive.
 
-In multiplayer, everyone in the same OneBlock world shares its active
+In multiplayer, an island owner and authorized members share its active
 expedition, dungeon, and progress. Using a crystal changes the activity for the
-whole group. Servers can host several independent OneBlock worlds at the same
-time, allowing multiple parties to progress separately.
+whole group. Independent Roots in ordinary worlds retain their own owner-scoped
+progress.
 
 Your expedition and dungeon progress is saved between server restarts. Fall
 protection is enabled by default and returns players to the island if they fall
@@ -67,28 +67,26 @@ saved progress, so a replacement Root can continue the same game later.
 
 ## 2. Commands
 
-The `/oneblock` commands are primarily intended for server administrators.
-They are used to create separate party worlds, move players between them, and
-manage an expedition when necessary.
+The `/oneblock` commands are primarily intended for server administrators to
+inspect or control a registered OneBlock. Island creation and travel use the
+`/island` command tree.
 
 | Command | Description |
 | --- | --- |
-| `/oneblock create <worldName>` | Creates a OneBlock world and moves the targeted player into it. Use `-` to generate a name. |
-| `/oneblock join <worldName>` | Moves the targeted player into an existing OneBlock world. |
-| `/oneblock list` | Lists all registered OneBlock worlds. |
-| `/oneblock status` | Shows the current expedition or dungeon progress. |
-| `/oneblock start <expeditionId>` | Starts an expedition in the current world. |
-| `/oneblock stop` | Stops the current activity and restores Meadow. |
-| `/oneblock fallProtection true` | Enables protection from falling into the void. |
-| `/oneblock fallProtection false` | Disables protection from falling into the void. |
-| `/oneblock falloffHeight=-20` | Sets the void cutoff for your current world. |
+| `/island` | Creates your Home island if needed, then enters it. |
+| `/island create <name>` | Creates an additional island. |
+| `/island join <owner> [island]` | Enters an island you belong to. |
+| `/oneblock status` | Shows the targeted player's accessible OneBlock progress in the current world. |
+| `/oneblock start <expeditionId>` | Starts an expedition on that OneBlock. |
+| `/oneblock stop` | Stops its current activity and restores Meadow. |
 
-World names may contain letters, numbers, `_`, and `-`. If no custom name is
-needed, `/oneblock create -` generates one automatically. The `status`, `start`,
-and `stop` commands affect the targeted player's current OneBlock world, not
-every world on the server. Each dedicated OneBlock world contains exactly one
-generated OneBlock. Expedition block items cannot be placed directly; use a
-crafted OneBlock Root when adding a player-owned game to a shared world.
+The `status`, `start`, and `stop` commands affect only the OneBlock context
+available to the targeted player in the current world. Expedition block items
+cannot be placed directly; use a crafted OneBlock Root when adding a
+player-owned game to an ordinary world.
+
+The progress bar appears only while you are in a world containing a OneBlock
+available to you. It is cleared when you return to a spawn world without one.
 
 After entering a OneBlock world, regular players do not need further commands
 for normal progression: breaking the starter OneBlock begins Meadow, and using

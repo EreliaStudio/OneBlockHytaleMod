@@ -32,9 +32,7 @@ final class IslandMutationSystems {
             PlayerRef player = store.getComponent(ref, PlayerRef.getComponentType());
             EntityStore external = store.getExternalData();
             World world = external == null ? null : external.getWorld();
-            if (world == null || (!HubService.WORLD_NAME.equals(world.getName())
-                    && islands.findByWorld(world.getName()).isEmpty()
-                    && !IslandAccess.isManagedOneBlockWorld(world))) return false;
+            if (world == null || islands.findByWorld(world.getName()).isEmpty()) return false;
             if (IslandAccess.mayEdit(islands, world, player)) return false;
             if (player != null) player.sendMessage(Message.raw("You cannot modify this island."));
             return true;

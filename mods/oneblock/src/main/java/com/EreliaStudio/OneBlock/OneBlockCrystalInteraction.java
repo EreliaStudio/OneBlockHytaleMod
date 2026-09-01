@@ -78,9 +78,8 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
             return;
         }
 
-        OneBlockWorldStateRegistry stateRegistry = plugin.getWorldStateRegistry();
         OneBlockRootRegistry rootRegistry = plugin.getRootRegistry();
-        if (stateRegistry == null || rootRegistry == null)
+        if (rootRegistry == null)
         {
             OneBlockInteractionUtil.fail(interactionContext, LOGGER, "OneBlock state is unavailable");
             return;
@@ -94,16 +93,18 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
                 ? null
                 : commandBuffer.getComponent(actorEntityRef, PlayerRef.getComponentType());
 
-        boolean hasPersonalRoots = actorPlayerRef != null
-                && rootRegistry.hasRoots(world, actorPlayerRef.getUuid());
-        OneBlockRootRegistry.RootEntry root = hasPersonalRoots
+        java.util.UUID ownerId = actorPlayerRef == null
+                ? null
+                : plugin.resolveOwner(world, actorPlayerRef.getUuid());
+        boolean hasAccessibleRoots = ownerId != null && rootRegistry.hasRoots(world, ownerId);
+        OneBlockRootRegistry.RootEntry root = hasAccessibleRoots
                 ? new OneBlockRootRegistry.RootEntry(
-                        actorPlayerRef.getUuid(),
+                        ownerId,
                         actorPlayerRef.getUsername()
                 )
                 : null;
 
-        if (root == null && !stateRegistry.isManaged(world))
+        if (root == null)
         {
             OneBlockInteractionUtil.fail(
                     interactionContext,
@@ -112,13 +113,14 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
             );
             return;
         }
+        if (!plugin.mayUse(world, actorPlayerRef.getUuid(), root))
+        {
+            OneBlockInteractionUtil.fail(interactionContext, LOGGER, "You cannot use this OneBlock");
+            return;
+        }
 
-        OneBlockExpeditionStateProvider expeditionState = root == null
-                ? stateRegistry.expeditionState(world)
-                : rootRegistry.expeditionState(world, root.ownerId());
-        OneBlockDungeonStateProvider dungeonState = root == null
-                ? stateRegistry.dungeonState(world)
-                : rootRegistry.dungeonState(world, root.ownerId());
+        OneBlockExpeditionStateProvider expeditionState = rootRegistry.expeditionState(world, root.ownerId());
+        OneBlockDungeonStateProvider dungeonState = rootRegistry.dungeonState(world, root.ownerId());
 
         String newBlockId = OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
         world.execute(() -> setTargetBlocks(world, rootRegistry, root, newBlockId));
@@ -162,13 +164,6 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
                                         OneBlockRootRegistry.RootEntry root,
                                         String blockId)
     {
-        if (root == null)
-        {
-            Vector3i position = OneBlockBlockIds.ONEBLOCK_POSITION;
-            world.setBlock(position.x(), position.y(), position.z(), blockId);
-            return;
-        }
-
         for (Vector3i position : rootRegistry.positions(world, root.ownerId()))
         {
             world.setBlock(position.x(), position.y(), position.z(), blockId);

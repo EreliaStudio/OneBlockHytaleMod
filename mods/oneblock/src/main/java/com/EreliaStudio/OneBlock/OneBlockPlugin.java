@@ -2,37 +2,31 @@ package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
-import com.hypixel.hytale.server.core.event.events.PrepareUniverseEvent;
-import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.event.events.player.AddPlayerToWorldEvent;
+import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
-import com.hypixel.hytale.server.core.universe.world.WorldConfig;
-import com.hypixel.hytale.server.core.universe.world.WorldConfigProvider;
-import com.hypixel.hytale.server.core.universe.world.events.AddWorldEvent;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import org.joml.Vector3i;
 
 import javax.annotation.Nonnull;
-import java.nio.file.Path;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
-import java.util.logging.Level;
+import java.util.UUID;
 
+/** Provides position-scoped OneBlock gameplay without owning world lifecycle. */
 public final class OneBlockPlugin extends JavaPlugin
 {
-    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
     private static OneBlockPlugin instance;
-
     private OneBlockDropRegistry dropRegistry;
-    private OneBlockWorldStateRegistry worldStateRegistry;
     private OneBlockRootRegistry rootRegistry;
-    private OneBlockWorldService worldService;
     private OneBlockHudService hudService;
-    private OneBlockSettingsProvider settingsProvider;
+    private volatile OneBlockOwnerResolver ownerResolver = (world, playerId) -> playerId;
+    private volatile OneBlockAccessResolver accessResolver = (world, playerId, root) -> true;
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -48,55 +42,23 @@ public final class OneBlockPlugin extends JavaPlugin
     @Override
     protected void setup()
     {
-        LOGGER.at(Level.INFO).log("Setting up OneBlock...");
-
-        // ── Services ─────────────────────────────────────────────────────────
         hudService = new OneBlockHudService();
-        settingsProvider = new OneBlockSettingsProvider(
-                getDataDirectory().resolve("oneblock-settings.json")
-        );
-
-        // ── Drop engine ──────────────────────────────────────────────────────
+        rootRegistry = new OneBlockRootRegistry(getDataDirectory());
         dropRegistry = new OneBlockDropRegistry();
 
-        worldStateRegistry = new OneBlockWorldStateRegistry(getDataDirectory());
-        rootRegistry = new OneBlockRootRegistry(getDataDirectory());
-        worldService = new OneBlockWorldService(worldStateRegistry, hudService);
-
         dropRegistry.registerDropable(new ItemDropable(OneBlockDropRegistry.DEFAULT_ITEM_ID));
-
-        getEntityStoreRegistry().registerSystem(
-                new OneBlockDamageSystem(worldStateRegistry, rootRegistry)
-        );
-
-        getEntityStoreRegistry().registerSystem(
-                new OneBlockBreakSystem(
-                        dropRegistry,
-                        worldStateRegistry,
-                        rootRegistry
-                )
-        );
-
+        getEntityStoreRegistry().registerSystem(new OneBlockDamageSystem(rootRegistry));
+        getEntityStoreRegistry().registerSystem(new OneBlockBreakSystem(dropRegistry, rootRegistry));
         getEntityStoreRegistry().registerSystem(new OneBlockPlacementSystem(rootRegistry));
-
         getCommandRegistry().registerCommand(new OneBlockCommand());
 
-        // ── Expedition progression ───────────────────────────────────────────
         OneBlockPools.setResolver(new OneBlockExpeditionPoolResolver());
-
-        Map<String, Map<String, Integer>> defaultWeights =
-                OneBlockExpeditionDefaults.getDefaultWeights();
-
-        dropRegistry.registerDefaultWeights(defaultWeights);
-
-        Map<String, Set<String>> dropsByExpedition =
-                OneBlockExpeditionDefaults.getDefaultDropIdsByExpedition();
-
+        dropRegistry.registerDefaultWeights(OneBlockExpeditionDefaults.getDefaultWeights());
+        Map<String, Set<String>> dropsByExpedition = OneBlockExpeditionDefaults.getDefaultDropIdsByExpedition();
         for (Map.Entry<String, Set<String>> entry : dropsByExpedition.entrySet())
         {
             registerDropables(dropRegistry, entry.getValue());
         }
-
         registerDropables(dropRegistry, OneBlockExpeditionDefaults.getCompletionRewardDropIds());
         registerDropables(dropRegistry, OneBlockDungeonDefaults.getAllEntityIds());
         registerDropables(dropRegistry, OneBlockDungeonDefaults.getCompletionRewardDropIds());
@@ -107,144 +69,41 @@ public final class OneBlockPlugin extends JavaPlugin
                 OneBlockCrystalInteraction.CODEC
         );
 
-        // ── World ────────────────────────────────────────────────────────────
-        getEntityStoreRegistry().registerSystem(new OneBlockFallBackSystem(settingsProvider, worldStateRegistry));
-
-        getEventRegistry().registerGlobal(PrepareUniverseEvent.class, event ->
-        {
-            WorldConfigProvider original = event.getWorldConfigProvider();
-
-            event.setWorldConfigProvider(new WorldConfigProvider()
-            {
-                @Override
-                public CompletableFuture<WorldConfig> load(Path path, String worldName)
-                {
-                    CompletableFuture<WorldConfig> future = original.load(path, worldName);
-
-                    if (!worldStateRegistry.isManaged(worldName))
-                    {
-                        return future;
-                    }
-
-                    return future.thenApply(config ->
-                    {
-                        if (config != null)
-                        {
-                            config.setWorldGenProvider(OneBlockWorldInitializer.voidWorldGenProvider());
-                            config.markChanged();
-                        }
-
-                        return config;
-                    });
-                }
-
-                @Override
-                public CompletableFuture<Void> save(Path path, WorldConfig config, World world)
-                {
-                    return original.save(path, config, world);
-                }
-            });
-        });
-
-        getEventRegistry().registerGlobal(AddWorldEvent.class, event ->
-        {
-            World world = event.getWorld();
-
-            if (worldStateRegistry.isManaged(world))
-            {
-                OneBlockWorldBootstrap.ensureVoidWorldAtSavePath(world.getSavePath());
-                OneBlockWorldInitializer.initializeWorld(world, resolveActiveBlockId(world));
-            }
-        });
-
         getEventRegistry().registerGlobal(PlayerReadyEvent.class, event ->
         {
+            Player player = event.getPlayer();
             Ref<EntityStore> playerEntityRef = event.getPlayerRef();
             EntityStore entityStore = playerEntityRef == null || playerEntityRef.getStore() == null
                     ? null
                     : playerEntityRef.getStore().getExternalData();
             World world = entityStore == null ? null : entityStore.getWorld();
-            Player player = event.getPlayer();
-            if (!worldStateRegistry.isManaged(world))
-            {
-                PlayerRef playerRef = player == null ? null : player.getPlayerRef();
-                if (playerRef != null && rootRegistry.hasRoots(world, playerRef.getUuid()))
-                {
-                    restoreRootHud(player, world, playerRef.getUuid());
-                }
-                return;
-            }
-
-            OneBlockDungeonStateProvider dungeonState = worldStateRegistry.dungeonState(world);
-            if (dungeonState.isDungeonActive())
-            {
-                String dungeonId = dungeonState.getActiveDungeonId();
-                int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
-                hudService.showDungeonStarted(player, dungeonId, totalWaves);
-                hudService.updateDungeonWave(player, dungeonId, dungeonState.getCurrentWaveIndex(), totalWaves);
-                return;
-            }
-
-            OneBlockExpeditionStateProvider expeditionState = worldStateRegistry.expeditionState(world);
-            if (!expeditionState.hasActiveExpedition())
-            {
-                hudService.clear(player);
-                return;
-            }
-
-            hudService.restoreExpeditionHud(
-                    player,
-                    expeditionState.getActiveExpeditionId(),
-                    expeditionState.getTicksRemaining(),
-                    expeditionState.getTotalTicks()
-            );
+            PlayerRef playerRef = playerEntityRef == null || playerEntityRef.getStore() == null
+                    ? null
+                    : playerEntityRef.getStore().getComponent(playerEntityRef, PlayerRef.getComponentType());
+            updateHudForWorld(playerRef, player, world);
         });
-
-        LOGGER.at(Level.INFO).log("Setup complete.");
-    }
-
-    @Override
-    protected void start()
-    {
-        LOGGER.at(Level.INFO).log("Started.");
+        getEventRegistry().registerGlobal(AddPlayerToWorldEvent.class, event ->
+        {
+            PlayerRef playerRef = event.getHolder() == null
+                    ? null
+                    : event.getHolder().getComponent(PlayerRef.getComponentType());
+            Player player = event.getHolder() == null
+                    ? null
+                    : event.getHolder().getComponent(Player.getComponentType());
+            World world = event.getWorld();
+            updateHudForWorld(playerRef, player, world);
+        });
     }
 
     @Override
     protected void shutdown()
     {
-        LOGGER.at(Level.INFO).log("Shutting down...");
-
         instance = null;
         hudService = null;
-        settingsProvider = null;
         dropRegistry = null;
-        worldService = null;
-        worldStateRegistry = null;
         rootRegistry = null;
-    }
-
-    public OneBlockExpeditionStateProvider getExpeditionStateProvider()
-    {
-        return worldStateRegistry == null || !worldStateRegistry.isManaged(World.DEFAULT)
-                ? null
-                : worldStateRegistry.expeditionState(World.DEFAULT);
-    }
-
-    public OneBlockDungeonStateProvider getDungeonStateProvider()
-    {
-        return worldStateRegistry == null || !worldStateRegistry.isManaged(World.DEFAULT)
-                ? null
-                : worldStateRegistry.dungeonState(World.DEFAULT);
-    }
-
-    public OneBlockWorldStateRegistry getWorldStateRegistry()
-    {
-        return worldStateRegistry;
-    }
-
-    public OneBlockWorldService getWorldService()
-    {
-        return worldService;
+        ownerResolver = (world, playerId) -> playerId;
+        accessResolver = (world, playerId, root) -> true;
     }
 
     public OneBlockRootRegistry getRootRegistry()
@@ -252,14 +111,16 @@ public final class OneBlockPlugin extends JavaPlugin
         return rootRegistry;
     }
 
-    public OneBlockExpeditionStateProvider getExpeditionStateProvider(World world)
+    /** Registers and places a OneBlock at an arbitrary position in an existing world. */
+    public OneBlockRootRegistry.RootEntry initializeRoot(World world,
+                                                         Vector3i position,
+                                                         UUID ownerId,
+                                                         String ownerName)
     {
-        return worldStateRegistry == null ? null : worldStateRegistry.expeditionState(world);
-    }
-
-    public OneBlockDungeonStateProvider getDungeonStateProvider(World world)
-    {
-        return worldStateRegistry == null ? null : worldStateRegistry.dungeonState(world);
+        if (rootRegistry == null) throw new IllegalStateException("OneBlock root registry is unavailable");
+        OneBlockRootRegistry.RootEntry root = rootRegistry.register(world, position, ownerId, ownerName);
+        world.setBlock(position.x(), position.y(), position.z(), OneBlockBlockIds.DEFAULT_BLOCK_ID);
+        return root;
     }
 
     public OneBlockDropRegistry getDropRegistry()
@@ -272,45 +133,42 @@ public final class OneBlockPlugin extends JavaPlugin
         return hudService;
     }
 
-    public OneBlockSettingsProvider getSettingsProvider()
+    public void setOwnerResolver(OneBlockOwnerResolver resolver)
     {
-        return settingsProvider;
+        ownerResolver = resolver == null ? (world, playerId) -> playerId : resolver;
     }
 
-    private String resolveActiveBlockId(World world)
+    public UUID resolveOwner(World world, UUID playerId)
     {
-        OneBlockDungeonStateProvider dungeonStateProvider = worldStateRegistry.dungeonState(world);
-        if (dungeonStateProvider.isDungeonActive())
-        {
-            String dungeonId = dungeonStateProvider.getActiveDungeonId();
-            String blockId = OneBlockDungeonDefaults.getBlockId(dungeonId);
-            return blockId != null ? blockId : OneBlockBlockIds.DEFAULT_BLOCK_ID;
-        }
-
-        OneBlockExpeditionStateProvider expeditionStateProvider = worldStateRegistry.expeditionState(world);
-        if (expeditionStateProvider.hasActiveExpedition())
-        {
-            String expeditionId = expeditionStateProvider.getActiveExpeditionId();
-            return OneBlockExpeditionResolver.blockIdForExpedition(expeditionId);
-        }
-
-        return OneBlockBlockIds.DEFAULT_BLOCK_ID;
+        UUID resolved = ownerResolver.resolveOwner(world, playerId);
+        return resolved == null ? playerId : resolved;
     }
 
-    private void restoreRootHud(Player player, World world, java.util.UUID ownerId)
+    public void setAccessResolver(OneBlockAccessResolver resolver)
     {
+        accessResolver = resolver == null ? (world, playerId, root) -> true : resolver;
+    }
+
+    public boolean mayUse(World world, UUID playerId, OneBlockRootRegistry.RootEntry root)
+    {
+        return playerId != null && root != null && accessResolver.mayUse(world, playerId, root);
+    }
+
+    public void restoreHud(Player player, World world, UUID ownerId)
+    {
+        if (player == null || world == null || ownerId == null || !rootRegistry.hasRoots(world, ownerId))
+        {
+            if (player != null) hudService.clear(player);
+            return;
+        }
+
         OneBlockDungeonStateProvider dungeonState = rootRegistry.dungeonState(world, ownerId);
         if (dungeonState.isDungeonActive())
         {
             String dungeonId = dungeonState.getActiveDungeonId();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
             hudService.showDungeonStarted(player, dungeonId, totalWaves);
-            hudService.updateDungeonWave(
-                    player,
-                    dungeonId,
-                    dungeonState.getCurrentWaveIndex(),
-                    totalWaves
-            );
+            hudService.updateDungeonWave(player, dungeonId, dungeonState.getCurrentWaveIndex(), totalWaves);
             return;
         }
 
@@ -320,7 +178,6 @@ public final class OneBlockPlugin extends JavaPlugin
             hudService.clear(player);
             return;
         }
-
         hudService.restoreExpeditionHud(
                 player,
                 expeditionState.getActiveExpeditionId(),
@@ -329,27 +186,34 @@ public final class OneBlockPlugin extends JavaPlugin
         );
     }
 
+    private void restoreRootHud(Player player, World world, UUID ownerId)
+    {
+        restoreHud(player, world, ownerId);
+    }
+
+    private void updateHudForWorld(PlayerRef playerRef, Player player, World world)
+    {
+        UUID ownerId = playerRef == null ? null : resolveOwner(world, playerRef.getUuid());
+        if (ownerId != null && rootRegistry.hasRoots(world, ownerId))
+        {
+            restoreRootHud(player, world, ownerId);
+        }
+        else if (player != null)
+        {
+            hudService.clear(player);
+        }
+    }
+
     private static void registerDropables(OneBlockDropRegistry registry, Iterable<String> dropableIds)
     {
-        if (registry == null || dropableIds == null)
-        {
-            return;
-        }
-
+        if (registry == null || dropableIds == null) return;
         for (String dropableId : dropableIds)
         {
-            if (dropableId == null || dropableId.isEmpty())
-            {
-                continue;
-            }
-
+            if (dropableId == null || dropableId.isEmpty()) continue;
             OneBlockDropId parsed = OneBlockDropId.parse(dropableId);
-
-            Dropable dropable = parsed.isEntity()
+            registry.registerDropable(parsed.isEntity()
                     ? new EntitySpawnDropable(dropableId)
-                    : new ItemDropable(dropableId);
-
-            registry.registerDropable(dropable);
+                    : new ItemDropable(dropableId));
         }
     }
 }

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 
 import java.nio.file.Path;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -67,5 +69,28 @@ final class OneBlockRootRegistryTest
         assertEquals(1, registry.positions("shared", alice).size());
         assertEquals(1, registry.positions("shared", bob).size());
         assertFalse(registry.positions("other-world", alice).size() > 0);
+    }
+
+    @Test
+    void migratesLegacyWorldProgressToTheFirstRegisteredOwner()
+    {
+        String worldName = "ob_existing";
+        String encoded = Base64.getUrlEncoder().withoutPadding()
+                .encodeToString(worldName.getBytes(StandardCharsets.UTF_8));
+        Path legacy = dataDirectory.resolve("worlds").resolve(encoded);
+        OneBlockExpeditionStateProvider oldState =
+                new OneBlockExpeditionStateProvider(legacy.resolve("expedition.json"));
+        oldState.startExpedition("Meadow", 42);
+
+        UUID owner = UUID.randomUUID();
+        OneBlockRootRegistry registry = new OneBlockRootRegistry(dataDirectory);
+        registry.register(worldName, new Vector3i(0, 100, 0), owner, "Owner");
+
+        OneBlockExpeditionStateProvider migrated = new OneBlockExpeditionStateProvider(
+                dataDirectory.resolve("root-worlds").resolve(encoded).resolve("owners")
+                        .resolve(owner.toString()).resolve("expedition.json")
+        );
+        assertEquals("Meadow", migrated.getActiveExpeditionId());
+        assertEquals(42, migrated.getTicksRemaining());
     }
 }

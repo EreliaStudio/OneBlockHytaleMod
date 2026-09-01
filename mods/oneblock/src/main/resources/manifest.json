@@ -2,7 +2,7 @@
   "Group": "com.EreliaStudio",
   "Name": "${name}",
   "Version": "${version}",
-  "Description": "OneBlock game mode — drop engine, expedition progression, and void world setup.",
+  "Description": "Position-scoped OneBlock gameplay, drops, expeditions, dungeons, and HUD progression.",
   "ServerVersion": ">=0.5.2",
   "Main": "com.EreliaStudio.OneBlock.OneBlockPlugin",
   "IncludesAssetPack": true,

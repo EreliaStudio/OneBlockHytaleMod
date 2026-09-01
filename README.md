@@ -7,13 +7,9 @@ explains the gameplay loop, expeditions, crystals, tools, dungeons, multiplayer,
 and progression without requiring development knowledge.
 
 ## Modules
-- `mods/oneblock-block` Core OneBlock block, drop registry, player drop state, and the `/oneblock` command.
-- `mods/oneblock-itemdropable` Dropable implementation for items.
-- `mods/oneblock-entityspawndropable` Dropable implementation for entity spawns.
-- `mods/oneblock-recipes` Unlock logic, expedition pool defaults, and recipe data loading.
-- `mods/oneblock-workbench` Workbench assets and bench categories for unlock recipes.
-- `mods/oneblock-salvager` Salvager bench assets and tiered salvaging outputs.
-- `mods/oneblock-worldgeneration` Void world generation, spawn placement, and fall protection.
+
+- `mods/oneblock` provides position-scoped OneBlock gameplay, progression, drops, dungeons, roots, and HUDs. It does not create or configure worlds.
+- `mods/oneblock-islands` provides island creation, void generation, fall protection, ownership, membership, access control, and `/island` commands.
 
 ## Build And Deploy
 From the repo root:
@@ -27,10 +23,10 @@ The deploy tasks copy each shaded jar to `hytale-server/mods`.
 ## Dedicated OneBlock Server
 
 The `:oneblock-islands` companion module adds UUID-based island ownership,
-membership, `/island`, world-entry enforcement, island edit protection, and a
-minimal protected `spawn` hub. See [SERVER_SETUP.md](SERVER_SETUP.md) for the
-local dedicated-server deployment, third-party mod versions, permissions, and
-the remaining in-game portal setup.
+membership, `/island`, world-entry enforcement, and island edit protection. It
+creates a separate void world for each island, places its OneBlock at the
+center, and provides island-only fall protection. It never modifies the
+server's `default` spawn world, which you configure manually.
 
 ## How Drops Work
 - The OneBlock block chooses a pool id based on its block type. The default resolver uses the expedition name derived from the block id.
@@ -39,9 +35,9 @@ the remaining in-game portal setup.
 - Default drops and weights are provided by the recipes mod.
 
 Key files:
-- `mods/oneblock-block/src/main/java/com/EreliaStudio/OneBlock/Dropable.java`
-- `mods/oneblock-block/src/main/java/com/EreliaStudio/OneBlock/OneBlockDropRegistry.java`
-- `mods/oneblock-recipes/src/main/java/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java`
+- `mods/oneblock/src/main/java/com/EreliaStudio/OneBlock/Dropable.java`
+- `mods/oneblock/src/main/java/com/EreliaStudio/OneBlock/OneBlockDropRegistry.java`
+- `mods/oneblock/src/main/java/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java`
 
 ## Add A New Item Drop
 Use this when you want OneBlock to drop an item.
@@ -51,14 +47,14 @@ Use this when you want OneBlock to drop an item.
 3. Add the drop as default or unlockable.
 
 Default drop (always available):
-- Edit `mods/oneblock-recipes/src/main/java/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java`.
+- Edit `mods/oneblock/src/main/java/com/EreliaStudio/OneBlock/OneBlockExpeditionDefaults.java`.
 - Add a `drop("ItemId", weight)` entry to the pool list.
 
 Unlockable drop (crafted in the workbench):
-1. Create an unlock item JSON in `mods/oneblock-recipes/src/main/resources/Server/Item/Items/UnlockRecipe/...`.
-2. Add an entry to `mods/oneblock-recipes/src/main/resources/oneblock-recipes.json`.
+1. Create an unlock item JSON in `mods/oneblock/src/main/resources/Server/Item/Items/UnlockRecipe/...`.
+2. Add an entry to `mods/oneblock/src/main/resources/oneblock-recipes.json`.
    - Use `DropableId` for item drops.
-3. Add a translation in `mods/oneblock-recipes/src/main/resources/Server/Languages/en-US/server.lang`.
+3. Add a translation in `mods/oneblock/src/main/resources/Server/Languages/en-US/server.lang`.
 4. Add the unlock item id to the workbench category in `mods/oneblock-workbench/src/main/resources/Server/Item/Items/OneBlockUpgrader/Bench_OneBlockUpgrader.json`.
 
 Note: the unlock items still contain tags, but the current loader ignores tags. `oneblock-recipes.json` is the source of truth.
@@ -73,8 +69,8 @@ Use this when you want OneBlock to spawn an entity.
 ## Add A Recipe Drop Item
 Recipe drop items are consumables that teach a crafting recipe.
 
-1. Add a JSON file under `mods/oneblock-recipes/src/main/resources/Server/Item/Items/RecipeDrop/...`.
-2. Add translations in `mods/oneblock-recipes/src/main/resources/Server/Languages/en-US/server.lang`.
+1. Add a JSON file under `mods/oneblock/src/main/resources/Server/Item/Items/RecipeDrop/...`.
+2. Add translations in `mods/oneblock/src/main/resources/Server/Languages/en-US/server.lang`.
 3. If you want OneBlock to drop the recipe item, add it to `OneBlockExpeditionDefaults.java` or create an unlockable entry.
 
 ## Add A New Dropable Type
@@ -100,40 +96,33 @@ Special output ids:
 - `Empty` removes the output (failure).
 
 ## World Generation
-The plugin does not modify or manage the server's `default` world. Players initially
-arrive at the normal server spawn with the server's configured world generation.
-An administrator must use `/oneblock create <worldName>` to create a separate void
-OneBlock world, or `/oneblock join <worldName>` to enter one that already exists.
+
+The core OneBlock mod never changes a world's generator. A OneBlock is a
+registered position and owner inside any existing world. The islands companion
+owns the specialized world lifecycle: `/island` creates a persistent void
+world, places the owner's registered OneBlock at `(0, 100, 0)`, sets the spawn
+above it, and enables fall recovery for that island only. The server's
+`default` world is untouched.
 
 ## Multiplayer Expeditions
 
-OneBlock can manage multiple void worlds at the same time. Every managed world has exactly one OneBlock and its own expedition/dungeon progress. A block break, crystal use, HUD update, or fall recovery only affects players and state in that world.
+The core registry keys OneBlocks by world, position, and owner. Multiple owners
+can therefore run independent OneBlocks in one ordinary world. The islands mod
+maps an island's owner and authorized members to the same registered root, so
+the group shares expedition and dungeon progress.
 
-OneBlock block items cannot be placed manually. Creating another OneBlock always
-means creating another isolated world with `/oneblock create <worldName>`.
+The progress HUD is restored only when the player's current world contains the
+OneBlock context available to that player. Entering `default` or another world
+without an accessible OneBlock clears it.
 
 Admin actions:
 
-- `/oneblock create <worldName>` creates a persistent OneBlock world and moves the command's target player into it. Use `-` instead of a name to generate one automatically.
-- `/oneblock join <worldName>` loads an existing OneBlock world if necessary and moves the target player into it.
-- `/oneblock list` lists registered OneBlock worlds.
-- `/oneblock status`, `start`, and `stop` operate on the target player's current world.
+- `/oneblock status`, `start`, and `stop` operate on the target player's accessible OneBlock in the current world.
+- `/island`, `/island create`, and `/island join` own island-world creation and travel.
 
-The command inherits Hytale's optional `player` target argument, so an administrator can create or join a world on behalf of another player.
-
-Server code can create a world for any party size through the public service:
+Server code can place a registered OneBlock in any already loaded world without
+changing that world's generator:
 
 ```java
-OneBlockWorldService worlds = OneBlockPlugin.getInstance().getWorldService();
-
-worlds.createExpeditionWorld("oneblock-party-42", partyPlayerRefs)
-      .thenAccept(world -> {
-          // The world is initialized and every supplied player has been transferred.
-      });
+OneBlockPlugin.getInstance().initializeRoot(world, position, ownerUuid, ownerName);
 ```
-
-Use `movePlayers(worldName, partyPlayerRefs)` to load a previous expedition world and transfer a party back into it.
-
-Managed world names are stored in `oneblock-worlds.json`. Every explicitly created
-OneBlock world has isolated save files under the plugin data directory's `worlds/`
-folder. Legacy `default` entries are removed from the registry during startup.

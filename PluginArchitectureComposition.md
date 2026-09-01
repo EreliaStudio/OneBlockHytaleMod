@@ -46,7 +46,7 @@ mods/oneblock/
         │       └── *.java
         └── resources/
             ├── manifest.json
-            ├── oneblock-world-config-template.json
+            ├── island-world-config-template.json  # in oneblock-islands
             └── Server/
                 └── Item/Items/
                     ├── OneBlock/              # Block variants (Default, Cave_Entry, …)
@@ -64,7 +64,7 @@ mods/oneblock/
 
 | Class | Role |
 |-------|------|
-| `OneBlockPlugin` | Plugin entry point. Wires all services (HUD, drop registry, state providers), registers event handlers, registers the `oneblock_crystal_use` interaction codec, and initializes only explicitly managed OneBlock worlds. |
+| `OneBlockPlugin` | Wires position-scoped roots, HUDs, drops, and interactions. It exposes `initializeRoot(...)` but does not create or configure worlds. |
 
 ---
 
@@ -161,9 +161,10 @@ mods/oneblock/
 
 | Class | Role |
 |-------|------|
-| `OneBlockWorldBootstrap` | Creates the void configuration for explicitly requested OneBlock worlds without modifying the server's default world. |
-| `OneBlockWorldInitializer` | On world load: installs the void world-gen provider, places the starting OneBlock (at the appropriate block ID based on active expedition/dungeon), and sets the spawn point to (0.5, 102, 0.5). |
-| `OneBlockFallBackSystem` | `ArchetypeTickingSystem` — below the per-world falloff height (default Y=-20), teleports or kills players according to fall protection and removes non-player entities/items. |
+| `IslandWorldBootstrap` | Islands-only creation of persistent void-world configuration. |
+| `IslandWorldService` | Creates and loads island worlds, places their center OneBlock through the core API, and transfers members. |
+| `IslandFallProtectionSystem` | Islands-only player fall recovery and fallen-entity cleanup. |
+| `OneBlockOwnerResolver` | Core extension point used by the islands mod to map members to their island owner's shared OneBlock context. |
 
 ---
 
@@ -299,7 +300,7 @@ All assets are in `mods/oneblock/src/main/resources/Server/Item/Items/`.
 | Crystal Enchanter | `OneBlockEnchanter/Bench_OneBlockEnchanter.json` | `OneBlock_Enchanter_Surface` category holds all expedition crystals |
 | Dungeon Enchanter | `OneBlockDungeonEnchanter/Bench_OneBlockDungeonEnchanter.json` | No categories yet |
 | Custom items | `CustomItems/` | `Locket_GobelinDungeon`, `ExpeditionPoint` |
-| World config template | `oneblock-world-config-template.json` | Template for void world creation |
+| Island world config template | `island-world-config-template.json` | Islands-owned template for void world creation |
 
 ---
 

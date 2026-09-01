@@ -11,6 +11,7 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.Comparator;
@@ -29,11 +30,13 @@ public final class OneBlockRootRegistry
 {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
+    private final Path pluginDataDirectory;
     private final Path dataDirectory;
     private final ConcurrentHashMap<String, RootWorldState> worlds = new ConcurrentHashMap<>();
 
     public OneBlockRootRegistry(Path dataDirectory)
     {
+        this.pluginDataDirectory = dataDirectory;
         this.dataDirectory = dataDirectory.resolve("root-worlds");
     }
 
@@ -203,11 +206,32 @@ public final class OneBlockRootRegistry
             return owners.computeIfAbsent(ownerId, id ->
             {
                 Path ownerDirectory = worldDirectory.resolve("owners").resolve(id.toString());
+                migrateLegacyWorldState(ownerDirectory);
                 return new OwnerState(
                         new OneBlockExpeditionStateProvider(ownerDirectory.resolve("expedition.json")),
                         new OneBlockDungeonStateProvider(ownerDirectory.resolve("dungeon.json"))
                 );
             });
+        }
+
+        private void migrateLegacyWorldState(Path ownerDirectory)
+        {
+            Path legacyDirectory = pluginDataDirectory.resolve("worlds").resolve(worldDirectory.getFileName());
+            copyLegacyFile(legacyDirectory.resolve("expedition.json"), ownerDirectory.resolve("expedition.json"));
+            copyLegacyFile(legacyDirectory.resolve("dungeon.json"), ownerDirectory.resolve("dungeon.json"));
+        }
+
+        private void copyLegacyFile(Path source, Path target)
+        {
+            if (!Files.exists(source) || Files.exists(target)) return;
+            try
+            {
+                Files.createDirectories(target.getParent());
+                Files.copy(source, target, StandardCopyOption.COPY_ATTRIBUTES);
+            }
+            catch (IOException ignored)
+            {
+            }
         }
 
         private void loadRoots()

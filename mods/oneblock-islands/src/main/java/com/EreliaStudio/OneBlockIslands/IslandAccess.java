@@ -1,6 +1,5 @@
 package com.EreliaStudio.OneBlockIslands;
 
-import com.EreliaStudio.OneBlock.OneBlockPlugin;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 
@@ -14,19 +13,13 @@ final class IslandAccess {
         if (world == null || player == null) return false;
         if (player.hasPermission(BYPASS_PERMISSION) || player.hasPermission(ADMIN_PERMISSION)) return true;
         return store.findByWorld(world.getName()).map(i -> i.canEdit(player.getUuid()))
-                .orElse(!isManagedOneBlockWorld(world));
+                .orElse(true);
     }
 
     static boolean mayEnter(IslandStore store, World world, PlayerRef player) {
         if (world == null || player == null) return false;
         if (player.hasPermission(BYPASS_PERMISSION) || player.hasPermission(ADMIN_PERMISSION)) return true;
         return store.findByWorld(world.getName()).map(i -> i.canEnter(player.getUuid()))
-                .orElse(!isManagedOneBlockWorld(world));
-    }
-
-    static boolean isManagedOneBlockWorld(World world) {
-        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
-        return world != null && plugin != null && plugin.getWorldStateRegistry() != null
-                && plugin.getWorldStateRegistry().isManaged(world);
+                .orElse(true);
     }
 }

@@ -2,7 +2,7 @@
   "Group": "com.EreliaStudio",
   "Name": "${name}",
   "Version": "${version}",
-  "Description": "UUID-first ownership, membership, access control, and orchestration for OneBlock worlds.",
+  "Description": "Void island creation, fall protection, UUID ownership, membership, and access control.",
   "ServerVersion": ">=0.6.2",
   "Main": "com.EreliaStudio.OneBlockIslands.OneBlockIslandsPlugin",
   "IncludesAssetPack": false,

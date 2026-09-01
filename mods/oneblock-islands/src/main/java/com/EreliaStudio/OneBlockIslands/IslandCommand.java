@@ -1,6 +1,5 @@
 package com.EreliaStudio.OneBlockIslands;
 
-import com.EreliaStudio.OneBlock.OneBlockPlugin;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.Message;
@@ -25,10 +24,12 @@ import java.util.UUID;
 /** The complete /island command tree. */
 final class IslandCommand extends IslandPlayerCommand {
     private final IslandStore islands;
+    private final IslandWorldService islandWorlds;
 
-    IslandCommand(IslandStore islands) {
+    IslandCommand(IslandStore islands, IslandWorldService islandWorlds) {
         super("island", "Create, enter, or manage your OneBlock island.");
         this.islands = islands;
+        this.islandWorlds = islandWorlds;
         addSubCommand(new HomeCommand());
         addSubCommand(new JoinCommand());
         addSubCommand(new CreateCommand());
@@ -60,7 +61,7 @@ final class IslandCommand extends IslandPlayerCommand {
         IslandRecord reserved = islands.create(subject.getUuid(), name);
         feedback.sendMessage(Message.raw("Creating an island for " + subject.getUsername() + "..."));
         try {
-            OneBlockPlugin.getInstance().getWorldService().createExpeditionWorld(reserved.worldName(), List.of(subject))
+            islandWorlds.create(reserved, List.of(subject))
                     .whenComplete((createdWorld, error) -> {
                         if (error == null) {
                             feedback.sendMessage(Message.raw("Island created: " + reserved.name() + "."));
@@ -87,8 +88,8 @@ final class IslandCommand extends IslandPlayerCommand {
         }
     }
 
-    private static void move(PlayerRef subject, IslandRecord island, PlayerRef feedback) {
-        OneBlockPlugin.getInstance().getWorldService().movePlayers(island.worldName(), List.of(subject))
+    private void move(PlayerRef subject, IslandRecord island, PlayerRef feedback) {
+        islandWorlds.movePlayers(island.worldName(), List.of(subject))
                 .whenComplete((targetWorld, error) -> feedback.sendMessage(Message.raw(error == null
                         ? "Moved " + subject.getUsername() + " to " + island.name() + "."
                         : "Could not enter island: " + rootMessage(error))));

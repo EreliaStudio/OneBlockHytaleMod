@@ -18,14 +18,11 @@ import javax.annotation.Nonnull;
 /** Applies deterministic OneBlock damage and rejects the wrong tool. */
 public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, DamageBlockEvent>
 {
-    private final OneBlockWorldStateRegistry stateRegistry;
     private final OneBlockRootRegistry rootRegistry;
 
-    public OneBlockDamageSystem(OneBlockWorldStateRegistry stateRegistry,
-                                OneBlockRootRegistry rootRegistry)
+    public OneBlockDamageSystem(OneBlockRootRegistry rootRegistry)
     {
         super(DamageBlockEvent.class);
-        this.stateRegistry = stateRegistry;
         this.rootRegistry = rootRegistry;
     }
 
@@ -53,9 +50,17 @@ public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, D
         if (world == null) return;
 
         OneBlockRootRegistry.RootEntry root = rootRegistry.find(world, event.getTargetBlock());
-        boolean generatedWorldBlock = stateRegistry.isManaged(world)
-                && OneBlockBlockIds.ONEBLOCK_POSITION.equals(event.getTargetBlock());
-        if (root == null && !generatedWorldBlock) return;
+        if (root == null) return;
+        com.hypixel.hytale.server.core.universe.PlayerRef playerRef =
+                store.getComponent(ref, com.hypixel.hytale.server.core.universe.PlayerRef.getComponentType());
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null && (playerRef == null
+                || !plugin.mayUse(world, playerRef.getUuid(), root)))
+        {
+            event.setDamage(0.0F);
+            event.setCancelled(true);
+            return;
+        }
 
         if (root != null && isRemovalTool(event.getItemInHand()))
         {
