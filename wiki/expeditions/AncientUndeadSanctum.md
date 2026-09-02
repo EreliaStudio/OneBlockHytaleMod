@@ -19,7 +19,7 @@ This expedition has no normal weighted `BaseDropPool`. It is a combat dungeon.
 
 | Wave | Enemies |
 |---:|---|
-| 1 | Zombie ×4, Zombie Aberrant ×4, Zombie Aberrant Small ×4 |
+| 1 | Zombie ×4, Zombie Aberrant ×3, Zombie Aberrant Small ×4 |
 | 2 | Skeleton Soldier ×4, Skeleton Archer ×4, Skeleton Fighter ×3 |
 | 3 | Skeleton Knight ×4, Skeleton Mage ×3, Zombie Aberrant Big ×2 |
 | 4 | Skeleton Archmage ×2, Skeleton Ranger ×4, Ghoul ×4 |
