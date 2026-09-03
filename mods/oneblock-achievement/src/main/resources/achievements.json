@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "achievements": [
+    {
+      "id": "beginner_miner",
+      "name": "Beginner Miner",
+      "title": "Beginner Miner",
+      "prerequisites": [],
+      "cost": {
+        "currency": 0,
+        "items": [
+          {
+            "id": "Rock_Stone",
+            "quantity": 64
+          }
+        ],
+        "expeditions": []
+      }
+    },
+    {
+      "id": "apprentice_miner",
+      "name": "Apprentice Miner",
+      "title": "Apprentice Miner",
+      "prerequisites": [
+        "beginner_miner"
+      ],
+      "cost": {
+        "currency": 250,
+        "items": [
+          {
+            "id": "Ore_Copper",
+            "quantity": 32
+          },
+          {
+            "id": "Ore_Iron",
+            "quantity": 16
+          }
+        ],
+        "expeditions": [
+          "CopperCave"
+        ]
+      }
+    }
+  ]
+}

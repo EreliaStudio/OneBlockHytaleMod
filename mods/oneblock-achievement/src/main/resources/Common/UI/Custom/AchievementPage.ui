@@ -1,0 +1,45 @@
+$Common = "Common.ui";
+
+Group {
+  LayoutMode: Center;
+  Background: #07101E(0.72);
+
+  Group #AchievementPanel {
+    Anchor: (Width: 1000, Height: 760);
+    LayoutMode: Top;
+    Padding: (Full: 24);
+    Background: #101C31(0.98);
+
+    Group {
+      Anchor: (Height: 70);
+      LayoutMode: Left;
+      Padding: (Horizontal: 18);
+      Background: #172944;
+
+      Label { FlexWeight: 1; Anchor: (Height: 70); Text: "ACHIEVEMENTS"; Style: (FontSize: 30, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
+      Label #AchievementLevel { Anchor: (Width: 150, Height: 70); Text: "Lv 0"; Style: (FontSize: 24, TextColor: #7FE3A1, RenderBold: true, HorizontalAlignment: End, VerticalAlignment: Center); }
+    }
+
+    Group {
+      Anchor: (Top: 10, Height: 44);
+      LayoutMode: Left;
+      Label #ActiveTitle { FlexWeight: 1; Anchor: (Height: 44); Text: "No title selected"; Style: (FontSize: 19, TextColor: #DCE8FF, VerticalAlignment: Center); }
+      $Common.@TextButton #ClearTitleButton { @Text = "CLEAR TITLE"; Anchor: (Width: 180, Height: 40); }
+    }
+
+    Group {
+      Anchor: (Top: 10, Height: 570);
+      LayoutMode: TopScrolling;
+      ScrollbarStyle: $Common.@DefaultScrollbarStyle;
+      Padding: (Right: 14);
+
+      Label { Anchor: (Height: 34); Text: "CURRENTLY UNLOCKING"; Style: (FontSize: 18, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
+      Label #NoUnlockingMessage { Anchor: (Height: 40); Text: "No achievement is currently accessible."; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
+      Group #UnlockingCards { LayoutMode: Top; }
+
+      Label { Anchor: (Top: 18, Height: 34); Text: "UNLOCKED TITLES"; Style: (FontSize: 18, TextColor: #7FE3A1, RenderBold: true, VerticalAlignment: Center); }
+      Label #NoUnlockedMessage { Anchor: (Height: 40); Text: "No title has been unlocked yet."; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
+      Group #UnlockedCards { LayoutMode: Top; }
+    }
+  }
+}

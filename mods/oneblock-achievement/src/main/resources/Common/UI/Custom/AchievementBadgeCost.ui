@@ -1,0 +1,15 @@
+Group {
+  Anchor: (Right: 10, Width: 116, Height: 58);
+  LayoutMode: Left;
+  Group {
+    Anchor: (Width: 38, Height: 38);
+    Background: #233B60;
+    Label #CostBadge { Anchor: (Full: 0); Text: "G"; Style: (FontSize: 20, TextColor: #F5D77A, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); }
+  }
+  Group {
+    Anchor: (Left: 6, Width: 72, Height: 58);
+    LayoutMode: Top;
+    Label #CostName { Anchor: (Height: 28); Text: "COST"; Style: (FontSize: 11, TextColor: #AFC4E3, VerticalAlignment: Center); }
+    Label #CostProgress { Anchor: (Height: 24); Text: "0 / 0"; Style: (FontSize: 13, TextColor: #FFFFFF, VerticalAlignment: Center); }
+  }
+}

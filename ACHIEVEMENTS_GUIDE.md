@@ -1,0 +1,53 @@
+# OneBlock Achievement mod
+
+This third mod adds data-driven achievements, persistent partial contributions, selectable titles, chat levels, and overhead nameplates.
+
+## Player commands
+
+- `/achievement` opens the achievement card list. Currently unlocking achievements appear first with their requirements and a **Participate** button. Unlocked achievements follow with an **Activate** button. Both sections are alphabetical; inaccessible achievements are hidden.
+- `/achievements list` lists all configured achievements as `INACCESSIBLE`, `CURRENTLY_UNLOCKING`, or `UNLOCKED`.
+- `/achievements status <id>` shows exact progress for money, every item, prerequisites, and expedition knowledge.
+- `/achievements contribute <id>` contributes as many still-needed items and as much still-needed Glymera currency as the player currently has.
+- `/achievements contribute <id> <maximum-money>` does the same but caps this contribution's currency amount. This supports partial payments as well as partial item deposits.
+- `/achievements title <id>` selects an unlocked title without opening the UI. `/achievements title none` clears it.
+- `/achievements reload` reloads the server-side compiled configuration.
+
+The unlocked achievement count is the player's level. Chat is formatted as `[Selected Title - Lv X] AccountName : Message`. With no selected title it is `[Lv X] AccountName : Message`. The same prefix appears on a separate line above the account name in the in-world nameplate.
+
+## Authoring achievements
+
+Edit `achievements.authoring.json`. Each entry supports:
+
+```json
+{
+  "id": "apprentice_miner",
+  "name": "Apprentice Miner",
+  "title": "Apprentice Miner",
+  "requires": ["beginner_miner"],
+  "money": 250,
+  "items": {
+    "Ore_Copper": 32,
+    "Ore_Iron": 16
+  },
+  "expeditions": ["CopperCave"]
+}
+```
+
+- `requires` contains achievement IDs that must already be complete before contributions are accepted.
+- `money` is an integer amount taken through GlymeraMerchant 8's public economy API. It may be zero.
+- `items` maps exact Hytale item IDs to positive quantities. Deposits are consumed and saved immediately, so a player can give 32 of a required 64 now and the remainder later.
+- `expeditions` contains exact OneBlock expedition IDs. Knowledge is recorded when OneBlock grants the expedition recipe/crystal unlock after this mod is installed; knowledge is checked but not consumed.
+
+Compile and validate the friendly file with:
+
+```powershell
+python tools/compile_achievements.py achievements.authoring.json mods/oneblock-achievement/src/main/resources/achievements.json
+```
+
+For a running server, compile to the achievement plugin's data folder instead (the log prints its exact `achievements.json` path), then run `/achievements reload`. The compiler rejects duplicate IDs, missing prerequisites, invalid costs, and prerequisite cycles.
+
+## Build and installation
+
+Build the third mod with `./gradlew :oneblock-achievement:build`. Install the resulting `mods/oneblock-achievement/build/libs/oneblock-achievement-1.0.0.jar` together with the matching OneBlock jar. GlymeraMerchant is optional globally, but achievements with a non-zero money cost cannot be funded unless it is installed.
+
+Player progress is stored by UUID in the mod data directory's `players.json`. Definition reloads never erase player contributions or unlocked achievements.

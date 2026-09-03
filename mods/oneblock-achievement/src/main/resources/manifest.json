@@ -1,0 +1,16 @@
+{
+  "Group": "com.EreliaStudio",
+  "Name": "${name}",
+  "Version": "${version}",
+  "Description": "Data-driven achievements, persistent contributions, and selectable chat titles.",
+  "ServerVersion": ">=0.6.2",
+  "Main": "com.EreliaStudio.OneBlockAchievement.OneBlockAchievementPlugin",
+  "IncludesAssetPack": true,
+  "DisabledByDefault": false,
+  "Dependencies": {
+    "com.EreliaStudio:oneblock": ">=1.0.0"
+  },
+  "OptionalDependencies": {
+    "Glymera:GlymeraMerchant": ">=8.0.0"
+  }
+}

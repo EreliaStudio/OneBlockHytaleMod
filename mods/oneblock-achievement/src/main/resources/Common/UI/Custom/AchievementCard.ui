@@ -1,0 +1,26 @@
+$Common = "Common.ui";
+
+Group {
+  Anchor: (Bottom: 10, Height: 154);
+  LayoutMode: Top;
+  Padding: (Full: 14);
+  Background: #172944;
+
+  Group {
+    Anchor: (Height: 34);
+    LayoutMode: Left;
+    Label #CardTitle { FlexWeight: 1; Anchor: (Height: 34); Text: "Achievement"; Style: (FontSize: 21, TextColor: #FFFFFF, RenderBold: true, VerticalAlignment: Center); }
+    Label #CardState { Anchor: (Width: 210, Height: 34); Text: "CURRENTLY UNLOCKING"; Style: (FontSize: 14, TextColor: #F5D77A, RenderBold: true, HorizontalAlignment: End, VerticalAlignment: Center); }
+  }
+
+  Label #CardSubtitle { Anchor: (Height: 28); Text: "Unlocks title"; Style: (FontSize: 15, TextColor: #AFC4E3, VerticalAlignment: Center); }
+
+  Group {
+    Anchor: (Top: 8, Height: 58);
+    LayoutMode: Left;
+    Group #CardCosts { FlexWeight: 1; Anchor: (Height: 58); LayoutMode: Left; }
+    Label #NoCostLabel { FlexWeight: 1; Anchor: (Height: 58); Text: "No resources required"; Style: (FontSize: 15, TextColor: #91A0B8, VerticalAlignment: Center); }
+    $Common.@TextButton #ParticipateButton { @Text = "PARTICIPATE"; Anchor: (Width: 170, Height: 46); }
+    $Common.@TextButton #ActivateButton { @Text = "ACTIVATE"; Anchor: (Width: 170, Height: 46); }
+  }
+}

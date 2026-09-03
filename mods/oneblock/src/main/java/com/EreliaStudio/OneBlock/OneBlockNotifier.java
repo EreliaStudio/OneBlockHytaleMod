@@ -3,6 +3,7 @@ package com.EreliaStudio.OneBlock;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 public final class OneBlockNotifier
@@ -20,6 +21,8 @@ public final class OneBlockNotifier
         if (plugin != null)
         {
             plugin.getHudService().showExpeditionUnlocked(player, expeditionId);
+            PlayerRef identity = store.getComponent(playerRef, PlayerRef.getComponentType());
+            if (identity != null) plugin.expeditionUnlocked(identity.getUuid(), expeditionId);
         }
 
     }
@@ -51,6 +54,8 @@ public final class OneBlockNotifier
         if (plugin != null)
         {
             plugin.getHudService().showExpeditionCompleted(player, expeditionId);
+            PlayerRef identity = store.getComponent(playerRef, PlayerRef.getComponentType());
+            if (identity != null) plugin.expeditionCompleted(identity.getUuid(), expeditionId);
         }
 
     }
@@ -82,6 +87,8 @@ public final class OneBlockNotifier
         if (plugin != null)
         {
             plugin.getHudService().showDungeonCompleted(player, dungeonId);
+            PlayerRef identity = store.getComponent(playerRef, PlayerRef.getComponentType());
+            if (identity != null) plugin.dungeonCompleted(identity.getUuid(), dungeonId);
         }
 
     }

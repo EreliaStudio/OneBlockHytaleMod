@@ -1,0 +1,27 @@
+{
+  "achievements": [
+    {
+      "id": "beginner_miner",
+      "name": "Beginner Miner",
+      "title": "Beginner Miner",
+      "requires": [],
+      "money": 0,
+      "items": {
+        "Rock_Stone": 64
+      },
+      "expeditions": []
+    },
+    {
+      "id": "apprentice_miner",
+      "name": "Apprentice Miner",
+      "title": "Apprentice Miner",
+      "requires": ["beginner_miner"],
+      "money": 250,
+      "items": {
+        "Ore_Copper": 32,
+        "Ore_Iron": 16
+      },
+      "expeditions": ["CopperCave"]
+    }
+  ]
+}

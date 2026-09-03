@@ -17,6 +17,7 @@ import javax.annotation.Nonnull;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /** Provides position-scoped OneBlock gameplay without owning world lifecycle. */
 public final class OneBlockPlugin extends JavaPlugin
@@ -27,6 +28,7 @@ public final class OneBlockPlugin extends JavaPlugin
     private OneBlockHudService hudService;
     private volatile OneBlockOwnerResolver ownerResolver = (world, playerId) -> playerId;
     private volatile OneBlockAccessResolver accessResolver = (world, playerId, root) -> true;
+    private final CopyOnWriteArrayList<OneBlockProgressListener> progressListeners = new CopyOnWriteArrayList<>();
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -152,6 +154,31 @@ public final class OneBlockPlugin extends JavaPlugin
     public boolean mayUse(World world, UUID playerId, OneBlockRootRegistry.RootEntry root)
     {
         return playerId != null && root != null && accessResolver.mayUse(world, playerId, root);
+    }
+
+    public void addProgressListener(OneBlockProgressListener listener)
+    {
+        if (listener != null) progressListeners.addIfAbsent(listener);
+    }
+
+    public void removeProgressListener(OneBlockProgressListener listener)
+    {
+        progressListeners.remove(listener);
+    }
+
+    void expeditionUnlocked(UUID playerId, String expeditionId)
+    {
+        for (OneBlockProgressListener listener : progressListeners) listener.onExpeditionUnlocked(playerId, expeditionId);
+    }
+
+    void expeditionCompleted(UUID playerId, String expeditionId)
+    {
+        for (OneBlockProgressListener listener : progressListeners) listener.onExpeditionCompleted(playerId, expeditionId);
+    }
+
+    void dungeonCompleted(UUID playerId, String dungeonId)
+    {
+        for (OneBlockProgressListener listener : progressListeners) listener.onDungeonCompleted(playerId, dungeonId);
     }
 
     public void restoreHud(Player player, World world, UUID ownerId)

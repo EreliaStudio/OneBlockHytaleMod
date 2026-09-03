@@ -8,7 +8,7 @@
   "IncludesAssetPack": false,
   "DisabledByDefault": false,
   "Dependencies": {
-    "com.EreliaStudio:oneblock": ">=1.0.6"
+    "com.EreliaStudio:oneblock": ">=1.0.0"
   },
   "OptionalDependencies": {}
 }
