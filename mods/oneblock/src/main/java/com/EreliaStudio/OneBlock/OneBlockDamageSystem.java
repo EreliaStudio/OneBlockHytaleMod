@@ -61,8 +61,10 @@ public final class OneBlockDamageSystem extends EntityEventSystem<EntityStore, D
             event.setCancelled(true);
             return;
         }
+        if (plugin != null)
+            plugin.listenToOneBlock(playerRef, world, event.getTargetBlock());
 
-        if (root != null && isRemovalTool(event.getItemInHand()))
+        if (isRemovalTool(event.getItemInHand()))
         {
             // The extractor deliberately bypasses expedition tool rules and
             // destroys the root in a single completed break.

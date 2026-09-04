@@ -33,10 +33,27 @@ final class OneBlockRootRegistryTest
         assertEquals(bob, registry.find("shared", first).ownerId());
         assertEquals(bob, registry.find("shared", second).ownerId());
         assertEquals(2, registry.positions("shared", bob).size());
+        assertEquals(2, registry.nodes("shared", bob).size());
+        assertEquals(first, registry.nodes("shared", bob).getFirst().position());
+        assertEquals("shared", registry.nodes("shared", bob).getFirst().worldName());
 
         OneBlockRootRegistry reloaded = new OneBlockRootRegistry(dataDirectory);
         assertEquals("Bob", reloaded.find("shared", first).ownerName());
         assertEquals(2, reloaded.positions("shared", bob).size());
+    }
+
+    @Test
+    void returnedNodePositionsCannotMutateTheRegistry()
+    {
+        UUID owner = UUID.randomUUID();
+        Vector3i position = new Vector3i(3, 4, 5);
+        OneBlockRootRegistry registry = new OneBlockRootRegistry(dataDirectory);
+        registry.register("shared", position, owner, "Owner");
+
+        registry.nodes("shared", owner).getFirst().position().set(99, 99, 99);
+
+        assertEquals(owner, registry.find("shared", position).ownerId());
+        assertNull(registry.find("shared", new Vector3i(99, 99, 99)));
     }
 
     @Test

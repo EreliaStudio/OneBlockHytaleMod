@@ -84,7 +84,11 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         {
             // Creative removal does not run OneBlock progression, but it must
             // not leave a stale ownership record behind.
-            if (isCreative(player)) rootRegistry.remove(world, pos);
+            if (isCreative(player))
+            {
+                rootRegistry.remove(world, pos);
+                if (plugin != null) plugin.forgetOneBlock(world, pos);
+            }
             return;
         }
 
@@ -128,6 +132,13 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
     {
         event.setCancelled(true);
         resetBlockHealth(world, pos);
+        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
+        if (plugin != null)
+        {
+            plugin.triggerOneBlock(world, player, new OneBlockTrigger(
+                    world.getName(), pos, root.ownerId(), "", "", 0.0f, false));
+            plugin.forgetOneBlock(world, pos);
+        }
         rootRegistry.remove(world, pos);
         world.setBlock(pos.x(), pos.y(), pos.z(), BlockType.EMPTY_KEY);
 
@@ -176,12 +187,11 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
             if (plugin != null)
             {
-                OneBlockAudience.forTarget(
-                        world,
-                        player,
-                        root,
-                        worldPlayer -> plugin.getHudService().showDungeonCompleted(worldPlayer, completedDungeon)
-                );
+                int totalWaves = OneBlockDungeonDefaults.getWaveCount(completedDungeon);
+                plugin.triggerOwnerNodes(world, root.ownerId(), player, pos, position ->
+                        OneBlockTrigger.dungeon(
+                                world.getName(), position, root.ownerId(), completedDungeon,
+                                totalWaves, totalWaves, false));
             }
         }
         else
@@ -196,17 +206,10 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
             if (plugin != null)
             {
-                OneBlockAudience.forTarget(
-                        world,
-                        player,
-                        root,
-                        worldPlayer -> plugin.getHudService().updateDungeonWave(
-                            worldPlayer,
-                            dungeonId,
-                            completedWaves,
-                            totalWaves
-                        )
-                );
+                plugin.triggerOwnerNodes(world, root.ownerId(), player, pos, position ->
+                        OneBlockTrigger.dungeon(
+                                world.getName(), position, root.ownerId(), dungeonId,
+                                completedWaves, totalWaves, true));
             }
         }
     }
@@ -283,12 +286,6 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         List<String> drops = dropRegistry.getKnownDrops(poolId);
         String rewardId = dropRegistry.pickReward(poolId, drops);
-        if (rewardId == null || rewardId.isEmpty())
-        {
-            String currentBlockId = event.getBlockType().getId();
-            setTargetBlocks(world, pos, root, currentBlockId);
-            return;
-        }
 
         String activeExpeditionBeforeBreak = expeditionState.getActiveExpeditionId();
         int totalTicks = expeditionState.getTotalTicks();
@@ -296,6 +293,7 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         {
             totalTicks = OneBlockExpeditionDefaults.getTicks(activeExpeditionBeforeBreak);
         }
+        final int expeditionTotalTicks = totalTicks;
 
         String completedExpedition = expeditionState.onBreak();
 
@@ -305,7 +303,8 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
         setTargetBlocks(world, pos, root, nextBlockId);
 
-        dropRegistry.executeDropable(rewardId, context);
+        if (rewardId != null && !rewardId.isEmpty())
+            dropRegistry.executeDropable(rewardId, context);
 
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
 
@@ -318,28 +317,18 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
 
             if (plugin != null)
             {
-                OneBlockAudience.forTarget(
-                        world,
-                        player,
-                        root,
-                        worldPlayer -> plugin.getHudService().showExpeditionCompleted(worldPlayer, completedExpedition)
-                );
+                plugin.triggerOwnerNodes(world, root.ownerId(), player, pos, position ->
+                        OneBlockTrigger.expedition(
+                                world.getName(), position, root.ownerId(), completedExpedition,
+                                0, expeditionTotalTicks, false));
             }
         }
         else if (plugin != null && activeExpeditionBeforeBreak != null && !activeExpeditionBeforeBreak.isBlank())
         {
-            int finalTotalTicks = totalTicks;
-            OneBlockAudience.forTarget(
-                    world,
-                    player,
-                    root,
-                    worldPlayer -> plugin.getHudService().updateExpeditionTicks(
-                        worldPlayer,
-                        activeExpeditionBeforeBreak,
-                        expeditionState.getTicksRemaining(),
-                        finalTotalTicks
-                    )
-            );
+            plugin.triggerOwnerNodes(world, root.ownerId(), player, pos, position ->
+                    OneBlockTrigger.expedition(
+                            world.getName(), position, root.ownerId(), activeExpeditionBeforeBreak,
+                            expeditionState.getTicksRemaining(), expeditionTotalTicks, true));
         }
     }
 
@@ -356,16 +345,6 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         int ticks = OneBlockExpeditionDefaults.getTicks(expeditionId);
         expeditionState.startExpedition(expeditionId, ticks);
 
-        OneBlockPlugin plugin = OneBlockPlugin.getInstance();
-        if (plugin != null)
-        {
-            OneBlockAudience.forTarget(
-                    world,
-                    player,
-                    root,
-                    worldPlayer -> plugin.getHudService().showExpeditionStarted(worldPlayer, expeditionId, ticks)
-            );
-        }
     }
 
     private void setTargetBlocks(World world,

@@ -3,6 +3,7 @@ package com.EreliaStudio.OneBlock;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg;
@@ -36,7 +37,9 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand {
                                      @Nonnull Store<EntityStore> store) {
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
         OneBlockRootRegistry roots = plugin == null ? null : plugin.getRootRegistry();
-        UUID ownerId = plugin.resolveOwner(world, target.getUuid());
+        // Commands target the selected player's own roots, including when
+        // that player is a guest inside another owner's island world.
+        UUID ownerId = target.getUuid();
         if (roots == null || !roots.hasRoots(world, ownerId)) {
             ctx.sendMessage(Message.raw(target.getUsername() + " has no OneBlock in this world."));
             return;
@@ -67,9 +70,12 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand {
         }
         String id = valueArg.get(ctx).trim();
         dungeon.endDungeon();
-        expedition.startExpedition(id, OneBlockExpeditionDefaults.getTicks(id));
+        int ticks = OneBlockExpeditionDefaults.getTicks(id);
+        expedition.startExpedition(id, ticks);
         setBlocks(roots, world, ownerId, OneBlockExpeditionResolver.blockIdForExpedition(id));
-        plugin.restoreHud(target.getComponent(com.hypixel.hytale.server.core.entity.entities.Player.getComponentType()), world, ownerId);
+        Player actor = target.getComponent(Player.getComponentType());
+        plugin.triggerOwnerNodes(world, ownerId, actor, position -> OneBlockTrigger.expedition(
+                world.getName(), position, ownerId, id, ticks, ticks, true));
     }
 
     private static void stop(OneBlockPlugin plugin,
@@ -78,14 +84,22 @@ public final class OneBlockCommand extends AbstractTargetPlayerCommand {
                              UUID ownerId,
                              OneBlockExpeditionStateProvider expedition,
                              OneBlockDungeonStateProvider dungeon) {
+        String expeditionId = expedition.getActiveExpeditionId();
+        int totalTicks = expedition.getTotalTicks();
+        String dungeonId = dungeon.getActiveDungeonId();
+        int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
         expedition.endExpedition();
         dungeon.endDungeon();
         setBlocks(roots, world, ownerId, OneBlockBlockIds.DEFAULT_BLOCK_ID);
-        plugin.getHudService().clear(world.getPlayerRefs().stream()
-                .filter(p -> ownerId.equals(p.getUuid()))
-                .map(p -> p.getComponent(com.hypixel.hytale.server.core.entity.entities.Player.getComponentType()))
-                .filter(p -> p != null)
-                .findFirst().orElse(null));
+        if (dungeonId != null && !dungeonId.isBlank()) {
+            plugin.triggerOwnerNodes(world, ownerId, null, position -> OneBlockTrigger.dungeon(
+                    world.getName(), position, ownerId, dungeonId,
+                    totalWaves, totalWaves, false));
+        } else if (expeditionId != null && !expeditionId.isBlank()) {
+            plugin.triggerOwnerNodes(world, ownerId, null, position -> OneBlockTrigger.expedition(
+                    world.getName(), position, ownerId, expeditionId,
+                    0, totalTicks, false));
+        }
     }
 
     private static void status(CommandContext ctx,

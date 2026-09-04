@@ -52,6 +52,14 @@ public final class OneBlockRootRegistry
         return stateFor(worldName).find(PositionKey.of(position));
     }
 
+    /** Resolves only roots actually owned by this player; never an island owner's fallback root. */
+    RootEntry findOwnedRoot(String worldName, UUID playerId, String playerName)
+    {
+        if (worldName == null || playerId == null || positions(worldName, playerId).isEmpty())
+            return null;
+        return new RootEntry(playerId, playerName == null ? "" : playerName);
+    }
+
     public RootEntry register(World world,
                               Vector3i position,
                               UUID ownerId,
@@ -97,6 +105,19 @@ public final class OneBlockRootRegistry
         return stateFor(worldName).positions(ownerId);
     }
 
+    /** Lists the physical OneBlock nodes owned by a player in this world. */
+    public List<OneBlockNode> nodes(World world, UUID ownerId)
+    {
+        if (world == null || ownerId == null) return List.of();
+        return nodes(world.getName(), ownerId);
+    }
+
+    List<OneBlockNode> nodes(String worldName, UUID ownerId)
+    {
+        if (worldName == null || ownerId == null) return List.of();
+        return stateFor(worldName).nodes(worldName, ownerId);
+    }
+
     public boolean hasRoots(World world, UUID ownerId)
     {
         return !positions(world, ownerId).isEmpty();
@@ -107,9 +128,19 @@ public final class OneBlockRootRegistry
         return ownerState(world, ownerId).expeditionState();
     }
 
+    OneBlockExpeditionStateProvider expeditionState(String worldName, UUID ownerId)
+    {
+        return ownerState(worldName, ownerId).expeditionState();
+    }
+
     public OneBlockDungeonStateProvider dungeonState(World world, UUID ownerId)
     {
         return ownerState(world, ownerId).dungeonState();
+    }
+
+    OneBlockDungeonStateProvider dungeonState(String worldName, UUID ownerId)
+    {
+        return ownerState(worldName, ownerId).dungeonState();
     }
 
     private OwnerState ownerState(World world, UUID ownerId)
@@ -117,6 +148,14 @@ public final class OneBlockRootRegistry
         if (world == null) throw new IllegalArgumentException("World cannot be null");
         if (ownerId == null) throw new IllegalArgumentException("Owner UUID cannot be null");
         return stateFor(world.getName()).ownerState(ownerId);
+    }
+
+    private OwnerState ownerState(String worldName, UUID ownerId)
+    {
+        if (worldName == null || worldName.isBlank())
+            throw new IllegalArgumentException("World name cannot be blank");
+        if (ownerId == null) throw new IllegalArgumentException("Owner UUID cannot be null");
+        return stateFor(worldName).ownerState(ownerId);
     }
 
     private RootWorldState stateFor(String worldName)
@@ -133,6 +172,25 @@ public final class OneBlockRootRegistry
 
     public record RootEntry(UUID ownerId, String ownerName)
     {
+    }
+
+    /** A stable description of one registered physical node. */
+    public record OneBlockNode(String worldName, Vector3i position, RootEntry root)
+    {
+        public OneBlockNode
+        {
+            if (worldName == null || worldName.isBlank())
+                throw new IllegalArgumentException("World name cannot be blank");
+            if (position == null) throw new IllegalArgumentException("Position cannot be null");
+            if (root == null) throw new IllegalArgumentException("Root cannot be null");
+            position = new Vector3i(position);
+        }
+
+        @Override
+        public Vector3i position()
+        {
+            return new Vector3i(position);
+        }
     }
 
     private record PositionKey(int x, int y, int z)
@@ -198,6 +256,17 @@ public final class OneBlockRootRegistry
                     .sorted(Comparator.comparingInt(Vector3i::x)
                             .thenComparingInt(Vector3i::y)
                             .thenComparingInt(Vector3i::z))
+                    .toList();
+        }
+
+        private List<OneBlockNode> nodes(String worldName, UUID ownerId)
+        {
+            return roots.entrySet().stream()
+                    .filter(entry -> ownerId.equals(entry.getValue().ownerId()))
+                    .sorted(Comparator.comparingInt((java.util.Map.Entry<PositionKey, RootEntry> e) -> e.getKey().x())
+                            .thenComparingInt(e -> e.getKey().y())
+                            .thenComparingInt(e -> e.getKey().z()))
+                    .map(entry -> new OneBlockNode(worldName, entry.getKey().toVector(), entry.getValue()))
                     .toList();
         }
 

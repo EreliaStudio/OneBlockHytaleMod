@@ -200,4 +200,19 @@ public final class OneBlockHudService
     {
         return Message.translation("server.expeditions." + id + ".name");
     }
+
+    /** Applies an atomic title/progress update, preventing stale multiplayer titles. */
+    public void apply(Player player, OneBlockTrigger trigger)
+    {
+        if (player == null || trigger == null) return;
+        if (!trigger.active())
+        {
+            hide(player);
+            return;
+        }
+
+        OneBlockProgressHud hud = getOrShow(player);
+        if (hud == null) return;
+        hud.setTitleAndProgress(localizedName(trigger.expeditionId()), trigger.progress());
+    }
 }

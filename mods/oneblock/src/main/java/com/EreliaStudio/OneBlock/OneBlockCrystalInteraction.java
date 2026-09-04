@@ -93,16 +93,17 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
                 ? null
                 : commandBuffer.getComponent(actorEntityRef, PlayerRef.getComponentType());
 
-        java.util.UUID ownerId = actorPlayerRef == null
+        // A crystal always controls roots placed by the player using it. The
+        // island owner resolver is intentionally not used here: a member can
+        // own an independent root inside somebody else's island world.
+        java.util.UUID rootOwnerId = actorPlayerRef == null
                 ? null
-                : plugin.resolveOwner(world, actorPlayerRef.getUuid());
-        boolean hasAccessibleRoots = ownerId != null && rootRegistry.hasRoots(world, ownerId);
-        OneBlockRootRegistry.RootEntry root = hasAccessibleRoots
-                ? new OneBlockRootRegistry.RootEntry(
-                        ownerId,
-                        actorPlayerRef.getUsername()
-                )
-                : null;
+                : actorPlayerRef.getUuid();
+        OneBlockRootRegistry.RootEntry root = rootRegistry.findOwnedRoot(
+                world.getName(),
+                rootOwnerId,
+                actorPlayerRef == null ? null : actorPlayerRef.getUsername()
+        );
 
         if (root == null)
         {
@@ -134,12 +135,10 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
 
             int waveCount = OneBlockDungeonDefaults.getWaveCount(expeditionId);
 
-            OneBlockAudience.forTarget(
-                    world,
-                    actor,
-                    root,
-                    worldPlayer -> plugin.getHudService().showDungeonStarted(worldPlayer, expeditionId, waveCount)
-            );
+            plugin.triggerOwnerNodes(world, root.ownerId(), actor, position ->
+                    OneBlockTrigger.dungeon(
+                            world.getName(), position, root.ownerId(), expeditionId,
+                            0, waveCount, true));
         }
         else
         {
@@ -148,12 +147,10 @@ public final class OneBlockCrystalInteraction extends SimpleInstantInteraction
             dungeonState.endDungeon();
             expeditionState.startExpedition(expeditionId, ticks);
 
-            OneBlockAudience.forTarget(
-                    world,
-                    actor,
-                    root,
-                    worldPlayer -> plugin.getHudService().showExpeditionStarted(worldPlayer, expeditionId, ticks)
-            );
+            plugin.triggerOwnerNodes(world, root.ownerId(), actor, position ->
+                    OneBlockTrigger.expedition(
+                            world.getName(), position, root.ownerId(), expeditionId,
+                            ticks, ticks, true));
         }
 
         OneBlockInteractionUtil.finish(interactionContext);

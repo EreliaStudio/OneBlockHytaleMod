@@ -10,6 +10,7 @@ import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.entity.nameplate.Nameplate;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.OpenCustomUIInteraction;
+import com.hypixel.hytale.server.core.modules.i18n.I18nModule;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
@@ -99,8 +100,13 @@ public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBl
         String username = player.getUsername();
         world.execute(() -> {
             if (!ref.isValid() || service == null) return;
-            String title = service.activeTitle(playerId);
-            String text = prefix(title, service.level(playerId)) + "\n" + username;
+            AchievementDefinition achievement = service.activeAchievement(playerId);
+            String text = AchievementNameplateFormatter.format(
+                    achievement,
+                    service.level(playerId),
+                    username,
+                    key -> translate(player.getLanguage(), key)
+            );
             store.ensureAndGetComponent(ref, Nameplate.getComponentType()).setText(text);
         });
     }
@@ -110,8 +116,9 @@ public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBl
         updateNameplate(ref.getStore().getComponent(ref, PlayerRef.getComponentType()));
     }
 
-    static String prefix(String title, int level) {
-        return title == null ? "[Lv " + level + "]" : "[" + title + " - Lv " + level + "]";
+    private static String translate(String language, String key) {
+        I18nModule i18n = I18nModule.get();
+        return i18n == null ? null : i18n.getMessage(language, key);
     }
 
     @Override public void onExpeditionUnlocked(UUID playerId, String expeditionId) {

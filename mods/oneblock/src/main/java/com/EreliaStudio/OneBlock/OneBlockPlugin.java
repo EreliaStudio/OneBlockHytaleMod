@@ -15,6 +15,7 @@ import org.joml.Vector3i;
 
 import javax.annotation.Nonnull;
 import java.util.Map;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -26,9 +27,11 @@ public final class OneBlockPlugin extends JavaPlugin
     private OneBlockDropRegistry dropRegistry;
     private OneBlockRootRegistry rootRegistry;
     private OneBlockHudService hudService;
+    private final OneBlockSubscriptions subscriptions = new OneBlockSubscriptions();
     private volatile OneBlockOwnerResolver ownerResolver = (world, playerId) -> playerId;
     private volatile OneBlockAccessResolver accessResolver = (world, playerId, root) -> true;
     private final CopyOnWriteArrayList<OneBlockProgressListener> progressListeners = new CopyOnWriteArrayList<>();
+    private final CopyOnWriteArrayList<OneBlockTriggerListener> triggerListeners = new CopyOnWriteArrayList<>();
 
     public OneBlockPlugin(@Nonnull JavaPluginInit init)
     {
@@ -106,6 +109,7 @@ public final class OneBlockPlugin extends JavaPlugin
         rootRegistry = null;
         ownerResolver = (world, playerId) -> playerId;
         accessResolver = (world, playerId, root) -> true;
+        triggerListeners.clear();
     }
 
     public OneBlockRootRegistry getRootRegistry()
@@ -166,6 +170,118 @@ public final class OneBlockPlugin extends JavaPlugin
         progressListeners.remove(listener);
     }
 
+    public void addTriggerListener(OneBlockTriggerListener listener)
+    {
+        if (listener != null) triggerListeners.addIfAbsent(listener);
+    }
+
+    public void removeTriggerListener(OneBlockTriggerListener listener)
+    {
+        triggerListeners.remove(listener);
+    }
+
+    /** Makes this player's HUD follow exactly one physical node. */
+    public void listenToOneBlock(PlayerRef player, World world, Vector3i position)
+    {
+        if (player == null || world == null || position == null) return;
+        subscriptions.listen(player.getUuid(), world.getName(), position);
+    }
+
+    public void stopListeningToOneBlock(PlayerRef player)
+    {
+        if (player == null) return;
+        subscriptions.stop(player.getUuid());
+        Player entity = player.getComponent(Player.getComponentType());
+        if (entity != null && hudService != null) hudService.clear(entity);
+    }
+
+    void forgetOneBlock(World world, Vector3i position)
+    {
+        if (world != null && position != null) subscriptions.forget(world.getName(), position);
+    }
+
+    /** Delivers a node update to the breaker and every player following that node. */
+    public void triggerOneBlock(World world, Player actor, OneBlockTrigger trigger)
+    {
+        if (world == null || trigger == null || hudService == null) return;
+        if (!world.getName().equals(trigger.worldName()))
+            throw new IllegalArgumentException("The trigger belongs to a different world");
+
+        UUID actorId = actor == null || actor.getPlayerRef() == null
+                ? null
+                : actor.getPlayerRef().getUuid();
+        if (actorId != null)
+            subscriptions.listen(actorId, trigger.worldName(), trigger.nodePosition());
+
+        Set<UUID> delivered = new HashSet<>();
+        deliverTrigger(actor, actorId, trigger, delivered);
+        for (PlayerRef playerRef : world.getPlayerRefs())
+        {
+            UUID playerId = playerRef.getUuid();
+            if (!subscriptions.isListening(playerId, trigger.worldName(), trigger.nodePosition()))
+                continue;
+
+            Player player = playerRef.getComponent(Player.getComponentType());
+            deliverTrigger(player, playerId, trigger, delivered);
+        }
+    }
+
+    private void deliverTrigger(Player player,
+                                UUID playerId,
+                                OneBlockTrigger trigger,
+                                Set<UUID> delivered)
+    {
+        if (player == null || playerId == null || !delivered.add(playerId)) return;
+        hudService.apply(player, trigger);
+        for (OneBlockTriggerListener listener : triggerListeners)
+            listener.onOneBlockTrigger(playerId, trigger);
+    }
+
+    /** Publishes a changed owner state once for every registered node in the world. */
+    void triggerOwnerNodes(World world, UUID ownerId, Player actor, OneBlockTriggerFactory factory)
+    {
+        triggerOwnerNodes(world, ownerId, actor, null, factory);
+    }
+
+    /** Publishes owner state while binding the actor to the node they actually used. */
+    void triggerOwnerNodes(World world,
+                           UUID ownerId,
+                           Player actor,
+                           Vector3i actorPosition,
+                           OneBlockTriggerFactory factory)
+    {
+        if (world == null || ownerId == null || factory == null) return;
+        boolean actorDelivered = false;
+        UUID actorId = actor == null || actor.getPlayerRef() == null
+                ? null
+                : actor.getPlayerRef().getUuid();
+        java.util.List<OneBlockRootRegistry.OneBlockNode> nodes = rootRegistry.nodes(world, ownerId);
+        OneBlockRootRegistry.OneBlockNode actorNode = actorPosition == null ? null : nodes.stream()
+                .filter(node -> node.position().equals(actorPosition))
+                .findFirst()
+                .orElse(null);
+        if (actorNode == null)
+        {
+            actorNode = nodes.stream()
+                    .filter(node -> actorId != null
+                            && subscriptions.isListening(actorId, world.getName(), node.position()))
+                    .findFirst()
+                    .orElse(nodes.isEmpty() ? null : nodes.getFirst());
+        }
+        for (OneBlockRootRegistry.OneBlockNode node : nodes)
+        {
+            Player nodeActor = !actorDelivered && node.equals(actorNode) ? actor : null;
+            triggerOneBlock(world, nodeActor, factory.create(node.position()));
+            if (nodeActor != null) actorDelivered = true;
+        }
+    }
+
+    @FunctionalInterface
+    interface OneBlockTriggerFactory
+    {
+        OneBlockTrigger create(Vector3i position);
+    }
+
     void expeditionUnlocked(UUID playerId, String expeditionId)
     {
         for (OneBlockProgressListener listener : progressListeners) listener.onExpeditionUnlocked(playerId, expeditionId);
@@ -189,13 +305,17 @@ public final class OneBlockPlugin extends JavaPlugin
             return;
         }
 
+        OneBlockRootRegistry.OneBlockNode node = rootRegistry.nodes(world, ownerId).getFirst();
+        listenToOneBlock(player.getPlayerRef(), world, node.position());
+
         OneBlockDungeonStateProvider dungeonState = rootRegistry.dungeonState(world, ownerId);
         if (dungeonState.isDungeonActive())
         {
             String dungeonId = dungeonState.getActiveDungeonId();
             int totalWaves = OneBlockDungeonDefaults.getWaveCount(dungeonId);
-            hudService.showDungeonStarted(player, dungeonId, totalWaves);
-            hudService.updateDungeonWave(player, dungeonId, dungeonState.getCurrentWaveIndex(), totalWaves);
+            hudService.apply(player, OneBlockTrigger.dungeon(
+                    world.getName(), node.position(), ownerId, dungeonId,
+                    dungeonState.getCurrentWaveIndex(), totalWaves, true));
             return;
         }
 
@@ -205,12 +325,10 @@ public final class OneBlockPlugin extends JavaPlugin
             hudService.clear(player);
             return;
         }
-        hudService.restoreExpeditionHud(
-                player,
-                expeditionState.getActiveExpeditionId(),
-                expeditionState.getTicksRemaining(),
-                expeditionState.getTotalTicks()
-        );
+        String expeditionId = expeditionState.getActiveExpeditionId();
+        hudService.apply(player, OneBlockTrigger.expedition(
+                world.getName(), node.position(), ownerId, expeditionId,
+                expeditionState.getTicksRemaining(), expeditionState.getTotalTicks(), true));
     }
 
     private void restoreRootHud(Player player, World world, UUID ownerId)
@@ -227,6 +345,7 @@ public final class OneBlockPlugin extends JavaPlugin
         }
         else if (player != null)
         {
+            if (playerRef != null) subscriptions.stop(playerRef.getUuid());
             hudService.clear(player);
         }
     }
