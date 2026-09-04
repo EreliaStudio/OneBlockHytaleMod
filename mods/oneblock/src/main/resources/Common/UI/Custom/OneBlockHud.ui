@@ -1,34 +1,72 @@
-@OneBlockHudFrame = PatchStyle(TexturePath: "OneBlockHudFrame.png");
+@OneBlockHudFrameA = PatchStyle(TexturePath: "OneBlockHudFrameA.png");
+@OneBlockHudFrameB = PatchStyle(TexturePath: "OneBlockHudFrameB.png");
+@OneBlockHudFrameC = PatchStyle(TexturePath: "OneBlockHudFrameC.png");
+@OneBlockHudFrameD = PatchStyle(TexturePath: "OneBlockHudFrameD.png");
+@OneBlockHudFrameE = PatchStyle(TexturePath: "OneBlockHudFrameE.png");
 @OneBlockBarBackground = PatchStyle(Color: #101C31);
-@OneBlockBarFill = PatchStyle(TexturePath: "OneBlockHudProgressFill.png");
+@OneBlockBarFill = PatchStyle(TexturePath: "OneBlockHudProgressFill.png", HorizontalBorder: 6);
 
 Group #OneBlockHudRoot {
-  Anchor: (Top: 48, Left: 0, Right: 0, Height: 96);
+  Anchor: (Top: 48, Left: 0, Right: 0, Height: 108);
   LayoutMode: Center;
 
   Group #OneBlockHudContent {
-    Anchor: (MinWidth: 260, Height: 96);
-    LayoutMode: Top;
-    Padding: (Horizontal: 30);
-    Background: @OneBlockHudFrame;
+    // A/C/E are fixed. Only B and D receive extra title width.
+    Anchor: (Width: 604, Height: 108);
 
-    Label #OneBlockBarTitle {
-      Anchor: (Top: 22, Left: 10, Right: 10, Height: 36);
-      Text: "";
-      Style: (
-        HorizontalAlignment: Center,
-        VerticalAlignment: Center,
-        FontSize: 22,
-        TextColor: #F5F7FC,
-        OutlineColor: #07101E,
-        LetterSpacing: 1.2,
-        RenderUppercase: true,
-        RenderBold: true
-      );
+    Group #OneBlockHudFrameSlices {
+      Anchor: (Full: 0);
+      LayoutMode: Left;
+
+      Group #OneBlockHudFrameA {
+        Anchor: (Width: 76, Height: 108);
+        Background: @OneBlockHudFrameA;
+      }
+
+      Group #OneBlockHudFrameB {
+        Anchor: (Width: 56, Height: 108);
+        Background: @OneBlockHudFrameB;
+      }
+
+      Group #OneBlockHudFrameC {
+        Anchor: (Width: 340, Height: 108);
+        Background: @OneBlockHudFrameC;
+      }
+
+      Group #OneBlockHudFrameD {
+        Anchor: (Width: 56, Height: 108);
+        Background: @OneBlockHudFrameD;
+      }
+
+      Group #OneBlockHudFrameE {
+        Anchor: (Width: 76, Height: 108);
+        Background: @OneBlockHudFrameE;
+      }
     }
 
+    // This region is exactly B + C + D. The label is centered within it.
+    Group #OneBlockHudTitleRegion {
+      Anchor: (Top: 31, Left: 76, Right: 76, Height: 36);
+
+      Label #OneBlockBarTitle {
+        Anchor: (Left: 12, Right: 12, Height: 36);
+        Text: "";
+        Style: (
+          HorizontalAlignment: Center,
+          VerticalAlignment: Center,
+          FontSize: 22,
+          TextColor: #F5F7FC,
+          OutlineColor: #07101E,
+          LetterSpacing: 1.2,
+          RenderUppercase: true,
+          RenderBold: true
+        );
+      }
+    }
+
+    // These bounds map to the red lower track in the 2416x432 source texture.
     ProgressBar #OneBlockBar {
-      Anchor: (Top: 7, Height: 13);
+      Anchor: (Top: 70, Left: 19, Width: 566, Height: 21);
       Value: 0.0;
       Background: @OneBlockBarBackground;
       Bar: @OneBlockBarFill;

@@ -9,10 +9,12 @@ import com.hypixel.hytale.server.core.event.events.player.AddPlayerToWorldEvent;
 import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.entity.nameplate.Nameplate;
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.server.OpenCustomUIInteraction;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.Universe;
+import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
@@ -24,6 +26,7 @@ import java.util.logging.Level;
 
 public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBlockProgressListener {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
+    private static final String ACHIEVEMENT_PAGE_ID = "oneblock-achievement:achievement_page";
     private static OneBlockAchievementPlugin instance;
     private AchievementCatalog catalog;
     private AchievementService service;
@@ -43,6 +46,12 @@ public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBl
             throw new IllegalStateException("Cannot load achievement data: " + error.getMessage(), error);
         }
         service = new AchievementService(catalog, progress);
+        OpenCustomUIInteraction.registerSimple(
+                this,
+                AchievementPage.class,
+                ACHIEVEMENT_PAGE_ID,
+                player -> new AchievementPage(player, service)
+        );
         getCommandRegistry().registerCommand(new AchievementsCommand(catalog, service));
         getCommandRegistry().registerCommand(new AchievementCommand(service));
         getEventRegistry().registerGlobal(PlayerChatEvent.class, this::formatChat);
@@ -67,19 +76,33 @@ public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBl
 
     private void formatChat(PlayerChatEvent event) {
         if (service == null || event.getSender() == null) return;
-        String title = service.activeTitle(event.getSender().getUuid());
+        AchievementDefinition achievement = service.activeAchievement(event.getSender().getUuid());
         int level = service.level(event.getSender().getUuid());
-        event.setFormatter((sender, content) -> Message.raw(prefix(title, level) + " "
-                + sender.getUsername() + " : " + content));
+        event.setFormatter((sender, content) -> Message.translation(achievement == null
+                        ? "server.achievement.chat.withoutTitle"
+                        : "server.achievement.chat.withTitle")
+                .param("title", achievement == null ? Message.empty() : achievement.localizedTitle())
+                .param("level", level)
+                .param("username", sender.getUsername())
+                .param("content", content));
     }
 
     void updateNameplate(PlayerRef player) {
         if (player == null || player.getReference() == null || !player.getReference().isValid() || service == null) return;
         Ref<EntityStore> ref = player.getReference();
         Store<EntityStore> store = ref.getStore();
-        String title = service.activeTitle(player.getUuid());
-        String text = prefix(title, service.level(player.getUuid())) + "\n" + player.getUsername();
-        store.ensureAndGetComponent(ref, Nameplate.getComponentType()).setText(text);
+        EntityStore entityStore = store.getExternalData();
+        World world = entityStore == null ? null : entityStore.getWorld();
+        if (world == null) return;
+
+        UUID playerId = player.getUuid();
+        String username = player.getUsername();
+        world.execute(() -> {
+            if (!ref.isValid() || service == null) return;
+            String title = service.activeTitle(playerId);
+            String text = prefix(title, service.level(playerId)) + "\n" + username;
+            store.ensureAndGetComponent(ref, Nameplate.getComponentType()).setText(text);
+        });
     }
 
     private void updateNameplate(Ref<EntityStore> ref) {
@@ -100,7 +123,8 @@ public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBl
         if (player != null) {
             updateNameplate(player);
             if (service.level(playerId) > before)
-                player.sendMessage(Message.raw("An achievement was unlocked by learning expedition " + expeditionId + "."));
+                player.sendMessage(Message.translation("server.achievement.message.unlockedByExpedition")
+                        .param("expedition", Message.translation("server.expeditions." + expeditionId + ".name")));
         }
     }
 }

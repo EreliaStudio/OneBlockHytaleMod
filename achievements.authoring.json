@@ -1,27 +1,1740 @@
 {
   "achievements": [
     {
-      "id": "beginner_miner",
-      "name": "Beginner Miner",
-      "title": "Beginner Miner",
+      "id": "first_steps",
+      "name": "First Steps",
+      "title": "Newcomer",
       "requires": [],
       "money": 0,
       "items": {
-        "Rock_Stone": 64
+        "Ingredient_Fibre": 64,
+        "Ingredient_Stick": 32,
+        "Soil_Dirt": 64
       },
       "expeditions": []
     },
     {
-      "id": "apprentice_miner",
-      "name": "Apprentice Miner",
-      "title": "Apprentice Miner",
-      "requires": ["beginner_miner"],
+      "id": "stone_age",
+      "name": "Enter the Stone Age",
+      "title": "Stonebound",
+      "requires": [
+        "first_steps"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Stone": 64,
+        "Rubble_Stone": 64
+      },
+      "expeditions": [
+        "CaveEntry"
+      ]
+    },
+    {
+      "id": "workshop_builder",
+      "name": "Build a Workbench",
+      "title": "Craftsman",
+      "requires": [
+        "stone_age"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_WorkBench": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "furnace_online",
+      "name": "Fire Up the Furnace",
+      "title": "Smelter",
+      "requires": [
+        "workshop_builder"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_Furnace": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "settlement_founder",
+      "name": "Found a Small Settlement",
+      "title": "Settler",
+      "requires": [
+        "workshop_builder"
+      ],
       "money": 250,
       "items": {
-        "Ore_Copper": 32,
-        "Ore_Iron": 16
+        "Bench_Farming": 1,
+        "Bench_Furniture": 1
       },
-      "expeditions": ["CopperCave"]
+      "expeditions": []
+    },
+    {
+      "id": "copper_prospector",
+      "name": "Copper Prospector",
+      "title": "Copper Prospector",
+      "requires": [
+        "furnace_online"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Copper": 64
+      },
+      "expeditions": [
+        "CopperCave"
+      ]
+    },
+    {
+      "id": "copper_smelter",
+      "name": "Copper Age",
+      "title": "Copper Smith",
+      "requires": [
+        "copper_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Bar_Copper": 32
+      },
+      "expeditions": []
+    },
+    {
+      "id": "iron_prospector",
+      "name": "Iron Prospector",
+      "title": "Iron Prospector",
+      "requires": [
+        "copper_smelter"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Iron": 64
+      },
+      "expeditions": [
+        "IronCave"
+      ]
+    },
+    {
+      "id": "iron_smelter",
+      "name": "Iron Age",
+      "title": "Iron Smith",
+      "requires": [
+        "iron_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Bar_Iron": 32
+      },
+      "expeditions": []
+    },
+    {
+      "id": "precious_metals",
+      "name": "Precious Metals",
+      "title": "Prospector",
+      "requires": [
+        "iron_smelter"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Gold": 32,
+        "Ore_Silver": 32
+      },
+      "expeditions": [
+        "GoldCave",
+        "SilverCave"
+      ]
+    },
+    {
+      "id": "strange_metals",
+      "name": "Strange Metals",
+      "title": "Deep Prospector",
+      "requires": [
+        "precious_metals"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Thorium": 32,
+        "Ore_Cobalt": 32
+      },
+      "expeditions": [
+        "ThoriumCave",
+        "CobaltCave"
+      ]
+    },
+    {
+      "id": "adamantite_prospector",
+      "name": "Adamantite Prospector",
+      "title": "Adamant Seeker",
+      "requires": [
+        "strange_metals"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Adamantite": 24
+      },
+      "expeditions": [
+        "AdamantiteCave"
+      ]
+    },
+    {
+      "id": "mithril_prospector",
+      "name": "Mithril Prospector",
+      "title": "Mithril Seeker",
+      "requires": [
+        "adamantite_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Mithril": 24
+      },
+      "expeditions": [
+        "MithrilCave"
+      ]
+    },
+    {
+      "id": "onyxium_prospector",
+      "name": "Onyxium Prospector",
+      "title": "Onyx Seeker",
+      "requires": [
+        "mithril_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Onyxium": 24
+      },
+      "expeditions": [
+        "OnyxiumCave"
+      ]
+    },
+    {
+      "id": "prisma_prospector",
+      "name": "Prisma Prospector",
+      "title": "Prismatic Seeker",
+      "requires": [
+        "onyxium_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ore_Prisma": 16
+      },
+      "expeditions": [
+        "PrismaCave"
+      ]
+    },
+    {
+      "id": "master_miner",
+      "name": "Master of Every Ore",
+      "title": "Master Miner",
+      "requires": [
+        "prisma_prospector"
+      ],
+      "money": 5000,
+      "items": {
+        "Ingredient_Bar_Copper": 16,
+        "Ingredient_Bar_Iron": 16,
+        "Ingredient_Bar_Thorium": 16,
+        "Ingredient_Bar_Cobalt": 16,
+        "Ingredient_Bar_Adamantite": 12,
+        "Ingredient_Bar_Mithril": 12,
+        "Ingredient_Bar_Onyxium": 12,
+        "Ingredient_Bar_Prisma": 8
+      },
+      "expeditions": [
+        "CopperCave",
+        "IronCave",
+        "GoldCave",
+        "SilverCave",
+        "ThoriumCave",
+        "CobaltCave",
+        "AdamantiteCave",
+        "MithrilCave",
+        "OnyxiumCave",
+        "PrismaCave"
+      ]
+    },
+    {
+      "id": "blacksmith_apprentice",
+      "name": "Open the Forge",
+      "title": "Blacksmith",
+      "requires": [
+        "copper_smelter"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_Weapon": 1,
+        "Bench_Armour": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "copper_arsenal",
+      "name": "Copper Arsenal",
+      "title": "Copper Warrior",
+      "requires": [
+        "blacksmith_apprentice"
+      ],
+      "money": 0,
+      "items": {
+        "Tool_Pickaxe_Copper": 1,
+        "Weapon_Sword_Copper": 1,
+        "Weapon_Shortbow_Copper": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "copper_armor",
+      "name": "Clad in Copper",
+      "title": "Copperclad",
+      "requires": [
+        "copper_arsenal"
+      ],
+      "money": 0,
+      "items": {
+        "Armor_Copper_Head": 1,
+        "Armor_Copper_Chest": 1,
+        "Armor_Copper_Hands": 1,
+        "Armor_Copper_Legs": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "tanner",
+      "name": "Learn the Tanner Trade",
+      "title": "Tanner",
+      "requires": [
+        "copper_armor"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_Tannery": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "iron_arsenal",
+      "name": "Iron Arsenal",
+      "title": "Iron Warrior",
+      "requires": [
+        "tanner",
+        "iron_smelter"
+      ],
+      "money": 0,
+      "items": {
+        "Tool_Pickaxe_Iron": 1,
+        "Weapon_Sword_Iron": 1,
+        "Weapon_Shortbow_Iron": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "iron_armor",
+      "name": "Clad in Iron",
+      "title": "Ironclad",
+      "requires": [
+        "iron_arsenal"
+      ],
+      "money": 0,
+      "items": {
+        "Armor_Iron_Head": 1,
+        "Armor_Iron_Chest": 1,
+        "Armor_Iron_Hands": 1,
+        "Armor_Iron_Legs": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "advanced_tools",
+      "name": "Advanced Toolmaker",
+      "title": "Master Toolmaker",
+      "requires": [
+        "iron_armor",
+        "strange_metals"
+      ],
+      "money": 0,
+      "items": {
+        "Tool_Pickaxe_Thorium": 1,
+        "Tool_Pickaxe_Cobalt": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "adamantite_gear",
+      "name": "Adamantite Arsenal",
+      "title": "Adamant Vanguard",
+      "requires": [
+        "advanced_tools",
+        "adamantite_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Tool_Pickaxe_Adamantite": 1,
+        "Weapon_Sword_Adamantite": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "mythic_gear",
+      "name": "Mythic Arsenal",
+      "title": "Mythic Vanguard",
+      "requires": [
+        "adamantite_gear",
+        "onyxium_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Tool_Pickaxe_Mithril": 1,
+        "Weapon_Sword_Mithril": 1,
+        "Tool_Pickaxe_Onyxium": 1,
+        "Weapon_Sword_Onyxium": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "master_smith",
+      "name": "Master Smith",
+      "title": "Forge Master",
+      "requires": [
+        "mythic_gear",
+        "master_miner"
+      ],
+      "money": 10000,
+      "items": {
+        "Bench_Salvage": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "young_forester",
+      "name": "Young Forester",
+      "title": "Forester",
+      "requires": [
+        "first_steps"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Oak_Trunk": 64,
+        "Plant_Sapling_Oak": 8
+      },
+      "expeditions": [
+        "ForestEdge"
+      ]
+    },
+    {
+      "id": "lumberjack",
+      "name": "Lumberjack",
+      "title": "Lumberjack",
+      "requires": [
+        "young_forester"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Oak_Trunk": 64,
+        "Wood_Birch_Trunk": 64,
+        "Wood_Ash_Trunk": 32
+      },
+      "expeditions": [
+        "Forest",
+        "AridForest",
+        "Swamp"
+      ]
+    },
+    {
+      "id": "enchanted_woods",
+      "name": "Into the Enchanted Woods",
+      "title": "Green Wanderer",
+      "requires": [
+        "lumberjack"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Life_Essence": 32
+      },
+      "expeditions": [
+        "EnchantedForest",
+        "FairyPond",
+        "DeepForest"
+      ]
+    },
+    {
+      "id": "dark_woods",
+      "name": "The Dark Woods",
+      "title": "Night Forester",
+      "requires": [
+        "enchanted_woods"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Burnt_Trunk": 32,
+        "Wood_Poisoned_Trunk": 32
+      },
+      "expeditions": [
+        "DarkForest",
+        "BurnedForest",
+        "CursedForest"
+      ]
+    },
+    {
+      "id": "exotic_lumber",
+      "name": "Exotic Lumber",
+      "title": "Exotic Woodworker",
+      "requires": [
+        "lumberjack"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Bamboo_Trunk": 64,
+        "Wood_Jungle_Trunk": 64,
+        "Wood_Palm_Trunk": 32
+      },
+      "expeditions": [
+        "JungleEdge",
+        "DryJunglePass"
+      ]
+    },
+    {
+      "id": "woodworker",
+      "name": "Woodworker",
+      "title": "Woodwright",
+      "requires": [
+        "lumberjack",
+        "settlement_founder"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Hardwood_Planks": 64,
+        "Wood_Drywood_Planks": 64,
+        "Wood_Tropicalwood_Planks": 64
+      },
+      "expeditions": []
+    },
+    {
+      "id": "master_of_the_canopy",
+      "name": "Master of the Canopy",
+      "title": "Canopy Lord",
+      "requires": [
+        "dark_woods",
+        "exotic_lumber",
+        "woodworker"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Crystal_Trunk": 32,
+        "Wood_Amber_Trunk": 32
+      },
+      "expeditions": [
+        "TemperateGrove",
+        "DryWoodland",
+        "AncientCanopy",
+        "ElementalGrove"
+      ]
+    },
+    {
+      "id": "field_hand",
+      "name": "Field Hand",
+      "title": "Farmer",
+      "requires": [
+        "first_steps"
+      ],
+      "money": 0,
+      "items": {
+        "Plant_Crop_Wheat_Item": 64,
+        "Plant_Crop_Carrot_Item": 32,
+        "Plant_Crop_Corn_Item": 32
+      },
+      "expeditions": [
+        "Plain"
+      ]
+    },
+    {
+      "id": "orchard_keeper",
+      "name": "Orchard Keeper",
+      "title": "Orchard Keeper",
+      "requires": [
+        "field_hand"
+      ],
+      "money": 0,
+      "items": {
+        "Plant_Fruit_Apple": 32,
+        "Plant_Fruit_Mango": 16,
+        "Plant_Fruit_Coconut": 16
+      },
+      "expeditions": [
+        "Forest",
+        "JungleEdge"
+      ]
+    },
+    {
+      "id": "life_farmer",
+      "name": "Essence Farmer",
+      "title": "Life Tender",
+      "requires": [
+        "field_hand"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Life_Essence": 64
+      },
+      "expeditions": [
+        "Pond",
+        "River",
+        "Lake"
+      ]
+    },
+    {
+      "id": "farmstead",
+      "name": "Build a Farmstead",
+      "title": "Homesteader",
+      "requires": [
+        "settlement_founder",
+        "field_hand"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_Farming": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "kitchen_ready",
+      "name": "Kitchen Ready",
+      "title": "Cook",
+      "requires": [
+        "farmstead",
+        "copper_smelter"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_Cooking": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "baker",
+      "name": "Daily Bread",
+      "title": "Baker",
+      "requires": [
+        "kitchen_ready"
+      ],
+      "money": 0,
+      "items": {
+        "Food_Bread": 32
+      },
+      "expeditions": []
+    },
+    {
+      "id": "festival_food",
+      "name": "Festival Food",
+      "title": "Feast Maker",
+      "requires": [
+        "baker",
+        "orchard_keeper"
+      ],
+      "money": 0,
+      "items": {
+        "Food_Popcorn": 16,
+        "Food_Vegetable_Cooked": 16
+      },
+      "expeditions": []
+    },
+    {
+      "id": "skewer_master",
+      "name": "Skewer Master",
+      "title": "Grill Master",
+      "requires": [
+        "kitchen_ready"
+      ],
+      "money": 0,
+      "items": {
+        "Food_Kebab_Fruit": 8,
+        "Food_Kebab_Vegetable": 8,
+        "Food_Kebab_Meat": 8
+      },
+      "expeditions": []
+    },
+    {
+      "id": "master_chef",
+      "name": "Master Chef",
+      "title": "Master Chef",
+      "requires": [
+        "festival_food",
+        "skewer_master"
+      ],
+      "money": 2500,
+      "items": {
+        "Food_Fish_Grilled": 16
+      },
+      "expeditions": []
+    },
+    {
+      "id": "freshwater_explorer",
+      "name": "Freshwater Explorer",
+      "title": "Riverwalker",
+      "requires": [
+        "first_steps"
+      ],
+      "money": 0,
+      "items": {
+        "Fish_Bluegill_Item": 16
+      },
+      "expeditions": [
+        "Pond",
+        "River",
+        "Lake"
+      ]
+    },
+    {
+      "id": "open_sea",
+      "name": "Open Sea",
+      "title": "Sailor",
+      "requires": [
+        "freshwater_explorer"
+      ],
+      "money": 0,
+      "items": {
+        "Fish_Salmon_Item": 16,
+        "Fish_Crab_Item": 8
+      },
+      "expeditions": [
+        "Sea",
+        "Coastline"
+      ]
+    },
+    {
+      "id": "shipwreck_diver",
+      "name": "Shipwreck Diver",
+      "title": "Wreck Diver",
+      "requires": [
+        "open_sea"
+      ],
+      "money": 0,
+      "items": {
+        "Fish_Lobster_Item": 8
+      },
+      "expeditions": [
+        "PirateShipwreck",
+        "SeaCavern"
+      ]
+    },
+    {
+      "id": "sea_monster_hunter",
+      "name": "Hunter of the Deep",
+      "title": "Deep Hunter",
+      "requires": [
+        "shipwreck_diver"
+      ],
+      "money": 0,
+      "items": {
+        "Fish_Shark_Hammerhead_Item": 4
+      },
+      "expeditions": [
+        "SeaInfestedNest",
+        "SeaMonster"
+      ]
+    },
+    {
+      "id": "master_angler",
+      "name": "Master Angler",
+      "title": "Master Angler",
+      "requires": [
+        "sea_monster_hunter"
+      ],
+      "money": 0,
+      "items": {
+        "Fish_Bluegill_Item": 32,
+        "Fish_Salmon_Item": 32,
+        "Fish_Crab_Item": 16,
+        "Fish_Lobster_Item": 16,
+        "Fish_Shark_Hammerhead_Item": 8
+      },
+      "expeditions": []
+    },
+    {
+      "id": "chalk_and_stone",
+      "name": "Chalk and Stone",
+      "title": "Stone Mason",
+      "requires": [
+        "stone_age"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Chalk": 64,
+        "Rock_Chalk_Cobble": 64,
+        "Rubble_Chalk": 64
+      },
+      "expeditions": [
+        "ChalkCliffs"
+      ]
+    },
+    {
+      "id": "cavern_mason",
+      "name": "Cavern Mason",
+      "title": "Cavern Mason",
+      "requires": [
+        "chalk_and_stone"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Calcite_Cobble": 64,
+        "Rock_Lime_Cobble": 64,
+        "Rock_Quartzite_Cobble": 64
+      },
+      "expeditions": [
+        "CalciteCavern",
+        "LimestoneCavern",
+        "QuartziteCavern"
+      ]
+    },
+    {
+      "id": "exotic_stone",
+      "name": "Exotic Stone Collector",
+      "title": "Stone Curator",
+      "requires": [
+        "cavern_mason"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Aqua_Cobble": 64,
+        "Rock_Marble_Cobble": 64,
+        "Rock_Slate_Cobble": 64
+      },
+      "expeditions": [
+        "AquaGrotto",
+        "WhiteStoneCavern",
+        "MysteriousCavern"
+      ]
+    },
+    {
+      "id": "frozen_mason",
+      "name": "Frozen Mason",
+      "title": "Ice Mason",
+      "requires": [
+        "exotic_stone"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Ice": 64,
+        "Rock_Ice_Permafrost": 32,
+        "Rubble_Ice": 32
+      },
+      "expeditions": [
+        "IcyCavern",
+        "PermafrostShelf"
+      ]
+    },
+    {
+      "id": "volcanic_mason",
+      "name": "Volcanic Mason",
+      "title": "Magma Mason",
+      "requires": [
+        "exotic_stone"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Volcanic": 64,
+        "Rock_Volcanic_Cobble": 64,
+        "Rubble_Volcanic": 32
+      },
+      "expeditions": [
+        "VolcanicFault"
+      ]
+    },
+    {
+      "id": "master_geologist",
+      "name": "Master Geologist",
+      "title": "Master Geologist",
+      "requires": [
+        "frozen_mason",
+        "volcanic_mason"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Gem_Diamond": 8,
+        "Rock_Gem_Emerald": 8,
+        "Rock_Gem_Ruby": 8,
+        "Rock_Gem_Sapphire": 8,
+        "Rock_Gem_Topaz": 8
+      },
+      "expeditions": []
+    },
+    {
+      "id": "desert_wanderer",
+      "name": "Desert Wanderer",
+      "title": "Sandwalker",
+      "requires": [
+        "stone_age"
+      ],
+      "money": 0,
+      "items": {
+        "Soil_Sand": 64,
+        "Rock_Sandstone": 64
+      },
+      "expeditions": [
+        "SandCave",
+        "SandCavern",
+        "Desert",
+        "InnerDesert"
+      ]
+    },
+    {
+      "id": "temple_raider",
+      "name": "Temple Raider",
+      "title": "Tomb Raider",
+      "requires": [
+        "desert_wanderer"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Sandstone_Brick": 64
+      },
+      "expeditions": [
+        "DesertTempleEntrance",
+        "DeeperDesertTemple",
+        "DesertTemple",
+        "PharaohRoom"
+      ]
+    },
+    {
+      "id": "insect_hunter",
+      "name": "Insect Hunter",
+      "title": "Hivebreaker",
+      "requires": [
+        "desert_wanderer"
+      ],
+      "money": 0,
+      "items": {
+        "Soil_Hive": 32,
+        "Soil_Hive_Brick": 32
+      },
+      "expeditions": [
+        "InsectInvasion",
+        "InfestedDesert",
+        "InsectNest",
+        "InsideInsectNest",
+        "InsectCore"
+      ]
+    },
+    {
+      "id": "desert_master",
+      "name": "Master of the Sands",
+      "title": "Desert Lord",
+      "requires": [
+        "temple_raider",
+        "insect_hunter"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Salt": 32,
+        "Rubble_Sandstone_Red": 32,
+        "Rubble_Sandstone_White": 32
+      },
+      "expeditions": []
+    },
+    {
+      "id": "frost_walker",
+      "name": "Frost Walker",
+      "title": "Frost Walker",
+      "requires": [
+        "open_sea"
+      ],
+      "money": 0,
+      "items": {
+        "Soil_Snow": 64,
+        "Rock_Ice": 64
+      },
+      "expeditions": [
+        "Tundra",
+        "FrozenForest",
+        "IceLand",
+        "IcyCavern",
+        "IcyForest"
+      ]
+    },
+    {
+      "id": "yeti_hunter",
+      "name": "Yeti Hunter",
+      "title": "Yeti Hunter",
+      "requires": [
+        "frost_walker"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Ice_Essence": 32
+      },
+      "expeditions": [
+        "YetiCavern"
+      ]
+    },
+    {
+      "id": "ice_templar",
+      "name": "Ice Templar",
+      "title": "Ice Templar",
+      "requires": [
+        "yeti_hunter"
+      ],
+      "money": 0,
+      "items": {
+        "Weapon_Staff_Crystal_Ice": 1
+      },
+      "expeditions": [
+        "IceTemple",
+        "FrozenGraveyard",
+        "IcyNecropolis",
+        "FrostboneCrypt"
+      ]
+    },
+    {
+      "id": "frost_master",
+      "name": "Master of Winter",
+      "title": "Winter Lord",
+      "requires": [
+        "ice_templar"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Ice_Essence": 64,
+        "Rock_Ice_Permafrost": 64
+      },
+      "expeditions": []
+    },
+    {
+      "id": "fire_walker",
+      "name": "Fire Walker",
+      "title": "Flame Walker",
+      "requires": [
+        "adamantite_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Fire_Essence": 32,
+        "Rock_Volcanic": 64
+      },
+      "expeditions": [
+        "FireCave",
+        "FireLand",
+        "Volcano",
+        "FieryGraveyard"
+      ]
+    },
+    {
+      "id": "infernal_scout",
+      "name": "Infernal Scout",
+      "title": "Infernal Scout",
+      "requires": [
+        "fire_walker"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Fire_Essence": 64
+      },
+      "expeditions": [
+        "InfernalGate",
+        "InfernalPlain",
+        "InfernalSwamp",
+        "FireGemCave"
+      ]
+    },
+    {
+      "id": "void_touched",
+      "name": "Void Touched",
+      "title": "Void Touched",
+      "requires": [
+        "mithril_prospector"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Void_Essence": 32,
+        "Ingredient_Voidheart": 8,
+        "Rock_Gem_Voidstone": 4
+      },
+      "expeditions": [
+        "VoidPortal",
+        "VoidTemple"
+      ]
+    },
+    {
+      "id": "gem_collector",
+      "name": "Gem Collector",
+      "title": "Gemologist",
+      "requires": [
+        "master_geologist"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Gem_Diamond": 16,
+        "Rock_Gem_Emerald": 16,
+        "Rock_Gem_Ruby": 16,
+        "Rock_Gem_Sapphire": 16,
+        "Rock_Gem_Topaz": 16,
+        "Rock_Gem_Zephyr": 8,
+        "Rock_Gem_Voidstone": 8
+      },
+      "expeditions": [
+        "GemCave",
+        "GemDeepCave",
+        "LuxuriousCave"
+      ]
+    },
+    {
+      "id": "crystal_spectrum",
+      "name": "The Crystal Spectrum",
+      "title": "Chromatic Collector",
+      "requires": [
+        "gem_collector"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Crystal_Blue": 8,
+        "Ingredient_Crystal_Cyan": 8,
+        "Ingredient_Crystal_Green": 8,
+        "Ingredient_Crystal_Pink": 8,
+        "Ingredient_Crystal_Purple": 8,
+        "Ingredient_Crystal_Red": 8,
+        "Ingredient_Crystal_White": 8,
+        "Ingredient_Crystal_Yellow": 8
+      },
+      "expeditions": [
+        "CrystalCavern"
+      ]
+    },
+    {
+      "id": "alchemist",
+      "name": "Open an Alchemy Workshop",
+      "title": "Alchemist",
+      "requires": [
+        "void_touched",
+        "precious_metals"
+      ],
+      "money": 0,
+      "items": {
+        "Bench_Alchemy": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "elemental_collector",
+      "name": "Elemental Collector",
+      "title": "Elementalist",
+      "requires": [
+        "infernal_scout",
+        "void_touched",
+        "frost_master",
+        "alchemist"
+      ],
+      "money": 0,
+      "items": {
+        "Ingredient_Fire_Essence": 32,
+        "Ingredient_Ice_Essence": 32,
+        "Ingredient_Water_Essence": 32,
+        "Ingredient_Lightning_Essence": 32,
+        "Ingredient_Life_Essence": 32,
+        "Ingredient_Void_Essence": 32
+      },
+      "expeditions": [
+        "SpiritThreshold",
+        "ElementalConfluence"
+      ]
+    },
+    {
+      "id": "elemental_master",
+      "name": "Master of the Elements",
+      "title": "Elemental Master",
+      "requires": [
+        "elemental_collector",
+        "crystal_spectrum"
+      ],
+      "money": 15000,
+      "items": {
+        "Ingredient_Voidheart": 16
+      },
+      "expeditions": [
+        "ElementalGrove",
+        "SpiritRealmTrial"
+      ]
+    },
+    {
+      "id": "jungle_scout",
+      "name": "Jungle Scout",
+      "title": "Jungle Scout",
+      "requires": [
+        "exotic_lumber"
+      ],
+      "money": 0,
+      "items": {
+        "Plant_Fruit_Mango": 16,
+        "Plant_Fruit_Coconut": 16
+      },
+      "expeditions": [
+        "JungleEdge",
+        "DryJunglePass"
+      ]
+    },
+    {
+      "id": "jungle_archaeologist",
+      "name": "Jungle Archaeologist",
+      "title": "Relic Hunter",
+      "requires": [
+        "jungle_scout"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Gem_Emerald": 8,
+        "Rock_Gem_Sapphire": 8
+      },
+      "expeditions": [
+        "OvergrownRuins",
+        "SunkenJungleRuins",
+        "LostNecropolis",
+        "JungleCrypt"
+      ]
+    },
+    {
+      "id": "trork_slayer",
+      "name": "Trork Slayer",
+      "title": "Trork Slayer",
+      "requires": [
+        "jungle_scout"
+      ],
+      "money": 2500,
+      "items": {
+        "Ingredient_Bone_Fragment": 64
+      },
+      "expeditions": [
+        "DryTrorkCamp",
+        "TrorkHuntingGround",
+        "TrorkWarband",
+        "TrorkStrongholdApproach",
+        "TrorkElderGrove",
+        "TrorkChieftainCamp"
+      ]
+    },
+    {
+      "id": "jungle_master",
+      "name": "Master of the Jungle",
+      "title": "Jungle Lord",
+      "requires": [
+        "jungle_archaeologist",
+        "trork_slayer"
+      ],
+      "money": 0,
+      "items": {
+        "Wood_Jungle_Trunk": 128,
+        "Wood_Bamboo_Trunk": 128
+      },
+      "expeditions": []
+    },
+    {
+      "id": "outlander_scout",
+      "name": "Outlander Scout",
+      "title": "Outlander Scout",
+      "requires": [
+        "dark_woods"
+      ],
+      "money": 0,
+      "items": {
+        "Rock_Gem_Zephyr": 8
+      },
+      "expeditions": [
+        "OutlanderForest",
+        "OutlanderPlain",
+        "OutlanderGank",
+        "OutlanderCity"
+      ]
+    },
+    {
+      "id": "undead_hunter",
+      "name": "Undead Hunter",
+      "title": "Grave Warden",
+      "requires": [
+        "outlander_scout"
+      ],
+      "money": 0,
+      "items": {
+        "Deco_Bone_Full": 16,
+        "Ingredient_Bone_Fragment": 64
+      },
+      "expeditions": [
+        "Graveyard",
+        "UndeadTemple",
+        "ArmoredDeadGrove",
+        "AncientUndeadSanctum"
+      ]
+    },
+    {
+      "id": "burnt_legion",
+      "name": "Break the Burnt Legion",
+      "title": "Legionbreaker",
+      "requires": [
+        "undead_hunter",
+        "infernal_scout"
+      ],
+      "money": 0,
+      "items": {
+        "Soil_Ash": 64
+      },
+      "expeditions": [
+        "BurntBattlefield",
+        "AshenCatacombs",
+        "BurntSkeletonCitadel",
+        "ShadowKnightCitadel"
+      ]
+    },
+    {
+      "id": "warlord",
+      "name": "Warlord",
+      "title": "Warlord",
+      "requires": [
+        "burnt_legion",
+        "trork_slayer"
+      ],
+      "money": 10000,
+      "items": {
+        "Weapon_Club_Zombie_Arm": 1,
+        "Weapon_Club_Zombie_Leg": 1
+      },
+      "expeditions": []
+    },
+    {
+      "id": "market_regular",
+      "name": "Market Regular",
+      "title": "Trader",
+      "requires": [
+        "settlement_founder"
+      ],
+      "money": 1000,
+      "items": {},
+      "expeditions": []
+    },
+    {
+      "id": "market_patron",
+      "name": "Market Patron",
+      "title": "Patron",
+      "requires": [
+        "market_regular"
+      ],
+      "money": 10000,
+      "items": {},
+      "expeditions": []
+    },
+    {
+      "id": "market_magnate",
+      "name": "Market Magnate",
+      "title": "Magnate",
+      "requires": [
+        "market_patron"
+      ],
+      "money": 100000,
+      "items": {},
+      "expeditions": []
+    },
+    {
+      "id": "easy_cartographer",
+      "name": "Easy Cartographer",
+      "title": "Trail Cartographer",
+      "requires": [
+        "stone_age"
+      ],
+      "money": 0,
+      "items": {},
+      "expeditions": [
+        "Default",
+        "CaveEntry",
+        "ForestEdge",
+        "Plain",
+        "Cave",
+        "LowerCave",
+        "CopperCave",
+        "SandCave",
+        "ForestEntry",
+        "Pond",
+        "River",
+        "Lake",
+        "Forest",
+        "AridForest",
+        "Swamp",
+        "Quarry",
+        "Hallow",
+        "CowHallow",
+        "HorseHallow",
+        "ChalkCliffs",
+        "TemperateGrove"
+      ]
+    },
+    {
+      "id": "advanced_cartographer",
+      "name": "Advanced Cartographer",
+      "title": "Regional Cartographer",
+      "requires": [
+        "easy_cartographer"
+      ],
+      "money": 1000,
+      "items": {},
+      "expeditions": [
+        "IronCave",
+        "GoldCave",
+        "ThoriumCave",
+        "SilverCave",
+        "CobaltCave",
+        "SandCavern",
+        "Desert",
+        "Sea",
+        "Coastline",
+        "SeaCavern",
+        "EnchantedForest",
+        "FairyPond",
+        "DeepForest",
+        "DarkForest",
+        "DesertTempleEntrance",
+        "InnerDesert",
+        "MuddyDesert",
+        "MysteriousCavern",
+        "MysticCave",
+        "DryTrorkCamp",
+        "TrorkHuntingGround",
+        "JungleEdge",
+        "DryJunglePass",
+        "CrystalCavern",
+        "CalciteCavern",
+        "LimestoneCavern",
+        "WhiteStoneCavern",
+        "AquaGrotto",
+        "DryWoodland"
+      ]
+    },
+    {
+      "id": "difficult_cartographer",
+      "name": "Difficult Cartographer",
+      "title": "Frontier Cartographer",
+      "requires": [
+        "advanced_cartographer"
+      ],
+      "money": 2500,
+      "items": {},
+      "expeditions": [
+        "AdamantiteCave",
+        "GemCave",
+        "FireCave",
+        "GemDeepCave",
+        "SeaInfestedNest",
+        "BurnedForest",
+        "CursedForest",
+        "Graveyard",
+        "OutlanderForest",
+        "DeeperDesertTemple",
+        "PharaohRoom",
+        "InfestedDesert",
+        "InsideInsectNest",
+        "LuxuriousCave",
+        "TrorkStrongholdApproach",
+        "TrorkElderGrove",
+        "OvergrownRuins",
+        "SunkenJungleRuins",
+        "LostNecropolis",
+        "QuartziteCavern",
+        "AncientCanopy"
+      ]
+    },
+    {
+      "id": "hard_cartographer",
+      "name": "Hard Cartographer",
+      "title": "Master Cartographer",
+      "requires": [
+        "difficult_cartographer"
+      ],
+      "money": 5000,
+      "items": {},
+      "expeditions": [
+        "MithrilCave",
+        "OnyxiumCave",
+        "VoidPortal",
+        "OutlanderPlain",
+        "Tundra",
+        "FrozenForest",
+        "IceLand",
+        "IcyCavern",
+        "IcyForest",
+        "FireLand",
+        "FieryGraveyard",
+        "InfernalGate",
+        "JurassicCave",
+        "BurntBattlefield",
+        "AshenCatacombs",
+        "ShadowedJungleRoad",
+        "ArmoredDeadGrove",
+        "PermafrostShelf",
+        "VolcanicFault"
+      ]
+    },
+    {
+      "id": "expert_cartographer",
+      "name": "Expert Cartographer",
+      "title": "World Cartographer",
+      "requires": [
+        "hard_cartographer"
+      ],
+      "money": 10000,
+      "items": {},
+      "expeditions": [
+        "PrismaCave",
+        "YetiCavern",
+        "InfernalPlain",
+        "InfernalSwamp",
+        "FireGemCave",
+        "FrozenGraveyard",
+        "IcyNecropolis",
+        "SpiritThreshold",
+        "ElementalConfluence",
+        "ElementalGrove"
+      ]
+    },
+    {
+      "id": "world_explorer",
+      "name": "Explore Every Horizon",
+      "title": "World Explorer",
+      "requires": [
+        "expert_cartographer"
+      ],
+      "money": 25000,
+      "items": {},
+      "expeditions": [
+        "Default",
+        "CaveEntry",
+        "ForestEdge",
+        "Plain",
+        "Cave",
+        "LowerCave",
+        "CopperCave",
+        "IronCave",
+        "SandCave",
+        "GoldCave",
+        "ThoriumCave",
+        "SilverCave",
+        "CobaltCave",
+        "AdamantiteCave",
+        "GemCave",
+        "FireCave",
+        "GemDeepCave",
+        "MithrilCave",
+        "OnyxiumCave",
+        "PrismaCave",
+        "SandCavern",
+        "Desert",
+        "ForestEntry",
+        "Pond",
+        "River",
+        "Lake",
+        "Sea",
+        "Coastline",
+        "SeaCavern",
+        "SeaInfestedNest",
+        "Forest",
+        "AridForest",
+        "Swamp",
+        "EnchantedForest",
+        "FairyPond",
+        "DeepForest",
+        "DarkForest",
+        "BurnedForest",
+        "CursedForest",
+        "Graveyard",
+        "VoidPortal",
+        "OutlanderForest",
+        "OutlanderPlain",
+        "Tundra",
+        "FrozenForest",
+        "IceLand",
+        "IcyCavern",
+        "YetiCavern",
+        "IcyForest",
+        "FireLand",
+        "FieryGraveyard",
+        "InfernalGate",
+        "InfernalPlain",
+        "InfernalSwamp",
+        "FireGemCave",
+        "DesertTempleEntrance",
+        "DeeperDesertTemple",
+        "PharaohRoom",
+        "InnerDesert",
+        "MuddyDesert",
+        "InfestedDesert",
+        "InsideInsectNest",
+        "Quarry",
+        "Hallow",
+        "CowHallow",
+        "HorseHallow",
+        "MysteriousCavern",
+        "MysticCave",
+        "LuxuriousCave",
+        "JurassicCave",
+        "DryTrorkCamp",
+        "TrorkHuntingGround",
+        "TrorkStrongholdApproach",
+        "TrorkElderGrove",
+        "FrozenGraveyard",
+        "IcyNecropolis",
+        "BurntBattlefield",
+        "AshenCatacombs",
+        "JungleEdge",
+        "DryJunglePass",
+        "OvergrownRuins",
+        "SunkenJungleRuins",
+        "LostNecropolis",
+        "ShadowedJungleRoad",
+        "ArmoredDeadGrove",
+        "SpiritThreshold",
+        "ElementalConfluence",
+        "CrystalCavern",
+        "ChalkCliffs",
+        "CalciteCavern",
+        "LimestoneCavern",
+        "WhiteStoneCavern",
+        "QuartziteCavern",
+        "AquaGrotto",
+        "PermafrostShelf",
+        "VolcanicFault",
+        "TemperateGrove",
+        "DryWoodland",
+        "AncientCanopy",
+        "ElementalGrove"
+      ]
+    },
+    {
+      "id": "dungeon_delver",
+      "name": "Dungeon Delver",
+      "title": "Dungeon Delver",
+      "requires": [
+        "advanced_cartographer"
+      ],
+      "money": 2500,
+      "items": {},
+      "expeditions": [
+        "RatCave",
+        "GoblinGank",
+        "GoblinInvasion",
+        "PirateShipwreck",
+        "SeaMonster",
+        "UndeadTemple",
+        "VoidTemple",
+        "OutlanderGank"
+      ]
+    },
+    {
+      "id": "dungeon_conqueror",
+      "name": "Dungeon Conqueror",
+      "title": "Dungeon Conqueror",
+      "requires": [
+        "dungeon_delver",
+        "hard_cartographer"
+      ],
+      "money": 7500,
+      "items": {},
+      "expeditions": [
+        "RatCave",
+        "GoblinGank",
+        "GoblinInvasion",
+        "PirateShipwreck",
+        "SeaMonster",
+        "UndeadTemple",
+        "VoidTemple",
+        "OutlanderGank",
+        "OutlanderCity",
+        "IceTemple",
+        "Volcano",
+        "DesertTemple",
+        "InsectInvasion",
+        "InsectNest",
+        "InsectCore",
+        "DinoCrisis"
+      ]
+    },
+    {
+      "id": "dungeon_legend",
+      "name": "Conquer Every Dungeon",
+      "title": "Dungeon Legend",
+      "requires": [
+        "dungeon_conqueror",
+        "expert_cartographer"
+      ],
+      "money": 20000,
+      "items": {},
+      "expeditions": [
+        "RatCave",
+        "GoblinGank",
+        "GoblinInvasion",
+        "PirateShipwreck",
+        "SeaMonster",
+        "UndeadTemple",
+        "VoidTemple",
+        "OutlanderGank",
+        "OutlanderCity",
+        "IceTemple",
+        "Volcano",
+        "DesertTemple",
+        "InsectInvasion",
+        "InsectNest",
+        "InsectCore",
+        "DinoCrisis",
+        "TrorkWarband",
+        "TrorkChieftainCamp",
+        "FrostboneCrypt",
+        "BurntSkeletonCitadel",
+        "JungleCrypt",
+        "AncientUndeadSanctum",
+        "ShadowKnightCitadel",
+        "SpiritRealmTrial"
+      ]
+    },
+    {
+      "id": "grand_artisan",
+      "name": "Grand Artisan",
+      "title": "Grand Artisan",
+      "requires": [
+        "master_smith",
+        "master_chef",
+        "woodworker",
+        "master_geologist"
+      ],
+      "money": 10000,
+      "items": {},
+      "expeditions": []
+    },
+    {
+      "id": "realm_master",
+      "name": "Master of Every Realm",
+      "title": "Realm Master",
+      "requires": [
+        "desert_master",
+        "frost_master",
+        "elemental_master",
+        "jungle_master",
+        "warlord",
+        "master_angler"
+      ],
+      "money": 20000,
+      "items": {},
+      "expeditions": []
+    },
+    {
+      "id": "oneblock_legend",
+      "name": "OneBlock Legend",
+      "title": "OneBlock Legend",
+      "requires": [
+        "master_miner",
+        "grand_artisan",
+        "realm_master",
+        "world_explorer",
+        "dungeon_legend",
+        "market_magnate"
+      ],
+      "money": 50000,
+      "items": {
+        "Ore_Prisma": 32,
+        "Ingredient_Voidheart": 32,
+        "Rock_Gem_Diamond": 32,
+        "Rock_Gem_Emerald": 32,
+        "Rock_Gem_Ruby": 32,
+        "Rock_Gem_Sapphire": 32,
+        "Rock_Gem_Topaz": 32
+      },
+      "expeditions": []
     }
   ]
 }

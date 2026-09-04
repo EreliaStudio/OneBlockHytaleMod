@@ -16,15 +16,15 @@ Group {
       Padding: (Horizontal: 18);
       Background: #172944;
 
-      Label { FlexWeight: 1; Anchor: (Height: 70); Text: "ACHIEVEMENTS"; Style: (FontSize: 30, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
+      Label { FlexWeight: 1; Anchor: (Height: 70); Text: %server.achievement.ui.page.heading; Style: (FontSize: 30, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
       Label #AchievementLevel { Anchor: (Width: 150, Height: 70); Text: "Lv 0"; Style: (FontSize: 24, TextColor: #7FE3A1, RenderBold: true, HorizontalAlignment: End, VerticalAlignment: Center); }
     }
 
     Group {
       Anchor: (Top: 10, Height: 44);
       LayoutMode: Left;
-      Label #ActiveTitle { FlexWeight: 1; Anchor: (Height: 44); Text: "No title selected"; Style: (FontSize: 19, TextColor: #DCE8FF, VerticalAlignment: Center); }
-      $Common.@TextButton #ClearTitleButton { @Text = "CLEAR TITLE"; Anchor: (Width: 180, Height: 40); }
+      Label #ActiveTitle { FlexWeight: 1; Anchor: (Height: 44); Text: %server.achievement.ui.active.none; Style: (FontSize: 19, TextColor: #DCE8FF, VerticalAlignment: Center); }
+      $Common.@TextButton #ClearTitleButton { @Text = %server.achievement.ui.action.clearTitle; Anchor: (Width: 180, Height: 40); }
     }
 
     Group {
@@ -33,12 +33,12 @@ Group {
       ScrollbarStyle: $Common.@DefaultScrollbarStyle;
       Padding: (Right: 14);
 
-      Label { Anchor: (Height: 34); Text: "CURRENTLY UNLOCKING"; Style: (FontSize: 18, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
-      Label #NoUnlockingMessage { Anchor: (Height: 40); Text: "No achievement is currently accessible."; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
+      Label { Anchor: (Height: 34); Text: %server.achievement.ui.section.unlocking; Style: (FontSize: 18, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
+      Label #NoUnlockingMessage { Anchor: (Height: 40); Text: %server.achievement.ui.empty.unlocking; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
       Group #UnlockingCards { LayoutMode: Top; }
 
-      Label { Anchor: (Top: 18, Height: 34); Text: "UNLOCKED TITLES"; Style: (FontSize: 18, TextColor: #7FE3A1, RenderBold: true, VerticalAlignment: Center); }
-      Label #NoUnlockedMessage { Anchor: (Height: 40); Text: "No title has been unlocked yet."; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
+      Label { Anchor: (Top: 18, Height: 34); Text: %server.achievement.ui.section.unlocked; Style: (FontSize: 18, TextColor: #7FE3A1, RenderBold: true, VerticalAlignment: Center); }
+      Label #NoUnlockedMessage { Anchor: (Height: 40); Text: %server.achievement.ui.empty.unlocked; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
       Group #UnlockedCards { LayoutMode: Top; }
     }
   }

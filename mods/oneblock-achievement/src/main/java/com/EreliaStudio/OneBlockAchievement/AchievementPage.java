@@ -9,6 +9,7 @@ import com.hypixel.hytale.protocol.packets.interface_.CustomPageLifetime;
 import com.hypixel.hytale.protocol.packets.interface_.CustomUIEventBindingType;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.entity.entities.player.pages.InteractiveCustomUIPage;
+import com.hypixel.hytale.server.core.modules.i18n.I18nModule;
 import com.hypixel.hytale.server.core.ui.builder.EventData;
 import com.hypixel.hytale.server.core.ui.builder.UICommandBuilder;
 import com.hypixel.hytale.server.core.ui.builder.UIEventBuilder;
@@ -44,9 +45,13 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
     private void populate(UICommandBuilder commands, UIEventBuilder events) {
         UUID playerId = player.getUuid();
         service.refreshUnlocks(playerId);
-        String activeTitle = service.activeTitle(playerId);
-        commands.set("#AchievementLevel.Text", "Lv " + service.level(playerId));
-        commands.set("#ActiveTitle.Text", activeTitle == null ? "No title selected" : "Active: [" + activeTitle + "]");
+        AchievementDefinition activeAchievement = service.activeAchievement(playerId);
+        commands.set("#AchievementLevel.Text", format("server.achievement.ui.level",
+                "level", Integer.toString(service.level(playerId))));
+        commands.set("#ActiveTitle.Text", activeAchievement == null
+                ? translate("server.achievement.ui.active.none")
+                : format("server.achievement.ui.active.selected", "title",
+                        translate(activeAchievement.titleTranslationKey())));
 
         List<AchievementDefinition> currentlyUnlocking = service.achievements().stream()
                 .filter(achievement -> service.state(playerId, achievement) == AchievementService.State.CURRENTLY_UNLOCKING)
@@ -59,28 +64,35 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
         commands.clear("#UnlockedCards");
         commands.set("#NoUnlockingMessage.Visible", currentlyUnlocking.isEmpty());
         commands.set("#NoUnlockedMessage.Visible", unlocked.isEmpty());
-        renderCards("#UnlockingCards", currentlyUnlocking, false, activeTitle, commands, events);
-        renderCards("#UnlockedCards", unlocked, true, activeTitle, commands, events);
+        renderCards("#UnlockingCards", currentlyUnlocking, false, activeAchievement, commands, events);
+        renderCards("#UnlockedCards", unlocked, true, activeAchievement, commands, events);
         events.addEventBinding(CustomUIEventBindingType.Activating, "#ClearTitleButton",
                 EventData.of("Achievement", "").append("Action", "clear"));
     }
 
-    private void renderCards(String container, List<AchievementDefinition> achievements, boolean unlocked, String activeTitle,
+    private void renderCards(String container, List<AchievementDefinition> achievements, boolean unlocked,
+                             AchievementDefinition activeAchievement,
                              UICommandBuilder commands, UIEventBuilder events) {
         UUID playerId = player.getUuid();
         for (int index = 0; index < achievements.size(); index++) {
             AchievementDefinition achievement = achievements.get(index);
             String card = container + "[" + index + "]";
             commands.append(container, "AchievementCard.ui");
-            commands.set(card + " #CardTitle.Text", achievement.name);
-            commands.set(card + " #CardSubtitle.Text", unlocked
-                    ? "Title: [" + achievement.title + "]"
-                    : "Unlocks title: [" + achievement.title + "]");
-            commands.set(card + " #CardState.Text", unlocked ? "UNLOCKED" : "CURRENTLY UNLOCKING");
+            boolean active = activeAchievement != null && achievement.id.equals(activeAchievement.id);
+            commands.set(card + " #CardTitle.Text", translate(achievement.nameTranslationKey()));
+            commands.set(card + " #CardSubtitle.Text", format(unlocked
+                            ? "server.achievement.ui.card.title"
+                            : "server.achievement.ui.card.unlocksTitle",
+                    "title", translate(achievement.titleTranslationKey())));
+            commands.set(card + " #CardState.Text", translate(unlocked
+                    ? "server.achievement.ui.state.unlocked"
+                    : "server.achievement.ui.state.unlocking"));
             commands.set(card + " #ParticipateButton.Visible", !unlocked);
             commands.set(card + " #ActivateButton.Visible", unlocked);
-            commands.set(card + " #ActivateButton.Text", achievement.title.equals(activeTitle) ? "ACTIVE" : "ACTIVATE");
-            commands.set(card + " #ActivateButton.Disabled", achievement.title.equals(activeTitle));
+            commands.set(card + " #ActivateButton.Text", translate(active
+                    ? "server.achievement.ui.action.active"
+                    : "server.achievement.ui.action.activate"));
+            commands.set(card + " #ActivateButton.Disabled", active);
 
             if (unlocked) {
                 events.addEventBinding(CustomUIEventBindingType.Activating, card + " #ActivateButton",
@@ -108,7 +120,7 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
             String cost = costs + "[" + costIndex++ + "]";
             commands.append(costs, "AchievementBadgeCost.ui");
             commands.set(cost + " #CostBadge.Text", "G");
-            commands.set(cost + " #CostName.Text", "GLYMERA");
+            commands.set(cost + " #CostName.Text", translate("server.achievement.ui.cost.glymera"));
             commands.set(cost + " #CostProgress.Text", service.contributedCurrency(playerId, achievement.id)
                     + " / " + achievement.cost.currency);
         }
@@ -116,7 +128,7 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
             String cost = costs + "[" + costIndex++ + "]";
             commands.append(costs, "AchievementBadgeCost.ui");
             commands.set(cost + " #CostBadge.Text", "E");
-            commands.set(cost + " #CostName.Text", expedition);
+            commands.set(cost + " #CostName.Text", translate("server.expeditions." + expedition + ".name"));
             commands.set(cost + " #CostProgress.Text", service.knowsExpedition(playerId, expedition) ? "1 / 1" : "0 / 1");
         }
         commands.set(card + " #NoCostLabel.Visible", costIndex == 0);
@@ -135,9 +147,11 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
                 } else if ("participate".equals(event.action)) {
                     AchievementContribution.Result result = AchievementContribution.contribute(
                             service, store, ref, player, achievement, Long.MAX_VALUE);
-                    player.sendMessage(Message.raw("Contributed to " + achievement.name + ": "
-                            + AchievementContribution.describe(result) + "."));
-                    if (result.unlocked()) player.sendMessage(Message.raw("Achievement unlocked: " + achievement.name + "."));
+                    player.sendMessage(Message.translation("server.achievement.message.contributed")
+                            .param("achievement", achievement.localizedName())
+                            .param("details", AchievementContribution.describe(result)));
+                    if (result.unlocked()) player.sendMessage(Message.translation("server.achievement.message.unlocked")
+                            .param("achievement", achievement.localizedName()));
                 }
             }
             OneBlockAchievementPlugin plugin = OneBlockAchievementPlugin.get();
@@ -155,6 +169,17 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
         Throwable root = error;
         while (root.getCause() != null) root = root.getCause();
         return root.getMessage() == null ? root.getClass().getSimpleName() : root.getMessage();
+    }
+
+    private String translate(String key) {
+        I18nModule i18n = I18nModule.get();
+        if (i18n == null) return key;
+        String translated = i18n.getMessage(player.getLanguage(), key);
+        return translated == null ? key : translated;
+    }
+
+    private String format(String key, String parameter, String value) {
+        return translate(key).replace("{" + parameter + "}", value);
     }
 
     static final class AchievementEvent {

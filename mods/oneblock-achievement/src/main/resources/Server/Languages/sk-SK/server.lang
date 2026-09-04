@@ -1,0 +1,33 @@
+items.Bench_Achievement.name=Stôl úspechov
+items.Bench_Achievement.description=Prezrite si úspechy, prispejte predmetmi a vyberte si titul.
+
+achievement.definition.beginner_miner.name=Začínajúci baník
+achievement.definition.beginner_miner.title=Začínajúci baník
+achievement.definition.apprentice_miner.name=Banícky učeň
+achievement.definition.apprentice_miner.title=Banícky učeň
+
+achievement.ui.page.heading=ÚSPECHY
+achievement.ui.level=Úr. {level}
+achievement.ui.active.none=Nie je vybraný žiadny titul
+achievement.ui.active.selected=Aktívny: [{title}]
+achievement.ui.action.clearTitle=ODSTRÁNIŤ TITUL
+achievement.ui.action.participate=PRISPIEŤ
+achievement.ui.action.activate=AKTIVOVAŤ
+achievement.ui.action.active=AKTÍVNY
+achievement.ui.section.unlocking=PRÁVE SA ODOMYKAJÚ
+achievement.ui.section.unlocked=ODOMKNUTÉ TITULY
+achievement.ui.empty.unlocking=Momentálne nie je dostupný žiadny úspech.
+achievement.ui.empty.unlocked=Zatiaľ nebol odomknutý žiadny titul.
+achievement.ui.card.defaultName=Úspech
+achievement.ui.card.unlocksTitlePlain=Odomyká titul
+achievement.ui.card.title=Titul: [{title}]
+achievement.ui.card.unlocksTitle=Odomyká titul: [{title}]
+achievement.ui.card.noResources=Nie sú potrebné žiadne zdroje
+achievement.ui.state.unlocking=ODOMYKÁ SA
+achievement.ui.state.unlocked=ODOMKNUTÉ
+achievement.ui.cost.glymera=GLYMERA
+achievement.chat.withTitle=[{title} - Úr. {level}] {username} : {content}
+achievement.chat.withoutTitle=[Úr. {level}] {username} : {content}
+achievement.message.contributed=Príspevok k úspechu {achievement}: {details}.
+achievement.message.unlocked=Odomknutý úspech: {achievement}.
+achievement.message.unlockedByExpedition=Objavením expedície {expedition} sa odomkol úspech.

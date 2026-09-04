@@ -38,6 +38,23 @@ Edit `achievements.authoring.json`. Each entry supports:
 - `items` maps exact Hytale item IDs to positive quantities. Deposits are consumed and saved immediately, so a player can give 32 of a required 64 now and the remainder later.
 - `expeditions` contains exact OneBlock expedition IDs. Knowledge is recorded when OneBlock grants the expedition recipe/crystal unlock after this mod is installed; knowledge is checked but not consumed.
 
+### Translating achievements
+
+Achievement names and titles are localized by ID. For every achievement, add these entries to each locale's
+`mods/oneblock-achievement/src/main/resources/Server/Languages/<locale>/server.lang` file:
+
+```properties
+achievement.definition.<id>.name=Localized achievement name
+achievement.definition.<id>.title=Localized unlockable title
+```
+
+For example, `beginner_miner` uses `achievement.definition.beginner_miner.name` and
+`achievement.definition.beginner_miner.title`. The JSON `name` and `title` remain server-side fallbacks used for
+validation, sorting, logs, and nameplates. Achievement cards and chat resolve the language keys on each player's client.
+References sent to the client use the `server.` namespace (for example,
+`server.achievement.definition.beginner_miner.name`). Hytale merges the selected locale over `en-US`, so a missing
+locale or missing translated entry automatically falls back to the English value.
+
 Compile and validate the friendly file with:
 
 ```powershell

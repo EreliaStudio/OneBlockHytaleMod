@@ -1,6 +1,7 @@
 package com.EreliaStudio.OneBlock;
 
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 
 import java.util.Map;
@@ -84,7 +85,7 @@ public final class OneBlockHudService
             return;
         }
 
-        hud.setTitleAndProgress(readableName(expeditionId), 1.0f);
+        hud.setTitleAndProgress(localizedName(expeditionId), 1.0f);
     }
 
     public void updateExpeditionTicks(Player player, String expeditionId, int ticksRemaining, int totalTicks)
@@ -114,7 +115,7 @@ public final class OneBlockHudService
         }
 
         float progress = totalTicks > 0 ? (float) ticksRemaining / (float) totalTicks : 0.0f;
-        hud.setTitleAndProgress(readableName(expeditionId), progress);
+        hud.setTitleAndProgress(localizedName(expeditionId), progress);
     }
 
     public void showExpeditionCompleted(Player player, String expeditionId)
@@ -130,7 +131,7 @@ public final class OneBlockHudService
             return;
         }
 
-        hud.setTitleAndProgress(readableName(dungeonId), 0.0f);
+        hud.setTitleAndProgress(localizedName(dungeonId), 0.0f);
     }
 
     public void updateDungeonWave(Player player, String dungeonId, int completedWaves, int totalWaves)
@@ -164,7 +165,7 @@ public final class OneBlockHudService
             return;
         }
 
-        hud.setTitleAndProgress("New expedition unlocked: " + readableName(expeditionId), 1.0f);
+        hud.setTitleAndProgress(Message.translation("server.announcements.expedition_unlocked." + expeditionId), 1.0f);
     }
 
     private OneBlockProgressHud getOrShow(Player player)
@@ -195,8 +196,8 @@ public final class OneBlockHudService
         return player.getPlayerRef();
     }
 
-    private static String readableName(String id)
+    private static Message localizedName(String id)
     {
-        return OneBlockDisplayNames.get(id);
+        return Message.translation("server.expeditions." + id + ".name");
     }
 }

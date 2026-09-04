@@ -1,0 +1,33 @@
+items.Bench_Achievement.name=Mesa de logros
+items.Bench_Achievement.description=Consulta tus logros, aporta objetos y elige un título.
+
+achievement.definition.beginner_miner.name=Minero principiante
+achievement.definition.beginner_miner.title=Minero principiante
+achievement.definition.apprentice_miner.name=Minero aprendiz
+achievement.definition.apprentice_miner.title=Minero aprendiz
+
+achievement.ui.page.heading=LOGROS
+achievement.ui.level=Niv. {level}
+achievement.ui.active.none=Ningún título seleccionado
+achievement.ui.active.selected=Activo: [{title}]
+achievement.ui.action.clearTitle=QUITAR TÍTULO
+achievement.ui.action.participate=PARTICIPAR
+achievement.ui.action.activate=ACTIVAR
+achievement.ui.action.active=ACTIVO
+achievement.ui.section.unlocking=EN PROCESO DE DESBLOQUEO
+achievement.ui.section.unlocked=TÍTULOS DESBLOQUEADOS
+achievement.ui.empty.unlocking=No hay ningún logro disponible actualmente.
+achievement.ui.empty.unlocked=Aún no se ha desbloqueado ningún título.
+achievement.ui.card.defaultName=Logro
+achievement.ui.card.unlocksTitlePlain=Desbloquea un título
+achievement.ui.card.title=Título: [{title}]
+achievement.ui.card.unlocksTitle=Desbloquea el título: [{title}]
+achievement.ui.card.noResources=No se requieren recursos
+achievement.ui.state.unlocking=EN PROCESO
+achievement.ui.state.unlocked=DESBLOQUEADO
+achievement.ui.cost.glymera=GLYMERA
+achievement.chat.withTitle=[{title} - Niv. {level}] {username} : {content}
+achievement.chat.withoutTitle=[Niv. {level}] {username} : {content}
+achievement.message.contributed=Contribución a {achievement}: {details}.
+achievement.message.unlocked=Logro desbloqueado: {achievement}.
+achievement.message.unlockedByExpedition=Se ha desbloqueado un logro al descubrir la expedición {expedition}.

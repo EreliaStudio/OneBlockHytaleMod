@@ -91,9 +91,14 @@ final class AchievementService {
     }
 
     synchronized String activeTitle(UUID playerId) {
+        AchievementDefinition achievement = activeAchievement(playerId);
+        return achievement == null ? null : achievement.title;
+    }
+
+    synchronized AchievementDefinition activeAchievement(UUID playerId) {
         String id = store.player(playerId).activeTitle;
         AchievementDefinition achievement = catalog.get(id);
-        return achievement != null && unlocked(playerId, id) ? achievement.title : null;
+        return achievement != null && unlocked(playerId, id) ? achievement : null;
     }
 
     synchronized void selectTitle(UUID playerId, String achievementId) {

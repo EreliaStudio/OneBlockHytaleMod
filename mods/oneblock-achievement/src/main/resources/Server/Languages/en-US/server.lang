@@ -1,0 +1,33 @@
+items.Bench_Achievement.name=Achievement Bench
+items.Bench_Achievement.description=Open your achievements, contribute items, and select a title.
+
+achievement.definition.beginner_miner.name=Beginner Miner
+achievement.definition.beginner_miner.title=Beginner Miner
+achievement.definition.apprentice_miner.name=Apprentice Miner
+achievement.definition.apprentice_miner.title=Apprentice Miner
+
+achievement.ui.page.heading=ACHIEVEMENTS
+achievement.ui.level=Lv {level}
+achievement.ui.active.none=No title selected
+achievement.ui.active.selected=Active: [{title}]
+achievement.ui.action.clearTitle=CLEAR TITLE
+achievement.ui.action.participate=PARTICIPATE
+achievement.ui.action.activate=ACTIVATE
+achievement.ui.action.active=ACTIVE
+achievement.ui.section.unlocking=CURRENTLY UNLOCKING
+achievement.ui.section.unlocked=UNLOCKED TITLES
+achievement.ui.empty.unlocking=No achievement is currently accessible.
+achievement.ui.empty.unlocked=No title has been unlocked yet.
+achievement.ui.card.defaultName=Achievement
+achievement.ui.card.unlocksTitlePlain=Unlocks title
+achievement.ui.card.title=Title: [{title}]
+achievement.ui.card.unlocksTitle=Unlocks title: [{title}]
+achievement.ui.card.noResources=No resources required
+achievement.ui.state.unlocking=CURRENTLY UNLOCKING
+achievement.ui.state.unlocked=UNLOCKED
+achievement.ui.cost.glymera=GLYMERA
+achievement.chat.withTitle=[{title} - Lv {level}] {username} : {content}
+achievement.chat.withoutTitle=[Lv {level}] {username} : {content}
+achievement.message.contributed=Contributed to {achievement}: {details}.
+achievement.message.unlocked=Achievement unlocked: {achievement}.
+achievement.message.unlockedByExpedition=An achievement was unlocked by learning expedition {expedition}.
