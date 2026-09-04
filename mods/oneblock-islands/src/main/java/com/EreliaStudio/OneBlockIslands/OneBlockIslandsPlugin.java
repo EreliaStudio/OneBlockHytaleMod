@@ -1,6 +1,7 @@
 package com.EreliaStudio.OneBlockIslands;
 
 import com.EreliaStudio.OneBlock.OneBlockPlugin;
+import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.event.events.PrepareUniverseEvent;
@@ -31,7 +32,9 @@ public final class OneBlockIslandsPlugin extends JavaPlugin {
     public OneBlockIslandsPlugin(@Nonnull JavaPluginInit init) { super(init); instance = this; }
     static OneBlockIslandsPlugin getInstance() { return instance; }
 
-    @Override protected void setup() {
+    @Override
+    @SuppressWarnings("deprecation") // PrepareUniverseEvent is the only world-config provider hook in this API.
+    protected void setup() {
         islands = new IslandStore(getDataDirectory().resolve("islands.json"));
         try { islands.load(); }
         catch (IOException e) { throw new IllegalStateException("Refusing to start with an invalid island database: " + e.getMessage(), e); }
@@ -60,7 +63,10 @@ public final class OneBlockIslandsPlugin extends JavaPlugin {
         getEventRegistry().registerGlobal(AddWorldEvent.class, event -> islandWorlds.initialize(event.getWorld())
                 .exceptionally(error -> { LOGGER.at(Level.SEVERE).withCause(error).log("Island initialization failed"); return null; }));
         getEventRegistry().registerGlobal(PlayerReadyEvent.class, event -> {
-            PlayerRef player = event.getPlayer() == null ? null : event.getPlayer().getPlayerRef();
+            Ref<EntityStore> playerEntityRef = event.getPlayerRef();
+            PlayerRef player = playerEntityRef == null || playerEntityRef.getStore() == null
+                    ? null
+                    : playerEntityRef.getStore().getComponent(playerEntityRef, PlayerRef.getComponentType());
             if (player != null) redirectIfUnauthorized(player);
         });
         getEventRegistry().registerGlobal(AddPlayerToWorldEvent.class, event -> {
@@ -89,7 +95,8 @@ public final class OneBlockIslandsPlugin extends JavaPlugin {
         if (island == null) return;
         if (IslandAccess.mayEnter(islands, world, player)) {
             OneBlockPlugin oneBlock = OneBlockPlugin.getInstance();
-            Player entity = player.getComponent(Player.getComponentType());
+            Ref<EntityStore> playerEntityRef = player.getReference();
+            Player entity = playerEntityRef.getStore().getComponent(playerEntityRef, Player.getComponentType());
             if (oneBlock != null && entity != null) oneBlock.restoreHud(entity, world, island.ownerUuid());
             return;
         }

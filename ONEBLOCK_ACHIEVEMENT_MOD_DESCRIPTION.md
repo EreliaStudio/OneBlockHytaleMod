@@ -1,87 +1,70 @@
 # OneBlock Achievement
 
-OneBlock Achievement adds long-term, data-driven achievements to the server. Players contribute resources, pay currency, discover expeditions, and unlock prerequisite achievements to earn titles they can display in chat and above their character.
+Turn your OneBlock journey into a collection of lasting accomplishments. Gather resources, explore new expeditions, complete achievement paths, and unlock titles that show other players how far you have come.
 
-The core **OneBlock** mod is required. **GlymeraMerchant** is optional, but it is required for achievements that have a currency cost.
+Your progress is saved, so you can work toward every achievement at your own pace.
 
-## What it adds
+## The Achievement Bench
 
-- Configurable achievements defined in a human-readable JSON file.
-- Achievement chains, allowing one title to require earlier achievements.
-- Item costs using exact Hytale item IDs and quantities.
-- Currency costs paid through the GlymeraMerchant economy.
-- OneBlock expedition-knowledge requirements.
-- Persistent partial contributions: players can deposit part of a cost now and finish it later.
-- A custom achievement page with resource cards, participation buttons, and title activation buttons.
-- Selectable titles that players can change whenever they want.
-- A player level equal to the total number of achievements they have unlocked.
-- Custom chat formatting and native in-world nameplates.
-- UUID-based progress that survives reconnects and server restarts.
+The **Achievement Bench** is where your achievement journey begins. Craft it at a **Fieldcraft Bench** in the **Tools** category using:
 
-## How it works
+- 4 Wood Trunks
+- 3 Rock
 
-Every achievement has an internal ID, a player-facing name, an unlockable title, optional prerequisite achievements, and any combination of item, currency, and expedition-knowledge costs.
+Place the bench in your base and interact with it to open your personal achievement page. There you can see the achievements currently available to you, check their requirements, contribute resources, and choose which unlocked title to display.
 
-Every achievement has exactly one state:
+You can also open the same page at any time with `/achievement`.
 
-- `INACCESSIBLE`: at least one prerequisite achievement is not unlocked. It is omitted from the player menu.
-- `CURRENTLY_UNLOCKING`: every prerequisite is unlocked, so the player can see its costs and participate.
-- `UNLOCKED`: every cost and condition is satisfied, so its title can be activated.
+## Complete achievements your way
 
-Prerequisites control the progression order. A player cannot contribute toward an inaccessible achievement. This makes it possible to build paths such as **Beginner Miner**, **Apprentice Miner**, and **Master Miner**.
+Achievements can ask you to:
 
-Once an achievement is currently unlocking, `/achievements contribute <id>` takes only the resources that are still needed. Contributions are saved immediately. If Beginner Miner needs 64 stone and the player contributes 32, the achievement permanently remembers those 32; the player only needs to provide the remaining 32 later.
+- Contribute items gathered during your adventure.
+- Contribute Glymera currency when supported by the server.
+- Discover specific OneBlock expeditions.
+- Complete earlier achievements to unlock the next challenge in a path.
 
-Currency is taken through GlymeraMerchant's public economy API. Item deposits and currency payments can both be partial. Expedition knowledge is a condition rather than a consumable cost: once OneBlock reports that a player has learned an expedition, that knowledge remains available for every achievement that requires it.
+Select **Participate** on an achievement to contribute the required items you are currently carrying and any required currency you can afford. Only what is still needed will be taken.
 
-When every condition is met, the achievement becomes unlocked automatically and its title appears in the selector.
+You do not have to provide everything at once. Every contribution is saved permanently, letting you return with the remaining resources later. Expedition discoveries count as knowledge and are never consumed.
 
-## Achievement page and titles
+Some achievements are part of a progression chain. Finish the achievements currently shown on your bench to reveal new goals and more prestigious titles.
 
-Use `/achievement` to open the custom achievement page. The first section contains all currently unlocking achievements in alphabetical order. Each card shows its item, Glymera, and expedition requirements with saved progress and a **Participate** button. The second section contains all unlocked achievements in alphabetical order, each with an **Activate** button. Inaccessible achievements are hidden.
+## Unlock and display titles
 
-Clicking **Activate** selects that achievement's title. The active title can also be removed from the page. Unlocking an achievement does not force the player to use its title, and any previously unlocked title can be selected again later.
+Every completed achievement adds a new title to your collection. Open the Achievement Bench, find the title under **Unlocked Titles**, and select **Activate** to display it. You can switch between any titles you have earned or clear your active title whenever you like.
 
-The player's level is the number of achievements they have unlocked. A player with the Beginner Miner title and three unlocked achievements appears in chat as:
+Each achievement you unlock also raises your achievement level by one. Your selected title and level appear in chat and above your character. In chat, they look like this:
 
 ```text
 [Beginner Miner - Lv 3] PlayerName : Message
 ```
 
-The same prefix is displayed above the player's account name in the game world. If no title is selected, the level is still shown as `[Lv 3]`.
+Prefer not to use a title? Your achievement level will still be displayed:
 
-## Player commands
+```text
+[Lv 3] PlayerName : Message
+```
+
+## Useful commands
+
+The Achievement Bench gives you everything you need, but these commands provide quick access and more detailed information:
 
 | Command | Purpose |
 |---|---|
-| `/achievement` | Open the clickable achievement and title selector. |
-| `/achievements list` | List every achievement as inaccessible, currently unlocking, or unlocked. |
-| `/achievements status <id>` | Show the exact progress and remaining conditions for an achievement. |
-| `/achievements contribute <id>` | Contribute every currently held item that is still needed and as much required currency as possible. |
-| `/achievements contribute <id> <maximum-money>` | Contribute items while limiting this payment to the specified currency amount. |
-| `/achievements title <id>` | Activate the title from an unlocked achievement. |
-| `/achievements title none` | Remove the active title while keeping the player's level. |
-| `/achievements reload` | Reload the compiled achievement definitions from the plugin data directory. |
+| `/achievement` | Open your achievement page from anywhere. |
+| `/achievements list` | View every achievement and its current state. |
+| `/achievements status <id>` | Check your exact progress toward an achievement. |
+| `/achievements contribute <id>` | Contribute the items you carry and as much required currency as you can afford. |
+| `/achievements contribute <id> <maximum-money>` | Contribute items while limiting how much currency is paid. |
+| `/achievements title <id>` | Activate a title you have unlocked. |
+| `/achievements title none` | Hide your active title without losing it or your level. |
 
-## Configuration and creation tools
+## Progress that stays with you
 
-Server owners write achievements in `achievements.authoring.json`. The provided `tools/compile_achievements.py` utility validates that file and converts it into the normalized `achievements.json` format consumed by the mod.
+Your unlocked achievements, titles, level, and partial contributions are tied to your player account. They remain saved when you reconnect and after server restarts.
 
-The compiler catches duplicate IDs, invalid quantities, missing prerequisites, malformed titles, and prerequisite cycles before the configuration reaches the server. See `tools/ACHIEVEMENTS_JSON_GUIDE.md` for the complete schema, examples, live-server workflow, and build instructions.
-
-## Installation and requirements
-
-Install the matching **OneBlock** jar and **OneBlock Achievement** jar in the server's mods directory. Add **GlymeraMerchant 8.0.0 or newer** when at least one configured achievement has a non-zero money cost.
-
-The mod creates its editable `achievements.json` and persistent `players.json` files in its plugin data directory. Updating or reloading definitions does not erase unlocked achievements or partial contributions.
-
-Because expedition knowledge is recorded through OneBlock progression events, knowledge acquired before this mod was installed is not automatically reconstructed. Players can satisfy those conditions by receiving the corresponding expedition unlock again.
-
-## Compatibility
-
-OneBlock Achievement depends on the OneBlock progression integration included in the matching core jar. It works with or without OneBlock Islands and tracks each player by account UUID, independently of island ownership.
-
-GlymeraMerchant remains optional for servers that only use item, prerequisite, and expedition requirements. If GlymeraMerchant is absent, players can still contribute items, but they cannot complete an achievement whose remaining currency cost is greater than zero.
+**OneBlock Achievement requires the OneBlock mod.** The achievements available and their exact requirements may vary from one server to another. Achievements with a Glymera cost also require the server to use GlymeraMerchant.
 
 ## Community
 

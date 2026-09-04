@@ -184,8 +184,10 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
 
     static final class AchievementEvent {
         static final BuilderCodec<AchievementEvent> CODEC = BuilderCodec.builder(AchievementEvent.class, AchievementEvent::new)
-                .addField(new KeyedCodec<>("Achievement", Codec.STRING), (data, value) -> data.achievement = value, data -> data.achievement)
-                .addField(new KeyedCodec<>("Action", Codec.STRING), (data, value) -> data.action = value, data -> data.action)
+                .append(new KeyedCodec<>("Achievement", Codec.STRING),
+                        (data, value) -> data.achievement = value, data -> data.achievement).add()
+                .append(new KeyedCodec<>("Action", Codec.STRING),
+                        (data, value) -> data.action = value, data -> data.action).add()
                 .build();
         String achievement;
         String action;

@@ -3,6 +3,7 @@ package com.EreliaStudio.OneBlockAchievement;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.inventory.InventoryComponent;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.inventory.container.ItemContainer;
 import com.hypixel.hytale.server.core.inventory.transaction.ItemStackTransaction;
@@ -25,7 +26,11 @@ final class AchievementContribution {
 
         Player player = store.getComponent(ref, Player.getComponentType());
         if (player == null) throw new IllegalStateException("Player inventory is unavailable");
-        ItemContainer inventory = player.getInventory().getCombinedBackpackStorageHotbarFirst();
+        ItemContainer inventory = InventoryComponent.getCombined(
+                store,
+                ref,
+                InventoryComponent.HOTBAR_STORAGE_BACKPACK
+        );
         Map<String, Integer> itemsTaken = new LinkedHashMap<>();
         for (AchievementDefinition.ItemCost item : achievement.cost.items) {
             int remaining = service.remainingItem(playerId, achievement, item);
