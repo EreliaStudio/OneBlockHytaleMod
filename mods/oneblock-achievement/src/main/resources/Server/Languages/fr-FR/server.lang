@@ -1,10 +1,6 @@
 items.Bench_Achievement.name=Atelier des succès
 items.Bench_Achievement.description=Consultez vos succès, contribuez des objets et choisissez un titre.
 
-achievement.definition.beginner_miner.name=Mineur débutant
-achievement.definition.beginner_miner.title=Mineur débutant
-achievement.definition.apprentice_miner.name=Mineur apprenti
-achievement.definition.apprentice_miner.title=Mineur apprenti
 
 achievement.ui.page.heading=SUCCÈS
 achievement.ui.level=Niv. {level}

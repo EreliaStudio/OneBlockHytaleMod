@@ -38,7 +38,7 @@ public final class OneBlockAchievementPlugin extends JavaPlugin implements OneBl
     static OneBlockAchievementPlugin get() { return instance; }
 
     @Override protected void setup() {
-        catalog = new AchievementCatalog(getDataDirectory().resolve("achievements.json"));
+        catalog = new AchievementCatalog(getDataDirectory().resolve("achievements.json"), true);
         PlayerProgressStore progress = new PlayerProgressStore(getDataDirectory().resolve("players.json"));
         try {
             catalog.load();

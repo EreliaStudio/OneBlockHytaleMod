@@ -20,6 +20,10 @@ From the repo root:
 ```
 The deploy tasks copy each shaded jar to `hytale-server/mods`.
 
+Each mod is versioned independently in `gradle.properties`. Bump only the
+property belonging to the mod being released: `oneblockVersion`,
+`oneblockIslandsVersion`, or `oneblockAchievementVersion`.
+
 ## Dedicated OneBlock Server
 
 The `:oneblock-islands` companion module adds UUID-based island ownership,

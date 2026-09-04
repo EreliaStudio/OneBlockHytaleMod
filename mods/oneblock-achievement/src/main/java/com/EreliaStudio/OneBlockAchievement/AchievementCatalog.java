@@ -21,12 +21,18 @@ import java.util.Set;
 final class AchievementCatalog {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private final Path path;
+    private final boolean bundledCatalogIsAuthoritative;
     private volatile Map<String, AchievementDefinition> achievements = Map.of();
 
-    AchievementCatalog(Path path) { this.path = path; }
+    AchievementCatalog(Path path) { this(path, false); }
+
+    AchievementCatalog(Path path, boolean bundledCatalogIsAuthoritative) {
+        this.path = path;
+        this.bundledCatalogIsAuthoritative = bundledCatalogIsAuthoritative;
+    }
 
     synchronized void load() throws IOException {
-        installDefaultIfMissing();
+        installBundledCatalog(bundledCatalogIsAuthoritative);
         CatalogFile file;
         try (Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
             file = GSON.fromJson(reader, CatalogFile.class);
@@ -53,8 +59,8 @@ final class AchievementCatalog {
     List<AchievementDefinition> all() { return List.copyOf(achievements.values()); }
     Path path() { return path; }
 
-    private void installDefaultIfMissing() throws IOException {
-        if (Files.exists(path)) return;
+    private void installBundledCatalog(boolean replaceExisting) throws IOException {
+        if (!replaceExisting && Files.exists(path)) return;
         Files.createDirectories(path.getParent());
         try (InputStream source = AchievementCatalog.class.getResourceAsStream("/achievements.json")) {
             if (source == null) throw new IOException("Bundled achievements.json is missing");

@@ -61,10 +61,16 @@ Compile and validate the friendly file with:
 python tools/compile_achievements.py achievements.authoring.json mods/oneblock-achievement/src/main/resources/achievements.json
 ```
 
-For a running server, compile to the achievement plugin's data folder instead (the log prints its exact `achievements.json` path), then run `/achievements reload`. The compiler rejects duplicate IDs, missing prerequisites, invalid costs, and prerequisite cycles.
+The compiler removes and regenerates every `achievement.definition.<id>.name` and `.title` entry in
+`Server/Languages/en-US/server.lang` from the authoring file. In other locale files, it preserves translations for
+current IDs and removes entries for deleted IDs; missing localized entries fall back to `en-US`.
+
+The compiled catalogue is embedded in the mod JAR and replaces the runtime catalogue whenever the plugin starts.
+After changing definitions, rebuild, deploy, and restart the server; no `/achievements reload` step is required. The
+compiler rejects duplicate IDs, missing prerequisites, invalid costs, and prerequisite cycles.
 
 ## Build and installation
 
-Build the third mod with `./gradlew :oneblock-achievement:build`. Install the resulting `mods/oneblock-achievement/build/libs/oneblock-achievement-1.0.0.jar` together with the matching OneBlock jar. GlymeraMerchant is optional globally, but achievements with a non-zero money cost cannot be funded unless it is installed.
+Build the third mod with `./gradlew :oneblock-achievement:build`. Install the resulting `mods/oneblock-achievement/build/libs/OneBlockAchievement-<version>.jar` together with a compatible OneBlock jar. GlymeraMerchant is optional globally, but achievements with a non-zero money cost cannot be funded unless it is installed.
 
-Player progress is stored by UUID in the mod data directory's `players.json`. Definition reloads never erase player contributions or unlocked achievements.
+Player progress remains stored separately by UUID in the mod data directory's `players.json`.

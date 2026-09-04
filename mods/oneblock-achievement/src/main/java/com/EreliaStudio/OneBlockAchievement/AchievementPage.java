@@ -8,8 +8,11 @@ import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.protocol.packets.interface_.CustomPageLifetime;
 import com.hypixel.hytale.protocol.packets.interface_.CustomUIEventBindingType;
 import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.asset.type.item.config.Item;
 import com.hypixel.hytale.server.core.entity.entities.player.pages.InteractiveCustomUIPage;
 import com.hypixel.hytale.server.core.modules.i18n.I18nModule;
+import com.hypixel.hytale.server.core.ui.Anchor;
+import com.hypixel.hytale.server.core.ui.Value;
 import com.hypixel.hytale.server.core.ui.builder.EventData;
 import com.hypixel.hytale.server.core.ui.builder.UICommandBuilder;
 import com.hypixel.hytale.server.core.ui.builder.UIEventBuilder;
@@ -23,6 +26,9 @@ import java.util.Map;
 import java.util.UUID;
 
 final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.AchievementEvent> {
+    private static final int COSTS_PER_ROW = 5;
+    private static final int COST_ROW_HEIGHT = 66;
+    private static final int CARD_HEIGHT_WITHOUT_COST_ROWS = 102;
     private static final Comparator<AchievementDefinition> ALPHABETICAL = Comparator
             .comparing((AchievementDefinition achievement) -> achievement.name, String.CASE_INSENSITIVE_ORDER)
             .thenComparing(achievement -> achievement.id);
@@ -94,6 +100,11 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
                     : "server.achievement.ui.action.activate"));
             commands.set(card + " #ActivateButton.Disabled", active);
 
+            int costCount = achievement.cost.items.size()
+                    + (achievement.cost.currency > 0 ? 1 : 0)
+                    + achievement.cost.expeditions.size();
+            resizeCard(card, Math.max(1, (costCount + COSTS_PER_ROW - 1) / COSTS_PER_ROW), commands);
+
             if (unlocked) {
                 events.addEventBinding(CustomUIEventBindingType.Activating, card + " #ActivateButton",
                         EventData.of("Achievement", achievement.id).append("Action", "activate"));
@@ -103,6 +114,25 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
             }
             renderCosts(card, achievement, commands);
         }
+    }
+
+    private static void resizeCard(String card, int costRows, UICommandBuilder commands) {
+        int costsHeight = costRows * COST_ROW_HEIGHT;
+
+        Anchor cardAnchor = new Anchor();
+        cardAnchor.setBottom(Value.of(10));
+        cardAnchor.setHeight(Value.of(CARD_HEIGHT_WITHOUT_COST_ROWS + costsHeight));
+        commands.setObject(card + ".Anchor", cardAnchor);
+
+        Anchor requirementsAnchor = new Anchor();
+        requirementsAnchor.setTop(Value.of(8));
+        requirementsAnchor.setHeight(Value.of(costsHeight));
+        commands.setObject(card + " #CardRequirementsRow.Anchor", requirementsAnchor);
+
+        Anchor costsAnchor = new Anchor();
+        costsAnchor.setRight(Value.of(12));
+        costsAnchor.setHeight(Value.of(costsHeight));
+        commands.setObject(card + " #CardCosts.Anchor", costsAnchor);
     }
 
     private void renderCosts(String card, AchievementDefinition achievement, UICommandBuilder commands) {
@@ -115,6 +145,10 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
             commands.append(costs, "AchievementItemCost.ui");
             commands.set(cost + " #CostIcon.ItemId", item.id);
             commands.set(cost + " #CostProgress.Text", contributed.getOrDefault(item.id, 0) + " / " + item.quantity);
+            Item itemAsset = Item.getAssetMap().getAsset(item.id);
+            commands.set(cost + ".TooltipText", itemAsset == null
+                    ? Message.raw(item.id)
+                    : itemAsset.getTranslationMessage());
         }
         if (achievement.cost.currency > 0) {
             String cost = costs + "[" + costIndex++ + "]";
@@ -123,6 +157,7 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
             commands.set(cost + " #CostName.Text", translate("server.achievement.ui.cost.glymera"));
             commands.set(cost + " #CostProgress.Text", service.contributedCurrency(playerId, achievement.id)
                     + " / " + achievement.cost.currency);
+            commands.set(cost + ".TooltipText", Message.translation("server.achievement.ui.cost.glymera"));
         }
         for (String expedition : achievement.cost.expeditions) {
             String cost = costs + "[" + costIndex++ + "]";
@@ -130,6 +165,7 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
             commands.set(cost + " #CostBadge.Text", "E");
             commands.set(cost + " #CostName.Text", translate("server.expeditions." + expedition + ".name"));
             commands.set(cost + " #CostProgress.Text", service.knowsExpedition(playerId, expedition) ? "1 / 1" : "0 / 1");
+            commands.set(cost + ".TooltipText", Message.translation("server.expeditions." + expedition + ".name"));
         }
         commands.set(card + " #NoCostLabel.Visible", costIndex == 0);
     }
@@ -147,9 +183,10 @@ final class AchievementPage extends InteractiveCustomUIPage<AchievementPage.Achi
                 } else if ("participate".equals(event.action)) {
                     AchievementContribution.Result result = AchievementContribution.contribute(
                             service, store, ref, player, achievement, Long.MAX_VALUE);
-                    player.sendMessage(Message.translation("server.achievement.message.contributed")
-                            .param("achievement", achievement.localizedName())
-                            .param("details", AchievementContribution.describe(result)));
+                    if (!result.costsBypassed())
+                        player.sendMessage(Message.translation("server.achievement.message.contributed")
+                                .param("achievement", achievement.localizedName())
+                                .param("details", AchievementContribution.describe(result)));
                     if (result.unlocked()) player.sendMessage(Message.translation("server.achievement.message.unlocked")
                             .param("achievement", achievement.localizedName()));
                 }

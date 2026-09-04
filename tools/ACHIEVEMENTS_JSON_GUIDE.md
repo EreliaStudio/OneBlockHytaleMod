@@ -463,6 +463,9 @@ Use this workflow when shipping new definitions inside a new mod jar:
    python tools/compile_achievements.py achievements.authoring.json mods/oneblock-achievement/src/main/resources/achievements.json
    ```
 
+   This removes and regenerates the achievement definition keys in `Server/Languages/en-US/server.lang`. In other
+   locale files, translations for current IDs are preserved and translations for deleted IDs are removed.
+
 3. Build and test the module:
 
    ```powershell
@@ -472,36 +475,21 @@ Use this workflow when shipping new definitions inside a new mod jar:
 4. The resulting jar is:
 
    ```text
-   mods/oneblock-achievement/build/libs/oneblock-achievement-1.0.0.jar
+   mods/oneblock-achievement/build/libs/OneBlockAchievement-<version>.jar
    ```
 
 5. Install the new achievement jar and the matching updated OneBlock jar in the server's `mods` directory, then restart the server.
 
-The bundled `achievements.json` is copied into the plugin data directory only when no data-directory definition exists. This protects server-specific edits. Consequently, updating the jar does not overwrite an existing live `achievements.json`.
+The bundled `achievements.json` is authoritative and replaces the plugin data-directory copy whenever the catalogue
+loads. Installing the rebuilt JAR and restarting the server therefore activates new definitions without copying a
+second file or running `/achievements reload`. `players.json` remains separate and is not overwritten.
 
 ---
 
-## Live-server update workflow
+## Updating an installed server
 
-Use this workflow to change definitions without rebuilding the jar:
-
-1. Back up the achievement plugin's existing data-directory `achievements.json` and `players.json`.
-2. Edit the authoring file on the server or an administration machine.
-3. Compile directly to the plugin data directory:
-
-   ```powershell
-   python tools/compile_achievements.py achievements.authoring.json "<achievement-data-directory>\achievements.json"
-   ```
-
-4. In game, run:
-
-   ```text
-   /achievements reload
-   ```
-
-The server log prints the exact path from which definitions were loaded. Use that path instead of guessing it.
-
-Reloading definitions does not delete `players.json`. Existing completion IDs and contributions remain stored. Keep the following consequences in mind:
+Recompile the module resource, rebuild and deploy the achievement JAR, then restart the server. Existing completion
+IDs and contributions in `players.json` remain stored. Keep the following consequences in mind:
 
 - Removing an achievement definition hides its title card, but its historical unlock ID remains in player progress.
 - Renaming an achievement ID creates a new logical achievement; progress under the old ID is not migrated.
@@ -532,7 +520,8 @@ After installing or reloading a definition set, test at least one complete branc
 
 ### `Unknown achievement id`
 
-The command uses the achievement's `id`, not its `name` or `title`. Recompile the source, reload the runtime file, and use the exact lowercase ID.
+The command uses the achievement's `id`, not its `name` or `title`. Recompile the source, rebuild and restart the
+server, and use the exact lowercase ID.
 
 ### `Complete its prerequisites first`
 
@@ -548,7 +537,8 @@ Check that the JSON uses the exact expedition ID from `expeditions.json`. Knowle
 
 ### A changed bundled file does not appear on the server
 
-The mod intentionally preserves the existing data-directory `achievements.json`. Compile to that live file and run `/achievements reload`, or remove it while the server is stopped if you deliberately want the jar's bundled default to be installed again. Back it up first.
+Confirm that the achievement JAR was rebuilt and deployed after compilation, then restart the server. The bundled
+catalogue is copied over the runtime catalogue during plugin startup.
 
 ### The achievement UI is empty
 

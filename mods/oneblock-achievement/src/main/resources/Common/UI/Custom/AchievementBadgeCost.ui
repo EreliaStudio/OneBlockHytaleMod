@@ -1,6 +1,10 @@
+$Common = "Common.ui";
+
 Group {
-  Anchor: (Right: 10, Width: 116, Height: 58);
+  Anchor: (Right: 10, Bottom: 8, Width: 116, Height: 58);
   LayoutMode: Left;
+  TextTooltipShowDelay: 0.15;
+  TextTooltipStyle: $Common.@DefaultTextTooltipStyle;
   Group {
     Anchor: (Width: 38, Height: 38);
     Background: #233B60;

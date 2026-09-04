@@ -77,6 +77,14 @@ final class AchievementService {
         return true;
     }
 
+    synchronized boolean unlockWithoutCosts(UUID playerId, AchievementDefinition achievement) {
+        if (unlocked(playerId, achievement.id)) return false;
+        if (!prerequisitesMet(playerId, achievement))
+            throw new IllegalStateException("Unlock its prerequisites first");
+        store.mutate(playerId, player -> player.unlocked.add(achievement.id));
+        return true;
+    }
+
     synchronized void refreshUnlocks(UUID playerId) {
         boolean changed;
         do {

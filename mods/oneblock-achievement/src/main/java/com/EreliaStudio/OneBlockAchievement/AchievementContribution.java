@@ -2,6 +2,7 @@ package com.EreliaStudio.OneBlockAchievement;
 
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.protocol.GameMode;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.inventory.InventoryComponent;
 import com.hypixel.hytale.server.core.inventory.ItemStack;
@@ -26,6 +27,10 @@ final class AchievementContribution {
 
         Player player = store.getComponent(ref, Player.getComponentType());
         if (player == null) throw new IllegalStateException("Player inventory is unavailable");
+        if (player.getGameMode() == GameMode.Creative) {
+            boolean unlocked = service.unlockWithoutCosts(playerId, achievement);
+            return new Result(Map.of(), 0, unlocked, true);
+        }
         ItemContainer inventory = InventoryComponent.getCombined(
                 store,
                 ref,
@@ -61,10 +66,11 @@ final class AchievementContribution {
 
         service.contribute(playerId, achievement.id, moneyTaken, itemsTaken);
         boolean unlocked = service.tryUnlock(playerId, achievement);
-        return new Result(Map.copyOf(itemsTaken), moneyTaken, unlocked);
+        return new Result(Map.copyOf(itemsTaken), moneyTaken, unlocked, false);
     }
 
     static String describe(Result result) {
+        if (result.costsBypassed()) return "Creative mode (no resources consumed)";
         StringBuilder text = new StringBuilder();
         for (Map.Entry<String, Integer> item : result.items().entrySet()) {
             if (!text.isEmpty()) text.append(", ");
@@ -86,5 +92,5 @@ final class AchievementContribution {
         return total;
     }
 
-    record Result(Map<String, Integer> items, long currency, boolean unlocked) {}
+    record Result(Map<String, Integer> items, long currency, boolean unlocked, boolean costsBypassed) {}
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the human achievement file and compile it into the mod's runtime schema."""
+"""Compile achievements and keep their Hytale language entries in sync."""
 
 from __future__ import annotations
 
@@ -10,6 +10,11 @@ from pathlib import Path
 from typing import Any
 
 ID = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
+DEFINITION_PREFIX = "achievement.definition."
+DEFINITION_KEY = re.compile(r"^achievement\.definition\.([a-z0-9_-]+)\.(?:name|title)=")
+DEFAULT_LANGUAGES = Path(__file__).resolve().parents[1] / (
+    "mods/oneblock-achievement/src/main/resources/Server/Languages"
+)
 
 
 def fail(message: str) -> None:
@@ -100,18 +105,69 @@ def compile_file(source: Path) -> dict[str, Any]:
     return {"schemaVersion": 1, "achievements": compiled}
 
 
+def update_language_files(languages_dir: Path, achievements: list[dict[str, Any]]) -> dict[str, int]:
+    language_file = languages_dir / "en-US/server.lang"
+    if not language_file.is_file():
+        fail(f"English server.lang does not exist: {language_file}")
+
+    generated: list[str] = []
+    for achievement in achievements:
+        key = f"{DEFINITION_PREFIX}{achievement['id']}"
+        generated.extend((f"{key}.name={achievement['name']}",
+                          f"{key}.title={achievement['title']}"))
+
+    lines = language_file.read_text(encoding="utf-8").splitlines()
+    lines = [line for line in lines if not line.startswith(DEFINITION_PREFIX)]
+    ui_at = next((index for index, line in enumerate(lines)
+                  if line.startswith("achievement.ui.")), len(lines))
+    before = lines[:ui_at]
+    while before and not before[-1].strip():
+        before.pop()
+    updated = before + [""] + generated + [""] + lines[ui_at:]
+    language_file.write_text("\n".join(updated).strip() + "\n", encoding="utf-8")
+
+    valid_ids = {achievement["id"] for achievement in achievements}
+    pruned: dict[str, int] = {}
+    for localized_file in sorted(languages_dir.glob("*/server.lang")):
+        if localized_file == language_file:
+            continue
+        localized_lines = localized_file.read_text(encoding="utf-8").splitlines()
+        kept: list[str] = []
+        removed = 0
+        for line in localized_lines:
+            match = DEFINITION_KEY.match(line)
+            if match is not None and match.group(1) not in valid_ids:
+                removed += 1
+            else:
+                kept.append(line)
+        localized_file.write_text("\n".join(kept).strip() + "\n", encoding="utf-8")
+        pruned[localized_file.parent.name] = removed
+    return pruned
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", type=Path, help="Human-readable achievement JSON")
     parser.add_argument("output", type=Path, help="Runtime achievements.json to create")
+    parser.add_argument("--languages-dir", type=Path, default=DEFAULT_LANGUAGES,
+                        help="Languages directory whose server.lang files should be maintained")
+    parser.add_argument("--no-languages", action="store_true",
+                        help="Compile JSON without maintaining server.lang files")
     args = parser.parse_args()
     try:
         result = compile_file(args.input)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        if not args.no_languages:
+            pruned = update_language_files(args.languages_dir, result["achievements"])
     except (OSError, json.JSONDecodeError, ValueError) as error:
         parser.error(str(error))
     print(f"Compiled {len(result['achievements'])} achievements to {args.output}")
+    if not args.no_languages:
+        print(f"Regenerated English achievement translations in {args.languages_dir / 'en-US/server.lang'}")
+        for locale, count in pruned.items():
+            if count:
+                print(f"Removed {count} stale achievement translation entries from {locale}/server.lang")
     return 0
 
 

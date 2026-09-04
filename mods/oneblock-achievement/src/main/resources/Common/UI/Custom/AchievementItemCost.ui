@@ -1,6 +1,10 @@
+$Common = "Common.ui";
+
 Group {
-  Anchor: (Right: 10, Width: 88, Height: 58);
+  Anchor: (Right: 10, Bottom: 8, Width: 116, Height: 58);
   LayoutMode: Top;
+  TextTooltipShowDelay: 0.15;
+  TextTooltipStyle: $Common.@DefaultTextTooltipStyle;
   ItemIcon #CostIcon { Anchor: (Width: 34, Height: 34); }
   Label #CostProgress { Anchor: (Height: 22); Text: "0 / 0"; Style: (FontSize: 13, TextColor: #DCE8FF, HorizontalAlignment: Center, VerticalAlignment: Center); }
 }

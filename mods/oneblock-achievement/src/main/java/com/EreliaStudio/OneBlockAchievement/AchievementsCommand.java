@@ -82,7 +82,9 @@ final class AchievementsCommand extends AbstractPlayerCommand {
         long remainingMoney = service.remainingCurrency(id, achievement);
         long limit = amountArg.provided(ctx) ? amountArg.get(ctx) : remainingMoney;
         AchievementContribution.Result result = AchievementContribution.contribute(service, store, ref, playerRef, achievement, limit);
-        playerRef.sendMessage(Message.raw("Contributed to " + achievement.name + ": " + AchievementContribution.describe(result) + "."));
+        if (!result.costsBypassed())
+            playerRef.sendMessage(Message.raw("Contributed to " + achievement.name + ": "
+                    + AchievementContribution.describe(result) + "."));
         if (result.unlocked()) playerRef.sendMessage(Message.raw("Achievement unlocked: " + achievement.name
                 + ". Activate it with /achievements title " + achievement.id));
         else status(playerRef, achievement);

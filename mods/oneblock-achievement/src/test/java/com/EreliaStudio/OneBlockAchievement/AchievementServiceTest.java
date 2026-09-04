@@ -74,6 +74,37 @@ class AchievementServiceTest {
         assertThrows(java.io.IOException.class, catalog::load);
     }
 
+    @Test void authoritativeBundledCatalogReplacesAnExistingRuntimeCopy() throws Exception {
+        Path path = writeCatalog();
+        AchievementCatalog catalog = new AchievementCatalog(path, true);
+
+        catalog.load();
+
+        assertNotNull(catalog.get("first_steps"));
+        assertNull(catalog.get("beginner"));
+    }
+
+    @Test void creativeUnlockBypassesCostsButKeepsThemUnconsumed() throws Exception {
+        AchievementCatalog catalog = new AchievementCatalog(writeCatalog());
+        catalog.load();
+        PlayerProgressStore store = new PlayerProgressStore(temp.resolve("creative-progress.json"));
+        AchievementService service = new AchievementService(catalog, store);
+        UUID player = UUID.randomUUID();
+        AchievementDefinition beginner = service.achievement("beginner");
+        AchievementDefinition expert = service.achievement("expert");
+
+        assertTrue(service.unlockWithoutCosts(player, beginner));
+        assertTrue(service.prerequisitesMet(player, expert));
+        assertFalse(service.knowledgeMet(player, expert));
+        assertEquals(100, service.remainingCurrency(player, expert));
+
+        assertTrue(service.unlockWithoutCosts(player, expert));
+
+        assertTrue(service.unlocked(player, expert.id));
+        assertEquals(100, service.remainingCurrency(player, expert));
+        assertTrue(service.contributedItems(player, expert.id).isEmpty());
+    }
+
     private Path writeCatalog() throws Exception {
         Path path = temp.resolve("achievements.json");
         Files.writeString(path, """

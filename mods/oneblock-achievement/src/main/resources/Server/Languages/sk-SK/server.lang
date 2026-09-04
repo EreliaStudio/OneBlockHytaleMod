@@ -1,10 +1,6 @@
 items.Bench_Achievement.name=Stôl úspechov
 items.Bench_Achievement.description=Prezrite si úspechy, prispejte predmetmi a vyberte si titul.
 
-achievement.definition.beginner_miner.name=Začínajúci baník
-achievement.definition.beginner_miner.title=Začínajúci baník
-achievement.definition.apprentice_miner.name=Banícky učeň
-achievement.definition.apprentice_miner.title=Banícky učeň
 
 achievement.ui.page.heading=ÚSPECHY
 achievement.ui.level=Úr. {level}

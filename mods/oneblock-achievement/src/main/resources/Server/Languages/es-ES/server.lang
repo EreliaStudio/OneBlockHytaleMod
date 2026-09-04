@@ -1,10 +1,6 @@
 items.Bench_Achievement.name=Mesa de logros
 items.Bench_Achievement.description=Consulta tus logros, aporta objetos y elige un título.
 
-achievement.definition.beginner_miner.name=Minero principiante
-achievement.definition.beginner_miner.title=Minero principiante
-achievement.definition.apprentice_miner.name=Minero aprendiz
-achievement.definition.apprentice_miner.title=Minero aprendiz
 
 achievement.ui.page.heading=LOGROS
 achievement.ui.level=Niv. {level}

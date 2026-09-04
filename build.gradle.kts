@@ -9,7 +9,12 @@ plugins {
 }
 
 group = "com.EreliaStudio"
-version = "1.0.1"
+
+val modVersions = mapOf(
+    "oneblock" to providers.gradleProperty("oneblockVersion").get(),
+    "oneblock-islands" to providers.gradleProperty("oneblockIslandsVersion").get(),
+    "oneblock-achievement" to providers.gradleProperty("oneblockAchievementVersion").get()
+)
 
 allprojects {
     repositories {
@@ -23,7 +28,7 @@ subprojects {
     apply(plugin = "com.gradleup.shadow")
 
     group = rootProject.group
-    version = rootProject.version
+    version = modVersions.getValue(name)
 
     dependencies {
         add("compileOnly", files(rootProject.file("libs/HytaleServer.jar")))
