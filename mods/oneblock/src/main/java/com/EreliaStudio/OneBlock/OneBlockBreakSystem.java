@@ -304,7 +304,8 @@ public final class OneBlockBreakSystem extends EntityEventSystem<EntityStore, Br
         setTargetBlocks(world, pos, root, nextBlockId);
 
         if (rewardId != null && !rewardId.isEmpty())
-            dropRegistry.executeDropable(rewardId, context);
+            dropRegistry.executeDropable(rewardId, context,
+                    OneBlockPlugin.getInstance().getExpeditionCatalog().dropQuantity(poolId, rewardId));
 
         OneBlockPlugin plugin = OneBlockPlugin.getInstance();
 

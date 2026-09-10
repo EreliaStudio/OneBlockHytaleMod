@@ -21,7 +21,7 @@ This expedition has no normal weighted `BaseDropPool`. It is a combat dungeon.
 |---:|---|
 | 1 | Archaeopteryx ×5, Crocodile ×2 |
 | 2 | Raptor Cave ×4, Archaeopteryx ×3 |
-| 3 | Raptor Cave ×6, Crawler ×2 |
+| 3 | Raptor Cave ×6, Crawler Void ×2 |
 | 4 | Raptor Cave ×5, Rex Cave ×1 |
 | 5 | Raptor Cave ×4, Rex Cave ×2 |
 | 6 | Rex Cave ×3, Golem Crystal Earth ×1 |

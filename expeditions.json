@@ -2909,7 +2909,7 @@
 				"Weight": 2
 			},
 			{
-				"ID": "entity:Crawler",
+				"ID": "entity:Crawler_Void",
 				"Weight": 1
 			},
 			{
@@ -3014,7 +3014,7 @@
 				"Weight": 2
 			},
 			{
-				"ID": "entity:Crawler",
+				"ID": "entity:Crawler_Void",
 				"Weight": 2
 			},
 			{
@@ -6307,8 +6307,8 @@
 				"Raptor_Cave",
 				"Raptor_Cave",
 				"Raptor_Cave",
-				"Crawler",
-				"Crawler"
+				"Crawler_Void",
+				"Crawler_Void"
 			],
 			[
 				"Raptor_Cave",
@@ -9142,7 +9142,7 @@
 		"Ticks": 25,
 		"BaseDropPool": [
 			{
-				"ID": "entity:Crawler",
+				"ID": "entity:Crawler_Void",
 				"Weight": 2
 			},
 			{

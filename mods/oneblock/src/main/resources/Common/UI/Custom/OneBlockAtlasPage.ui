@@ -1,0 +1,79 @@
+$C = "Common.ui";
+$F = "OneBlockCustomFrame.ui";
+$S = "OneBlockAtlasStyles.ui";
+$P = "OneBlockAtlasPanel.ui";
+$Craft = "OneBlockAtlasCraftPanel.ui";
+Group {
+ Background: #07101E(0.78);
+ Group #Atlas {
+  Anchor: (Left: 22, Right: 22, Top: 24, Bottom: 24);
+  $F.@OneBlockCustomFrame { Anchor: (Full: 0); }
+  Group { Anchor: (Full: 0); Padding: (Top: 40, Bottom: 24, Horizontal: 32); LayoutMode: Top;
+   Group { Anchor: (Height: 48, Bottom: 10); LayoutMode: Left;
+    Label { FlexWeight: 4; Anchor: (Right: 14); Text: %server.atlas.title; Style: (...$S.@Heading, FontSize: 28, TextColor: #F5D77A); }
+    TextField #Search { FlexWeight: 5; Anchor: (Height: 42, Right: 10); Background: #091B2E; Padding: 10; PlaceholderText: %server.atlas.search; Style: (FontSize: 16, TextColor: #DAE6F5); PlaceholderStyle: (FontSize: 14, TextColor: #7797BB); }
+    TextButton #Close { Anchor: (Width: 42, Height: 42); Text: "X"; Style: $S.@Button; TooltipText: %server.atlas.close; }
+   }
+   Group { Anchor: (Height: 40, Bottom: 10); LayoutMode: Left;
+    TextButton #Explore { FlexWeight: 1; Text: %server.atlas.tab.explore; Style: $S.@Button; }
+    TextButton #Expeditions { FlexWeight: 1; Text: %server.atlas.tab.expeditions; Style: $S.@Button; }
+    TextButton #Loot { FlexWeight: 1; Text: %server.atlas.tab.loot; Style: $S.@Button; }
+    TextButton #Dungeons { FlexWeight: 1; Text: %server.atlas.tab.dungeons; Style: $S.@Button; }
+   }
+   Group { FlexWeight: 1; LayoutMode: Left;
+    $P.@Panel { FlexWeight: 3; Anchor: (Right: 8);
+     Label #ResultsHeading { Anchor: (Height: 33); Style: $S.@Heading; }
+     Group #Filters { Anchor: (Height: 68, Bottom: 6); LayoutMode: Top;
+      TextButton #StateFilter { Anchor: (Height: 30, Bottom: 4); Style: $S.@Button; }
+      Group { Anchor: (Height: 30); LayoutMode: Left;
+       TextButton #TierFilter { FlexWeight: 1; Style: $S.@Button; }
+       TextButton #CategoryFilter { FlexWeight: 1; Style: $S.@Button; }
+      }
+     }
+     Group { FlexWeight: 1; LayoutMode: TopScrolling; ScrollbarStyle: $C.@DefaultScrollbarStyle;
+      Label #Empty { Anchor: (Height: 100); Style: (...$S.@Muted, Wrap: true); Text: %server.atlas.empty.frontier; }
+      Group #Results { LayoutMode: Top; }
+     }
+     Label #ResultsCount { Anchor: (Height: 28); Style: $S.@Muted; }
+    }
+    $P.@Panel { FlexWeight: 5; Anchor: (Right: 8);
+     Label #NoSelection { Anchor: (Height: 75); Style: (...$S.@Muted, Wrap: true); Text: %server.atlas.empty.selection; }
+     Group #Detail { FlexWeight: 1; LayoutMode: TopScrolling; ScrollbarStyle: $C.@DefaultScrollbarStyle;
+      Group { Anchor: (Height: 94); LayoutMode: Left;
+       ItemIcon #DetailIcon { Anchor: (Width: 80, Height: 80, Right: 12); }
+       Group { FlexWeight: 1; LayoutMode: Top;
+        Label #DetailName { Anchor: (Height: 38); Style: (...$S.@Heading, FontSize: 25, TextColor: #F2F0E9); }
+        Label #Facts { Anchor: (Height: 48); Style: (...$S.@Muted, Wrap: true); }
+       }
+      }
+      Label #UnlockState { Anchor: (Height: 30); Style: (...$S.@Text, TextColor: #8DDBA2); }
+      Label #LootHeading { Anchor: (Height: 34, Top: 8); Text: %server.atlas.featured; Style: $S.@Heading; }
+      Group #Featured { Anchor: (Height: 88); LayoutMode: Left; }
+      TextButton #ToggleLoot { Anchor: (Height: 32, Top: 8); Text: %server.atlas.fullLoot; Style: $S.@Button; }
+      Group #FullLoot { LayoutMode: Top; Visible: false; }
+      Label { Anchor: (Height: 35, Top: 14); Text: %server.atlas.route; Style: $S.@Heading; }
+      Group { Anchor: (Height: 25); LayoutMode: Left;
+       Label { FlexWeight: 1; Text: %server.atlas.parents; Style: $S.@Muted; }
+       Label { FlexWeight: 1; Text: %server.atlas.selected; Style: $S.@Muted; }
+       Label { FlexWeight: 1; Text: %server.atlas.children; Style: $S.@Muted; }
+      }
+      Group #Route { Anchor: (Height: 118); LayoutMode: Left;
+       Group #Parents { FlexWeight: 1; LayoutMode: Top; }
+       Label { Anchor: (Width: 18); Text: "→"; Style: $S.@Heading; }
+       Group #Current { FlexWeight: 1; LayoutMode: Top; }
+       Label { Anchor: (Width: 18); Text: "→"; Style: $S.@Heading; }
+       Group #Children { FlexWeight: 1; LayoutMode: Top; }
+      }
+      Label { Anchor: (Height: 34, Top: 12); Text: %server.atlas.rewards; Style: $S.@Heading; }
+      Group #Rewards { LayoutMode: Top; }
+     }
+    }
+    $P.@Panel { FlexWeight: 3;
+     Group { FlexWeight: 1; LayoutMode: TopScrolling; ScrollbarStyle: $C.@DefaultScrollbarStyle;
+      $Craft.@CraftPanel #CraftPanel {}
+     }
+    }
+   }
+  }
+ }
+}

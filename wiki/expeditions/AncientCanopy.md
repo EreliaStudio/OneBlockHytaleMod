@@ -18,7 +18,7 @@
 
 | Drop | Chance per pool roll |
 |---|---:|
-| Crawler *(mob)* (`entity:Crawler`) | **2.25%** |
+| Crawler Void *(mob)* (`entity:Crawler_Void`) | **2.25%** |
 | Wolf Black *(mob)* (`entity:Wolf_Black`) | **1.12%** |
 | `Wood_Banyan_Trunk` | **20.22%** |
 | `Wood_Redwood_Trunk` | **20.22%** |

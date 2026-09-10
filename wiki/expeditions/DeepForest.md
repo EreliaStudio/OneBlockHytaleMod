@@ -21,7 +21,7 @@
 | Boar *(mob)* (`entity:Boar`) | **3.23%** |
 | Fox *(mob)* (`entity:Fox`) | **2.15%** |
 | Wolf Black *(mob)* (`entity:Wolf_Black`) | **2.15%** |
-| Crawler *(mob)* (`entity:Crawler`) | **1.08%** |
+| Crawler Void *(mob)* (`entity:Crawler_Void`) | **1.08%** |
 | `Wood_Beech_Trunk` | **23.66%** |
 | `Wood_Ash_Trunk` | **19.35%** |
 | `Wood_Maple_Trunk` | **15.05%** |

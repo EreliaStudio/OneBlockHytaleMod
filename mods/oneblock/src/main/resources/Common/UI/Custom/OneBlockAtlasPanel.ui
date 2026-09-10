@@ -1,0 +1,2 @@
+$S = "OneBlockAtlasStyles.ui";
+@Panel = Group { Background: $S.@OneBlockAtlasPanelStyle; Padding: 20; LayoutMode: Top; };

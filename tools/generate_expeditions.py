@@ -3,6 +3,8 @@
 generate_expeditions.py — OneBlock Expedition Asset Generator
 """
 
+from expedition_catalog import validate_expeditions, build_catalog
+
 import argparse
 import json
 import re
@@ -1308,6 +1310,38 @@ def cleanup(repo_root: Path, dry_run: bool):
     print("  Cleanup done.\n")
 
 
+def load_mob_assets(repo_root):
+    # Resolve native NPC appearance models and their existing generated icons.
+    import zipfile
+    assets = repo_root / "hytale-server/Assets.zip"
+    if not assets.exists():
+        existing = repo_root / ONEBLOCK / "ExpeditionAtlas.json"
+        return _load_json(existing).get("mobs", {}) if existing.exists() else {}
+    with zipfile.ZipFile(assets) as archive:
+        paths = set(archive.namelist())
+        roles = {Path(p).stem: json.loads(archive.read(p)) for p in sorted(paths)
+                 if p.startswith("Server/NPC/Roles/") and p.endswith(".json")}
+        result = {}
+        for role, config in roles.items():
+            modified = config.get("Modify", {})
+            appearance = modified.get("Appearance", config.get("Appearance", role))
+            if not isinstance(appearance, str):
+                appearance = role
+            icon = "Icons/ModelsGenerated/" + appearance + ".png"
+            if "Common/" + icon not in paths:
+                icon = "Icons/ModelsGenerated/" + role + ".png"
+            if "Common/" + icon not in paths:
+                # Same representative icon used by the game's Memories for model variants.
+                memory = modified.get("MemoriesNameOverride", config.get("MemoriesNameOverride", role))
+                if not isinstance(memory, str):
+                    memory = role
+                icon = "Icons/ModelsGenerated/" + memory + ".png"
+            if "Common/" + icon in paths:
+                key = config.get("Parameters", {}).get("NameTranslationKey", {}).get("Value")
+                result[role] = {"icon": icon, "nameKey": key if isinstance(key, str) else "server.npcRoles." + role + ".name"}
+        return result
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Generate OneBlock expedition assets from a JSON definition file."
@@ -1329,7 +1363,8 @@ def main():
         input_path = repo_root / input_path
 
     raw = json.loads(input_path.read_text(encoding="utf-8-sig"))
-    expeditions = {k: v for k, v in raw.items() if not k.startswith("_")}
+    expeditions = validate_expeditions(raw)
+    _save_json(repo_root / ONEBLOCK / "ExpeditionAtlas.json", build_catalog(expeditions, load_mob_assets(repo_root)), args.dry_run)
     solidity_by_expedition = {
         expedition_id: _parse_solidity(expedition_id, cfg)
         for expedition_id, cfg in expeditions.items()

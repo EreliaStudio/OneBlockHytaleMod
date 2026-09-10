@@ -1,0 +1,18 @@
+$S = "OneBlockAtlasStyles.ui";
+$C = "Common.ui";
+@CraftPanel = Group {
+ LayoutMode: Top;
+ Label { Anchor: (Height: 34); Text: %server.atlas.craft; Style: $S.@Heading; }
+ Group { Anchor: (Height: 145); LayoutMode: Center;
+  ItemIcon #CraftIcon { Anchor: (Width: 128, Height: 128); }
+ }
+ Group { Anchor: (Height: 38, Top: 8, Bottom: 12); LayoutMode: Left;
+  TextButton #Minus { Anchor: (Width: 38); Text: "-"; Style: $S.@Button; }
+  Label #Quantity { FlexWeight: 1; Style: (...$S.@Text, HorizontalAlignment: Center); }
+  TextButton #Plus { Anchor: (Width: 38); Text: "+"; Style: $S.@Button; }
+ }
+ Group #Costs { LayoutMode: Top; }
+ TextButton #Craft { Anchor: (Height: 46, Top: 10); Text: %server.atlas.craft; Style: $S.@GoldButton; }
+ Label #CraftState { Anchor: (Height: 80, Top: 10); Style: (...$S.@Muted, Wrap: true, HorizontalAlignment: Center); }
+ TextButton #Refresh { Anchor: (Height: 34, Top: 8); Text: %server.atlas.refresh; Style: $S.@Button; }
+};

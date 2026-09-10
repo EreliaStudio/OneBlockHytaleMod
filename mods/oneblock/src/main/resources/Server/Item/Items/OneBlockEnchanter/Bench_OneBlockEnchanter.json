@@ -215,7 +215,16 @@
         }
       ]
     },
-    "BlockSoundSetId": "Stone"
+    "BlockSoundSetId": "Stone",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "oneblock_atlas"
+          }
+        ]
+      }
+    }
   },
   "PlayerAnimationsId": "Block",
   "IconProperties": {

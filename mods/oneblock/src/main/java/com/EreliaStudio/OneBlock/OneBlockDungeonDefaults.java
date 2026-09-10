@@ -237,7 +237,7 @@ public final class OneBlockDungeonDefaults
         register(dungeons, "DinoCrisis", List.of(
                         List.of("entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Crocodile", "entity:Crocodile"),
                         List.of("entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Archaeopteryx", "entity:Archaeopteryx", "entity:Archaeopteryx"),
-                        List.of("entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Crawler", "entity:Crawler"),
+                        List.of("entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Crawler_Void", "entity:Crawler_Void"),
                         List.of("entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Rex_Cave"),
                         List.of("entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Raptor_Cave", "entity:Rex_Cave", "entity:Rex_Cave"),
                         List.of("entity:Rex_Cave", "entity:Rex_Cave", "entity:Rex_Cave", "entity:Golem_Crystal_Earth")

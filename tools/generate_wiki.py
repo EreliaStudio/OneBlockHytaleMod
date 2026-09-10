@@ -12,6 +12,8 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
+from expedition_catalog import quantity, entry_id, parse_rewards, reward_edges, combine_edges, normalized_drops, validate_expeditions
+
 CATEGORY_ORDER = ("Easy", "Advanced", "Difficult", "Hard", "Expert", "Dungeon")
 
 
@@ -86,66 +88,6 @@ def percentage(value: float) -> str:
     if abs(value - round(value)) < 0.0000001:
         return f"{round(value)}%"
     return f"{value:.2f}%"
-
-
-def quantity(entry: dict[str, Any]) -> int:
-    return int(entry.get("Quantity", 1))
-
-
-def entry_id(entry: dict[str, Any]) -> str | None:
-    value = entry.get("ID", entry.get("CustomID"))
-    return str(value) if value is not None else None
-
-
-def parse_rewards(cfg: dict[str, Any]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    rewards = cfg.get("CompletionRewards", cfg.get("Rewards", [])) or []
-    if isinstance(rewards, list):
-        return rewards, []
-    if not isinstance(rewards, dict):
-        raise ValueError("CompletionRewards must be an object or array")
-    return list(rewards.get("Mandatory", []) or []), list(rewards.get("Random", []) or [])
-
-
-def reward_edges(cfg: dict[str, Any]) -> list[tuple[str, float, str]]:
-    mandatory, random_bundles = parse_rewards(cfg)
-    edges: list[tuple[str, float, str]] = []
-    for reward in mandatory:
-        if reward.get("Crystal"):
-            edges.append((str(reward["Crystal"]), 100.0, "Guaranteed"))
-
-    total_weight = sum(float(bundle.get("Weight", 1)) for bundle in random_bundles)
-    if total_weight > 0:
-        for bundle in random_bundles:
-            chance = float(bundle.get("Weight", 1)) * 100.0 / total_weight
-            for reward in bundle.get("Items", []) or []:
-                if reward.get("Crystal"):
-                    edges.append((str(reward["Crystal"]), chance, "Random unlock pool"))
-    return edges
-
-
-def combine_edges(edges: Iterable[tuple[str, float, str]]) -> list[tuple[str, float, str]]:
-    combined: OrderedDict[tuple[str, str], float] = OrderedDict()
-    for target, chance, kind in edges:
-        key = (target, kind)
-        combined[key] = combined.get(key, 0.0) + chance
-    return [(target, chance, kind) for (target, kind), chance in combined.items()]
-
-
-def normalized_drops(cfg: dict[str, Any]) -> list[tuple[str, int, float]]:
-    combined: OrderedDict[str, tuple[int, float]] = OrderedDict()
-    for entry in cfg.get("BaseDropPool", []) or []:
-        drop_id = entry_id(entry)
-        if not drop_id:
-            continue
-        count, weight = combined.get(drop_id, (quantity(entry), 0.0))
-        combined[drop_id] = (count, weight + float(entry.get("Weight", 1)))
-    total = sum(weight for _, weight in combined.values())
-    if total <= 0 and combined:
-        raise ValueError("BaseDropPool weights must have a positive sum")
-    return [
-        (drop_id, count, weight * 100.0 / total)
-        for drop_id, (count, weight) in combined.items()
-    ]
 
 
 def cost_text(cfg: dict[str, Any]) -> str:
@@ -396,7 +338,7 @@ def write_or_check(path: Path, content: str, check: bool) -> bool:
 def main() -> int:
     args = parse_args()
     try:
-        raw = load_json(args.input)
+        raw = validate_expeditions(load_json(args.input))
         if not isinstance(raw, dict):
             raise ValueError("the top-level expedition JSON value must be an object")
         expeditions: OrderedDict[str, dict[str, Any]] = OrderedDict(

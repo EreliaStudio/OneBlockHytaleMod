@@ -27,6 +27,8 @@ public final class OneBlockPlugin extends JavaPlugin
     private OneBlockDropRegistry dropRegistry;
     private OneBlockRootRegistry rootRegistry;
     private OneBlockHudService hudService;
+    private ExpeditionCatalog expeditionCatalog;
+    public ExpeditionCatalog getExpeditionCatalog() { return expeditionCatalog; }
     private final OneBlockSubscriptions subscriptions = new OneBlockSubscriptions();
     private volatile OneBlockOwnerResolver ownerResolver = (world, playerId) -> playerId;
     private volatile OneBlockAccessResolver accessResolver = (world, playerId, root) -> true;
@@ -47,6 +49,8 @@ public final class OneBlockPlugin extends JavaPlugin
     @Override
     protected void setup()
     {
+        expeditionCatalog = ExpeditionCatalog.load();
+        getCodecRegistry(Interaction.CODEC).register("oneblock_atlas", AtlasOpenInteraction.class, AtlasOpenInteraction.CODEC);
         hudService = new OneBlockHudService();
         rootRegistry = new OneBlockRootRegistry(getDataDirectory());
         dropRegistry = new OneBlockDropRegistry();

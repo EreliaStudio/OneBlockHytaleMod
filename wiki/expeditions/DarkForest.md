@@ -19,7 +19,7 @@
 | Drop | Chance per pool roll |
 |---|---:|
 | Wolf Black *(mob)* (`entity:Wolf_Black`) | **2.78%** |
-| Crawler *(mob)* (`entity:Crawler`) | **2.78%** |
+| Crawler Void *(mob)* (`entity:Crawler_Void`) | **2.78%** |
 | Zombie *(mob)* (`entity:Zombie`) | **2.78%** |
 | Zombie Aberrant *(mob)* (`entity:Zombie_Aberrant`) | **1.39%** |
 | `Plant_Leaves_Bramble` | **27.78%** |

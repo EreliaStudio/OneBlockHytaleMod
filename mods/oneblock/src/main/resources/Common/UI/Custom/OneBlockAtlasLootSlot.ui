@@ -1,0 +1,15 @@
+$S = "OneBlockAtlasStyles.ui";
+$C = "Common.ui";
+Button #Select {
+ Anchor: (Height: 68, Bottom: 4); Style: $S.@Card;
+ TextTooltipStyle: $C.@DefaultTextTooltipStyle; TextTooltipShowDelay: 0.15;
+ Group { Anchor: (Full: 5); LayoutMode: Left; HitTestVisible: false;
+  Group { Anchor: (Width: 48); ItemIcon #Icon { Anchor: (Width: 42, Height: 42); }
+   Group #MobIcon { Anchor: (Width: 42, Height: 42); Visible: false; }
+  }
+  Group { FlexWeight: 1; LayoutMode: Top;
+   Label #Name { Anchor: (Height: 25); Style: $S.@Text; }
+   Label #Info { Anchor: (Height: 29); Style: (...$S.@Muted, Wrap: true); }
+  }
+ }
+}

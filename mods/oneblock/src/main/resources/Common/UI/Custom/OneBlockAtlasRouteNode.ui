@@ -1,0 +1,18 @@
+$S = "OneBlockAtlasStyles.ui";
+$C = "Common.ui";
+Button #Select {
+ Anchor: (Height: 108, Bottom: 5); Style: $S.@Card;
+ TextTooltipStyle: $C.@DefaultTextTooltipStyle;
+ Group #Selected { Anchor: (Full: 0); Background: #18BACB(0.22); HitTestVisible: false; Visible: false; }
+ Group { Anchor: (Full: 4); LayoutMode: Top; HitTestVisible: false;
+  Group { Anchor: (Height: 50); LayoutMode: Center;
+   Group { Anchor: (Width: 48, Height: 48);
+    ItemIcon #Icon { Anchor: (Full: 0); }
+    Group #Dim { Anchor: (Full: 0); Background: #07101E(0.62); Visible: false; }
+    Label #Lock { Anchor: (Right: 0, Bottom: 0, Width: 38, Height: 17); Background: #223044; Text: %server.atlas.lock; Style: (...$S.@Muted, FontSize: 10, HorizontalAlignment: Center); Visible: false; }
+   }
+  }
+  Label #Name { Anchor: (Height: 28); Style: (...$S.@Text, FontSize: 13, HorizontalAlignment: Center); }
+  Label #Chance { Anchor: (Height: 20); Style: (...$S.@Muted, FontSize: 12, HorizontalAlignment: Center); }
+ }
+}

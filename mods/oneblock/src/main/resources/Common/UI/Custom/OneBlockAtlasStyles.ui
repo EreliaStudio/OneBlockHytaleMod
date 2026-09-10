@@ -1,0 +1,20 @@
+$C = "Common.ui";
+@OneBlockAtlasPanelStyle = PatchStyle(TexturePath: "OneBlockAtlasPanel9Slice.png", Border: 24);
+@Heading = LabelStyle(FontSize: 18, TextColor: #93BCEA, RenderBold: true, VerticalAlignment: Center, ShrinkTextToFit: true, MinShrinkTextToFitFontSize: 11);
+@Text = LabelStyle(FontSize: 15, TextColor: #DBE8F5, VerticalAlignment: Center, ShrinkTextToFit: true, MinShrinkTextToFitFontSize: 11);
+@Muted = LabelStyle(...@Text, FontSize: 13, TextColor: #91A7C4);
+@Button = TextButtonStyle(
+ Default: (Background: #10273D, LabelStyle: (...@Text, HorizontalAlignment: Center)),
+ Hovered: (Background: #234B64, LabelStyle: (...@Text, HorizontalAlignment: Center)),
+ Pressed: (Background: #286674, LabelStyle: (...@Text, HorizontalAlignment: Center)),
+ Disabled: (Background: #182330, LabelStyle: (...@Muted, HorizontalAlignment: Center)),
+ Sounds: $C.@ButtonSounds
+);
+@GoldButton = TextButtonStyle(
+ Default: (Background: #D7A342, LabelStyle: (...@Text, TextColor: #161B26, RenderBold: true, HorizontalAlignment: Center)),
+ Hovered: (Background: #F3CB70, LabelStyle: (...@Text, TextColor: #161B26, RenderBold: true, HorizontalAlignment: Center)),
+ Pressed: (Background: #A77A30, LabelStyle: (...@Text, HorizontalAlignment: Center)),
+ Disabled: (Background: #293240, LabelStyle: (...@Muted, HorizontalAlignment: Center)),
+ Sounds: $C.@ButtonSounds
+);
+@Card = ButtonStyle(Default: (Background: #0C2035), Hovered: (Background: #163A50), Pressed: (Background: #225866), Sounds: $C.@ButtonSounds);
