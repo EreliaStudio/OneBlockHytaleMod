@@ -1,4 +1,5 @@
 $Common = "Common.ui";
+$Frame = "OneBlockCustomFrame.ui";
 
 Group {
   LayoutMode: Center;
@@ -6,15 +7,17 @@ Group {
 
   Group #AchievementPanel {
     Anchor: (Width: 1000, Height: 760);
-    LayoutMode: Top;
-    Padding: (Full: 24);
-    Background: #101C31(0.98);
+    $Frame.@OneBlockCustomFrame #AchievementFrame { Anchor: (Full: 0); }
+
+    Group {
+      Anchor: (Full: 0);
+      LayoutMode: Top;
+      Padding: (Top: 36, Bottom: 16, Horizontal: 28);
 
     Group {
       Anchor: (Height: 70);
       LayoutMode: Left;
       Padding: (Horizontal: 18);
-      Background: #172944;
 
       Label { FlexWeight: 1; Anchor: (Height: 70); Text: %server.achievement.ui.page.heading; Style: (FontSize: 30, TextColor: #F5D77A, RenderBold: true, VerticalAlignment: Center); }
       Label #AchievementLevel { Anchor: (Width: 150, Height: 70); Text: "Lv 0"; Style: (FontSize: 24, TextColor: #7FE3A1, RenderBold: true, HorizontalAlignment: End, VerticalAlignment: Center); }
@@ -40,6 +43,7 @@ Group {
       Label { Anchor: (Top: 18, Height: 34); Text: %server.achievement.ui.section.unlocked; Style: (FontSize: 18, TextColor: #7FE3A1, RenderBold: true, VerticalAlignment: Center); }
       Label #NoUnlockedMessage { Anchor: (Height: 40); Text: %server.achievement.ui.empty.unlocked; Style: (FontSize: 16, TextColor: #91A0B8, VerticalAlignment: Center); }
       Group #UnlockedCards { LayoutMode: Top; }
+    }
     }
   }
 }

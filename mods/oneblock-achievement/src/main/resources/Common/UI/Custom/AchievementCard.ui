@@ -1,10 +1,14 @@
 $Common = "Common.ui";
+$Frame = "OneBlockCustomFrame.ui";
 
 Group {
   Anchor: (Bottom: 10, Height: 168);
-  LayoutMode: Top;
-  Padding: (Full: 14);
-  Background: (TexturePath: "Common/ContainerPanelPatch.png", Border: 4);
+  $Frame.@OneBlockCustomFrame #CardFrame { Anchor: (Full: 0); }
+
+  Group {
+    Anchor: (Full: 0);
+    LayoutMode: Top;
+    Padding: (Vertical: 14, Horizontal: 20);
 
   Group {
     Anchor: (Height: 34);
@@ -26,5 +30,6 @@ Group {
     Label #NoCostLabel { FlexWeight: 1; Anchor: (Right: 12, Height: 58); Text: %server.achievement.ui.card.noResources; Style: (FontSize: 15, TextColor: #91A0B8, VerticalAlignment: Center); }
     $Common.@TextButton #ParticipateButton { @Text = %server.achievement.ui.action.participate; Anchor: (Width: 170, Height: 46); }
     $Common.@TextButton #ActivateButton { @Text = %server.achievement.ui.action.activate; Anchor: (Width: 170, Height: 46); }
+  }
   }
 }
